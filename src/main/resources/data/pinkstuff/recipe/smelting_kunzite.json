@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 60,
+  "experience": 0.2,
+  "group": "kunzite",
+  "ingredient": "pinkstuff:raw_kunzite",
+  "result": {
+    "id": "pinkstuff:kunzite"
+  }
+}

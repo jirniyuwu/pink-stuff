@@ -1,9 +1,12 @@
 {
   "item.pinkstuff.kunzite": "Kunzite",
   "item.pinkstuff.raw_kunzite": "Raw Kunzite",
+  "item.pinkstuff.blooming_geode": "Blooming Geode",
 
   "item.pinkstuff.kunzite_block": "Block of Kunzite",
   "item.pinkstuff.raw_kunzite_block": "Block of Raw Kunzite",
   "item.pinkstuff.kunzite_ore": "Kunzite Ore",
-  "item.pinkstuff.deepslate_kunzite_ore": "Deepslate Kunzite Ore"
+  "item.pinkstuff.deepslate_kunzite_ore": "Deepslate Kunzite Ore",
+
+  "itemgroup.pinkstuff.kunzite_items": "Kunzite Items"
 }

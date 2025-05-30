@@ -14,6 +14,7 @@ public class ModItems {
 
     public static final Item KUNZITE = registerItem(new Item.Settings(), "kunzite");
     public static final Item RAW_KUNZITE = registerItem(new Item.Settings(), "raw_kunzite");
+    public static final Item BLOOMING_GEODE = registerItem(new Item.Settings(), "blooming_geode");
 
     private static Item registerItem(Item.Settings itemSettings, String name) {
         Identifier id = Identifier.of(JirniysPinkStuff.MOD_ID, name);
@@ -29,6 +30,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(KUNZITE);
             entries.add(RAW_KUNZITE);
+            entries.add(BLOOMING_GEODE);
         });
     }
 }
