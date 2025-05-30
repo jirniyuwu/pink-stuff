@@ -1,11 +1,10 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "blooming_geode",
   "ingredients": [
+    "pinkstuff:kunzite",
     "minecraft:diamond",
-    "minecraft:nether_quarts",
-    "pinkstuff:kunzite"
+    "minecraft:quartz"
   ],
   "result": {
     "count": 1,
