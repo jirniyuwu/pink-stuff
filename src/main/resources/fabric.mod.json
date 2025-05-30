@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "pinkstuff",
+	"version": "${version}",
+	"name": "Jirniys pink stuff",
+	"description": "cute~ :3",
+	"authors": [
+		"JirniyUwU"
+	],
+	"contact": {
+		"homepage": "https://x.com/jir_uwu",
+		"sources": "https://github.com/jirniyuwu/pink-stuff"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pinkstuff/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.jirniy.pinkstuff.JirniysPinkStuff"
+		],
+		"fabric-datagen": [
+			"net.jirniy.pinkstuff.JirniysPinkStuffDataGenerator"
+		],
+		"client": [
+			"net.jirniy.pinkstuff.JirniysPinkStuffClient"
+		]
+	},
+	"mixins": [
+		"pinkstuff.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
