@@ -58,6 +58,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_glitter")));
+                createShapeless(RecipeCategory.MISC, ModItems.KUNZITE, 1)
+                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
+                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
+                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS).input(Items.AMETHYST_SHARD)
+                        .criterion(hasItem(ModItems.PINK_BITS), conditionsFromItem(ModItems.PINK_BITS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_from_pink_bits")));
+                createShapeless(RecipeCategory.MISC, Items.PINK_DYE, 1)
+                        .input(ModItems.PINK_BITS).criterion(hasItem(ModItems.PINK_BITS),
+                                conditionsFromItem(ModItems.PINK_BITS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pink_dye_from_pink_bits")));
+                createShaped(RecipeCategory.MISC, ModItems.ELYSIAN_REDSTONE_CORE)
+                        .pattern("EDE")
+                        .pattern("DRD")
+                        .pattern("EDE")
+                        .input('R', Items.REDSTONE_BLOCK)
+                        .input('D', Items.DIAMOND)
+                        .input('E', ModItems.ELYSIUM_INGOT)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysian_redstone_core")));
             }
         };
     }

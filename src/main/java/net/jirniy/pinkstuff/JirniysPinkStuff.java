@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff;
 import net.fabricmc.api.ModInitializer;
 
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.component.ModDataComponentTypes;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
 import org.slf4j.Logger;
@@ -17,5 +18,6 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModDataComponentTypes.registerDataComponentTypes();
 	}
 }

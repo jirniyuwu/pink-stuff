@@ -28,5 +28,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_KUNZITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTAL_GLITTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ELYSIAN_REDSTONE_CORE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINK_BITS, Models.GENERATED);
     }
 }

@@ -16,6 +16,8 @@ public class ModItems {
     public static final Item RAW_KUNZITE = registerItem(new Item.Settings(), "raw_kunzite");
     public static final Item CRYSTAL_GLITTER = registerItem(new Item.Settings(), "crystal_glitter");
     public static final Item ELYSIUM_INGOT = registerItem(new Item.Settings(), "elysium_ingot");
+    public static final Item ELYSIAN_REDSTONE_CORE = registerItem(new Item.Settings(), "elysian_redstone_core");
+    public static final Item PINK_BITS = registerItem(new Item.Settings(), "pink_bits");
 
     private static Item registerItem(Item.Settings itemSettings, String name) {
         Identifier id = Identifier.of(JirniysPinkStuff.MOD_ID, name);
@@ -33,6 +35,8 @@ public class ModItems {
             entries.add(RAW_KUNZITE);
             entries.add(CRYSTAL_GLITTER);
             entries.add(ELYSIUM_INGOT);
+            entries.add(ELYSIAN_REDSTONE_CORE);
+            entries.add(PINK_BITS);
         });
     }
 }

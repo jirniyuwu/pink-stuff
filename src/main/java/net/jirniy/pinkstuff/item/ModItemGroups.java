@@ -17,14 +17,16 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.KUNZITE))
                     .displayName(Text.translatable("itemgroup.pinkstuff.kunzite_items"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModItems.KUNZITE);
                         entries.add(ModItems.RAW_KUNZITE);
+                        entries.add(ModItems.KUNZITE);
+                        entries.add(ModItems.PINK_BITS);
                         entries.add(ModItems.CRYSTAL_GLITTER);
                         entries.add(ModItems.ELYSIUM_INGOT);
+                        entries.add(ModItems.ELYSIAN_REDSTONE_CORE);
                         entries.add(ModBlocks.KUNZITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
-                        entries.add(ModBlocks.KUNZITE_BLOCK);
                         entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
+                        entries.add(ModBlocks.KUNZITE_BLOCK);
                         entries.add(ModBlocks.ELYSIUM_BLOCK);
                     })
                     .build());
