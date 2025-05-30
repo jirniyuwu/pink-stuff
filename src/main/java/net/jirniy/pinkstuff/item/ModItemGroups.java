@@ -19,11 +19,13 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.KUNZITE);
                         entries.add(ModItems.RAW_KUNZITE);
-                        entries.add(ModItems.BLOOMING_GEODE);
+                        entries.add(ModItems.CRYSTAL_GLITTER);
+                        entries.add(ModItems.ELYSIUM_INGOT);
                         entries.add(ModBlocks.KUNZITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
                         entries.add(ModBlocks.KUNZITE_BLOCK);
                         entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
+                        entries.add(ModBlocks.ELYSIUM_BLOCK);
                     })
                     .build());
 

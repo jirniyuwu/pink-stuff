@@ -22,11 +22,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
                 .add(ModBlocks.DEEPSLATE_KUNZITE_ORE)
-                .add(ModBlocks.KUNZITE_ORE);
+                .add(ModBlocks.KUNZITE_ORE)
+                .add(ModBlocks.ELYSIUM_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
                 .add(ModBlocks.DEEPSLATE_KUNZITE_ORE)
-                .add(ModBlocks.KUNZITE_ORE);
+                .add(ModBlocks.KUNZITE_ORE)
+                .add(ModBlocks.ELYSIUM_BLOCK);
     }
 }

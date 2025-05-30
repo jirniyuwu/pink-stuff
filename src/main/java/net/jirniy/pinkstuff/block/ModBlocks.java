@@ -28,6 +28,9 @@ public class ModBlocks {
     public static final Block DEEPSLATE_KUNZITE_ORE = registerBlock("deepslate_kunzite_ore",
             AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE));
+    public static final Block ELYSIUM_BLOCK = registerBlock("elysium_block",
+            AbstractBlock.Settings.create().strength(5f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK));
 
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));

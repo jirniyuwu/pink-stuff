@@ -36,19 +36,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.RAW_KUNZITE,
                         ModBlocks.KUNZITE_ORE,
                         ModBlocks.DEEPSLATE_KUNZITE_ORE);
+                List<ItemConvertible> ELYSIUM_SMELTABLES = List.of(
+                        ModItems.CRYSTAL_GLITTER);
                 offerSmelting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
                         0.25f, 80, "kunzite");
                 offerBlasting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
                         0.25f, 40, "kunzite");
+                offerSmelting(ELYSIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ELYSIUM_INGOT,
+                        1f, 160, "elysium");
+                offerBlasting(ELYSIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ELYSIUM_INGOT,
+                        1f, 80, "elysium");
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.KUNZITE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.RAW_KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.RAW_KUNZITE_BLOCK);
-                createShapeless(RecipeCategory.MISC, ModItems.BLOOMING_GEODE, 1)
-                        .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ)
+                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
+                        ModItems.ELYSIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.ELYSIUM_BLOCK);
+                createShapeless(RecipeCategory.MISC, ModItems.CRYSTAL_GLITTER, 1)
+                        .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
+                        .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "blooming_geode")));
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_glitter")));
             }
         };
     }

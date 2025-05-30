@@ -19,12 +19,14 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_KUNZITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_KUNZITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ELYSIUM_BLOCK);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.KUNZITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_KUNZITE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BLOOMING_GEODE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRYSTAL_GLITTER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ELYSIUM_INGOT, Models.GENERATED);
     }
 }
