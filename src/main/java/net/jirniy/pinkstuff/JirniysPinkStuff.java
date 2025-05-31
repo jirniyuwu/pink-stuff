@@ -8,6 +8,7 @@ import net.jirniy.pinkstuff.component.ModDataComponentTypes;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.HammerUsageEvent;
+import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +22,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModDataComponentTypes.registerDataComponentTypes();
+		ModWorldGeneration.generateModWorldGen();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}

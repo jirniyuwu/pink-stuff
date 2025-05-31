@@ -48,12 +48,12 @@ public class ModItems {
     public static final Item ELYSIUM_SHOVEL = registerItem("elysium_shovel",
             setting -> new ShovelItem(ModToolMaterials.ELYSIUM, 1.5f, -3.0f, setting));
     public static final Item ELYSIUM_AXE = registerItem("elysium_axe",
-            setting -> new AxeItem(ModToolMaterials.ELYSIUM, 15, -3.4f, setting));
+            setting -> new AxeItem(ModToolMaterials.ELYSIUM, 9, -2.4f, setting));
     public static final Item ELYSIUM_HOE = registerItem("elysium_hoe",
             setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting));
 
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
-            setting -> new HammerItem(ModToolMaterials.ELYSIUM, 7, -3.8f, setting));
+            setting -> new HammerItem(ModToolMaterials.ELYSIUM, 16, -2.8f, setting));
 
     public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));
