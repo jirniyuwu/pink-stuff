@@ -80,6 +80,51 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysian_redstone_core")));
+                createShaped(RecipeCategory.COMBAT, ModItems.KUNZITE_SWORD)
+                        .pattern("K")
+                        .pattern("K")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_sword")));
+                createShaped(RecipeCategory.TOOLS, ModItems.KUNZITE_PICKAXE)
+                        .pattern("KKK")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_pickaxe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.KUNZITE_SHOVEL)
+                        .pattern("K")
+                        .pattern("S")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_shovel")));
+                createShaped(RecipeCategory.TOOLS, ModItems.KUNZITE_AXE)
+                        .pattern("KK")
+                        .pattern("KS")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_axe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.KUNZITE_HOE)
+                        .pattern("KK")
+                        .pattern(" S")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_hoe")));
             }
         };
     }

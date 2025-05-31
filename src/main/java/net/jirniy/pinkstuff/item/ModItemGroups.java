@@ -23,11 +23,18 @@ public class ModItemGroups {
                         entries.add(ModItems.CRYSTAL_GLITTER);
                         entries.add(ModItems.ELYSIUM_INGOT);
                         entries.add(ModItems.ELYSIAN_REDSTONE_CORE);
+
                         entries.add(ModBlocks.KUNZITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
                         entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
                         entries.add(ModBlocks.KUNZITE_BLOCK);
                         entries.add(ModBlocks.ELYSIUM_BLOCK);
+
+                        entries.add(ModItems.KUNZITE_SWORD);
+                        entries.add(ModItems.KUNZITE_PICKAXE);
+                        entries.add(ModItems.KUNZITE_AXE);
+                        entries.add(ModItems.KUNZITE_SHOVEL);
+                        entries.add(ModItems.KUNZITE_HOE);
                     })
                     .build());
 

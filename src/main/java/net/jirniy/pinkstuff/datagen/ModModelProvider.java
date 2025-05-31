@@ -30,5 +30,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIAN_REDSTONE_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PINK_BITS, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.KUNZITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.KUNZITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.KUNZITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.KUNZITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.KUNZITE_HOE, Models.HANDHELD);
     }
 }

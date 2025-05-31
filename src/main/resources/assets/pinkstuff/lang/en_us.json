@@ -12,5 +12,11 @@
   "item.pinkstuff.deepslate_kunzite_ore": "Deepslate Kunzite Ore",
   "item.pinkstuff.elysium_block": "Block of Elysium",
 
+  "item.pinkstuff.kunzite_sword": "Kunzite Sword",
+  "item.pinkstuff.kunzite_pickaxe": "Kunzite Pickaxe",
+  "item.pinkstuff.kunzite_axe": "Kunzite Axe",
+  "item.pinkstuff.kunzite_shovel": "Kunzite Shovel",
+  "item.pinkstuff.kunzite_hoe": "Kunzite Hoe",
+
   "itemgroup.pinkstuff.kunzite_items": "Kunzite Items"
 }
