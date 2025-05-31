@@ -125,6 +125,55 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_hoe")));
+
+                createShaped(RecipeCategory.COMBAT, ModItems.ELYSIUM_SWORD)
+                        .pattern("E")
+                        .pattern("C")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('E', ModItems.ELYSIUM_INGOT)
+                        .input('C', ModItems.ELYSIAN_REDSTONE_CORE)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_sword")));
+                createShaped(RecipeCategory.TOOLS, ModItems.ELYSIUM_PICKAXE)
+                        .pattern("ECE")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('S', Items.STICK)
+                        .input('E', ModItems.ELYSIUM_INGOT)
+                        .input('C', ModItems.ELYSIAN_REDSTONE_CORE)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_pickaxe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.ELYSIUM_AXE)
+                        .pattern("EC")
+                        .pattern("ES")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('E', ModItems.ELYSIUM_INGOT)
+                        .input('C', ModItems.ELYSIAN_REDSTONE_CORE)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_axe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.ELYSIUM_SHOVEL)
+                        .pattern("E")
+                        .pattern("S")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('E', ModItems.ELYSIUM_INGOT)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_shovel")));
+                createShaped(RecipeCategory.TOOLS, ModItems.ELYSIUM_HOE)
+                        .pattern("EE")
+                        .pattern(" S")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('E', ModItems.ELYSIUM_INGOT)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_hoe")));
             }
         };
     }

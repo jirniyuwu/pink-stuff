@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "K": "pinkstuff:kunzite",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "K",
+    "K",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:kunzite_sword"
+  }
+}

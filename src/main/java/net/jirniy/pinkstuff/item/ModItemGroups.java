@@ -35,6 +35,12 @@ public class ModItemGroups {
                         entries.add(ModItems.KUNZITE_AXE);
                         entries.add(ModItems.KUNZITE_SHOVEL);
                         entries.add(ModItems.KUNZITE_HOE);
+
+                        entries.add(ModItems.ELYSIUM_SWORD);
+                        entries.add(ModItems.ELYSIUM_PICKAXE);
+                        entries.add(ModItems.ELYSIUM_AXE);
+                        entries.add(ModItems.ELYSIUM_SHOVEL);
+                        entries.add(ModItems.ELYSIUM_HOE);
                     })
                     .build());
 

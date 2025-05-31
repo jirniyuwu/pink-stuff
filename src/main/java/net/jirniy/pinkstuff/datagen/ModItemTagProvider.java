@@ -18,14 +18,19 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.KUNZITE_SWORD);
+                .add(ModItems.KUNZITE_SWORD)
+                .add(ModItems.ELYSIUM_SWORD);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.KUNZITE_PICKAXE);
+                .add(ModItems.KUNZITE_PICKAXE)
+                .add(ModItems.ELYSIUM_PICKAXE);
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.KUNZITE_SHOVEL);
+                .add(ModItems.KUNZITE_SHOVEL)
+                .add(ModItems.ELYSIUM_SHOVEL);
         getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.KUNZITE_AXE);
+                .add(ModItems.KUNZITE_AXE)
+                .add(ModItems.ELYSIUM_AXE);
         getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.KUNZITE_HOE);
+                .add(ModItems.KUNZITE_HOE)
+                .add(ModItems.ELYSIUM_HOE);
     }
 }

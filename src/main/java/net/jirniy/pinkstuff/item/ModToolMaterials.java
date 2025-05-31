@@ -8,5 +8,5 @@ public class ModToolMaterials {
     public static final ToolMaterial KUNZITE = new ToolMaterial(ModTags.Blocks.INCORRECT_FOR_KUNZITE_TOOL,
             440, 11.0f, 2.0f, 22, ModTags.Items.KUNZITE_REPAIR);
     public static final ToolMaterial ELYSIUM = new ToolMaterial(ModTags.Blocks.INCORRECT_FOR_ELYSIUM_TOOL,
-            2400, 20.0f, 2.0f, 22, ModTags.Items.ELYSIUM_REPAIR);
+            2400, 14.0f, 2.0f, 22, ModTags.Items.ELYSIUM_REPAIR);
 }

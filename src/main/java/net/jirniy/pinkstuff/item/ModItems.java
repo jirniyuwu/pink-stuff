@@ -33,9 +33,20 @@ public class ModItems {
     public static final Item KUNZITE_SHOVEL = registerItem("kunzite_shovel",
             setting -> new ShovelItem(ModToolMaterials.KUNZITE, 1.5f, -3.0f, setting));
     public static final Item KUNZITE_AXE = registerItem("kunzite_axe",
-            setting -> new AxeItem(ModToolMaterials.KUNZITE, 6, -3.2f, setting));
+            setting -> new AxeItem(ModToolMaterials.KUNZITE, 8, -3.2f, setting));
     public static final Item KUNZITE_HOE = registerItem("kunzite_hoe",
             setting -> new HoeItem(ModToolMaterials.KUNZITE, 0, -3f, setting));
+
+    public static final Item ELYSIUM_SWORD = registerItem("elysium_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 11, -1.6f)));
+    public static final Item ELYSIUM_PICKAXE = registerItem("elysium_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.ELYSIUM, 1, -2.8f)));
+    public static final Item ELYSIUM_SHOVEL = registerItem("elysium_shovel",
+            setting -> new ShovelItem(ModToolMaterials.ELYSIUM, 1.5f, -3.0f, setting));
+    public static final Item ELYSIUM_AXE = registerItem("elysium_axe",
+            setting -> new AxeItem(ModToolMaterials.ELYSIUM, 15, -3.2f, setting));
+    public static final Item ELYSIUM_HOE = registerItem("elysium_hoe",
+            setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting));
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
@@ -53,6 +64,20 @@ public class ModItems {
             entries.add(ELYSIUM_INGOT);
             entries.add(ELYSIAN_REDSTONE_CORE);
             entries.add(PINK_BITS);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(KUNZITE_SWORD);
+            entries.add(ELYSIUM_SWORD);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.add(KUNZITE_PICKAXE);
+            entries.add(KUNZITE_AXE);
+            entries.add(KUNZITE_SHOVEL);
+            entries.add(KUNZITE_HOE);
+            entries.add(ELYSIUM_PICKAXE);
+            entries.add(ELYSIUM_AXE);
+            entries.add(ELYSIUM_SHOVEL);
+            entries.add(ELYSIUM_HOE);
         });
     }
 }

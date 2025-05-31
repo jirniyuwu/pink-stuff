@@ -1,0 +1,4 @@
+// 1.21.5	-999999999-01-01T00:00:00	Jirniys pink stuff/Tags for minecraft:block
+725e7635a1c7c833527b12d5a024754cca640bde data/minecraft/tags/block/mineable/pickaxe.json
+725e7635a1c7c833527b12d5a024754cca640bde data/minecraft/tags/block/needs_iron_tool.json
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data/pinkstuff/tags/block/needs_kunzite_tool.json

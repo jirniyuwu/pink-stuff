@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "pinkstuff:elysian_redstone_core",
+    "E": "pinkstuff:elysium_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "EC",
+    "ES",
+    " S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:elysium_axe"
+  }
+}

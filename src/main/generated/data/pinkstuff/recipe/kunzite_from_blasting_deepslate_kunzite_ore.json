@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 40,
+  "experience": 0.25,
+  "group": "kunzite",
+  "ingredient": "pinkstuff:deepslate_kunzite_ore",
+  "result": {
+    "id": "pinkstuff:kunzite"
+  }
+}
