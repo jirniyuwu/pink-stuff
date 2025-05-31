@@ -10,6 +10,7 @@
   "item.pinkstuff.raw_kunzite_block": "Block of Raw Kunzite",
   "item.pinkstuff.kunzite_ore": "Kunzite Ore",
   "item.pinkstuff.deepslate_kunzite_ore": "Deepslate Kunzite Ore",
+  "item.pinkstuff.amethyst_kunzite_ore": "Amethyst Kunzite Ore",
   "item.pinkstuff.elysium_block": "Block of Elysium",
 
   "item.pinkstuff.kunzite_sword": "Kunzite Sword",
@@ -18,11 +19,22 @@
   "item.pinkstuff.kunzite_shovel": "Kunzite Shovel",
   "item.pinkstuff.kunzite_hoe": "Kunzite Hoe",
 
+  "item.pinkstuff.kunzite_helmet": "Kunzite Helmet",
+  "item.pinkstuff.kunzite_chestplate": "Kunzite Chestplate",
+  "item.pinkstuff.kunzite_leggings": "Kunzite Leggings",
+  "item.pinkstuff.kunzite_boots": "Kunzite Boots",
+
   "item.pinkstuff.elysium_sword": "Elysian Greatsword",
   "item.pinkstuff.elysium_pickaxe": "Elysian Pickaxe",
   "item.pinkstuff.elysium_axe": "Elysian Axe",
   "item.pinkstuff.elysium_shovel": "Elysian Shovel",
   "item.pinkstuff.elysium_hoe": "Elysian Hoe",
+  "item.pinkstuff.elysium_hammer": "Elysian Greathammer",
+
+  "item.pinkstuff.elysium_helmet": "Elysian Headgear",
+  "item.pinkstuff.elysium_chestplate": "Elysian Breastplate",
+  "item.pinkstuff.elysium_leggings": "Elysian Legwear",
+  "item.pinkstuff.elysium_boots": "Elysian Groundwalkers",
 
   "itemgroup.pinkstuff.kunzite_items": "Kunzite Items"
 }

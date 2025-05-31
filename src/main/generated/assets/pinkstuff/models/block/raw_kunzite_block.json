@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "pinkstuff:block/raw_kunzite_block"
-  }
-}

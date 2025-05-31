@@ -1,8 +1,12 @@
 package net.jirniy.pinkstuff.item;
 
+
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
+import net.jirniy.pinkstuff.item.custom.HammerItem;
+import net.jirniy.pinkstuff.item.custom.ModArmorItem;
 import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -38,15 +42,36 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.KUNZITE, 0, -3f, setting));
 
     public static final Item ELYSIUM_SWORD = registerItem("elysium_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 11, -1.6f)));
+            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 11, -1.4f)));
     public static final Item ELYSIUM_PICKAXE = registerItem("elysium_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.ELYSIUM, 1, -2.8f)));
     public static final Item ELYSIUM_SHOVEL = registerItem("elysium_shovel",
             setting -> new ShovelItem(ModToolMaterials.ELYSIUM, 1.5f, -3.0f, setting));
     public static final Item ELYSIUM_AXE = registerItem("elysium_axe",
-            setting -> new AxeItem(ModToolMaterials.ELYSIUM, 15, -3.2f, setting));
+            setting -> new AxeItem(ModToolMaterials.ELYSIUM, 15, -3.4f, setting));
     public static final Item ELYSIUM_HOE = registerItem("elysium_hoe",
             setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting));
+
+    public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
+            setting -> new HammerItem(ModToolMaterials.ELYSIUM, 7, -3.8f, setting));
+
+    public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
+            setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item KUNZITE_CHESTPLATE = registerItem("kunzite_chestplate",
+            setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item KUNZITE_LEGGINGS = registerItem("kunzite_leggings",
+            setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item KUNZITE_BOOTS = registerItem("kunzite_boots",
+            setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
+    public static final Item ELYSIUM_HELMET = registerItem("elysium_helmet",
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item ELYSIUM_CHESTPLATE = registerItem("elysium_chestplate",
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item ELYSIUM_LEGGINGS = registerItem("elysium_leggings",
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item ELYSIUM_BOOTS = registerItem("elysium_boots",
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
@@ -68,6 +93,14 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(KUNZITE_SWORD);
             entries.add(ELYSIUM_SWORD);
+            entries.add(KUNZITE_HELMET);
+            entries.add(KUNZITE_CHESTPLATE);
+            entries.add(KUNZITE_LEGGINGS);
+            entries.add(KUNZITE_BOOTS);
+            entries.add(ELYSIUM_HELMET);
+            entries.add(ELYSIUM_CHESTPLATE);
+            entries.add(ELYSIUM_LEGGINGS);
+            entries.add(ELYSIUM_BOOTS);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
             entries.add(KUNZITE_PICKAXE);
@@ -78,6 +111,7 @@ public class ModItems {
             entries.add(ELYSIUM_AXE);
             entries.add(ELYSIUM_SHOVEL);
             entries.add(ELYSIUM_HOE);
+            entries.add(ELYSIUM_HAMMER);
         });
     }
 }

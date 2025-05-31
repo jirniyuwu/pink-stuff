@@ -26,6 +26,7 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.KUNZITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
+                        entries.add(ModBlocks.AMETHYST_KUNZITE_ORE);
                         entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
                         entries.add(ModBlocks.KUNZITE_BLOCK);
                         entries.add(ModBlocks.ELYSIUM_BLOCK);
@@ -35,12 +36,21 @@ public class ModItemGroups {
                         entries.add(ModItems.KUNZITE_AXE);
                         entries.add(ModItems.KUNZITE_SHOVEL);
                         entries.add(ModItems.KUNZITE_HOE);
+                        entries.add(ModItems.KUNZITE_HELMET);
+                        entries.add(ModItems.KUNZITE_CHESTPLATE);
+                        entries.add(ModItems.KUNZITE_LEGGINGS);
+                        entries.add(ModItems.KUNZITE_BOOTS);
 
                         entries.add(ModItems.ELYSIUM_SWORD);
                         entries.add(ModItems.ELYSIUM_PICKAXE);
                         entries.add(ModItems.ELYSIUM_AXE);
                         entries.add(ModItems.ELYSIUM_SHOVEL);
                         entries.add(ModItems.ELYSIUM_HOE);
+                        entries.add(ModItems.ELYSIUM_HAMMER);
+                        entries.add(ModItems.ELYSIUM_HELMET);
+                        entries.add(ModItems.ELYSIUM_CHESTPLATE);
+                        entries.add(ModItems.ELYSIUM_LEGGINGS);
+                        entries.add(ModItems.ELYSIUM_BOOTS);
                     })
                     .build());
 

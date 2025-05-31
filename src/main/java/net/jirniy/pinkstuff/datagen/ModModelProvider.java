@@ -3,7 +3,9 @@ package net.jirniy.pinkstuff.datagen;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.item.ModArmorMaterials;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.jirniy.pinkstuff.item.custom.ModArmorItem;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
@@ -19,6 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_KUNZITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_KUNZITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AMETHYST_KUNZITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ELYSIUM_BLOCK);
     }
 
@@ -42,5 +45,24 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIUM_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ELYSIUM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ELYSIUM_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ELYSIUM_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor(ModItems.KUNZITE_HELMET,
+                ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.KUNZITE_CHESTPLATE,
+                ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.KUNZITE_LEGGINGS,
+                ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.KUNZITE_BOOTS,
+                ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.registerArmor(ModItems.ELYSIUM_HELMET,
+                ModArmorMaterials.ELYSIUM_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.ELYSIUM_CHESTPLATE,
+                ModArmorMaterials.ELYSIUM_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.ELYSIUM_LEGGINGS,
+                ModArmorMaterials.ELYSIUM_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.ELYSIUM_BOOTS,
+                ModArmorMaterials.ELYSIUM_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
     }
 }

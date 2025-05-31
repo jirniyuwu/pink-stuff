@@ -28,6 +28,9 @@ public class ModBlocks {
     public static final Block DEEPSLATE_KUNZITE_ORE = registerBlock("deepslate_kunzite_ore",
             AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE));
+    public static final Block AMETHYST_KUNZITE_ORE = registerBlock("amethyst_kunzite_ore",
+            AbstractBlock.Settings.create().strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK));
     public static final Block ELYSIUM_BLOCK = registerBlock("elysium_block",
             AbstractBlock.Settings.create().strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK));
@@ -49,9 +52,11 @@ public class ModBlocks {
         JirniysPinkStuff.LOGGER.info("Registering Mod Blocks for " + JirniysPinkStuff.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(ModBlocks.ELYSIUM_BLOCK);
             entries.add(ModBlocks.KUNZITE_BLOCK);
             entries.add(ModBlocks.KUNZITE_ORE);
             entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
+            entries.add(ModBlocks.AMETHYST_KUNZITE_ORE);
             entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
         });
     }

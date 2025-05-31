@@ -22,7 +22,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ELYSIUM_SWORD);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.KUNZITE_PICKAXE)
-                .add(ModItems.ELYSIUM_PICKAXE);
+                .add(ModItems.ELYSIUM_PICKAXE)
+                .add(ModItems.ELYSIUM_HAMMER);
         getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(ModItems.KUNZITE_SHOVEL)
                 .add(ModItems.ELYSIUM_SHOVEL);
@@ -32,5 +33,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.KUNZITE_HOE)
                 .add(ModItems.ELYSIUM_HOE);
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.KUNZITE_HELMET)
+                .add(ModItems.KUNZITE_CHESTPLATE)
+                .add(ModItems.KUNZITE_LEGGINGS)
+                .add(ModItems.KUNZITE_BOOTS)
+                .add(ModItems.ELYSIUM_HELMET)
+                .add(ModItems.ELYSIUM_CHESTPLATE)
+                .add(ModItems.ELYSIUM_LEGGINGS)
+                .add(ModItems.ELYSIUM_BOOTS);
     }
 }
