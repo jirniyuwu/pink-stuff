@@ -50,5 +50,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_SPECIAL_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
     }
 }

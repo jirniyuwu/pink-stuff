@@ -37,6 +37,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THERMIUM_BLOCK);
                         entries.add(ModBlocks.THERMIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
+                        entries.add(ModItems.MEMORY_SHARD);
 
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_WOOD);
@@ -68,6 +69,8 @@ public class ModItemGroups {
                         entries.add(ModItems.ELYSIUM_CHESTPLATE);
                         entries.add(ModItems.ELYSIUM_LEGGINGS);
                         entries.add(ModItems.ELYSIUM_BOOTS);
+
+                        entries.add(ModItems.DAWNBLOOMER);
                     })
                     .build());
 

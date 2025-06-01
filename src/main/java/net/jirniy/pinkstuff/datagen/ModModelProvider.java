@@ -49,6 +49,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_THERMIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MEMORY_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.KUNZITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KUNZITE_PICKAXE, Models.HANDHELD);

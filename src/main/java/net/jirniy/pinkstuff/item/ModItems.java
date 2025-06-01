@@ -25,6 +25,7 @@ public class ModItems {
     public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot", Item::new);
     public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", Item::new);
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
+    public static final Item MEMORY_SHARD = registerItem("memory_shard", Item::new);
     public static final Item GELATINOUS_BUD = registerItem("gelatinous_bud", setting -> new Item(setting
             .food(ModFoodComponents.GELATINOUS_BUD, ModFoodComponents.GELATINOUS_BUD_EFFECT)));
 
@@ -54,7 +55,9 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting));
 
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
-            setting -> new HammerItem(ModToolMaterials.ELYSIUM, 16, -3.4f, setting));
+            setting -> new HammerItem(ModToolMaterials.SPECIAL, 16, -3.4f, setting));
+    public static final Item DAWNBLOOMER = registerItem("dawnbloomer",
+            setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 18, -1.4f)));
 
     public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));

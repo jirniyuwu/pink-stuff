@@ -195,17 +195,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_hoe")));
+
                 createShaped(RecipeCategory.TOOLS, ModItems.ELYSIUM_HAMMER)
-                        .pattern("EEE")
+                        .pattern("EME")
                         .pattern("CPC")
                         .pattern(" N ")
                         .input('N', Items.NETHERITE_INGOT)
                         .input('P', ModItems.ELYSIUM_PICKAXE)
                         .input('E', ModItems.ELYSIUM_INGOT)
                         .input('C', ModItems.ELYSIAN_REDSTONE_CORE)
-                        .criterion(hasItem(ModItems.ELYSIUM_PICKAXE), conditionsFromItem(ModItems.ELYSIUM_PICKAXE))
+                        .input('M', ModItems.MEMORY_SHARD)
+                        .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_hammer")));
+
+                createShaped(RecipeCategory.TOOLS, ModItems.DAWNBLOOMER)
+                        .pattern("TMT")
+                        .pattern("CSC")
+                        .pattern(" N ")
+                        .input('N', Items.NETHERITE_INGOT)
+                        .input('T', ModItems.THERMIUM)
+                        .input('S', ModItems.ELYSIUM_SWORD)
+                        .input('C', ModItems.ELYSIAN_REDSTONE_CORE)
+                        .input('M', ModItems.MEMORY_SHARD)
+                        .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "dawnbloomer")));
 
                 createShaped(RecipeCategory.COMBAT, ModItems.KUNZITE_HELMET)
                         .pattern("AKA")

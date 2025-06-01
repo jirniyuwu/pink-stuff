@@ -21,7 +21,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.KUNZITE_SWORD)
-                .add(ModItems.ELYSIUM_SWORD);
+                .add(ModItems.ELYSIUM_SWORD)
+                .add(ModItems.DAWNBLOOMER);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.KUNZITE_PICKAXE)
                 .add(ModItems.ELYSIUM_PICKAXE)
