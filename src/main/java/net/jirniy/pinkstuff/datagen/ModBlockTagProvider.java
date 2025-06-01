@@ -27,7 +27,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_KUNZITE_ORE)
                 .add(ModBlocks.AMETHYST_KUNZITE_ORE)
                 .add(ModBlocks.KUNZITE_ORE)
-                .add(ModBlocks.ELYSIUM_BLOCK);
+                .add(ModBlocks.ELYSIUM_BLOCK)
+                .add(ModBlocks.THERMIUM_BLOCK)
+                .add(ModBlocks.RAW_THERMIUM_BLOCK)
+                .add(ModBlocks.DEEPSLATE_THERMIUM_ORE)
+                .add(ModBlocks.THERMIUM_ORE);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
@@ -36,7 +40,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ELYSIUM_BLOCK);
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
-
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.THERMIUM_BLOCK)
+                .add(ModBlocks.RAW_THERMIUM_BLOCK)
+                .add(ModBlocks.DEEPSLATE_THERMIUM_ORE)
+                .add(ModBlocks.THERMIUM_ORE);
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)

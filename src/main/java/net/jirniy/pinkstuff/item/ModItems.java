@@ -5,12 +5,14 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.item.custom.HammerItem;
 import net.jirniy.pinkstuff.item.custom.ModArmorItem;
+import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -23,12 +25,11 @@ public class ModItems {
     public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot", Item::new);
     public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", Item::new);
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
-//    public static final Item KUNZITE = registerItem(new Item.Settings(), "kunzite");
-//    public static final Item RAW_KUNZITE = registerItem(new Item.Settings(), "raw_kunzite");
-//    public static final Item CRYSTAL_GLITTER = registerItem(new Item.Settings(), "crystal_glitter");
-//    public static final Item ELYSIUM_INGOT = registerItem(new Item.Settings(), "elysium_ingot");
-//    public static final Item ELYSIAN_REDSTONE_CORE = registerItem(new Item.Settings(), "elysian_redstone_core");
-//    public static final Item PINK_BITS = registerItem(new Item.Settings(), "pink_bits");
+    public static final Item GELATINOUS_BUD = registerItem("gelatinous_bud", setting -> new Item(setting
+            .food(ModFoodComponents.GELATINOUS_BUD, ModFoodComponents.GELATINOUS_BUD_EFFECT)));
+
+    public static final Item THERMIUM = registerItem("thermium", Item::new);
+    public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
 
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
             setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 4, -2.4f)));
@@ -89,6 +90,8 @@ public class ModItems {
             entries.add(ELYSIUM_INGOT);
             entries.add(ELYSIAN_REDSTONE_CORE);
             entries.add(PINK_BITS);
+            entries.add(THERMIUM);
+            entries.add(RAW_THERMIUM);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(KUNZITE_SWORD);

@@ -40,10 +40,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModBlocks.AMETHYST_KUNZITE_ORE);
                 List<ItemConvertible> ELYSIUM_SMELTABLES = List.of(
                         ModItems.CRYSTAL_GLITTER);
+                List<ItemConvertible> THERMIUM_SMELTABLES = List.of(
+                        ModItems.RAW_THERMIUM,
+                        ModBlocks.THERMIUM_ORE,
+                        ModBlocks.DEEPSLATE_THERMIUM_ORE);
                 offerSmelting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
                         0.25f, 40, "kunzite_smelting");
                 offerBlasting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
                         0.25f, 20, "kunzite_blasting");
+                offerSmelting(THERMIUM_SMELTABLES, RecipeCategory.MISC, ModItems.THERMIUM,
+                        4f, 640, "thermium_smelting");
+                offerBlasting(THERMIUM_SMELTABLES, RecipeCategory.MISC, ModItems.THERMIUM,
+                        4f, 320, "thermium_blasting");
                 offerSmelting(ELYSIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ELYSIUM_INGOT,
                         2f, 320, "elysium_smelting");
                 offerBlasting(ELYSIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ELYSIUM_INGOT,
@@ -52,6 +60,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.KUNZITE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.RAW_KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.RAW_KUNZITE_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
+                        ModItems.THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.THERMIUM_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
+                        ModItems.RAW_THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_THERMIUM_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.ELYSIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.ELYSIUM_BLOCK);
                 createShapeless(RecipeCategory.MISC, ModItems.CRYSTAL_GLITTER, 1)
@@ -326,6 +338,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_PLANKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cherry_planks_from_crystal_cherry_planks")));
+                createShapeless(RecipeCategory.FOOD, ModItems.GELATINOUS_BUD, 2)
+                        .input(ModItems.KUNZITE).input(ModItems.KUNZITE)
+                        .input(Items.BONE_MEAL).input(Items.BONE_MEAL)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "gelatinous_bud")));
             }
         };
     }

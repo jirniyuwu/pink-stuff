@@ -24,6 +24,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_KUNZITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AMETHYST_KUNZITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ELYSIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THERMIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_THERMIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THERMIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_THERMIUM_ORE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
@@ -41,6 +45,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIAN_REDSTONE_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PINK_BITS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GELATINOUS_BUD, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.THERMIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_THERMIUM, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.KUNZITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KUNZITE_PICKAXE, Models.HANDHELD);

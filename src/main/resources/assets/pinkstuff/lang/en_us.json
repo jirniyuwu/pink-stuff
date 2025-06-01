@@ -4,7 +4,11 @@
   "item.pinkstuff.pink_bits": "Pink bits",
   "item.pinkstuff.crystal_glitter": "Crystal Glitter",
   "item.pinkstuff.elysium_ingot": "Elysium Ingot",
-  "item.pinkstuff.elysian_redstone_core": "Elysian Redstone core",
+  "item.pinkstuff.elysian_redstone_core": "Elysian Redstone Core",
+  "item.pinkstuff.thermium": "Thermium Rod",
+  "item.pinkstuff.raw_thermium": "Raw Thermium",
+
+  "item.pinkstuff.gelatinous_bud": "Gelatinous Bud",
 
   "item.pinkstuff.kunzite_block": "Block of Kunzite",
   "item.pinkstuff.raw_kunzite_block": "Block of Raw Kunzite",
@@ -12,14 +16,18 @@
   "item.pinkstuff.deepslate_kunzite_ore": "Deepslate Kunzite Ore",
   "item.pinkstuff.amethyst_kunzite_ore": "Amethyst Kunzite Ore",
   "item.pinkstuff.elysium_block": "Block of Elysium",
+  "item.pinkstuff.thermium_block": "Block of Thermium",
+  "item.pinkstuff.raw_thermium_block": "Block of Raw Thermium",
+  "item.pinkstuff.thermium_ore": "Thermium Ore",
+  "item.pinkstuff.deepslate_thermium_ore": "Deepslate Thermium Ore",
 
-  "item.pinkstuff.crystal_cherry_log": "Crystal Cherry log",
-  "item.pinkstuff.crystal_cherry_wood": "Crystal Cherry wood",
-  "item.pinkstuff.stripped_crystal_cherry_log": "Stripped Crystal Cherry log",
-  "item.pinkstuff.stripped_crystal_cherry_wood": "Stripped Crystal Cherry wood",
-  "item.pinkstuff.crystal_cherry_planks": "Crystal Cherry planks",
-  "item.pinkstuff.crystal_cherry_leaves": "Crystal Cherry leaves",
-  "item.pinkstuff.crystal_cherry_sapling": "Crystal Cherry sapling",
+  "item.pinkstuff.crystal_cherry_log": "Crystal Cherry Log",
+  "item.pinkstuff.crystal_cherry_wood": "Crystal Cherry Wood",
+  "item.pinkstuff.stripped_crystal_cherry_log": "Stripped Crystal Cherry Log",
+  "item.pinkstuff.stripped_crystal_cherry_wood": "Stripped Crystal Cherry Wood",
+  "item.pinkstuff.crystal_cherry_planks": "Crystal Cherry Planks",
+  "item.pinkstuff.crystal_cherry_leaves": "Crystal Cherry Leaves",
+  "item.pinkstuff.crystal_cherry_sapling": "Crystal Cherry Sapling",
 
   "item.pinkstuff.kunzite_sword": "Kunzite Sword",
   "item.pinkstuff.kunzite_pickaxe": "Kunzite Pickaxe",
@@ -44,5 +52,5 @@
   "item.pinkstuff.elysium_leggings": "Elysian Legwear",
   "item.pinkstuff.elysium_boots": "Elysian Groundwalkers",
 
-  "itemgroup.pinkstuff.kunzite_items": "Kunzite Items"
+  "itemgroup.pinkstuff.kunzite_items": "Cuteness"
 }

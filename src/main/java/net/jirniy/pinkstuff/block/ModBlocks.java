@@ -43,6 +43,19 @@ public class ModBlocks {
             properties -> new Block(properties.strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
+    public static final Block THERMIUM_BLOCK = registerBlock("thermium_block",
+            properties -> new Block(properties.strength(5f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 11)));
+    public static final Block RAW_THERMIUM_BLOCK = registerBlock("raw_thermium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.STONE).luminance(state -> 7)));
+    public static final Block THERMIUM_ORE = registerBlock("thermium_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
+                    properties.strength(5f).requiresTool().luminance(state -> 3)));
+    public static final Block DEEPSLATE_THERMIUM_ORE = registerBlock("deepslate_thermium_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
+                    properties.strength(6f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).luminance(state -> 2)));
+
     public static final Block CRYSTAL_CHERRY_LOG = registerBlock("crystal_cherry_log",
             properties -> new PillarBlock(properties
                     .strength(2.0F).luminance(state -> 4).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
@@ -93,6 +106,10 @@ public class ModBlocks {
             entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
             entries.add(ModBlocks.AMETHYST_KUNZITE_ORE);
             entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
+            entries.add(ModBlocks.THERMIUM_BLOCK);
+            entries.add(ModBlocks.THERMIUM_ORE);
+            entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
+            entries.add(ModBlocks.RAW_THERMIUM_BLOCK);
         });
     }
 }
