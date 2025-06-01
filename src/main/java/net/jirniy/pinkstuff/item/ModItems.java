@@ -31,18 +31,18 @@ public class ModItems {
 //    public static final Item PINK_BITS = registerItem(new Item.Settings(), "pink_bits");
 
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 5, -2.4f)));
+            setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 4, -2.4f)));
     public static final Item KUNZITE_PICKAXE = registerItem("kunzite_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.KUNZITE, 1, -2.8f)));
     public static final Item KUNZITE_SHOVEL = registerItem("kunzite_shovel",
             setting -> new ShovelItem(ModToolMaterials.KUNZITE, 1.5f, -3.0f, setting));
     public static final Item KUNZITE_AXE = registerItem("kunzite_axe",
-            setting -> new AxeItem(ModToolMaterials.KUNZITE, 8, -3.2f, setting));
+            setting -> new AxeItem(ModToolMaterials.KUNZITE, 6, -3.2f, setting));
     public static final Item KUNZITE_HOE = registerItem("kunzite_hoe",
             setting -> new HoeItem(ModToolMaterials.KUNZITE, 0, -3f, setting));
 
     public static final Item ELYSIUM_SWORD = registerItem("elysium_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 11, -1.4f)));
+            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 11, -1.6f)));
     public static final Item ELYSIUM_PICKAXE = registerItem("elysium_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.ELYSIUM, 1, -2.8f)));
     public static final Item ELYSIUM_SHOVEL = registerItem("elysium_shovel",
@@ -53,7 +53,7 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting));
 
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
-            setting -> new HammerItem(ModToolMaterials.ELYSIUM, 16, -2.8f, setting));
+            setting -> new HammerItem(ModToolMaterials.ELYSIUM, 16, -3.4f, setting));
 
     public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));

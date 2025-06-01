@@ -31,13 +31,13 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.STONE)));
     public static final Block KUNZITE_ORE = registerBlock("kunzite_ore",
-            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(3f).requiresTool()));
     public static final Block DEEPSLATE_KUNZITE_ORE = registerBlock("deepslate_kunzite_ore",
-            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block AMETHYST_KUNZITE_ORE = registerBlock("amethyst_kunzite_ore",
-            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block ELYSIUM_BLOCK = registerBlock("elysium_block",
             properties -> new Block(properties.strength(5f)

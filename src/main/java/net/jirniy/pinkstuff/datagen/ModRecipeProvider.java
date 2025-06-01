@@ -300,23 +300,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "stripped_crystal_cherry_wood")));
                 createShapeless(RecipeCategory.DECORATIONS, ModBlocks.CRYSTAL_CHERRY_SAPLING, 1)
-                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
-                        .input(ModItems.PINK_BITS).input(Blocks.CHERRY_SAPLING)
+                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
+                        .input(ModItems.PINK_BITS).input(Blocks.CHERRY_SAPLING).input(ModItems.PINK_BITS)
+                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
                         .criterion(hasItem(Blocks.CHERRY_SAPLING),
-                                conditionsFromItem(Blocks.CHERRY_SAPLING));
-                createShapeless(RecipeCategory.MISC, Items.AMETHYST_SHARD, 2)
-                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
-                        .input(ModItems.PINK_BITS).input(Items.PURPLE_DYE)
+                                conditionsFromItem(Blocks.CHERRY_SAPLING))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_sapling_from_cherry_sapling")));
+                createShapeless(RecipeCategory.MISC, Items.AMETHYST_SHARD, 1)
+                        .input(ModItems.KUNZITE).input(ModItems.KUNZITE).input(ModItems.KUNZITE)
+                        .input(ModItems.KUNZITE).input(Items.PURPLE_DYE).input(ModItems.KUNZITE)
                         .criterion(hasItem(ModItems.PINK_BITS),
                                 conditionsFromItem(ModItems.PINK_BITS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_shard_from_pink_bits")));
-                createShapeless(RecipeCategory.MISC, ModItems.PINK_BITS, 1)
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_shard_from_kunzite")));
+                createShapeless(RecipeCategory.MISC, ModItems.PINK_BITS, 2)
                         .input(ModBlocks.CRYSTAL_CHERRY_LEAVES)
                         .criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_LEAVES),
                                 conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LEAVES))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "pink_bits_from_crystal_cherry_leaves")));
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.CHERRY_PLANKS, 1)
+                        .input(ModBlocks.CRYSTAL_CHERRY_PLANKS)
+                        .criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_PLANKS),
+                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cherry_planks_from_crystal_cherry_planks")));
             }
         };
     }
