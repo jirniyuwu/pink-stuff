@@ -2,9 +2,11 @@ package net.jirniy.pinkstuff.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -42,5 +44,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ELYSIUM_CHESTPLATE)
                 .add(ModItems.ELYSIUM_LEGGINGS)
                 .add(ModItems.ELYSIUM_BOOTS);
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CRYSTAL_CHERRY_LOG.asItem())
+                .add(ModBlocks.CRYSTAL_CHERRY_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG.asItem())
+                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD.asItem());
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.CRYSTAL_CHERRY_PLANKS.asItem());
     }
 }

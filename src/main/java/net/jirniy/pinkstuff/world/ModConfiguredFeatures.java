@@ -16,13 +16,19 @@ import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.Pool;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.IntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.math.intprovider.WeightedListIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.RandomizedIntBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
+import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
@@ -35,6 +41,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> KUNZITE_ORE_KEY = registryKey("kunzite_ore");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEM_TREE_KEY = registryKey("gem_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CRYSTAL_CHERRY_KEY = registryKey("crystal_cherry");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -55,10 +62,35 @@ public class ModConfiguredFeatures {
                                 .add(BUDDING_AMETHYST.getDefaultState(), 1)
                                 .add(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState(), 2)
                 ),
-                new ForkingTrunkPlacer(5, 6, 3),
+                new LargeOakTrunkPlacer(7, 7, 5),
                 BlockStateProvider.of(AIR),
                 new BlobFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), 1),
                 new TwoLayersFeatureSize(3, 1, 4)).build());
+
+        register(context, CRYSTAL_CHERRY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                new WeightedBlockStateProvider(
+                        Pool.<BlockState>builder()
+                                .add(CHERRY_LOG.getDefaultState(), 1)
+                                .add(ModBlocks.CRYSTAL_CHERRY_LOG.getDefaultState(), 2)
+                ),
+                new CherryTrunkPlacer(
+                        7,
+                        1,
+                        0,
+                        new WeightedListIntProvider(
+                                Pool.<IntProvider>builder().add(ConstantIntProvider.create(1), 1).add(ConstantIntProvider.create(2), 1).add(ConstantIntProvider.create(3), 1).build()
+                        ),
+                        UniformIntProvider.create(2, 4),
+                        UniformIntProvider.create(-4, -3),
+                        UniformIntProvider.create(-1, 0)
+                ),
+                new WeightedBlockStateProvider(
+                        Pool.<BlockState>builder()
+                                .add(CHERRY_LEAVES.getDefaultState(), 1)
+                                .add(ModBlocks.CRYSTAL_CHERRY_LEAVES.getDefaultState(), 2)
+                ),
+                new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.25F, 0.5F, 0.16666667F, 0.33333334F),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {

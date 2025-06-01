@@ -33,6 +33,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.KUNZITE_ORE, oreDrops(ModBlocks.KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.DEEPSLATE_KUNZITE_ORE, oreDrops(ModBlocks.DEEPSLATE_KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.AMETHYST_KUNZITE_ORE, multipleOreDrops(ModBlocks.AMETHYST_KUNZITE_ORE, ModItems.PINK_BITS, 6, 19));
+
+        addDrop(ModBlocks.CRYSTAL_CHERRY_LOG);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_WOOD);
+        addDrop(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
+        addDrop(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_PLANKS);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_SAPLING);
+
+        addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 1, 3));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

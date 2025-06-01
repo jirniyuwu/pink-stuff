@@ -36,5 +36,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ELYSIUM_BLOCK);
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CRYSTAL_CHERRY_LOG)
+                .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
+                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG)
+                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
     }
 }

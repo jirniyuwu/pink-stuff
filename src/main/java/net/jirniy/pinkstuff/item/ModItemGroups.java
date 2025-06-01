@@ -31,6 +31,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.KUNZITE_BLOCK);
                         entries.add(ModBlocks.ELYSIUM_BLOCK);
 
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_WOOD);
+                        entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
+                        entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_SAPLING);
+
                         entries.add(ModItems.KUNZITE_SWORD);
                         entries.add(ModItems.KUNZITE_PICKAXE);
                         entries.add(ModItems.KUNZITE_AXE);

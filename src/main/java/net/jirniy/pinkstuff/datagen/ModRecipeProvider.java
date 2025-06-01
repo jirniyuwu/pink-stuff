@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
@@ -35,17 +36,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List<ItemConvertible> KUNZITE_SMELTABLES = List.of(
                         ModItems.RAW_KUNZITE,
                         ModBlocks.KUNZITE_ORE,
-                        ModBlocks.DEEPSLATE_KUNZITE_ORE);
+                        ModBlocks.DEEPSLATE_KUNZITE_ORE,
+                        ModBlocks.AMETHYST_KUNZITE_ORE);
                 List<ItemConvertible> ELYSIUM_SMELTABLES = List.of(
                         ModItems.CRYSTAL_GLITTER);
                 offerSmelting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
-                        0.25f, 80, "kunzite");
+                        0.25f, 40, "kunzite_smelting");
                 offerBlasting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
-                        0.25f, 40, "kunzite");
+                        0.25f, 20, "kunzite_blasting");
                 offerSmelting(ELYSIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ELYSIUM_INGOT,
-                        1f, 160, "elysium");
+                        2f, 320, "elysium_smelting");
                 offerBlasting(ELYSIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ELYSIUM_INGOT,
-                        1f, 80, "elysium");
+                        2f, 160, "elysium_blasting");
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.KUNZITE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
@@ -266,6 +268,55 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_boots")));
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
+                        .input(ModBlocks.CRYSTAL_CHERRY_LOG).criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_LOG),
+                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks_from_crystal_cherry_log")));
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
+                        .input(ModBlocks.CRYSTAL_CHERRY_WOOD).criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_WOOD),
+                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks_from_crystal_cherry_wood")));
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
+                        .input(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).criterion(hasItem(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG),
+                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks_from_stripped_crystal_cherry_log")));
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
+                        .input(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD).criterion(hasItem(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD),
+                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks_from_stripped_crystal_cherry_wood")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.CRYSTAL_CHERRY_LOG)
+                        .criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_LOG), conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_wood")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG)
+                        .criterion(hasItem(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG), conditionsFromItem(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "stripped_crystal_cherry_wood")));
+                createShapeless(RecipeCategory.DECORATIONS, ModBlocks.CRYSTAL_CHERRY_SAPLING, 1)
+                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
+                        .input(ModItems.PINK_BITS).input(Blocks.CHERRY_SAPLING)
+                        .criterion(hasItem(Blocks.CHERRY_SAPLING),
+                                conditionsFromItem(Blocks.CHERRY_SAPLING));
+                createShapeless(RecipeCategory.MISC, Items.AMETHYST_SHARD, 2)
+                        .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
+                        .input(ModItems.PINK_BITS).input(Items.PURPLE_DYE)
+                        .criterion(hasItem(ModItems.PINK_BITS),
+                                conditionsFromItem(ModItems.PINK_BITS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_shard_from_pink_bits")));
+                createShapeless(RecipeCategory.MISC, ModItems.PINK_BITS, 1)
+                        .input(ModBlocks.CRYSTAL_CHERRY_LEAVES)
+                        .criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_LEAVES),
+                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LEAVES))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pink_bits_from_crystal_cherry_leaves")));
             }
         };
     }
