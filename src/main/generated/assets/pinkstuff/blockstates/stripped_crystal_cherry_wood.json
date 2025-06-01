@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "pinkstuff:block/stripped_crystal_cherry_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "pinkstuff:block/stripped_crystal_cherry_wood"
+    },
+    "axis=z": {
+      "model": "pinkstuff:block/stripped_crystal_cherry_wood",
+      "x": 90
+    }
+  }
+}

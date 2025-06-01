@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 320,
+  "experience": 4.0,
+  "group": "thermium_blasting",
+  "ingredient": "pinkstuff:thermium_ore",
+  "result": {
+    "id": "pinkstuff:thermium"
+  }
+}

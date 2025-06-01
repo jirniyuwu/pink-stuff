@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "pinkstuff:elysium_ingot",
+    "K": "pinkstuff:kunzite_shovel",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "E",
+    "K",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:elysium_shovel"
+  }
+}

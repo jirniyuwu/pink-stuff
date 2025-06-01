@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "pinkstuff:elysian_redstone_core",
+    "E": "pinkstuff:elysium_ingot",
+    "K": "pinkstuff:kunzite_pickaxe",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "ECE",
+    " K ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:elysium_pickaxe"
+  }
+}

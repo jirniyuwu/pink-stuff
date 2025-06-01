@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 640,
+  "experience": 4.0,
+  "group": "thermium_smelting",
+  "ingredient": "pinkstuff:thermium_ore",
+  "result": {
+    "id": "pinkstuff:thermium"
+  }
+}

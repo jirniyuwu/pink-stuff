@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 320,
+  "experience": 2.0,
+  "group": "elysium_smelting",
+  "ingredient": "pinkstuff:crystal_glitter",
+  "result": {
+    "id": "pinkstuff:elysium_ingot"
+  }
+}

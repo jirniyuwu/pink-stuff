@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:diamond",
+    "E": "pinkstuff:elysium_ingot",
+    "R": "minecraft:redstone_block"
+  },
+  "pattern": [
+    "EDE",
+    "DRD",
+    "EDE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:elysian_redstone_core"
+  }
+}

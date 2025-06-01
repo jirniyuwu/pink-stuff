@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "K": "pinkstuff:kunzite"
+  },
+  "pattern": [
+    "K K",
+    "A A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:kunzite_boots"
+  }
+}

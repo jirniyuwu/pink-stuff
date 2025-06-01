@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "K": "pinkstuff:kunzite",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "KAK",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:kunzite_pickaxe"
+  }
+}

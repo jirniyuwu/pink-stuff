@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "pinkstuff:block/crystal_cherry_leaves"
+  }
+}
