@@ -30,8 +30,11 @@ public class ModItems {
     public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", Item::new);
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
     public static final Item MEMORY_SHARD = registerItem("memory_shard", Item::new);
+
     public static final Item GELATINOUS_BUD = registerItem("gelatinous_bud", setting -> new Item(setting
             .food(ModFoodComponents.GELATINOUS_BUD, ModFoodComponents.GELATINOUS_BUD_EFFECT)));
+    public static final Item ELYSIUM_APPLE = registerItem("elysium_apple", setting -> new Item(setting
+            .food(ModFoodComponents.ELYSIUM_APPLE, ModFoodComponents.ELYSIUM_APPLE_EFFECT)));
 
     public static final Item THERMIUM = registerItem("thermium", Item::new);
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
@@ -122,6 +125,10 @@ public class ModItems {
             entries.add(ELYSIUM_SHOVEL);
             entries.add(ELYSIUM_HOE);
             entries.add(ELYSIUM_HAMMER);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(GELATINOUS_BUD);
+            entries.add(ELYSIUM_APPLE);
         });
     }
 }

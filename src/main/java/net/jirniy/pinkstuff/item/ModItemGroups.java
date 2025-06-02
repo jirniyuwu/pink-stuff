@@ -84,6 +84,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AMETHYST_BRICKS_WALL);
 
                         entries.add(ModItems.GELATINOUS_BUD);
+                        entries.add(ModItems.ELYSIUM_APPLE);
 
                         entries.add(ModItems.KUNZITE_SWORD);
                         entries.add(ModItems.KUNZITE_PICKAXE);
