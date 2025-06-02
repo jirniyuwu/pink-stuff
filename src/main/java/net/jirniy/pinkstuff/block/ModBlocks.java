@@ -143,7 +143,7 @@ public class ModBlocks {
     public static final Block CRYSTAL_CHERRY_STAIRS = registerBlock("crystal_cherry_stairs",
             properties -> new StairsBlock(ModBlocks.CRYSTAL_CHERRY_PLANKS.getDefaultState(),
                     properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
-    public static final Block CRYSTAL_CHERRY_SLAB = registerBlock("crystal_cherryslab",
+    public static final Block CRYSTAL_CHERRY_SLAB = registerBlock("crystal_cherry_slab",
             properties -> new SlabBlock(properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
     public static final Block CRYSTAL_CHERRY_BUTTON = registerBlock("crystal_cherry_button",
             properties -> new ButtonBlock(BlockSetType.CHERRY, 6, properties.strength(2f).noCollision().luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));

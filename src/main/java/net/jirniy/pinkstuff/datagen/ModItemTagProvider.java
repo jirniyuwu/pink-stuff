@@ -36,6 +36,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.KUNZITE_HOE)
                 .add(ModItems.ELYSIUM_HOE);
+        getOrCreateTagBuilder(ItemTags.ARMOR_ENCHANTABLE)
+                .add(ModItems.KUNZITE_HELMET)
+                .add(ModItems.KUNZITE_CHESTPLATE)
+                .add(ModItems.KUNZITE_LEGGINGS)
+                .add(ModItems.KUNZITE_BOOTS)
+                .add(ModItems.ELYSIUM_HELMET)
+                .add(ModItems.ELYSIUM_CHESTPLATE)
+                .add(ModItems.ELYSIUM_LEGGINGS)
+                .add(ModItems.ELYSIUM_BOOTS);
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.KUNZITE_CHESTPLATE)

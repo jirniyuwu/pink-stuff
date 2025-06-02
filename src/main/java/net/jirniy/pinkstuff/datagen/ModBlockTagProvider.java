@@ -52,7 +52,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BRICKS_WALL);
-
+        getOrCreateTagBuilder(BlockTags.PLANKS)
+                .add(ModBlocks.CRYSTAL_CHERRY_PLANKS)
+                .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
+                .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
+                .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE)
+                .add(ModBlocks.CRYSTAL_CHERRY_STAIRS)
+                .add(ModBlocks.CRYSTAL_CHERRY_DOOR)
+                .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
