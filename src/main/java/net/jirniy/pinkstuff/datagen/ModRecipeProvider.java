@@ -353,12 +353,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_PLANKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cherry_planks_from_crystal_cherry_planks")));
-                createShapeless(RecipeCategory.FOOD, ModItems.GELATINOUS_BUD, 2)
+                createShapeless(RecipeCategory.FOOD, ModItems.GELATINOUS_BUD, 1)
                         .input(ModItems.KUNZITE).input(ModItems.KUNZITE)
                         .input(Items.BONE_MEAL).input(Items.BONE_MEAL)
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "gelatinous_bud")));
+
+                // TEMPORARY RECIPES
+                createShapeless(RecipeCategory.MISC, ModItems.MEMORY_SHARD, 1)
+                        .input(Items.NETHER_STAR)
+                        .criterion(hasItem(Items.NETHER_STAR), conditionsFromItem(Items.NETHER_STAR))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "memory_shard_from_nether_star")));
+                createShapeless(RecipeCategory.MISC, Items.NETHER_STAR, 1)
+                        .input(ModItems.MEMORY_SHARD)
+                        .criterion(hasItem(Items.NETHER_STAR), conditionsFromItem(Items.NETHER_STAR))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "nether_star_from_memory_shard")));
             }
         };
     }
