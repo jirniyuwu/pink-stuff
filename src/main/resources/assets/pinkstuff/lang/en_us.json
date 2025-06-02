@@ -20,6 +20,32 @@
   "item.pinkstuff.raw_thermium_block": "Block of Raw Thermium",
   "item.pinkstuff.thermium_ore": "Thermium Ore",
   "item.pinkstuff.deepslate_thermium_ore": "Deepslate Thermium Ore",
+
+  "item.pinkstuff.polished_amethyst_block": "Polished Amethyst Block",
+  "item.pinkstuff.polished_amethyst_slab": "Polished Amethyst Slab",
+  "item.pinkstuff.polished_amethyst_stairs": "Polished Amethyst Stairs",
+  "item.pinkstuff.polished_amethyst_wall": "Polished Amethyst Wall",
+
+  "item.pinkstuff.amethyst_bricks": "Amethyst Bricks",
+  "item.pinkstuff.amethyst_bricks_slab": "Amethyst Brick Slab",
+  "item.pinkstuff.amethyst_bricks_stairs": "Amethyst Brick Stairs",
+  "item.pinkstuff.amethyst_bricks_wall": "Amethyst Brick Wall",
+
+  "item.pinkstuff.kunzite_bricks": "Kunzite Bricks",
+  "item.pinkstuff.kunzite_bricks_slab": "Kunzite Brick Slab",
+  "item.pinkstuff.kunzite_bricks_stairs": "Kunzite Brick Stairs",
+  "item.pinkstuff.kunzite_bricks_wall": "Kunzite Brick Wall",
+
+  "item.pinkstuff.elysium_bricks": "Elysian Bricks",
+  "item.pinkstuff.elysium_bricks_slab": "Elysian Brick Slab",
+  "item.pinkstuff.elysium_bricks_stairs": "Elysian Brick Stairs",
+  "item.pinkstuff.elysium_bricks_wall": "Elysian Brick Wall",
+
+  "item.pinkstuff.thermium_bricks": "Thermium Bricks",
+  "item.pinkstuff.thermium_bricks_slab": "Thermium Brick Slab",
+  "item.pinkstuff.thermium_bricks_stairs": "Thermium Brick Stairs",
+  "item.pinkstuff.thermium_bricks_wall": "Thermium Brick Wall",
+
   "item.pinkstuff.memory_shard": "Memory Shard",
 
   "item.pinkstuff.crystal_cherry_log": "Crystal Cherry Log",
@@ -29,6 +55,15 @@
   "item.pinkstuff.crystal_cherry_planks": "Crystal Cherry Planks",
   "item.pinkstuff.crystal_cherry_leaves": "Crystal Cherry Leaves",
   "item.pinkstuff.crystal_cherry_sapling": "Crystal Cherry Sapling",
+
+  "item.pinkstuff.crystal_cherry_slab": "Crystal Cherry Slab",
+  "item.pinkstuff.crystal_cherry_stairs": "Crystal Cherry Stairs",
+  "item.pinkstuff.crystal_cherry_fence": "Crystal Cherry Fence",
+  "item.pinkstuff.crystal_cherry_fence_gate": "Crystal Cherry Gate",
+  "item.pinkstuff.crystal_cherry_door": "Crystal Cherry Door",
+  "item.pinkstuff.crystal_cherry_trapdoor": "Crystal Cherry Trapdoor",
+  "item.pinkstuff.crystal_cherry_button": "Crystal Cherry Button",
+  "item.pinkstuff.crystal_cherry_pressure_plate": "Crystal Cherry Pressure Plate",
 
   "item.pinkstuff.kunzite_sword": "Kunzite Sword",
   "item.pinkstuff.kunzite_pickaxe": "Kunzite Pickaxe",

@@ -31,7 +31,28 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THERMIUM_BLOCK)
                 .add(ModBlocks.RAW_THERMIUM_BLOCK)
                 .add(ModBlocks.DEEPSLATE_THERMIUM_ORE)
-                .add(ModBlocks.THERMIUM_ORE);
+                .add(ModBlocks.THERMIUM_ORE)
+                .add(ModBlocks.POLISHED_AMETHYST_BLOCK)
+                .add(ModBlocks.AMETHYST_BRICKS)
+                .add(ModBlocks.KUNZITE_BRICKS)
+                .add(ModBlocks.ELYSIUM_BRICKS)
+                .add(ModBlocks.THERMIUM_BRICKS)
+                .add(ModBlocks.POLISHED_AMETHYST_STAIRS)
+                .add(ModBlocks.AMETHYST_BRICKS_STAIRS)
+                .add(ModBlocks.KUNZITE_BRICKS_STAIRS)
+                .add(ModBlocks.ELYSIUM_BRICKS_STAIRS)
+                .add(ModBlocks.THERMIUM_BRICKS_STAIRS)
+                .add(ModBlocks.POLISHED_AMETHYST_SLAB)
+                .add(ModBlocks.AMETHYST_BRICKS_SLAB)
+                .add(ModBlocks.KUNZITE_BRICKS_SLAB)
+                .add(ModBlocks.ELYSIUM_BRICKS_SLAB)
+                .add(ModBlocks.THERMIUM_BRICKS_SLAB)
+                .add(ModBlocks.POLISHED_AMETHYST_WALL)
+                .add(ModBlocks.AMETHYST_BRICKS_WALL)
+                .add(ModBlocks.KUNZITE_BRICKS_WALL)
+                .add(ModBlocks.ELYSIUM_BRICKS_WALL)
+                .add(ModBlocks.THERMIUM_BRICKS_WALL);
+
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
@@ -52,5 +73,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_SPECIAL_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.CRYSTAL_CHERRY_FENCE);
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.AMETHYST_BRICKS_WALL)
+                .add(ModBlocks.KUNZITE_BRICKS_WALL)
+                .add(ModBlocks.ELYSIUM_BRICKS_WALL)
+                .add(ModBlocks.THERMIUM_BRICKS_WALL)
+                .add(ModBlocks.POLISHED_AMETHYST_WALL);
     }
 }

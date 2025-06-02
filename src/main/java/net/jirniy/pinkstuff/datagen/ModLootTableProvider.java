@@ -33,6 +33,30 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.THERMIUM_BLOCK);
         addDrop(ModBlocks.RAW_THERMIUM_BLOCK);
 
+        addDrop(ModBlocks.POLISHED_AMETHYST_BLOCK);
+        addDrop(ModBlocks.AMETHYST_BRICKS);
+        addDrop(ModBlocks.KUNZITE_BRICKS);
+        addDrop(ModBlocks.ELYSIUM_BRICKS);
+        addDrop(ModBlocks.THERMIUM_BRICKS);
+
+        addDrop(ModBlocks.POLISHED_AMETHYST_STAIRS);
+        addDrop(ModBlocks.AMETHYST_BRICKS_STAIRS);
+        addDrop(ModBlocks.KUNZITE_BRICKS_STAIRS);
+        addDrop(ModBlocks.ELYSIUM_BRICKS_STAIRS);
+        addDrop(ModBlocks.THERMIUM_BRICKS_STAIRS);
+
+        addDrop(ModBlocks.POLISHED_AMETHYST_SLAB, slabDrops(ModBlocks.POLISHED_AMETHYST_SLAB));
+        addDrop(ModBlocks.AMETHYST_BRICKS_SLAB, slabDrops(ModBlocks.AMETHYST_BRICKS_SLAB));
+        addDrop(ModBlocks.KUNZITE_BRICKS_SLAB, slabDrops(ModBlocks.KUNZITE_BRICKS_SLAB));
+        addDrop(ModBlocks.ELYSIUM_BRICKS_SLAB, slabDrops(ModBlocks.ELYSIUM_BRICKS_SLAB));
+        addDrop(ModBlocks.THERMIUM_BRICKS_SLAB, slabDrops(ModBlocks.THERMIUM_BRICKS_SLAB));
+
+        addDrop(ModBlocks.POLISHED_AMETHYST_WALL);
+        addDrop(ModBlocks.AMETHYST_BRICKS_WALL);
+        addDrop(ModBlocks.KUNZITE_BRICKS_WALL);
+        addDrop(ModBlocks.ELYSIUM_BRICKS_WALL);
+        addDrop(ModBlocks.THERMIUM_BRICKS_WALL);
+
         addDrop(ModBlocks.KUNZITE_ORE, oreDrops(ModBlocks.KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.DEEPSLATE_KUNZITE_ORE, oreDrops(ModBlocks.DEEPSLATE_KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.AMETHYST_KUNZITE_ORE, multipleOreDrops(ModBlocks.AMETHYST_KUNZITE_ORE, ModItems.PINK_BITS, 6, 19));
@@ -45,6 +69,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
         addDrop(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         addDrop(ModBlocks.CRYSTAL_CHERRY_SAPLING);
+
+        addDrop(ModBlocks.CRYSTAL_CHERRY_SLAB, slabDrops(ModBlocks.CRYSTAL_CHERRY_SLAB));
+        addDrop(ModBlocks.CRYSTAL_CHERRY_STAIRS);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_FENCE);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_DOOR, doorDrops(ModBlocks.CRYSTAL_CHERRY_DOOR));
+        addDrop(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_BUTTON);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 1, 3));
     }

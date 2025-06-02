@@ -20,23 +20,40 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_KUNZITE);
                         entries.add(ModItems.KUNZITE);
                         entries.add(ModItems.PINK_BITS);
-                        entries.add(ModItems.CRYSTAL_GLITTER);
-                        entries.add(ModItems.ELYSIUM_INGOT);
-                        entries.add(ModItems.ELYSIAN_REDSTONE_CORE);
 
                         entries.add(ModBlocks.KUNZITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
                         entries.add(ModBlocks.AMETHYST_KUNZITE_ORE);
                         entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
                         entries.add(ModBlocks.KUNZITE_BLOCK);
+
+                        entries.add(ModBlocks.KUNZITE_BRICKS);
+                        entries.add(ModBlocks.KUNZITE_BRICKS_SLAB);
+                        entries.add(ModBlocks.KUNZITE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.KUNZITE_BRICKS_WALL);
+
+                        entries.add(ModItems.CRYSTAL_GLITTER);
+                        entries.add(ModItems.ELYSIUM_INGOT);
+                        entries.add(ModItems.ELYSIAN_REDSTONE_CORE);
                         entries.add(ModBlocks.ELYSIUM_BLOCK);
+
+                        entries.add(ModBlocks.ELYSIUM_BRICKS);
+                        entries.add(ModBlocks.ELYSIUM_BRICKS_SLAB);
+                        entries.add(ModBlocks.ELYSIUM_BRICKS_STAIRS);
+                        entries.add(ModBlocks.ELYSIUM_BRICKS_WALL);
 
                         entries.add(ModItems.RAW_THERMIUM);
                         entries.add(ModItems.THERMIUM);
-                        entries.add(ModBlocks.RAW_THERMIUM_BLOCK);
-                        entries.add(ModBlocks.THERMIUM_BLOCK);
                         entries.add(ModBlocks.THERMIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
+                        entries.add(ModBlocks.RAW_THERMIUM_BLOCK);
+                        entries.add(ModBlocks.THERMIUM_BLOCK);
+
+                        entries.add(ModBlocks.THERMIUM_BRICKS);
+                        entries.add(ModBlocks.THERMIUM_BRICKS_SLAB);
+                        entries.add(ModBlocks.THERMIUM_BRICKS_STAIRS);
+                        entries.add(ModBlocks.THERMIUM_BRICKS_WALL);
+
                         entries.add(ModItems.MEMORY_SHARD);
 
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
@@ -46,6 +63,25 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_SAPLING);
+
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_SLAB);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_STAIRS);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_FENCE);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_DOOR);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
+
+                        entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
+                        entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
+                        entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
+                        entries.add(ModBlocks.POLISHED_AMETHYST_WALL);
+
+                        entries.add(ModBlocks.AMETHYST_BRICKS);
+                        entries.add(ModBlocks.AMETHYST_BRICKS_SLAB);
+                        entries.add(ModBlocks.AMETHYST_BRICKS_STAIRS);
+                        entries.add(ModBlocks.AMETHYST_BRICKS_WALL);
 
                         entries.add(ModItems.GELATINOUS_BUD);
 
