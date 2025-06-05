@@ -21,9 +21,9 @@ import java.util.Map;
 public class ModArmorItem extends Item {
     private static final Map<ArmorMaterial, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>())
-                    .put(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.HASTE, 400, 2, false, false),
-                                    new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 1, false, false))).build();
+                    .put(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 40, 1, false, false)
+                            )).build();
 
     public ModArmorItem(Settings settings) {
         super(settings);

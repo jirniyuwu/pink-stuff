@@ -519,10 +519,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_bricks")));
 
-                createShapeless(RecipeCategory.FOOD, ModItems.ELYSIUM_APPLE, 8)
+                createShapeless(RecipeCategory.FOOD, ModItems.ELYSIUM_APPLE, 4)
                         .input(Items.APPLE).input(Items.APPLE).input(Items.APPLE)
-                        .input(Items.APPLE).input(ModItems.ELYSIUM_INGOT).input(Items.APPLE)
-                        .input(Items.APPLE).input(Items.APPLE).input(Items.APPLE)
+                        .input(Items.APPLE).input(ModItems.ELYSIUM_INGOT)
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_apple")));

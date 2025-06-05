@@ -61,5 +61,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD.asItem());
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS.asItem());
+        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
+                .add(ModItems.KUNZITE_HELMET)
+                .add(ModItems.ELYSIUM_HELMET);
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+                .add(ModItems.KUNZITE_CHESTPLATE)
+                .add(ModItems.ELYSIUM_CHESTPLATE);
+        getOrCreateTagBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE)
+                .add(ModItems.KUNZITE_LEGGINGS)
+                .add(ModItems.ELYSIUM_LEGGINGS);
+        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
+                .add(ModItems.KUNZITE_BOOTS)
+                .add(ModItems.ELYSIUM_BOOTS);
     }
 }

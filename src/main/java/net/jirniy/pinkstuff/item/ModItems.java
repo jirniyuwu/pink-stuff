@@ -76,7 +76,7 @@ public class ModItems {
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
     public static final Item ELYSIUM_HELMET = registerItem("elysium_helmet",
-            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item ELYSIUM_CHESTPLATE = registerItem("elysium_chestplate",
             setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
     public static final Item ELYSIUM_LEGGINGS = registerItem("elysium_leggings",

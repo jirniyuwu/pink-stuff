@@ -29,10 +29,10 @@ public class ModArmorMaterials {
     public static final RegistryKey<EquipmentAsset> ELYSIUM_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "elysium"));
 
     public static final ArmorMaterial ELYSIUM_ARMOR_MATERIAL = new ArmorMaterial(300, Util.make(new EnumMap<>(EquipmentType.class), map -> {
-        map.put(EquipmentType.BOOTS, 3);
-        map.put(EquipmentType.LEGGINGS, 6);
-        map.put(EquipmentType.CHESTPLATE, 8);
-        map.put(EquipmentType.HELMET, 3);
-        map.put(EquipmentType.BODY, 4);
+        map.put(EquipmentType.BOOTS, 4);
+        map.put(EquipmentType.LEGGINGS, 5);
+        map.put(EquipmentType.CHESTPLATE, 7);
+        map.put(EquipmentType.HELMET, 4);
+        map.put(EquipmentType.BODY, 6);
     }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0,0, ModTags.Items.ELYSIUM_REPAIR, ELYSIUM_KEY);
 }
