@@ -35,6 +35,8 @@ public class ModItems {
             .food(ModFoodComponents.GELATINOUS_BUD, ModFoodComponents.GELATINOUS_BUD_EFFECT)));
     public static final Item ELYSIUM_APPLE = registerItem("elysium_apple", setting -> new Item(setting
             .food(ModFoodComponents.ELYSIUM_APPLE, ModFoodComponents.ELYSIUM_APPLE_EFFECT)));
+    public static final Item CRYSTAL_CARROT = registerItem("crystal_carrot", setting -> new Item(setting
+            .food(ModFoodComponents.CRYSTAL_CARROT, ModFoodComponents.CRYSTAL_CARROT_EFFECT)));
 
     public static final Item THERMIUM = registerItem("thermium", Item::new);
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
@@ -129,6 +131,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(GELATINOUS_BUD);
             entries.add(ELYSIUM_APPLE);
+            entries.add(CRYSTAL_CARROT);
         });
     }
 }

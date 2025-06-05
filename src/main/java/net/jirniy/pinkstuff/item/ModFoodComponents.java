@@ -16,4 +16,8 @@ public class ModFoodComponents {
     public static final ConsumableComponent ELYSIUM_APPLE_EFFECT = ConsumableComponents.food()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, 0), 1f))
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 0), 1f)).build();
+
+    public static final FoodComponent CRYSTAL_CARROT = new FoodComponent.Builder().nutrition(7).saturationModifier(1.2f).build();
+    public static final ConsumableComponent CRYSTAL_CARROT_EFFECT = ConsumableComponents.food()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80, 0), 1f)).build();
 }
