@@ -8,6 +8,8 @@ import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.component.ModDataComponentTypes;
+import net.jirniy.pinkstuff.enchantment.ModEnchantmentEffects;
+import net.jirniy.pinkstuff.enchantment.ModEnchantments;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.HammerUsageEvent;
@@ -30,6 +32,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModDataComponentTypes.registerDataComponentTypes();
 		ModWorldGeneration.generateModWorldGen();
+		ModEnchantmentEffects.registerEnchantmentEffects();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);

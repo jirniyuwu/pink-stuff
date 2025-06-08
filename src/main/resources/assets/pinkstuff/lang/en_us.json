@@ -11,6 +11,7 @@
   "item.pinkstuff.gelatinous_bud": "Gelatinous Bud",
   "item.pinkstuff.elysium_apple": "Elysian Fruit",
   "item.pinkstuff.crystal_carrot": "Crystal Carrot",
+  "item.pinkstuff.gem_berry": "Gem Berries",
 
   "item.pinkstuff.kunzite_block": "Block of Kunzite",
   "item.pinkstuff.raw_kunzite_block": "Block of Raw Kunzite",
@@ -91,6 +92,10 @@
   "item.pinkstuff.elysium_boots": "Elysian Groundwalkers",
 
   "item.pinkstuff.dawnbloomer": "The Dawnbloomer",
+
+  "enchantment.pinkstuff.lightning": "Lightning",
+  "enchantment.pinkstuff.length": "Length",
+  "enchantment.pinkstuff.reach": "Reach",
 
   "itemgroup.pinkstuff.kunzite_items": "Cuteness"
 }

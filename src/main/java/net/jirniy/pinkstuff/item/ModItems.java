@@ -37,6 +37,8 @@ public class ModItems {
             .food(ModFoodComponents.ELYSIUM_APPLE, ModFoodComponents.ELYSIUM_APPLE_EFFECT)));
     public static final Item CRYSTAL_CARROT = registerItem("crystal_carrot", setting -> new Item(setting
             .food(ModFoodComponents.CRYSTAL_CARROT, ModFoodComponents.CRYSTAL_CARROT_EFFECT)));
+    public static final Item GEM_BERRY = registerItem("gem_berry", setting -> new Item(setting
+            .food(ModFoodComponents.GEM_BERRY)));
 
     public static final Item THERMIUM = registerItem("thermium", Item::new);
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
@@ -78,7 +80,7 @@ public class ModItems {
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
     public static final Item ELYSIUM_HELMET = registerItem("elysium_helmet",
-            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item ELYSIUM_CHESTPLATE = registerItem("elysium_chestplate",
             setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
     public static final Item ELYSIUM_LEGGINGS = registerItem("elysium_leggings",

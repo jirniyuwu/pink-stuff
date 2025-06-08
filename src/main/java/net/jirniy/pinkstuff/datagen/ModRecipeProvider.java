@@ -537,6 +537,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_carrot")));
 
+                createShapeless(RecipeCategory.FOOD, ModItems.GEM_BERRY, 1)
+                        .input(Items.GLOW_BERRIES).input(ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "gem_berry_from_glow_berries")));
+                createShapeless(RecipeCategory.FOOD, ModItems.GEM_BERRY, 1)
+                        .input(Items.SWEET_BERRIES).input(ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "gem_berry_from_sweet_berries")));
+
 
 
                 // TEMPORARY RECIPES
