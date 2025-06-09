@@ -65,6 +65,8 @@ public class DisplayBlock extends BlockWithEntity implements BlockEntityProvider
 
                 displayBlockEntity.markDirty();
                 world.updateListeners(pos, state, state, 0);
+            }else if(player.isSneaking() && !world.isClient()) {
+                player.openHandledScreen(displayBlockEntity);
             }
         }
 
