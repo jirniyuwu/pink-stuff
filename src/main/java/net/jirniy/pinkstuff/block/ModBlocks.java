@@ -2,6 +2,7 @@ package net.jirniy.pinkstuff.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
+import net.jirniy.pinkstuff.block.custom.DisplayBlock;
 import net.jirniy.pinkstuff.block.custom.ModSaplingBlock;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
@@ -157,6 +158,10 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
     public static final Block CRYSTAL_CHERRY_TRAPDOOR = registerBlock("crystal_cherry_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+
+    public static final Block DISPLAY = registerBlock("display",
+            properties -> new DisplayBlock(properties.strength(4f)
+                    .requiresTool().nonOpaque()));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name))));

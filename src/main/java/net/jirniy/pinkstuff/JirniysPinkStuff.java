@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.component.ModDataComponentTypes;
 import net.jirniy.pinkstuff.enchantment.ModEnchantmentEffects;
 import net.jirniy.pinkstuff.enchantment.ModEnchantments;
@@ -33,6 +34,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModDataComponentTypes.registerDataComponentTypes();
 		ModWorldGeneration.generateModWorldGen();
 		ModEnchantmentEffects.registerEnchantmentEffects();
+		ModBlockEntities.registerBlockEntities();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);

@@ -19,6 +19,7 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -548,7 +549,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "gem_berry_from_sweet_berries")));
 
-
+                createShaped(RecipeCategory.DECORATIONS, ModBlocks.DISPLAY, 2)
+                        .pattern("SSS")
+                        .pattern("/T/")
+                        .pattern("PPP")
+                        .input('T', ModItems.THERMIUM)
+                        .input('S', Blocks.SMOOTH_STONE)
+                        .input('/', Items.STICK)
+                        .input('P', Blocks.CHERRY_PLANKS)
+                        .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "display")));
 
                 // TEMPORARY RECIPES
                 createShapeless(RecipeCategory.MISC, ModItems.MEMORY_SHARD, 1)

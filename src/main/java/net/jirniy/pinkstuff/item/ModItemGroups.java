@@ -17,6 +17,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.KUNZITE))
                     .displayName(Text.translatable("itemgroup.pinkstuff.kunzite_items"))
                     .entries((displayContext, entries) -> {
+
                         entries.add(ModItems.RAW_KUNZITE);
                         entries.add(ModItems.KUNZITE);
                         entries.add(ModItems.PINK_BITS);
@@ -53,6 +54,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THERMIUM_BRICKS_SLAB);
                         entries.add(ModBlocks.THERMIUM_BRICKS_STAIRS);
                         entries.add(ModBlocks.THERMIUM_BRICKS_WALL);
+                        entries.add(ModBlocks.DISPLAY);
 
                         entries.add(ModItems.MEMORY_SHARD);
 
