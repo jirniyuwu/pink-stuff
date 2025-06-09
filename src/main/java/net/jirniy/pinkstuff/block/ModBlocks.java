@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.custom.DisplayBlock;
 import net.jirniy.pinkstuff.block.custom.ModSaplingBlock;
+import net.jirniy.pinkstuff.block.custom.ThermiumBlasterBlock;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -159,6 +160,8 @@ public class ModBlocks {
 
     public static final Block DISPLAY = registerBlock("display",
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 5).nonOpaque()));
+    public static final Block THERMIUM_BLASTER = registerBlock("thermium_blaster",
+            properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool()));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name))));

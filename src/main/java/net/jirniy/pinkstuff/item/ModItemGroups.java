@@ -55,6 +55,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THERMIUM_BRICKS_STAIRS);
                         entries.add(ModBlocks.THERMIUM_BRICKS_WALL);
                         entries.add(ModBlocks.DISPLAY);
+                        entries.add(ModBlocks.THERMIUM_BLASTER);
 
                         entries.add(ModItems.MEMORY_SHARD);
 
