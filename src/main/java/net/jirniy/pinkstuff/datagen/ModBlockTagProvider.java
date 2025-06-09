@@ -76,7 +76,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_SPECIAL_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
-
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE);
 

@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "pinkstuff:block/display",
-		"particle": "pinkstuff:block/display"
+		"particle": "minecraft:block/cherry_planks"
 	},
 	"elements": [
 		{

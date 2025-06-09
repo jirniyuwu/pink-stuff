@@ -26,6 +26,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(ModBlocks.DISPLAY);
+
         addDrop(ModBlocks.KUNZITE_BLOCK);
         addDrop(ModBlocks.RAW_KUNZITE_BLOCK);
         addDrop(ModBlocks.ELYSIUM_BLOCK);
