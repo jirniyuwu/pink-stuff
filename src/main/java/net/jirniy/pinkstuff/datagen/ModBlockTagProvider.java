@@ -3,13 +3,9 @@ package net.jirniy.pinkstuff.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.jirniy.pinkstuff.block.ModBlocks;
-import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
-import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.ItemTags;
-import org.apache.logging.log4j.core.pattern.AbstractStyleNameConverter;
 
 import java.util.concurrent.CompletableFuture;
 

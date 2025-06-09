@@ -7,7 +7,6 @@ import net.jirniy.pinkstuff.enchantment.ModEnchantments;
 import net.jirniy.pinkstuff.world.ModConfiguredFeatures;
 import net.jirniy.pinkstuff.world.ModPlacedFeatures;
 import net.minecraft.registry.RegistryBuilder;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
 public class JirniysPinkStuffDataGenerator implements DataGeneratorEntrypoint {
