@@ -159,9 +159,9 @@ public class ModBlocks {
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
 
     public static final Block DISPLAY = registerBlock("display",
-            properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 5).nonOpaque()));
+            properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque()));
     public static final Block THERMIUM_BLASTER = registerBlock("thermium_blaster",
-            properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool()));
+            properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6)));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name))));

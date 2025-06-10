@@ -556,6 +556,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "display")));
 
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THERMIUM_BLASTER, 1)
+                        .pattern("AAA")
+                        .pattern("TBT")
+                        .pattern("DDD")
+                        .input('T', ModItems.THERMIUM)
+                        .input('B', Blocks.BLAST_FURNACE)
+                        .input('A', ModBlocks.POLISHED_AMETHYST_BLOCK)
+                        .input('D', Blocks.POLISHED_DEEPSLATE)
+                        .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_blaster")));
+
                 // TEMPORARY RECIPES
                 createShapeless(RecipeCategory.MISC, ModItems.MEMORY_SHARD, 1)
                         .input(Items.NETHER_STAR)
