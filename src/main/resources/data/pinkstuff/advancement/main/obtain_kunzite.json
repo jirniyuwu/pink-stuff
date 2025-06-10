@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/root",
+  "criteria": {
+    "kunzite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.obtain_kunzite.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:kunzite"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.main.obtain_kunzite.title"
+    }
+  },
+  "requirements": [
+    [
+      "kunzite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

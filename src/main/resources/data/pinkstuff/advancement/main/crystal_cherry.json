@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/root",
+  "criteria": {
+    "log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:crystal_cherry_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.crystal_cherry.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:crystal_cherry_leaves"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.main.crystal_cherry.title"
+    }
+  },
+  "requirements": [
+    [
+      "log"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "enter_cherry_grove": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "minecraft:cherry_grove"
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "pinkstuff:gui/advancements/backgrounds/polished_amethyst",
+    "description": {
+      "translate": "advancements.main.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:crystal_cherry_sapling"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.main.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "enter_cherry_grove"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

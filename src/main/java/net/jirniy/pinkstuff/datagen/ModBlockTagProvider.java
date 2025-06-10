@@ -47,7 +47,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.AMETHYST_BRICKS_WALL)
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
-                .add(ModBlocks.THERMIUM_BRICKS_WALL);
+                .add(ModBlocks.THERMIUM_BRICKS_WALL)
+                .add(ModBlocks.THERMIUM_BLASTER);
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)

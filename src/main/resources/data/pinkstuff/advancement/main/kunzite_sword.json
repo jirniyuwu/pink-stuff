@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/obtain_kunzite",
+  "criteria": {
+    "kunzite_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.kunzite_sword.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:kunzite_sword"
+    },
+    "title": {
+      "translate": "advancements.main.kunzite_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "kunzite_sword"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,67 @@
+{
+  "parent": "pinkstuff:main/kunzite_armor",
+  "criteria": {
+    "elysium_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "elysium_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "elysium_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "elysium_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.elysium_armor.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:elysium_helmet"
+    },
+    "title": {
+      "translate": "advancements.main.elysium_armor.title"
+    },
+    "frame": "goal"
+  },
+  "requirements": [
+    [
+      "elysium_helmet",
+      "elysium_chestplate",
+      "elysium_leggings",
+      "elysium_boots"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

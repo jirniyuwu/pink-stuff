@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/root",
+  "criteria": {
+    "thermium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:thermium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.obtain_thermium.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:thermium"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.main.obtain_thermium.title"
+    }
+  },
+  "requirements": [
+    [
+      "thermium"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

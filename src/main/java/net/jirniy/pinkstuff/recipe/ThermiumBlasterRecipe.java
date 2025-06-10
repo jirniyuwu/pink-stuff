@@ -19,8 +19,6 @@ public record ThermiumBlasterRecipe(Ingredient inputItem, ItemStack output) impl
         return list;
     }
 
-    // read Recipe JSON files --> new ThermiumBlasterRecipe
-
     @Override
     public boolean matches(ThermiumBlasterRecipeInput input, World world) {
         if(world.isClient()) {

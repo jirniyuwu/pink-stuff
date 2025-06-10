@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/obtain_kunzite",
+  "criteria": {
+    "elysium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.elysium_ingot.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:elysium_ingot"
+    },
+    "title": {
+      "translate": "advancements.main.elysium_ingot.title"
+    },
+    "frame": "goal"
+  },
+  "requirements": [
+    [
+      "elysium"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

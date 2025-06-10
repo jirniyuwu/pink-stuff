@@ -1,0 +1,67 @@
+{
+  "parent": "pinkstuff:main/kunzite_tools",
+  "criteria": {
+    "elysium_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "elysium_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "elysium_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "elysium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.elysium_tools.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:elysium_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.main.elysium_tools.title"
+    },
+    "frame": "goal"
+  },
+  "requirements": [
+    [
+      "elysium_pickaxe",
+      "elysium_axe",
+      "elysium_shovel",
+      "elysium_hoe"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

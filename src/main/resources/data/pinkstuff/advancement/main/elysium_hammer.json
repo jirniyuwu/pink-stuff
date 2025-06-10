@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/elysium_tools",
+  "criteria": {
+    "elysium_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_hammer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.elysium_hammer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:elysium_hammer"
+    },
+    "title": {
+      "translate": "advancements.main.elysium_hammer.title"
+    },
+    "frame": "challenge"
+  },
+  "requirements": [
+    [
+      "elysium_hammer"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

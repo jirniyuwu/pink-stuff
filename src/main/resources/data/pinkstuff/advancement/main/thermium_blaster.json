@@ -1,0 +1,35 @@
+{
+  "parent": "pinkstuff:main/obtain_thermium",
+  "criteria": {
+    "thermium_blaster": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:thermium_blaster"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.thermium_blaster.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:thermium_blaster"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.main.thermium_blaster.title"
+    },
+    "frame": "goal"
+  },
+  "requirements": [
+    [
+      "thermium_blaster"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

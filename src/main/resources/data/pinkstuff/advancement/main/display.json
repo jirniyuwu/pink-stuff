@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/obtain_thermium",
+  "criteria": {
+    "display": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:display"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.display.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:display"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.main.display.title"
+    }
+  },
+  "requirements": [
+    [
+      "display"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/kunzite_sword",
+  "criteria": {
+    "elysium_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.elysium_sword.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:elysium_sword"
+    },
+    "title": {
+      "translate": "advancements.main.elysium_sword.title"
+    },
+    "frame": "goal"
+  },
+  "requirements": [
+    [
+      "elysium_sword"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

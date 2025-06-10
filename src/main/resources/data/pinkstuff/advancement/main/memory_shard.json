@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/elysium_ingot",
+  "criteria": {
+    "memory": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:memory_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.memory_shard.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:memory_shard"
+    },
+    "title": {
+      "translate": "advancements.main.memory_shard.title"
+    },
+    "frame": "challenge"
+  },
+  "requirements": [
+    [
+      "memory"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

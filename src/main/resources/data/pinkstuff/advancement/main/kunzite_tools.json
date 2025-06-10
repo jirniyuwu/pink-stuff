@@ -1,0 +1,66 @@
+{
+  "parent": "pinkstuff:main/obtain_kunzite",
+  "criteria": {
+    "kunzite_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "kunzite_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "kunzite_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "kunzite_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.kunzite_tools.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:kunzite_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.main.kunzite_tools.title"
+    }
+  },
+  "requirements": [
+    [
+      "kunzite_pickaxe",
+      "kunzite_axe",
+      "kunzite_shovel",
+      "kunzite_hoe"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

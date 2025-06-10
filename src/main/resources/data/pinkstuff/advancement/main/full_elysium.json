@@ -1,0 +1,43 @@
+{
+  "parent": "pinkstuff:main/elysium_armor",
+  "criteria": {
+    "elysium_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_helmet"
+          },
+          {
+            "items": "pinkstuff:elysium_chestplate"
+          },
+          {
+            "items": "pinkstuff:elysium_leggings"
+          },
+          {
+            "items": "pinkstuff:elysium_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.full_elysium.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:elysium_chestplate"
+    },
+    "title": {
+      "translate": "advancements.main.full_elysium.title"
+    }
+  },
+  "requirements": [
+    [
+      "elysium_armor"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

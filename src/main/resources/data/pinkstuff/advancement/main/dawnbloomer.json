@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/elysium_sword",
+  "criteria": {
+    "dawnbloomer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:dawnbloomer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.dawnbloomer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:dawnbloomer"
+    },
+    "title": {
+      "translate": "advancements.main.dawnbloomer.title"
+    },
+    "frame": "challenge"
+  },
+  "requirements": [
+    [
+      "dawnbloomer"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

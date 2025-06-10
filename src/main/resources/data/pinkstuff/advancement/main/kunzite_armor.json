@@ -1,0 +1,66 @@
+{
+  "parent": "pinkstuff:main/obtain_kunzite",
+  "criteria": {
+    "kunzite_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "kunzite_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "kunzite_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "kunzite_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:kunzite_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.kunzite_armor.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:kunzite_helmet"
+    },
+    "title": {
+      "translate": "advancements.main.kunzite_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "kunzite_helmet",
+      "kunzite_chestplate",
+      "kunzite_leggings",
+      "kunzite_boots"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
