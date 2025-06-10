@@ -1,0 +1,8 @@
+{
+  "type": "pinkstuff:thermium_blaster",
+  "ingredient": "pinkstuff:raw_thermium",
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:thermium"
+  }
+}

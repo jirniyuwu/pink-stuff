@@ -1,0 +1,8 @@
+{
+  "type": "pinkstuff:thermium_blaster",
+  "ingredient": "pinkstuff:raw_kunzite",
+  "result": {
+    "count": 3,
+    "id": "pinkstuff:kunzite"
+  }
+}

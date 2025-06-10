@@ -78,7 +78,7 @@ public class ThermiumBlasterScreenHandler extends ScreenHandler {
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return false;
+        return this.inventory.canPlayerUse(player);
     }
 
     private void addPlayerInventory(PlayerInventory playerInventory) {

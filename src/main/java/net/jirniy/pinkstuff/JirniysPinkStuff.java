@@ -11,6 +11,7 @@ import net.jirniy.pinkstuff.component.ModDataComponentTypes;
 import net.jirniy.pinkstuff.enchantment.ModEnchantmentEffects;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.jirniy.pinkstuff.recipe.ModRecipes;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.util.HammerUsageEvent;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
@@ -31,6 +32,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModEnchantmentEffects.registerEnchantmentEffects();
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
+		ModRecipes.registerRecipes();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
