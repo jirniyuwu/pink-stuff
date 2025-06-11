@@ -49,14 +49,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BLASTER);
-        getOrCreateTagBuilder(BlockTags.PLANKS)
-                .add(ModBlocks.CRYSTAL_CHERRY_PLANKS)
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
                 .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE)
                 .add(ModBlocks.CRYSTAL_CHERRY_STAIRS)
                 .add(ModBlocks.CRYSTAL_CHERRY_DOOR)
-                .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
+                .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR)
+                .add(ModBlocks.DISPLAY);
+        getOrCreateTagBuilder(BlockTags.PLANKS)
+                .add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
