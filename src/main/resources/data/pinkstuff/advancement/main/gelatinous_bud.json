@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/obtain_kunzite",
+  "criteria": {
+    "bud": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:gelatinous_bud"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.gelatinous_bud.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:gelatinous_bud"
+    },
+    "title": {
+      "translate": "advancements.main.gelatinous_bud.title"
+    }
+  },
+  "requirements": [
+    [
+      "bud"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

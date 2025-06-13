@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.custom.DisplayBlock;
+import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.block.custom.ModSaplingBlock;
 import net.jirniy.pinkstuff.block.custom.ThermiumBlasterBlock;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
@@ -163,10 +164,19 @@ public class ModBlocks {
     public static final Block THERMIUM_BLASTER = registerBlock("thermium_blaster",
             properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6)));
 
+    public static final Block GEM_BERRY_BUSH = registerBlockWithoutBlockItem("gem_berry_bush",
+            properties -> new GemBerryBushBlock(properties.mapColor(MapColor.DARK_GREEN).ticksRandomly()
+                    .noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).luminance(state -> 6).pistonBehavior(PistonBehavior.DESTROY)));
+
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name))));
         registerBlockItem(name, toRegister);
         return Registry.register(Registries.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name), toRegister);
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Function<AbstractBlock.Settings, Block> function) {
+        return Registry.register(Registries.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name),
+                function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name)))));
     }
 
     private static void registerBlockItem(String name, Block block) {

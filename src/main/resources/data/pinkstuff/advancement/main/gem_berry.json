@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/root",
+  "criteria": {
+    "berry": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:gem_berry"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.gem_berry.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:gem_berry"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.main.gem_berry.title"
+    }
+  },
+  "requirements": [
+    [
+      "berry"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

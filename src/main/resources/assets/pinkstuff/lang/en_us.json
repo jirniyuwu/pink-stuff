@@ -94,8 +94,10 @@
   "item.pinkstuff.dawnbloomer": "The Dawnbloomer",
 
   "item.pinkstuff.display": "Item Display",
-  "item.pinkstuff.thermium_blaster": "Thermite Blaster",
-  "block.pinkstuff.thermium_blaster": "Thermite Blaster",
+  "item.pinkstuff.thermium_blaster": "Thermium Blaster",
+  "block.pinkstuff.thermium_blaster": "Thermium-powered Heat Blaster",
+
+  "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
 
   "enchantment.pinkstuff.lightning": "Lightning",
   "enchantment.pinkstuff.length": "Length",
@@ -135,6 +137,12 @@
   "advancements.main.display.title": "For everyone to see~",
   "advancements.main.thermium_blaster.description": "Upgrade a Blast Furnace with Thermium powers",
   "advancements.main.thermium_blaster.title": "Thermium-powered furnace",
+  "advancements.main.gelatinous_bud.description": "Craft a Gelatinous Bud",
+  "advancements.main.gelatinous_bud.title": "Hard and soft, in harmony",
+  "advancements.main.elysium_fruit.description": "Craft an Elysian apple",
+  "advancements.main.elysium_fruit.title": "Fruit as from beyond the sky",
+  "advancements.main.gem_berry.description": "Obtain crystallized berries",
+  "advancements.main.gem_berry.title": "Soft and chewy",
 
   "itemgroup.pinkstuff.kunzite_items": "Cuteness"
 }

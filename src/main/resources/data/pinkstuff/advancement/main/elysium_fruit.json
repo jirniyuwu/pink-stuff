@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/elysium_ingot",
+  "criteria": {
+    "fruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_apple"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.elysium_fruit.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:elysium_apple"
+    },
+    "title": {
+      "translate": "advancements.main.elysium_fruit.title"
+    }
+  },
+  "requirements": [
+    [
+      "fruit"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

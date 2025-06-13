@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.datagen;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.minecraft.client.data.BlockStateModelGenerator;
@@ -66,6 +67,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.GEM_BERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
+                GemBerryBushBlock.AGE, 0, 1, 2, 3);
 
         blockStateModelGenerator.createLogTexturePool(ModBlocks.CRYSTAL_CHERRY_LOG).log(ModBlocks.CRYSTAL_CHERRY_LOG).wood(ModBlocks.CRYSTAL_CHERRY_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).log(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).wood(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
@@ -84,7 +87,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GELATINOUS_BUD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIUM_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTAL_CARROT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GEM_BERRY, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_THERMIUM, Models.GENERATED);

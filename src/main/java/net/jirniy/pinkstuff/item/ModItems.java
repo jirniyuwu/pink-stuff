@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
+import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.item.custom.HammerItem;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
@@ -30,8 +31,9 @@ public class ModItems {
             .food(ModFoodComponents.ELYSIUM_APPLE, ModFoodComponents.ELYSIUM_APPLE_EFFECT)));
     public static final Item CRYSTAL_CARROT = registerItem("crystal_carrot", setting -> new Item(setting
             .food(ModFoodComponents.CRYSTAL_CARROT, ModFoodComponents.CRYSTAL_CARROT_EFFECT)));
-    public static final Item GEM_BERRY = registerItem("gem_berry", setting -> new Item(setting
-            .food(ModFoodComponents.GEM_BERRY)));
+    public static final Item GEM_BERRY = registerItem("gem_berry",
+            setting -> new BlockItem(ModBlocks.GEM_BERRY_BUSH, setting.food(ModFoodComponents.GEM_BERRY)));
+
 
     public static final Item THERMIUM = registerItem("thermium", Item::new);
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
