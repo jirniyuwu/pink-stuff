@@ -32,7 +32,8 @@ public class ModItems {
     public static final Item CRYSTAL_CARROT = registerItem("crystal_carrot", setting -> new Item(setting
             .food(ModFoodComponents.CRYSTAL_CARROT, ModFoodComponents.CRYSTAL_CARROT_EFFECT)));
     public static final Item GEM_BERRY = registerItem("gem_berry",
-            setting -> new BlockItem(ModBlocks.GEM_BERRY_BUSH, setting.food(ModFoodComponents.GEM_BERRY)));
+            setting -> new BlockItem(ModBlocks.GEM_BERRY_BUSH, setting
+                    .food(ModFoodComponents.GEM_BERRY, ModFoodComponents.GEM_BERRY_EFFECT)));
 
 
     public static final Item THERMIUM = registerItem("thermium", Item::new);
