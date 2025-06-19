@@ -47,6 +47,9 @@ public class ModBlocks {
     public static final Block THERMIUM_BLOCK = registerBlock("thermium_block",
             properties -> new Block(properties.strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 11)));
+    public static final Block ENERGIZED_THERMIUM_BLOCK = registerBlock("energized_thermium_block",
+            properties -> new PillarBlock(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 15)));
     public static final Block RAW_THERMIUM_BLOCK = registerBlock("raw_thermium_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.STONE).luminance(state -> 7)));

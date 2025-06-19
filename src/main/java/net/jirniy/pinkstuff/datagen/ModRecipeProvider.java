@@ -63,6 +63,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.RAW_THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_THERMIUM_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.ELYSIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.ELYSIUM_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
+                        ModItems.ENERGIZED_THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.ENERGIZED_THERMIUM_BLOCK);
                 createShapeless(RecipeCategory.MISC, ModItems.CRYSTAL_GLITTER, 1)
                         .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
                         .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
@@ -91,6 +93,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysian_redstone_core")));
+                createShaped(RecipeCategory.MISC, ModItems.ENERGIZED_THERMIUM)
+                        .pattern("TNT")
+                        .pattern("TBT")
+                        .pattern("TNT")
+                        .input('N', Items.NETHERITE_SCRAP)
+                        .input('B', Items.BLAZE_ROD)
+                        .input('T', ModItems.THERMIUM)
+                        .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "energized_thermium_from_thermium")));
                 createShaped(RecipeCategory.COMBAT, ModItems.KUNZITE_SWORD)
                         .pattern("A")
                         .pattern("K")
@@ -211,7 +223,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("CSC")
                         .pattern(" N ")
                         .input('N', Items.NETHERITE_INGOT)
-                        .input('T', ModItems.THERMIUM)
+                        .input('T', ModItems.ENERGIZED_THERMIUM)
                         .input('S', ModItems.ELYSIUM_SWORD)
                         .input('C', ModItems.ELYSIAN_REDSTONE_CORE)
                         .input('M', ModItems.MEMORY_SHARD)
@@ -523,11 +535,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_apple")));
 
                 createShaped(RecipeCategory.FOOD, ModItems.CRYSTAL_CARROT, 1)
-                        .pattern("PPA")
+                        .pattern("PPP")
                         .pattern("PCP")
                         .pattern("PPP")
                         .input('P', ModItems.PINK_BITS)
-                        .input('A', Items.AMETHYST_SHARD)
                         .input('C', Items.GOLDEN_CARROT)
                         .criterion(hasItem(Items.GOLDEN_CARROT), conditionsFromItem(Items.GOLDEN_CARROT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -560,7 +571,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("AAA")
                         .pattern("TBT")
                         .pattern("DDD")
-                        .input('T', ModItems.THERMIUM)
+                        .input('T', ModItems.ENERGIZED_THERMIUM)
                         .input('B', Blocks.BLAST_FURNACE)
                         .input('A', ModBlocks.POLISHED_AMETHYST_BLOCK)
                         .input('D', Blocks.POLISHED_DEEPSLATE)

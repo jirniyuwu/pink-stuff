@@ -73,6 +73,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createLogTexturePool(ModBlocks.CRYSTAL_CHERRY_LOG).log(ModBlocks.CRYSTAL_CHERRY_LOG).wood(ModBlocks.CRYSTAL_CHERRY_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).log(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).wood(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.CRYSTAL_CHERRY_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.ENERGIZED_THERMIUM_BLOCK).log(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
     }
 
     @Override
@@ -90,6 +91,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_THERMIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENERGIZED_THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.MEMORY_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.KUNZITE_SWORD, Models.HANDHELD);

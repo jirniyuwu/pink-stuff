@@ -37,6 +37,7 @@ public class ModItems {
 
     public static final Item THERMIUM = registerItem("thermium", Item::new);
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
+    public static final Item ENERGIZED_THERMIUM = registerItem("energized_thermium", Item::new);
 
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
             setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 4, -2.4f)));

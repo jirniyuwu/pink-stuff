@@ -40,6 +40,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ELYSIUM_BLOCK);
         addDrop(ModBlocks.THERMIUM_BLOCK);
         addDrop(ModBlocks.RAW_THERMIUM_BLOCK);
+        addDrop(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
 
         addDrop(ModBlocks.POLISHED_AMETHYST_BLOCK);
         addDrop(ModBlocks.AMETHYST_BRICKS);
@@ -67,9 +68,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.KUNZITE_ORE, oreDrops(ModBlocks.KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.DEEPSLATE_KUNZITE_ORE, oreDrops(ModBlocks.DEEPSLATE_KUNZITE_ORE, ModItems.RAW_KUNZITE));
-        addDrop(ModBlocks.AMETHYST_KUNZITE_ORE, multipleOreDrops(ModBlocks.AMETHYST_KUNZITE_ORE, ModItems.PINK_BITS, 6, 19));
-        addDrop(ModBlocks.THERMIUM_ORE, multipleOreDrops(ModBlocks.THERMIUM_ORE, ModItems.RAW_THERMIUM, 2, 3));
-        addDrop(ModBlocks.DEEPSLATE_THERMIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_THERMIUM_ORE, ModItems.RAW_THERMIUM, 2, 4));
+        addDrop(ModBlocks.AMETHYST_KUNZITE_ORE, multipleOreDrops(ModBlocks.AMETHYST_KUNZITE_ORE, ModItems.PINK_BITS, 4, 10));
+        addDrop(ModBlocks.THERMIUM_ORE, multipleOreDrops(ModBlocks.THERMIUM_ORE, ModItems.RAW_THERMIUM, 1, 2));
+        addDrop(ModBlocks.DEEPSLATE_THERMIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_THERMIUM_ORE, ModItems.RAW_THERMIUM, 1, 3));
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LOG);
         addDrop(ModBlocks.CRYSTAL_CHERRY_WOOD);
@@ -87,7 +88,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRYSTAL_CHERRY_BUTTON);
         addDrop(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
 
-        addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 1, 3));
+        addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 0, 1));
 
         this.addDrop(ModBlocks.GEM_BERRY_BUSH,
                 block -> this.applyExplosionDecay(

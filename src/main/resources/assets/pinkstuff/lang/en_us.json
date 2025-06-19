@@ -5,7 +5,8 @@
   "item.pinkstuff.crystal_glitter": "Crystal Glitter",
   "item.pinkstuff.elysium_ingot": "Elysium Ingot",
   "item.pinkstuff.elysian_redstone_core": "Elysian Redstone Core",
-  "item.pinkstuff.thermium": "Thermium Rod",
+  "item.pinkstuff.thermium": "Thermium Shard",
+  "item.pinkstuff.energized_thermium": "Energized Thermium Rod",
   "item.pinkstuff.raw_thermium": "Raw Thermium",
 
   "item.pinkstuff.gelatinous_bud": "Gelatinous Bud",
@@ -20,6 +21,7 @@
   "item.pinkstuff.amethyst_kunzite_ore": "Amethyst Kunzite Ore",
   "item.pinkstuff.elysium_block": "Block of Elysium",
   "item.pinkstuff.thermium_block": "Block of Thermium",
+  "item.pinkstuff.energized_thermium_block": "Block of Energized Thermium",
   "item.pinkstuff.raw_thermium_block": "Block of Raw Thermium",
   "item.pinkstuff.thermium_ore": "Thermium Ore",
   "item.pinkstuff.deepslate_thermium_ore": "Deepslate Thermium Ore",
@@ -130,9 +132,11 @@
   "advancements.main.memory_shard.description": "Obtain a crystallized piece of memories",
   "advancements.main.memory_shard.title": "All shall bid farewell to one",
   "advancements.main.full_elysium.description": "Cover yourself in the Elysian armor",
-  "advancements.main.full_elysium.title": "Fly too close to heavens",
+  "advancements.main.full_elysium.title": "Fly too close to Heavens",
   "advancements.main.obtain_thermium.description": "Obtain Thermium, which is rarely found in deep caves",
   "advancements.main.obtain_thermium.title": "Glowing in the Depths",
+  "advancements.main.energized_thermium.description": "Energize Thermium with the Nether materials",
+  "advancements.main.energized_thermium.title": "Energy of the hottest places",
   "advancements.main.display.description": "Craft a Display, which can be used to display items",
   "advancements.main.display.title": "For everyone to see~",
   "advancements.main.thermium_blaster.description": "Upgrade a Blast Furnace with Thermium powers",
@@ -142,7 +146,7 @@
   "advancements.main.elysium_fruit.description": "Craft an Elysian apple",
   "advancements.main.elysium_fruit.title": "Fruit as from beyond the sky",
   "advancements.main.gem_berry.description": "Obtain crystallized berries",
-  "advancements.main.gem_berry.title": "Soft and chewy",
+  "advancements.main.gem_berry.title": "Sugar crystals",
 
   "itemgroup.pinkstuff.kunzite_items": "Cuteness"
 }

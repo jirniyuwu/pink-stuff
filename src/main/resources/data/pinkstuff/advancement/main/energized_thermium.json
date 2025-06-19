@@ -1,11 +1,11 @@
 {
-  "parent": "pinkstuff:main/energized_thermium",
+  "parent": "pinkstuff:main/obtain_thermium",
   "criteria": {
-    "thermium_blaster": {
+    "energized_thermium": {
       "conditions": {
         "items": [
           {
-            "items": "pinkstuff:thermium_blaster"
+            "items": "pinkstuff:energized_thermium"
           }
         ]
       },
@@ -14,21 +14,20 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.main.thermium_blaster.description"
+      "translate": "advancements.main.energized_thermium.description"
     },
     "icon": {
       "count": 1,
-      "id": "pinkstuff:thermium_blaster"
+      "id": "pinkstuff:energized_thermium"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancements.main.thermium_blaster.title"
-    },
-    "frame": "goal"
+      "translate": "advancements.main.energized_thermium.title"
+    }
   },
   "requirements": [
     [
-      "thermium_blaster"
+      "energized_thermium"
     ]
   ],
   "sends_telemetry_event": false

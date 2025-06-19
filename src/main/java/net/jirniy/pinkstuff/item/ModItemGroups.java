@@ -45,10 +45,12 @@ public class ModItemGroups {
 
                         entries.add(ModItems.RAW_THERMIUM);
                         entries.add(ModItems.THERMIUM);
+                        entries.add(ModItems.ENERGIZED_THERMIUM);
                         entries.add(ModBlocks.THERMIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
                         entries.add(ModBlocks.RAW_THERMIUM_BLOCK);
                         entries.add(ModBlocks.THERMIUM_BLOCK);
+                        entries.add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
 
                         entries.add(ModBlocks.THERMIUM_BRICKS);
                         entries.add(ModBlocks.THERMIUM_BRICKS_SLAB);

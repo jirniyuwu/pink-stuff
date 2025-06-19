@@ -25,6 +25,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_ORE)
                 .add(ModBlocks.ELYSIUM_BLOCK)
                 .add(ModBlocks.THERMIUM_BLOCK)
+                .add(ModBlocks.ENERGIZED_THERMIUM_BLOCK)
                 .add(ModBlocks.RAW_THERMIUM_BLOCK)
                 .add(ModBlocks.DEEPSLATE_THERMIUM_ORE)
                 .add(ModBlocks.THERMIUM_ORE)
@@ -71,7 +72,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THERMIUM_BLOCK)
                 .add(ModBlocks.RAW_THERMIUM_BLOCK)
                 .add(ModBlocks.DEEPSLATE_THERMIUM_ORE)
-                .add(ModBlocks.THERMIUM_ORE);
+                .add(ModBlocks.THERMIUM_ORE)
+                .add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
