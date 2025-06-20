@@ -12,6 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 import java.util.function.Function;
 
@@ -21,14 +22,14 @@ public class ModItems {
     public static final Item RAW_KUNZITE = registerItem("raw_kunzite", Item::new);
     public static final Item CRYSTAL_GLITTER = registerItem("crystal_glitter", Item::new);
     public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot", Item::new);
-    public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", Item::new);
+    public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
-    public static final Item MEMORY_SHARD = registerItem("memory_shard", Item::new);
+    public static final Item MEMORY_SHARD = registerItem("memory_shard", setting -> new Item(setting.rarity(Rarity.RARE)));
 
     public static final Item GELATINOUS_BUD = registerItem("gelatinous_bud", setting -> new Item(setting
             .food(ModFoodComponents.GELATINOUS_BUD, ModFoodComponents.GELATINOUS_BUD_EFFECT)));
     public static final Item ELYSIUM_APPLE = registerItem("elysium_apple", setting -> new Item(setting
-            .food(ModFoodComponents.ELYSIUM_APPLE, ModFoodComponents.ELYSIUM_APPLE_EFFECT)));
+            .food(ModFoodComponents.ELYSIUM_APPLE, ModFoodComponents.ELYSIUM_APPLE_EFFECT).rarity(Rarity.UNCOMMON)));
     public static final Item CRYSTAL_CARROT = registerItem("crystal_carrot", setting -> new Item(setting
             .food(ModFoodComponents.CRYSTAL_CARROT, ModFoodComponents.CRYSTAL_CARROT_EFFECT)));
     public static final Item GEM_BERRY = registerItem("gem_berry",
@@ -38,7 +39,7 @@ public class ModItems {
 
     public static final Item THERMIUM = registerItem("thermium", Item::new);
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
-    public static final Item ENERGIZED_THERMIUM = registerItem("energized_thermium", Item::new);
+    public static final Item ENERGIZED_THERMIUM = registerItem("energized_thermium", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
 
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
             setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 4, -2.4f)));
@@ -52,20 +53,20 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.KUNZITE, 0, -3f, setting));
 
     public static final Item ELYSIUM_SWORD = registerItem("elysium_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 11, -1.6f)));
+            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 9, -1.6f).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_PICKAXE = registerItem("elysium_pickaxe",
-            setting -> new Item(setting.pickaxe(ModToolMaterials.ELYSIUM, 1, -2.8f)));
+            setting -> new Item(setting.pickaxe(ModToolMaterials.ELYSIUM, 1, -2.8f).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_SHOVEL = registerItem("elysium_shovel",
-            setting -> new ShovelItem(ModToolMaterials.ELYSIUM, 1.5f, -3.0f, setting));
+            setting -> new ShovelItem(ModToolMaterials.ELYSIUM, 1.5f, -3.0f, setting.rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_AXE = registerItem("elysium_axe",
-            setting -> new AxeItem(ModToolMaterials.ELYSIUM, 9, -2.4f, setting));
+            setting -> new AxeItem(ModToolMaterials.ELYSIUM, 9, -2.4f, setting.rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_HOE = registerItem("elysium_hoe",
-            setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting));
+            setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting.rarity(Rarity.UNCOMMON)));
 
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
-            setting -> new HammerItem(ModToolMaterials.SPECIAL, 16, -3.4f, setting));
+            setting -> new HammerItem(ModToolMaterials.SPECIAL, 16, -3.4f, setting.rarity(Rarity.RARE)));
     public static final Item DAWNBLOOMER = registerItem("dawnbloomer",
-            setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 18, -1.4f)));
+            setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 13, -1.4f).rarity(Rarity.RARE)));
 
     public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));
@@ -77,13 +78,13 @@ public class ModItems {
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
     public static final Item ELYSIUM_HELMET = registerItem("elysium_helmet",
-            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_CHESTPLATE = registerItem("elysium_chestplate",
-            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_LEGGINGS = registerItem("elysium_leggings",
-            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_BOOTS = registerItem("elysium_boots",
-            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.BOOTS).rarity(Rarity.UNCOMMON)));
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
