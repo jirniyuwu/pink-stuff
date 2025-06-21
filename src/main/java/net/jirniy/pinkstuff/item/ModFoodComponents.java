@@ -23,6 +23,6 @@ public class ModFoodComponents {
     public static final ConsumableComponent CRYSTAL_CARROT_EFFECT = food()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80, 0), 1f)).build();
 
-    public static final FoodComponent GEM_BERRY = new FoodComponent.Builder().nutrition(3).saturationModifier(0.6f).build();
-    public static final ConsumableComponent GEM_BERRY_EFFECT = food().consumeSeconds(0.6F).build();
+    public static final FoodComponent GEM_BERRY = new FoodComponent.Builder().nutrition(3).saturationModifier(0.4f).build();
+    public static final ConsumableComponent GEM_BERRY_EFFECT = food().consumeSeconds(0.8F).build();
 }

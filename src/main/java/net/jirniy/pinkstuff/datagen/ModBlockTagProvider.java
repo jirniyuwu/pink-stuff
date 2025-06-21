@@ -17,7 +17,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
                 .add(ModBlocks.DEEPSLATE_KUNZITE_ORE)
@@ -50,7 +50,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BLASTER);
-        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+        valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
                 .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE)
@@ -58,36 +58,36 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_DOOR)
                 .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR)
                 .add(ModBlocks.DISPLAY);
-        getOrCreateTagBuilder(BlockTags.PLANKS)
+        valueLookupBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
                 .add(ModBlocks.DEEPSLATE_KUNZITE_ORE)
                 .add(ModBlocks.KUNZITE_ORE)
                 .add(ModBlocks.ELYSIUM_BLOCK);
-        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
+        valueLookupBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.THERMIUM_BLOCK)
                 .add(ModBlocks.RAW_THERMIUM_BLOCK)
                 .add(ModBlocks.DEEPSLATE_THERMIUM_ORE)
                 .add(ModBlocks.THERMIUM_ORE)
                 .add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
-        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+        valueLookupBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
-        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_SPECIAL_TOOL)
+        valueLookupBuilder(ModTags.Blocks.NEEDS_SPECIAL_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
-        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+        valueLookupBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE);
 
-        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+        valueLookupBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
 
-        getOrCreateTagBuilder(BlockTags.WALLS)
+        valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL)
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
