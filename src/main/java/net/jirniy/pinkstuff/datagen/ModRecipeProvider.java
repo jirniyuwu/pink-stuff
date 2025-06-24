@@ -578,18 +578,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_blaster")));
-
-                // TEMPORARY RECIPES
-                createShapeless(RecipeCategory.MISC, ModItems.MEMORY_SHARD, 1)
-                        .input(Items.NETHER_STAR)
-                        .criterion(hasItem(Items.NETHER_STAR), conditionsFromItem(Items.NETHER_STAR))
-                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "memory_shard_from_nether_star")));
-                createShapeless(RecipeCategory.MISC, Items.NETHER_STAR, 1)
-                        .input(ModItems.MEMORY_SHARD)
-                        .criterion(hasItem(Items.NETHER_STAR), conditionsFromItem(Items.NETHER_STAR))
-                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "nether_star_from_memory_shard")));
             }
         };
     }

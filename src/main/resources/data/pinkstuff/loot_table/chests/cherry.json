@@ -2,7 +2,7 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "rolls": 3,
+      "rolls": 1,
       "bonus_rolls": 2,
       "entries": [
         {
@@ -38,8 +38,8 @@
       ]
     },
     {
-      "rolls": 4,
-      "bonus_rolls": 8,
+      "rolls": 2,
+      "bonus_rolls": 4,
       "entries": [
         {
           "type": "minecraft:item",
@@ -74,8 +74,8 @@
       ]
     },
     {
-      "rolls": 5,
-      "bonus_rolls": 8,
+      "rolls": 3,
+      "bonus_rolls": 6,
       "entries": [
         {
           "type": "minecraft:item",
