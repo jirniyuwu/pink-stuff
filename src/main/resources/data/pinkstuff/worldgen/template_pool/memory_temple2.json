@@ -1,0 +1,16 @@
+{
+  "name": "pinkstuff:memory_temple2",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:memory_temple2",
+        "processors": "pinkstuff:amethyst",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

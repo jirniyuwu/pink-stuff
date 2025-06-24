@@ -6,7 +6,7 @@
   "step": "underground_structures",
   "terrain_adaptation": "bury",
   "spawn_overrides": {},
-  "start_pool": "pinkstuff:memory_temple",
+  "start_pool": "pinkstuff:memory_temple2",
   "size": 1,
   "start_height": {
     "type": "minecraft:uniform",

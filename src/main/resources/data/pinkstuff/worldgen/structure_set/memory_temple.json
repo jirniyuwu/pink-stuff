@@ -1,14 +1,22 @@
 {
   "structures": [
     {
-      "structure": "pinkstuff:memory_temple",
+      "structure": "pinkstuff:memory_temple1",
+      "weight": 1
+    },
+    {
+      "structure": "pinkstuff:memory_temple2",
+      "weight": 1
+    },
+    {
+      "structure": "pinkstuff:memory_temple3",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 10,
-    "separation": 4,
+    "spacing": 8,
+    "separation": 3,
     "spread_type": "linear",
     "salt": 0
   }
