@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -16,6 +17,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+
+        valueLookupBuilder(ModTags.Items.KUNZITE_REPAIR)
+                .add(ModItems.KUNZITE);
+        valueLookupBuilder(ModTags.Items.ELYSIUM_REPAIR)
+                .add(ModItems.ELYSIUM_INGOT);
+        valueLookupBuilder(ModTags.Items.SPECIAL_REPAIR)
+                .add(ModItems.ELYSIUM_INGOT);
 
         valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.KUNZITE_SWORD)

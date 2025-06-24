@@ -76,7 +76,7 @@ public class ModBlocks {
     public static final Block CRYSTAL_CHERRY_PLANKS = registerBlock("crystal_cherry_planks",
             properties -> new Block(properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
     public static final Block CRYSTAL_CHERRY_LEAVES = registerBlock("crystal_cherry_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.02f, ParticleTypes.CHERRY_LEAVES, properties
+            properties -> new UntintedParticleLeavesBlock(0.08f, ParticleTypes.CHERRY_LEAVES, properties
                     .mapColor(MapColor.PINK).strength(0.2F).ticksRandomly().luminance(state -> 3)
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
                     .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
