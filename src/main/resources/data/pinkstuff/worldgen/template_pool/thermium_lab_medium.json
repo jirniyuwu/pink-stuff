@@ -1,0 +1,16 @@
+{
+  "name": "pinkstuff:thermium_lab_medium",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:thermium_lab_medium",
+        "processors": "pinkstuff:copper",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}
