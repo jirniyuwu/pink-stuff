@@ -29,6 +29,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.KUNZITE_BLOCK);
 
                         entries.add(ModBlocks.KUNZITE_BRICKS);
+                        entries.add(ModBlocks.CHISELED_KUNZITE_BRICKS);
                         entries.add(ModBlocks.KUNZITE_BRICKS_SLAB);
                         entries.add(ModBlocks.KUNZITE_BRICKS_STAIRS);
                         entries.add(ModBlocks.KUNZITE_BRICKS_WALL);
@@ -39,6 +40,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ELYSIUM_BLOCK);
 
                         entries.add(ModBlocks.ELYSIUM_BRICKS);
+                        entries.add(ModBlocks.CHISELED_ELYSIUM_BRICKS);
                         entries.add(ModBlocks.ELYSIUM_BRICKS_SLAB);
                         entries.add(ModBlocks.ELYSIUM_BRICKS_STAIRS);
                         entries.add(ModBlocks.ELYSIUM_BRICKS_WALL);
@@ -53,6 +55,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
 
                         entries.add(ModBlocks.THERMIUM_BRICKS);
+                        entries.add(ModBlocks.CHISELED_THERMIUM_BRICKS);
                         entries.add(ModBlocks.THERMIUM_BRICKS_SLAB);
                         entries.add(ModBlocks.THERMIUM_BRICKS_STAIRS);
                         entries.add(ModBlocks.THERMIUM_BRICKS_WALL);
@@ -84,6 +87,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.POLISHED_AMETHYST_WALL);
 
                         entries.add(ModBlocks.AMETHYST_BRICKS);
+                        entries.add(ModBlocks.CHISELED_AMETHYST_BRICKS);
                         entries.add(ModBlocks.AMETHYST_BRICKS_SLAB);
                         entries.add(ModBlocks.AMETHYST_BRICKS_STAIRS);
                         entries.add(ModBlocks.AMETHYST_BRICKS_WALL);

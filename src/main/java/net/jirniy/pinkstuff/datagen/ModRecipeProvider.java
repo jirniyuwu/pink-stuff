@@ -578,6 +578,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_blaster")));
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_AMETHYST_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.AMETHYST_BRICKS)
+                        .criterion(hasItem(ModBlocks.AMETHYST_BRICKS), conditionsFromItem(ModBlocks.AMETHYST_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_amethyst_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_KUNZITE_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.KUNZITE_BRICKS)
+                        .criterion(hasItem(ModBlocks.KUNZITE_BRICKS), conditionsFromItem(ModBlocks.KUNZITE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_kunzite_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ELYSIUM_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.ELYSIUM_BRICKS)
+                        .criterion(hasItem(ModBlocks.ELYSIUM_BRICKS), conditionsFromItem(ModBlocks.ELYSIUM_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_elysium_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_THERMIUM_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.THERMIUM_BRICKS)
+                        .criterion(hasItem(ModBlocks.THERMIUM_BRICKS), conditionsFromItem(ModBlocks.THERMIUM_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_thermium_bricks")));
             }
         };
     }

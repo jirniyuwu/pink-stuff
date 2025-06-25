@@ -34,6 +34,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_BRICKS)
                 .add(ModBlocks.ELYSIUM_BRICKS)
                 .add(ModBlocks.THERMIUM_BRICKS)
+                .add(ModBlocks.CHISELED_AMETHYST_BRICKS)
+                .add(ModBlocks.CHISELED_KUNZITE_BRICKS)
+                .add(ModBlocks.CHISELED_ELYSIUM_BRICKS)
+                .add(ModBlocks.CHISELED_THERMIUM_BRICKS)
                 .add(ModBlocks.POLISHED_AMETHYST_STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS)
                 .add(ModBlocks.KUNZITE_BRICKS_STAIRS)
@@ -83,10 +87,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
         valueLookupBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE);
-
         valueLookupBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
-
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL)
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)

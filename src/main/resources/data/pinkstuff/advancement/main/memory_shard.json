@@ -1,5 +1,5 @@
 {
-  "parent": "pinkstuff:main/elysium_ingot",
+  "parent": "pinkstuff:main/memory_temple",
   "criteria": {
     "memory": {
       "conditions": {

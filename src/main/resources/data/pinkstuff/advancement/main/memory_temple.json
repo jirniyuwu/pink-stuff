@@ -1,0 +1,38 @@
+{
+  "display": {
+    "frame": "goal",
+    "description": {
+      "translate": "advancements.main.memory_temple.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:kunzite_bricks"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.main.memory_temple.title"
+    }
+  },
+  "parent": "pinkstuff:main/root",
+  "criteria": {
+    "enter_structure": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": [
+              "pinkstuff:memory_temple1",
+              "pinkstuff:memory_temple2",
+              "pinkstuff:memory_temple3"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enter_structure"
+    ]
+  ]
+}

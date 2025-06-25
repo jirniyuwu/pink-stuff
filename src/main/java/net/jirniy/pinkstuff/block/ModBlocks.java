@@ -94,15 +94,27 @@ public class ModBlocks {
     public static final Block POLISHED_AMETHYST_BLOCK = registerBlock("polished_amethyst_block",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block CHISELED_AMETHYST_BRICKS = registerBlock("chiseled_amethyst_bricks",
+            properties -> new Block(properties.strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block KUNZITE_BRICKS = registerBlock("kunzite_bricks",
+            properties -> new Block(properties.strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block CHISELED_KUNZITE_BRICKS = registerBlock("chiseled_kunzite_bricks",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block ELYSIUM_BRICKS = registerBlock("elysium_bricks",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block CHISELED_ELYSIUM_BRICKS = registerBlock("chiseled_elysium_bricks",
+            properties -> new Block(properties.strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block THERMIUM_BRICKS = registerBlock("thermium_bricks",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 11)));
+    public static final Block CHISELED_THERMIUM_BRICKS = registerBlock("chiseled_thermium_bricks",
+            properties -> new Block(properties.strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 12)));
 
     public static final Block POLISHED_AMETHYST_STAIRS = registerBlock("polished_amethyst_stairs",
             properties -> new StairsBlock(ModBlocks.POLISHED_AMETHYST_BLOCK.getDefaultState(),
