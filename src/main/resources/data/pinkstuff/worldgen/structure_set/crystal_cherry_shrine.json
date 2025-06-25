@@ -1,0 +1,23 @@
+{
+  "structures": [
+    {
+      "structure": "pinkstuff:crystal_cherry_shrine_small",
+      "weight": 3
+    },
+    {
+      "structure": "pinkstuff:crystal_cherry_shrine_medium",
+      "weight": 2
+    },
+    {
+      "structure": "pinkstuff:crystal_cherry_shrine_large",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 60,
+    "separation": 30,
+    "spread_type": "linear",
+    "salt": 0
+  }
+}
