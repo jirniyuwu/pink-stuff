@@ -23,7 +23,7 @@
     "title": {
       "translate": "advancements.main.memory_shard.title"
     },
-    "frame": "challenge"
+    "frame": "goal"
   },
   "requirements": [
     [
