@@ -4,7 +4,7 @@
   "step": "surface_structures",
   "terrain_adaptation": "bury",
   "spawn_overrides": {},
-  "start_pool": "pinkstuff:crystal_cherry_shrine_large",
+  "start_pool": "pinkstuff:crystal_cherry_shrine",
   "size": 1,
   "start_height": {
     "absolute": 0

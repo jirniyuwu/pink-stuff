@@ -81,7 +81,25 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 9,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/buildings/residence/house5",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 9,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/buildings/residence/house6",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
@@ -90,16 +108,34 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:cherry_village/buildings/profession/farm",
+        "location": "pinkstuff:cherry_village/buildings/profession/farm1",
         "processors": "minecraft:empty"
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/buildings/profession/farm2",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/buildings/profession/farm3",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 3,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",

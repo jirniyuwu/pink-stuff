@@ -1,0 +1,36 @@
+{
+  "name": "pinkstuff:memory_temple",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:memory_temple/memory_temple1",
+        "processors": "pinkstuff:amethyst",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:memory_temple/memory_temple2",
+        "processors": "pinkstuff:amethyst",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:memory_temple/memory_temple3",
+        "processors": "pinkstuff:amethyst",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

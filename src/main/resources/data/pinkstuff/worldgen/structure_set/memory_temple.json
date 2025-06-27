@@ -1,15 +1,7 @@
 {
   "structures": [
     {
-      "structure": "pinkstuff:memory_temple1",
-      "weight": 1
-    },
-    {
-      "structure": "pinkstuff:memory_temple2",
-      "weight": 1
-    },
-    {
-      "structure": "pinkstuff:memory_temple3",
+      "structure": "pinkstuff:memory_temple",
       "weight": 1
     }
   ],

@@ -1,15 +1,7 @@
 {
   "structures": [
     {
-      "structure": "pinkstuff:thermium_lab_small",
-      "weight": 3
-    },
-    {
-      "structure": "pinkstuff:thermium_lab_medium",
-      "weight": 2
-    },
-    {
-      "structure": "pinkstuff:thermium_lab_large",
+      "structure": "pinkstuff:thermium_lab",
       "weight": 1
     }
   ],

@@ -1,0 +1,36 @@
+{
+  "name": "pinkstuff:crystal_cherry_shrine",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:crystal_cherry_shrine/crystal_cherry_shrine_small",
+        "processors": "pinkstuff:cherry",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:crystal_cherry_shrine/crystal_cherry_shrine_medium",
+        "processors": "pinkstuff:cherry",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:crystal_cherry_shrine/crystal_cherry_shrine_large",
+        "processors": "pinkstuff:cherry",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}
