@@ -36,6 +36,15 @@
       }
     },
     {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/buildings/residence/double_house4",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
       "weight": 9,
       "element": {
         "element_type": "minecraft:single_pool_element",
