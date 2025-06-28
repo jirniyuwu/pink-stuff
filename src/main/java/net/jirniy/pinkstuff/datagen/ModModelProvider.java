@@ -30,6 +30,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_ELYSIUM_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_THERMIUM_BRICKS);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AMETHYST_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ELYSIUM_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THERMIUM_BULB);
+
         crystalCherryPool.stairs(ModBlocks.CRYSTAL_CHERRY_STAIRS);
         crystalCherryPool.slab(ModBlocks.CRYSTAL_CHERRY_SLAB);
         crystalCherryPool.button(ModBlocks.CRYSTAL_CHERRY_BUTTON);

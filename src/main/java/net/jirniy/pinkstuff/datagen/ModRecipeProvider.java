@@ -607,6 +607,42 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.THERMIUM_BRICKS), conditionsFromItem(ModBlocks.THERMIUM_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_thermium_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.AMETHYST_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.AMETHYST_BRICKS), conditionsFromItem(ModBlocks.AMETHYST_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_bulb")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KUNZITE_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.KUNZITE_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.KUNZITE_BRICKS), conditionsFromItem(ModBlocks.KUNZITE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_bulb")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ELYSIUM_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.ELYSIUM_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.ELYSIUM_BRICKS), conditionsFromItem(ModBlocks.ELYSIUM_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_bulb")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THERMIUM_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.THERMIUM_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.THERMIUM_BRICKS), conditionsFromItem(ModBlocks.THERMIUM_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_bulb")));
             }
         };
     }

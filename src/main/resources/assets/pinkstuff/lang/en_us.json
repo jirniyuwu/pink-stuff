@@ -32,6 +32,7 @@
   "item.pinkstuff.polished_amethyst_wall": "Polished Amethyst Wall",
 
   "item.pinkstuff.amethyst_bricks": "Amethyst Bricks",
+  "item.pinkstuff.amethyst_bulb": "Amethyst Bulb",
   "item.pinkstuff.chiseled_amethyst_bricks": "Chiseled Amethyst Bricks",
   "item.pinkstuff.amethyst_bricks_slab": "Amethyst Brick Slab",
   "item.pinkstuff.amethyst_bricks_stairs": "Amethyst Brick Stairs",
@@ -39,18 +40,21 @@
 
   "item.pinkstuff.kunzite_bricks": "Kunzite Bricks",
   "item.pinkstuff.chiseled_kunzite_bricks": "Chiseled Kunzite Bricks",
+  "item.pinkstuff.kunzite_bulb": "Kunzite Bulb",
   "item.pinkstuff.kunzite_bricks_slab": "Kunzite Brick Slab",
   "item.pinkstuff.kunzite_bricks_stairs": "Kunzite Brick Stairs",
   "item.pinkstuff.kunzite_bricks_wall": "Kunzite Brick Wall",
 
   "item.pinkstuff.elysium_bricks": "Elysian Bricks",
   "item.pinkstuff.chiseled_elysium_bricks": "Chiseled Elysian Bricks",
+  "item.pinkstuff.elysium_bulb": "Elysian Bulb",
   "item.pinkstuff.elysium_bricks_slab": "Elysian Brick Slab",
   "item.pinkstuff.elysium_bricks_stairs": "Elysian Brick Stairs",
   "item.pinkstuff.elysium_bricks_wall": "Elysian Brick Wall",
 
   "item.pinkstuff.thermium_bricks": "Thermium Bricks",
   "item.pinkstuff.chiseled_thermium_bricks": "Chiseled Thermium Bricks",
+  "item.pinkstuff.thermium_bulb": "Thermium Bulb",
   "item.pinkstuff.thermium_bricks_slab": "Thermium Brick Slab",
   "item.pinkstuff.thermium_bricks_stairs": "Thermium Brick Stairs",
   "item.pinkstuff.thermium_bricks_wall": "Thermium Brick Wall",

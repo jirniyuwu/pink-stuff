@@ -31,9 +31,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THERMIUM_ORE)
                 .add(ModBlocks.POLISHED_AMETHYST_BLOCK)
                 .add(ModBlocks.AMETHYST_BRICKS)
+                .add(ModBlocks.AMETHYST_BULB)
                 .add(ModBlocks.KUNZITE_BRICKS)
+                .add(ModBlocks.KUNZITE_BULB)
                 .add(ModBlocks.ELYSIUM_BRICKS)
+                .add(ModBlocks.ELYSIUM_BULB)
                 .add(ModBlocks.THERMIUM_BRICKS)
+                .add(ModBlocks.THERMIUM_BULB)
                 .add(ModBlocks.CHISELED_AMETHYST_BRICKS)
                 .add(ModBlocks.CHISELED_KUNZITE_BRICKS)
                 .add(ModBlocks.CHISELED_ELYSIUM_BRICKS)
@@ -64,12 +68,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DISPLAY);
         valueLookupBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
+        valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.AMETHYST_BULB)
+                .add(ModBlocks.KUNZITE_BULB);
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
                 .add(ModBlocks.DEEPSLATE_KUNZITE_ORE)
                 .add(ModBlocks.KUNZITE_ORE)
-                .add(ModBlocks.ELYSIUM_BLOCK);
+                .add(ModBlocks.ELYSIUM_BLOCK)
+                .add(ModBlocks.ELYSIUM_BULB)
+                .add(ModBlocks.THERMIUM_BULB);
         valueLookupBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
