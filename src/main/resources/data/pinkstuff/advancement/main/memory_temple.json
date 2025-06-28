@@ -20,9 +20,7 @@
         "player": {
           "location": {
             "structures": [
-              "pinkstuff:memory_temple1",
-              "pinkstuff:memory_temple2",
-              "pinkstuff:memory_temple3"
+              "pinkstuff:chambers"
             ]
           }
         }

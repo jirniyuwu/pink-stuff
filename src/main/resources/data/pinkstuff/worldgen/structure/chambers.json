@@ -10,7 +10,7 @@
       "absolute": -40
     },
     "max_inclusive": {
-      "absolute": 40
+      "absolute": 50
     }
   },
   "start_pool": "pinkstuff:chambers/start",

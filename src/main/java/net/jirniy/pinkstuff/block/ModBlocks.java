@@ -99,7 +99,7 @@ public class ModBlocks {
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block AMETHYST_BULB = registerBlock("amethyst_bulb",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 13)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 8)));
     public static final Block KUNZITE_BRICKS = registerBlock("kunzite_bricks",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
@@ -108,7 +108,7 @@ public class ModBlocks {
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block KUNZITE_BULB = registerBlock("kunzite_bulb",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 13)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 10)));
     public static final Block ELYSIUM_BRICKS = registerBlock("elysium_bricks",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
