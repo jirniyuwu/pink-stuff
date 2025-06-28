@@ -99,6 +99,24 @@
       }
     },
     {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/buildings/tower1",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/buildings/tower2",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
       "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
