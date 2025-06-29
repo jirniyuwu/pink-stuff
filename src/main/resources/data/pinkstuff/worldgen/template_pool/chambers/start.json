@@ -8,7 +8,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/start/start1",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -17,7 +18,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/start/start2",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -26,7 +28,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/start/start3",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     }
   ]

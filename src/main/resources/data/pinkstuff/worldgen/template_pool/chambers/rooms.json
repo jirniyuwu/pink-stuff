@@ -8,7 +8,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/treasure_room1",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -17,7 +18,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/treasure_room2",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -26,7 +28,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/treasure_room3",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -35,7 +38,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/treasure_room4",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -44,7 +48,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/treasure_room5",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -53,7 +58,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/room1",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -62,7 +68,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/room2",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -71,7 +78,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/room3",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -80,7 +88,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/room4",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -89,7 +98,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/room5",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -98,7 +108,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/room6",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -107,7 +118,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/room7",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     },
     {
@@ -116,7 +128,8 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/rooms/end",
-        "processors": "pinkstuff:chambers"
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
       }
     }
   ]
