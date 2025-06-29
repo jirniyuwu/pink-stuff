@@ -24,16 +24,19 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool kunziteBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KUNZITE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool elysiumBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ELYSIUM_BRICKS);
         BlockStateModelGenerator.BlockTexturePool thermiumBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.THERMIUM_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool memoryBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MEMORY_BRICKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_AMETHYST_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_KUNZITE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_ELYSIUM_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_THERMIUM_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_MEMORY_BRICKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AMETHYST_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ELYSIUM_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THERMIUM_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MEMORY_BULB);
 
         crystalCherryPool.stairs(ModBlocks.CRYSTAL_CHERRY_STAIRS);
         crystalCherryPool.slab(ModBlocks.CRYSTAL_CHERRY_SLAB);
@@ -63,6 +66,10 @@ public class ModModelProvider extends FabricModelProvider {
         thermiumBricksPool.stairs(ModBlocks.THERMIUM_BRICKS_STAIRS);
         thermiumBricksPool.slab(ModBlocks.THERMIUM_BRICKS_SLAB);
         thermiumBricksPool.wall(ModBlocks.THERMIUM_BRICKS_WALL);
+
+        memoryBricksPool.stairs(ModBlocks.MEMORY_BRICKS_STAIRS);
+        memoryBricksPool.slab(ModBlocks.MEMORY_BRICKS_SLAB);
+        memoryBricksPool.wall(ModBlocks.MEMORY_BRICKS_WALL);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_KUNZITE_BLOCK);

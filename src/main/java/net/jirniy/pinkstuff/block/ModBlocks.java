@@ -127,6 +127,15 @@ public class ModBlocks {
     public static final Block THERMIUM_BULB = registerBlock("thermium_bulb",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 14)));
+    public static final Block MEMORY_BRICKS = registerBlock("memory_bricks",
+            properties -> new Block(properties.strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 1)));
+    public static final Block CHISELED_MEMORY_BRICKS = registerBlock("chiseled_memory_bricks",
+            properties -> new Block(properties.strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 1)));
+    public static final Block MEMORY_BULB = registerBlock("memory_bulb",
+            properties -> new Block(properties.strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 15)));
 
     public static final Block POLISHED_AMETHYST_STAIRS = registerBlock("polished_amethyst_stairs",
             properties -> new StairsBlock(ModBlocks.POLISHED_AMETHYST_BLOCK.getDefaultState(),
@@ -167,6 +176,14 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(3f).luminance(state -> 11).requiresTool().sounds(BlockSoundGroup.IRON)));
     public static final Block THERMIUM_BRICKS_WALL = registerBlock("thermium_bricks_wall",
             properties -> new WallBlock(properties.strength(3f).luminance(state -> 11).requiresTool().sounds(BlockSoundGroup.IRON)));
+
+    public static final Block MEMORY_BRICKS_STAIRS = registerBlock("memory_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.MEMORY_BRICKS.getDefaultState(),
+                    properties.strength(3f).requiresTool().luminance(state -> 1).sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
+    public static final Block MEMORY_BRICKS_SLAB = registerBlock("memory_bricks_slab",
+            properties -> new SlabBlock(properties.strength(3f).luminance(state -> 1).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
+    public static final Block MEMORY_BRICKS_WALL = registerBlock("memory_bricks_wall",
+            properties -> new WallBlock(properties.strength(3f).luminance(state -> 1).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
 
     public static final Block CRYSTAL_CHERRY_STAIRS = registerBlock("crystal_cherry_stairs",
             properties -> new StairsBlock(ModBlocks.CRYSTAL_CHERRY_PLANKS.getDefaultState(),

@@ -57,7 +57,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BRICKS_WALL)
-                .add(ModBlocks.THERMIUM_BLASTER);
+                .add(ModBlocks.THERMIUM_BLASTER)
+                .add(ModBlocks.MEMORY_BRICKS)
+                .add(ModBlocks.CHISELED_MEMORY_BRICKS)
+                .add(ModBlocks.MEMORY_BULB)
+                .add(ModBlocks.MEMORY_BRICKS_SLAB)
+                .add(ModBlocks.MEMORY_BRICKS_STAIRS)
+                .add(ModBlocks.MEMORY_BRICKS_WALL);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
@@ -86,7 +92,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RAW_THERMIUM_BLOCK)
                 .add(ModBlocks.DEEPSLATE_THERMIUM_ORE)
                 .add(ModBlocks.THERMIUM_ORE)
-                .add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
+                .add(ModBlocks.ENERGIZED_THERMIUM_BLOCK)
+                .add(ModBlocks.MEMORY_BRICKS)
+                .add(ModBlocks.CHISELED_MEMORY_BRICKS)
+                .add(ModBlocks.MEMORY_BULB)
+                .add(ModBlocks.MEMORY_BRICKS_SLAB)
+                .add(ModBlocks.MEMORY_BRICKS_STAIRS)
+                .add(ModBlocks.MEMORY_BRICKS_WALL);
         valueLookupBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
@@ -103,6 +115,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BRICKS_WALL)
-                .add(ModBlocks.POLISHED_AMETHYST_WALL);
+                .add(ModBlocks.POLISHED_AMETHYST_WALL)
+                .add(ModBlocks.MEMORY_BRICKS_WALL);
     }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "pinkstuff:chambers/start",
+  "name": "pinkstuff:chambers/end",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:chambers/start/start1",
+        "location": "pinkstuff:chambers/rooms/end",
         "processors": "pinkstuff:chambers"
       }
     },
@@ -16,16 +16,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:chambers/start/start2",
-        "processors": "pinkstuff:chambers"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:chambers/start/start3",
+        "location": "pinkstuff:chambers/hallways/end2",
         "processors": "pinkstuff:chambers"
       }
     }

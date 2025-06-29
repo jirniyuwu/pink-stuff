@@ -66,6 +66,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THERMIUM_BLASTER);
 
                         entries.add(ModItems.MEMORY_SHARD);
+                        entries.add(ModBlocks.MEMORY_BRICKS);
+                        entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);
+                        entries.add(ModBlocks.MEMORY_BULB);
+                        entries.add(ModBlocks.MEMORY_BRICKS_SLAB);
+                        entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
+                        entries.add(ModBlocks.MEMORY_BRICKS_WALL);
 
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_WOOD);

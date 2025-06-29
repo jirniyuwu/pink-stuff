@@ -47,34 +47,40 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.KUNZITE_BRICKS);
         addDrop(ModBlocks.ELYSIUM_BRICKS);
         addDrop(ModBlocks.THERMIUM_BRICKS);
+        addDrop(ModBlocks.MEMORY_BRICKS);
 
         addDrop(ModBlocks.CHISELED_AMETHYST_BRICKS);
         addDrop(ModBlocks.CHISELED_KUNZITE_BRICKS);
         addDrop(ModBlocks.CHISELED_ELYSIUM_BRICKS);
         addDrop(ModBlocks.CHISELED_THERMIUM_BRICKS);
+        addDrop(ModBlocks.CHISELED_MEMORY_BRICKS);
 
         addDrop(ModBlocks.AMETHYST_BULB);
         addDrop(ModBlocks.KUNZITE_BULB);
         addDrop(ModBlocks.ELYSIUM_BULB);
         addDrop(ModBlocks.THERMIUM_BULB);
+        addDrop(ModBlocks.MEMORY_BULB);
 
         addDrop(ModBlocks.POLISHED_AMETHYST_STAIRS);
         addDrop(ModBlocks.AMETHYST_BRICKS_STAIRS);
         addDrop(ModBlocks.KUNZITE_BRICKS_STAIRS);
         addDrop(ModBlocks.ELYSIUM_BRICKS_STAIRS);
         addDrop(ModBlocks.THERMIUM_BRICKS_STAIRS);
+        addDrop(ModBlocks.MEMORY_BRICKS_STAIRS);
 
         addDrop(ModBlocks.POLISHED_AMETHYST_SLAB, slabDrops(ModBlocks.POLISHED_AMETHYST_SLAB));
         addDrop(ModBlocks.AMETHYST_BRICKS_SLAB, slabDrops(ModBlocks.AMETHYST_BRICKS_SLAB));
         addDrop(ModBlocks.KUNZITE_BRICKS_SLAB, slabDrops(ModBlocks.KUNZITE_BRICKS_SLAB));
         addDrop(ModBlocks.ELYSIUM_BRICKS_SLAB, slabDrops(ModBlocks.ELYSIUM_BRICKS_SLAB));
         addDrop(ModBlocks.THERMIUM_BRICKS_SLAB, slabDrops(ModBlocks.THERMIUM_BRICKS_SLAB));
+        addDrop(ModBlocks.MEMORY_BRICKS_SLAB, slabDrops(ModBlocks.MEMORY_BRICKS_SLAB));
 
         addDrop(ModBlocks.POLISHED_AMETHYST_WALL);
         addDrop(ModBlocks.AMETHYST_BRICKS_WALL);
         addDrop(ModBlocks.KUNZITE_BRICKS_WALL);
         addDrop(ModBlocks.ELYSIUM_BRICKS_WALL);
         addDrop(ModBlocks.THERMIUM_BRICKS_WALL);
+        addDrop(ModBlocks.MEMORY_BRICKS_WALL);
 
         addDrop(ModBlocks.KUNZITE_ORE, oreDrops(ModBlocks.KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.DEEPSLATE_KUNZITE_ORE, oreDrops(ModBlocks.DEEPSLATE_KUNZITE_ORE, ModItems.RAW_KUNZITE));

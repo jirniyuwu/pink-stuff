@@ -48,7 +48,7 @@
         "input_predicate": {
           "predicate_type": "minecraft:random_block_match",
           "block": "pinkstuff:chiseled_amethyst_bricks",
-          "probability": 0.2
+          "probability": 0.1
         },
         "output_state": {
           "Name": "pinkstuff:amethyst_bulb"
