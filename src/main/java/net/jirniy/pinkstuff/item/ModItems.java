@@ -42,7 +42,7 @@ public class ModItems {
     public static final Item ENERGIZED_THERMIUM = registerItem("energized_thermium", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
 
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 4, -2.4f)));
+            setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 2, -2.4f)));
     public static final Item KUNZITE_PICKAXE = registerItem("kunzite_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.KUNZITE, 1, -2.8f)));
     public static final Item KUNZITE_SHOVEL = registerItem("kunzite_shovel",
@@ -53,7 +53,7 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.KUNZITE, 0, -3f, setting));
 
     public static final Item ELYSIUM_SWORD = registerItem("elysium_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 9, -1.6f).rarity(Rarity.UNCOMMON)));
+            setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 4, -1.8f).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_PICKAXE = registerItem("elysium_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.ELYSIUM, 1, -2.8f).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_SHOVEL = registerItem("elysium_shovel",
@@ -66,7 +66,7 @@ public class ModItems {
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
             setting -> new HammerItem(ModToolMaterials.SPECIAL, 16, -3.4f, setting.rarity(Rarity.RARE)));
     public static final Item DAWNBLOOMER = registerItem("dawnbloomer",
-            setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 13, -1.4f).rarity(Rarity.RARE)));
+            setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 6, -1.8f).rarity(Rarity.RARE)));
 
     public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));
