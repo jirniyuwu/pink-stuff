@@ -48,10 +48,23 @@
         "input_predicate": {
           "predicate_type": "minecraft:random_block_match",
           "block": "pinkstuff:chiseled_amethyst_bricks",
-          "probability": 0.1
+          "probability": 0.2
         },
         "output_state": {
           "Name": "pinkstuff:amethyst_bulb"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:cobweb",
+          "probability": 0.7
+        },
+        "output_state": {
+          "Name": "minecraft:air"
         }
       }
     ]

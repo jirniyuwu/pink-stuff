@@ -53,6 +53,16 @@
       }
     },
     {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:chambers/rooms/treasure_room6",
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
       "weight": 3,
       "element": {
         "element_type": "minecraft:single_pool_element",
