@@ -14,7 +14,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "terrain_matching",
         "location": "pinkstuff:cherry_village/streets/straight1",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -23,7 +23,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "terrain_matching",
         "location": "pinkstuff:cherry_village/streets/straight2",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -32,7 +32,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "terrain_matching",
         "location": "pinkstuff:cherry_village/streets/turn1",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -41,7 +41,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "terrain_matching",
         "location": "pinkstuff:cherry_village/streets/turn2",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -50,7 +50,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "terrain_matching",
         "location": "pinkstuff:cherry_village/streets/intersect1",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -59,7 +59,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "terrain_matching",
         "location": "pinkstuff:cherry_village/streets/intersect2",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -68,7 +68,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "terrain_matching",
         "location": "pinkstuff:cherry_village/streets/cross1",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -77,7 +77,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "terrain_matching",
         "location": "pinkstuff:cherry_village/streets/cross2",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {

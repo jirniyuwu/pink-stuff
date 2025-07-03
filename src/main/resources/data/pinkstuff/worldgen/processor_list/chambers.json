@@ -66,6 +66,20 @@
         "output_state": {
           "Name": "minecraft:air"
         }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:air",
+          "probability": 0.3
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:amethyst_bricks"
+        },
+        "output_state": {
+          "Name": "minecraft:air"
+        }
       }
     ]
   }
