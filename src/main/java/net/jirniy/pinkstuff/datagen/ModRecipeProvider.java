@@ -677,6 +677,41 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "memory_bricks")));
+
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.AMETHYST_NUGGET, RecipeCategory.MISC, Items.AMETHYST_SHARD);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.DIAMOND_NUGGET, RecipeCategory.MISC, Items.DIAMOND);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.EMERALD_NUGGET, RecipeCategory.MISC, Items.EMERALD);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.QUARTZ_NUGGET, RecipeCategory.MISC, Items.QUARTZ);
+
+                createShaped(RecipeCategory.MISC, ModItems.KUNZITE, 1)
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .input('S', ModItems.KUNZITE_NUGGET)
+                        .criterion(hasItem(ModItems.KUNZITE_NUGGET), conditionsFromItem(ModItems.KUNZITE_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_from_nugget")));
+                createShapeless(RecipeCategory.MISC, ModItems.KUNZITE_NUGGET, 9)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .input(ModItems.KUNZITE).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_kunzite")));
+
+                createShaped(RecipeCategory.MISC, ModItems.THERMIUM, 1)
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .input('S', ModItems.THERMIUM_NUGGET)
+                        .criterion(hasItem(ModItems.THERMIUM_NUGGET), conditionsFromItem(ModItems.THERMIUM_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_from_nugget")));
+                createShapeless(RecipeCategory.MISC, ModItems.THERMIUM_NUGGET, 9)
+                        .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
+                        .input(ModItems.KUNZITE).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_thermium")));
             }
         };
     }

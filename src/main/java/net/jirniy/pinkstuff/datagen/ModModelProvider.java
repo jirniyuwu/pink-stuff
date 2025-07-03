@@ -95,6 +95,12 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.AMETHYST_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIAMOND_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.QUARTZ_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EMERALD_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.KUNZITE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.KUNZITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_KUNZITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTAL_GLITTER, Models.GENERATED);
@@ -106,6 +112,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIUM_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTAL_CARROT, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.THERMIUM_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENERGIZED_THERMIUM, Models.GENERATED);

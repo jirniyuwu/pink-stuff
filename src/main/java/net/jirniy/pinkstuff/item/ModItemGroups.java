@@ -17,8 +17,25 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.KUNZITE))
                     .displayName(Text.translatable("itemgroup.pinkstuff.kunzite_items"))
                     .entries((displayContext, entries) -> {
+                        entries.add(ModItems.QUARTZ_NUGGET);
+                        entries.add(ModItems.DIAMOND_NUGGET);
+                        entries.add(ModItems.EMERALD_NUGGET);
+
+                        entries.add(ModItems.AMETHYST_NUGGET);
+                        entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
+                        entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
+                        entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
+                        entries.add(ModBlocks.POLISHED_AMETHYST_WALL);
+
+                        entries.add(ModBlocks.AMETHYST_BRICKS);
+                        entries.add(ModBlocks.CHISELED_AMETHYST_BRICKS);
+                        entries.add(ModBlocks.AMETHYST_BULB);
+                        entries.add(ModBlocks.AMETHYST_BRICKS_SLAB);
+                        entries.add(ModBlocks.AMETHYST_BRICKS_STAIRS);
+                        entries.add(ModBlocks.AMETHYST_BRICKS_WALL);
 
                         entries.add(ModItems.RAW_KUNZITE);
+                        entries.add(ModItems.KUNZITE_NUGGET);
                         entries.add(ModItems.KUNZITE);
                         entries.add(ModItems.PINK_BITS);
 
@@ -48,6 +65,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ELYSIUM_BRICKS_WALL);
 
                         entries.add(ModItems.RAW_THERMIUM);
+                        entries.add(ModItems.THERMIUM_NUGGET);
                         entries.add(ModItems.THERMIUM);
                         entries.add(ModItems.ENERGIZED_THERMIUM);
                         entries.add(ModBlocks.THERMIUM_ORE);
@@ -89,18 +107,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
-
-                        entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
-                        entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
-                        entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
-                        entries.add(ModBlocks.POLISHED_AMETHYST_WALL);
-
-                        entries.add(ModBlocks.AMETHYST_BRICKS);
-                        entries.add(ModBlocks.CHISELED_AMETHYST_BRICKS);
-                        entries.add(ModBlocks.AMETHYST_BULB);
-                        entries.add(ModBlocks.AMETHYST_BRICKS_SLAB);
-                        entries.add(ModBlocks.AMETHYST_BRICKS_STAIRS);
-                        entries.add(ModBlocks.AMETHYST_BRICKS_WALL);
 
                         entries.add(ModItems.GELATINOUS_BUD);
                         entries.add(ModItems.ELYSIUM_APPLE);

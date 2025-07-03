@@ -18,6 +18,12 @@ import java.util.function.Function;
 
 public class ModItems {
 
+    public static final Item AMETHYST_NUGGET = registerItem("amethyst_nugget", Item::new);
+    public static final Item DIAMOND_NUGGET = registerItem("diamond_nugget", Item::new);
+    public static final Item EMERALD_NUGGET = registerItem("emerald_nugget", Item::new);
+    public static final Item QUARTZ_NUGGET = registerItem("quartz_nugget", Item::new);
+
+    public static final Item KUNZITE_NUGGET = registerItem("kunzite_nugget", Item::new);
     public static final Item KUNZITE = registerItem("kunzite", Item::new);
     public static final Item RAW_KUNZITE = registerItem("raw_kunzite", Item::new);
     public static final Item CRYSTAL_GLITTER = registerItem("crystal_glitter", Item::new);
@@ -37,6 +43,7 @@ public class ModItems {
                     .food(ModFoodComponents.GEM_BERRY, ModFoodComponents.GEM_BERRY_EFFECT)));
 
 
+    public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
     public static final Item THERMIUM = registerItem("thermium", Item::new);
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
     public static final Item ENERGIZED_THERMIUM = registerItem("energized_thermium", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
