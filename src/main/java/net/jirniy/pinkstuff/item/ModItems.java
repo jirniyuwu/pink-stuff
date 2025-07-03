@@ -26,7 +26,9 @@ public class ModItems {
     public static final Item KUNZITE_NUGGET = registerItem("kunzite_nugget", Item::new);
     public static final Item KUNZITE = registerItem("kunzite", Item::new);
     public static final Item RAW_KUNZITE = registerItem("raw_kunzite", Item::new);
+
     public static final Item CRYSTAL_GLITTER = registerItem("crystal_glitter", Item::new);
+    public static final Item ELYSIUM_NUGGET = registerItem("elysium_nugget", Item::new);
     public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot", Item::new);
     public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);

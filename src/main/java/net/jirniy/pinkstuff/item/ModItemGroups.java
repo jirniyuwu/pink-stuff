@@ -53,6 +53,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.KUNZITE_BRICKS_WALL);
 
                         entries.add(ModItems.CRYSTAL_GLITTER);
+                        entries.add(ModItems.ELYSIUM_NUGGET);
                         entries.add(ModItems.ELYSIUM_INGOT);
                         entries.add(ModItems.ELYSIAN_REDSTONE_CORE);
                         entries.add(ModBlocks.ELYSIUM_BLOCK);

@@ -712,6 +712,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
                         .input(ModItems.KUNZITE).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_thermium")));
+
+                createShaped(RecipeCategory.MISC, ModItems.ELYSIUM_INGOT, 1)
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .input('S', ModItems.ELYSIUM_NUGGET)
+                        .criterion(hasItem(ModItems.ELYSIUM_NUGGET), conditionsFromItem(ModItems.ELYSIUM_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_from_nugget")));
+                createShapeless(RecipeCategory.MISC, ModItems.ELYSIUM_NUGGET, 9)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .input(ModItems.ELYSIUM_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_from_thermium")));
             }
         };
     }
