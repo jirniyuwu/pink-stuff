@@ -34,6 +34,8 @@ public class ModItems {
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
     public static final Item MEMORY_SHARD = registerItem("memory_shard", setting -> new Item(setting.rarity(Rarity.RARE)));
 
+    public static final Item COAL_MEAL = registerItem("coal_meal", setting -> new Item(setting
+            .food(ModFoodComponents.COAL_MEAL, ModFoodComponents.COAL_MEAL_EFFECT)));
     public static final Item GELATINOUS_BUD = registerItem("gelatinous_bud", setting -> new Item(setting
             .food(ModFoodComponents.GELATINOUS_BUD, ModFoodComponents.GELATINOUS_BUD_EFFECT)));
     public static final Item ELYSIUM_APPLE = registerItem("elysium_apple", setting -> new Item(setting

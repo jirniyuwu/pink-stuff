@@ -725,6 +725,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .input(ModItems.ELYSIUM_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_from_thermium")));
+
+                createShapeless(RecipeCategory.FOOD, ModItems.COAL_MEAL, 2)
+                        .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
+                        .input(Items.COAL).input(Items.COAL).input(Items.COAL)
+                        .input(ModItems.THERMIUM_NUGGET).input(Items.WHEAT).input(ModItems.THERMIUM_NUGGET)
+                        .input(Items.COAL).input(Items.COAL).input(Items.COAL)
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "coal_meal")));
             }
         };
     }

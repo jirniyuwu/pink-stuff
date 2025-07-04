@@ -109,6 +109,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
 
+                        entries.add(ModItems.COAL_MEAL);
                         entries.add(ModItems.GELATINOUS_BUD);
                         entries.add(ModItems.ELYSIUM_APPLE);
                         entries.add(ModItems.CRYSTAL_CARROT);

@@ -110,6 +110,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIAN_REDSTONE_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PINK_BITS, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.COAL_MEAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.GELATINOUS_BUD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIUM_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTAL_CARROT, Models.GENERATED);
