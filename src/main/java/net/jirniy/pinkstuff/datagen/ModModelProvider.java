@@ -95,6 +95,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.CRAWLER_SPAWN_EGG, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.AMETHYST_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DIAMOND_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUARTZ_NUGGET, Models.GENERATED);

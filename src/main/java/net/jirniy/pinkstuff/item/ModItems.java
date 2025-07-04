@@ -4,6 +4,7 @@ package net.jirniy.pinkstuff.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.custom.HammerItem;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
@@ -46,6 +47,8 @@ public class ModItems {
             setting -> new BlockItem(ModBlocks.GEM_BERRY_BUSH, setting
                     .food(ModFoodComponents.GEM_BERRY, ModFoodComponents.GEM_BERRY_EFFECT)));
 
+    public static final Item CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
+            setting -> new SpawnEggItem(ModEntities.CRAWLER, setting));
 
     public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
     public static final Item THERMIUM = registerItem("thermium", Item::new);

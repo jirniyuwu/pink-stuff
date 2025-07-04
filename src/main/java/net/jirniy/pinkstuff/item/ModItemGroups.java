@@ -17,6 +17,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.KUNZITE))
                     .displayName(Text.translatable("itemgroup.pinkstuff.kunzite_items"))
                     .entries((displayContext, entries) -> {
+                        entries.add(ModItems.CRAWLER_SPAWN_EGG);
                         entries.add(ModItems.QUARTZ_NUGGET);
                         entries.add(ModItems.DIAMOND_NUGGET);
                         entries.add(ModItems.EMERALD_NUGGET);
