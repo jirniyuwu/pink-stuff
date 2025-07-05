@@ -15,7 +15,7 @@ public class CrawlerModel extends EntityModel<CrawlerRenderState> {
     public static final EntityModelLayer CRAWLER = new EntityModelLayer(Identifier.of(JirniysPinkStuff.MOD_ID, "crawler"), "main");
     private final ModelPart crawler;
     private final ModelPart body;
-    private final ModelPart gem;
+    private final ModelPart body2;
     private final ModelPart leg1;
     private final ModelPart leg2;
     private final ModelPart leg3;
@@ -32,7 +32,7 @@ public class CrawlerModel extends EntityModel<CrawlerRenderState> {
         super(root);
         this.crawler = root.getChild("crawler");
         this.body = this.crawler.getChild("body");
-        this.gem = this.body.getChild("gem");
+        this.body2 = this.body.getChild("body2");
         this.leg1 = this.body.getChild("leg1");
         this.leg2 = this.body.getChild("leg2");
         this.leg3 = this.body.getChild("leg3");
@@ -66,21 +66,21 @@ public class CrawlerModel extends EntityModel<CrawlerRenderState> {
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData crawler = modelPartData.addChild("crawler", ModelPartBuilder.create(), ModelTransform.rotation(0.0F, 24.0F, 0.0F));
+        ModelPartData crawler = modelPartData.addChild("crawler", ModelPartBuilder.create(), ModelTransform.rotation(0.0F, 0.0F, 0.0F));
 
-        ModelPartData body = crawler.addChild("body", ModelPartBuilder.create().uv(0, 0).cuboid(-2.0F, -3.0F, -2.0F, 4.0F, 2.0F, 9.0F, new Dilation(0.0F)), ModelTransform.rotation(0.0F, 0.0F, -2.0F));
+        ModelPartData body = crawler.addChild("body", ModelPartBuilder.create(), ModelTransform.rotation(0.0F, 0.0F, -2.0F));
 
-        ModelPartData gem = body.addChild("gem", ModelPartBuilder.create(), ModelTransform.rotation(-1.0F, -1.0F, 1.0F));
+        ModelPartData body2 = body.addChild("body2", ModelPartBuilder.create().uv(0, 0).cuboid(-2.0F, -3.0F, -4.0F, 4.0F, 2.0F, 9.0F, new Dilation(0.0F)), ModelTransform.rotation(0.0F, 0.0F, 2.0F));
 
-        ModelPartData cube_r1 = gem.addChild("cube_r1", ModelPartBuilder.create().uv(20, 11).cuboid(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(1.5F, -1.0F, -1.0F, -3.0386F, -1.0847F, -2.9231F));
+        ModelPartData cube_r1 = body2.addChild("cube_r1", ModelPartBuilder.create().uv(20, 11).cuboid(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.5F, -2.0F, -2.0F, -3.0386F, -1.0847F, -2.9231F));
 
-        ModelPartData cube_r2 = gem.addChild("cube_r2", ModelPartBuilder.create().uv(0, 16).cuboid(-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.5F, -1.0F, -1.0F, -2.4939F, -0.2753F, 2.5605F));
+        ModelPartData cube_r2 = body2.addChild("cube_r2", ModelPartBuilder.create().uv(0, 16).cuboid(-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-0.5F, -2.0F, -2.0F, -2.4939F, -0.2753F, 2.5605F));
 
-        ModelPartData cube_r3 = gem.addChild("cube_r3", ModelPartBuilder.create().uv(16, 17).cuboid(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(1.75F, -1.0F, 4.0F, -2.3864F, -0.2755F, -3.1002F));
+        ModelPartData cube_r3 = body2.addChild("cube_r3", ModelPartBuilder.create().uv(16, 17).cuboid(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.75F, -2.0F, 3.0F, -2.3864F, -0.2755F, -3.1002F));
 
-        ModelPartData cube_r4 = gem.addChild("cube_r4", ModelPartBuilder.create().uv(12, 11).cuboid(-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, -1.0F, 3.0F, -2.4825F, 0.3237F, 3.0049F));
+        ModelPartData cube_r4 = body2.addChild("cube_r4", ModelPartBuilder.create().uv(12, 11).cuboid(-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -2.0F, 2.0F, -2.4825F, 0.3237F, 3.0049F));
 
-        ModelPartData cube_r5 = gem.addChild("cube_r5", ModelPartBuilder.create().uv(8, 17).cuboid(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(1.5F, -1.0F, 1.0F, -2.5268F, -0.6426F, 2.7413F));
+        ModelPartData cube_r5 = body2.addChild("cube_r5", ModelPartBuilder.create().uv(8, 17).cuboid(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.5F, -2.0F, 0.0F, -2.5268F, -0.6426F, 2.7413F));
 
         ModelPartData leg1 = body.addChild("leg1", ModelPartBuilder.create(), ModelTransform.rotation(0.0F, 0.0F, 2.0F));
 

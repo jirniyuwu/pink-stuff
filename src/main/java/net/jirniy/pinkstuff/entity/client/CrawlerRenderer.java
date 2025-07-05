@@ -10,6 +10,7 @@ import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
+import net.minecraft.util.math.Vec3d;
 
 import java.util.Map;
 
@@ -27,8 +28,10 @@ public class CrawlerRenderer extends MobEntityRenderer<CrawlerEntity, CrawlerRen
                        VertexConsumerProvider vertexConsumerProvider, int i) {
         if(state.baby) {
             matrixStack.scale(0.5f, 0.5f, 0.5f);
+
         } else {
             matrixStack.scale(1f, 1f, 1f);
+            
         }
 
         super.render(state, matrixStack, vertexConsumerProvider, i);
