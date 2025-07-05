@@ -1,7 +1,9 @@
 package net.jirniy.pinkstuff.entity.client;
 
+import com.google.common.collect.Maps;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
+
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
@@ -15,7 +17,6 @@ public class CrawlerRenderer extends MobEntityRenderer<CrawlerEntity, CrawlerRen
     public CrawlerRenderer(EntityRendererFactory.Context context) {
         super(context, new CrawlerModel(context.getPart(CrawlerModel.CRAWLER)), 0.3f);
     }
-
     @Override
     public Identifier getTexture(CrawlerRenderState state) {
         return Identifier.of(JirniysPinkStuff.MOD_ID, "textures/entity/crawler/crawler_diamond.png");

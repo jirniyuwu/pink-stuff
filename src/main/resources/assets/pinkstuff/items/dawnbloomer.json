@@ -2,5 +2,7 @@
   "model": {
     "type": "minecraft:model",
     "model": "pinkstuff:item/dawnbloomer"
-  }
+
+  },
+  "oversized_in_gui": true
 }
