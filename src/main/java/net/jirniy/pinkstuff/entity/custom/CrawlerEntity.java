@@ -60,7 +60,7 @@ public class CrawlerEntity extends AnimalEntity {
 
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 1280;
+            this.idleAnimationTimeout = 40;
             this.idleAnimationState.start(this.age);
         } else {
             --this.idleAnimationTimeout;
