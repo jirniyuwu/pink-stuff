@@ -22,14 +22,22 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.storage.ReadView;
 import net.minecraft.storage.WriteView;
 import net.minecraft.util.Util;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.EntityList;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 public class CrawlerEntity extends AnimalEntity {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+    private int loveTicks = 0;
+
+    private static final TrackedData<Integer> DATA_ID_TYPE_VARIANT =
+            DataTracker.registerData(CrawlerEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public CrawlerEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -83,8 +91,62 @@ public class CrawlerEntity extends AnimalEntity {
 
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+        CrawlerEntity crawler = (CrawlerEntity) entity;
         CrawlerEntity baby = ModEntities.CRAWLER.create(world, SpawnReason.BREEDING);
+        CrawlerVariant variant = Util.getRandom(List.of(
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                this.getVariant(), crawler.getVariant(),
+                CrawlerVariant.THERMIUM), this.random);
+        baby.setVariant(variant);
         return baby;
+    }
+
+    @Override
+    protected void initDataTracker(DataTracker.Builder builder) {
+        super.initDataTracker(builder);
+        builder.add(DATA_ID_TYPE_VARIANT, 0);
+    }
+
+    public CrawlerVariant getVariant() {
+        return CrawlerVariant.byId(this.getTypeVariant() & 255);
+    }
+
+    private int getTypeVariant() {
+        return this.dataTracker.get(DATA_ID_TYPE_VARIANT);
+    }
+
+    private void setVariant(CrawlerVariant variant) {
+        this.dataTracker.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
+    }
+
+    @Override
+    public void writeData(WriteView view) {
+        super.writeData(view);
+        view.putInt("Variant", this.getTypeVariant());
+    }
+
+    @Override
+    public void readData(ReadView view) {
+        super.readData(view);
+        this.dataTracker.set(DATA_ID_TYPE_VARIANT, view.getInt("Variant", 0));
+    }
+
+    @Override
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason,
+                                 @Nullable EntityData entityData) {
+        CrawlerVariant variant = Util.getRandom(CrawlerVariant.values(), this.random);
+        setVariant(variant);
+        return super.initialize(world, difficulty, spawnReason, entityData);
     }
 
     @Nullable
