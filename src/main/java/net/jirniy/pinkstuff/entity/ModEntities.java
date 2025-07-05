@@ -17,7 +17,7 @@ public class ModEntities {
     public static final EntityType<CrawlerEntity> CRAWLER = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "crawler"),
             EntityType.Builder.create(CrawlerEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(0.7f, 0.4f).build(CRAWLER_KEY));
+                    .dimensions(0.6f, 0.4f).build(CRAWLER_KEY));
 
 
     public static void registerModEntities() {

@@ -2,10 +2,7 @@ package net.jirniy.pinkstuff.entity.custom;
 
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.ModItems;
-import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.EntityData;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -40,13 +37,14 @@ public class CrawlerEntity extends AnimalEntity {
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(0, new LookAroundGoal(this));
-        this.goalSelector.add(1, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.add(2, new AnimalMateGoal(this, 1.15D));
-        this.goalSelector.add(3, new TemptGoal(this, 1.15D, Ingredient.ofItems(ModItems.COAL_MEAL), false));
-        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
-        this.goalSelector.add(5, new WanderAroundFarGoal(this, 1.0D));
-        this.goalSelector.add(6, new SwimGoal(this));
+        this.goalSelector.add(0, new AnimalMateGoal(this, 1.15D));
+        this.goalSelector.add(1, new TemptGoal(this, 1.15D, Ingredient.ofItems(ModItems.COAL_MEAL), false));
+        this.goalSelector.add(2, new FollowParentGoal(this, 1.1D));
+        this.goalSelector.add(3, new AvoidSunlightGoal(this));
+        this.goalSelector.add(4, new LookAroundGoal(this));
+        this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
+        this.goalSelector.add(6, new WanderAroundFarGoal(this, 1.0D));
+        this.goalSelector.add(7, new SwimGoal(this));
     }
 
     public static DefaultAttributeContainer.Builder createAttributes() {
@@ -55,7 +53,9 @@ public class CrawlerEntity extends AnimalEntity {
                 .add(EntityAttributes.MOVEMENT_SPEED, 0.1)
                 .add(EntityAttributes.ATTACK_DAMAGE, 0)
                 .add(EntityAttributes.FOLLOW_RANGE, 20)
-                .add(EntityAttributes.TEMPT_RANGE, 12);
+                .add(EntityAttributes.TEMPT_RANGE, 12)
+                .add(EntityAttributes.JUMP_STRENGTH, 0.33)
+                .add(EntityAttributes.KNOCKBACK_RESISTANCE, 0.3);
     }
 
     private void setupAnimationStates() {
@@ -75,7 +75,6 @@ public class CrawlerEntity extends AnimalEntity {
             this.setupAnimationStates();
         }
     }
-
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {

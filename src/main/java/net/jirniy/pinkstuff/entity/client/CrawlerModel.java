@@ -66,7 +66,7 @@ public class CrawlerModel extends EntityModel<CrawlerRenderState> {
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData crawler = modelPartData.addChild("crawler", ModelPartBuilder.create(), ModelTransform.rotation(0.0F, 0.0F, 0.0F));
+        ModelPartData crawler = modelPartData.addChild("crawler", ModelPartBuilder.create(), ModelTransform.of(0.0F, 23.7F, 0.0F, 0.0F, 0.0F, 0.0F));
 
         ModelPartData body = crawler.addChild("body", ModelPartBuilder.create(), ModelTransform.rotation(0.0F, 0.0F, -2.0F));
 

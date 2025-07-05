@@ -117,5 +117,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THERMIUM_BRICKS_WALL)
                 .add(ModBlocks.POLISHED_AMETHYST_WALL)
                 .add(ModBlocks.MEMORY_BRICKS_WALL);
+        valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
+                .add(ModBlocks.KUNZITE_BLOCK)
+                .add(ModBlocks.ELYSIUM_BLOCK)
+                .add(ModBlocks.THERMIUM_BLOCK);
     }
 }
