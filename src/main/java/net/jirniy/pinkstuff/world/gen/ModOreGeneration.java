@@ -15,10 +15,5 @@ public class ModOreGeneration {
                 ModPlacedFeatures.THERMIUM_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DRIPSTONE_CAVES), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.DRIPSTONE_THERMIUM_ORE_PLACED_KEY);
-
-        // Example for individual Bioms
-        // BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.PLAINS),
-        // GenerationStep.Feature.UNDERGROUND_ORES,
-        //         ModPlacedFeatures.PINK_GARNET_ORE_PLACED_KEY);
     }
 }

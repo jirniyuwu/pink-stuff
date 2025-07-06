@@ -50,6 +50,7 @@ public class JirniysPinkStuff implements ModInitializer {
 
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.THERMIUM, 32000);
+			builder.add(ModItems.THERMIUM_NUGGET, 3200);
 		});
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());

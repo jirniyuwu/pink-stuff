@@ -2,6 +2,7 @@ package net.jirniy.pinkstuff.entity.custom;
 
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -12,12 +13,17 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.BatEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BiomeTags;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -28,6 +34,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
+import net.minecraft.world.biome.BiomeKeys;
+import net.minecraft.world.dimension.DimensionType;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -154,7 +162,24 @@ public class CrawlerEntity extends AnimalEntity {
     @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason,
                                  @Nullable EntityData entityData) {
-        CrawlerVariant variant = Util.getRandom(CrawlerVariant.values(), this.random);
+        CrawlerVariant variant;
+        if (spawnReason == SpawnReason.SPAWN_ITEM_USE) {
+            variant = Util.getRandom(CrawlerVariant.values(), this.random);
+            setVariant(variant);
+            return super.initialize(world, difficulty, spawnReason, entityData);
+        }
+        if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.DEEP_DARK) {
+            variant = CrawlerVariant.DIAMOND;
+        } else if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.CHERRY_GROVE ||
+                   world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.LUSH_CAVES) {
+            variant = CrawlerVariant.KUNZITE;
+        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.IS_MOUNTAIN)) {
+            variant = CrawlerVariant.EMERALD;
+        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.IS_NETHER)) {
+            variant = CrawlerVariant.QUARTZ;
+        } else {
+            variant = CrawlerVariant.DEFAULT;
+        }
         setVariant(variant);
         return super.initialize(world, difficulty, spawnReason, entityData);
     }
@@ -175,5 +200,14 @@ public class CrawlerEntity extends AnimalEntity {
     @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_BAT_DEATH;
+    }
+
+    public static boolean isValidNaturalSpawn(EntityType<? extends AnimalEntity> type, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
+        boolean bl = SpawnReason.isTrialSpawner(spawnReason) || isLightLevelValidForNaturalSpawn(world, pos);
+        return world.getBlockState(pos.down()).isIn(ModTags.Blocks.CRAWLER_SPAWNABLE_ON) && bl;
+    }
+
+    protected static boolean isLightLevelValidForNaturalSpawn(BlockRenderView world, BlockPos pos) {
+        return world.getBaseLightLevel(pos, 0) > 8;
     }
 }

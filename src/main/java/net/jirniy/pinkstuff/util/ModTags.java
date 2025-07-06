@@ -16,6 +16,8 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_SPECIAL_TOOL = createTag("needs_special_tool");
         public static final TagKey<Block> INCORRECT_FOR_SPECIAL_TOOL = createTag("incorrect_for_special_tool");
 
+        public static final TagKey<Block> CRAWLER_SPAWNABLE_ON = createTag("crawler_spawnable_on");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));
         }
