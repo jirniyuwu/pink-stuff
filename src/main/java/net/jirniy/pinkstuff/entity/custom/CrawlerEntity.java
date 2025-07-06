@@ -10,6 +10,8 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
@@ -22,11 +24,10 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.storage.ReadView;
 import net.minecraft.storage.WriteView;
 import net.minecraft.util.Util;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.EntityList;
-import net.minecraft.world.LocalDifficulty;
-import net.minecraft.world.ServerWorldAccess;
-import net.minecraft.world.World;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.*;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -46,13 +47,14 @@ public class CrawlerEntity extends AnimalEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new AnimalMateGoal(this, 1.15D));
-        this.goalSelector.add(1, new TemptGoal(this, 1.15D, Ingredient.ofItems(ModItems.COAL_MEAL), false));
-        this.goalSelector.add(2, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.add(3, new AvoidSunlightGoal(this));
-        this.goalSelector.add(4, new LookAroundGoal(this));
-        this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
-        this.goalSelector.add(6, new WanderAroundFarGoal(this, 1.0D));
-        this.goalSelector.add(7, new SwimGoal(this));
+        this.goalSelector.add(1, new TemptGoal(this, 1.1D, Ingredient.ofItems(ModItems.COAL_MEAL), false));
+        this.goalSelector.add(2, new AvoidSunlightGoal(this));
+        this.goalSelector.add(3, new EscapeSunlightGoal(this, 1.2D));
+        this.goalSelector.add(4, new FollowParentGoal(this, 1.1D));
+        this.goalSelector.add(5, new LookAroundGoal(this));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
+        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D));
+        this.goalSelector.add(8, new SwimGoal(this));
     }
 
     public static DefaultAttributeContainer.Builder createAttributes() {
@@ -62,8 +64,9 @@ public class CrawlerEntity extends AnimalEntity {
                 .add(EntityAttributes.ATTACK_DAMAGE, 0)
                 .add(EntityAttributes.FOLLOW_RANGE, 20)
                 .add(EntityAttributes.TEMPT_RANGE, 12)
-                .add(EntityAttributes.JUMP_STRENGTH, 0.33)
-                .add(EntityAttributes.KNOCKBACK_RESISTANCE, 0.3);
+                .add(EntityAttributes.JUMP_STRENGTH, 0.35)
+                .add(EntityAttributes.KNOCKBACK_RESISTANCE, 0.4)
+                .add(EntityAttributes.STEP_HEIGHT, 0.2);
     }
 
     private void setupAnimationStates() {
@@ -94,21 +97,28 @@ public class CrawlerEntity extends AnimalEntity {
         CrawlerEntity crawler = (CrawlerEntity) entity;
         CrawlerEntity baby = ModEntities.CRAWLER.create(world, SpawnReason.BREEDING);
         CrawlerVariant variant = Util.getRandom(List.of(
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                this.getVariant(), crawler.getVariant(),
-                CrawlerVariant.THERMIUM), this.random);
+                this.getVariant(), crawler.getVariant()), this.random);
         baby.setVariant(variant);
+        if (random.nextBetween(0, 50) == 50) {
+            baby.setVariant(CrawlerVariant.THERMIUM);
+        }
         return baby;
+    }
+
+    protected void mobTick(ServerWorld world) {
+        if (this.getBreedingAge() != 0) {
+            this.loveTicks = 0;
+        }
+        if (this.getVariant() == CrawlerVariant.THERMIUM && !this.isBaby()) {
+            if (random.nextBetween(0, 4000) == 4000) {
+                AreaEffectCloudEntity area = EntityType.AREA_EFFECT_CLOUD.spawn(world, this.getBlockPos(), SpawnReason.TRIGGERED);
+                area.addEffect(new StatusEffectInstance(StatusEffects.POISON, 60, 0));
+                area.setRadius(1.0F);
+                area.setOwner(this);
+                area.setDuration(20);
+            }
+        }
+        super.mobTick(world);
     }
 
     @Override
