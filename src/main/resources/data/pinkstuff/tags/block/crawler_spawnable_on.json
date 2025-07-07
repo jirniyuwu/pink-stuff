@@ -7,6 +7,13 @@
     "minecraft:andesite",
     "minecraft:tuff",
     "minecraft:deepslate",
-    "minecraft:sculk"
+    "minecraft:sculk",
+    "minecraft:ice",
+    "minecraft:packed_ice",
+    "minecraft:snow_block",
+    "minecraft:snow",
+    "minecraft:moss_block",
+    "minecraft:pale_moss_block",
+    "minecraft:clay"
   ]
 }

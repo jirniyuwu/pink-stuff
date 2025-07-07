@@ -15,6 +15,7 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -733,6 +734,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(Items.COAL).input(Items.COAL).input(Items.COAL)
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "coal_meal")));
+
+                createShapeless(RecipeCategory.DECORATIONS, ModBlocks.AMETHYST_PARTERS, 1)
+                        .input(ItemTags.FLOWERS).input(ModItems.AMETHYST_NUGGET)
+                        .criterion(hasItem(ModItems.AMETHYST_NUGGET), conditionsFromItem(ModItems.AMETHYST_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_parters")));
+                createShapeless(RecipeCategory.DECORATIONS, ModBlocks.KUNZITE_LOVELILY, 1)
+                        .input(ItemTags.FLOWERS).input(ModItems.KUNZITE_NUGGET)
+                        .criterion(hasItem(ModItems.KUNZITE_NUGGET), conditionsFromItem(ModItems.KUNZITE_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_lovelily")));
+                createShapeless(RecipeCategory.DECORATIONS, ModBlocks.ELYSIAN_SKYBERRY, 1)
+                        .input(ItemTags.FLOWERS).input(ModItems.ELYSIUM_NUGGET)
+                        .criterion(hasItem(ModItems.ELYSIUM_NUGGET), conditionsFromItem(ModItems.ELYSIUM_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysian_skyberry")));
+                createShapeless(RecipeCategory.DECORATIONS, ModBlocks.MEMORIA_BOURPEER, 1)
+                        .input(ItemTags.FLOWERS).input(ModItems.MEMORY_SHARD)
+                        .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "memoria_bourpeer")));
             }
         };
     }

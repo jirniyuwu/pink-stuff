@@ -93,6 +93,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
                         entries.add(ModBlocks.MEMORY_BRICKS_WALL);
 
+                        entries.add(ModBlocks.AMETHYST_PARTERS);
+                        entries.add(ModBlocks.KUNZITE_LOVELILY);
+                        entries.add(ModBlocks.ELYSIAN_SKYBERRY);
+                        entries.add(ModBlocks.MEMORIA_BOURPEER);
+
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_WOOD);
                         entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);

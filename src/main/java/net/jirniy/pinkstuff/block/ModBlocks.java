@@ -9,6 +9,8 @@ import net.jirniy.pinkstuff.block.custom.ThermiumBlasterBlock;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.component.type.SuspiciousStewEffectsComponent;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -207,6 +209,15 @@ public class ModBlocks {
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque()));
     public static final Block THERMIUM_BLASTER = registerBlock("thermium_blaster",
             properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6)));
+
+    public static final Block AMETHYST_PARTERS = registerBlock("amethyst_parters",
+            properties -> new FlowerBlock(StatusEffects.STRENGTH, 5, properties.strength(0f).noCollision().nonOpaque()));
+    public static final Block KUNZITE_LOVELILY = registerBlock("kunzite_lovelily",
+            properties -> new FlowerBlock(StatusEffects.ABSORPTION, 20, properties.strength(0f).noCollision().nonOpaque()));
+    public static final Block ELYSIAN_SKYBERRY = registerBlock("elysian_skyberry",
+            properties -> new FlowerBlock(StatusEffects.HEALTH_BOOST, 20, properties.strength(0f).luminance(state -> 2).noCollision().nonOpaque()));
+    public static final Block MEMORIA_BOURPEER = registerBlock("memoria_bourpeer",
+            properties -> new FlowerBlock(StatusEffects.CONDUIT_POWER, 60, properties.strength(0f).luminance(state -> 7).noCollision().nonOpaque()));
 
     public static final Block GEM_BERRY_BUSH = registerBlockWithoutBlockItem("gem_berry_bush",
             properties -> new GemBerryBushBlock(properties.mapColor(MapColor.DARK_GREEN).ticksRandomly()

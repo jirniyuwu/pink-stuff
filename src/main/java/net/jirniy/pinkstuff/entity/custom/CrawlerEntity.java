@@ -55,9 +55,9 @@ public class CrawlerEntity extends AnimalEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new AnimalMateGoal(this, 1.15D));
-        this.goalSelector.add(1, new TemptGoal(this, 1.1D, Ingredient.ofItems(ModItems.COAL_MEAL), false));
-        this.goalSelector.add(2, new AvoidSunlightGoal(this));
-        this.goalSelector.add(3, new EscapeSunlightGoal(this, 1.2D));
+        this.goalSelector.add(1, new EscapeSunlightGoal(this, 1.2D));
+        this.goalSelector.add(2, new TemptGoal(this, 1.1D, Ingredient.ofItems(ModItems.COAL_MEAL), false));
+        this.goalSelector.add(3, new AvoidSunlightGoal(this));
         this.goalSelector.add(4, new FollowParentGoal(this, 1.1D));
         this.goalSelector.add(5, new LookAroundGoal(this));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
@@ -170,6 +170,8 @@ public class CrawlerEntity extends AnimalEntity {
         }
         if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.DEEP_DARK) {
             variant = CrawlerVariant.DIAMOND;
+        } else if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.PALE_GARDEN) {
+            variant = CrawlerVariant.RESIN;
         } else if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.CHERRY_GROVE ||
                    world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.LUSH_CAVES) {
             variant = CrawlerVariant.KUNZITE;
@@ -177,6 +179,8 @@ public class CrawlerEntity extends AnimalEntity {
             variant = CrawlerVariant.EMERALD;
         } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.IS_NETHER)) {
             variant = CrawlerVariant.QUARTZ;
+        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.VILLAGE_SNOWY_HAS_STRUCTURE)) {
+            variant = CrawlerVariant.ICE;
         } else {
             variant = CrawlerVariant.DEFAULT;
         }
@@ -202,12 +206,13 @@ public class CrawlerEntity extends AnimalEntity {
         return SoundEvents.ENTITY_BAT_DEATH;
     }
 
-    public static boolean isValidNaturalSpawn(EntityType<? extends AnimalEntity> type, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
-        boolean bl = SpawnReason.isTrialSpawner(spawnReason) || isLightLevelValidForNaturalSpawn(world, pos);
+    public static boolean isValidSpawn(EntityType<CrawlerEntity> type, ServerWorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
+
+        boolean bl = SpawnReason.isTrialSpawner(spawnReason) || isBlockAbove(world, pos);
         return world.getBlockState(pos.down()).isIn(ModTags.Blocks.CRAWLER_SPAWNABLE_ON) && bl;
     }
 
-    protected static boolean isLightLevelValidForNaturalSpawn(BlockRenderView world, BlockPos pos) {
-        return world.getBaseLightLevel(pos, 0) > 8;
+    protected static boolean isBlockAbove(WorldAccess world, BlockPos pos) {
+        return true;
     }
 }

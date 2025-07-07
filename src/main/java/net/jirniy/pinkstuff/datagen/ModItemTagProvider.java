@@ -79,5 +79,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_BOOTS)
                 .add(ModItems.ELYSIUM_BOOTS);
+        valueLookupBuilder(ItemTags.FLOWERS)
+                .add(ModBlocks.AMETHYST_PARTERS.asItem())
+                .add(ModBlocks.KUNZITE_LOVELILY.asItem())
+                .add(ModBlocks.ELYSIAN_SKYBERRY.asItem())
+                .add(ModBlocks.MEMORIA_BOURPEER.asItem());
+        valueLookupBuilder(ItemTags.SAPLINGS)
+                .add(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem());
     }
 }

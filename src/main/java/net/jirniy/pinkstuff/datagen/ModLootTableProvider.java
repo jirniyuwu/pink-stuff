@@ -106,6 +106,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 0, 1));
 
+        addDrop(ModBlocks.AMETHYST_PARTERS);
+        addDrop(ModBlocks.KUNZITE_LOVELILY);
+        addDrop(ModBlocks.ELYSIAN_SKYBERRY);
+        addDrop(ModBlocks.MEMORIA_BOURPEER);
+
         this.addDrop(ModBlocks.GEM_BERRY_BUSH,
                 block -> this.applyExplosionDecay(
                         block,LootTable.builder().pool(LootPool.builder().conditionally(

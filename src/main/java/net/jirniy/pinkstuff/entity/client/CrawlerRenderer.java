@@ -30,6 +30,10 @@ public class CrawlerRenderer extends MobEntityRenderer<CrawlerEntity, CrawlerRen
                         Identifier.of(JirniysPinkStuff.MOD_ID, "textures/entity/crawler/crawler_kunzite.png"));
                 map.put(CrawlerVariant.THERMIUM,
                         Identifier.of(JirniysPinkStuff.MOD_ID, "textures/entity/crawler/crawler_thermium.png"));
+                map.put(CrawlerVariant.RESIN,
+                        Identifier.of(JirniysPinkStuff.MOD_ID, "textures/entity/crawler/crawler_resin.png"));
+                map.put(CrawlerVariant.ICE,
+                        Identifier.of(JirniysPinkStuff.MOD_ID, "textures/entity/crawler/crawler_ice.png"));
             });
     
     public CrawlerRenderer(EntityRendererFactory.Context context) {
