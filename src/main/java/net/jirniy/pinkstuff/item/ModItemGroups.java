@@ -96,6 +96,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AMETHYST_PARTERS);
                         entries.add(ModBlocks.KUNZITE_LOVELILY);
                         entries.add(ModBlocks.ELYSIAN_SKYBERRY);
+                        entries.add(ModBlocks.THERMIUM_WILTBORN);
                         entries.add(ModBlocks.MEMORIA_BOURPEER);
 
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);

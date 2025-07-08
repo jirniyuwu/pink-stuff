@@ -83,7 +83,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.AMETHYST_PARTERS.asItem())
                 .add(ModBlocks.KUNZITE_LOVELILY.asItem())
                 .add(ModBlocks.ELYSIAN_SKYBERRY.asItem())
-                .add(ModBlocks.MEMORIA_BOURPEER.asItem());
+                .add(ModBlocks.MEMORIA_BOURPEER.asItem())
+                .add(ModBlocks.THERMIUM_WILTBORN.asItem());
         valueLookupBuilder(ItemTags.SAPLINGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem());
     }

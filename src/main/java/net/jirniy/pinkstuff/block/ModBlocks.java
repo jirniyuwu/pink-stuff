@@ -211,13 +211,28 @@ public class ModBlocks {
             properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6)));
 
     public static final Block AMETHYST_PARTERS = registerBlock("amethyst_parters",
-            properties -> new FlowerBlock(StatusEffects.STRENGTH, 5, properties.strength(0f).noCollision().nonOpaque()));
+            properties -> new FlowerBlock(StatusEffects.STRENGTH, 5, properties.strength(0f).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block KUNZITE_LOVELILY = registerBlock("kunzite_lovelily",
-            properties -> new FlowerBlock(StatusEffects.ABSORPTION, 20, properties.strength(0f).noCollision().nonOpaque()));
+            properties -> new FlowerBlock(StatusEffects.ABSORPTION, 20, properties.strength(0f).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block ELYSIAN_SKYBERRY = registerBlock("elysian_skyberry",
-            properties -> new FlowerBlock(StatusEffects.HEALTH_BOOST, 20, properties.strength(0f).luminance(state -> 2).noCollision().nonOpaque()));
+            properties -> new FlowerBlock(StatusEffects.HEALTH_BOOST, 20, properties.strength(0f).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block THERMIUM_WILTBORN = registerBlock("thermium_wiltborn",
+            properties -> new FlowerBlock(StatusEffects.POISON, 60, properties.strength(0f).luminance(state -> 3).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block MEMORIA_BOURPEER = registerBlock("memoria_bourpeer",
-            properties -> new FlowerBlock(StatusEffects.CONDUIT_POWER, 60, properties.strength(0f).luminance(state -> 7).noCollision().nonOpaque()));
+            properties -> new FlowerBlock(StatusEffects.CONDUIT_POWER, 60, properties.strength(0f).luminance(state -> 7).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block POTTED_AMETHYST_PARTERS = registerBlockWithoutBlockItem("potted_amethyst_parters",
+            properties -> new FlowerPotBlock(ModBlocks.AMETHYST_PARTERS, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_KUNZITE_LOVELILY = registerBlockWithoutBlockItem("potted_kunzite_lovelily",
+            properties -> new FlowerPotBlock(ModBlocks.KUNZITE_LOVELILY, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_ELYSIAN_SKYBERRY = registerBlockWithoutBlockItem("potted_elysian_skyberry",
+            properties -> new FlowerPotBlock(ModBlocks.ELYSIAN_SKYBERRY, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_THERMIUM_WILTBORN = registerBlockWithoutBlockItem("potted_thermium_wiltborn",
+            properties -> new FlowerPotBlock(ModBlocks.THERMIUM_WILTBORN, properties.strength(0f).nonOpaque().luminance(state -> 3).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_MEMORIA_BOURPEER = registerBlockWithoutBlockItem("potted_memoria_bourpeer",
+            properties -> new FlowerPotBlock(ModBlocks.MEMORIA_BOURPEER, properties.strength(0f).nonOpaque().luminance(state -> 7).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_CRYSTAL_CHERRY_SAPLING = registerBlockWithoutBlockItem("potted_crystal_cherry_sapling",
+            properties -> new FlowerPotBlock(ModBlocks.CRYSTAL_CHERRY_SAPLING, properties.strength(0f).nonOpaque().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block GEM_BERRY_BUSH = registerBlockWithoutBlockItem("gem_berry_bush",
             properties -> new GemBerryBushBlock(properties.mapColor(MapColor.DARK_GREEN).ticksRandomly()

@@ -126,6 +126,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.AMETHYST_PARTERS)
                 .add(ModBlocks.KUNZITE_LOVELILY)
                 .add(ModBlocks.ELYSIAN_SKYBERRY)
-                .add(ModBlocks.MEMORIA_BOURPEER);
+                .add(ModBlocks.MEMORIA_BOURPEER)
+                .add(ModBlocks.THERMIUM_WILTBORN);
+        valueLookupBuilder(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POTTED_AMETHYST_PARTERS)
+                .add(ModBlocks.POTTED_KUNZITE_LOVELILY)
+                .add(ModBlocks.POTTED_ELYSIAN_SKYBERRY)
+                .add(ModBlocks.POTTED_MEMORIA_BOURPEER)
+                .add(ModBlocks.POTTED_THERMIUM_WILTBORN)
+                .add(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING);
     }
 }

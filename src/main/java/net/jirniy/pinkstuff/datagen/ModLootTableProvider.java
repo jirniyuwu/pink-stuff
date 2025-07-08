@@ -106,9 +106,17 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 0, 1));
 
+        addPottedPlantDrops(ModBlocks.POTTED_MEMORIA_BOURPEER);
+        addPottedPlantDrops(ModBlocks.POTTED_THERMIUM_WILTBORN);
+        addPottedPlantDrops(ModBlocks.POTTED_ELYSIAN_SKYBERRY);
+        addPottedPlantDrops(ModBlocks.POTTED_KUNZITE_LOVELILY);
+        addPottedPlantDrops(ModBlocks.POTTED_AMETHYST_PARTERS);
+        addPottedPlantDrops(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING);
+
         addDrop(ModBlocks.AMETHYST_PARTERS);
         addDrop(ModBlocks.KUNZITE_LOVELILY);
         addDrop(ModBlocks.ELYSIAN_SKYBERRY);
+        addDrop(ModBlocks.THERMIUM_WILTBORN);
         addDrop(ModBlocks.MEMORIA_BOURPEER);
 
         this.addDrop(ModBlocks.GEM_BERRY_BUSH,
