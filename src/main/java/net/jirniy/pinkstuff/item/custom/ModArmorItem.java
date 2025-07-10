@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
@@ -11,6 +12,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.server.world.ServerWorld;
 import org.jetbrains.annotations.Nullable;
@@ -31,12 +33,8 @@ public class ModArmorItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
-        if(!world.isClient()) {
-            if(entity instanceof PlayerEntity player) {
-                if(hasFullSuitOfArmorOn(player)) {
-                    evaluateArmorEffects(player);
-                }
-            }
+        if(entity instanceof PlayerEntity player) {
+            evaluateArmorEffects(player);
         }
 
         super.inventoryTick(stack, world, entity, slot);
@@ -64,21 +62,16 @@ public class ModArmorItem extends Item {
         }
     }
 
-    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack boots = player.getInventory().getStack(EquipmentSlot.FEET.getIndex());
-        ItemStack leggings = player.getInventory().getStack(EquipmentSlot.LEGS.getIndex());
-        ItemStack chestplate = player.getInventory().getStack(EquipmentSlot.CHEST.getIndex());
-        ItemStack helmet = player.getInventory().getStack(EquipmentSlot.HEAD.getIndex());
-
-        return !helmet.isEmpty() && !chestplate.isEmpty()
-                && !leggings.isEmpty() && !boots.isEmpty();
-    }
-
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
         ItemStack boots = player.getInventory().getStack(EquipmentSlot.FEET.getIndex());
         ItemStack leggings = player.getInventory().getStack(EquipmentSlot.LEGS.getIndex());
         ItemStack chestplate = player.getInventory().getStack(EquipmentSlot.CHEST.getIndex());
         ItemStack helmet = player.getInventory().getStack(EquipmentSlot.HEAD.getIndex());
+
+        if (helmet.isEmpty() || chestplate.isEmpty()
+                || leggings.isEmpty() || boots.isEmpty()) {
+            return false;
+        }
 
         EquippableComponent equippableComponentBoots = boots.getComponents().get(DataComponentTypes.EQUIPPABLE);
         EquippableComponent equippableComponentLeggings = leggings.getComponents().get(DataComponentTypes.EQUIPPABLE);

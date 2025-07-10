@@ -711,7 +711,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_from_nugget")));
                 createShapeless(RecipeCategory.MISC, ModItems.THERMIUM_NUGGET, 9)
                         .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
-                        .input(ModItems.KUNZITE).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                        .input(ModItems.THERMIUM).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_thermium")));
 
                 createShaped(RecipeCategory.MISC, ModItems.ELYSIUM_INGOT, 1)

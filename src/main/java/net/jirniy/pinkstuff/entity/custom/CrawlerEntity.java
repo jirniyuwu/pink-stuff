@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.entity.custom;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -15,6 +16,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.BatEntity;
 import net.minecraft.entity.passive.PassiveEntity;
@@ -206,13 +208,7 @@ public class CrawlerEntity extends AnimalEntity {
         return SoundEvents.ENTITY_BAT_DEATH;
     }
 
-    public static boolean isValidSpawn(EntityType<CrawlerEntity> type, ServerWorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
-
-        boolean bl = SpawnReason.isTrialSpawner(spawnReason) || isBlockAbove(world, pos);
-        return world.getBlockState(pos.down()).isIn(ModTags.Blocks.CRAWLER_SPAWNABLE_ON) && bl;
-    }
-
-    protected static boolean isBlockAbove(WorldAccess world, BlockPos pos) {
-        return true;
+    public static boolean canSpawn(EntityType<CrawlerEntity> type, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
+        return world.getBlockState(pos.down()).isIn(ModTags.Blocks.CRAWLER_SPAWNABLE_ON);
     }
 }

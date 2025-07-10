@@ -153,6 +153,16 @@
       }
     },
     {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:chambers/rooms/room10",
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",

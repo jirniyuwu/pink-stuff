@@ -6,6 +6,7 @@ import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.custom.HammerItem;
+import net.jirniy.pinkstuff.item.custom.ModArmorItem;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -94,7 +95,7 @@ public class ModItems {
     public static final Item ELYSIUM_HELMET = registerItem("elysium_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_CHESTPLATE = registerItem("elysium_chestplate",
-            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE).rarity(Rarity.UNCOMMON)));
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_LEGGINGS = registerItem("elysium_leggings",
             setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_BOOTS = registerItem("elysium_boots",
