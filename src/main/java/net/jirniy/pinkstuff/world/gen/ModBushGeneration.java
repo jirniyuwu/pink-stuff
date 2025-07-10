@@ -10,5 +10,8 @@ public class ModBushGeneration {
     public static void generateBushes() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CHERRY_GROVE),
             GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.GEM_BERRY_BUSH_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HAZEWEAVER_PLANT_PLACED_KEY);
     }
 }

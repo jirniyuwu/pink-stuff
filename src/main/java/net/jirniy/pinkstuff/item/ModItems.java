@@ -47,6 +47,9 @@ public class ModItems {
     public static final Item GEM_BERRY = registerItem("gem_berry",
             setting -> new BlockItem(ModBlocks.GEM_BERRY_BUSH, setting
                     .food(ModFoodComponents.GEM_BERRY, ModFoodComponents.GEM_BERRY_EFFECT)));
+    public static final Item HAZEWEAVER = registerItem("hazeweaver",
+            setting -> new BlockItem(ModBlocks.HAZEWEAVER_PLANT, setting
+                    .food(ModFoodComponents.HAZEWEAVER, ModFoodComponents.HAZEWEAVER_EFFECT)));
 
     public static final Item CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
             setting -> new SpawnEggItem(ModEntities.CRAWLER, setting));

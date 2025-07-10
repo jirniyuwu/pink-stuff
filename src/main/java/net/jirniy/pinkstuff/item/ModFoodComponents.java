@@ -29,4 +29,8 @@ public class ModFoodComponents {
     public static final FoodComponent COAL_MEAL = new FoodComponent.Builder().nutrition(1).saturationModifier(0.2f).build();
     public static final ConsumableComponent COAL_MEAL_EFFECT = food()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.POISON, 80, 0), 1f)).build();
+
+    public static final FoodComponent HAZEWEAVER = new FoodComponent.Builder().nutrition(4).saturationModifier(0f).build();
+    public static final ConsumableComponent HAZEWEAVER_EFFECT = food()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.POISON, 40, 0), 0.6f)).build();
 }

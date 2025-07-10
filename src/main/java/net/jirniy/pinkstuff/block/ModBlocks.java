@@ -6,6 +6,7 @@ import net.jirniy.pinkstuff.block.custom.DisplayBlock;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.block.custom.ModSaplingBlock;
 import net.jirniy.pinkstuff.block.custom.ThermiumBlasterBlock;
+import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -241,7 +242,13 @@ public class ModBlocks {
 
     public static final Block GEM_BERRY_BUSH = registerBlockWithoutBlockItem("gem_berry_bush",
             properties -> new GemBerryBushBlock(properties.mapColor(MapColor.DARK_GREEN).ticksRandomly()
-                    .noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).luminance(state -> 6).pistonBehavior(PistonBehavior.DESTROY)));
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).luminance(state -> 6).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block HAZEWEAVER_PLANT = registerBlockWithoutBlockItem("hazeweaver_plant",
+            properties -> new FlowerBlock(StatusEffects.SATURATION, 2, properties.mapColor(MapColor.GREEN)
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_HAZEWEAVER_PLANT = registerBlockWithoutBlockItem("potted_hazeweaver_plant",
+            properties -> new FlowerPotBlock(ModBlocks.HAZEWEAVER_PLANT, properties.strength(0f).nonOpaque().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
+
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name))));

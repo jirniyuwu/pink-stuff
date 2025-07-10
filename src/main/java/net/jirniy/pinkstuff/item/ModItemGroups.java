@@ -121,6 +121,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ELYSIUM_APPLE);
                         entries.add(ModItems.CRYSTAL_CARROT);
                         entries.add(ModItems.GEM_BERRY);
+                        entries.add(ModItems.HAZEWEAVER);
 
                         entries.add(ModItems.KUNZITE_SWORD);
                         entries.add(ModItems.KUNZITE_PICKAXE);

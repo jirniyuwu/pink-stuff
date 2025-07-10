@@ -24,6 +24,7 @@
   "item.pinkstuff.elysium_apple": "Elysian Fruit",
   "item.pinkstuff.crystal_carrot": "Crystal Carrot",
   "item.pinkstuff.gem_berry": "Gem Berries",
+  "item.pinkstuff.hazeweaver": "Hazeweaver",
 
   "item.pinkstuff.kunzite_block": "Block of Kunzite",
   "item.pinkstuff.raw_kunzite_block": "Block of Raw Kunzite",
@@ -131,6 +132,7 @@
   "block.pinkstuff.thermium_blaster": "Thermium-powered Heat Blaster",
 
   "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
+  "block.pinkstuff.hazeweaver_plant": "Hazeweaver",
 
   "enchantment.pinkstuff.lightning": "Lightning",
   "enchantment.pinkstuff.length": "Length",
