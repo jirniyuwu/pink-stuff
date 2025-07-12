@@ -88,5 +88,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.HAZEWEAVER);
         valueLookupBuilder(ItemTags.SAPLINGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem());
+
+        valueLookupBuilder(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.KUNZITE)
+                .add(ModItems.ELYSIUM_INGOT)
+                .add(ModItems.THERMIUM)
+                .add(ModItems.MEMORY_SHARD);
     }
 }

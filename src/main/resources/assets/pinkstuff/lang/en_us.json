@@ -139,6 +139,14 @@
   "enchantment.pinkstuff.reach": "Reach",
   "enchantment.pinkstuff.sliding_shoes": "Sliding Shoes",
 
+  "item.pinkstuff.cherry_armor_trim_smithing_template": "Cherry Smithing Template",
+  "trim_pattern.pinkstuff.cherry": "Cherry Trim Pattern",
+
+  "trim_material.pinkstuff.kunzite": "Kunzite Material",
+  "trim_material.pinkstuff.elysium": "Elysian Material",
+  "trim_material.pinkstuff.thermium": "Thermium Material",
+  "trim_material.pinkstuff.memory": "Memoria Material",
+
   "advancements.main.root.description": "Enter the Pink forest~",
   "advancements.main.root.title": "The Enchanted Realm",
   "advancements.main.obtain_kunzite.description": "Obtain Kunzite by smelting Raw Kunzite, which is found in caves, or by combining Pink Bits with Amethyst shards",

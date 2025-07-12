@@ -155,12 +155,17 @@
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 8
+          "weight": 6
         },
         {
           "type": "minecraft:item",
           "name": "pinkstuff:memory_shard",
           "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pinkstuff:cherry_armor_trim_smithing_template",
+          "weight": 3
         }
       ]
     }

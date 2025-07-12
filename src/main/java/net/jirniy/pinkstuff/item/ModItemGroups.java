@@ -123,6 +123,8 @@ public class ModItemGroups {
                         entries.add(ModItems.GEM_BERRY);
                         entries.add(ModItems.HAZEWEAVER);
 
+                        entries.add(ModItems.CHERRY_SMITHING_TEMPLATE);
+
                         entries.add(ModItems.KUNZITE_SWORD);
                         entries.add(ModItems.KUNZITE_PICKAXE);
                         entries.add(ModItems.KUNZITE_AXE);

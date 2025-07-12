@@ -7,6 +7,7 @@ import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.custom.HammerItem;
 import net.jirniy.pinkstuff.item.custom.ModArmorItem;
+import net.jirniy.pinkstuff.trim.ModTrimMaterials;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -26,15 +27,15 @@ public class ModItems {
     public static final Item QUARTZ_NUGGET = registerItem("quartz_nugget", Item::new);
 
     public static final Item KUNZITE_NUGGET = registerItem("kunzite_nugget", Item::new);
-    public static final Item KUNZITE = registerItem("kunzite", Item::new);
+    public static final Item KUNZITE = registerItem("kunzite", setting -> new Item(setting.trimMaterial(ModTrimMaterials.KUNZITE)));
     public static final Item RAW_KUNZITE = registerItem("raw_kunzite", Item::new);
 
     public static final Item CRYSTAL_GLITTER = registerItem("crystal_glitter", Item::new);
     public static final Item ELYSIUM_NUGGET = registerItem("elysium_nugget", Item::new);
-    public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot", Item::new);
+    public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot", setting -> new Item(setting.trimMaterial(ModTrimMaterials.ELYSIUM)));
     public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
-    public static final Item MEMORY_SHARD = registerItem("memory_shard", setting -> new Item(setting.rarity(Rarity.RARE)));
+    public static final Item MEMORY_SHARD = registerItem("memory_shard", setting -> new Item(setting.rarity(Rarity.RARE).trimMaterial(ModTrimMaterials.MEMORY)));
 
     public static final Item COAL_MEAL = registerItem("coal_meal", setting -> new Item(setting
             .food(ModFoodComponents.COAL_MEAL, ModFoodComponents.COAL_MEAL_EFFECT)));
@@ -55,7 +56,7 @@ public class ModItems {
             setting -> new SpawnEggItem(ModEntities.CRAWLER, setting));
 
     public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
-    public static final Item THERMIUM = registerItem("thermium", Item::new);
+    public static final Item THERMIUM = registerItem("thermium", setting -> new Item(setting.trimMaterial(ModTrimMaterials.THERMIUM)));
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
     public static final Item ENERGIZED_THERMIUM = registerItem("energized_thermium", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
 
@@ -98,11 +99,14 @@ public class ModItems {
     public static final Item ELYSIUM_HELMET = registerItem("elysium_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.HELMET).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_CHESTPLATE = registerItem("elysium_chestplate",
-            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE).rarity(Rarity.UNCOMMON)));
+            setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_LEGGINGS = registerItem("elysium_leggings",
             setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_BOOTS = registerItem("elysium_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.BOOTS).rarity(Rarity.UNCOMMON)));
+
+    public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
+            SmithingTemplateItem::of);
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {

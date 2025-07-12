@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.jirniy.pinkstuff.datagen.*;
 import net.jirniy.pinkstuff.enchantment.ModEnchantments;
+import net.jirniy.pinkstuff.trim.ModTrimMaterials;
+import net.jirniy.pinkstuff.trim.ModTrimPatterns;
 import net.jirniy.pinkstuff.world.ModConfiguredFeatures;
 import net.jirniy.pinkstuff.world.ModPlacedFeatures;
 import net.minecraft.registry.RegistryBuilder;
@@ -26,5 +28,8 @@ public class JirniysPinkStuffDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
+
+		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 	}
 }

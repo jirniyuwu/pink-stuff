@@ -75,6 +75,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DISPLAY);
         valueLookupBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
+        valueLookupBuilder(BlockTags.LEAVES)
+                .add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
         valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.AMETHYST_BULB)
                 .add(ModBlocks.KUNZITE_BULB);
