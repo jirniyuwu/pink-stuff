@@ -106,13 +106,13 @@ public class ModItems {
             setting -> new Item(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.BOOTS).rarity(Rarity.UNCOMMON)));
 
     public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
-            SmithingTemplateItem::of);
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
     public static final Item BLOOM_SMITHING_TEMPLATE = registerItem("bloom_armor_trim_smithing_template",
-            SmithingTemplateItem::of);
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.UNCOMMON)));
     public static final Item SWORDMASTER_SMITHING_TEMPLATE = registerItem("swordmaster_armor_trim_smithing_template",
-            SmithingTemplateItem::of);
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.UNCOMMON)));
     public static final Item SHATTER_SMITHING_TEMPLATE = registerItem("shatter_armor_trim_smithing_template",
-            SmithingTemplateItem::of);
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.UNCOMMON)));
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {

@@ -7,6 +7,7 @@ import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.Rarity;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -88,7 +89,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.HAZEWEAVER);
         valueLookupBuilder(ItemTags.SAPLINGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem());
-
         valueLookupBuilder(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.KUNZITE)
                 .add(ModItems.ELYSIUM_INGOT)
