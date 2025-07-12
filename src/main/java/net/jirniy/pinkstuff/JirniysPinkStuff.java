@@ -66,8 +66,8 @@ public class JirniysPinkStuff implements ModInitializer {
 
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 3, factories -> {
 			factories.add((entity, random) -> new TradeOffer(
-					new TradedItem(Items.EMERALD, 34),
-					new ItemStack(ModItems.SWORDMASTER_SMITHING_TEMPLATE, 8), 2, 7, 0.08f));
+					new TradedItem(Items.EMERALD, random.nextBetween(40, 60)),
+					new ItemStack(ModItems.SWORDMASTER_SMITHING_TEMPLATE, 1), 2, 7, 0.04f));
 		});
 		TradeOfferHelper.registerWanderingTraderOffers(factories -> {
 			factories.addAll(Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_for_kunzite"), (entity, random) -> new TradeOffer(
@@ -76,6 +76,12 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.addAll(Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_for_pink_bits"), (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2),
 					new ItemStack(ModItems.PINK_BITS, 3), 17, 7, 0.04f));
+			factories.addAll(Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_for_bloom_smithing_template"), (entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, random.nextBetween(50, 64)),
+					new ItemStack(ModItems.BLOOM_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
+			factories.addAll(Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_for_shatter_smithing_template"), (entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, random.nextBetween(50, 64)),
+					new ItemStack(ModItems.SHATTER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
 		});
 	}
 }

@@ -781,6 +781,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTrimRecipe(ModItems.SHATTER_SMITHING_TEMPLATE, ModTrimPatterns.SHATTER,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "shatter")));
                 offerSmithingTemplateCopyingRecipe(ModItems.SHATTER_SMITHING_TEMPLATE, Blocks.TERRACOTTA);
+                offerSmithingTrimRecipe(ModItems.CREEPER_SMITHING_TEMPLATE, ModTrimPatterns.CREEPER,
+                        RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "creeper")));
+                offerSmithingTemplateCopyingRecipe(ModItems.CREEPER_SMITHING_TEMPLATE, Items.CREEPER_HEAD);
             }
         };
     }

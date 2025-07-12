@@ -47,7 +47,9 @@
         "pinkstuff:trims/entity/humanoid/shatter",
         "pinkstuff:trims/entity/humanoid_leggings/shatter",
         "pinkstuff:trims/entity/humanoid/bloom",
-        "pinkstuff:trims/entity/humanoid_leggings/bloom"
+        "pinkstuff:trims/entity/humanoid_leggings/bloom",
+        "pinkstuff:trims/entity/humanoid/creeper",
+        "pinkstuff:trims/entity/humanoid_leggings/creeper"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {
