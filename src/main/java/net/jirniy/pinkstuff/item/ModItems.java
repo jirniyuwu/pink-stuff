@@ -107,6 +107,12 @@ public class ModItems {
 
     public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
             SmithingTemplateItem::of);
+    public static final Item BLOOM_SMITHING_TEMPLATE = registerItem("bloom_armor_trim_smithing_template",
+            SmithingTemplateItem::of);
+    public static final Item SWORDMASTER_SMITHING_TEMPLATE = registerItem("swordmaster_armor_trim_smithing_template",
+            SmithingTemplateItem::of);
+    public static final Item SHATTER_SMITHING_TEMPLATE = registerItem("shatter_armor_trim_smithing_template",
+            SmithingTemplateItem::of);
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {

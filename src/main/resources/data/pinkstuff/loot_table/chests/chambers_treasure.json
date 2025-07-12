@@ -155,7 +155,7 @@
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 6
+          "weight": 5
         },
         {
           "type": "minecraft:item",
@@ -165,6 +165,11 @@
         {
           "type": "minecraft:item",
           "name": "pinkstuff:cherry_armor_trim_smithing_template",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pinkstuff:bloom_armor_trim_smithing_template",
           "weight": 3
         }
       ]

@@ -171,14 +171,15 @@
     },
     {
       "rolls": 1,
+      "bonus_rolls": 1,
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 29
+          "weight": 14
         },
         {
           "type": "minecraft:item",
-          "name": "pinkstuff:cherry_armor_trim_smithing_template",
+          "name": "pinkstuff:bloom_armor_trim_smithing_template",
           "weight": 1
         }
       ]

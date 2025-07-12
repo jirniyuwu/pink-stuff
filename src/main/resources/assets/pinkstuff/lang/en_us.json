@@ -139,8 +139,14 @@
   "enchantment.pinkstuff.reach": "Reach",
   "enchantment.pinkstuff.sliding_shoes": "Sliding Shoes",
 
-  "item.pinkstuff.cherry_armor_trim_smithing_template": "Cherry Smithing Template",
+  "item.pinkstuff.cherry_armor_trim_smithing_template": "Cherry Armor Trim",
   "trim_pattern.pinkstuff.cherry": "Cherry Trim Pattern",
+  "item.pinkstuff.swordmaster_armor_trim_smithing_template": "Swordmaster Armor Trim",
+  "trim_pattern.pinkstuff.swordmaster": "Swordmaster Trim Pattern",
+  "item.pinkstuff.shatter_armor_trim_smithing_template": "Shatter Armor Trim",
+  "trim_pattern.pinkstuff.shatter": "Shatter Trim Pattern",
+  "item.pinkstuff.bloom_armor_trim_smithing_template": "Bloom Armor Trim",
+  "trim_pattern.pinkstuff.bloom": "Bloom Trim Pattern",
 
   "trim_material.pinkstuff.kunzite": "Kunzite Material",
   "trim_material.pinkstuff.elysium": "Elysian Material",
