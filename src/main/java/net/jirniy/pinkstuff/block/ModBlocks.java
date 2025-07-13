@@ -242,7 +242,7 @@ public class ModBlocks {
 
     public static final Block GEM_BERRY_BUSH = registerBlockWithoutBlockItem("gem_berry_bush",
             properties -> new GemBerryBushBlock(properties.mapColor(MapColor.DARK_GREEN).ticksRandomly()
-                    .noCollision().nonOpaque().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).luminance(state -> 6).pistonBehavior(PistonBehavior.DESTROY)));
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).luminance(GemBerryBushBlock::getLuminance).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block HAZEWEAVER_PLANT = registerBlockWithoutBlockItem("hazeweaver_plant",
             properties -> new FlowerBlock(StatusEffects.SATURATION, 2, properties.mapColor(MapColor.GREEN)
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));

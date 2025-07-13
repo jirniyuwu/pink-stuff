@@ -42,4 +42,18 @@ public class GemBerryBushBlock extends SweetBerryBushBlock {
             return super.onUse(state, world, pos, player, hit);
         }
     }
+
+    public static int getLuminance(BlockState state) {
+        if (state.get(AGE) == 0) {
+            return 0;
+        } else if (state.get(AGE) == 1) {
+            return 1;
+        } else if (state.get(AGE) == 2) {
+            return 4;
+        } else if (state.get(AGE) == 3) {
+            return 6;
+        } else {
+            return 0;
+        }
+    }
 }
