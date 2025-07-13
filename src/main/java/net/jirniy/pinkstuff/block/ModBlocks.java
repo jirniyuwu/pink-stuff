@@ -9,6 +9,7 @@ import net.jirniy.pinkstuff.block.custom.ThermiumBlasterBlock;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.component.type.SuspiciousStewEffectsComponent;
 import net.minecraft.entity.effect.StatusEffects;
@@ -21,6 +22,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
@@ -30,61 +32,61 @@ public class ModBlocks {
 
     public static final Block KUNZITE_BLOCK = registerBlock("kunzite_block",
         properties -> new Block(properties.strength(4f)
-                .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block RAW_KUNZITE_BLOCK = registerBlock("raw_kunzite_block",
             properties -> new Block(properties.strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.STONE)));
+                    .requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.PALE_PURPLE)));
     public static final Block KUNZITE_ORE = registerBlock("kunzite_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
-                    properties.strength(3f).requiresTool()));
+                    properties.strength(3f).requiresTool().mapColor(MapColor.PALE_PURPLE)));
     public static final Block DEEPSLATE_KUNZITE_ORE = registerBlock("deepslate_kunzite_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
-                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.DARK_DULL_PINK)));
     public static final Block AMETHYST_KUNZITE_ORE = registerBlock("amethyst_kunzite_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
-                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block ELYSIUM_BLOCK = registerBlock("elysium_block",
             properties -> new Block(properties.strength(5f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
 
     public static final Block THERMIUM_BLOCK = registerBlock("thermium_block",
             properties -> new Block(properties.strength(5f)
-                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 11)));
+                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 11).mapColor(MapColor.LIME)));
     public static final Block ENERGIZED_THERMIUM_BLOCK = registerBlock("energized_thermium_block",
             properties -> new PillarBlock(properties.strength(6f)
-                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 15)));
+                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 15).mapColor(MapColor.LIME)));
     public static final Block RAW_THERMIUM_BLOCK = registerBlock("raw_thermium_block",
             properties -> new Block(properties.strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.STONE).luminance(state -> 7)));
+                    .requiresTool().sounds(BlockSoundGroup.STONE).luminance(state -> 7).mapColor(MapColor.TERRACOTTA_LIME)));
     public static final Block THERMIUM_ORE = registerBlock("thermium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
-                    properties.strength(5f).requiresTool().luminance(state -> 3)));
+                    properties.strength(5f).requiresTool().luminance(state -> 3).mapColor(MapColor.PALE_GREEN)));
     public static final Block DEEPSLATE_THERMIUM_ORE = registerBlock("deepslate_thermium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
-                    properties.strength(6f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).luminance(state -> 2)));
+                    properties.strength(6f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).luminance(state -> 2).mapColor(MapColor.DARK_GREEN)));
 
     public static final Block CRYSTAL_CHERRY_LOG = registerBlock("crystal_cherry_log",
             properties -> new PillarBlock(properties
-                    .strength(2.0F).luminance(state -> 4).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
+                    .strength(2.0F).luminance(state -> 4).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DARK_DULL_PINK)));
     public static final Block CRYSTAL_CHERRY_WOOD = registerBlock("crystal_cherry_wood",
             properties -> new PillarBlock(properties
-                    .strength(2.0F).luminance(state -> 4).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
+                    .strength(2.0F).luminance(state -> 4).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DARK_DULL_PINK)));
     public static final Block STRIPPED_CRYSTAL_CHERRY_LOG = registerBlock("stripped_crystal_cherry_log",
             properties -> new PillarBlock(properties
-                    .strength(2.0F).luminance(state -> 7).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
+                    .strength(2.0F).luminance(state -> 7).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.PALE_PURPLE)));
     public static final Block STRIPPED_CRYSTAL_CHERRY_WOOD = registerBlock("stripped_crystal_cherry_wood",
             properties -> new PillarBlock(properties
-                    .strength(2.0F).luminance(state -> 7).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
+                    .strength(2.0F).luminance(state -> 7).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.PALE_PURPLE)));
 
     public static final Block CRYSTAL_CHERRY_PLANKS = registerBlock("crystal_cherry_planks",
-            properties -> new Block(properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
+            properties -> new Block(properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
     public static final Block CRYSTAL_CHERRY_LEAVES = registerBlock("crystal_cherry_leaves",
             properties -> new UntintedParticleLeavesBlock(0.08f, ParticleTypes.CHERRY_LEAVES, properties
                     .mapColor(MapColor.PINK).strength(0.2F).ticksRandomly().luminance(state -> 3)
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
                     .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
                     .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
-                    .solidBlock(Blocks::never)));
+                    .solidBlock(Blocks::never).mapColor(MapColor.PINK)));
 
     public static final Block CRYSTAL_CHERRY_SAPLING = registerBlock("crystal_cherry_sapling",
             properties -> new ModSaplingBlock(ModSaplingGenerator.CRYSTAL_CHERRY, properties.mapColor(MapColor.PINK)
@@ -93,123 +95,123 @@ public class ModBlocks {
 
     public static final Block AMETHYST_BRICKS = registerBlock("amethyst_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block POLISHED_AMETHYST_BLOCK = registerBlock("polished_amethyst_block",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block CHISELED_AMETHYST_BRICKS = registerBlock("chiseled_amethyst_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block AMETHYST_BULB = registerBlock("amethyst_bulb",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 8)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 8).mapColor(MapColor.PURPLE)));
     public static final Block KUNZITE_BRICKS = registerBlock("kunzite_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
     public static final Block CHISELED_KUNZITE_BRICKS = registerBlock("chiseled_kunzite_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
     public static final Block KUNZITE_BULB = registerBlock("kunzite_bulb",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 10)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 10).mapColor(MapColor.PINK)));
     public static final Block ELYSIUM_BRICKS = registerBlock("elysium_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
     public static final Block CHISELED_ELYSIUM_BRICKS = registerBlock("chiseled_elysium_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
     public static final Block ELYSIUM_BULB = registerBlock("elysium_bulb",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 15)));
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> 15).mapColor(MapColor.PINK)));
     public static final Block THERMIUM_BRICKS = registerBlock("thermium_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 7)));
+                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 7).mapColor(MapColor.LIME)));
     public static final Block CHISELED_THERMIUM_BRICKS = registerBlock("chiseled_thermium_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 8)));
+                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 8).mapColor(MapColor.LIME)));
     public static final Block THERMIUM_BULB = registerBlock("thermium_bulb",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 14)));
+                    .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 14).mapColor(MapColor.LIME)));
     public static final Block MEMORY_BRICKS = registerBlock("memory_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 1)));
+                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 1).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block CHISELED_MEMORY_BRICKS = registerBlock("chiseled_memory_bricks",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 1)));
+                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 1).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block MEMORY_BULB = registerBlock("memory_bulb",
             properties -> new Block(properties.strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 15)));
+                    .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 15).mapColor(MapColor.TERRACOTTA_BLACK)));
 
     public static final Block POLISHED_AMETHYST_STAIRS = registerBlock("polished_amethyst_stairs",
             properties -> new StairsBlock(ModBlocks.POLISHED_AMETHYST_BLOCK.getDefaultState(),
-                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block POLISHED_AMETHYST_SLAB = registerBlock("polished_amethyst_slab",
-            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block POLISHED_AMETHYST_WALL = registerBlock("polished_amethyst_wall",
-            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
 
     public static final Block AMETHYST_BRICKS_STAIRS = registerBlock("amethyst_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.AMETHYST_BRICKS.getDefaultState(),
-                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block AMETHYST_BRICKS_SLAB = registerBlock("amethyst_bricks_slab",
-            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block AMETHYST_BRICKS_WALL = registerBlock("amethyst_bricks_wall",
-            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
 
     public static final Block KUNZITE_BRICKS_STAIRS = registerBlock("kunzite_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.KUNZITE_BRICKS.getDefaultState(),
-                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
     public static final Block KUNZITE_BRICKS_SLAB = registerBlock("kunzite_bricks_slab",
-            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
     public static final Block KUNZITE_BRICKS_WALL = registerBlock("kunzite_bricks_wall",
-            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
 
     public static final Block ELYSIUM_BRICKS_STAIRS = registerBlock("elysium_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.ELYSIUM_BRICKS.getDefaultState(),
-                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
     public static final Block ELYSIUM_BRICKS_SLAB = registerBlock("elysium_bricks_slab",
-            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
     public static final Block ELYSIUM_BRICKS_WALL = registerBlock("elysium_bricks_wall",
-            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
 
     public static final Block THERMIUM_BRICKS_STAIRS = registerBlock("thermium_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.THERMIUM_BRICKS.getDefaultState(),
-                    properties.strength(3f).requiresTool().luminance(state -> 11).sounds(BlockSoundGroup.IRON)));
+                    properties.strength(3f).requiresTool().luminance(state -> 11).sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
     public static final Block THERMIUM_BRICKS_SLAB = registerBlock("thermium_bricks_slab",
-            properties -> new SlabBlock(properties.strength(3f).luminance(state -> 11).requiresTool().sounds(BlockSoundGroup.IRON)));
+            properties -> new SlabBlock(properties.strength(3f).luminance(state -> 11).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
     public static final Block THERMIUM_BRICKS_WALL = registerBlock("thermium_bricks_wall",
-            properties -> new WallBlock(properties.strength(3f).luminance(state -> 11).requiresTool().sounds(BlockSoundGroup.IRON)));
+            properties -> new WallBlock(properties.strength(3f).luminance(state -> 11).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
 
     public static final Block MEMORY_BRICKS_STAIRS = registerBlock("memory_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.MEMORY_BRICKS.getDefaultState(),
-                    properties.strength(3f).requiresTool().luminance(state -> 1).sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
+                    properties.strength(3f).requiresTool().luminance(state -> 1).sounds(BlockSoundGroup.GILDED_BLACKSTONE).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block MEMORY_BRICKS_SLAB = registerBlock("memory_bricks_slab",
-            properties -> new SlabBlock(properties.strength(3f).luminance(state -> 1).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
+            properties -> new SlabBlock(properties.strength(3f).luminance(state -> 1).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block MEMORY_BRICKS_WALL = registerBlock("memory_bricks_wall",
-            properties -> new WallBlock(properties.strength(3f).luminance(state -> 1).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
+            properties -> new WallBlock(properties.strength(3f).luminance(state -> 1).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).mapColor(MapColor.TERRACOTTA_BLACK)));
 
     public static final Block CRYSTAL_CHERRY_STAIRS = registerBlock("crystal_cherry_stairs",
             properties -> new StairsBlock(ModBlocks.CRYSTAL_CHERRY_PLANKS.getDefaultState(),
-                    properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
+                    properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
     public static final Block CRYSTAL_CHERRY_SLAB = registerBlock("crystal_cherry_slab",
-            properties -> new SlabBlock(properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
+            properties -> new SlabBlock(properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
     public static final Block CRYSTAL_CHERRY_BUTTON = registerBlock("crystal_cherry_button",
-            properties -> new ButtonBlock(BlockSetType.CHERRY, 6, properties.strength(2f).noCollision().luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
+            properties -> new ButtonBlock(BlockSetType.CHERRY, 6, properties.strength(2f).noCollision().luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
     public static final Block CRYSTAL_CHERRY_PRESSURE_PLATE = registerBlock("crystal_cherry_pressure_plate",
-            properties -> new PressurePlateBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
+            properties -> new PressurePlateBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
     public static final Block CRYSTAL_CHERRY_FENCE = registerBlock("crystal_cherry_fence",
             properties -> new FenceBlock(properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
     public static final Block CRYSTAL_CHERRY_FENCE_GATE = registerBlock("crystal_cherry_fence_gate",
-            properties -> new FenceGateBlock(WoodType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD)));
+            properties -> new FenceGateBlock(WoodType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
     public static final Block CRYSTAL_CHERRY_DOOR = registerBlock("crystal_cherry_door",
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
     public static final Block CRYSTAL_CHERRY_TRAPDOOR = registerBlock("crystal_cherry_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
 
     public static final Block DISPLAY = registerBlock("display",
-            properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque()));
+            properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque().mapColor(MapColor.STONE_GRAY)));
     public static final Block THERMIUM_BLASTER = registerBlock("thermium_blaster",
-            properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6)));
+            properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6).mapColor(MapColor.PURPLE)));
 
     public static final Block AMETHYST_PARTERS = registerBlock("amethyst_parters",
             properties -> new FlowerBlock(StatusEffects.STRENGTH, 5, properties.strength(0f)
