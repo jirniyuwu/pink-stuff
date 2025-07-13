@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
@@ -15,16 +16,21 @@ import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.jirniy.pinkstuff.particle.ModParticles;
 import net.jirniy.pinkstuff.recipe.ModRecipes;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.util.HammerUsageEvent;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
+import net.minecraft.world.ServerWorldAccess;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,6 +50,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 		ModRecipes.registerRecipes();
 		ModEntities.registerModEntities();
+		ModParticles.registerParticles();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
@@ -61,6 +68,15 @@ public class JirniysPinkStuff implements ModInitializer {
 		});
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+			if (player.getMainHandStack().getItem() == ModItems.DAWNBLOOMER) {
+				world.addParticleClient(ModParticles.RIFT_PARTICLE,
+						entity.getX(), entity.getY() + (entity.getEyeHeight(entity.getPose()) / 1.5),
+						entity.getZ(), 0, 0, 0);
+				return ActionResult.PASS;
+			}
+			return ActionResult.PASS;
+		});
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CRAWLER, CrawlerEntity.createAttributes());
 

@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -14,11 +15,14 @@ import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.client.CrawlerModel;
 import net.jirniy.pinkstuff.entity.client.CrawlerRenderer;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.jirniy.pinkstuff.particle.ModParticles;
+import net.jirniy.pinkstuff.particle.RiftParticle;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.screen.custom.DisplayScreen;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.minecraft.client.particle.ParticleFactory;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -54,5 +58,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
 
         HandledScreens.register(ModScreenHandlers.DISPLAY_SCREEN_HANDLER, DisplayScreen::new);
         HandledScreens.register(ModScreenHandlers.THERMIUM_BLASTER_SCREEN_HANDLER, ThermiumBlasterScreen::new);
+
+        ParticleFactoryRegistry.getInstance().register(ModParticles.RIFT_PARTICLE, RiftParticle.Factory::new);
     }
 }
