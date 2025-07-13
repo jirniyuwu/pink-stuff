@@ -103,7 +103,10 @@ public class ModConfiguredFeatures {
 
         register(context, HAZEWEAVER_PLANT_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.HAZEWEAVER_PLANT)),
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(
+                                Pool.<BlockState>builder()
+                                        .add(ModBlocks.HAZEWEAVER_PLANT.getDefaultState(), 1)
+                                        .add(AIR.getDefaultState(), 2))),
                         List.of(Blocks.GRASS_BLOCK)));
     }
 

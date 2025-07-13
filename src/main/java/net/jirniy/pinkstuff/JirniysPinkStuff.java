@@ -70,18 +70,30 @@ public class JirniysPinkStuff implements ModInitializer {
 					new ItemStack(ModItems.SWORDMASTER_SMITHING_TEMPLATE, 1), 2, 7, 0.04f));
 		});
 		TradeOfferHelper.registerWanderingTraderOffers(factories -> {
-			factories.addAll(Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_for_kunzite"), (entity, random) -> new TradeOffer(
-					new TradedItem(Items.EMERALD, 10),
-					new ItemStack(ModItems.KUNZITE, 4), 5, 7, 0.04f));
-			factories.addAll(Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_for_pink_bits"), (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, random.nextBetween(3, 5)),
+					new ItemStack(ModItems.KUNZITE, random.nextBetween(3, 10)), 5, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(ModBlocks.CRYSTAL_CHERRY_LOG, 8), 2, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2),
-					new ItemStack(ModItems.PINK_BITS, 3), 17, 7, 0.04f));
-			factories.addAll(Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_for_bloom_smithing_template"), (entity, random) -> new TradeOffer(
+					new ItemStack(ModItems.PINK_BITS, random.nextBetween(2, 18)), 17, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(50, 64)),
 					new ItemStack(ModItems.BLOOM_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
-			factories.addAll(Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_for_shatter_smithing_template"), (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(50, 64)),
 					new ItemStack(ModItems.SHATTER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, random.nextBetween(40, 64)),
+					new ItemStack(ModItems.SWORDMASTER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.GELATINOUS_BUD, 3),
+					new ItemStack(Items.EMERALD, 1), 7, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.ENERGIZED_THERMIUM, 1),
+					new ItemStack(Items.EMERALD, random.nextBetween(20, 50)), 2, 7, 0.04f));
 		});
 	}
 }
