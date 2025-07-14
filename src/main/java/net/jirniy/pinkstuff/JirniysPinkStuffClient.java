@@ -15,6 +15,7 @@ import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.client.CrawlerModel;
 import net.jirniy.pinkstuff.entity.client.CrawlerRenderer;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.jirniy.pinkstuff.particle.DawnbreakParticle;
 import net.jirniy.pinkstuff.particle.ModParticles;
 import net.jirniy.pinkstuff.particle.RiftParticle;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
@@ -60,5 +61,6 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.THERMIUM_BLASTER_SCREEN_HANDLER, ThermiumBlasterScreen::new);
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.RIFT_PARTICLE, RiftParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.DAWNBREAK_PARTICLE, DawnbreakParticle.Factory::new);
     }
 }

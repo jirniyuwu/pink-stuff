@@ -11,6 +11,7 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.component.ModDataComponentTypes;
+import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.enchantment.ModEnchantmentEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
@@ -21,9 +22,13 @@ import net.jirniy.pinkstuff.recipe.ModRecipes;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.util.HammerUsageEvent;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageSources;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
@@ -31,8 +36,12 @@ import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.ServerWorldAccess;
+import org.apache.logging.log4j.core.jmx.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+import java.util.jar.Attributes;
 
 public class JirniysPinkStuff implements ModInitializer {
 	public static final String MOD_ID = "pinkstuff";
@@ -51,6 +60,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModRecipes.registerRecipes();
 		ModEntities.registerModEntities();
 		ModParticles.registerParticles();
+		ModEffects.registerEffects();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
@@ -69,11 +79,20 @@ public class JirniysPinkStuff implements ModInitializer {
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-			if (player.getMainHandStack().getItem() == ModItems.DAWNBLOOMER) {
-				world.addParticleClient(ModParticles.RIFT_PARTICLE,
+			if (player.getMainHandStack().getItem() == ModItems.DAWNBLOOMER && !world.isClient()) {
+				ServerWorld serverWorld = (ServerWorld) world;
+				serverWorld.spawnParticles(ModParticles.RIFT_PARTICLE,
 						entity.getX(), entity.getY() + (entity.getEyeHeight(entity.getPose()) / 1.5),
-						entity.getZ(), 0, 0, 0);
-				return ActionResult.PASS;
+						entity.getZ(), 1, 0, 0, 0, 0);
+			}
+			if (player.hasStatusEffect(ModEffects.DAWNBREAKER) && !world.isClient()) {
+				ServerWorld serverWorld = (ServerWorld) world;
+				serverWorld.spawnParticles(ModParticles.DAWNBREAK_PARTICLE,
+						entity.getX(), entity.getY() + (entity.getEyeHeight(entity.getPose()) / 1.5),
+						entity.getZ(), 1, 0, 0, 0, 0);
+				entity.damage((ServerWorld) world, world.getDamageSources().magic(),
+						2 + player.getStatusEffect(ModEffects.DAWNBREAKER).getAmplifier());
+				player.removeStatusEffect(ModEffects.DAWNBREAKER);
 			}
 			return ActionResult.PASS;
 		});

@@ -11,6 +11,8 @@ import net.minecraft.util.thread.TaskQueue;
 public class ModParticles {
     public static final SimpleParticleType RIFT_PARTICLE =
             registerParticle("rift_particle", FabricParticleTypes.simple(true));
+    public static final SimpleParticleType DAWNBREAK_PARTICLE =
+            registerParticle("dawnbreak_particle", FabricParticleTypes.simple(true));
 
     private static SimpleParticleType registerParticle(String name, SimpleParticleType particleType) {
         return Registry.register(Registries.PARTICLE_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, name), particleType);
