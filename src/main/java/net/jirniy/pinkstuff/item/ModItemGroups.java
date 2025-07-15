@@ -119,6 +119,7 @@ public class ModItemGroups {
                         entries.add(ModItems.COAL_MEAL);
                         entries.add(ModItems.GELATINOUS_BUD);
                         entries.add(ModItems.ELYSIUM_APPLE);
+                        entries.add(ModItems.GODFRUIT);
                         entries.add(ModItems.CRYSTAL_CARROT);
                         entries.add(ModItems.GEM_BERRY);
                         entries.add(ModItems.HAZEWEAVER);

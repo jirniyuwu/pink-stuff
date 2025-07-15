@@ -114,6 +114,9 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2),
 					new ItemStack(ModItems.PINK_BITS, random.nextBetween(2, 18)), 17, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModItems.GEM_BERRY, random.nextBetween(1, 4)), 5, 7, 0.04f));
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(30, 50)),
 					new ItemStack(ModItems.CHESS_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
@@ -123,6 +126,9 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(40, 64)),
 					new ItemStack(ModItems.SWORDMASTER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, random.nextBetween(20, 30)),
+					new ItemStack(ModItems.ELYSIUM_APPLE, 1), 5, 7, 0.04f));
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.GELATINOUS_BUD, 3),
 					new ItemStack(Items.EMERALD, 1), 7, 7, 0.04f));

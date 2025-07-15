@@ -537,6 +537,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_apple")));
 
+                createShaped(RecipeCategory.FOOD, ModItems.GODFRUIT, 1)
+                        .pattern("CEC")
+                        .pattern("EME")
+                        .pattern("CEC")
+                        .input('E', ModItems.ELYSIUM_APPLE)
+                        .input('C', ModItems.ELYSIAN_REDSTONE_CORE)
+                        .input('M', ModItems.MEMORY_SHARD)
+                        .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "godfruit")));
+
                 createShaped(RecipeCategory.FOOD, ModItems.CRYSTAL_CARROT, 1)
                         .pattern("PPP")
                         .pattern("PCP")

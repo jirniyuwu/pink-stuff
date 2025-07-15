@@ -33,4 +33,9 @@ public class ModFoodComponents {
     public static final FoodComponent HAZEWEAVER = new FoodComponent.Builder().nutrition(4).saturationModifier(0f).build();
     public static final ConsumableComponent HAZEWEAVER_EFFECT = food()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.POISON, 40, 0), 0.6f)).build();
+
+    public static final FoodComponent GODFRUIT = new FoodComponent.Builder().nutrition(20).saturationModifier(2.8f).alwaysEdible().build();
+    public static final ConsumableComponent GODFRUIT_EFFECT = food()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, 0), 1f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 0), 1f)).build();
 }

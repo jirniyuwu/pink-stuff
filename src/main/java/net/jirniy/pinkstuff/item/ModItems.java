@@ -43,6 +43,8 @@ public class ModItems {
             .food(ModFoodComponents.GELATINOUS_BUD, ModFoodComponents.GELATINOUS_BUD_EFFECT)));
     public static final Item ELYSIUM_APPLE = registerItem("elysium_apple", setting -> new Item(setting
             .food(ModFoodComponents.ELYSIUM_APPLE, ModFoodComponents.ELYSIUM_APPLE_EFFECT).rarity(Rarity.UNCOMMON)));
+    public static final Item GODFRUIT = registerItem("godfruit", setting -> new Item(setting
+            .food(ModFoodComponents.GODFRUIT, ModFoodComponents.GODFRUIT_EFFECT).rarity(Rarity.RARE)));
     public static final Item CRYSTAL_CARROT = registerItem("crystal_carrot", setting -> new Item(setting
             .food(ModFoodComponents.CRYSTAL_CARROT, ModFoodComponents.CRYSTAL_CARROT_EFFECT)));
     public static final Item GEM_BERRY = registerItem("gem_berry",
