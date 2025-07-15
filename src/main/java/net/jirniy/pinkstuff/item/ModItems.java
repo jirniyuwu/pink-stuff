@@ -7,6 +7,7 @@ import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.custom.HammerItem;
 import net.jirniy.pinkstuff.item.custom.ModArmorItem;
+import net.jirniy.pinkstuff.item.custom.MultitoolItem;
 import net.jirniy.pinkstuff.trim.ModTrimMaterials;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
@@ -86,6 +87,8 @@ public class ModItems {
 
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
             setting -> new HammerItem(ModToolMaterials.SPECIAL, 16, -3.4f, setting.rarity(Rarity.RARE)));
+    public static final Item ELYSIUM_MULTITOOL = registerItem("elysium_multitool",
+            setting -> new MultitoolItem(ModToolMaterials.SPECIAL, 3, -1f, setting.rarity(Rarity.RARE)));
     public static final Item DAWNBLOOMER = registerItem("dawnbloomer",
             setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 7, -1.8f).rarity(Rarity.RARE)));
 

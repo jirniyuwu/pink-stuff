@@ -19,6 +19,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.PINK_ICE)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
                 .add(ModBlocks.DEEPSLATE_KUNZITE_ORE)
@@ -139,5 +140,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POTTED_THERMIUM_WILTBORN)
                 .add(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING)
                 .add(ModBlocks.POTTED_HAZEWEAVER_PLANT);
+        valueLookupBuilder(BlockTags.ICE)
+                .add(ModBlocks.PINK_ICE);
     }
 }

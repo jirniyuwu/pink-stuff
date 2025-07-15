@@ -99,6 +99,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THERMIUM_WILTBORN);
                         entries.add(ModBlocks.MEMORIA_BOURPEER);
 
+                        entries.add(ModBlocks.PINK_ICE);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_WOOD);
                         entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
@@ -148,6 +149,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ELYSIUM_SHOVEL);
                         entries.add(ModItems.ELYSIUM_HOE);
                         entries.add(ModItems.ELYSIUM_HAMMER);
+                        entries.add(ModItems.ELYSIUM_MULTITOOL);
                         entries.add(ModItems.ELYSIUM_HELMET);
                         entries.add(ModItems.ELYSIUM_CHESTPLATE);
                         entries.add(ModItems.ELYSIUM_LEGGINGS);

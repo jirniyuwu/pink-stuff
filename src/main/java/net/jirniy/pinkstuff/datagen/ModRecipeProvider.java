@@ -154,7 +154,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_hoe")));
-
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_ICE, 1)
+                        .pattern("PPP")
+                        .pattern("PIP")
+                        .pattern("PPP")
+                        .input('P', ModItems.PINK_BITS)
+                        .input('I', Items.BLUE_ICE)
+                        .criterion(hasItem(ModItems.PINK_BITS), conditionsFromItem(ModItems.PINK_BITS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pink_ice")));
                 createShaped(RecipeCategory.COMBAT, ModItems.ELYSIUM_SWORD)
                         .pattern("E")
                         .pattern("C")
@@ -220,7 +228,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_hammer")));
-
+                createShaped(RecipeCategory.TOOLS, ModItems.ELYSIUM_MULTITOOL)
+                        .pattern("EME")
+                        .pattern("PAS")
+                        .pattern(" N ")
+                        .input('N', Items.NETHERITE_INGOT)
+                        .input('P', ModItems.ELYSIUM_PICKAXE)
+                        .input('E', ModItems.ENERGIZED_THERMIUM)
+                        .input('S', ModItems.ELYSIUM_SHOVEL)
+                        .input('A', ModItems.ELYSIUM_AXE)
+                        .input('M', ModItems.MEMORY_SHARD)
+                        .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_multitool")));
                 createShaped(RecipeCategory.TOOLS, ModItems.DAWNBLOOMER)
                         .pattern("TMT")
                         .pattern("CSC")

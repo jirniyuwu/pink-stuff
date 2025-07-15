@@ -27,6 +27,7 @@
   "item.pinkstuff.gem_berry": "Gem Berries",
   "item.pinkstuff.hazeweaver": "Hazeweaver",
 
+  "item.pinkstuff.pink_ice": "Pink Ice",
   "item.pinkstuff.kunzite_block": "Block of Kunzite",
   "item.pinkstuff.raw_kunzite_block": "Block of Raw Kunzite",
   "item.pinkstuff.kunzite_ore": "Kunzite Ore",
@@ -120,6 +121,7 @@
   "item.pinkstuff.elysium_shovel": "Elysian Shovel",
   "item.pinkstuff.elysium_hoe": "Elysian Hoe",
   "item.pinkstuff.elysium_hammer": "Elysian Greathammer",
+  "item.pinkstuff.elysium_multitool": "Elysian Multitool",
 
   "item.pinkstuff.elysium_helmet": "Elysian Headgear",
   "item.pinkstuff.elysium_chestplate": "Elysian Breastplate",
@@ -135,7 +137,8 @@
   "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
   "block.pinkstuff.hazeweaver_plant": "Hazeweaver",
 
-  "enchantment.pinkstuff.lightning": "Lightning",
+  "enchantment.pinkstuff.lightning": "Curse of Lightning",
+  "enchantment.pinkstuff.fragility": "Curse of Fragility",
   "enchantment.pinkstuff.length": "Length",
   "enchantment.pinkstuff.reach": "Reach",
   "enchantment.pinkstuff.sliding_shoes": "Sliding Shoes",
@@ -186,6 +189,8 @@
   "advancements.main.dawnbloomer.title": "...will bring the new dawn, to the restless world",
   "advancements.main.elysium_hammer.description": "Obtain the Elysian Greathammer by enhancing the Elysian Pickaxe with crystal memory",
   "advancements.main.elysium_hammer.title": "Dig to the core, excavate the depths",
+  "advancements.main.elysium_multitool.description": "Craft the Elysian Multitool by combining three different Elysian Tools",
+  "advancements.main.elysium_multitool.title": "Pick-s-hoe-vel-axe..?",
   "advancements.main.memory_shard.description": "Find an enchanted shard, hidden within the walls of a temple",
   "advancements.main.memory_shard.title": "All shall bid farewell to one",
   "advancements.main.memory_temple.description": "Enter the forgotten temple, which hides forgotten memories",

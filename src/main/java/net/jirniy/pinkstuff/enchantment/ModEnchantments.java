@@ -24,7 +24,7 @@ public class ModEnchantments {
         register(registerable, LIGHTNING, new Enchantment.Builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                 items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
-                5,
+                2,
                 2,
                 Enchantment.leveledCost(10, 10),
                 Enchantment.leveledCost(27, 15),

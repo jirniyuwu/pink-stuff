@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/elysium_tools",
+  "criteria": {
+    "multitool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:elysium_multitool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.elysium_multitool.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:elysium_multitool"
+    },
+    "title": {
+      "translate": "advancements.main.elysium_multitool.title"
+    },
+    "frame": "challenge"
+  },
+  "requirements": [
+    [
+      "multitool"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

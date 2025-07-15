@@ -79,6 +79,7 @@ public class ModModelProvider extends FabricModelProvider {
         memoryBricksPool.slab(ModBlocks.MEMORY_BRICKS_SLAB);
         memoryBricksPool.wall(ModBlocks.MEMORY_BRICKS_WALL);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_ICE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_KUNZITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_ORE);

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "pinkstuff:lightning"
+    "pinkstuff:lightning",
+    "pinkstuff:fragility"
   ]
 }
