@@ -23,6 +23,16 @@
       }
     },
     {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:chambers/hallways/complex3",
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
       "weight": 3,
       "element": {
         "element_type": "minecraft:single_pool_element",
@@ -248,6 +258,16 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:chambers/hallways/upstairs3",
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:chambers/hallways/upstairs4",
         "processors": "pinkstuff:chambers",
         "override_liquid_settings": "ignore_waterlogging"
       }
