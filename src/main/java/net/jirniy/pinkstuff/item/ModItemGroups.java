@@ -128,6 +128,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SWORDMASTER_SMITHING_TEMPLATE);
                         entries.add(ModItems.SHATTER_SMITHING_TEMPLATE);
                         entries.add(ModItems.CREEPER_SMITHING_TEMPLATE);
+                        entries.add(ModItems.CHESS_SMITHING_TEMPLATE);
+                        entries.add(ModItems.WANDERER_SMITHING_TEMPLATE);
 
                         entries.add(ModItems.KUNZITE_SWORD);
                         entries.add(ModItems.KUNZITE_PICKAXE);

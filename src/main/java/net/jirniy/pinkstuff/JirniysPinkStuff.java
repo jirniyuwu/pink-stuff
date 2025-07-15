@@ -115,11 +115,11 @@ public class JirniysPinkStuff implements ModInitializer {
 					new TradedItem(Items.EMERALD, 2),
 					new ItemStack(ModItems.PINK_BITS, random.nextBetween(2, 18)), 17, 7, 0.04f));
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
-					new TradedItem(Items.EMERALD, random.nextBetween(50, 64)),
-					new ItemStack(ModItems.BLOOM_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
+					new TradedItem(Items.EMERALD, random.nextBetween(30, 50)),
+					new ItemStack(ModItems.CHESS_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(50, 64)),
-					new ItemStack(ModItems.SHATTER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
+					new ItemStack(ModItems.WANDERER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(40, 64)),
 					new ItemStack(ModItems.SWORDMASTER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));

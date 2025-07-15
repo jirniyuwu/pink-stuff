@@ -151,6 +151,10 @@
   "trim_pattern.pinkstuff.bloom": "Bloom Trim Pattern",
   "item.pinkstuff.creeper_armor_trim_smithing_template": "Creeper Armor Trim",
   "trim_pattern.pinkstuff.creeper": "Creeper Trim Pattern",
+  "item.pinkstuff.chess_armor_trim_smithing_template": "Chess Armor Trim",
+  "trim_pattern.pinkstuff.chess": "Chess Trim Pattern",
+  "item.pinkstuff.wanderer_armor_trim_smithing_template": "Wanderer Armor Trim",
+  "trim_pattern.pinkstuff.wanderer": "Wanderer Trim Pattern",
 
   "trim_material.pinkstuff.kunzite": "Kunzite Material",
   "trim_material.pinkstuff.elysium": "Elysian Material",
