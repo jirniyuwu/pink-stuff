@@ -7,6 +7,7 @@ import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -142,5 +143,36 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POTTED_HAZEWEAVER_PLANT);
         valueLookupBuilder(BlockTags.ICE)
                 .add(ModBlocks.PINK_ICE);
+        valueLookupBuilder(BlockTags.SLABS)
+                .add(ModBlocks.AMETHYST_BRICKS_SLAB)
+                .add(ModBlocks.ELYSIUM_BRICKS_SLAB)
+                .add(ModBlocks.KUNZITE_BRICKS_SLAB)
+                .add(ModBlocks.POLISHED_AMETHYST_SLAB)
+                .add(ModBlocks.THERMIUM_BRICKS_SLAB)
+                .add(ModBlocks.MEMORY_BRICKS_SLAB);
+        valueLookupBuilder(BlockTags.STAIRS)
+                .add(ModBlocks.AMETHYST_BRICKS_STAIRS)
+                .add(ModBlocks.ELYSIUM_BRICKS_STAIRS)
+                .add(ModBlocks.KUNZITE_BRICKS_STAIRS)
+                .add(ModBlocks.POLISHED_AMETHYST_STAIRS)
+                .add(ModBlocks.THERMIUM_BRICKS_STAIRS)
+                .add(ModBlocks.MEMORY_BRICKS_STAIRS);
+        valueLookupBuilder(BlockTags.WOODEN_SLABS)
+                .add(ModBlocks.CRYSTAL_CHERRY_SLAB);
+        valueLookupBuilder(BlockTags.WOODEN_STAIRS)
+                .add(ModBlocks.CRYSTAL_CHERRY_STAIRS);
+        valueLookupBuilder(BlockTags.WOODEN_DOORS)
+                .add(ModBlocks.CRYSTAL_CHERRY_DOOR);
+        valueLookupBuilder(BlockTags.WOODEN_TRAPDOORS)
+                .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
+        valueLookupBuilder(BlockTags.WOODEN_BUTTONS)
+                .add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
+        valueLookupBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
+        valueLookupBuilder(ModTags.Blocks.CRYSTAL_CHERRY_LOGS)
+                .add(ModBlocks.CRYSTAL_CHERRY_LOG)
+                .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
+                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG)
+                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
     }
 }

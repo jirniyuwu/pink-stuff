@@ -23,7 +23,7 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
                                     BlockState state, @Nullable BlockEntity blockEntity) {
         ItemStack mainHandItem = player.getMainHandStack();
 
-        if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayerEntity serverPlayer) {
+        if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayerEntity serverPlayer && !player.isSneaking()) {
             if(HARVESTED_BLOCKS.contains(pos)) {
                 return true;
             }

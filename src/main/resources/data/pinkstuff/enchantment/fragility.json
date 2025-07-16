@@ -54,6 +54,7 @@
   "slots": [
     "any"
   ],
+  "exclusive_set": "#pinkstuff:exclusive_set/unbreaking",
   "supported_items": "#minecraft:enchantable/durability",
   "weight": 1
 }
