@@ -135,6 +135,22 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.ENERGIZED_THERMIUM, 1),
 					new ItemStack(Items.EMERALD, random.nextBetween(20, 50)), 2, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.HAZEWEAVER, 1),
+					new ItemStack(Items.EMERALD, 1), 10, 7, 0.04f));
+		});
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 2, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.GEM_BERRY, random.nextBetween(10, 30)),
+					new ItemStack(Items.EMERALD, 1), 16, 7, 0.04f));
+		});
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 3, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, random.nextBetween(20, 30)),
+					new ItemStack(ModItems.ELYSIUM_APPLE, 1), 4, 7, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, random.nextBetween(20, 30)),
+					new ItemStack(ModItems.CRYSTAL_CARROT, 4), 4, 7, 0.08f));
 		});
 	}
 }
