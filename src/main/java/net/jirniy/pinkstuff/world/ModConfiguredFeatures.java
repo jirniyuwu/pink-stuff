@@ -57,11 +57,12 @@ public class ModConfiguredFeatures {
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_THERMIUM_ORE.getDefaultState()));
 
         List<OreFeatureConfig.Target> netherSulfurOres =
-                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(BASALT), ModBlocks.NETHER_SULFUR_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(BASALT), ModBlocks.NETHER_SULFUR_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(BLACKSTONE), ModBlocks.NETHER_SULFUR_ORE.getDefaultState()));
 
         register(context, KUNZITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldKunziteOres, 15));
         register(context, THERMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldThermiumOres, 3, 0.3f));
-        register(context, SULFUR_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(netherSulfurOres, 3));
+        register(context, SULFUR_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(netherSulfurOres, 25));
 
         register(context, GEM_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 new WeightedBlockStateProvider(

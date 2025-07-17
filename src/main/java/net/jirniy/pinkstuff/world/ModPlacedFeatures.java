@@ -10,6 +10,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.heightprovider.BiasedToBottomHeightProvider;
 import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
@@ -44,8 +45,9 @@ public class ModPlacedFeatures {
         );
 
         register(context, SULFUR_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SULFUR_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(17,
-                        HeightRangePlacementModifier.uniform(YOffset.BOTTOM, YOffset.fixed(40)))
+                ModOrePlacement.modifiersWithCount(8,
+                        HeightRangePlacementModifier.of(
+                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(100), 1)))
         );
 
         register(context, GEM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_TREE_KEY),
