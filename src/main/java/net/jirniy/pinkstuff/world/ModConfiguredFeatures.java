@@ -36,6 +36,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> KUNZITE_ORE_KEY = registryKey("kunzite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> THERMIUM_ORE_KEY = registryKey("thermium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SULFUR_ORE_KEY = registryKey("sulfur_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEM_BERRY_BUSH_KEY = registryKey("gem_berry_bush");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEM_TREE_KEY = registryKey("gem_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRYSTAL_CHERRY_KEY = registryKey("crystal_cherry");
@@ -55,8 +56,12 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.THERMIUM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_THERMIUM_ORE.getDefaultState()));
 
+        List<OreFeatureConfig.Target> netherSulfurOres =
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(BASALT), ModBlocks.NETHER_SULFUR_ORE.getDefaultState()));
+
         register(context, KUNZITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldKunziteOres, 15));
         register(context, THERMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldThermiumOres, 3, 0.3f));
+        register(context, SULFUR_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(netherSulfurOres, 3));
 
         register(context, GEM_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 new WeightedBlockStateProvider(

@@ -25,6 +25,8 @@ public class ModTrimMaterials {
             Identifier.of(JirniysPinkStuff.MOD_ID, "thermium"));
     public static final RegistryKey<ArmorTrimMaterial> MEMORY = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
             Identifier.of(JirniysPinkStuff.MOD_ID, "memory"));
+    public static final RegistryKey<ArmorTrimMaterial> SULFUR = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "sulfur"));
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
         register(registerable, KUNZITE, Registries.ITEM.getEntry(ModItems.KUNZITE),
@@ -35,7 +37,8 @@ public class ModTrimMaterials {
                 Style.EMPTY.withColor(TextColor.parse("#dfffa8").getOrThrow()), "thermium");
         register(registerable, MEMORY, Registries.ITEM.getEntry(ModItems.MEMORY_SHARD),
                 Style.EMPTY.withColor(TextColor.parse("#470d86").getOrThrow()), "memory");
-
+        register(registerable, SULFUR, Registries.ITEM.getEntry(ModItems.MEMORY_SHARD),
+                Style.EMPTY.withColor(TextColor.parse("#c4bd99").getOrThrow()), "sulfur");
     }
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,

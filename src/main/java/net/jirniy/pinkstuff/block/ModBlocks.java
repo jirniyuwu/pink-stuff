@@ -69,6 +69,13 @@ public class ModBlocks {
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(6f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).luminance(state -> 2).mapColor(MapColor.DARK_GREEN)));
 
+    public static final Block NETHER_SULFUR_ORE = registerBlock("nether_sulfur_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
+                    properties.strength(3f).requiresTool().mapColor(MapColor.DULL_RED).sounds(BlockSoundGroup.NETHER_ORE)));
+    public static final Block SULFUR_BLOCK = registerBlock("sulfur_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.BASALT).mapColor(MapColor.PALE_YELLOW)));
+
     public static final Block CRYSTAL_CHERRY_LOG = registerBlock("crystal_cherry_log",
             properties -> new PillarBlock(properties
                     .strength(2.0F).luminance(state -> 4).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DARK_DULL_PINK)));

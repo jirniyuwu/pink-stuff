@@ -18,6 +18,7 @@
   "item.pinkstuff.thermium": "Thermium Shard",
   "item.pinkstuff.energized_thermium": "Energized Thermium Rod",
   "item.pinkstuff.raw_thermium": "Raw Thermium",
+  "item.pinkstuff.sulfur": "Sulfur",
 
   "item.pinkstuff.coal_meal": "Coal Meal",
   "item.pinkstuff.gelatinous_bud": "Gelatinous Bud",
@@ -39,6 +40,8 @@
   "item.pinkstuff.raw_thermium_block": "Block of Raw Thermium",
   "item.pinkstuff.thermium_ore": "Thermium Ore",
   "item.pinkstuff.deepslate_thermium_ore": "Deepslate Thermium Ore",
+  "item.pinkstuff.nether_sulfur_ore": "Nether Sulfur Ore",
+  "item.pinkstuff.sulfur_block": "Block of Sulfur",
 
   "item.pinkstuff.polished_amethyst_block": "Polished Amethyst Block",
   "item.pinkstuff.polished_amethyst_slab": "Polished Amethyst Slab",
@@ -164,6 +167,7 @@
   "trim_material.pinkstuff.elysium": "Elysian Material",
   "trim_material.pinkstuff.thermium": "Thermium Material",
   "trim_material.pinkstuff.memory": "Memoria Material",
+  "trim_material.pinkstuff.sulfur": "Sulfur Material",
 
   "advancements.main.root.description": "Enter the Pink forest~",
   "advancements.main.root.title": "The Enchanted Realm",

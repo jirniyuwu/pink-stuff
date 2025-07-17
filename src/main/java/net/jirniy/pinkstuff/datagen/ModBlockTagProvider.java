@@ -66,7 +66,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MEMORY_BULB)
                 .add(ModBlocks.MEMORY_BRICKS_SLAB)
                 .add(ModBlocks.MEMORY_BRICKS_STAIRS)
-                .add(ModBlocks.MEMORY_BRICKS_WALL);
+                .add(ModBlocks.MEMORY_BRICKS_WALL)
+                .add(ModBlocks.NETHER_SULFUR_ORE)
+                .add(ModBlocks.SULFUR_BLOCK);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
@@ -81,7 +83,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
         valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.AMETHYST_BULB)
-                .add(ModBlocks.KUNZITE_BULB);
+                .add(ModBlocks.KUNZITE_BULB)
+                .add(ModBlocks.NETHER_SULFUR_ORE)
+                .add(ModBlocks.SULFUR_BLOCK);
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
@@ -125,7 +129,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.ELYSIUM_BLOCK)
-                .add(ModBlocks.THERMIUM_BLOCK);
+                .add(ModBlocks.THERMIUM_BLOCK)
+                .add(ModBlocks.SULFUR_BLOCK);
         valueLookupBuilder(BlockTags.FLOWERS)
                 .add(ModBlocks.HAZEWEAVER_PLANT)
                 .add(ModBlocks.AMETHYST_PARTERS)

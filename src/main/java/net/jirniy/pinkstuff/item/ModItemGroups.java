@@ -35,6 +35,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AMETHYST_BRICKS_STAIRS);
                         entries.add(ModBlocks.AMETHYST_BRICKS_WALL);
 
+                        entries.add(ModItems.SULFUR);
+                        entries.add(ModBlocks.NETHER_SULFUR_ORE);
+                        entries.add(ModBlocks.SULFUR_BLOCK);
+
                         entries.add(ModItems.RAW_KUNZITE);
                         entries.add(ModItems.KUNZITE_NUGGET);
                         entries.add(ModItems.KUNZITE);

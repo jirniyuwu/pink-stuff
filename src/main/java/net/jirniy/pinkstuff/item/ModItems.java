@@ -27,6 +27,8 @@ public class ModItems {
     public static final Item EMERALD_NUGGET = registerItem("emerald_nugget", Item::new);
     public static final Item QUARTZ_NUGGET = registerItem("quartz_nugget", Item::new);
 
+    public static final Item SULFUR = registerItem("sulfur", setting -> new Item(setting.trimMaterial(ModTrimMaterials.SULFUR)));
+
     public static final Item KUNZITE_NUGGET = registerItem("kunzite_nugget", Item::new);
     public static final Item KUNZITE = registerItem("kunzite", setting -> new Item(setting.trimMaterial(ModTrimMaterials.KUNZITE)));
     public static final Item RAW_KUNZITE = registerItem("raw_kunzite", Item::new);

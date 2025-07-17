@@ -15,5 +15,8 @@ public class ModOreGeneration {
                 ModPlacedFeatures.THERMIUM_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DRIPSTONE_CAVES), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.DRIPSTONE_THERMIUM_ORE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BASALT_DELTAS), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.SULFUR_ORE_PLACED_KEY);
     }
 }

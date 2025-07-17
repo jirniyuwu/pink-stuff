@@ -75,6 +75,9 @@ public class JirniysPinkStuff implements ModInitializer {
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.THERMIUM, 32000);
 			builder.add(ModItems.THERMIUM_NUGGET, 3200);
+			builder.add(ModItems.COAL_MEAL, 4400);
+			builder.add(ModItems.SULFUR, 400);
+			builder.add(ModBlocks.SULFUR_BLOCK, 3600);
 		});
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
@@ -111,6 +114,9 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 1),
 					new ItemStack(ModBlocks.CRYSTAL_CHERRY_LOG, 8), 2, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(ModItems.SULFUR, 2), 3, 7, 0.04f));
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2),
 					new ItemStack(ModItems.PINK_BITS, random.nextBetween(2, 18)), 17, 7, 0.04f));

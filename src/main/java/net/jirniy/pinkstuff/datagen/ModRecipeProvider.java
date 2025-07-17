@@ -6,6 +6,7 @@ import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.trim.ModTrimPatterns;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
@@ -68,6 +69,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.ELYSIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.ELYSIUM_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.ENERGIZED_THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.ENERGIZED_THERMIUM_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
+                        ModItems.SULFUR, RecipeCategory.DECORATIONS, ModBlocks.SULFUR_BLOCK);
                 createShapeless(RecipeCategory.MISC, ModItems.CRYSTAL_GLITTER, 1)
                         .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
                         .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
@@ -329,21 +332,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_boots")));
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
-                        .input(ModBlocks.CRYSTAL_CHERRY_LOG).criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_LOG),
+                        .input(ModTags.Items.CRYSTAL_CHERRY_LOGS).criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_LOG),
                                 conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks_from_crystal_cherry_log")));
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
-                        .input(ModBlocks.CRYSTAL_CHERRY_WOOD).criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_WOOD),
-                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks_from_crystal_cherry_wood")));
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
-                        .input(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).criterion(hasItem(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG),
-                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks_from_stripped_crystal_cherry_log")));
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
-                        .input(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD).criterion(hasItem(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD),
-                                conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks_from_stripped_crystal_cherry_wood")));
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_planks")));
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_WOOD, 3)
                         .pattern("CC")
                         .pattern("CC")
@@ -799,6 +790,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.HAZEWEAVER), conditionsFromItem(ModItems.HAZEWEAVER))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_nugget_from_hazeweaver")));
+
+                createShapeless(RecipeCategory.MISC, Items.GUNPOWDER, 1)
+                        .input(ModItems.SULFUR).input(Items.COAL).input(Items.COAL)
+                        .criterion(hasItem(ModItems.SULFUR), conditionsFromItem(ModItems.SULFUR))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "gunpowder_from_sulfur")));
+                createShapeless(RecipeCategory.MISC, Items.BLAZE_POWDER, 2)
+                        .input(ModItems.SULFUR).input(ModItems.SULFUR)
+                        .input(Items.BLAZE_POWDER).input(Items.GLOWSTONE_DUST)
+                        .criterion(hasItem(ModItems.SULFUR), conditionsFromItem(ModItems.SULFUR))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "blaze_powder_from_sulfur")));
 
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));

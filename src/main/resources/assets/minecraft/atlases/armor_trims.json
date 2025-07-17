@@ -74,7 +74,8 @@
         "kunzite": "pinkstuff:trims/color_palettes/kunzite",
         "elysium": "pinkstuff:trims/color_palettes/elysium",
         "thermium": "pinkstuff:trims/color_palettes/thermium",
-        "memory": "pinkstuff:trims/color_palettes/memory"
+        "memory": "pinkstuff:trims/color_palettes/memory",
+        "sulfur": "pinkstuff:trims/color_palettes/sulfur"
       }
     }
   ]

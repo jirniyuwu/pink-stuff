@@ -97,7 +97,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.KUNZITE)
                 .add(ModItems.ELYSIUM_INGOT)
                 .add(ModItems.THERMIUM)
-                .add(ModItems.MEMORY_SHARD);
+                .add(ModItems.MEMORY_SHARD)
+                .add(ModItems.SULFUR);
         valueLookupBuilder(ItemTags.SLABS)
                 .add(ModBlocks.AMETHYST_BRICKS_SLAB.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_SLAB.asItem())

@@ -90,6 +90,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_THERMIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THERMIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_THERMIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_SULFUR_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SULFUR_BLOCK);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
@@ -109,6 +111,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DIAMOND_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUARTZ_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.EMERALD_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.SULFUR, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.KUNZITE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.KUNZITE, Models.GENERATED);
