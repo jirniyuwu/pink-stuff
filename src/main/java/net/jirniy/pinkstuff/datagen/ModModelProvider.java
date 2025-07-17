@@ -90,7 +90,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_THERMIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THERMIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_THERMIUM_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_SULFUR_ORE);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.NETHER_SULFUR_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SULFUR_BLOCK);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);

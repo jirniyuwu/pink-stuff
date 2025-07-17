@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "pinkstuff:block/nether_sulfur_ore_top",
+    "east": "pinkstuff:block/nether_sulfur_ore",
+    "north": "pinkstuff:block/nether_sulfur_ore",
+    "particle": "pinkstuff:block/nether_sulfur_ore",
+    "south": "pinkstuff:block/nether_sulfur_ore",
+    "up": "pinkstuff:block/nether_sulfur_ore_top",
+    "west": "pinkstuff:block/nether_sulfur_ore"
+  }
+}

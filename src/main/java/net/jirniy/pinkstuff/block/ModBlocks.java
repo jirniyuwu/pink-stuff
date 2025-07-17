@@ -31,7 +31,7 @@ import java.util.function.Function;
 public class ModBlocks {
 
     public static final Block PINK_ICE = registerBlock("pink_ice",
-            properties -> new TranslucentBlock(properties.strength(6f).slipperiness(1.04f).nonOpaque()
+            properties -> new TranslucentBlock(properties.strength(8f).slipperiness(1.04f).nonOpaque()
                     .sounds(BlockSoundGroup.GLASS).mapColor(MapColor.DULL_PINK)));
 
     public static final Block KUNZITE_BLOCK = registerBlock("kunzite_block",
