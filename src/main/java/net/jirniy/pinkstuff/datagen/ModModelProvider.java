@@ -26,18 +26,24 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool elysiumBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ELYSIUM_BRICKS);
         BlockStateModelGenerator.BlockTexturePool thermiumBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.THERMIUM_BRICKS);
         BlockStateModelGenerator.BlockTexturePool memoryBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MEMORY_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool pinlineBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINLINE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool rawPinlineBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_PINLINE_BRICKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_AMETHYST_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_KUNZITE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_ELYSIUM_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_THERMIUM_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_MEMORY_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_PINLINE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_RAW_PINLINE_BRICKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AMETHYST_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ELYSIUM_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THERMIUM_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MEMORY_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINLINE_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINLINE_BULB);
 
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.AMETHYST_PARTERS, ModBlocks.POTTED_AMETHYST_PARTERS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.KUNZITE_LOVELILY, ModBlocks.POTTED_KUNZITE_LOVELILY, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -56,6 +62,15 @@ public class ModModelProvider extends FabricModelProvider {
         crystalCherryPool.fenceGate(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.CRYSTAL_CHERRY_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
+
+        chorusPool.stairs(ModBlocks.CHORUS_STAIRS);
+        chorusPool.slab(ModBlocks.CHORUS_SLAB);
+        chorusPool.button(ModBlocks.CHORUS_BUTTON);
+        chorusPool.pressurePlate(ModBlocks.CHORUS_PRESSURE_PLATE);
+        chorusPool.fence(ModBlocks.CHORUS_FENCE);
+        chorusPool.fenceGate(ModBlocks.CHORUS_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.CHORUS_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.CHORUS_TRAPDOOR);
 
         polishedAmethystPool.stairs(ModBlocks.POLISHED_AMETHYST_STAIRS);
         polishedAmethystPool.slab(ModBlocks.POLISHED_AMETHYST_SLAB);
@@ -80,6 +95,14 @@ public class ModModelProvider extends FabricModelProvider {
         memoryBricksPool.stairs(ModBlocks.MEMORY_BRICKS_STAIRS);
         memoryBricksPool.slab(ModBlocks.MEMORY_BRICKS_SLAB);
         memoryBricksPool.wall(ModBlocks.MEMORY_BRICKS_WALL);
+
+        pinlineBricksPool.stairs(ModBlocks.PINLINE_BRICKS_STAIRS);
+        pinlineBricksPool.slab(ModBlocks.PINLINE_BRICKS_SLAB);
+        pinlineBricksPool.wall(ModBlocks.PINLINE_BRICKS_WALL);
+
+        rawPinlineBricksPool.stairs(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
+        rawPinlineBricksPool.slab(ModBlocks.RAW_PINLINE_BRICKS_SLAB);
+        rawPinlineBricksPool.wall(ModBlocks.RAW_PINLINE_BRICKS_WALL);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_ICE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BLOCK);

@@ -98,6 +98,20 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_PINLINE_BLOCK);
                         entries.add(ModBlocks.PINLINE_BLOCK);
 
+                        entries.add(ModBlocks.PINLINE_BRICKS);
+                        entries.add(ModBlocks.CHISELED_PINLINE_BRICKS);
+                        entries.add(ModBlocks.PINLINE_BULB);
+                        entries.add(ModBlocks.PINLINE_BRICKS_SLAB);
+                        entries.add(ModBlocks.PINLINE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.PINLINE_BRICKS_WALL);
+
+                        entries.add(ModBlocks.RAW_PINLINE_BRICKS);
+                        entries.add(ModBlocks.CHISELED_RAW_PINLINE_BRICKS);
+                        entries.add(ModBlocks.RAW_PINLINE_BULB);
+                        entries.add(ModBlocks.RAW_PINLINE_BRICKS_SLAB);
+                        entries.add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
+
                         entries.add(ModItems.MEMORY_SHARD);
                         entries.add(ModBlocks.MEMORY_BRICKS);
                         entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);
@@ -111,6 +125,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ELYSIAN_SKYBERRY);
                         entries.add(ModBlocks.THERMIUM_WILTBORN);
                         entries.add(ModBlocks.MEMORIA_BOURPEER);
+
+                        entries.add(ModBlocks.SMALL_END_GRASS);
+                        entries.add(ModBlocks.MEDIUM_END_GRASS);
+                        entries.add(ModBlocks.LARGE_END_GRASS);
+                        entries.add(ModBlocks.CHORUS_LILY);
 
                         entries.add(ModBlocks.PINK_ICE);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
@@ -130,11 +149,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
 
-                        entries.add(ModBlocks.SMALL_END_GRASS);
-                        entries.add(ModBlocks.MEDIUM_END_GRASS);
-                        entries.add(ModBlocks.LARGE_END_GRASS);
-                        entries.add(ModBlocks.CHORUS_LILY);
-
                         entries.add(ModBlocks.CHORUS_LOG);
                         entries.add(ModBlocks.CHORUS_WOOD);
                         entries.add(ModBlocks.STRIPPED_CHORUS_LOG);
@@ -142,6 +156,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHORUS_PLANKS);
                         entries.add(ModBlocks.CHORUS_LEAVES);
                         entries.add(ModBlocks.CHORUS_SAPLING);
+
+                        entries.add(ModBlocks.CHORUS_SLAB);
+                        entries.add(ModBlocks.CHORUS_STAIRS);
+                        entries.add(ModBlocks.CHORUS_FENCE);
+                        entries.add(ModBlocks.CHORUS_FENCE_GATE);
+                        entries.add(ModBlocks.CHORUS_DOOR);
+                        entries.add(ModBlocks.CHORUS_TRAPDOOR);
+                        entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
+                        entries.add(ModBlocks.CHORUS_BUTTON);
 
                         entries.add(ModItems.COAL_MEAL);
                         entries.add(ModItems.GELATINOUS_BUD);

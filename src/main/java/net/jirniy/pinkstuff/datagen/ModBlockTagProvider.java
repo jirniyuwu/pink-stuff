@@ -69,7 +69,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SULFUR_BLOCK)
                 .add(ModBlocks.PINLINE_BLOCK)
                 .add(ModBlocks.END_PINLINE_ORE)
-                .add(ModBlocks.RAW_PINLINE_BLOCK);
+                .add(ModBlocks.RAW_PINLINE_BLOCK)
+                .add(ModBlocks.PINLINE_BRICKS)
+                .add(ModBlocks.RAW_PINLINE_BRICKS)
+                .add(ModBlocks.CHISELED_PINLINE_BRICKS)
+                .add(ModBlocks.CHISELED_RAW_PINLINE_BRICKS)
+                .add(ModBlocks.PINLINE_BULB)
+                .add(ModBlocks.RAW_PINLINE_BULB)
+                .add(ModBlocks.PINLINE_BRICKS_STAIRS)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS)
+                .add(ModBlocks.PINLINE_BRICKS_SLAB)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB)
+                .add(ModBlocks.PINLINE_BRICKS_WALL)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
@@ -77,7 +89,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_STAIRS)
                 .add(ModBlocks.CRYSTAL_CHERRY_DOOR)
                 .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR)
-                .add(ModBlocks.DISPLAY);
+                .add(ModBlocks.DISPLAY)
+                .add(ModBlocks.CHORUS_SLAB)
+                .add(ModBlocks.CHORUS_BUTTON)
+                .add(ModBlocks.CHORUS_PRESSURE_PLATE)
+                .add(ModBlocks.CHORUS_STAIRS)
+                .add(ModBlocks.CHORUS_DOOR)
+                .add(ModBlocks.CHORUS_TRAPDOOR);
         valueLookupBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS)
                 .add(ModBlocks.CHORUS_PLANKS);
@@ -96,7 +114,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_ORE)
                 .add(ModBlocks.ELYSIUM_BLOCK)
                 .add(ModBlocks.ELYSIUM_BULB)
-                .add(ModBlocks.THERMIUM_BULB);
+                .add(ModBlocks.THERMIUM_BULB)
+                .add(ModBlocks.PINLINE_BRICKS)
+                .add(ModBlocks.RAW_PINLINE_BRICKS)
+                .add(ModBlocks.CHISELED_PINLINE_BRICKS)
+                .add(ModBlocks.CHISELED_RAW_PINLINE_BRICKS)
+                .add(ModBlocks.PINLINE_BULB)
+                .add(ModBlocks.RAW_PINLINE_BULB)
+                .add(ModBlocks.PINLINE_BRICKS_STAIRS)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS)
+                .add(ModBlocks.PINLINE_BRICKS_SLAB)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB)
+                .add(ModBlocks.PINLINE_BRICKS_WALL)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
         valueLookupBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -126,21 +156,26 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(ModTags.Blocks.NEEDS_SPECIAL_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
         valueLookupBuilder(BlockTags.WOODEN_FENCES)
-                .add(ModBlocks.CRYSTAL_CHERRY_FENCE);
+                .add(ModBlocks.CRYSTAL_CHERRY_FENCE)
+                .add(ModBlocks.CHORUS_FENCE);
         valueLookupBuilder(BlockTags.FENCE_GATES)
-                .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
+                .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE)
+                .add(ModBlocks.CHORUS_FENCE_GATE);
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL)
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BRICKS_WALL)
                 .add(ModBlocks.POLISHED_AMETHYST_WALL)
-                .add(ModBlocks.MEMORY_BRICKS_WALL);
+                .add(ModBlocks.MEMORY_BRICKS_WALL)
+                .add(ModBlocks.PINLINE_BRICKS_WALL)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.ELYSIUM_BLOCK)
                 .add(ModBlocks.THERMIUM_BLOCK)
-                .add(ModBlocks.SULFUR_BLOCK);
+                .add(ModBlocks.SULFUR_BLOCK)
+                .add(ModBlocks.PINLINE_BLOCK);
         valueLookupBuilder(BlockTags.FLOWERS)
                 .add(ModBlocks.HAZEWEAVER_PLANT)
                 .add(ModBlocks.AMETHYST_PARTERS)
@@ -165,26 +200,36 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_BRICKS_SLAB)
                 .add(ModBlocks.POLISHED_AMETHYST_SLAB)
                 .add(ModBlocks.THERMIUM_BRICKS_SLAB)
-                .add(ModBlocks.MEMORY_BRICKS_SLAB);
+                .add(ModBlocks.MEMORY_BRICKS_SLAB)
+                .add(ModBlocks.PINLINE_BRICKS_SLAB)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB);
         valueLookupBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS)
                 .add(ModBlocks.ELYSIUM_BRICKS_STAIRS)
                 .add(ModBlocks.KUNZITE_BRICKS_STAIRS)
                 .add(ModBlocks.POLISHED_AMETHYST_STAIRS)
                 .add(ModBlocks.THERMIUM_BRICKS_STAIRS)
-                .add(ModBlocks.MEMORY_BRICKS_STAIRS);
+                .add(ModBlocks.MEMORY_BRICKS_STAIRS)
+                .add(ModBlocks.PINLINE_BRICKS_STAIRS)
+                .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_SLABS)
-                .add(ModBlocks.CRYSTAL_CHERRY_SLAB);
+                .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
+                .add(ModBlocks.CHORUS_SLAB);
         valueLookupBuilder(BlockTags.WOODEN_STAIRS)
-                .add(ModBlocks.CRYSTAL_CHERRY_STAIRS);
+                .add(ModBlocks.CRYSTAL_CHERRY_STAIRS)
+                .add(ModBlocks.CHORUS_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_DOORS)
-                .add(ModBlocks.CRYSTAL_CHERRY_DOOR);
+                .add(ModBlocks.CRYSTAL_CHERRY_DOOR)
+                .add(ModBlocks.CHORUS_DOOR);
         valueLookupBuilder(BlockTags.WOODEN_TRAPDOORS)
-                .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
+                .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR)
+                .add(ModBlocks.CHORUS_TRAPDOOR);
         valueLookupBuilder(BlockTags.WOODEN_BUTTONS)
-                .add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
+                .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
+                .add(ModBlocks.CHORUS_BUTTON);
         valueLookupBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
+                .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE)
+                .add(ModBlocks.CHORUS_PRESSURE_PLATE);
         valueLookupBuilder(ModTags.Blocks.CRYSTAL_CHERRY_LOGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)

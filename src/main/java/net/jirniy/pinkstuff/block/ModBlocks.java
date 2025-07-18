@@ -74,7 +74,7 @@ public class ModBlocks {
                     .requiresTool().sounds(BlockSoundGroup.HEAVY_CORE).mapColor(MapColor.PURPLE)));
     public static final Block RAW_PINLINE_BLOCK = registerBlock("raw_pinline_block",
             properties -> new Block(properties.strength(5f)
-                    .requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.PALE_GREEN)));
+                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
     public static final Block END_PINLINE_ORE = registerBlock("end_pinline_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(4, 6),
                     properties.strength(8f).requiresTool().mapColor(MapColor.PALE_GREEN)));
@@ -185,6 +185,42 @@ public class ModBlocks {
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 15).mapColor(MapColor.TERRACOTTA_BLACK)));
 
+    public static final Block PINLINE_BRICKS = registerBlock("pinline_bricks",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block PINLINE_BULB = registerBlock("pinline_bulb",
+            properties -> new Block(properties.strength(6f).luminance(state -> 12)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CHISELED_PINLINE_BRICKS = registerBlock("chiseled_pinline_bricks",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PALE_PURPLE)));
+
+    public static final Block RAW_PINLINE_BRICKS = registerBlock("raw_pinline_bricks",
+            properties -> new Block(properties.strength(5f)
+                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
+    public static final Block RAW_PINLINE_BULB = registerBlock("raw_pinline_bulb",
+            properties -> new Block(properties.strength(5f).luminance(state -> 8)
+                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
+    public static final Block CHISELED_RAW_PINLINE_BRICKS = registerBlock("chiseled_raw_pinline_bricks",
+            properties -> new Block(properties.strength(5f)
+                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
+
+    public static final Block PINLINE_BRICKS_STAIRS = registerBlock("pinline_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.PINLINE_BRICKS.getDefaultState(),
+                    properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block PINLINE_BRICKS_SLAB = registerBlock("pinline_bricks_slab",
+            properties -> new SlabBlock(properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block PINLINE_BRICKS_WALL = registerBlock("pinline_bricks_wall",
+            properties -> new WallBlock(properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PALE_PURPLE)));
+
+    public static final Block RAW_PINLINE_BRICKS_STAIRS = registerBlock("raw_pinline_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.RAW_PINLINE_BRICKS.getDefaultState(),
+                    properties.strength(5f).requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
+    public static final Block RAW_PINLINE_BRICKS_SLAB = registerBlock("raw_pinline_bricks_slab",
+            properties -> new SlabBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
+    public static final Block RAW_PINLINE_BRICKS_WALL = registerBlock("raw_pinline_bricks_wall",
+            properties -> new WallBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
+
     public static final Block POLISHED_AMETHYST_STAIRS = registerBlock("polished_amethyst_stairs",
             properties -> new StairsBlock(ModBlocks.POLISHED_AMETHYST_BLOCK.getDefaultState(),
                     properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
@@ -250,6 +286,24 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
     public static final Block CRYSTAL_CHERRY_TRAPDOOR = registerBlock("crystal_cherry_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+
+    public static final Block CHORUS_STAIRS = registerBlock("chorus_stairs",
+            properties -> new StairsBlock(ModBlocks.CHORUS_PLANKS.getDefaultState(),
+                    properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CHORUS_SLAB = registerBlock("chorus_slab",
+            properties -> new SlabBlock(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CHORUS_BUTTON = registerBlock("chorus_button",
+            properties -> new ButtonBlock(BlockSetType.CHERRY, 6, properties.strength(2f).noCollision().sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CHORUS_PRESSURE_PLATE = registerBlock("chorus_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CHORUS_FENCE = registerBlock("chorus_fence",
+            properties -> new FenceBlock(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD)));
+    public static final Block CHORUS_FENCE_GATE = registerBlock("chorus_fence_gate",
+            properties -> new FenceGateBlock(WoodType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CHORUS_DOOR = registerBlock("chorus_door",
+            properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+    public static final Block CHORUS_TRAPDOOR = registerBlock("chorus_trapdoor",
+            properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
 
     public static final Block DISPLAY = registerBlock("display",
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque().mapColor(MapColor.STONE_GRAY)));

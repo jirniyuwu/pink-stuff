@@ -91,6 +91,20 @@
   "item.pinkstuff.memory_bricks_stairs": "Memoria Brick Stairs",
   "item.pinkstuff.memory_bricks_wall": "Memoria Brick Wall",
 
+  "item.pinkstuff.pinline_bricks": "Pinline Bricks",
+  "item.pinkstuff.chiseled_pinline_bricks": "Chiseled Pinline Bricks",
+  "item.pinkstuff.pinline_bulb": "Pinline Bulb",
+  "item.pinkstuff.pinline_bricks_slab": "Pinline Brick Slab",
+  "item.pinkstuff.pinline_bricks_stairs": "Pinline Brick Stairs",
+  "item.pinkstuff.pinline_bricks_wall": "Pinline Brick Wall",
+
+  "item.pinkstuff.raw_pinline_bricks": "Raw Pinline Bricks",
+  "item.pinkstuff.chiseled_raw_pinline_bricks": "Chiseled Raw Pinline Bricks",
+  "item.pinkstuff.raw_pinline_bulb": "Raw Pinline Bulb",
+  "item.pinkstuff.raw_pinline_bricks_slab": "Raw Pinline Brick Slab",
+  "item.pinkstuff.raw_pinline_bricks_stairs": "Raw Pinline Brick Stairs",
+  "item.pinkstuff.raw_pinline_bricks_wall": "Raw Pinline Brick Wall",
+
   "item.pinkstuff.crystal_cherry_log": "Crystal Cherry Log",
   "item.pinkstuff.crystal_cherry_wood": "Crystal Cherry Wood",
   "item.pinkstuff.stripped_crystal_cherry_log": "Stripped Crystal Cherry Log",
@@ -115,6 +129,15 @@
   "item.pinkstuff.chorus_planks": "Chorus Planks",
   "item.pinkstuff.chorus_leaves": "Chorus Leaves",
   "item.pinkstuff.chorus_sapling": "Chorus Sapling",
+
+  "item.pinkstuff.chorus_slab": "Chorus Slab",
+  "item.pinkstuff.chorus_stairs": "Chorus Stairs",
+  "item.pinkstuff.chorus_fence": "Chorus Fence",
+  "item.pinkstuff.chorus_fence_gate": "Chorus Fence Gate",
+  "item.pinkstuff.chorus_door": "Chorus Door",
+  "item.pinkstuff.chorus_trapdoor": "Chorus Trapdoor",
+  "item.pinkstuff.chorus_button": "Chorus Button",
+  "item.pinkstuff.chorus_pressure_plate": "Chorus Pressure Plate",
 
   "item.pinkstuff.amethyst_parters": "Amethyst Parters",
   "item.pinkstuff.kunzite_lovelily": "Kunzite Lovelily",

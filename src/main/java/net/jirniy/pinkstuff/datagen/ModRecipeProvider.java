@@ -465,11 +465,44 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_cherry_stairs")));
 
+                createDoorRecipe(ModBlocks.CHORUS_DOOR, Ingredient.ofItem(ModBlocks.CHORUS_PLANKS))
+                        .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_door")));
+                createTrapdoorRecipe(ModBlocks.CHORUS_TRAPDOOR, Ingredient.ofItem(ModBlocks.CHORUS_PLANKS))
+                        .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_trapdoor")));
+                createButtonRecipe(ModBlocks.CHORUS_BUTTON, Ingredient.ofItem(ModBlocks.CHORUS_PLANKS))
+                        .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_button")));
+                createPressurePlateRecipe(RecipeCategory.REDSTONE, ModBlocks.CHORUS_PRESSURE_PLATE, Ingredient.ofItem(ModBlocks.CHORUS_PLANKS))
+                        .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_pressure_plate")));
+                createFenceGateRecipe(ModBlocks.CHORUS_FENCE_GATE, Ingredient.ofItem(ModBlocks.CHORUS_PLANKS))
+                        .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_fence_gate")));
+                createFenceRecipe(ModBlocks.CHORUS_FENCE, Ingredient.ofItem(ModBlocks.CHORUS_PLANKS))
+                        .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_fence")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_SLAB, Ingredient.ofItem(ModBlocks.CHORUS_PLANKS))
+                        .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_slab")));
+                createStairsRecipe(ModBlocks.CHORUS_STAIRS, Ingredient.ofItem(ModBlocks.CHORUS_PLANKS))
+                        .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_stairs")));
+
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETHYST_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
                         .criterion(hasItem(ModBlocks.POLISHED_AMETHYST_BLOCK), conditionsFromItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "polished_amethyst_slab")));
-                createStairsRecipe(ModBlocks.CRYSTAL_CHERRY_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
+                createStairsRecipe(ModBlocks.POLISHED_AMETHYST_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
                         .criterion(hasItem(ModBlocks.POLISHED_AMETHYST_BLOCK), conditionsFromItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "polished_amethyst_stairs")));
@@ -681,6 +714,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.THERMIUM_BRICKS), conditionsFromItem(ModBlocks.THERMIUM_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_thermium_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_PINLINE_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.PINLINE_BRICKS)
+                        .criterion(hasItem(ModBlocks.PINLINE_BRICKS), conditionsFromItem(ModBlocks.PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_pinline_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_RAW_PINLINE_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.RAW_PINLINE_BRICKS)
+                        .criterion(hasItem(ModBlocks.RAW_PINLINE_BRICKS), conditionsFromItem(ModBlocks.RAW_PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_raw_pinline_bricks")));
+
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BULB, 2)
                         .pattern("AAA")
                         .pattern("AGA")
@@ -726,6 +774,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.MEMORY_BRICKS), conditionsFromItem(ModBlocks.MEMORY_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "memory_bulb")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.PINLINE_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.PINLINE_BRICKS), conditionsFromItem(ModBlocks.PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_bulb")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_PINLINE_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.RAW_PINLINE_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.RAW_PINLINE_BRICKS), conditionsFromItem(ModBlocks.RAW_PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bulb")));
 
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MEMORY_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.MEMORY_BRICKS))
                         .criterion(hasItem(ModBlocks.MEMORY_BRICKS), conditionsFromItem(ModBlocks.MEMORY_BRICKS))
@@ -751,6 +817,54 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "memory_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_BRICKS, 8)
+                        .pattern("SSS")
+                        .pattern("SAS")
+                        .pattern("SSS")
+                        .input('S', Blocks.COBBLESTONE)
+                        .input('A', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_PINLINE_BRICKS, 8)
+                        .pattern("SSS")
+                        .pattern("SAS")
+                        .pattern("SSS")
+                        .input('S', Blocks.COBBLESTONE)
+                        .input('A', ModItems.RAW_PINLINE)
+                        .criterion(hasItem(ModItems.RAW_PINLINE), conditionsFromItem(ModItems.RAW_PINLINE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.PINLINE_BRICKS))
+                        .criterion(hasItem(ModBlocks.PINLINE_BRICKS), conditionsFromItem(ModBlocks.PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_bricks_slab")));
+                createStairsRecipe(ModBlocks.PINLINE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.PINLINE_BRICKS))
+                        .criterion(hasItem(ModBlocks.PINLINE_BRICKS), conditionsFromItem(ModBlocks.PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.PINLINE_BRICKS)
+                        .criterion(hasItem(ModBlocks.PINLINE_BRICKS), conditionsFromItem(ModBlocks.PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_PINLINE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.RAW_PINLINE_BRICKS))
+                        .criterion(hasItem(ModBlocks.RAW_PINLINE_BRICKS), conditionsFromItem(ModBlocks.RAW_PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bricks_slab")));
+                createStairsRecipe(ModBlocks.RAW_PINLINE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.RAW_PINLINE_BRICKS))
+                        .criterion(hasItem(ModBlocks.RAW_PINLINE_BRICKS), conditionsFromItem(ModBlocks.RAW_PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_PINLINE_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.RAW_PINLINE_BRICKS)
+                        .criterion(hasItem(ModBlocks.RAW_PINLINE_BRICKS), conditionsFromItem(ModBlocks.RAW_PINLINE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bricks_wall")));
 
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.AMETHYST_NUGGET, RecipeCategory.MISC, Items.AMETHYST_SHARD);
@@ -864,6 +978,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.SULFUR), conditionsFromItem(ModItems.SULFUR))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "blaze_powder_from_sulfur")));
+
+                createShapeless(RecipeCategory.MISC, Items.ENDER_PEARL, 1)
+                        .input(ModItems.RAW_PINLINE).input(Items.CHORUS_FRUIT)
+                        .input(ModItems.RAW_PINLINE).input(Items.CHORUS_FRUIT)
+                        .criterion(hasItem(ModItems.RAW_PINLINE), conditionsFromItem(ModItems.RAW_PINLINE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ender_pearl_from_pinline")));
 
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));
