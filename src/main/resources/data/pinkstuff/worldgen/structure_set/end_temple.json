@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "pinkstuff:end_temple",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 70,
+    "separation": 30,
+    "spread_type": "linear",
+    "salt": 158785
+  }
+}

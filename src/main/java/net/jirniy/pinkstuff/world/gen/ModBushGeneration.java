@@ -21,7 +21,7 @@ public class ModBushGeneration {
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MEDIUM_END_GRASS_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LARGE_END_GRASS_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS),
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CHORUS_LILY_PLACED_KEY);
     }
 }
