@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -167,5 +168,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CHORUS_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_CHORUS_LOG.asItem())
                 .add(ModBlocks.STRIPPED_CHORUS_WOOD.asItem());
+        valueLookupBuilder(ModTags.Items.BRICKS_CRAFTABLE)
+                .add(Blocks.COBBLESTONE.asItem())
+                .add(Blocks.COBBLED_DEEPSLATE.asItem())
+                .add(Blocks.BLACKSTONE.asItem())
+                .add(Blocks.END_STONE.asItem());
     }
 }

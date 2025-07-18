@@ -590,7 +590,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .pattern("SAS")
                         .pattern("SSS")
-                        .input('S', Blocks.COBBLESTONE)
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
                         .input('A', Items.AMETHYST_SHARD)
                         .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -599,7 +599,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .pattern("SKS")
                         .pattern("SSS")
-                        .input('S', Blocks.COBBLESTONE)
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
                         .input('K', ModItems.KUNZITE)
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -608,7 +608,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .pattern("SES")
                         .pattern("SSS")
-                        .input('S', Blocks.COBBLESTONE)
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
                         .input('E', ModItems.ELYSIUM_INGOT)
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -617,7 +617,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .pattern("STS")
                         .pattern("SSS")
-                        .input('S', Blocks.COBBLESTONE)
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
                         .input('T', ModItems.THERMIUM)
                         .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -812,7 +812,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .pattern("SAS")
                         .pattern("SSS")
-                        .input('S', Blocks.COBBLESTONE)
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
                         .input('A', ModItems.MEMORY_SHARD)
                         .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -821,7 +821,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .pattern("SAS")
                         .pattern("SSS")
-                        .input('S', Blocks.COBBLESTONE)
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
                         .input('A', ModItems.PINLINE_INGOT)
                         .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -830,7 +830,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .pattern("SAS")
                         .pattern("SSS")
-                        .input('S', Blocks.COBBLESTONE)
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
                         .input('A', ModItems.RAW_PINLINE)
                         .criterion(hasItem(ModItems.RAW_PINLINE), conditionsFromItem(ModItems.RAW_PINLINE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,

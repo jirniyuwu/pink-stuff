@@ -31,6 +31,7 @@ public class ModTags {
         public static final TagKey<Item> SPECIAL_REPAIR = createTag("special_repair");
         public static final TagKey<Item> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Item> CHORUS_LOGS = createTag("chorus_logs");
+        public static final TagKey<Item> BRICKS_CRAFTABLE = createTag("bricks_craftable");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(JirniysPinkStuff.MOD_ID, name));
