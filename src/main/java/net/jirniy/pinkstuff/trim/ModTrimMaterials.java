@@ -27,6 +27,10 @@ public class ModTrimMaterials {
             Identifier.of(JirniysPinkStuff.MOD_ID, "memory"));
     public static final RegistryKey<ArmorTrimMaterial> SULFUR = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
             Identifier.of(JirniysPinkStuff.MOD_ID, "sulfur"));
+    public static final RegistryKey<ArmorTrimMaterial> PINLINE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "pinline"));
+    public static final RegistryKey<ArmorTrimMaterial> RAW_PINLINE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline"));
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
         register(registerable, KUNZITE, Registries.ITEM.getEntry(ModItems.KUNZITE),
@@ -37,8 +41,12 @@ public class ModTrimMaterials {
                 Style.EMPTY.withColor(TextColor.parse("#dfffa8").getOrThrow()), "thermium");
         register(registerable, MEMORY, Registries.ITEM.getEntry(ModItems.MEMORY_SHARD),
                 Style.EMPTY.withColor(TextColor.parse("#470d86").getOrThrow()), "memory");
-        register(registerable, SULFUR, Registries.ITEM.getEntry(ModItems.MEMORY_SHARD),
+        register(registerable, SULFUR, Registries.ITEM.getEntry(ModItems.SULFUR),
                 Style.EMPTY.withColor(TextColor.parse("#c4bd99").getOrThrow()), "sulfur");
+        register(registerable, PINLINE, Registries.ITEM.getEntry(ModItems.PINLINE_INGOT),
+                Style.EMPTY.withColor(TextColor.parse("#9d85b1").getOrThrow()), "pinline");
+        register(registerable, RAW_PINLINE, Registries.ITEM.getEntry(ModItems.RAW_PINLINE),
+                Style.EMPTY.withColor(TextColor.parse("#659183").getOrThrow()), "raw_pinline");
     }
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,

@@ -39,6 +39,11 @@ public class ModItems {
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
     public static final Item MEMORY_SHARD = registerItem("memory_shard", setting -> new Item(setting.rarity(Rarity.RARE).trimMaterial(ModTrimMaterials.MEMORY)));
 
+    public static final Item PINLINE_NUGGET = registerItem("pinline_nugget", Item::new);
+    public static final Item PINLINE_INGOT = registerItem("pinline_ingot", setting -> new Item(setting.trimMaterial(ModTrimMaterials.PINLINE)));
+    public static final Item PREPARED_PINLINE = registerItem("prepared_pinline", Item::new);
+    public static final Item RAW_PINLINE = registerItem("raw_pinline", setting -> new Item(setting.trimMaterial(ModTrimMaterials.RAW_PINLINE)));
+
     public static final Item COAL_MEAL = registerItem("coal_meal", setting -> new Item(setting
             .food(ModFoodComponents.COAL_MEAL, ModFoodComponents.COAL_MEAL_EFFECT)));
     public static final Item GELATINOUS_BUD = registerItem("gelatinous_bud", setting -> new Item(setting
@@ -134,44 +139,5 @@ public class ModItems {
 
     public static void registerModItems() {
         JirniysPinkStuff.LOGGER.info("Registering Mod Items for " + JirniysPinkStuff.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(KUNZITE);
-            entries.add(RAW_KUNZITE);
-            entries.add(CRYSTAL_GLITTER);
-            entries.add(ELYSIUM_INGOT);
-            entries.add(ELYSIAN_REDSTONE_CORE);
-            entries.add(PINK_BITS);
-            entries.add(THERMIUM);
-            entries.add(RAW_THERMIUM);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.add(KUNZITE_SWORD);
-            entries.add(ELYSIUM_SWORD);
-            entries.add(KUNZITE_HELMET);
-            entries.add(KUNZITE_CHESTPLATE);
-            entries.add(KUNZITE_LEGGINGS);
-            entries.add(KUNZITE_BOOTS);
-            entries.add(ELYSIUM_HELMET);
-            entries.add(ELYSIUM_CHESTPLATE);
-            entries.add(ELYSIUM_LEGGINGS);
-            entries.add(ELYSIUM_BOOTS);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            entries.add(KUNZITE_PICKAXE);
-            entries.add(KUNZITE_AXE);
-            entries.add(KUNZITE_SHOVEL);
-            entries.add(KUNZITE_HOE);
-            entries.add(ELYSIUM_PICKAXE);
-            entries.add(ELYSIUM_AXE);
-            entries.add(ELYSIUM_SHOVEL);
-            entries.add(ELYSIUM_HOE);
-            entries.add(ELYSIUM_HAMMER);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
-            entries.add(GELATINOUS_BUD);
-            entries.add(ELYSIUM_APPLE);
-            entries.add(CRYSTAL_CARROT);
-        });
     }
 }

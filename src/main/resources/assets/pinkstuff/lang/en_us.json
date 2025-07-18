@@ -19,6 +19,10 @@
   "item.pinkstuff.energized_thermium": "Energized Thermium Rod",
   "item.pinkstuff.raw_thermium": "Raw Thermium",
   "item.pinkstuff.sulfur": "Sulfur",
+  "item.pinkstuff.pinline_ingot": "Pinline Ingot",
+  "item.pinkstuff.pinline_nugget": "Pinline Nugget",
+  "item.pinkstuff.raw_pinline": "Raw Pinline",
+  "item.pinkstuff.prepared_pinline": "Prepared Raw Pinline",
 
   "item.pinkstuff.coal_meal": "Coal Meal",
   "item.pinkstuff.gelatinous_bud": "Gelatinous Bud",
@@ -42,6 +46,9 @@
   "item.pinkstuff.deepslate_thermium_ore": "Deepslate Thermium Ore",
   "item.pinkstuff.nether_sulfur_ore": "Nether Sulfur Ore",
   "item.pinkstuff.sulfur_block": "Block of Sulfur",
+  "item.pinkstuff.pinline_block": "Block of Pinline",
+  "item.pinkstuff.end_pinline_ore": "Pinline Ore",
+  "item.pinkstuff.raw_pinline_block": "Block of Raw Pinline",
 
   "item.pinkstuff.polished_amethyst_block": "Polished Amethyst Block",
   "item.pinkstuff.polished_amethyst_slab": "Polished Amethyst Slab",
@@ -181,6 +188,8 @@
   "trim_material.pinkstuff.thermium": "Thermium Material",
   "trim_material.pinkstuff.memory": "Memoria Material",
   "trim_material.pinkstuff.sulfur": "Sulfur Material",
+  "trim_material.pinkstuff.pinline": "Pinline Material",
+  "trim_material.pinkstuff.raw_pinline": "Raw Pinline Material",
 
   "advancements.main.root.description": "Enter the Pink forest~",
   "advancements.main.root.title": "The Enchanted Realm",

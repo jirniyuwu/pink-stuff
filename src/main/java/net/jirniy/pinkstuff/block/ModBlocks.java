@@ -69,6 +69,16 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.BASALT).mapColor(MapColor.PALE_YELLOW)));
 
+    public static final Block PINLINE_BLOCK = registerBlock("pinline_block",
+            properties -> new Block(properties.strength(7f)
+                    .requiresTool().sounds(BlockSoundGroup.HEAVY_CORE).mapColor(MapColor.PURPLE)));
+    public static final Block RAW_PINLINE_BLOCK = registerBlock("raw_pinline_block",
+            properties -> new Block(properties.strength(5f)
+                    .requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.PALE_GREEN)));
+    public static final Block END_PINLINE_ORE = registerBlock("end_pinline_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(4, 6),
+                    properties.strength(8f).requiresTool().mapColor(MapColor.PALE_GREEN)));
+
     public static final Block CRYSTAL_CHERRY_LOG = registerBlock("crystal_cherry_log",
             properties -> new PillarBlock(properties
                     .strength(2.0F).luminance(state -> 4).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DARK_DULL_PINK)));

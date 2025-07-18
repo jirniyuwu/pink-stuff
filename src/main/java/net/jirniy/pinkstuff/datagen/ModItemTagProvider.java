@@ -103,7 +103,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ELYSIUM_INGOT)
                 .add(ModItems.THERMIUM)
                 .add(ModItems.MEMORY_SHARD)
-                .add(ModItems.SULFUR);
+                .add(ModItems.SULFUR)
+                .add(ModItems.PINLINE_INGOT)
+                .add(ModItems.RAW_PINLINE);
         valueLookupBuilder(ItemTags.SLABS)
                 .add(ModBlocks.AMETHYST_BRICKS_SLAB.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_SLAB.asItem())

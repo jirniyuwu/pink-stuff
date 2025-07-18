@@ -75,7 +75,9 @@
         "elysium": "pinkstuff:trims/color_palettes/elysium",
         "thermium": "pinkstuff:trims/color_palettes/thermium",
         "memory": "pinkstuff:trims/color_palettes/memory",
-        "sulfur": "pinkstuff:trims/color_palettes/sulfur"
+        "sulfur": "pinkstuff:trims/color_palettes/sulfur",
+        "pinline": "pinkstuff:trims/color_palettes/pinline",
+        "raw_pinline": "pinkstuff:trims/color_palettes/raw_pinline"
       }
     }
   ]

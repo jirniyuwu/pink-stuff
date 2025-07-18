@@ -44,6 +44,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.RAW_THERMIUM,
                         ModBlocks.THERMIUM_ORE,
                         ModBlocks.DEEPSLATE_THERMIUM_ORE);
+                List<ItemConvertible> PINLINE_SMELTABLES = List.of(
+                        ModItems.PREPARED_PINLINE);
                 offerSmelting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
                         0.25f, 40, "kunzite_smelting");
                 offerBlasting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
@@ -56,6 +58,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         2f, 320, "elysium_smelting");
                 offerBlasting(ELYSIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ELYSIUM_INGOT,
                         2f, 160, "elysium_blasting");
+                offerSmelting(PINLINE_SMELTABLES, RecipeCategory.MISC, ModItems.PINLINE_INGOT,
+                        2f, 1280, "pinline_smelting");
+                offerBlasting(PINLINE_SMELTABLES, RecipeCategory.MISC, ModItems.PINLINE_INGOT,
+                        2f, 640, "pinline_blasting");
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.KUNZITE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
@@ -70,6 +76,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.ENERGIZED_THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.ENERGIZED_THERMIUM_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.SULFUR, RecipeCategory.DECORATIONS, ModBlocks.SULFUR_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
+                        ModItems.PINLINE_INGOT, RecipeCategory.DECORATIONS, ModBlocks.PINLINE_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
+                        ModItems.RAW_PINLINE, RecipeCategory.DECORATIONS, ModBlocks.RAW_PINLINE_BLOCK);
+                createShapeless(RecipeCategory.MISC, ModItems.PREPARED_PINLINE, 1)
+                        .input(ModItems.KUNZITE).input(ModItems.KUNZITE).input(ModItems.KUNZITE).input(ModItems.KUNZITE)
+                        .input(ModItems.RAW_PINLINE).input(ModItems.KUNZITE).input(ModItems.KUNZITE).input(ModItems.KUNZITE).input(ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.RAW_PINLINE), conditionsFromItem(ModItems.RAW_PINLINE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "prepared_pinline")));
                 createShapeless(RecipeCategory.MISC, ModItems.CRYSTAL_GLITTER, 1)
                         .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
                         .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
@@ -782,7 +798,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createShapeless(RecipeCategory.MISC, ModItems.ELYSIUM_NUGGET, 9)
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .input(ModItems.ELYSIUM_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
-                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_from_thermium")));
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_elysium")));
+
+                createShaped(RecipeCategory.MISC, ModItems.PINLINE_INGOT, 1)
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .input('S', ModItems.PINLINE_NUGGET)
+                        .criterion(hasItem(ModItems.PINLINE_NUGGET), conditionsFromItem(ModItems.PINLINE_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_from_nugget")));
+                createShapeless(RecipeCategory.MISC, ModItems.PINLINE_NUGGET, 9)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .input(ModItems.PINLINE_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_pinline")));
 
                 createShapeless(RecipeCategory.FOOD, ModItems.COAL_MEAL, 2)
                         .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
@@ -825,7 +854,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_nugget_from_hazeweaver")));
 
                 createShapeless(RecipeCategory.MISC, Items.GUNPOWDER, 1)
-                        .input(ModItems.SULFUR).input(Items.COAL).input(Items.COAL)
+                        .input(ModItems.SULFUR).input(ItemTags.COALS).input(ItemTags.COALS)
                         .criterion(hasItem(ModItems.SULFUR), conditionsFromItem(ModItems.SULFUR))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "gunpowder_from_sulfur")));

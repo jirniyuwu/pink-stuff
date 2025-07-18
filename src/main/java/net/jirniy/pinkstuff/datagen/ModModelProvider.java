@@ -94,6 +94,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_THERMIUM_ORE);
         blockStateModelGenerator.registerSimpleState(ModBlocks.NETHER_SULFUR_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SULFUR_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_PINLINE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINLINE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINLINE_BLOCK);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
@@ -133,6 +136,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIAN_REDSTONE_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PINK_BITS, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.PINLINE_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINLINE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_PINLINE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PREPARED_PINLINE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.COAL_MEAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.GELATINOUS_BUD, Models.GENERATED);

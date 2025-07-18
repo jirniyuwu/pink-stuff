@@ -89,6 +89,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DISPLAY);
                         entries.add(ModBlocks.THERMIUM_BLASTER);
 
+                        entries.add(ModItems.RAW_PINLINE);
+                        entries.add(ModItems.PREPARED_PINLINE);
+                        entries.add(ModItems.PINLINE_NUGGET);
+                        entries.add(ModItems.PINLINE_INGOT);
+
+                        entries.add(ModBlocks.END_PINLINE_ORE);
+                        entries.add(ModBlocks.RAW_PINLINE_BLOCK);
+                        entries.add(ModBlocks.PINLINE_BLOCK);
+
                         entries.add(ModItems.MEMORY_SHARD);
                         entries.add(ModBlocks.MEMORY_BRICKS);
                         entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);

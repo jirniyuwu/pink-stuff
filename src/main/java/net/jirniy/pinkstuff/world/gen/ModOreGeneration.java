@@ -18,5 +18,9 @@ public class ModOreGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BASALT_DELTAS), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.SULFUR_ORE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS,
+                        BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.PINLINE_ORE_PLACED_KEY);
     }
 }

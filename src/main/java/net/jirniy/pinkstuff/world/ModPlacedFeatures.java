@@ -21,6 +21,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> THERMIUM_ORE_PLACED_KEY = registerKey("thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> DRIPSTONE_THERMIUM_ORE_PLACED_KEY = registerKey("dripstone_thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> SULFUR_ORE_PLACED_KEY = registerKey("sulfur_ore_placed");
+    public static final RegistryKey<PlacedFeature> PINLINE_ORE_PLACED_KEY = registerKey("pinline_ore_placed");
     public static final RegistryKey<PlacedFeature> GEM_TREE_PLACED_KEY = registerKey("gem_tree_placed");
     public static final RegistryKey<PlacedFeature> CHORUS_TREE_PLACED_KEY = registerKey("chorus_placed");
     public static final RegistryKey<PlacedFeature> CRYSTAL_CHERRY_PLACED_KEY = registerKey("crystal_cherry_placed");
@@ -53,6 +54,11 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(8,
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(100), 1)))
+        );
+        register(context, PINLINE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINLINE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.of(
+                                BiasedToBottomHeightProvider.create(YOffset.fixed(0), YOffset.fixed(60), 1)))
         );
 
         register(context, GEM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_TREE_KEY),
