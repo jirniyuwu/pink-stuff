@@ -34,19 +34,23 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.KUNZITE_PICKAXE)
                 .add(ModItems.ELYSIUM_PICKAXE)
                 .add(ModItems.ELYSIUM_HAMMER)
-                .add(ModItems.ELYSIUM_MULTITOOL);
+                .add(ModItems.ELYSIUM_MULTITOOL)
+                .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.SHOVELS)
                 .add(ModItems.KUNZITE_SHOVEL)
                 .add(ModItems.ELYSIUM_SHOVEL)
-                .add(ModItems.ELYSIUM_MULTITOOL);
+                .add(ModItems.ELYSIUM_MULTITOOL)
+                .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.AXES)
                 .add(ModItems.KUNZITE_AXE)
                 .add(ModItems.ELYSIUM_AXE)
-                .add(ModItems.ELYSIUM_MULTITOOL);
+                .add(ModItems.ELYSIUM_MULTITOOL)
+                .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.HOES)
                 .add(ModItems.KUNZITE_HOE)
                 .add(ModItems.ELYSIUM_HOE)
-                .add(ModItems.ELYSIUM_MULTITOOL);
+                .add(ModItems.ELYSIUM_MULTITOOL)
+                .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.KUNZITE_CHESTPLATE)

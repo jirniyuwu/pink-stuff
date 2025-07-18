@@ -182,6 +182,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CHESS_SMITHING_TEMPLATE);
                         entries.add(ModItems.WANDERER_SMITHING_TEMPLATE);
 
+                        entries.add(ModItems.NETHERITE_MULTITOOL);
+
                         entries.add(ModItems.KUNZITE_SWORD);
                         entries.add(ModItems.KUNZITE_PICKAXE);
                         entries.add(ModItems.KUNZITE_AXE);

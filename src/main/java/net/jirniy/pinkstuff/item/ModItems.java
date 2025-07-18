@@ -92,11 +92,13 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting.rarity(Rarity.UNCOMMON)));
 
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
-            setting -> new HammerItem(ModToolMaterials.SPECIAL, 16, -3.4f, setting.rarity(Rarity.RARE)));
+            setting -> new HammerItem(ModToolMaterials.SPECIAL, 8, -3.4f, setting.rarity(Rarity.RARE)));
     public static final Item ELYSIUM_MULTITOOL = registerItem("elysium_multitool",
             setting -> new MultitoolItem(ModToolMaterials.SPECIAL, 3, -1f, setting.rarity(Rarity.RARE)));
     public static final Item DAWNBLOOMER = registerItem("dawnbloomer",
             setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 7, -1.8f).rarity(Rarity.RARE)));
+    public static final Item NETHERITE_MULTITOOL = registerItem("netherite_multitool",
+            setting -> new MultitoolItem(ToolMaterial.NETHERITE, 3, -1f, setting.rarity(Rarity.UNCOMMON)));
 
     public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));

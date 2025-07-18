@@ -259,6 +259,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_multitool")));
+                createShaped(RecipeCategory.TOOLS, ModItems.NETHERITE_MULTITOOL)
+                        .pattern("III")
+                        .pattern("PAS")
+                        .pattern("IBI")
+                        .input('I', ModItems.PINLINE_INGOT)
+                        .input('B', ModBlocks.PINLINE_BLOCK.asItem())
+                        .input('P', Items.NETHERITE_PICKAXE)
+                        .input('S', Items.NETHERITE_SHOVEL)
+                        .input('A', Items.NETHERITE_AXE)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "netherite_multitool")));
                 createShaped(RecipeCategory.TOOLS, ModItems.DAWNBLOOMER)
                         .pattern("TMT")
                         .pattern("CSC")
