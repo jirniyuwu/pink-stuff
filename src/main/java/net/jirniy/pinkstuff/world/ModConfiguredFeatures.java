@@ -18,16 +18,18 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.math.intprovider.WeightedListIntProvider;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
+import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 
 import java.util.List;
+import java.util.OptionalInt;
 
 import static net.minecraft.block.Blocks.*;
 
@@ -40,7 +42,12 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEM_BERRY_BUSH_KEY = registryKey("gem_berry_bush");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEM_TREE_KEY = registryKey("gem_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRYSTAL_CHERRY_KEY = registryKey("crystal_cherry");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CHORUS_TREE_KEY = registryKey("chorus_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HAZEWEAVER_PLANT_KEY = registryKey("hazeweaver_plant");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SMALL_END_GRASS_KEY = registryKey("small_end_grass");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MEDIUM_END_GRASS_KEY = registryKey("medium_end_grass");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LARGE_END_GRASS_KEY = registryKey("large_end_grass");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CHORUS_LILY_KEY = registryKey("chorus_lily");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -101,6 +108,25 @@ public class ModConfiguredFeatures {
                 new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.25F, 0.5F, 0.16666667F, 0.33333334F),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
+        register(context, CHORUS_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.CHORUS_LOG),
+                new CherryTrunkPlacer(
+                        6,
+                        3,
+                        2,
+                        UniformIntProvider.create(2, 3),
+                        UniformIntProvider.create(2, 4),
+                        UniformIntProvider.create(-4, -3),
+                        UniformIntProvider.create(-1, 0)
+                ),
+                BlockStateProvider.of(ModBlocks.CHORUS_LEAVES),
+                new LargeOakFoliagePlacer(
+                        ConstantIntProvider.create(2),
+                        ConstantIntProvider.create(4),
+                        4),
+                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
+                .dirtProvider(BlockStateProvider.of(END_STONE)).build());
+
         register(context, GEM_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.GEM_BERRY_BUSH
@@ -114,6 +140,26 @@ public class ModConfiguredFeatures {
                                         .add(ModBlocks.HAZEWEAVER_PLANT.getDefaultState(), 1)
                                         .add(AIR.getDefaultState(), 2))),
                         List.of(Blocks.GRASS_BLOCK)));
+
+        register(context, SMALL_END_GRASS_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.SMALL_END_GRASS)),
+                        List.of(Blocks.END_STONE)));
+        register(context, MEDIUM_END_GRASS_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MEDIUM_END_GRASS)),
+                        List.of(Blocks.END_STONE)));
+        register(context, LARGE_END_GRASS_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.LARGE_END_GRASS)),
+                        List.of(Blocks.END_STONE)));
+        register(context, CHORUS_LILY_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(
+                                Pool.<BlockState>builder()
+                                        .add(ModBlocks.CHORUS_LILY.getDefaultState(), 1)
+                                        .add(AIR.getDefaultState(), 2))),
+                        List.of(Blocks.END_STONE)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {

@@ -78,9 +78,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR)
                 .add(ModBlocks.DISPLAY);
         valueLookupBuilder(BlockTags.PLANKS)
-                .add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
+                .add(ModBlocks.CRYSTAL_CHERRY_PLANKS)
+                .add(ModBlocks.CHORUS_PLANKS);
         valueLookupBuilder(BlockTags.LEAVES)
-                .add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
+                .add(ModBlocks.CRYSTAL_CHERRY_LEAVES)
+                .add(ModBlocks.CHORUS_LEAVES);
         valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.AMETHYST_BULB)
                 .add(ModBlocks.KUNZITE_BULB)
@@ -112,7 +114,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG)
-                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
+                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD)
+                .add(ModBlocks.CHORUS_LOG)
+                .add(ModBlocks.CHORUS_WOOD)
+                .add(ModBlocks.STRIPPED_CHORUS_LOG)
+                .add(ModBlocks.STRIPPED_CHORUS_WOOD);
         valueLookupBuilder(ModTags.Blocks.NEEDS_SPECIAL_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
         valueLookupBuilder(BlockTags.WOODEN_FENCES)
@@ -145,6 +151,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POTTED_MEMORIA_BOURPEER)
                 .add(ModBlocks.POTTED_THERMIUM_WILTBORN)
                 .add(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING)
+                .add(ModBlocks.POTTED_CHORUS_SAPLING)
                 .add(ModBlocks.POTTED_HAZEWEAVER_PLANT);
         valueLookupBuilder(BlockTags.ICE)
                 .add(ModBlocks.PINK_ICE);
@@ -179,5 +186,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
+        valueLookupBuilder(ModTags.Blocks.CHORUS_LOGS)
+                .add(ModBlocks.CHORUS_LOG)
+                .add(ModBlocks.CHORUS_WOOD)
+                .add(ModBlocks.STRIPPED_CHORUS_LOG)
+                .add(ModBlocks.STRIPPED_CHORUS_WOOD);
     }
 }

@@ -331,6 +331,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_boots")));
 
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_PLANKS, 4)
+                        .input(ModTags.Items.CHORUS_LOGS).criterion(hasItem(ModBlocks.CHORUS_LOG),
+                                conditionsFromItem(ModBlocks.CHORUS_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_planks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.CHORUS_LOG)
+                        .criterion(hasItem(ModBlocks.CHORUS_LOG), conditionsFromItem(ModBlocks.CHORUS_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_wood")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_CHORUS_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.STRIPPED_CHORUS_LOG)
+                        .criterion(hasItem(ModBlocks.STRIPPED_CHORUS_LOG), conditionsFromItem(ModBlocks.STRIPPED_CHORUS_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "stripped_chorus_wood")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_LOG, 1)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', Items.CHORUS_FRUIT)
+                        .criterion(hasItem(Items.CHORUS_FRUIT), conditionsFromItem(Items.CHORUS_FRUIT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_log")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.CHORUS_FLOWER, 1)
+                        .pattern("CCC")
+                        .pattern("CCC")
+                        .pattern("CCC")
+                        .input('C', ModBlocks.CHORUS_LEAVES)
+                        .criterion(hasItem(ModBlocks.CHORUS_LEAVES), conditionsFromItem(ModBlocks.CHORUS_LEAVES))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_flower_from_chorus_leaves")));
+
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
                         .input(ModTags.Items.CRYSTAL_CHERRY_LOGS).criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_LOG),
                                 conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,

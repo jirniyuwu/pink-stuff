@@ -2,10 +2,7 @@ package net.jirniy.pinkstuff.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
-import net.jirniy.pinkstuff.block.custom.DisplayBlock;
-import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
-import net.jirniy.pinkstuff.block.custom.ModSaplingBlock;
-import net.jirniy.pinkstuff.block.custom.ThermiumBlasterBlock;
+import net.jirniy.pinkstuff.block.custom.*;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
@@ -97,12 +94,41 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
                     .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
                     .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
-                    .solidBlock(Blocks::never).mapColor(MapColor.PINK)));
+                    .solidBlock(Blocks::never)));
 
     public static final Block CRYSTAL_CHERRY_SAPLING = registerBlock("crystal_cherry_sapling",
             properties -> new ModSaplingBlock(ModSaplingGenerator.CRYSTAL_CHERRY, properties.mapColor(MapColor.PINK)
                     .noCollision().ticksRandomly().breakInstantly().luminance(state -> 4)
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).pistonBehavior(PistonBehavior.DESTROY), Blocks.GRASS_BLOCK));
+
+
+    public static final Block CHORUS_LOG = registerBlock("chorus_log",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DARK_DULL_PINK)));
+    public static final Block CHORUS_WOOD = registerBlock("chorus_wood",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DARK_DULL_PINK)));
+    public static final Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.PALE_PURPLE)));
+    public static final Block STRIPPED_CHORUS_WOOD = registerBlock("stripped_chorus_wood",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.PALE_PURPLE)));
+
+    public static final Block CHORUS_PLANKS = registerBlock("chorus_planks",
+            properties -> new Block(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CHORUS_LEAVES = registerBlock("chorus_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.08f, ParticleTypes.END_ROD, properties
+                    .mapColor(MapColor.PALE_PURPLE).strength(0.4F).ticksRandomly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+
+    public static final Block CHORUS_SAPLING = registerBlock("chorus_sapling",
+            properties -> new ModSaplingBlock(ModSaplingGenerator.CHORUS, properties.mapColor(MapColor.PALE_PURPLE)
+                    .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CHERRY_LEAVES)
+                    .pistonBehavior(PistonBehavior.DESTROY), Blocks.END_STONE));
 
     public static final Block AMETHYST_BRICKS = registerBlock("amethyst_bricks",
             properties -> new Block(properties.strength(3f)
@@ -252,6 +278,25 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(ModBlocks.MEMORIA_BOURPEER, properties.strength(0f).nonOpaque().luminance(state -> 7).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_CRYSTAL_CHERRY_SAPLING = registerBlockWithoutBlockItem("potted_crystal_cherry_sapling",
             properties -> new FlowerPotBlock(ModBlocks.CRYSTAL_CHERRY_SAPLING, properties.strength(0f).nonOpaque().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_CHORUS_SAPLING = registerBlockWithoutBlockItem("potted_chorus_sapling",
+            properties -> new FlowerPotBlock(ModBlocks.CHORUS_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block SMALL_END_GRASS = registerBlock("small_end_grass",
+            properties -> new ModGrassBlock(Blocks.END_STONE, properties.strength(0f)
+                    .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
+                    5, 5, 11, 3, 11));
+    public static final Block MEDIUM_END_GRASS = registerBlock("medium_end_grass",
+            properties -> new ModGrassBlock(Blocks.END_STONE, properties.strength(0f)
+                    .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
+                    4, 4, 12, 5, 12));
+    public static final Block LARGE_END_GRASS = registerBlock("large_end_grass",
+            properties -> new ModGrassBlock(Blocks.END_STONE, properties.strength(0f)
+                    .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
+                    2, 2, 14, 7, 14));
+    public static final Block CHORUS_LILY = registerBlock("chorus_lily",
+            properties -> new ModGrassBlock(Blocks.END_STONE, properties.strength(0f)
+                    .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
+                    5, 5, 11, 13, 11));
 
     public static final Block GEM_BERRY_BUSH = registerBlockWithoutBlockItem("gem_berry_bush",
             properties -> new GemBerryBushBlock(properties.mapColor(MapColor.DARK_GREEN).ticksRandomly()

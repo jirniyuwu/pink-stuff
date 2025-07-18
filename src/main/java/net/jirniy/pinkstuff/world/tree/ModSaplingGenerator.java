@@ -12,4 +12,7 @@ public class ModSaplingGenerator {
 
     public static final SaplingGenerator CRYSTAL_CHERRY = new SaplingGenerator(JirniysPinkStuff.MOD_ID + ":crystal_cherry",
             Optional.empty(), Optional.of(ModConfiguredFeatures.CRYSTAL_CHERRY_KEY), Optional.empty());
+
+    public static final SaplingGenerator CHORUS = new SaplingGenerator(JirniysPinkStuff.MOD_ID + ":chorus",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.CHORUS_TREE_KEY), Optional.empty());
 }

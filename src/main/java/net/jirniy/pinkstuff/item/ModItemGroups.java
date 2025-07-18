@@ -121,6 +121,19 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
 
+                        entries.add(ModBlocks.SMALL_END_GRASS);
+                        entries.add(ModBlocks.MEDIUM_END_GRASS);
+                        entries.add(ModBlocks.LARGE_END_GRASS);
+                        entries.add(ModBlocks.CHORUS_LILY);
+
+                        entries.add(ModBlocks.CHORUS_LOG);
+                        entries.add(ModBlocks.CHORUS_WOOD);
+                        entries.add(ModBlocks.STRIPPED_CHORUS_LOG);
+                        entries.add(ModBlocks.STRIPPED_CHORUS_WOOD);
+                        entries.add(ModBlocks.CHORUS_PLANKS);
+                        entries.add(ModBlocks.CHORUS_LEAVES);
+                        entries.add(ModBlocks.CHORUS_SAPLING);
+
                         entries.add(ModItems.COAL_MEAL);
                         entries.add(ModItems.GELATINOUS_BUD);
                         entries.add(ModItems.ELYSIUM_APPLE);

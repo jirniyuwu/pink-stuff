@@ -18,6 +18,7 @@ public class ModTags {
         public static final TagKey<Block> ALL_MINEABLE = createTag("all_mineable");
         public static final TagKey<Block> CRAWLER_SPAWNABLE_ON = createTag("crawler_spawnable_on");
         public static final TagKey<Block> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
+        public static final TagKey<Block> CHORUS_LOGS = createTag("chorus_logs");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));
@@ -29,6 +30,7 @@ public class ModTags {
         public static final TagKey<Item> ELYSIUM_REPAIR = createTag("elysium_repair");
         public static final TagKey<Item> SPECIAL_REPAIR = createTag("special_repair");
         public static final TagKey<Item> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
+        public static final TagKey<Item> CHORUS_LOGS = createTag("chorus_logs");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(JirniysPinkStuff.MOD_ID, name));

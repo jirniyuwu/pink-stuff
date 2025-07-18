@@ -14,5 +14,14 @@ public class ModBushGeneration {
                         BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.COLD_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN,
                         BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.RIVER, BiomeKeys.FROZEN_RIVER),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HAZEWEAVER_PLANT_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SMALL_END_GRASS_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MEDIUM_END_GRASS_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LARGE_END_GRASS_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CHORUS_LILY_PLACED_KEY);
     }
 }

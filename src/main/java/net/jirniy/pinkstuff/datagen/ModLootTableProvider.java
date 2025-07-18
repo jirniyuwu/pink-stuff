@@ -110,12 +110,22 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 0, 1));
 
+        addDrop(ModBlocks.CHORUS_LOG);
+        addDrop(ModBlocks.CHORUS_WOOD);
+        addDrop(ModBlocks.STRIPPED_CHORUS_LOG);
+        addDrop(ModBlocks.STRIPPED_CHORUS_WOOD);
+        addDrop(ModBlocks.CHORUS_PLANKS);
+        addDrop(ModBlocks.CHORUS_SAPLING);
+
+        addDrop(ModBlocks.CHORUS_LEAVES, leavesDrops(ModBlocks.CHORUS_LEAVES, ModBlocks.CHORUS_SAPLING, 0.02f));
+
         addPottedPlantDrops(ModBlocks.POTTED_MEMORIA_BOURPEER);
         addPottedPlantDrops(ModBlocks.POTTED_THERMIUM_WILTBORN);
         addPottedPlantDrops(ModBlocks.POTTED_ELYSIAN_SKYBERRY);
         addPottedPlantDrops(ModBlocks.POTTED_KUNZITE_LOVELILY);
         addPottedPlantDrops(ModBlocks.POTTED_AMETHYST_PARTERS);
         addPottedPlantDrops(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_CHORUS_SAPLING);
 
         addDrop(ModBlocks.AMETHYST_PARTERS);
         addDrop(ModBlocks.KUNZITE_LOVELILY);
@@ -123,6 +133,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.THERMIUM_WILTBORN);
         addDrop(ModBlocks.MEMORIA_BOURPEER);
         addDrop(ModBlocks.HAZEWEAVER_PLANT, ModItems.HAZEWEAVER);
+
+        addDropWithSilkTouch(ModBlocks.SMALL_END_GRASS);
+        addDropWithSilkTouch(ModBlocks.MEDIUM_END_GRASS);
+        addDropWithSilkTouch(ModBlocks.LARGE_END_GRASS);
+        addDrop(ModBlocks.CHORUS_LILY);
 
         addDrop(Blocks.LARGE_AMETHYST_BUD, multipleOreDrops(Blocks.LARGE_AMETHYST_BUD, ModItems.AMETHYST_NUGGET, 2, 8));
         addDrop(Blocks.MEDIUM_AMETHYST_BUD, multipleOreDrops(Blocks.MEDIUM_AMETHYST_BUD, ModItems.AMETHYST_NUGGET, 0, 3));

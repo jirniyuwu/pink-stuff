@@ -69,9 +69,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG.asItem())
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG.asItem())
-                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD.asItem())
+                .add(ModBlocks.CHORUS_LOG.asItem())
+                .add(ModBlocks.CHORUS_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_CHORUS_LOG.asItem())
+                .add(ModBlocks.STRIPPED_CHORUS_WOOD.asItem());
         valueLookupBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.CRYSTAL_CHERRY_PLANKS.asItem());
+                .add(ModBlocks.CRYSTAL_CHERRY_PLANKS.asItem())
+                .add(ModBlocks.CHORUS_PLANKS.asItem());
         valueLookupBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.ELYSIUM_HELMET);
@@ -92,7 +97,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.THERMIUM_WILTBORN.asItem())
                 .add(ModItems.HAZEWEAVER);
         valueLookupBuilder(ItemTags.SAPLINGS)
-                .add(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem());
+                .add(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem())
+                .add(ModBlocks.CHORUS_SAPLING.asItem());
         valueLookupBuilder(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.KUNZITE)
                 .add(ModItems.ELYSIUM_INGOT)
@@ -141,5 +147,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG.asItem())
                 .add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD.asItem());
+        valueLookupBuilder(ModTags.Items.CHORUS_LOGS)
+                .add(ModBlocks.CHORUS_LOG.asItem())
+                .add(ModBlocks.CHORUS_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_CHORUS_LOG.asItem())
+                .add(ModBlocks.STRIPPED_CHORUS_WOOD.asItem());
     }
 }
