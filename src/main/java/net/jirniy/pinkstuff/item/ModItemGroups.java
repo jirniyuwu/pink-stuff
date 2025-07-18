@@ -181,6 +181,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CREEPER_SMITHING_TEMPLATE);
                         entries.add(ModItems.CHESS_SMITHING_TEMPLATE);
                         entries.add(ModItems.WANDERER_SMITHING_TEMPLATE);
+                        entries.add(ModItems.SHELL_SMITHING_TEMPLATE);
+                        entries.add(ModItems.WINGFLAP_SMITHING_TEMPLATE);
 
                         entries.add(ModItems.NETHERITE_MULTITOOL);
 

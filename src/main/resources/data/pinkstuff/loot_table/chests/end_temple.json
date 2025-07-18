@@ -148,7 +148,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:spire_armor_trim_smithing_template"
+          "name": "pinkstuff:shell_armor_trim_smithing_template"
         }
       ],
       "rolls": 1

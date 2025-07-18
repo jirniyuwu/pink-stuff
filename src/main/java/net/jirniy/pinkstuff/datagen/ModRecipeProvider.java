@@ -1027,6 +1027,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTrimRecipe(ModItems.WANDERER_SMITHING_TEMPLATE, ModTrimPatterns.WANDERER,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "wanderer")));
                 offerSmithingTemplateCopyingRecipe(ModItems.WANDERER_SMITHING_TEMPLATE, Items.LIGHT_BLUE_WOOL);
+                offerSmithingTrimRecipe(ModItems.SHELL_SMITHING_TEMPLATE, ModTrimPatterns.SHELL,
+                        RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "shell")));
+                offerSmithingTemplateCopyingRecipe(ModItems.SHELL_SMITHING_TEMPLATE, Items.PURPUR_BLOCK);
+                offerSmithingTrimRecipe(ModItems.WINGFLAP_SMITHING_TEMPLATE, ModTrimPatterns.WINGFLAP,
+                        RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "wingflap")));
+                offerSmithingTemplateCopyingRecipe(ModItems.WINGFLAP_SMITHING_TEMPLATE, Items.PURPUR_BLOCK);
             }
         };
     }

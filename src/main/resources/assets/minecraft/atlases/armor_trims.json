@@ -53,7 +53,11 @@
         "pinkstuff:trims/entity/humanoid/wanderer",
         "pinkstuff:trims/entity/humanoid_leggings/wanderer",
         "pinkstuff:trims/entity/humanoid/chess",
-        "pinkstuff:trims/entity/humanoid_leggings/chess"
+        "pinkstuff:trims/entity/humanoid_leggings/chess",
+        "pinkstuff:trims/entity/humanoid/shell",
+        "pinkstuff:trims/entity/humanoid_leggings/shell",
+        "pinkstuff:trims/entity/humanoid/wingflap",
+        "pinkstuff:trims/entity/humanoid_leggings/wingflap"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {

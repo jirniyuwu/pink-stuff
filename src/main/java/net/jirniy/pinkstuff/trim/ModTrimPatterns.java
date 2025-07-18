@@ -26,6 +26,10 @@ public class ModTrimPatterns {
             Identifier.of(JirniysPinkStuff.MOD_ID, "chess"));
     public static final RegistryKey<ArmorTrimPattern> WANDERER = RegistryKey.of(RegistryKeys.TRIM_PATTERN,
             Identifier.of(JirniysPinkStuff.MOD_ID, "wanderer"));
+    public static final RegistryKey<ArmorTrimPattern> SHELL = RegistryKey.of(RegistryKeys.TRIM_PATTERN,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "shell"));
+    public static final RegistryKey<ArmorTrimPattern> WINGFLAP = RegistryKey.of(RegistryKeys.TRIM_PATTERN,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "wingflap"));
 
     public static void bootstrap(Registerable<ArmorTrimPattern> context) {
         register(context, ModItems.CHERRY_SMITHING_TEMPLATE, CHERRY);
@@ -35,6 +39,8 @@ public class ModTrimPatterns {
         register(context, ModItems.CREEPER_SMITHING_TEMPLATE, CREEPER);
         register(context, ModItems.CHESS_SMITHING_TEMPLATE, CHESS);
         register(context, ModItems.WANDERER_SMITHING_TEMPLATE, WANDERER);
+        register(context, ModItems.SHELL_SMITHING_TEMPLATE, SHELL);
+        register(context, ModItems.WINGFLAP_SMITHING_TEMPLATE, WINGFLAP);
     }
 
     private static void register(Registerable<ArmorTrimPattern> context, Item item, RegistryKey<ArmorTrimPattern> key) {

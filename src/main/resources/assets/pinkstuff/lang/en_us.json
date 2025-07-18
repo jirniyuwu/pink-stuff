@@ -207,6 +207,10 @@
   "trim_pattern.pinkstuff.chess": "Chess Trim Pattern",
   "item.pinkstuff.wanderer_armor_trim_smithing_template": "Wanderer Armor Trim",
   "trim_pattern.pinkstuff.wanderer": "Wanderer Trim Pattern",
+  "item.pinkstuff.shell_armor_trim_smithing_template": "Shell Armor Trim",
+  "trim_pattern.pinkstuff.shell": "Shell Trim Pattern",
+  "item.pinkstuff.wingflap_armor_trim_smithing_template": "Wingflap Armor Trim",
+  "trim_pattern.pinkstuff.wingflap": "Wingflap Trim Pattern",
 
   "trim_material.pinkstuff.kunzite": "Kunzite Material",
   "trim_material.pinkstuff.elysium": "Elysian Material",

@@ -207,6 +207,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CREEPER_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHESS_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.WANDERER_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHELL_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WINGFLAP_SMITHING_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.registerArmor(ModItems.KUNZITE_HELMET,
                 ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
