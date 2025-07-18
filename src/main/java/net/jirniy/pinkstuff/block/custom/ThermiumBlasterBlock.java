@@ -2,7 +2,6 @@ package net.jirniy.pinkstuff.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
-import net.jirniy.pinkstuff.block.entity.custom.DisplayBlockEntity;
 import net.jirniy.pinkstuff.block.entity.custom.ThermiumBlasterBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -18,7 +17,6 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;

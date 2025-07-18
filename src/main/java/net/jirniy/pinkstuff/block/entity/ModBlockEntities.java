@@ -3,7 +3,6 @@ package net.jirniy.pinkstuff.block.entity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
-import net.jirniy.pinkstuff.block.custom.ThermiumBlasterBlock;
 import net.jirniy.pinkstuff.block.entity.custom.DisplayBlockEntity;
 import net.jirniy.pinkstuff.block.entity.custom.ThermiumBlasterBlockEntity;
 import net.minecraft.block.entity.BlockEntityType;

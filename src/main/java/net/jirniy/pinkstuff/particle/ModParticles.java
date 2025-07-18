@@ -6,7 +6,6 @@ import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.thread.TaskQueue;
 
 public class ModParticles {
     public static final SimpleParticleType RIFT_PARTICLE =

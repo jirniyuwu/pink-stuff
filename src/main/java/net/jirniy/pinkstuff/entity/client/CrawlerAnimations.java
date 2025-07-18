@@ -1,6 +1,9 @@
 package net.jirniy.pinkstuff.entity.client;
 
-import net.minecraft.client.render.entity.animation.*;
+import net.minecraft.client.render.entity.animation.AnimationDefinition;
+import net.minecraft.client.render.entity.animation.AnimationHelper;
+import net.minecraft.client.render.entity.animation.Keyframe;
+import net.minecraft.client.render.entity.animation.Transformation;
 
 public class CrawlerAnimations {
     public static final AnimationDefinition ANIM_CRAWLER_WALK = AnimationDefinition.Builder.create(2.0F).looping()

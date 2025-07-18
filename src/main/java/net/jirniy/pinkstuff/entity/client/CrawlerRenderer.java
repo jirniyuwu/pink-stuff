@@ -3,7 +3,6 @@ package net.jirniy.pinkstuff.entity.client;
 import com.google.common.collect.Maps;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
-
 import net.jirniy.pinkstuff.entity.custom.CrawlerVariant;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -11,7 +10,6 @@ import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
-import net.minecraft.util.math.Vec3d;
 
 import java.util.Map;
 

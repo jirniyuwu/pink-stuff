@@ -1,6 +1,5 @@
 package net.jirniy.pinkstuff.screen.custom;
 
-import net.jirniy.pinkstuff.block.custom.ThermiumBlasterBlock;
 import net.jirniy.pinkstuff.block.entity.custom.ThermiumBlasterBlockEntity;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.minecraft.block.entity.BlockEntity;
@@ -11,10 +10,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
-import org.jetbrains.annotations.Nullable;
 
 public class ThermiumBlasterScreenHandler extends ScreenHandler {
     private final Inventory inventory;

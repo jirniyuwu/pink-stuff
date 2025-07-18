@@ -1,7 +1,6 @@
 package net.jirniy.pinkstuff.item.custom;
 
 import com.google.common.collect.ImmutableMap;
-import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
@@ -12,7 +11,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.server.world.ServerWorld;
 import org.jetbrains.annotations.Nullable;

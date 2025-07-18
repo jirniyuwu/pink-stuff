@@ -2,12 +2,10 @@ package net.jirniy.pinkstuff.screen;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
-import net.jirniy.pinkstuff.block.entity.custom.ThermiumBlasterBlockEntity;
 import net.jirniy.pinkstuff.screen.custom.DisplayScreenHandler;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreenHandler;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
