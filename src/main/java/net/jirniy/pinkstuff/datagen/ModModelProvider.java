@@ -61,7 +61,7 @@ public class ModModelProvider extends FabricModelProvider {
         crystalCherryPool.fence(ModBlocks.CRYSTAL_CHERRY_FENCE);
         crystalCherryPool.fenceGate(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.CRYSTAL_CHERRY_DOOR);
-        blockStateModelGenerator.registerTrapdoor(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
 
         chorusPool.stairs(ModBlocks.CHORUS_STAIRS);
         chorusPool.slab(ModBlocks.CHORUS_SLAB);
@@ -70,7 +70,7 @@ public class ModModelProvider extends FabricModelProvider {
         chorusPool.fence(ModBlocks.CHORUS_FENCE);
         chorusPool.fenceGate(ModBlocks.CHORUS_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.CHORUS_DOOR);
-        blockStateModelGenerator.registerTrapdoor(ModBlocks.CHORUS_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.CHORUS_TRAPDOOR);
 
         polishedAmethystPool.stairs(ModBlocks.POLISHED_AMETHYST_STAIRS);
         polishedAmethystPool.slab(ModBlocks.POLISHED_AMETHYST_SLAB);
