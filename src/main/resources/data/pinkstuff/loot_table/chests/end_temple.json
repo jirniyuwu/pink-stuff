@@ -131,6 +131,17 @@
           ],
           "name": "pinkstuff:prepared_pinline",
           "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "pinkstuff:grounded"
+            }
+          ],
+          "name": "minecraft:splash_potion",
+          "weight": 3
         }
       ],
       "rolls": {

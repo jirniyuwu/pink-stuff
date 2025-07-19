@@ -1,73 +1,13 @@
 {
-  "name": "pinkstuff:end_temple/rooms2",
+  "name": "pinkstuff:end_temple/random2",
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 2,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/room1",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/room2",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/room3",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
-      "weight": 2,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/room4",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
       "weight": 3,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/hallway1",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
-      "weight": 3,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/hallway2",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/hallway3",
+        "location": "pinkstuff:end_temple/random2/kunzite",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }
@@ -77,7 +17,57 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/hallway4",
+        "location": "pinkstuff:end_temple/random2/pinline_ore1",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:end_temple/random2/pinline_ore2",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:end_temple/random2/pinline_ore3",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:end_temple/random2/chorus",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:end_temple/random2/shulker",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:end_temple/random2/treasure1",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }
@@ -87,7 +77,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:end_temple/rooms2/downstairs1",
+        "location": "pinkstuff:end_temple/random2/treasure2",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }
