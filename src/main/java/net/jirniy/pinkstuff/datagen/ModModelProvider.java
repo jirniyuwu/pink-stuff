@@ -124,6 +124,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.NETHER_SULFUR_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SULFUR_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_PINLINE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_END_PINLINE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINLINE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINLINE_BLOCK);
 

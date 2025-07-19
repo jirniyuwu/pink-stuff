@@ -64,7 +64,7 @@ public class ModPlacedFeatures {
         register(context, COMPRESSEND_END_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COMPRESSED_END_STONE_KEY),
                 ModOrePlacement.modifiersWithCount(13,
                         HeightRangePlacementModifier.of(
-                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(55), 2)))
+                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(50), 2)))
         );
 
         register(context, GEM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_TREE_KEY),

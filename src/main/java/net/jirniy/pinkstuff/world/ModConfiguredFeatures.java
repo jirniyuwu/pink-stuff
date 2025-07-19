@@ -70,10 +70,11 @@ public class ModConfiguredFeatures {
 
         List<OreFeatureConfig.Target> endPinlineOres =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(END_STONE), ModBlocks.END_PINLINE_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_END_STONE), ModBlocks.END_PINLINE_ORE.getDefaultState()));
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_END_STONE), ModBlocks.COMPRESSED_END_PINLINE_ORE.getDefaultState()));
 
         List<OreFeatureConfig.Target> compressedEndStone =
-                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(END_STONE), ModBlocks.COMPRESSED_END_STONE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(END_STONE), ModBlocks.COMPRESSED_END_STONE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.END_PINLINE_ORE), ModBlocks.COMPRESSED_END_PINLINE_ORE.getDefaultState()));
 
         register(context, KUNZITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldKunziteOres, 15));
         register(context, THERMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldThermiumOres, 3, 0.3f));

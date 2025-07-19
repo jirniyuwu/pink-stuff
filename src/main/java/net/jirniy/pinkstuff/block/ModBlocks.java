@@ -84,6 +84,9 @@ public class ModBlocks {
     public static final Block END_PINLINE_ORE = registerBlock("end_pinline_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(4, 6),
                     properties.strength(8f).requiresTool().mapColor(MapColor.PALE_GREEN)));
+    public static final Block COMPRESSED_END_PINLINE_ORE = registerBlock("compressed_end_pinline_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(5, 7),
+                    properties.strength(13f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool().mapColor(MapColor.PALE_GREEN)));
 
     public static final Block CRYSTAL_CHERRY_LOG = registerBlock("crystal_cherry_log",
             properties -> new PillarBlock(properties

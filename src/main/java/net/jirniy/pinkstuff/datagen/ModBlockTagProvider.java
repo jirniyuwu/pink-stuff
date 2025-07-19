@@ -70,6 +70,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SULFUR_BLOCK)
                 .add(ModBlocks.PINLINE_BLOCK)
                 .add(ModBlocks.END_PINLINE_ORE)
+                .add(ModBlocks.COMPRESSED_END_PINLINE_ORE)
                 .add(ModBlocks.RAW_PINLINE_BLOCK)
                 .add(ModBlocks.PINLINE_BRICKS)
                 .add(ModBlocks.RAW_PINLINE_BRICKS)
@@ -154,6 +155,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MEMORY_BRICKS_WALL)
                 .add(ModBlocks.PINLINE_BLOCK)
                 .add(ModBlocks.END_PINLINE_ORE)
+                .add(ModBlocks.COMPRESSED_END_PINLINE_ORE)
                 .add(ModBlocks.RAW_PINLINE_BLOCK);
         valueLookupBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)

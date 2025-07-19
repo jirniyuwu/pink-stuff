@@ -111,6 +111,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEEPSLATE_THERMIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_THERMIUM_ORE, ModItems.RAW_THERMIUM, 1, 3));
         addDrop(ModBlocks.NETHER_SULFUR_ORE, oreDrops(ModBlocks.NETHER_SULFUR_ORE, ModItems.SULFUR));
         addDrop(ModBlocks.END_PINLINE_ORE, oreDrops(ModBlocks.END_PINLINE_ORE, ModItems.RAW_PINLINE));
+        addDrop(ModBlocks.COMPRESSED_END_PINLINE_ORE, oreDrops(ModBlocks.COMPRESSED_END_PINLINE_ORE, ModItems.RAW_PINLINE));
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LOG);
         addDrop(ModBlocks.CRYSTAL_CHERRY_WOOD);

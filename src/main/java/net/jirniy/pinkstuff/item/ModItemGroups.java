@@ -101,6 +101,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PINLINE_INGOT);
 
                         entries.add(ModBlocks.END_PINLINE_ORE);
+                        entries.add(ModBlocks.COMPRESSED_END_PINLINE_ORE);
                         entries.add(ModBlocks.RAW_PINLINE_BLOCK);
                         entries.add(ModBlocks.PINLINE_BLOCK);
 
