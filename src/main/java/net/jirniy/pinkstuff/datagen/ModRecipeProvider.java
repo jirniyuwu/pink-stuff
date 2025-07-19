@@ -847,6 +847,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.RAW_PINLINE), conditionsFromItem(ModItems.RAW_PINLINE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_END_STONE, 1)
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .input('S', Blocks.END_STONE)
+                        .criterion(hasItem(Blocks.END_STONE), conditionsFromItem(Blocks.END_STONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_end_stone")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_END_STONE_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.COMPRESSED_END_STONE)
+                        .criterion(hasItem(ModBlocks.COMPRESSED_END_STONE), conditionsFromItem(ModBlocks.COMPRESSED_END_STONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_end_stone_bricks")));
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.PINLINE_BRICKS))
                         .criterion(hasItem(ModBlocks.PINLINE_BRICKS), conditionsFromItem(ModBlocks.PINLINE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -877,6 +892,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.RAW_PINLINE_BRICKS), conditionsFromItem(ModBlocks.RAW_PINLINE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.COMPRESSED_END_STONE_BRICKS))
+                        .criterion(hasItem(ModBlocks.COMPRESSED_END_STONE_BRICKS), conditionsFromItem(ModBlocks.COMPRESSED_END_STONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_end_stone_bricks_slab")));
+                createStairsRecipe(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.COMPRESSED_END_STONE_BRICKS))
+                        .criterion(hasItem(ModBlocks.COMPRESSED_END_STONE_BRICKS), conditionsFromItem(ModBlocks.COMPRESSED_END_STONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_end_stone_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.COMPRESSED_END_STONE_BRICKS)
+                        .criterion(hasItem(ModBlocks.COMPRESSED_END_STONE_BRICKS), conditionsFromItem(ModBlocks.COMPRESSED_END_STONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_end_stone_bricks_wall")));
 
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.AMETHYST_NUGGET, RecipeCategory.MISC, Items.AMETHYST_SHARD);

@@ -36,6 +36,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DISPLAY);
         addDrop(ModBlocks.THERMIUM_BLASTER);
         addDropWithSilkTouch(ModBlocks.PINK_ICE);
+        addDrop(ModBlocks.COMPRESSED_END_STONE);
 
         addDrop(ModBlocks.KUNZITE_BLOCK);
         addDrop(ModBlocks.RAW_KUNZITE_BLOCK);
@@ -55,6 +56,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MEMORY_BRICKS);
         addDrop(ModBlocks.PINLINE_BRICKS);
         addDrop(ModBlocks.RAW_PINLINE_BRICKS);
+        addDrop(ModBlocks.COMPRESSED_END_STONE_BRICKS);
 
         addDrop(ModBlocks.CHISELED_AMETHYST_BRICKS);
         addDrop(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -80,6 +82,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MEMORY_BRICKS_STAIRS);
         addDrop(ModBlocks.PINLINE_BRICKS_STAIRS);
         addDrop(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
+        addDrop(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
 
         addDrop(ModBlocks.POLISHED_AMETHYST_SLAB, slabDrops(ModBlocks.POLISHED_AMETHYST_SLAB));
         addDrop(ModBlocks.AMETHYST_BRICKS_SLAB, slabDrops(ModBlocks.AMETHYST_BRICKS_SLAB));
@@ -89,6 +92,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MEMORY_BRICKS_SLAB, slabDrops(ModBlocks.MEMORY_BRICKS_SLAB));
         addDrop(ModBlocks.RAW_PINLINE_BRICKS_SLAB, slabDrops(ModBlocks.RAW_PINLINE_BRICKS_SLAB));
         addDrop(ModBlocks.PINLINE_BRICKS_SLAB, slabDrops(ModBlocks.PINLINE_BRICKS_SLAB));
+        addDrop(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB, slabDrops(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB));
 
         addDrop(ModBlocks.POLISHED_AMETHYST_WALL);
         addDrop(ModBlocks.AMETHYST_BRICKS_WALL);
@@ -98,6 +102,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MEMORY_BRICKS_WALL);
         addDrop(ModBlocks.PINLINE_BRICKS_WALL);
         addDrop(ModBlocks.RAW_PINLINE_BRICKS_WALL);
+        addDrop(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
 
         addDrop(ModBlocks.KUNZITE_ORE, oreDrops(ModBlocks.KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.DEEPSLATE_KUNZITE_ORE, oreDrops(ModBlocks.DEEPSLATE_KUNZITE_ORE, ModItems.RAW_KUNZITE));

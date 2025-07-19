@@ -18,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        BlockStateModelGenerator.BlockTexturePool compressedEndStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_END_STONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool chorusPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
         BlockStateModelGenerator.BlockTexturePool crystalCherryPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         BlockStateModelGenerator.BlockTexturePool polishedAmethystPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_AMETHYST_BLOCK);
@@ -104,6 +105,11 @@ public class ModModelProvider extends FabricModelProvider {
         rawPinlineBricksPool.slab(ModBlocks.RAW_PINLINE_BRICKS_SLAB);
         rawPinlineBricksPool.wall(ModBlocks.RAW_PINLINE_BRICKS_WALL);
 
+        compressedEndStonePool.stairs(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
+        compressedEndStonePool.slab(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
+        compressedEndStonePool.wall(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_END_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_ICE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_KUNZITE_BLOCK);

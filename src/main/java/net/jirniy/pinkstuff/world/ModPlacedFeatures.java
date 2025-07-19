@@ -31,6 +31,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MEDIUM_END_GRASS_PLACED_KEY = registerKey("medium_end_grass_placed");
     public static final RegistryKey<PlacedFeature> LARGE_END_GRASS_PLACED_KEY = registerKey("large_end_grass_placed");
     public static final RegistryKey<PlacedFeature> CHORUS_LILY_PLACED_KEY = registerKey("chorus_lily_placed");
+    public static final RegistryKey<PlacedFeature> COMPRESSEND_END_STONE_PLACED_KEY = registerKey("compressed_end_stone_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -59,6 +60,11 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(4,
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.fixed(0), YOffset.fixed(60), 1)))
+        );
+        register(context, COMPRESSEND_END_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COMPRESSED_END_STONE_KEY),
+                ModOrePlacement.modifiersWithCount(13,
+                        HeightRangePlacementModifier.of(
+                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(55), 2)))
         );
 
         register(context, GEM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_TREE_KEY),

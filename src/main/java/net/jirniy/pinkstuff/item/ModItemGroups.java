@@ -22,6 +22,12 @@ public class ModItemGroups {
                         entries.add(ModItems.DIAMOND_NUGGET);
                         entries.add(ModItems.EMERALD_NUGGET);
 
+                        entries.add(ModBlocks.COMPRESSED_END_STONE);
+                        entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
+                        entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
+                        entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
+
                         entries.add(ModItems.AMETHYST_NUGGET);
                         entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
                         entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);

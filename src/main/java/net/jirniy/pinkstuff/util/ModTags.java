@@ -19,6 +19,7 @@ public class ModTags {
         public static final TagKey<Block> CRAWLER_SPAWNABLE_ON = createTag("crawler_spawnable_on");
         public static final TagKey<Block> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Block> CHORUS_LOGS = createTag("chorus_logs");
+        public static final TagKey<Block> END_STONE = createTag("end_stone");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));

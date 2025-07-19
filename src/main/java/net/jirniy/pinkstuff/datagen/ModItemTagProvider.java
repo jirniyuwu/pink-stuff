@@ -7,6 +7,7 @@ import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -119,7 +120,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.THERMIUM_BRICKS_SLAB.asItem())
                 .add(ModBlocks.MEMORY_BRICKS_SLAB.asItem())
                 .add(ModBlocks.PINLINE_BRICKS_SLAB.asItem())
-                .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB.asItem());
+                .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB.asItem())
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB.asItem());
         valueLookupBuilder(ItemTags.STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_STAIRS.asItem())
@@ -128,7 +130,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.THERMIUM_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.MEMORY_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.PINLINE_BRICKS_STAIRS.asItem())
-                .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS.asItem());
+                .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL.asItem())
@@ -137,7 +140,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.THERMIUM_BRICKS_WALL.asItem())
                 .add(ModBlocks.MEMORY_BRICKS_WALL.asItem())
                 .add(ModBlocks.PINLINE_BRICKS_WALL.asItem())
-                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL.asItem());
+                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL.asItem())
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL.asItem());
         valueLookupBuilder(ItemTags.WOODEN_SLABS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB.asItem())
                 .add(ModBlocks.CHORUS_SLAB.asItem());
@@ -175,7 +179,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ModTags.Items.BRICKS_CRAFTABLE)
                 .add(Blocks.COBBLESTONE.asItem())
                 .add(Blocks.COBBLED_DEEPSLATE.asItem())
+                .add(Blocks.NETHERRACK.asItem())
                 .add(Blocks.BLACKSTONE.asItem())
-                .add(Blocks.END_STONE.asItem());
+                .add(Blocks.END_STONE.asItem())
+                .add(ModBlocks.COMPRESSED_END_STONE.asItem());
+        valueLookupBuilder(ItemTags.STONE_CRAFTING_MATERIALS)
+                .add(ModBlocks.COMPRESSED_END_STONE.asItem());
     }
 }

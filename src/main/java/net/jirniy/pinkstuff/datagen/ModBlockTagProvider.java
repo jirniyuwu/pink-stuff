@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.util.ModTags;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -81,7 +82,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINLINE_BRICKS_SLAB)
                 .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB)
                 .add(ModBlocks.PINLINE_BRICKS_WALL)
-                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
+                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS)
+                .add(ModBlocks.COMPRESSED_END_STONE)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
@@ -106,7 +112,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.AMETHYST_BULB)
                 .add(ModBlocks.KUNZITE_BULB)
                 .add(ModBlocks.NETHER_SULFUR_ORE)
-                .add(ModBlocks.SULFUR_BLOCK);
+                .add(ModBlocks.SULFUR_BLOCK)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
@@ -126,7 +136,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINLINE_BRICKS_SLAB)
                 .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB)
                 .add(ModBlocks.PINLINE_BRICKS_WALL)
-                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
+                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL)
+                .add(ModBlocks.COMPRESSED_END_STONE);
         valueLookupBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -169,7 +180,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_AMETHYST_WALL)
                 .add(ModBlocks.MEMORY_BRICKS_WALL)
                 .add(ModBlocks.PINLINE_BRICKS_WALL)
-                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
+                .add(ModBlocks.RAW_PINLINE_BRICKS_WALL)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.ELYSIUM_BLOCK)
@@ -202,7 +214,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THERMIUM_BRICKS_SLAB)
                 .add(ModBlocks.MEMORY_BRICKS_SLAB)
                 .add(ModBlocks.PINLINE_BRICKS_SLAB)
-                .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB);
+                .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
         valueLookupBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS)
                 .add(ModBlocks.ELYSIUM_BRICKS_STAIRS)
@@ -211,7 +224,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THERMIUM_BRICKS_STAIRS)
                 .add(ModBlocks.MEMORY_BRICKS_STAIRS)
                 .add(ModBlocks.PINLINE_BRICKS_STAIRS)
-                .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
+                .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS)
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_SLABS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CHORUS_SLAB);
@@ -240,5 +254,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_WOOD)
                 .add(ModBlocks.STRIPPED_CHORUS_LOG)
                 .add(ModBlocks.STRIPPED_CHORUS_WOOD);
+        valueLookupBuilder(ModTags.Blocks.END_STONE)
+                .add(ModBlocks.COMPRESSED_END_STONE)
+                .add(Blocks.END_STONE);
     }
 }

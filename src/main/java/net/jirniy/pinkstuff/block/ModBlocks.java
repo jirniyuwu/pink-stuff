@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.custom.*;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -15,6 +16,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -24,8 +26,12 @@ import java.util.function.Function;
 public class ModBlocks {
 
     public static final Block PINK_ICE = registerBlock("pink_ice",
-            properties -> new TranslucentBlock(properties.strength(8f).slipperiness(1.04f).nonOpaque()
+            properties -> new TranslucentBlock(properties.strength(8f).slipperiness(1.01f).nonOpaque()
                     .sounds(BlockSoundGroup.GLASS).mapColor(MapColor.DULL_PINK)));
+
+    public static final Block COMPRESSED_END_STONE = registerBlock("compressed_end_stone",
+            properties -> new Block(properties.strength(10f)
+                    .requiresTool().sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.PALE_YELLOW)));
 
     public static final Block KUNZITE_BLOCK = registerBlock("kunzite_block",
         properties -> new Block(properties.strength(4f)
@@ -105,7 +111,7 @@ public class ModBlocks {
     public static final Block CRYSTAL_CHERRY_SAPLING = registerBlock("crystal_cherry_sapling",
             properties -> new ModSaplingBlock(ModSaplingGenerator.CRYSTAL_CHERRY, properties.mapColor(MapColor.PINK)
                     .noCollision().ticksRandomly().breakInstantly().luminance(state -> 4)
-                    .sounds(BlockSoundGroup.CHERRY_LEAVES).pistonBehavior(PistonBehavior.DESTROY), Blocks.GRASS_BLOCK));
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).pistonBehavior(PistonBehavior.DESTROY), BlockTags.DIRT));
 
 
     public static final Block CHORUS_LOG = registerBlock("chorus_log",
@@ -134,7 +140,7 @@ public class ModBlocks {
     public static final Block CHORUS_SAPLING = registerBlock("chorus_sapling",
             properties -> new ModSaplingBlock(ModSaplingGenerator.CHORUS, properties.mapColor(MapColor.PALE_PURPLE)
                     .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CHERRY_LEAVES)
-                    .pistonBehavior(PistonBehavior.DESTROY), Blocks.END_STONE));
+                    .pistonBehavior(PistonBehavior.DESTROY), ModTags.Blocks.END_STONE));
 
     public static final Block AMETHYST_BRICKS = registerBlock("amethyst_bricks",
             properties -> new Block(properties.strength(3f)
@@ -184,7 +190,6 @@ public class ModBlocks {
     public static final Block MEMORY_BULB = registerBlock("memory_bulb",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE).luminance(state -> 15).mapColor(MapColor.TERRACOTTA_BLACK)));
-
     public static final Block PINLINE_BRICKS = registerBlock("pinline_bricks",
             properties -> new Block(properties.strength(6f)
                     .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PALE_PURPLE)));
@@ -194,7 +199,6 @@ public class ModBlocks {
     public static final Block CHISELED_PINLINE_BRICKS = registerBlock("chiseled_pinline_bricks",
             properties -> new Block(properties.strength(6f)
                     .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PALE_PURPLE)));
-
     public static final Block RAW_PINLINE_BRICKS = registerBlock("raw_pinline_bricks",
             properties -> new Block(properties.strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
@@ -204,6 +208,17 @@ public class ModBlocks {
     public static final Block CHISELED_RAW_PINLINE_BRICKS = registerBlock("chiseled_raw_pinline_bricks",
             properties -> new Block(properties.strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
+    public static final Block COMPRESSED_END_STONE_BRICKS = registerBlock("compressed_end_stone_bricks",
+            properties -> new Block(properties.strength(11f)
+                    .requiresTool().sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.PALE_YELLOW)));
+
+    public static final Block COMPRESSED_END_STONE_BRICKS_STAIRS = registerBlock("compressed_end_stone_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.COMPRESSED_END_STONE_BRICKS.getDefaultState(),
+                    properties.strength(11f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block COMPRESSED_END_STONE_BRICKS_SLAB = registerBlock("compressed_end_stone_bricks_slab",
+            properties -> new SlabBlock(properties.strength(11f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.PALE_YELLOW)));
+    public static final Block COMPRESSED_END_STONE_BRICKS_WALL = registerBlock("compressed_end_stone_bricks_wall",
+            properties -> new WallBlock(properties.strength(11f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.PALE_YELLOW)));
 
     public static final Block PINLINE_BRICKS_STAIRS = registerBlock("pinline_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.PINLINE_BRICKS.getDefaultState(),
@@ -342,19 +357,19 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(ModBlocks.CHORUS_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SMALL_END_GRASS = registerBlock("small_end_grass",
-            properties -> new ModGrassBlock(Blocks.END_STONE, properties.strength(0f)
+            properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
                     5, 5, 11, 3, 11));
     public static final Block MEDIUM_END_GRASS = registerBlock("medium_end_grass",
-            properties -> new ModGrassBlock(Blocks.END_STONE, properties.strength(0f)
+            properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
                     4, 4, 12, 5, 12));
     public static final Block LARGE_END_GRASS = registerBlock("large_end_grass",
-            properties -> new ModGrassBlock(Blocks.END_STONE, properties.strength(0f)
+            properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
                     2, 2, 14, 7, 14));
     public static final Block CHORUS_LILY = registerBlock("chorus_lily",
-            properties -> new ModGrassBlock(Blocks.END_STONE, properties.strength(0f)
+            properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f)
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
                     5, 5, 11, 13, 11));
 
