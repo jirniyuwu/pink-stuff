@@ -6,6 +6,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
@@ -19,6 +20,10 @@ public class GroundedEffect extends StatusEffect {
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
         if (entity.isGliding()) {
             entity.stopGliding();
+        }
+        if (entity.hasStatusEffect(StatusEffects.LEVITATION)) {
+            entity.removeStatusEffect(StatusEffects.LEVITATION);
+            entity.removeStatusEffect(ModEffects.GROUNDED);
         }
         return super.applyUpdateEffect(world, entity, amplifier);
     }
