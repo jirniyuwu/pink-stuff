@@ -69,7 +69,8 @@ public class ModConfiguredFeatures {
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(BLACKSTONE), ModBlocks.NETHER_SULFUR_ORE.getDefaultState()));
 
         List<OreFeatureConfig.Target> endPinlineOres =
-                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(END_STONE), ModBlocks.END_PINLINE_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(END_STONE), ModBlocks.END_PINLINE_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_END_STONE), ModBlocks.END_PINLINE_ORE.getDefaultState()));
 
         List<OreFeatureConfig.Target> compressedEndStone =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(END_STONE), ModBlocks.COMPRESSED_END_STONE.getDefaultState()));

@@ -185,5 +185,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.COMPRESSED_END_STONE.asItem());
         valueLookupBuilder(ItemTags.STONE_CRAFTING_MATERIALS)
                 .add(ModBlocks.COMPRESSED_END_STONE.asItem());
+        valueLookupBuilder(ItemTags.STONE_TOOL_MATERIALS)
+                .add(ModBlocks.COMPRESSED_END_STONE.asItem());
     }
 }
