@@ -185,6 +185,10 @@
   "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
   "block.pinkstuff.hazeweaver_plant": "Hazeweaver",
 
+  "item.minecraft.potion.effect.grounded": "Potion of Heaviness",
+  "item.minecraft.splash_potion.effect.grounded": "Splash Potion of Heaviness",
+  "item.minecraft.lingering_potion.effect.grounded": "Lingering Potion of Heaviness",
+
   "enchantment.pinkstuff.lightning": "Curse of Lightning",
   "enchantment.pinkstuff.fragility": "Curse of Fragility",
   "enchantment.pinkstuff.length": "Length",
@@ -192,6 +196,7 @@
   "enchantment.pinkstuff.sliding_shoes": "Sliding Shoes",
 
   "effect.pinkstuff.dawnbreaker": "Dawnbreaker",
+  "effect.pinkstuff.grounded": "Grounded",
 
   "item.pinkstuff.cherry_armor_trim_smithing_template": "Cherry Armor Trim",
   "trim_pattern.pinkstuff.cherry": "Cherry Trim Pattern",
