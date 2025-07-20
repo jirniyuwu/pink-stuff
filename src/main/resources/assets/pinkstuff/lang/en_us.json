@@ -195,6 +195,7 @@
   "item.minecraft.potion.effect.grounded": "Potion of Heaviness",
   "item.minecraft.splash_potion.effect.grounded": "Splash Potion of Heaviness",
   "item.minecraft.lingering_potion.effect.grounded": "Lingering Potion of Heaviness",
+  "item.minecraft.tipped_arrow.effect.grounded": "Arrow of Heaviness",
 
   "enchantment.pinkstuff.lightning": "Curse of Lightning",
   "enchantment.pinkstuff.fragility": "Curse of Fragility",

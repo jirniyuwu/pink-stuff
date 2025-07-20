@@ -155,22 +155,22 @@ public class ModConfiguredFeatures {
         register(context, SMALL_END_GRASS_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.SMALL_END_GRASS)),
-                        List.of(Blocks.END_STONE)));
+                        List.of(Blocks.END_STONE, ModBlocks.COMPRESSED_END_STONE)));
         register(context, MEDIUM_END_GRASS_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MEDIUM_END_GRASS)),
-                        List.of(Blocks.END_STONE)));
+                        List.of(Blocks.END_STONE, ModBlocks.COMPRESSED_END_STONE)));
         register(context, LARGE_END_GRASS_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.LARGE_END_GRASS)),
-                        List.of(Blocks.END_STONE)));
+                        List.of(Blocks.END_STONE, ModBlocks.COMPRESSED_END_STONE)));
         register(context, CHORUS_LILY_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(
                                 Pool.<BlockState>builder()
                                         .add(ModBlocks.CHORUS_LILY.getDefaultState(), 1)
-                                        .add(AIR.getDefaultState(), 2))),
-                        List.of(Blocks.END_STONE)));
+                                        .add(AIR.getDefaultState(), 4))),
+                        List.of(Blocks.END_STONE, ModBlocks.COMPRESSED_END_STONE)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {
