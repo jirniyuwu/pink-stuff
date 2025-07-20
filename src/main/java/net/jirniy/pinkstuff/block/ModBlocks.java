@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.custom.*;
+import net.jirniy.pinkstuff.particle.ModParticles;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
@@ -104,7 +105,7 @@ public class ModBlocks {
     public static final Block CRYSTAL_CHERRY_PLANKS = registerBlock("crystal_cherry_planks",
             properties -> new Block(properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
     public static final Block CRYSTAL_CHERRY_LEAVES = registerBlock("crystal_cherry_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.08f, ParticleTypes.CHERRY_LEAVES, properties
+            properties -> new UntintedParticleLeavesBlock(0.1f, ParticleTypes.CHERRY_LEAVES, properties
                     .mapColor(MapColor.PINK).strength(0.2F).ticksRandomly().luminance(state -> 3)
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
                     .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
@@ -133,7 +134,7 @@ public class ModBlocks {
     public static final Block CHORUS_PLANKS = registerBlock("chorus_planks",
             properties -> new Block(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
     public static final Block CHORUS_LEAVES = registerBlock("chorus_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.08f, ParticleTypes.END_ROD, properties
+            properties -> new UntintedParticleLeavesBlock(0.16f, ModParticles.CHORUS_PETAL_PARTICLE, properties
                     .mapColor(MapColor.PALE_PURPLE).strength(0.4F).ticksRandomly()
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
                     .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)

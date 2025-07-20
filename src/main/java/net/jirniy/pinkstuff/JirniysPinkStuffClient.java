@@ -11,12 +11,14 @@ import net.jirniy.pinkstuff.block.entity.renderer.DisplayBlockEntityRenderer;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.client.CrawlerModel;
 import net.jirniy.pinkstuff.entity.client.CrawlerRenderer;
+import net.jirniy.pinkstuff.particle.ChorusPetalParticle;
 import net.jirniy.pinkstuff.particle.DawnbreakParticle;
 import net.jirniy.pinkstuff.particle.ModParticles;
 import net.jirniy.pinkstuff.particle.RiftParticle;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.screen.custom.DisplayScreen;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreen;
+import net.minecraft.block.UntintedParticleLeavesBlock;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -61,5 +63,6 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.RIFT_PARTICLE, RiftParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.DAWNBREAK_PARTICLE, DawnbreakParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.CHORUS_PETAL_PARTICLE, ChorusPetalParticle.ChorusPetalFactory::new);
     }
 }
