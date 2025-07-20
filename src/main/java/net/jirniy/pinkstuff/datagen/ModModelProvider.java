@@ -172,6 +172,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_PINLINE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PREPARED_PINLINE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.GLAZED_CHORUS_FRUIT, Models.GENERATED);
         itemModelGenerator.register(ModItems.COAL_MEAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.GELATINOUS_BUD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIUM_APPLE, Models.GENERATED);

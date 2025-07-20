@@ -44,6 +44,8 @@ public class ModItems {
     public static final Item PREPARED_PINLINE = registerItem("prepared_pinline", Item::new);
     public static final Item RAW_PINLINE = registerItem("raw_pinline", setting -> new Item(setting.trimMaterial(ModTrimMaterials.RAW_PINLINE)));
 
+    public static final Item GLAZED_CHORUS_FRUIT = registerItem("glazed_chorus_fruit", setting -> new Item(setting
+            .food(ModFoodComponents.GLAZED_CHORUS_FRUIT, ModFoodComponents.GLAZED_CHORUS_FRUIT_EFFECT)));
     public static final Item COAL_MEAL = registerItem("coal_meal", setting -> new Item(setting
             .food(ModFoodComponents.COAL_MEAL, ModFoodComponents.COAL_MEAL_EFFECT)));
     public static final Item GELATINOUS_BUD = registerItem("gelatinous_bud", setting -> new Item(setting

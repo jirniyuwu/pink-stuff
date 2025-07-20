@@ -37,4 +37,7 @@ public class ModFoodComponents {
     public static final ConsumableComponent GODFRUIT_EFFECT = food()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, 0), 1f))
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 0), 1f)).build();
+
+    public static final FoodComponent GLAZED_CHORUS_FRUIT = new FoodComponent.Builder().nutrition(7).saturationModifier(0.6f).build();
+    public static final ConsumableComponent GLAZED_CHORUS_FRUIT_EFFECT = food().consumeSeconds(2).build();
 }

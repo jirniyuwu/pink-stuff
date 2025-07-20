@@ -173,6 +173,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
                         entries.add(ModBlocks.CHORUS_BUTTON);
 
+                        entries.add(ModItems.GLAZED_CHORUS_FRUIT);
                         entries.add(ModItems.COAL_MEAL);
                         entries.add(ModItems.GELATINOUS_BUD);
                         entries.add(ModItems.ELYSIUM_APPLE);

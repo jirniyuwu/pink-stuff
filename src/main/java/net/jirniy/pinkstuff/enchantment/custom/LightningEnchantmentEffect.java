@@ -8,6 +8,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -23,7 +24,7 @@ public record LightningEnchantmentEffect() implements EnchantmentEntityEffect {
 
                 for (float i = 0; i < numStrikes; i++) {
                     BlockPos position = victim.getBlockPos();
-                    EntityType.LIGHTNING_BOLT.spawn(world, position, SpawnReason.TRIGGERED);
+                    EntityType.LIGHTNING_BOLT.spawn(world, position, SpawnReason.TRIGGERED).setChanneler((ServerPlayerEntity) context.owner());
                 }
             }
         }

@@ -42,11 +42,11 @@ public class MultitoolItem extends Item {
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         if (context.getWorld().getBlockState(context.getBlockPos()).isIn(BlockTags.LOGS) || context.getWorld().getBlockState(context.getBlockPos()).isIn(BlockTags.LOGS_THAT_BURN)) {
-            axeUseOnBlock(context);
+            return axeUseOnBlock(context);
         } else if (!context.getPlayer().isSneaking()) {
-            shovelUseOnBlock(context);
+            return shovelUseOnBlock(context);
         } else if (context.getPlayer().isSneaking()) {
-            hoeUseOnBlock(context);
+            return hoeUseOnBlock(context);
         }
         return ActionResult.PASS;
     }
