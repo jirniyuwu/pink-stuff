@@ -4,6 +4,12 @@
     "#minecraft:mineable/axe",
     "#minecraft:mineable/shovel",
     "#minecraft:mineable/hoe",
-    "minecraft:cobweb"
+    "#minecraft:wool",
+    "#minecraft:wool_carpets",
+    "#pinkstuff:glass",
+    "#pinkstuff:glass_panes",
+    "minecraft:cobweb",
+    "minecraft:sea_lantern",
+    "minecraft:glowstone"
   ]
 }

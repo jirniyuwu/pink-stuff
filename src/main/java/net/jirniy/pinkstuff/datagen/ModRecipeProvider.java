@@ -1035,6 +1035,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "shulker_shell_from_pinline")));
+                createShapeless(RecipeCategory.MISC, Items.PURPLE_DYE, 1)
+                        .input(ModBlocks.CHORUS_LILY)
+                        .criterion(hasItem(ModBlocks.CHORUS_LILY), conditionsFromItem(ModBlocks.CHORUS_LILY))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "black_dye_from_chorus_lily")));
 
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));

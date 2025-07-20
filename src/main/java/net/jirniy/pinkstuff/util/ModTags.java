@@ -20,6 +20,8 @@ public class ModTags {
         public static final TagKey<Block> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Block> CHORUS_LOGS = createTag("chorus_logs");
         public static final TagKey<Block> END_STONE = createTag("end_stone");
+        public static final TagKey<Block> GLASS = createTag("glass");
+        public static final TagKey<Block> GLASS_PANES = createTag("glass_panes");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));

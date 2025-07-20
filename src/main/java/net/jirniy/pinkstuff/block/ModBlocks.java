@@ -362,15 +362,15 @@ public class ModBlocks {
     public static final Block SMALL_END_GRASS = registerBlock("small_end_grass",
             properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
-                    5, 5, 11, 3, 11));
+                    2, 2, 14, 3, 14));
     public static final Block MEDIUM_END_GRASS = registerBlock("medium_end_grass",
             properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
-                    4, 4, 12, 5, 12));
+                    3, 3, 13, 7, 13));
     public static final Block LARGE_END_GRASS = registerBlock("large_end_grass",
             properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
-                    2, 2, 14, 7, 14));
+                    2, 2, 14, 10, 14));
     public static final Block CHORUS_LILY = registerBlock("chorus_lily",
             properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f)
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
