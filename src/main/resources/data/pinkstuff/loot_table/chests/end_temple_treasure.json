@@ -369,7 +369,7 @@
               "options": "#minecraft:on_random_loot"
             }
           ],
-          "name": "pinkstuff:kunzite_sword",
+          "name": "pinkstuff:pinline_sword",
           "weight": 3
         },
         {
@@ -385,7 +385,7 @@
               "options": "#minecraft:on_random_loot"
             }
           ],
-          "name": "pinkstuff:kunzite_boots",
+          "name": "pinkstuff:pinline_boots",
           "weight": 3
         },
         {
@@ -401,7 +401,7 @@
               "options": "#minecraft:on_random_loot"
             }
           ],
-          "name": "pinkstuff:kunzite_chestplate",
+          "name": "pinkstuff:pinline_chestplate",
           "weight": 3
         },
         {
@@ -417,7 +417,7 @@
               "options": "#minecraft:on_random_loot"
             }
           ],
-          "name": "pinkstuff:kunzite_leggings",
+          "name": "pinkstuff:pinline_leggings",
           "weight": 3
         },
         {
@@ -433,7 +433,7 @@
               "options": "#minecraft:on_random_loot"
             }
           ],
-          "name": "pinkstuff:kunzite_helmet",
+          "name": "pinkstuff:pinline_helmet",
           "weight": 3
         },
         {
@@ -449,7 +449,7 @@
               "options": "#minecraft:on_random_loot"
             }
           ],
-          "name": "pinkstuff:kunzite_pickaxe",
+          "name": "pinkstuff:pinline_pickaxe",
           "weight": 3
         },
         {
@@ -465,7 +465,7 @@
               "options": "#minecraft:on_random_loot"
             }
           ],
-          "name": "pinkstuff:kunzite_shovel",
+          "name": "pinkstuff:pinline_shovel",
           "weight": 3
         },
         {
@@ -473,12 +473,16 @@
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
-              "levels": 30.0,
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 40,
+                "min": 20
+              },
               "options": "#minecraft:on_random_loot"
             }
           ],
           "name": "minecraft:book",
-          "weight": 10
+          "weight": 12
         }
       ],
       "rolls": {

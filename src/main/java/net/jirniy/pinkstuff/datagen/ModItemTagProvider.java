@@ -24,16 +24,20 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.KUNZITE);
         valueLookupBuilder(ModTags.Items.ELYSIUM_REPAIR)
                 .add(ModItems.ELYSIUM_INGOT);
+        valueLookupBuilder(ModTags.Items.PINLINE_REPAIR)
+                .add(ModItems.PINLINE_INGOT);
         valueLookupBuilder(ModTags.Items.SPECIAL_REPAIR)
                 .add(ModItems.ELYSIUM_INGOT);
 
         valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.KUNZITE_SWORD)
                 .add(ModItems.ELYSIUM_SWORD)
+                .add(ModItems.PINLINE_SWORD)
                 .add(ModItems.DAWNBLOOMER);
         valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.KUNZITE_PICKAXE)
                 .add(ModItems.ELYSIUM_PICKAXE)
+                .add(ModItems.PINLINE_PICKAXE)
                 .add(ModItems.ELYSIUM_HAMMER)
                 .add(ModItems.ELYSIUM_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
@@ -41,15 +45,18 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.KUNZITE_SHOVEL)
                 .add(ModItems.ELYSIUM_SHOVEL)
                 .add(ModItems.ELYSIUM_MULTITOOL)
+                .add(ModItems.PINLINE_SHOVEL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.AXES)
                 .add(ModItems.KUNZITE_AXE)
                 .add(ModItems.ELYSIUM_AXE)
+                .add(ModItems.PINLINE_AXE)
                 .add(ModItems.ELYSIUM_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.HOES)
                 .add(ModItems.KUNZITE_HOE)
                 .add(ModItems.ELYSIUM_HOE)
+                .add(ModItems.PINLINE_HOE)
                 .add(ModItems.ELYSIUM_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.ARMOR_ENCHANTABLE)
@@ -60,7 +67,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ELYSIUM_HELMET)
                 .add(ModItems.ELYSIUM_CHESTPLATE)
                 .add(ModItems.ELYSIUM_LEGGINGS)
-                .add(ModItems.ELYSIUM_BOOTS);
+                .add(ModItems.ELYSIUM_BOOTS)
+                .add(ModItems.PINLINE_HELMET)
+                .add(ModItems.PINLINE_CHESTPLATE)
+                .add(ModItems.PINLINE_LEGGINGS)
+                .add(ModItems.PINLINE_BOOTS);
         valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.KUNZITE_CHESTPLATE)
@@ -69,7 +80,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ELYSIUM_HELMET)
                 .add(ModItems.ELYSIUM_CHESTPLATE)
                 .add(ModItems.ELYSIUM_LEGGINGS)
-                .add(ModItems.ELYSIUM_BOOTS);
+                .add(ModItems.ELYSIUM_BOOTS)
+                .add(ModItems.PINLINE_HELMET)
+                .add(ModItems.PINLINE_CHESTPLATE)
+                .add(ModItems.PINLINE_LEGGINGS)
+                .add(ModItems.PINLINE_BOOTS);
         valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG.asItem())
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD.asItem())
@@ -84,16 +99,20 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CHORUS_PLANKS.asItem());
         valueLookupBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_HELMET)
-                .add(ModItems.ELYSIUM_HELMET);
+                .add(ModItems.ELYSIUM_HELMET)
+                .add(ModItems.PINLINE_HELMET);
         valueLookupBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_CHESTPLATE)
-                .add(ModItems.ELYSIUM_CHESTPLATE);
+                .add(ModItems.ELYSIUM_CHESTPLATE)
+                .add(ModItems.PINLINE_CHESTPLATE);
         valueLookupBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_LEGGINGS)
-                .add(ModItems.ELYSIUM_LEGGINGS);
+                .add(ModItems.ELYSIUM_LEGGINGS)
+                .add(ModItems.PINLINE_LEGGINGS);
         valueLookupBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_BOOTS)
-                .add(ModItems.ELYSIUM_BOOTS);
+                .add(ModItems.ELYSIUM_BOOTS)
+                .add(ModItems.PINLINE_BOOTS);
         valueLookupBuilder(ItemTags.FLOWERS)
                 .add(ModBlocks.AMETHYST_PARTERS.asItem())
                 .add(ModBlocks.KUNZITE_LOVELILY.asItem())

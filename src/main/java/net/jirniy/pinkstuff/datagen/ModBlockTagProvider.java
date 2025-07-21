@@ -141,6 +141,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPRESSED_END_STONE);
         valueLookupBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
+        valueLookupBuilder(ModTags.Blocks.NEEDS_PINLINE_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.THERMIUM_BLOCK)
                 .add(ModBlocks.RAW_THERMIUM_BLOCK)

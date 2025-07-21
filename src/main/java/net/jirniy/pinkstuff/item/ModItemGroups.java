@@ -216,6 +216,16 @@ public class ModItemGroups {
                         entries.add(ModItems.ELYSIUM_LEGGINGS);
                         entries.add(ModItems.ELYSIUM_BOOTS);
 
+                        entries.add(ModItems.PINLINE_SWORD);
+                        entries.add(ModItems.PINLINE_PICKAXE);
+                        entries.add(ModItems.PINLINE_AXE);
+                        entries.add(ModItems.PINLINE_SHOVEL);
+                        entries.add(ModItems.PINLINE_HOE);
+                        entries.add(ModItems.PINLINE_HELMET);
+                        entries.add(ModItems.PINLINE_CHESTPLATE);
+                        entries.add(ModItems.PINLINE_LEGGINGS);
+                        entries.add(ModItems.PINLINE_BOOTS);
+
                         entries.add(ModItems.DAWNBLOOMER);
                     })
                     .build());

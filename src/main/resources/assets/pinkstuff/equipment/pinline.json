@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "pinkstuff:pinline"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "pinkstuff:pinline"
+      }
+    ]
+  }
+}

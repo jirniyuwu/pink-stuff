@@ -172,6 +172,51 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_hoe")));
+                createShaped(RecipeCategory.COMBAT, ModItems.PINLINE_SWORD)
+                        .pattern("K")
+                        .pattern("K")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_sword")));
+                createShaped(RecipeCategory.TOOLS, ModItems.PINLINE_PICKAXE)
+                        .pattern("KKK")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_pickaxe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.PINLINE_SHOVEL)
+                        .pattern("K")
+                        .pattern("S")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_shovel")));
+                createShaped(RecipeCategory.TOOLS, ModItems.PINLINE_AXE)
+                        .pattern("KK")
+                        .pattern("KS")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_axe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.PINLINE_HOE)
+                        .pattern("KK")
+                        .pattern(" S")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_hoe")));
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_ICE, 1)
                         .pattern("PPP")
                         .pattern("PIP")
@@ -318,6 +363,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_boots")));
+
+                createShaped(RecipeCategory.COMBAT, ModItems.PINLINE_HELMET)
+                        .pattern("KKK")
+                        .pattern("K K")
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_helmet")));
+                createShaped(RecipeCategory.COMBAT, ModItems.PINLINE_CHESTPLATE)
+                        .pattern("K K")
+                        .pattern("KKK")
+                        .pattern("KKK")
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_chestplate")));
+                createShaped(RecipeCategory.COMBAT, ModItems.PINLINE_LEGGINGS)
+                        .pattern("KKK")
+                        .pattern("K K")
+                        .pattern("K K")
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_leggings")));
+                createShaped(RecipeCategory.COMBAT, ModItems.PINLINE_BOOTS)
+                        .pattern("K K")
+                        .pattern("K K")
+                        .input('K', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_boots")));
 
                 createShaped(RecipeCategory.COMBAT, ModItems.ELYSIUM_HELMET)
                         .pattern("CKC")

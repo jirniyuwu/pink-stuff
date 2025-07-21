@@ -13,6 +13,8 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_KUNZITE_TOOL = createTag("incorrect_for_kunzite_tool");
         public static final TagKey<Block> NEEDS_ELYSIUM_TOOL = createTag("needs_elysium_tool");
         public static final TagKey<Block> INCORRECT_FOR_ELYSIUM_TOOL = createTag("incorrect_for_elysium_tool");
+        public static final TagKey<Block> NEEDS_PINLINE_TOOL = createTag("needs_pinline_tool");
+        public static final TagKey<Block> INCORRECT_FOR_PINLINE_TOOL = createTag("incorrect_for_pinline_tool");
         public static final TagKey<Block> NEEDS_SPECIAL_TOOL = createTag("needs_special_tool");
         public static final TagKey<Block> INCORRECT_FOR_SPECIAL_TOOL = createTag("incorrect_for_special_tool");
         public static final TagKey<Block> ALL_MINEABLE = createTag("all_mineable");
@@ -31,6 +33,7 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> KUNZITE_REPAIR = createTag("kunzite_repair");
         public static final TagKey<Item> ELYSIUM_REPAIR = createTag("elysium_repair");
+        public static final TagKey<Item> PINLINE_REPAIR = createTag("pinline_repair");
         public static final TagKey<Item> SPECIAL_REPAIR = createTag("special_repair");
         public static final TagKey<Item> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Item> CHORUS_LOGS = createTag("chorus_logs");

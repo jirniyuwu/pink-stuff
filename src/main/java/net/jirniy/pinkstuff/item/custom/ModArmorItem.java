@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
@@ -22,7 +23,10 @@ public class ModArmorItem extends Item {
     private static final Map<ArmorMaterial, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 30, 0, true, false))).build();
+                            List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 30, 0, true, true)))
+                    .put(ModArmorMaterials.PINLINE_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(ModEffects.GROUNDED, 30, 0, true, true),
+                                    new StatusEffectInstance(StatusEffects.HASTE, 30, 0, true, true))).build();
 
     public ModArmorItem(Settings settings) {
         super(settings);

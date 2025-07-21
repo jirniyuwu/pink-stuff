@@ -191,6 +191,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.KUNZITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KUNZITE_HOE, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.PINLINE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINLINE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINLINE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINLINE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINLINE_HOE, Models.HANDHELD);
+
         itemModelGenerator.register(ModItems.ELYSIUM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ELYSIUM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ELYSIUM_AXE, Models.HANDHELD);
@@ -226,6 +232,15 @@ public class ModModelProvider extends FabricModelProvider {
                 ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.KUNZITE_BOOTS,
                 ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.registerArmor(ModItems.PINLINE_HELMET,
+                ModArmorMaterials.PINLINE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.PINLINE_CHESTPLATE,
+                ModArmorMaterials.PINLINE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.PINLINE_LEGGINGS,
+                ModArmorMaterials.PINLINE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.PINLINE_BOOTS,
+                ModArmorMaterials.PINLINE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
         itemModelGenerator.registerArmor(ModItems.ELYSIUM_HELMET,
                 ModArmorMaterials.ELYSIUM_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);

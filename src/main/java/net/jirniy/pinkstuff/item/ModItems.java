@@ -94,6 +94,17 @@ public class ModItems {
     public static final Item ELYSIUM_HOE = registerItem("elysium_hoe",
             setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting.rarity(Rarity.UNCOMMON)));
 
+    public static final Item PINLINE_SWORD = registerItem("pinline_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.PINLINE, 2.2f, -1.8f)));
+    public static final Item PINLINE_PICKAXE = registerItem("pinline_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.PINLINE, 1.2f, -2.8f)));
+    public static final Item PINLINE_SHOVEL = registerItem("pinline_shovel",
+            setting -> new ShovelItem(ModToolMaterials.PINLINE, 1.7f, -3.0f, setting));
+    public static final Item PINLINE_AXE = registerItem("pinline_axe",
+            setting -> new AxeItem(ModToolMaterials.PINLINE, 7, -3.2f, setting));
+    public static final Item PINLINE_HOE = registerItem("pinline_hoe",
+            setting -> new HoeItem(ModToolMaterials.PINLINE, 0, -3f, setting));
+
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
             setting -> new HammerItem(ModToolMaterials.SPECIAL, 8, -3.4f, setting.rarity(Rarity.RARE)));
     public static final Item ELYSIUM_MULTITOOL = registerItem("elysium_multitool",
@@ -120,6 +131,15 @@ public class ModItems {
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_BOOTS = registerItem("elysium_boots",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL, EquipmentType.BOOTS).rarity(Rarity.UNCOMMON)));
+
+    public static final Item PINLINE_HELMET = registerItem("pinline_helmet",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.PINLINE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item PINLINE_CHESTPLATE = registerItem("pinline_chestplate",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.PINLINE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item PINLINE_LEGGINGS = registerItem("pinline_leggings",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.PINLINE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item PINLINE_BOOTS = registerItem("pinline_boots",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.PINLINE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
     public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
