@@ -22,8 +22,7 @@ public class ModArmorItem extends Item {
     private static final Map<ArmorMaterial, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 40, 1, false, false)
-                            )).build();
+                            List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 30, 0, true, false))).build();
 
     public ModArmorItem(Settings settings) {
         super(settings);
@@ -31,8 +30,12 @@ public class ModArmorItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
-        if(entity instanceof PlayerEntity player) {
-            evaluateArmorEffects(player);
+        if(!world.isClient()) {
+            if(entity instanceof PlayerEntity player) {
+                if(hasFullSuitOfArmorOn(player)) {
+                    evaluateArmorEffects(player);
+                }
+            }
         }
 
         super.inventoryTick(stack, world, entity, slot);
@@ -50,26 +53,31 @@ public class ModArmorItem extends Item {
     }
 
     private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, List<StatusEffectInstance> mapStatusEffect) {
-        boolean hasPlayerEffect = mapStatusEffect.stream().allMatch(statusEffectInstance -> player.hasStatusEffect(statusEffectInstance.getEffectType()));
 
-        if(!hasPlayerEffect) {
-            for (StatusEffectInstance instance : mapStatusEffect) {
+
+        for (StatusEffectInstance instance : mapStatusEffect) {
+            if (!player.hasStatusEffect(instance.getEffectType()) || (player.getStatusEffect(instance.getEffectType()).getAmplifier() <= instance.getAmplifier())) {
                 player.addStatusEffect(new StatusEffectInstance(instance.getEffectType(),
                         instance.getDuration(), instance.getAmplifier(), instance.isAmbient(), instance.shouldShowParticles()));
             }
         }
     }
 
-    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ItemStack boots = player.getInventory().getStack(EquipmentSlot.FEET.getIndex());
-        ItemStack leggings = player.getInventory().getStack(EquipmentSlot.LEGS.getIndex());
-        ItemStack chestplate = player.getInventory().getStack(EquipmentSlot.CHEST.getIndex());
-        ItemStack helmet = player.getInventory().getStack(EquipmentSlot.HEAD.getIndex());
+    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
+        ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
+        ItemStack leggings = player.getEquippedStack(EquipmentSlot.LEGS);
+        ItemStack chestplate = player.getEquippedStack(EquipmentSlot.CHEST);
+        ItemStack helmet = player.getEquippedStack(EquipmentSlot.HEAD);
 
-        if (helmet.isEmpty() || chestplate.isEmpty()
-                || leggings.isEmpty() || boots.isEmpty()) {
-            return false;
-        }
+        return !helmet.isEmpty() && !chestplate.isEmpty()
+                && !leggings.isEmpty() && !boots.isEmpty();
+    }
+
+    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
+        ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
+        ItemStack leggings = player.getEquippedStack(EquipmentSlot.LEGS);
+        ItemStack chestplate = player.getEquippedStack(EquipmentSlot.CHEST);
+        ItemStack helmet = player.getEquippedStack(EquipmentSlot.HEAD);
 
         EquippableComponent equippableComponentBoots = boots.getComponents().get(DataComponentTypes.EQUIPPABLE);
         EquippableComponent equippableComponentLeggings = leggings.getComponents().get(DataComponentTypes.EQUIPPABLE);
