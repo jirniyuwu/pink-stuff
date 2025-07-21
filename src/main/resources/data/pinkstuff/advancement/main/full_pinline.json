@@ -1,0 +1,42 @@
+{
+  "parent": "pinkstuff:main/pinline_armor",
+  "criteria": {
+    "pinline_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:pinline_helmet"
+          },
+          {
+            "items": "pinkstuff:pinline_chestplate"
+          },
+          {
+            "items": "pinkstuff:pinline_leggings"
+          },
+          {
+            "items": "pinkstuff:pinline_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.full_pinline.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:pinline_chestplate"
+    },
+    "title": {
+      "translate": "advancements.main.full_pinline.title"
+    }
+  },
+  "requirements": [
+    [
+      "pinline_armor"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

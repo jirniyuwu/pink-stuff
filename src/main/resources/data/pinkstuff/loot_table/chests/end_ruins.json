@@ -97,6 +97,22 @@
               "function": "minecraft:set_count"
             }
           ],
+          "name": "pinkstuff:glazed_chorus_fruit",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "name": "pinkstuff:diamond_nugget",
           "weight": 1
         },

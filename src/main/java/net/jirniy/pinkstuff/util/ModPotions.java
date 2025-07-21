@@ -1,8 +1,7 @@
-package net.jirniy.pinkstuff.potion;
+package net.jirniy.pinkstuff.util;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.effect.ModEffects;
-import net.minecraft.datafixer.fix.StatusEffectDurationFix;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;

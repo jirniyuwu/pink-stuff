@@ -1,11 +1,11 @@
 {
-  "parent": "pinkstuff:main/kunzite_sword",
+  "parent": "pinkstuff:main/obtain_kunzite",
   "criteria": {
-    "elysium_sword": {
+    "pinline": {
       "conditions": {
         "items": [
           {
-            "items": "pinkstuff:elysium_sword"
+            "items": "pinkstuff:pinline_ingot"
           }
         ]
       },
@@ -14,19 +14,19 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.main.elysium_sword.description"
+      "translate": "advancements.main.pinline_ingot.description"
     },
     "icon": {
       "count": 1,
-      "id": "pinkstuff:elysium_sword"
+      "id": "pinkstuff:pinline_ingot"
     },
     "title": {
-      "translate": "advancements.main.elysium_sword.title"
+      "translate": "advancements.main.pinline_ingot.title"
     }
   },
   "requirements": [
     [
-      "elysium_sword"
+      "pinline"
     ]
   ],
   "sends_telemetry_event": false

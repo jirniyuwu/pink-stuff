@@ -22,8 +22,7 @@
     },
     "title": {
       "translate": "advancements.main.elysium_ingot.title"
-    },
-    "frame": "goal"
+    }
   },
   "requirements": [
     [

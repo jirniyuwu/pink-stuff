@@ -1,11 +1,11 @@
 {
-  "parent": "pinkstuff:main/elysium_tools",
+  "parent": "pinkstuff:main/pinline_ingot",
   "criteria": {
     "multitool": {
       "conditions": {
         "items": [
           {
-            "items": "pinkstuff:elysium_multitool"
+            "items": "pinkstuff:netherite_multitool"
           }
         ]
       },
@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.main.elysium_multitool.description"
+      "translate": "advancements.main.netherite_multitool.description"
     },
     "icon": {
       "count": 1,
-      "id": "pinkstuff:elysium_multitool"
+      "id": "pinkstuff:netherite_multitool"
     },
     "title": {
-      "translate": "advancements.main.elysium_multitool.title"
+      "translate": "advancements.main.netherite_multitool.title"
     },
     "frame": "goal"
   },

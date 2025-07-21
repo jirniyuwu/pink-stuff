@@ -52,8 +52,7 @@
     },
     "title": {
       "translate": "advancements.main.elysium_armor.title"
-    },
-    "frame": "goal"
+    }
   },
   "requirements": [
     [

@@ -250,7 +250,6 @@ public class ModModelProvider extends FabricModelProvider {
                 ModArmorMaterials.ELYSIUM_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.ELYSIUM_BOOTS,
                 ModArmorMaterials.ELYSIUM_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
-
-
+        
     }
 }
