@@ -3,12 +3,15 @@
 	"id": "pinkstuff",
 	"version": "${version}",
 	"name": "Jirniys pink stuff",
-	"description": "cute~ :3",
+	"description": "Cherry grove expansion :3",
 	"authors": [
 		"JirniyUwU"
 	],
+	"contributors": [
+		"Kaupenjoe (tutorial)"
+	],
 	"contact": {
-		"homepage": "https://x.com/jir_uwu",
+		"homepage": "https://modrinth.com/project/jirniys-pink-stuff",
 		"sources": "https://github.com/jirniyuwu/pink-stuff"
 	},
 	"license": "CC0-1.0",
