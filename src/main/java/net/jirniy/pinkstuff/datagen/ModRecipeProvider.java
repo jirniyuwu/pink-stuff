@@ -62,6 +62,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         2f, 1280, "pinline_smelting");
                 offerBlasting(PINLINE_SMELTABLES, RecipeCategory.MISC, ModItems.PINLINE_INGOT,
                         2f, 640, "pinline_blasting");
+                offerSmelting(List.of(Items.MAGMA_CREAM), RecipeCategory.MISC, Items.FIRE_CHARGE,
+                        0.1f, 160, "fire_charge_smelting");
+                offerBlasting(List.of(Items.MAGMA_CREAM), RecipeCategory.MISC, Items.FIRE_CHARGE,
+                        0.1f, 80, "fire_charge_blasting");
+                offerSmelting(List.of(Items.FIRE_CHARGE), RecipeCategory.MISC, Items.CHARCOAL,
+                        0f, 1280, "fire_to_charcoal_smelting");
+                offerBlasting(List.of(Items.FIRE_CHARGE), RecipeCategory.MISC, Items.CHARCOAL,
+                        0f, 640, "fire_to_charcoal_blasting");
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
                         ModItems.KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.KUNZITE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
