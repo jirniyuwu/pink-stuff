@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool compressedEndStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_END_STONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool ashenPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ASHEN_PLANKS);
         BlockStateModelGenerator.BlockTexturePool chorusPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
         BlockStateModelGenerator.BlockTexturePool crystalCherryPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         BlockStateModelGenerator.BlockTexturePool polishedAmethystPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_AMETHYST_BLOCK);
@@ -72,6 +73,15 @@ public class ModModelProvider extends FabricModelProvider {
         chorusPool.fenceGate(ModBlocks.CHORUS_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.CHORUS_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.CHORUS_TRAPDOOR);
+
+        ashenPool.stairs(ModBlocks.ASHEN_STAIRS);
+        ashenPool.slab(ModBlocks.ASHEN_SLAB);
+        ashenPool.button(ModBlocks.ASHEN_BUTTON);
+        ashenPool.pressurePlate(ModBlocks.ASHEN_PRESSURE_PLATE);
+        ashenPool.fence(ModBlocks.ASHEN_FENCE);
+        ashenPool.fenceGate(ModBlocks.ASHEN_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.ASHEN_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.ASHEN_TRAPDOOR);
 
         polishedAmethystPool.stairs(ModBlocks.POLISHED_AMETHYST_STAIRS);
         polishedAmethystPool.slab(ModBlocks.POLISHED_AMETHYST_SLAB);
@@ -144,6 +154,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createLogTexturePool(ModBlocks.CHORUS_LOG).log(ModBlocks.CHORUS_LOG).wood(ModBlocks.CHORUS_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_CHORUS_LOG).log(ModBlocks.STRIPPED_CHORUS_LOG).wood(ModBlocks.STRIPPED_CHORUS_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.ENERGIZED_THERMIUM_BLOCK).log(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.ASHEN_LOG).log(ModBlocks.ASHEN_LOG).wood(ModBlocks.ASHEN_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_ASHEN_LOG).log(ModBlocks.STRIPPED_ASHEN_LOG).wood(ModBlocks.STRIPPED_ASHEN_WOOD);
     }
 
     @Override

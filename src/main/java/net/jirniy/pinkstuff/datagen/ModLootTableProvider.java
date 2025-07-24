@@ -152,6 +152,21 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.CHORUS_LEAVES, leavesWithItemDrops(ModBlocks.CHORUS_LEAVES, ModBlocks.CHORUS_SAPLING, 0.01f, Items.CHORUS_FRUIT, 0.2f));
 
+        addDrop(ModBlocks.ASHEN_LOG);
+        addDrop(ModBlocks.ASHEN_WOOD);
+        addDrop(ModBlocks.STRIPPED_ASHEN_LOG);
+        addDrop(ModBlocks.STRIPPED_ASHEN_WOOD);
+        addDrop(ModBlocks.ASHEN_PLANKS);
+
+        addDrop(ModBlocks.ASHEN_SLAB, slabDrops(ModBlocks.ASHEN_SLAB));
+        addDrop(ModBlocks.ASHEN_STAIRS);
+        addDrop(ModBlocks.ASHEN_FENCE);
+        addDrop(ModBlocks.ASHEN_FENCE_GATE);
+        addDrop(ModBlocks.ASHEN_DOOR, doorDrops(ModBlocks.ASHEN_DOOR));
+        addDrop(ModBlocks.ASHEN_TRAPDOOR);
+        addDrop(ModBlocks.ASHEN_BUTTON);
+        addDrop(ModBlocks.ASHEN_PRESSURE_PLATE);
+
         addPottedPlantDrops(ModBlocks.POTTED_MEMORIA_BOURPEER);
         addPottedPlantDrops(ModBlocks.POTTED_THERMIUM_WILTBORN);
         addPottedPlantDrops(ModBlocks.POTTED_ELYSIAN_SKYBERRY);

@@ -21,6 +21,7 @@ public class ModTags {
         public static final TagKey<Block> CRAWLER_SPAWNABLE_ON = createTag("crawler_spawnable_on");
         public static final TagKey<Block> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Block> CHORUS_LOGS = createTag("chorus_logs");
+        public static final TagKey<Block> ASHEN_LOGS = createTag("ashen_logs");
         public static final TagKey<Block> END_STONE = createTag("end_stone");
         public static final TagKey<Block> GLASS = createTag("glass");
         public static final TagKey<Block> GLASS_PANES = createTag("glass_panes");
@@ -37,6 +38,7 @@ public class ModTags {
         public static final TagKey<Item> SPECIAL_REPAIR = createTag("special_repair");
         public static final TagKey<Item> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Item> CHORUS_LOGS = createTag("chorus_logs");
+        public static final TagKey<Item> ASHEN_LOGS = createTag("ashen_logs");
         public static final TagKey<Item> BRICKS_CRAFTABLE = createTag("bricks_craftable");
 
         private static TagKey<Item> createTag(String name) {

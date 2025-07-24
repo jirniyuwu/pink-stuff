@@ -146,6 +146,21 @@ public class ModBlocks {
                     .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CHERRY_LEAVES)
                     .pistonBehavior(PistonBehavior.DESTROY), ModTags.Blocks.END_STONE));
 
+    public static final Block ASHEN_LOG = registerBlock("ashen_log",
+            properties -> new PillarBlock(properties
+                    .strength(1.5F).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block ASHEN_WOOD = registerBlock("ashen_wood",
+            properties -> new PillarBlock(properties
+                    .strength(1.5F).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block STRIPPED_ASHEN_LOG = registerBlock("stripped_ashen_log",
+            properties -> new PillarBlock(properties
+                    .strength(1.2F).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+    public static final Block STRIPPED_ASHEN_WOOD = registerBlock("stripped_ashen_wood",
+            properties -> new PillarBlock(properties
+                    .strength(1.2F).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+    public static final Block ASHEN_PLANKS = registerBlock("ashen_planks",
+            properties -> new Block(properties.strength(1.3f).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+
     public static final Block AMETHYST_BRICKS = registerBlock("amethyst_bricks",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
@@ -323,6 +338,24 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
     public static final Block CHORUS_TRAPDOOR = registerBlock("chorus_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+
+    public static final Block ASHEN_STAIRS = registerBlock("ashen_stairs",
+            properties -> new StairsBlock(ModBlocks.ASHEN_PLANKS.getDefaultState(),
+                    properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+    public static final Block ASHEN_SLAB = registerBlock("ashen_slab",
+            properties -> new SlabBlock(properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+    public static final Block ASHEN_BUTTON = registerBlock("ashen_button",
+            properties -> new ButtonBlock(BlockSetType.CRIMSON, 6, properties.strength(1.2f).noCollision().sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+    public static final Block ASHEN_PRESSURE_PLATE = registerBlock("ashen_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.CRIMSON, properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+    public static final Block ASHEN_FENCE = registerBlock("ashen_fence",
+            properties -> new FenceBlock(properties.strength(1.2f).sounds(BlockSoundGroup.BASALT)));
+    public static final Block ASHEN_FENCE_GATE = registerBlock("ashen_fence_gate",
+            properties -> new FenceGateBlock(WoodType.CRIMSON, properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+    public static final Block ASHEN_DOOR = registerBlock("ashen_door",
+            properties -> new DoorBlock(BlockSetType.CRIMSON, properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).nonOpaque()));
+    public static final Block ASHEN_TRAPDOOR = registerBlock("ashen_trapdoor",
+            properties -> new TrapdoorBlock(BlockSetType.CRIMSON, properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).nonOpaque()));
 
     public static final Block DISPLAY = registerBlock("display",
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque().mapColor(MapColor.STONE_GRAY)));

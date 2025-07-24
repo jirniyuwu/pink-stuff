@@ -520,6 +520,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "gelatinous_bud")));
 
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ASHEN_PLANKS, 4)
+                        .input(ModTags.Items.ASHEN_LOGS).criterion(hasItem(ModBlocks.ASHEN_LOG),
+                                conditionsFromItem(ModBlocks.ASHEN_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_planks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ASHEN_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.ASHEN_LOG)
+                        .criterion(hasItem(ModBlocks.ASHEN_LOG), conditionsFromItem(ModBlocks.ASHEN_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_wood")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_ASHEN_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.STRIPPED_ASHEN_LOG)
+                        .criterion(hasItem(ModBlocks.STRIPPED_ASHEN_LOG), conditionsFromItem(ModBlocks.STRIPPED_ASHEN_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "stripped_ashen_wood")));
+
                 createDoorRecipe(ModBlocks.CRYSTAL_CHERRY_DOOR, Ingredient.ofItem(ModBlocks.CRYSTAL_CHERRY_PLANKS))
                         .criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_PLANKS), conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_PLANKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -585,6 +604,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_stairs")));
+
+                createDoorRecipe(ModBlocks.ASHEN_DOOR, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS))
+                        .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_door")));
+                createTrapdoorRecipe(ModBlocks.ASHEN_TRAPDOOR, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS))
+                        .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_trapdoor")));
+                createButtonRecipe(ModBlocks.ASHEN_BUTTON, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS))
+                        .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_button")));
+                createPressurePlateRecipe(RecipeCategory.REDSTONE, ModBlocks.ASHEN_PRESSURE_PLATE, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS))
+                        .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_pressure_plate")));
+                createFenceGateRecipe(ModBlocks.ASHEN_FENCE_GATE, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS))
+                        .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_fence_gate")));
+                createFenceRecipe(ModBlocks.ASHEN_FENCE, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS))
+                        .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_fence")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ASHEN_SLAB, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS))
+                        .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_slab")));
+                createStairsRecipe(ModBlocks.ASHEN_STAIRS, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS))
+                        .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_stairs")));
 
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETHYST_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
                         .criterion(hasItem(ModBlocks.POLISHED_AMETHYST_BLOCK), conditionsFromItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
@@ -1096,6 +1148,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.SULFUR), conditionsFromItem(ModItems.SULFUR))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "blaze_powder_from_sulfur")));
+                createShapeless(RecipeCategory.MISC, ModBlocks.ASHEN_LOG, 2)
+                        .input(ItemTags.LOGS_THAT_BURN).input(ItemTags.LOGS_THAT_BURN).input(Items.FIRE_CHARGE).input(Items.GUNPOWDER)
+                        .criterion(hasItem(Items.FIRE_CHARGE), conditionsFromItem(Items.FIRE_CHARGE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ashen_logs")));
 
                 createShapeless(RecipeCategory.MISC, Items.ENDER_PEARL, 1)
                         .input(ModItems.RAW_PINLINE).input(Items.CHORUS_FRUIT)

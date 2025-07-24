@@ -236,6 +236,8 @@ public class MultitoolItem extends Item {
                 .put(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG)
                 .put(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD)
                 .put(ModBlocks.CHORUS_LOG, ModBlocks.STRIPPED_CHORUS_LOG)
-                .put(ModBlocks.CHORUS_WOOD, ModBlocks.STRIPPED_CHORUS_WOOD).build();
+                .put(ModBlocks.CHORUS_WOOD, ModBlocks.STRIPPED_CHORUS_WOOD)
+                .put(ModBlocks.ASHEN_LOG, ModBlocks.STRIPPED_ASHEN_LOG)
+                .put(ModBlocks.ASHEN_WOOD, ModBlocks.STRIPPED_ASHEN_WOOD).build();
     }
 }

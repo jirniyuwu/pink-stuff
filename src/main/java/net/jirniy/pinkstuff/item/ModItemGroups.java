@@ -173,6 +173,21 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
                         entries.add(ModBlocks.CHORUS_BUTTON);
 
+                        entries.add(ModBlocks.ASHEN_LOG);
+                        entries.add(ModBlocks.ASHEN_WOOD);
+                        entries.add(ModBlocks.STRIPPED_ASHEN_LOG);
+                        entries.add(ModBlocks.STRIPPED_ASHEN_WOOD);
+                        entries.add(ModBlocks.ASHEN_PLANKS);
+
+                        entries.add(ModBlocks.ASHEN_SLAB);
+                        entries.add(ModBlocks.ASHEN_STAIRS);
+                        entries.add(ModBlocks.ASHEN_FENCE);
+                        entries.add(ModBlocks.ASHEN_FENCE_GATE);
+                        entries.add(ModBlocks.ASHEN_DOOR);
+                        entries.add(ModBlocks.ASHEN_TRAPDOOR);
+                        entries.add(ModBlocks.ASHEN_PRESSURE_PLATE);
+                        entries.add(ModBlocks.ASHEN_BUTTON);
+
                         entries.add(ModItems.GLAZED_CHORUS_FRUIT);
                         entries.add(ModItems.COAL_MEAL);
                         entries.add(ModItems.GELATINOUS_BUD);

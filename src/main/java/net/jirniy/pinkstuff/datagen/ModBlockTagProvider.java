@@ -105,7 +105,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_TRAPDOOR);
         valueLookupBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS)
-                .add(ModBlocks.CHORUS_PLANKS);
+                .add(ModBlocks.CHORUS_PLANKS)
+                .add(ModBlocks.ASHEN_PLANKS);
         valueLookupBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.CRYSTAL_CHERRY_LEAVES)
                 .add(ModBlocks.CHORUS_LEAVES);
@@ -168,14 +169,21 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_WOOD)
                 .add(ModBlocks.STRIPPED_CHORUS_LOG)
                 .add(ModBlocks.STRIPPED_CHORUS_WOOD);
+        valueLookupBuilder(BlockTags.LOGS)
+                .add(ModBlocks.ASHEN_LOG)
+                .add(ModBlocks.ASHEN_WOOD)
+                .add(ModBlocks.STRIPPED_ASHEN_LOG)
+                .add(ModBlocks.STRIPPED_ASHEN_WOOD);
         valueLookupBuilder(ModTags.Blocks.NEEDS_SPECIAL_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
         valueLookupBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE)
-                .add(ModBlocks.CHORUS_FENCE);
+                .add(ModBlocks.CHORUS_FENCE)
+                .add(ModBlocks.ASHEN_FENCE);
         valueLookupBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE)
-                .add(ModBlocks.CHORUS_FENCE_GATE);
+                .add(ModBlocks.CHORUS_FENCE_GATE)
+                .add(ModBlocks.ASHEN_FENCE_GATE);
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL)
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
@@ -232,22 +240,28 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_SLABS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
-                .add(ModBlocks.CHORUS_SLAB);
+                .add(ModBlocks.CHORUS_SLAB)
+                .add(ModBlocks.ASHEN_SLAB);
         valueLookupBuilder(BlockTags.WOODEN_STAIRS)
                 .add(ModBlocks.CRYSTAL_CHERRY_STAIRS)
-                .add(ModBlocks.CHORUS_STAIRS);
+                .add(ModBlocks.CHORUS_STAIRS)
+                .add(ModBlocks.ASHEN_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_DOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_DOOR)
-                .add(ModBlocks.CHORUS_DOOR);
+                .add(ModBlocks.CHORUS_DOOR)
+                .add(ModBlocks.ASHEN_DOOR);
         valueLookupBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR)
-                .add(ModBlocks.CHORUS_TRAPDOOR);
+                .add(ModBlocks.CHORUS_TRAPDOOR)
+                .add(ModBlocks.ASHEN_TRAPDOOR);
         valueLookupBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
-                .add(ModBlocks.CHORUS_BUTTON);
+                .add(ModBlocks.CHORUS_BUTTON)
+                .add(ModBlocks.ASHEN_BUTTON);
         valueLookupBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE)
-                .add(ModBlocks.CHORUS_PRESSURE_PLATE);
+                .add(ModBlocks.CHORUS_PRESSURE_PLATE)
+                .add(ModBlocks.ASHEN_PRESSURE_PLATE);
         valueLookupBuilder(ModTags.Blocks.CRYSTAL_CHERRY_LOGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
@@ -258,6 +272,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_WOOD)
                 .add(ModBlocks.STRIPPED_CHORUS_LOG)
                 .add(ModBlocks.STRIPPED_CHORUS_WOOD);
+        valueLookupBuilder(ModTags.Blocks.ASHEN_LOGS)
+                .add(ModBlocks.ASHEN_LOG)
+                .add(ModBlocks.ASHEN_WOOD)
+                .add(ModBlocks.STRIPPED_ASHEN_LOG)
+                .add(ModBlocks.STRIPPED_ASHEN_WOOD);
         valueLookupBuilder(ModTags.Blocks.END_STONE)
                 .add(ModBlocks.COMPRESSED_END_STONE)
                 .add(Blocks.END_STONE);

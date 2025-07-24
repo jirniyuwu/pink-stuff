@@ -1,5 +1,5 @@
 {
-  "parent": "pinkstuff:main/pinline_armor",
+  "parent": "pinkstuff:main/pinline_ingot",
   "criteria": {
     "pinline_armor": {
       "conditions": {

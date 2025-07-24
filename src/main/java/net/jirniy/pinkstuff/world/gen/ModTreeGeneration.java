@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.jirniy.pinkstuff.world.ModPlacedFeatures;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.PlacedFeatures;
 
 public class ModTreeGeneration {
     public static void generateTrees() {
@@ -14,5 +15,7 @@ public class ModTreeGeneration {
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CRYSTAL_CHERRY_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CHORUS_TREE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.ERODED_BADLANDS),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ASHEN_TREE_PLACED_KEY);
     }
 }

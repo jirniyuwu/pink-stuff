@@ -147,6 +147,21 @@
   "item.pinkstuff.chorus_button": "Chorus Button",
   "item.pinkstuff.chorus_pressure_plate": "Chorus Pressure Plate",
 
+  "item.pinkstuff.ashen_log": "Ashen Log",
+  "item.pinkstuff.ashen_wood": "Ashen Wood",
+  "item.pinkstuff.stripped_ashen_log": "Stripped Ashen Log",
+  "item.pinkstuff.stripped_ashen_wood": "Stripped Ashen Wood",
+  "item.pinkstuff.ashen_planks": "Ashen Planks",
+
+  "item.pinkstuff.ashen_slab": "Ashen Slab",
+  "item.pinkstuff.ashen_stairs": "Ashen Stairs",
+  "item.pinkstuff.ashen_fence": "Ashen Fence",
+  "item.pinkstuff.ashen_fence_gate": "Ashen Fence Gate",
+  "item.pinkstuff.ashen_door": "Ashen Door",
+  "item.pinkstuff.ashen_trapdoor": "Ashen Trapdoor",
+  "item.pinkstuff.ashen_button": "Ashen Button",
+  "item.pinkstuff.ashen_pressure_plate": "Ashen Pressure Plate",
+
   "item.pinkstuff.amethyst_parters": "Amethyst Parters",
   "item.pinkstuff.kunzite_lovelily": "Kunzite Lovelily",
   "item.pinkstuff.elysian_skyberry": "Elysian Skyberry",
@@ -247,6 +262,7 @@
 
   "tag.item.pinkstuff.bricks_craftable": "Bricks Crafting",
   "tag.item.pinkstuff.chorus_logs": "Chorus Logs",
+  "tag.item.pinkstuff.ashen_logs": "Ashen Logs",
   "tag.item.pinkstuff.crystal_cherry_logs": "Crystal Cherry Logs",
   "tag.item.pinkstuff.elysium_repair": "Elysium Repair",
   "tag.item.pinkstuff.kunzite_repair": "Kunzite Repair",

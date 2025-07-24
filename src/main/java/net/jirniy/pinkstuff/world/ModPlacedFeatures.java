@@ -8,6 +8,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.heightprovider.BiasedToBottomHeightProvider;
@@ -24,6 +25,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> PINLINE_ORE_PLACED_KEY = registerKey("pinline_ore_placed");
     public static final RegistryKey<PlacedFeature> GEM_TREE_PLACED_KEY = registerKey("gem_tree_placed");
     public static final RegistryKey<PlacedFeature> CHORUS_TREE_PLACED_KEY = registerKey("chorus_placed");
+    public static final RegistryKey<PlacedFeature> ASHEN_TREE_PLACED_KEY = registerKey("ashen_placed");
     public static final RegistryKey<PlacedFeature> CRYSTAL_CHERRY_PLACED_KEY = registerKey("crystal_cherry_placed");
     public static final RegistryKey<PlacedFeature> GEM_BERRY_BUSH_PLACED_KEY = registerKey("gem_berry_bush_placed");
     public static final RegistryKey<PlacedFeature> HAZEWEAVER_PLANT_PLACED_KEY = registerKey("hazeweaver_plant_placed");
@@ -70,6 +72,11 @@ public class ModPlacedFeatures {
         register(context, GEM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.1f, 0), Blocks.CHERRY_SAPLING
+                ));
+
+        register(context, ASHEN_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ASHEN_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(0, 0.1f, 1), Blocks.DEAD_BUSH
                 ));
 
         register(context, CRYSTAL_CHERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTAL_CHERRY_KEY),
