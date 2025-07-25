@@ -317,5 +317,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.PURPLE_STAINED_GLASS_PANE)
                 .add(Blocks.ORANGE_STAINED_GLASS_PANE)
                 .add(Blocks.WHITE_STAINED_GLASS_PANE);
+        valueLookupBuilder(ModTags.Blocks.BREAKER_BREAKABLE)
+                .add(Blocks.BEDROCK)
+                .add(Blocks.END_PORTAL)
+                .add(Blocks.REINFORCED_DEEPSLATE);
     }
 }

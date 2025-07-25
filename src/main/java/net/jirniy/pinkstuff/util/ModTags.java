@@ -25,6 +25,7 @@ public class ModTags {
         public static final TagKey<Block> END_STONE = createTag("end_stone");
         public static final TagKey<Block> GLASS = createTag("glass");
         public static final TagKey<Block> GLASS_PANES = createTag("glass_panes");
+        public static final TagKey<Block> BREAKER_BREAKABLE = createTag("breaker_breakable");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));

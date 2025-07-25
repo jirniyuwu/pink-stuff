@@ -1113,6 +1113,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "coal_meal")));
 
+                createShaped(RecipeCategory.MISC, ModItems.BEDROCK_BREAKER, 1)
+                        .pattern("CEC")
+                        .pattern("CBC")
+                        .pattern("CSC")
+                        .input('S', ModBlocks.PINLINE_BLOCK)
+                        .input('E', ModItems.ELYSIUM_INGOT)
+                        .input('C', Items.COPPER_INGOT)
+                        .input('B', Items.BRUSH)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "bedrock_breaker")));
+
                 createShapeless(RecipeCategory.DECORATIONS, ModBlocks.AMETHYST_PARTERS, 1)
                         .input(ItemTags.FLOWERS).input(ModItems.AMETHYST_NUGGET)
                         .criterion(hasItem(ModItems.AMETHYST_NUGGET), conditionsFromItem(ModItems.AMETHYST_NUGGET))
@@ -1205,10 +1217,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTemplateCopyingRecipe(ModItems.CREEPER_SMITHING_TEMPLATE, Items.CREEPER_HEAD);
                 offerSmithingTrimRecipe(ModItems.CHESS_SMITHING_TEMPLATE, ModTrimPatterns.CHESS,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "chess")));
-                offerSmithingTemplateCopyingRecipe(ModItems.CHESS_SMITHING_TEMPLATE, Items.LIGHT_BLUE_WOOL);
+                offerSmithingTemplateCopyingRecipe(ModItems.CHESS_SMITHING_TEMPLATE, Items.BLUE_WOOL);
                 offerSmithingTrimRecipe(ModItems.WANDERER_SMITHING_TEMPLATE, ModTrimPatterns.WANDERER,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "wanderer")));
-                offerSmithingTemplateCopyingRecipe(ModItems.WANDERER_SMITHING_TEMPLATE, Items.LIGHT_BLUE_WOOL);
+                offerSmithingTemplateCopyingRecipe(ModItems.WANDERER_SMITHING_TEMPLATE, Items.BLUE_WOOL);
                 offerSmithingTrimRecipe(ModItems.SHELL_SMITHING_TEMPLATE, ModTrimPatterns.SHELL,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "shell")));
                 offerSmithingTemplateCopyingRecipe(ModItems.SHELL_SMITHING_TEMPLATE, Items.PURPUR_BLOCK);

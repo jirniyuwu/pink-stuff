@@ -216,6 +216,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIUM_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ELYSIUM_HAMMER, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.BEDROCK_BREAKER, Models.HANDHELD);
+
         itemModelGenerator.register(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.CHORUS_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.AMETHYST_PARTERS.asItem(), Models.GENERATED);

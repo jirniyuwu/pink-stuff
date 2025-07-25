@@ -4,6 +4,7 @@ package net.jirniy.pinkstuff.item;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.entity.ModEntities;
+import net.jirniy.pinkstuff.item.custom.BreakerItem;
 import net.jirniy.pinkstuff.item.custom.HammerItem;
 import net.jirniy.pinkstuff.item.custom.ModArmorItem;
 import net.jirniy.pinkstuff.item.custom.MultitoolItem;
@@ -26,23 +27,29 @@ public class ModItems {
     public static final Item EMERALD_NUGGET = registerItem("emerald_nugget", Item::new);
     public static final Item QUARTZ_NUGGET = registerItem("quartz_nugget", Item::new);
 
-    public static final Item SULFUR = registerItem("sulfur", setting -> new Item(setting.trimMaterial(ModTrimMaterials.SULFUR)));
+    public static final Item SULFUR = registerItem("sulfur",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.SULFUR)));
 
     public static final Item KUNZITE_NUGGET = registerItem("kunzite_nugget", Item::new);
-    public static final Item KUNZITE = registerItem("kunzite", setting -> new Item(setting.trimMaterial(ModTrimMaterials.KUNZITE)));
+    public static final Item KUNZITE = registerItem("kunzite",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.KUNZITE)));
     public static final Item RAW_KUNZITE = registerItem("raw_kunzite", Item::new);
 
     public static final Item CRYSTAL_GLITTER = registerItem("crystal_glitter", Item::new);
     public static final Item ELYSIUM_NUGGET = registerItem("elysium_nugget", Item::new);
-    public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot", setting -> new Item(setting.trimMaterial(ModTrimMaterials.ELYSIUM)));
+    public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.ELYSIUM)));
     public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
-    public static final Item MEMORY_SHARD = registerItem("memory_shard", setting -> new Item(setting.rarity(Rarity.RARE).trimMaterial(ModTrimMaterials.MEMORY)));
+    public static final Item MEMORY_SHARD = registerItem("memory_shard",
+            setting -> new Item(setting.rarity(Rarity.RARE).trimMaterial(ModTrimMaterials.MEMORY)));
 
     public static final Item PINLINE_NUGGET = registerItem("pinline_nugget", Item::new);
-    public static final Item PINLINE_INGOT = registerItem("pinline_ingot", setting -> new Item(setting.trimMaterial(ModTrimMaterials.PINLINE)));
+    public static final Item PINLINE_INGOT = registerItem("pinline_ingot",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.PINLINE)));
     public static final Item PREPARED_PINLINE = registerItem("prepared_pinline", Item::new);
-    public static final Item RAW_PINLINE = registerItem("raw_pinline", setting -> new Item(setting.trimMaterial(ModTrimMaterials.RAW_PINLINE)));
+    public static final Item RAW_PINLINE = registerItem("raw_pinline",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.RAW_PINLINE)));
 
     public static final Item GLAZED_CHORUS_FRUIT = registerItem("glazed_chorus_fruit", setting -> new Item(setting
             .food(ModFoodComponents.GLAZED_CHORUS_FRUIT, ModFoodComponents.GLAZED_CHORUS_FRUIT_EFFECT)));
@@ -112,6 +119,8 @@ public class ModItems {
             setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 7, -1.8f).rarity(Rarity.RARE)));
     public static final Item NETHERITE_MULTITOOL = registerItem("netherite_multitool",
             setting -> new MultitoolItem(ToolMaterial.NETHERITE, 3, -1f, setting.rarity(Rarity.UNCOMMON)));
+    public static final Item BEDROCK_BREAKER = registerItem("bedrock_breaker",
+            setting -> new BreakerItem(setting.maxCount(16)));
 
     public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));

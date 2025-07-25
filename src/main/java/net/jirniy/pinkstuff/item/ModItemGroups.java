@@ -236,6 +236,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PINLINE_AXE);
                         entries.add(ModItems.PINLINE_SHOVEL);
                         entries.add(ModItems.PINLINE_HOE);
+                        entries.add(ModItems.BEDROCK_BREAKER);
                         entries.add(ModItems.PINLINE_HELMET);
                         entries.add(ModItems.PINLINE_CHESTPLATE);
                         entries.add(ModItems.PINLINE_LEGGINGS);
