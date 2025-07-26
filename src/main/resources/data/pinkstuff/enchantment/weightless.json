@@ -1,0 +1,45 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.pinkstuff.weightless"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "id": "weightless",
+        "attribute": "minecraft:gravity",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": -0.01,
+          "per_level_above_first": -0.005
+        },
+        "operation": "add_value"
+      },
+      {
+        "id": "weightless",
+        "attribute": "minecraft:fall_damage_multiplier",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": -0.05,
+          "per_level_above_first": -0.025
+        },
+        "operation": "add_multiplied_base"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 40
+  },
+  "max_level": 4,
+  "min_cost": {
+    "base": 18,
+    "per_level_above_first": 25
+  },
+  "primary_items": "minecraft:elytra",
+  "slots": [
+    "chest"
+  ],
+  "supported_items": "minecraft:elytra",
+  "weight": 7
+}

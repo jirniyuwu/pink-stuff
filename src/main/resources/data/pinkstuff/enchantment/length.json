@@ -6,7 +6,7 @@
   "effects": {
     "minecraft:attributes": [
       {
-        "id": "block_interaction_range",
+        "id": "length",
         "attribute": "minecraft:block_interaction_range",
         "amount": {
           "type": "minecraft:linear",

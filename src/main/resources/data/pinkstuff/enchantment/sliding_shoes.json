@@ -6,7 +6,7 @@
   "effects": {
     "minecraft:attributes": [
       {
-        "id": "step_height",
+        "id": "sliding_shoes",
         "attribute": "minecraft:step_height",
         "amount": {
           "type": "minecraft:linear",

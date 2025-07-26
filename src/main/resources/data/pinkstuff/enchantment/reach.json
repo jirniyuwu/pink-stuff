@@ -6,7 +6,7 @@
   "effects": {
     "minecraft:attributes": [
       {
-        "id": "entity_interaction_range",
+        "id": "reach",
         "attribute": "minecraft:entity_interaction_range",
         "amount": {
           "type": "minecraft:linear",
