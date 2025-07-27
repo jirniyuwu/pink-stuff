@@ -319,7 +319,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.WHITE_STAINED_GLASS_PANE);
         valueLookupBuilder(ModTags.Blocks.BREAKER_BREAKABLE)
                 .add(Blocks.BEDROCK)
-                .add(Blocks.END_PORTAL)
+                .add(Blocks.END_PORTAL_FRAME)
                 .add(Blocks.REINFORCED_DEEPSLATE);
+        valueLookupBuilder(ModTags.Blocks.KUNZITE_GEODE_IRREPLACEABLE)
+                .add(Blocks.BEDROCK)
+                .add(Blocks.WATER)
+                .add(Blocks.LAVA)
+                .add(Blocks.AIR)
+                .add(Blocks.END_PORTAL_FRAME)
+                .add(Blocks.END_PORTAL);
     }
 }

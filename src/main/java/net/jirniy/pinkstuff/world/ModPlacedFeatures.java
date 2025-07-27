@@ -8,7 +8,6 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.heightprovider.BiasedToBottomHeightProvider;
@@ -34,6 +33,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> LARGE_END_GRASS_PLACED_KEY = registerKey("large_end_grass_placed");
     public static final RegistryKey<PlacedFeature> CHORUS_LILY_PLACED_KEY = registerKey("chorus_lily_placed");
     public static final RegistryKey<PlacedFeature> COMPRESSEND_END_STONE_PLACED_KEY = registerKey("compressed_end_stone_placed");
+    public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_LUSH_PLACED_KEY = registerKey("kunzite_geode_lush_placed");
+    public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_CHERRY_PLACED_KEY = registerKey("kunzite_geode_cherry_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -88,6 +89,13 @@ public class ModPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(0, 0.2f, 1), ModBlocks.CHORUS_SAPLING
                 ));
+
+        register(context, KUNZITE_GEODE_LUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_GEODE_KEY),
+                HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(40)),
+                PlacedFeatures.createCountExtraModifier(0, 0.5f, 1));
+        register(context, KUNZITE_GEODE_CHERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_GEODE_KEY),
+                HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(100)),
+                PlacedFeatures.createCountExtraModifier(1, 0.5f, 1));
 
         register(context, GEM_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_BERRY_BUSH_KEY),
                 RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());

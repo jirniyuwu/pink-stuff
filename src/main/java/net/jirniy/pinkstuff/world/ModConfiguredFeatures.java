@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.world;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
@@ -24,7 +25,6 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
-import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
@@ -54,6 +54,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> LARGE_END_GRASS_KEY = registryKey("large_end_grass");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHORUS_LILY_KEY = registryKey("chorus_lily");
     public static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_END_STONE_KEY = registryKey("compressed_end_stone");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> KUNZITE_GEODE_KEY = registryKey("kunzite_geode");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -148,6 +149,35 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), 1),
                 new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
                 .dirtProvider(BlockStateProvider.of(ModBlocks.ASHEN_LOG)).build());
+
+        register(context, KUNZITE_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new
+                GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                new WeightedBlockStateProvider(
+                        Pool.<BlockState>builder()
+                                .add(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState(), 3)
+                                .add(AMETHYST_BLOCK.getDefaultState(), 1)
+                ),
+                new WeightedBlockStateProvider(
+                        Pool.<BlockState>builder()
+                                .add(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState(), 1)
+                                .add(AMETHYST_BLOCK.getDefaultState(), 1)
+                ),
+                new WeightedBlockStateProvider(
+                        Pool.<BlockState>builder()
+                                .add(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState(), 1)
+                                .add(AMETHYST_BLOCK.getDefaultState(), 3)
+                ),
+                BlockStateProvider.of(GRANITE),
+                List.of(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState()),
+                ModTags.Blocks.KUNZITE_GEODE_IRREPLACEABLE,
+                BlockTags.GEODE_INVALID_BLOCKS),
+                new GeodeLayerThicknessConfig(0.6, 0.8, 0.9, 1.2),
+                new GeodeCrackConfig(0.2, (double)1.0F, 2),
+                0.35, 0.083, true,
+                UniformIntProvider.create(2, 5), UniformIntProvider.create(1, 3), UniformIntProvider.create(1, 2),
+                -16, 16, 0.05, 1
+        ));
+
 
         register(context, GEM_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,

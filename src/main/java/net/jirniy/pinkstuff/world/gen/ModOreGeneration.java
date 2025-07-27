@@ -10,6 +10,10 @@ public class ModOreGeneration {
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CHERRY_GROVE, BiomeKeys.LUSH_CAVES), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.KUNZITE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CHERRY_GROVE), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.KUNZITE_GEODE_CHERRY_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.KUNZITE_GEODE_LUSH_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.THERMIUM_ORE_PLACED_KEY);
