@@ -25,6 +25,7 @@ public class ModTags {
         public static final TagKey<Block> END_STONE = createTag("end_stone");
         public static final TagKey<Block> GLASS = createTag("glass");
         public static final TagKey<Block> GLASS_PANES = createTag("glass_panes");
+        public static final TagKey<Block> SNOWY_SPRUCE_PLACEABLE = createTag("snowy_spruce_placeable");
         public static final TagKey<Block> BREAKER_BREAKABLE = createTag("breaker_breakable");
         public static final TagKey<Block> KUNZITE_GEODE_IRREPLACEABLE = createTag("kunzite_geode_irreplaceable");
 

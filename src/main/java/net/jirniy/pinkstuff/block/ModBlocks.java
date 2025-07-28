@@ -146,6 +146,19 @@ public class ModBlocks {
                     .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CHERRY_LEAVES)
                     .pistonBehavior(PistonBehavior.DESTROY), ModTags.Blocks.END_STONE));
 
+    public static final Block SNOWY_SPRUCE_LEAVES = registerBlock("snowy_spruce_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.1f, ParticleTypes.SNOWFLAKE, properties
+                    .mapColor(MapColor.WHITE).strength(0.2F).ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+
+    public static final Block SNOWY_SPRUCE_SAPLING = registerBlock("snowy_spruce_sapling",
+            properties -> new ModSaplingBlock(ModSaplingGenerator.SNOWY_SPRUCE, properties.mapColor(MapColor.WHITE)
+                    .noCollision().ticksRandomly().breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY), ModTags.Blocks.SNOWY_SPRUCE_PLACEABLE));
+
     public static final Block ASHEN_LOG = registerBlock("ashen_log",
             properties -> new PillarBlock(properties
                     .strength(1.5F).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.DEEPSLATE_GRAY)));
@@ -392,6 +405,8 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(ModBlocks.CRYSTAL_CHERRY_SAPLING, properties.strength(0f).nonOpaque().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_CHORUS_SAPLING = registerBlockWithoutBlockItem("potted_chorus_sapling",
             properties -> new FlowerPotBlock(ModBlocks.CHORUS_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_SNOWY_SPRUCE_SAPLING = registerBlockWithoutBlockItem("potted_snowy_spruce_sapling",
+            properties -> new FlowerPotBlock(ModBlocks.SNOWY_SPRUCE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SMALL_END_GRASS = registerBlock("small_end_grass",
             properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()

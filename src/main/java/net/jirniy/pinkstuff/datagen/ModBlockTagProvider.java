@@ -109,7 +109,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ASHEN_PLANKS);
         valueLookupBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.CRYSTAL_CHERRY_LEAVES)
-                .add(ModBlocks.CHORUS_LEAVES);
+                .add(ModBlocks.CHORUS_LEAVES)
+                .add(ModBlocks.SNOWY_SPRUCE_LEAVES);
         valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.AMETHYST_BULB)
                 .add(ModBlocks.KUNZITE_BULB)
@@ -215,7 +216,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POTTED_THERMIUM_WILTBORN)
                 .add(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING)
                 .add(ModBlocks.POTTED_CHORUS_SAPLING)
-                .add(ModBlocks.POTTED_HAZEWEAVER_PLANT);
+                .add(ModBlocks.POTTED_HAZEWEAVER_PLANT)
+                .add(ModBlocks.POTTED_SNOWY_SPRUCE_SAPLING);
         valueLookupBuilder(BlockTags.ICE)
                 .add(ModBlocks.PINK_ICE);
         valueLookupBuilder(BlockTags.SLABS)
@@ -328,5 +330,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.AIR)
                 .add(Blocks.END_PORTAL_FRAME)
                 .add(Blocks.END_PORTAL);
+        valueLookupBuilder(ModTags.Blocks.SNOWY_SPRUCE_PLACEABLE)
+                .addOptionalTag(BlockTags.DIRT)
+                .add(Blocks.SNOW_BLOCK);
     }
 }

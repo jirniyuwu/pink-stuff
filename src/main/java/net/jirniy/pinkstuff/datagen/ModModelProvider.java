@@ -55,6 +55,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.CRYSTAL_CHERRY_SAPLING, ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.CHORUS_SAPLING, ModBlocks.POTTED_CHORUS_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HAZEWEAVER_PLANT, ModBlocks.POTTED_HAZEWEAVER_PLANT, BlockStateModelGenerator.CrossType.TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.SNOWY_SPRUCE_SAPLING, ModBlocks.POTTED_SNOWY_SPRUCE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
         crystalCherryPool.stairs(ModBlocks.CRYSTAL_CHERRY_STAIRS);
         crystalCherryPool.slab(ModBlocks.CRYSTAL_CHERRY_SLAB);
@@ -141,6 +142,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.CHORUS_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerSingleton(ModBlocks.SNOWY_SPRUCE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.GEM_BERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 GemBerryBushBlock.AGE, 0, 1, 2, 3);
 
@@ -220,6 +222,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.CHORUS_SAPLING.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.SNOWY_SPRUCE_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.AMETHYST_PARTERS.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.KUNZITE_LOVELILY.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.ELYSIAN_SKYBERRY.asItem(), Models.GENERATED);

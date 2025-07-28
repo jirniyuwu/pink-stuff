@@ -28,6 +28,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
 
+                        entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
+                        entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
+
                         entries.add(ModItems.AMETHYST_NUGGET);
                         entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
                         entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);

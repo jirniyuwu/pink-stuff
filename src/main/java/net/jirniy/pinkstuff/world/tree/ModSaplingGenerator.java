@@ -15,4 +15,7 @@ public class ModSaplingGenerator {
 
     public static final SaplingGenerator CHORUS = new SaplingGenerator(JirniysPinkStuff.MOD_ID + ":chorus",
             Optional.empty(), Optional.of(ModConfiguredFeatures.CHORUS_TREE_KEY), Optional.empty());
+
+    public static final SaplingGenerator SNOWY_SPRUCE = new SaplingGenerator(JirniysPinkStuff.MOD_ID + ":snowy_spruce",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.SNOWY_SPRUCE_TREE_KEY), Optional.empty());
 }

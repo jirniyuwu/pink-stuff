@@ -152,6 +152,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.CHORUS_LEAVES, leavesWithItemDrops(ModBlocks.CHORUS_LEAVES, ModBlocks.CHORUS_SAPLING, 0.01f, Items.CHORUS_FRUIT, 0.2f));
 
+        addDrop(ModBlocks.SNOWY_SPRUCE_SAPLING);
+        addDrop(ModBlocks.SNOWY_SPRUCE_LEAVES, leavesWithItemDrops(ModBlocks.SNOWY_SPRUCE_LEAVES, ModBlocks.SNOWY_SPRUCE_SAPLING, 0.05f, Items.SNOWBALL, 0.02f));
+
         addDrop(ModBlocks.ASHEN_LOG);
         addDrop(ModBlocks.ASHEN_WOOD);
         addDrop(ModBlocks.STRIPPED_ASHEN_LOG);

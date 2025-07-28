@@ -1200,6 +1200,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "glazed_chorus_fruit")));
 
+                createShapeless(RecipeCategory.MISC, ModBlocks.SNOWY_SPRUCE_SAPLING, 1)
+                        .input(Blocks.SPRUCE_SAPLING).input(Items.SNOWBALL).input(Items.SNOWBALL).input(Items.SNOWBALL)
+                        .criterion(hasItem(Blocks.SPRUCE_SAPLING), conditionsFromItem(Blocks.SPRUCE_SAPLING))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "snowy_spruce_sapling")));
+                createShapeless(RecipeCategory.MISC, ModBlocks.SNOWY_SPRUCE_LEAVES, 1)
+                        .input(Blocks.SPRUCE_LEAVES).input(Items.SNOWBALL)
+                        .criterion(hasItem(Blocks.SPRUCE_LEAVES), conditionsFromItem(Blocks.SPRUCE_LEAVES))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "snowy_spruce_leaves")));
+
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));
                 offerSmithingTemplateCopyingRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModBlocks.CRYSTAL_CHERRY_LOG);

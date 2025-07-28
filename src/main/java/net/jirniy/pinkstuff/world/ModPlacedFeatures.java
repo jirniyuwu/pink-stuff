@@ -26,6 +26,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CHORUS_TREE_PLACED_KEY = registerKey("chorus_placed");
     public static final RegistryKey<PlacedFeature> ASHEN_TREE_PLACED_KEY = registerKey("ashen_placed");
     public static final RegistryKey<PlacedFeature> CRYSTAL_CHERRY_PLACED_KEY = registerKey("crystal_cherry_placed");
+    public static final RegistryKey<PlacedFeature> SNOWY_SPRUCE_PLACED_KEY = registerKey("snowy_spruce_placed");
     public static final RegistryKey<PlacedFeature> GEM_BERRY_BUSH_PLACED_KEY = registerKey("gem_berry_bush_placed");
     public static final RegistryKey<PlacedFeature> HAZEWEAVER_PLANT_PLACED_KEY = registerKey("hazeweaver_plant_placed");
     public static final RegistryKey<PlacedFeature> SMALL_END_GRASS_PLACED_KEY = registerKey("small_end_grass_placed");
@@ -78,6 +79,11 @@ public class ModPlacedFeatures {
         register(context, ASHEN_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ASHEN_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(0, 0.1f, 1), Blocks.DEAD_BUSH
+                ));
+
+        register(context, SNOWY_SPRUCE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SNOWY_SPRUCE_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(0, 0.1f, 1), ModBlocks.SNOWY_SPRUCE_SAPLING
                 ));
 
         register(context, CRYSTAL_CHERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTAL_CHERRY_KEY),

@@ -18,7 +18,6 @@ import net.jirniy.pinkstuff.particle.RiftParticle;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.screen.custom.DisplayScreen;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreen;
-import net.minecraft.block.UntintedParticleLeavesBlock;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -34,6 +33,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.HAZEWEAVER_PLANT, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.ASHEN_DOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.ASHEN_TRAPDOOR, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.SNOWY_SPRUCE_SAPLING, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.AMETHYST_PARTERS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.KUNZITE_LOVELILY, BlockRenderLayer.CUTOUT);
@@ -48,6 +48,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
 
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_CHORUS_SAPLING, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.POTTED_SNOWY_SPRUCE_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_AMETHYST_PARTERS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_KUNZITE_LOVELILY, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_ELYSIAN_SKYBERRY, BlockRenderLayer.CUTOUT);

@@ -25,11 +25,13 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
+import net.minecraft.world.gen.foliage.PineFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
 import java.util.OptionalInt;
@@ -48,6 +50,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRYSTAL_CHERRY_KEY = registryKey("crystal_cherry");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHORUS_TREE_KEY = registryKey("chorus_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ASHEN_TREE_KEY = registryKey("ashen_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SNOWY_SPRUCE_TREE_KEY = registryKey("snowy_spruce_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HAZEWEAVER_PLANT_KEY = registryKey("hazeweaver_plant");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SMALL_END_GRASS_KEY = registryKey("small_end_grass");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MEDIUM_END_GRASS_KEY = registryKey("medium_end_grass");
@@ -149,6 +152,13 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), 1),
                 new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
                 .dirtProvider(BlockStateProvider.of(ModBlocks.ASHEN_LOG)).build());
+
+        register(context, SNOWY_SPRUCE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(SPRUCE_LOG),
+                new StraightTrunkPlacer(5, 4, 3),
+                BlockStateProvider.of(ModBlocks.SNOWY_SPRUCE_LEAVES),
+                new PineFoliagePlacer(ConstantIntProvider.create(0), UniformIntProvider.create(0, 1), UniformIntProvider.create(3, 4)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, KUNZITE_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new
                 GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
