@@ -333,5 +333,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(ModTags.Blocks.SNOWY_SPRUCE_PLACEABLE)
                 .addOptionalTag(BlockTags.DIRT)
                 .add(Blocks.SNOW_BLOCK);
+        valueLookupBuilder(BlockTags.DRAGON_IMMUNE)
+                .add(ModBlocks.END_PINLINE_ORE)
+                .add(ModBlocks.COMPRESSED_END_PINLINE_ORE)
+                .add(ModBlocks.COMPRESSED_END_STONE)
+                .add(ModBlocks.LARGE_END_GRASS)
+                .add(ModBlocks.SMALL_END_GRASS)
+                .add(ModBlocks.MEDIUM_END_GRASS)
+                .add(ModBlocks.CHORUS_LILY);
+        valueLookupBuilder(BlockTags.BEE_ATTRACTIVE)
+                .add(ModBlocks.CRYSTAL_CHERRY_LEAVES)
+                .add(ModBlocks.KUNZITE_LOVELILY)
+                .add(ModBlocks.AMETHYST_PARTERS)
+                .add(ModBlocks.ELYSIAN_SKYBERRY)
+                .add(ModBlocks.MEMORIA_BOURPEER)
+                .add(ModBlocks.THERMIUM_WILTBORN);
     }
 }

@@ -61,7 +61,7 @@ public class ModPlacedFeatures {
                                 BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(100), 1)))
         );
         register(context, PINLINE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINLINE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(4,
+                ModOrePlacement.modifiersWithCount(2,
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.fixed(0), YOffset.fixed(60), 1)))
         );
