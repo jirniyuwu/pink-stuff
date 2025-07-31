@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.QUARTZ_NUGGET);
                         entries.add(ModItems.DIAMOND_NUGGET);
                         entries.add(ModItems.EMERALD_NUGGET);
+                        entries.add(ModItems.NETHERITE_NUGGET);
 
                         entries.add(ModBlocks.COMPRESSED_END_STONE);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);

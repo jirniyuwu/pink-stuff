@@ -168,6 +168,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DIAMOND_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUARTZ_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.EMERALD_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NETHERITE_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SULFUR, Models.GENERATED);
 

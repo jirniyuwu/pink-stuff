@@ -126,7 +126,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("TNT")
                         .pattern("TBT")
                         .pattern("TNT")
-                        .input('N', Items.NETHERITE_SCRAP)
+                        .input('N', ModItems.NETHERITE_NUGGET)
                         .input('B', Items.BLAZE_ROD)
                         .input('T', ModItems.THERMIUM)
                         .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
@@ -1052,6 +1052,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.EMERALD_NUGGET, RecipeCategory.MISC, Items.EMERALD);
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.QUARTZ_NUGGET, RecipeCategory.MISC, Items.QUARTZ);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.NETHERITE_NUGGET, RecipeCategory.MISC, Items.NETHERITE_INGOT);
 
                 createShaped(RecipeCategory.MISC, ModItems.KUNZITE, 1)
                         .pattern("SSS")
