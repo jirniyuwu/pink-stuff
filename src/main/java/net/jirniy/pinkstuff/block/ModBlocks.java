@@ -1,6 +1,5 @@
 package net.jirniy.pinkstuff.block;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.custom.*;
 import net.jirniy.pinkstuff.particle.ModParticles;
@@ -11,7 +10,6 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -454,23 +452,5 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         JirniysPinkStuff.LOGGER.info("Registering Mod Blocks for " + JirniysPinkStuff.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.ELYSIUM_BLOCK);
-            entries.add(ModBlocks.KUNZITE_BLOCK);
-            entries.add(ModBlocks.KUNZITE_ORE);
-            entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
-            entries.add(ModBlocks.AMETHYST_KUNZITE_ORE);
-            entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
-            entries.add(ModBlocks.THERMIUM_BLOCK);
-            entries.add(ModBlocks.THERMIUM_ORE);
-            entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
-            entries.add(ModBlocks.RAW_THERMIUM_BLOCK);
-            entries.add(ModBlocks.AMETHYST_BRICKS);
-            entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
-            entries.add(ModBlocks.KUNZITE_BRICKS);
-            entries.add(ModBlocks.ELYSIUM_BRICKS);
-            entries.add(ModBlocks.THERMIUM_BRICKS);
-        });
     }
 }

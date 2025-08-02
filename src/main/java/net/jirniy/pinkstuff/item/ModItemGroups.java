@@ -1,9 +1,11 @@
 package net.jirniy.pinkstuff.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -28,9 +30,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
-
-                        entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
-                        entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
 
                         entries.add(ModItems.AMETHYST_NUGGET);
                         entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
@@ -192,6 +191,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ASHEN_PRESSURE_PLATE);
                         entries.add(ModBlocks.ASHEN_BUTTON);
 
+                        entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
+                        entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
+
                         entries.add(ModItems.GLAZED_CHORUS_FRUIT);
                         entries.add(ModItems.COAL_MEAL);
                         entries.add(ModItems.GELATINOUS_BUD);
@@ -252,5 +254,231 @@ public class ModItemGroups {
 
     public static void registerItemGroups() {
         JirniysPinkStuff.LOGGER.info("Registering Item Groups for " + JirniysPinkStuff.MOD_ID);
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(ModBlocks.SULFUR_BLOCK);
+            entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
+            entries.add(ModBlocks.KUNZITE_BLOCK);
+            entries.add(ModBlocks.ELYSIUM_BLOCK);
+            entries.add(ModBlocks.RAW_PINLINE_BLOCK);
+            entries.add(ModBlocks.PINLINE_BLOCK);
+            entries.add(ModBlocks.RAW_THERMIUM_BLOCK);
+            entries.add(ModBlocks.THERMIUM_BLOCK);
+            entries.add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
+
+            entries.add(ModBlocks.COMPRESSED_END_STONE);
+            entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
+            entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
+            entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
+            entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
+
+            entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
+            entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
+            entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
+            entries.add(ModBlocks.POLISHED_AMETHYST_WALL);
+            entries.add(ModBlocks.AMETHYST_BRICKS);
+            entries.add(ModBlocks.CHISELED_AMETHYST_BRICKS);
+            entries.add(ModBlocks.AMETHYST_BULB);
+            entries.add(ModBlocks.AMETHYST_BRICKS_SLAB);
+            entries.add(ModBlocks.AMETHYST_BRICKS_STAIRS);
+            entries.add(ModBlocks.AMETHYST_BRICKS_WALL);
+            entries.add(ModBlocks.KUNZITE_BRICKS);
+            entries.add(ModBlocks.CHISELED_KUNZITE_BRICKS);
+            entries.add(ModBlocks.KUNZITE_BULB);
+            entries.add(ModBlocks.KUNZITE_BRICKS_SLAB);
+            entries.add(ModBlocks.KUNZITE_BRICKS_STAIRS);
+            entries.add(ModBlocks.KUNZITE_BRICKS_WALL);
+            entries.add(ModBlocks.ELYSIUM_BRICKS);
+            entries.add(ModBlocks.CHISELED_ELYSIUM_BRICKS);
+            entries.add(ModBlocks.ELYSIUM_BULB);
+            entries.add(ModBlocks.ELYSIUM_BRICKS_SLAB);
+            entries.add(ModBlocks.ELYSIUM_BRICKS_STAIRS);
+            entries.add(ModBlocks.ELYSIUM_BRICKS_WALL);
+            entries.add(ModBlocks.THERMIUM_BRICKS);
+            entries.add(ModBlocks.CHISELED_THERMIUM_BRICKS);
+            entries.add(ModBlocks.THERMIUM_BULB);
+            entries.add(ModBlocks.THERMIUM_BRICKS_SLAB);
+            entries.add(ModBlocks.THERMIUM_BRICKS_STAIRS);
+            entries.add(ModBlocks.THERMIUM_BRICKS_WALL);
+            entries.add(ModBlocks.PINLINE_BRICKS);
+            entries.add(ModBlocks.CHISELED_PINLINE_BRICKS);
+            entries.add(ModBlocks.PINLINE_BULB);
+            entries.add(ModBlocks.PINLINE_BRICKS_SLAB);
+            entries.add(ModBlocks.PINLINE_BRICKS_STAIRS);
+            entries.add(ModBlocks.PINLINE_BRICKS_WALL);
+            entries.add(ModBlocks.RAW_PINLINE_BRICKS);
+            entries.add(ModBlocks.CHISELED_RAW_PINLINE_BRICKS);
+            entries.add(ModBlocks.RAW_PINLINE_BULB);
+            entries.add(ModBlocks.RAW_PINLINE_BRICKS_SLAB);
+            entries.add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
+            entries.add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
+            entries.add(ModBlocks.MEMORY_BRICKS);
+            entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);
+            entries.add(ModBlocks.MEMORY_BULB);
+            entries.add(ModBlocks.MEMORY_BRICKS_SLAB);
+            entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
+            entries.add(ModBlocks.MEMORY_BRICKS_WALL);
+
+            entries.add(ModBlocks.PINK_ICE);
+            entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
+            entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_WOOD);
+            entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
+            entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_SAPLING);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_SLAB);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_STAIRS);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_FENCE);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_DOOR);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
+            entries.add(ModBlocks.CHORUS_LOG);
+            entries.add(ModBlocks.CHORUS_WOOD);
+            entries.add(ModBlocks.STRIPPED_CHORUS_LOG);
+            entries.add(ModBlocks.STRIPPED_CHORUS_WOOD);
+            entries.add(ModBlocks.CHORUS_PLANKS);
+            entries.add(ModBlocks.CHORUS_LEAVES);
+            entries.add(ModBlocks.CHORUS_SAPLING);
+            entries.add(ModBlocks.CHORUS_SLAB);
+            entries.add(ModBlocks.CHORUS_STAIRS);
+            entries.add(ModBlocks.CHORUS_FENCE);
+            entries.add(ModBlocks.CHORUS_FENCE_GATE);
+            entries.add(ModBlocks.CHORUS_DOOR);
+            entries.add(ModBlocks.CHORUS_TRAPDOOR);
+            entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
+            entries.add(ModBlocks.CHORUS_BUTTON);
+            entries.add(ModBlocks.ASHEN_LOG);
+            entries.add(ModBlocks.ASHEN_WOOD);
+            entries.add(ModBlocks.STRIPPED_ASHEN_LOG);
+            entries.add(ModBlocks.STRIPPED_ASHEN_WOOD);
+            entries.add(ModBlocks.ASHEN_PLANKS);
+            entries.add(ModBlocks.ASHEN_SLAB);
+            entries.add(ModBlocks.ASHEN_STAIRS);
+            entries.add(ModBlocks.ASHEN_FENCE);
+            entries.add(ModBlocks.ASHEN_FENCE_GATE);
+            entries.add(ModBlocks.ASHEN_DOOR);
+            entries.add(ModBlocks.ASHEN_TRAPDOOR);
+            entries.add(ModBlocks.ASHEN_PRESSURE_PLATE);
+            entries.add(ModBlocks.ASHEN_BUTTON);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(ModItems.GLAZED_CHORUS_FRUIT);
+            entries.add(ModItems.COAL_MEAL);
+            entries.add(ModItems.GELATINOUS_BUD);
+            entries.add(ModItems.ELYSIUM_APPLE);
+            entries.add(ModItems.GODFRUIT);
+            entries.add(ModItems.CRYSTAL_CARROT);
+            entries.add(ModItems.GEM_BERRY);
+            entries.add(ModItems.HAZEWEAVER);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(ModItems.QUARTZ_NUGGET);
+            entries.add(ModItems.DIAMOND_NUGGET);
+            entries.add(ModItems.EMERALD_NUGGET);
+            entries.add(ModItems.NETHERITE_NUGGET);
+            entries.add(ModItems.AMETHYST_NUGGET);
+            entries.add(ModItems.SULFUR);
+            entries.add(ModItems.RAW_KUNZITE);
+            entries.add(ModItems.KUNZITE_NUGGET);
+            entries.add(ModItems.KUNZITE);
+            entries.add(ModItems.PINK_BITS);
+            entries.add(ModItems.CRYSTAL_GLITTER);
+            entries.add(ModItems.ELYSIUM_NUGGET);
+            entries.add(ModItems.ELYSIUM_INGOT);
+            entries.add(ModItems.ELYSIAN_REDSTONE_CORE);
+            entries.add(ModItems.RAW_THERMIUM);
+            entries.add(ModItems.THERMIUM_NUGGET);
+            entries.add(ModItems.THERMIUM);
+            entries.add(ModItems.ENERGIZED_THERMIUM);
+            entries.add(ModItems.RAW_PINLINE);
+            entries.add(ModItems.PREPARED_PINLINE);
+            entries.add(ModItems.PINLINE_NUGGET);
+            entries.add(ModItems.PINLINE_INGOT);
+            entries.add(ModItems.MEMORY_SHARD);
+
+            entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
+            entries.add(ModItems.CHERRY_SMITHING_TEMPLATE);
+            entries.add(ModItems.SWORDMASTER_SMITHING_TEMPLATE);
+            entries.add(ModItems.SHATTER_SMITHING_TEMPLATE);
+            entries.add(ModItems.CREEPER_SMITHING_TEMPLATE);
+            entries.add(ModItems.CHESS_SMITHING_TEMPLATE);
+            entries.add(ModItems.WANDERER_SMITHING_TEMPLATE);
+            entries.add(ModItems.SHELL_SMITHING_TEMPLATE);
+            entries.add(ModItems.WINGFLAP_SMITHING_TEMPLATE);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(ModItems.KUNZITE_SWORD);
+            entries.add(ModItems.KUNZITE_AXE);
+            entries.add(ModItems.KUNZITE_HELMET);
+            entries.add(ModItems.KUNZITE_CHESTPLATE);
+            entries.add(ModItems.KUNZITE_LEGGINGS);
+            entries.add(ModItems.KUNZITE_BOOTS);
+
+            entries.add(ModItems.ELYSIUM_SWORD);
+            entries.add(ModItems.ELYSIUM_AXE);
+            entries.add(ModItems.ELYSIUM_HELMET);
+            entries.add(ModItems.ELYSIUM_CHESTPLATE);
+            entries.add(ModItems.ELYSIUM_LEGGINGS);
+            entries.add(ModItems.ELYSIUM_BOOTS);
+
+            entries.add(ModItems.PINLINE_SWORD);
+            entries.add(ModItems.PINLINE_AXE);
+            entries.add(ModItems.PINLINE_HELMET);
+            entries.add(ModItems.PINLINE_CHESTPLATE);
+            entries.add(ModItems.PINLINE_LEGGINGS);
+            entries.add(ModItems.PINLINE_BOOTS);
+            entries.add(ModItems.DAWNBLOOMER);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(ModBlocks.COMPRESSED_END_STONE);
+            entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
+            entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
+
+            entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
+            entries.add(ModBlocks.CRYSTAL_CHERRY_SAPLING);
+
+            entries.add(ModBlocks.CHORUS_LOG);
+            entries.add(ModBlocks.CHORUS_LEAVES);
+            entries.add(ModBlocks.CHORUS_SAPLING);
+
+            entries.add(ModBlocks.ASHEN_LOG);
+
+            entries.add(ModBlocks.SMALL_END_GRASS);
+            entries.add(ModBlocks.MEDIUM_END_GRASS);
+            entries.add(ModBlocks.LARGE_END_GRASS);
+            entries.add(ModBlocks.CHORUS_LILY);
+            entries.add(ModItems.HAZEWEAVER);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
+            entries.add(ModItems.CRAWLER_SPAWN_EGG);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(ModBlocks.THERMIUM_BLASTER);
+            entries.add(ModBlocks.DISPLAY);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.add(ModItems.NETHERITE_MULTITOOL);
+            entries.add(ModItems.KUNZITE_PICKAXE);
+            entries.add(ModItems.KUNZITE_AXE);
+            entries.add(ModItems.KUNZITE_SHOVEL);
+            entries.add(ModItems.KUNZITE_HOE);
+            entries.add(ModItems.ELYSIUM_PICKAXE);
+            entries.add(ModItems.ELYSIUM_AXE);
+            entries.add(ModItems.ELYSIUM_SHOVEL);
+            entries.add(ModItems.ELYSIUM_HOE);
+            entries.add(ModItems.ELYSIUM_HAMMER);
+            entries.add(ModItems.ELYSIUM_MULTITOOL);
+            entries.add(ModItems.PINLINE_PICKAXE);
+            entries.add(ModItems.PINLINE_AXE);
+            entries.add(ModItems.PINLINE_SHOVEL);
+            entries.add(ModItems.PINLINE_HOE);
+            entries.add(ModItems.BEDROCK_BREAKER);
+        });
     }
 }
