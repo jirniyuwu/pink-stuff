@@ -19,10 +19,11 @@ import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.particle.ModParticles;
-import net.jirniy.pinkstuff.util.ModPotions;
 import net.jirniy.pinkstuff.recipe.ModRecipes;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.util.HammerUsageEvent;
+import net.jirniy.pinkstuff.util.ModMapDecorations;
+import net.jirniy.pinkstuff.util.ModPotions;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -54,6 +55,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModParticles.registerParticles();
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
+		ModMapDecorations.registerMapDecorations();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);

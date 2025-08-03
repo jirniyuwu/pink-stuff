@@ -2,6 +2,56 @@
   "type": "minecraft:chest",
   "pools": [
     {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 13
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "decoration": "pinkstuff:end_temple",
+              "destination": "pinkstuff:end_temple",
+              "function": "minecraft:exploration_map",
+              "skip_existing_chunks": false,
+              "zoom": 2
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.pinkstuff.end_temple"
+              },
+              "target": "item_name"
+            }
+          ],
+          "name": "minecraft:map"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "decoration": "pinkstuff:end_city",
+              "destination": "pinkstuff:end_city",
+              "function": "minecraft:exploration_map",
+              "skip_existing_chunks": false,
+              "zoom": 2
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.pinkstuff.end_city"
+              },
+              "target": "item_name"
+            }
+          ],
+          "name": "minecraft:map"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
       "bonus_rolls": 4,
       "entries": [
         {
@@ -192,20 +242,6 @@
         "max": 7,
         "min": 2
       }
-    },
-    {
-      "bonus_rolls": 0,
-      "entries": [
-        {
-          "type": "minecraft:empty",
-          "weight": 29
-        },
-        {
-          "type": "minecraft:item",
-          "name": "pinkstuff:shell_armor_trim_smithing_template"
-        }
-      ],
-      "rolls": 1
     }
   ]
 }

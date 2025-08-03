@@ -266,6 +266,10 @@
   "trim_material.pinkstuff.pinline": "Pinline Material",
   "trim_material.pinkstuff.raw_pinline": "Raw Pinline Material",
 
+  "filled_map.pinkstuff.end_temple": "End Explorer Map",
+  "filled_map.pinkstuff.end_city": "End Explorer Map",
+  "filled_map.pinkstuff.chambers": "Amethyst Chambers Map",
+
   "tag.item.pinkstuff.bricks_craftable": "Bricks Crafting",
   "tag.item.pinkstuff.chorus_logs": "Chorus Logs",
   "tag.item.pinkstuff.ashen_logs": "Ashen Logs",
