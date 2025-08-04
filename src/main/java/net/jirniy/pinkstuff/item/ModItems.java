@@ -168,6 +168,8 @@ public class ModItems {
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.UNCOMMON)));
     public static final Item WINGFLAP_SMITHING_TEMPLATE = registerItem("wingflap_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
+    public static final Item OVERGROWTH_SMITHING_TEMPLATE = registerItem("overgrowth_armor_trim_smithing_template",
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {

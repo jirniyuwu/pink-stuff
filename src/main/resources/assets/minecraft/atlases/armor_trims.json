@@ -57,7 +57,9 @@
         "pinkstuff:trims/entity/humanoid/shell",
         "pinkstuff:trims/entity/humanoid_leggings/shell",
         "pinkstuff:trims/entity/humanoid/wingflap",
-        "pinkstuff:trims/entity/humanoid_leggings/wingflap"
+        "pinkstuff:trims/entity/humanoid_leggings/wingflap",
+        "pinkstuff:trims/entity/humanoid/overgrowth",
+        "pinkstuff:trims/entity/humanoid_leggings/overgrowth"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {

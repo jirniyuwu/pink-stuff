@@ -1240,6 +1240,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTrimRecipe(ModItems.WINGFLAP_SMITHING_TEMPLATE, ModTrimPatterns.WINGFLAP,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "wingflap")));
                 offerSmithingTemplateCopyingRecipe(ModItems.WINGFLAP_SMITHING_TEMPLATE, Items.PURPUR_BLOCK);
+                offerSmithingTrimRecipe(ModItems.OVERGROWTH_SMITHING_TEMPLATE, ModTrimPatterns.OVERGROWTH,
+                        RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "overgrowth")));
+                offerSmithingTemplateCopyingRecipe(ModItems.OVERGROWTH_SMITHING_TEMPLATE, Blocks.MOSSY_COBBLESTONE);
             }
         };
     }
