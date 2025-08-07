@@ -176,7 +176,10 @@ public class CrawlerEntity extends AnimalEntity {
             variant = CrawlerVariant.EMERALD;
         } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.IS_NETHER)) {
             variant = CrawlerVariant.QUARTZ;
-        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.VILLAGE_SNOWY_HAS_STRUCTURE)) {
+        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.VILLAGE_SNOWY_HAS_STRUCTURE) ||
+                   world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.FROZEN_OCEAN ||
+                   world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.DEEP_FROZEN_OCEAN ||
+                   world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.FROZEN_RIVER) {
             variant = CrawlerVariant.ICE;
         } else {
             variant = CrawlerVariant.DEFAULT;

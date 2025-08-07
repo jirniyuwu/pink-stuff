@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      "structure": "pinkstuff:pillager_ship_small",
+      "weight": 3
+    },
+    {
+      "structure": "pinkstuff:pillager_ship_large",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 32,
+    "separation": 5,
+    "spread_type": "linear",
+    "salt": 1588915
+  }
+}
