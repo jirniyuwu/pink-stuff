@@ -1107,6 +1107,55 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(ModItems.PINLINE_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_pinline")));
 
+                createShaped(RecipeCategory.MISC, ModBlocks.AMETHYST_CLUMP, 1)
+                        .pattern("S S")
+                        .pattern(" S ")
+                        .pattern("S S")
+                        .input('S', ModItems.AMETHYST_NUGGET)
+                        .criterion(hasItem(ModItems.AMETHYST_NUGGET), conditionsFromItem(ModItems.AMETHYST_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_clump")));
+                createShaped(RecipeCategory.MISC, ModBlocks.KUNZITE_CLUMP, 1)
+                        .pattern("S S")
+                        .pattern(" S ")
+                        .pattern("S S")
+                        .input('S', ModItems.KUNZITE_NUGGET)
+                        .criterion(hasItem(ModItems.KUNZITE_NUGGET), conditionsFromItem(ModItems.KUNZITE_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_clump")));
+                createShaped(RecipeCategory.MISC, ModBlocks.DIAMOND_CLUMP, 1)
+                        .pattern("S S")
+                        .pattern(" S ")
+                        .pattern("S S")
+                        .input('S', ModItems.DIAMOND_NUGGET)
+                        .criterion(hasItem(ModItems.DIAMOND_NUGGET), conditionsFromItem(ModItems.DIAMOND_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "diamond_clump")));
+                createShaped(RecipeCategory.MISC, ModBlocks.EMERALD_CLUMP, 1)
+                        .pattern("S S")
+                        .pattern(" S ")
+                        .pattern("S S")
+                        .input('S', ModItems.EMERALD_NUGGET)
+                        .criterion(hasItem(ModItems.EMERALD_NUGGET), conditionsFromItem(ModItems.EMERALD_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "emerald_clump")));
+                createShaped(RecipeCategory.MISC, ModBlocks.QUARTZ_CLUMP, 1)
+                        .pattern("S S")
+                        .pattern(" S ")
+                        .pattern("S S")
+                        .input('S', ModItems.QUARTZ_NUGGET)
+                        .criterion(hasItem(ModItems.QUARTZ_NUGGET), conditionsFromItem(ModItems.QUARTZ_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "quartz_clump")));
+                createShaped(RecipeCategory.MISC, ModBlocks.THERMIUM_CLUMP, 1)
+                        .pattern("S S")
+                        .pattern(" S ")
+                        .pattern("S S")
+                        .input('S', ModItems.THERMIUM_NUGGET)
+                        .criterion(hasItem(ModItems.THERMIUM_NUGGET), conditionsFromItem(ModItems.THERMIUM_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_clump")));
+
                 createShapeless(RecipeCategory.FOOD, ModItems.COAL_MEAL, 2)
                         .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
                         .input(Items.COAL).input(Items.COAL).input(Items.COAL)

@@ -2,6 +2,13 @@
   "item.pinkstuff.crawler_spawn_egg": "Crawler Spawn Egg",
   "entity.pinkstuff.crawler": "Crawler",
 
+  "item.pinkstuff.diamond_clump": "Diamond Clump",
+  "item.pinkstuff.emerald_clump": "Emerald Clump",
+  "item.pinkstuff.quartz_clump": "Quartz Clump",
+  "item.pinkstuff.amethyst_clump": "Amethyst Clump",
+  "item.pinkstuff.kunzite_clump": "Kunzite Clump",
+  "item.pinkstuff.thermium_clump": "Thermium Clump",
+
   "item.pinkstuff.diamond_nugget": "Diamond Nugget",
   "item.pinkstuff.emerald_nugget": "Emerald Nugget",
   "item.pinkstuff.quartz_nugget": "Quartz Nugget",

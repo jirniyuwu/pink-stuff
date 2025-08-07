@@ -7,6 +7,7 @@ import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.MultifaceBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -24,6 +25,7 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.math.Direction;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -193,6 +195,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(Blocks.LARGE_AMETHYST_BUD, multipleOreDrops(Blocks.LARGE_AMETHYST_BUD, ModItems.AMETHYST_NUGGET, 2, 8));
         addDrop(Blocks.MEDIUM_AMETHYST_BUD, multipleOreDrops(Blocks.MEDIUM_AMETHYST_BUD, ModItems.AMETHYST_NUGGET, 0, 3));
 
+        addDrop(ModBlocks.AMETHYST_CLUMP, clumpDrops(ModBlocks.AMETHYST_CLUMP, ModItems.AMETHYST_NUGGET, 3));
+        addDrop(ModBlocks.DIAMOND_CLUMP, clumpDrops(ModBlocks.DIAMOND_CLUMP, ModItems.DIAMOND_NUGGET, 2));
+        addDrop(ModBlocks.EMERALD_CLUMP, clumpDrops(ModBlocks.EMERALD_CLUMP, ModItems.EMERALD_NUGGET, 3));
+        addDrop(ModBlocks.KUNZITE_CLUMP, clumpDrops(ModBlocks.KUNZITE_CLUMP, ModItems.KUNZITE_NUGGET, 3));
+        addDrop(ModBlocks.THERMIUM_CLUMP, clumpDrops(ModBlocks.THERMIUM_CLUMP, ModItems.THERMIUM_NUGGET, 7));
+        addDrop(ModBlocks.QUARTZ_CLUMP, clumpDrops(ModBlocks.QUARTZ_CLUMP, ModItems.QUARTZ_NUGGET, 3));
+
         this.addDrop(ModBlocks.GEM_BERRY_BUSH,
                 block -> this.applyExplosionDecay(
                         block,LootTable.builder().pool(LootPool.builder().conditionally(
@@ -213,6 +222,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+    }
+
+    public LootTable.Builder clumpDrops(Block drop, Item item, float count) {
+        return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
+                ItemEntry.builder(item)
+                                .apply(Direction.values(), (direction) -> SetCountLootFunction.builder(UniformLootNumberProvider.create(1, count), true)
+                                        .conditionally(BlockStatePropertyLootCondition.builder(drop)
+                                                .properties(net.minecraft.predicate.StatePredicate.Builder.create().exactMatch(MultifaceBlock.getProperty(direction), true)))))
+                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(-1.0F), true))));
     }
 
     public LootTable.Builder leavesWithItemDrops(Block leaves, Block sapling, float saplingChance, Item item, float itemChance) {

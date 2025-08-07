@@ -139,6 +139,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINLINE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINLINE_BLOCK);
 
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.AMETHYST_CLUMP);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.DIAMOND_CLUMP);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.EMERALD_CLUMP);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.KUNZITE_CLUMP);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.THERMIUM_CLUMP);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.QUARTZ_CLUMP);
+
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.CHORUS_LEAVES, TexturedModel.LEAVES);

@@ -21,8 +21,11 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CRAWLER_SPAWN_EGG);
                         entries.add(ModItems.QUARTZ_NUGGET);
+                        entries.add(ModBlocks.QUARTZ_CLUMP);
                         entries.add(ModItems.DIAMOND_NUGGET);
+                        entries.add(ModBlocks.DIAMOND_CLUMP);
                         entries.add(ModItems.EMERALD_NUGGET);
+                        entries.add(ModBlocks.EMERALD_CLUMP);
                         entries.add(ModItems.NETHERITE_NUGGET);
 
                         entries.add(ModBlocks.COMPRESSED_END_STONE);
@@ -32,6 +35,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
 
                         entries.add(ModItems.AMETHYST_NUGGET);
+                        entries.add(ModBlocks.AMETHYST_CLUMP);
                         entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
                         entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
                         entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
@@ -50,6 +54,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.RAW_KUNZITE);
                         entries.add(ModItems.KUNZITE_NUGGET);
+                        entries.add(ModBlocks.KUNZITE_CLUMP);
                         entries.add(ModItems.KUNZITE);
                         entries.add(ModItems.PINK_BITS);
 
@@ -81,6 +86,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.RAW_THERMIUM);
                         entries.add(ModItems.THERMIUM_NUGGET);
+                        entries.add(ModBlocks.THERMIUM_CLUMP);
                         entries.add(ModItems.THERMIUM);
                         entries.add(ModItems.ENERGIZED_THERMIUM);
                         entries.add(ModBlocks.THERMIUM_ORE);

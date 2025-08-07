@@ -27,6 +27,18 @@ public class ModBlocks {
     public static final Block PINK_ICE = registerBlock("pink_ice",
             properties -> new TranslucentBlock(properties.strength(8f).slipperiness(1.01f).nonOpaque()
                     .sounds(BlockSoundGroup.GLASS).mapColor(MapColor.DULL_PINK)));
+    public static final Block DIAMOND_CLUMP = registerBlock("diamond_clump",
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+                    .sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block EMERALD_CLUMP = registerBlock("emerald_clump",
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+                    .sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.EMERALD_GREEN)));
+    public static final Block AMETHYST_CLUMP = registerBlock("amethyst_clump",
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+                    .sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.PURPLE)));
+    public static final Block QUARTZ_CLUMP = registerBlock("quartz_clump",
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+                    .sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.TERRACOTTA_WHITE)));
 
     public static final Block COMPRESSED_END_STONE = registerBlock("compressed_end_stone",
             properties -> new Block(properties.strength(10f)
@@ -47,6 +59,9 @@ public class ModBlocks {
     public static final Block AMETHYST_KUNZITE_ORE = registerBlock("amethyst_kunzite_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
+    public static final Block KUNZITE_CLUMP = registerBlock("kunzite_clump",
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+                    .sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.PURPLE)));
     public static final Block ELYSIUM_BLOCK = registerBlock("elysium_block",
             properties -> new Block(properties.strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
@@ -66,6 +81,9 @@ public class ModBlocks {
     public static final Block DEEPSLATE_THERMIUM_ORE = registerBlock("deepslate_thermium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(6f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).luminance(state -> 2).mapColor(MapColor.DARK_GREEN)));
+    public static final Block THERMIUM_CLUMP = registerBlock("thermium_clump",
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().luminance(state -> 2)
+                    .sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
 
     public static final Block NETHER_SULFUR_ORE = registerBlock("nether_sulfur_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),

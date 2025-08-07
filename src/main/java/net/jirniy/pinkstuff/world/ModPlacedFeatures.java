@@ -8,6 +8,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.heightprovider.BiasedToBottomHeightProvider;
@@ -36,6 +38,12 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> COMPRESSEND_END_STONE_PLACED_KEY = registerKey("compressed_end_stone_placed");
     public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_LUSH_PLACED_KEY = registerKey("kunzite_geode_lush_placed");
     public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_CHERRY_PLACED_KEY = registerKey("kunzite_geode_cherry_placed");
+    public static final RegistryKey<PlacedFeature> AMETHYST_CLUMP_PLACED_KEY = registerKey("amethyst_clump_placed");
+    public static final RegistryKey<PlacedFeature> DIAMOND_CLUMP_PLACED_KEY = registerKey("diamond_clump_placed");
+    public static final RegistryKey<PlacedFeature> EMERALD_CLUMP_PLACED_KEY = registerKey("emerald_clump_placed");
+    public static final RegistryKey<PlacedFeature> QUARTZ_CLUMP_PLACED_KEY = registerKey("quartz_clump_placed");
+    public static final RegistryKey<PlacedFeature> KUNZITE_CLUMP_PLACED_KEY = registerKey("kunzite_clump_placed");
+    public static final RegistryKey<PlacedFeature> THERMIUM_CLUMP_PLACED_KEY = registerKey("thermium_clump_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -70,6 +78,36 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(50), 2)))
         );
+
+        register(context, AMETHYST_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETHYST_CLUMP_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(10, 50)),
+                        PlacedFeatures.BOTTOM_TO_120_RANGE, SquarePlacementModifier.of(),
+                        SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
+                        BiomePlacementModifier.of()});
+        register(context, DIAMOND_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DIAMOND_CLUMP_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(10, 30)),
+                        HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(30)), SquarePlacementModifier.of(),
+                        SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
+                        BiomePlacementModifier.of()});
+        register(context, EMERALD_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EMERALD_CLUMP_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(10, 60)),
+                        HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(120)), SquarePlacementModifier.of(),
+                        SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
+                        BiomePlacementModifier.of()});
+        register(context, QUARTZ_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.QUARTZ_CLUMP_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(20, 30)),
+                        PlacedFeatures.BOTTOM_TO_TOP_RANGE, SquarePlacementModifier.of(),
+                        BiomePlacementModifier.of()});
+        register(context, KUNZITE_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_CLUMP_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(30, 70)),
+                        PlacedFeatures.BOTTOM_TO_120_RANGE, SquarePlacementModifier.of(),
+                        SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
+                        BiomePlacementModifier.of()});
+        register(context, THERMIUM_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.THERMIUM_CLUMP_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(5, 10)),
+                        HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(20)), SquarePlacementModifier.of(),
+                        SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
+                        BiomePlacementModifier.of()});
 
         register(context, GEM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(

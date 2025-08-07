@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.world.gen;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.jirniy.pinkstuff.world.ModPlacedFeatures;
+import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 
@@ -29,5 +30,18 @@ public class ModOreGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.COMPRESSEND_END_STONE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.AMETHYST_CLUMP_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.DIAMOND_CLUMP_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.EMERALD_CLUMP_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.QUARTZ_CLUMP_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CHERRY_GROVE), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.KUNZITE_CLUMP_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.THERMIUM_CLUMP_PLACED_KEY);
     }
 }
