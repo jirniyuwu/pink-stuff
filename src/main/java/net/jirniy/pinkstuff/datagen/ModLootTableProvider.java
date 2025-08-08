@@ -187,6 +187,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MEMORIA_BOURPEER);
         addDrop(ModBlocks.HAZEWEAVER_PLANT, ModItems.HAZEWEAVER);
 
+        addDrop(ModBlocks.KUNZITE_ROD);
+        addDrop(ModBlocks.AMETHYST_ROD);
+        addDrop(ModBlocks.THERMIUM_ROD);
+        addDrop(ModBlocks.PINLINE_ROD);
+        addDrop(ModBlocks.RAW_PINLINE_ROD);
+        addDrop(ModBlocks.ELYSIUM_ROD);
+
         addDropWithSilkTouch(ModBlocks.SMALL_END_GRASS);
         addDropWithSilkTouch(ModBlocks.MEDIUM_END_GRASS);
         addDropWithSilkTouch(ModBlocks.LARGE_END_GRASS);

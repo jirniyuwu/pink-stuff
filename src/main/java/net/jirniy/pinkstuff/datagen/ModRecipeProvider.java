@@ -1156,6 +1156,55 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_clump")));
 
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KUNZITE_ROD, 4)
+                        .pattern("R")
+                        .pattern("M")
+                        .input('R', Items.BLAZE_ROD)
+                        .input('M', ModItems.KUNZITE)
+                        .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_rod")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ELYSIUM_ROD, 4)
+                        .pattern("R")
+                        .pattern("M")
+                        .input('R', Items.BLAZE_ROD)
+                        .input('M', ModItems.ELYSIUM_INGOT)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_rod")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_ROD, 4)
+                        .pattern("R")
+                        .pattern("M")
+                        .input('R', Items.BLAZE_ROD)
+                        .input('M', Items.AMETHYST_SHARD)
+                        .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_rod")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THERMIUM_ROD, 4)
+                        .pattern("R")
+                        .pattern("M")
+                        .input('R', Items.BLAZE_ROD)
+                        .input('M', ModItems.THERMIUM)
+                        .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_rod")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_ROD, 4)
+                        .pattern("R")
+                        .pattern("M")
+                        .input('R', Items.BLAZE_ROD)
+                        .input('M', ModItems.PINLINE_INGOT)
+                        .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_rod")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_PINLINE_ROD, 4)
+                        .pattern("R")
+                        .pattern("M")
+                        .input('R', Items.BLAZE_ROD)
+                        .input('M', ModItems.RAW_PINLINE)
+                        .criterion(hasItem(ModItems.RAW_PINLINE), conditionsFromItem(ModItems.RAW_PINLINE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_rod")));
+
                 createShapeless(RecipeCategory.FOOD, ModItems.COAL_MEAL, 2)
                         .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
                         .input(Items.COAL).input(Items.COAL).input(Items.COAL)

@@ -66,6 +66,10 @@ public class ModBlocks {
             properties -> new Block(properties.strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
 
+    public static final Block KUNZITE_ROD = registerBlock("kunzite_rod",
+            properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 15)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
+
     public static final Block THERMIUM_BLOCK = registerBlock("thermium_block",
             properties -> new Block(properties.strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 11).mapColor(MapColor.LIME)));
@@ -84,6 +88,10 @@ public class ModBlocks {
     public static final Block THERMIUM_CLUMP = registerBlock("thermium_clump",
             properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().luminance(state -> 2)
                     .sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
+
+    public static final Block THERMIUM_ROD = registerBlock("thermium_rod",
+            properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 15)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
 
     public static final Block NETHER_SULFUR_ORE = registerBlock("nether_sulfur_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
@@ -104,6 +112,13 @@ public class ModBlocks {
     public static final Block COMPRESSED_END_PINLINE_ORE = registerBlock("compressed_end_pinline_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(5, 7),
                     properties.strength(13f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool().mapColor(MapColor.PALE_GREEN)));
+
+    public static final Block PINLINE_ROD = registerBlock("pinline_rod",
+            properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 15)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.PURPLE)));
+    public static final Block RAW_PINLINE_ROD = registerBlock("raw_pinline_rod",
+            properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 11)
+                    .requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
 
     public static final Block CRYSTAL_CHERRY_LOG = registerBlock("crystal_cherry_log",
             properties -> new PillarBlock(properties
@@ -189,6 +204,13 @@ public class ModBlocks {
                     .strength(1.2F).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
     public static final Block ASHEN_PLANKS = registerBlock("ashen_planks",
             properties -> new Block(properties.strength(1.3f).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
+
+    public static final Block AMETHYST_ROD = registerBlock("amethyst_rod",
+            properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 15)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.PURPLE)));
+    public static final Block ELYSIUM_ROD = registerBlock("elysium_rod",
+            properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 15)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PINK)));
 
     public static final Block AMETHYST_BRICKS = registerBlock("amethyst_bricks",
             properties -> new Block(properties.strength(3f)

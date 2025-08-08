@@ -47,6 +47,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AMETHYST_BRICKS_SLAB);
                         entries.add(ModBlocks.AMETHYST_BRICKS_STAIRS);
                         entries.add(ModBlocks.AMETHYST_BRICKS_WALL);
+                        entries.add(ModBlocks.AMETHYST_ROD);
 
                         entries.add(ModItems.SULFUR);
                         entries.add(ModBlocks.NETHER_SULFUR_ORE);
@@ -70,6 +71,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.KUNZITE_BRICKS_SLAB);
                         entries.add(ModBlocks.KUNZITE_BRICKS_STAIRS);
                         entries.add(ModBlocks.KUNZITE_BRICKS_WALL);
+                        entries.add(ModBlocks.KUNZITE_ROD);
 
                         entries.add(ModItems.CRYSTAL_GLITTER);
                         entries.add(ModItems.ELYSIUM_NUGGET);
@@ -83,6 +85,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ELYSIUM_BRICKS_SLAB);
                         entries.add(ModBlocks.ELYSIUM_BRICKS_STAIRS);
                         entries.add(ModBlocks.ELYSIUM_BRICKS_WALL);
+                        entries.add(ModBlocks.ELYSIUM_ROD);
 
                         entries.add(ModItems.RAW_THERMIUM);
                         entries.add(ModItems.THERMIUM_NUGGET);
@@ -101,6 +104,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THERMIUM_BRICKS_SLAB);
                         entries.add(ModBlocks.THERMIUM_BRICKS_STAIRS);
                         entries.add(ModBlocks.THERMIUM_BRICKS_WALL);
+                        entries.add(ModBlocks.THERMIUM_ROD);
                         entries.add(ModBlocks.DISPLAY);
                         entries.add(ModBlocks.THERMIUM_BLASTER);
 
@@ -120,6 +124,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINLINE_BRICKS_SLAB);
                         entries.add(ModBlocks.PINLINE_BRICKS_STAIRS);
                         entries.add(ModBlocks.PINLINE_BRICKS_WALL);
+                        entries.add(ModBlocks.PINLINE_ROD);
 
                         entries.add(ModBlocks.RAW_PINLINE_BRICKS);
                         entries.add(ModBlocks.CHISELED_RAW_PINLINE_BRICKS);
@@ -127,6 +132,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_PINLINE_BRICKS_SLAB);
                         entries.add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
                         entries.add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
+                        entries.add(ModBlocks.RAW_PINLINE_ROD);
 
                         entries.add(ModItems.MEMORY_SHARD);
                         entries.add(ModBlocks.MEMORY_BRICKS);

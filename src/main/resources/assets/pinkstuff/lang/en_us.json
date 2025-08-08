@@ -71,6 +71,7 @@
   "item.pinkstuff.amethyst_bricks_slab": "Amethyst Brick Slab",
   "item.pinkstuff.amethyst_bricks_stairs": "Amethyst Brick Stairs",
   "item.pinkstuff.amethyst_bricks_wall": "Amethyst Brick Wall",
+  "item.pinkstuff.amethyst_rod": "Amethyst Rod",
 
   "item.pinkstuff.kunzite_bricks": "Kunzite Bricks",
   "item.pinkstuff.chiseled_kunzite_bricks": "Chiseled Kunzite Bricks",
@@ -78,6 +79,7 @@
   "item.pinkstuff.kunzite_bricks_slab": "Kunzite Brick Slab",
   "item.pinkstuff.kunzite_bricks_stairs": "Kunzite Brick Stairs",
   "item.pinkstuff.kunzite_bricks_wall": "Kunzite Brick Wall",
+  "item.pinkstuff.kunzite_rod": "Kunzite Rod",
 
   "item.pinkstuff.elysium_bricks": "Elysian Bricks",
   "item.pinkstuff.chiseled_elysium_bricks": "Chiseled Elysian Bricks",
@@ -85,6 +87,7 @@
   "item.pinkstuff.elysium_bricks_slab": "Elysian Brick Slab",
   "item.pinkstuff.elysium_bricks_stairs": "Elysian Brick Stairs",
   "item.pinkstuff.elysium_bricks_wall": "Elysian Brick Wall",
+  "item.pinkstuff.elysium_rod": "Elysian Rod",
 
   "item.pinkstuff.thermium_bricks": "Thermium Bricks",
   "item.pinkstuff.chiseled_thermium_bricks": "Chiseled Thermium Bricks",
@@ -92,6 +95,7 @@
   "item.pinkstuff.thermium_bricks_slab": "Thermium Brick Slab",
   "item.pinkstuff.thermium_bricks_stairs": "Thermium Brick Stairs",
   "item.pinkstuff.thermium_bricks_wall": "Thermium Brick Wall",
+  "item.pinkstuff.thermium_rod": "Thermium Rod",
 
   "item.pinkstuff.memory_shard": "Memory Shard",
   "item.pinkstuff.memory_bricks": "Memoria Bricks",
@@ -107,6 +111,7 @@
   "item.pinkstuff.pinline_bricks_slab": "Pinline Brick Slab",
   "item.pinkstuff.pinline_bricks_stairs": "Pinline Brick Stairs",
   "item.pinkstuff.pinline_bricks_wall": "Pinline Brick Wall",
+  "item.pinkstuff.pinline_rod": "Pinline Rod",
 
   "item.pinkstuff.raw_pinline_bricks": "Raw Pinline Bricks",
   "item.pinkstuff.chiseled_raw_pinline_bricks": "Chiseled Raw Pinline Bricks",
@@ -114,6 +119,7 @@
   "item.pinkstuff.raw_pinline_bricks_slab": "Raw Pinline Brick Slab",
   "item.pinkstuff.raw_pinline_bricks_stairs": "Raw Pinline Brick Stairs",
   "item.pinkstuff.raw_pinline_bricks_wall": "Raw Pinline Brick Wall",
+  "item.pinkstuff.raw_pinline_rod": "Raw Pinline Rod",
 
   "item.pinkstuff.compressed_end_stone": "Compressed End Stone",
   "item.pinkstuff.compressed_end_stone_bricks": "Compressed End Stone Bricks",
