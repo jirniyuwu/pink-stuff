@@ -86,7 +86,8 @@ public class ModBlocks {
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(6f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).luminance(state -> 2).mapColor(MapColor.DARK_GREEN)));
     public static final Block THERMIUM_CLUMP = registerBlock("thermium_clump",
-            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().luminance(state -> 2)
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+                    .luminance(state -> ModMultifaceBlock.luminanceSupplier(state, 1))
                     .sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
 
     public static final Block THERMIUM_ROD = registerBlock("thermium_rod",

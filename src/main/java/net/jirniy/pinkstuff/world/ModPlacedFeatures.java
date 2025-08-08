@@ -80,12 +80,12 @@ public class ModPlacedFeatures {
         );
 
         register(context, AMETHYST_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETHYST_CLUMP_KEY),
-                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(10, 50)),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(10, 30)),
                         PlacedFeatures.BOTTOM_TO_120_RANGE, SquarePlacementModifier.of(),
                         SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
                         BiomePlacementModifier.of()});
         register(context, DIAMOND_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DIAMOND_CLUMP_KEY),
-                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(10, 30)),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(5, 10)),
                         HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(30)), SquarePlacementModifier.of(),
                         SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
                         BiomePlacementModifier.of()});
@@ -95,16 +95,16 @@ public class ModPlacedFeatures {
                         SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
                         BiomePlacementModifier.of()});
         register(context, QUARTZ_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.QUARTZ_CLUMP_KEY),
-                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(20, 30)),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(15, 40)),
                         PlacedFeatures.BOTTOM_TO_TOP_RANGE, SquarePlacementModifier.of(),
                         BiomePlacementModifier.of()});
         register(context, KUNZITE_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_CLUMP_KEY),
-                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(30, 70)),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(15, 50)),
                         PlacedFeatures.BOTTOM_TO_120_RANGE, SquarePlacementModifier.of(),
                         SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
                         BiomePlacementModifier.of()});
         register(context, THERMIUM_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.THERMIUM_CLUMP_KEY),
-                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(5, 10)),
+                new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(1, 3)),
                         HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(20)), SquarePlacementModifier.of(),
                         SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
                         BiomePlacementModifier.of()});

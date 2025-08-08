@@ -206,7 +206,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DIAMOND_CLUMP, clumpDrops(ModBlocks.DIAMOND_CLUMP, ModItems.DIAMOND_NUGGET, 2));
         addDrop(ModBlocks.EMERALD_CLUMP, clumpDrops(ModBlocks.EMERALD_CLUMP, ModItems.EMERALD_NUGGET, 3));
         addDrop(ModBlocks.KUNZITE_CLUMP, clumpDrops(ModBlocks.KUNZITE_CLUMP, ModItems.KUNZITE_NUGGET, 3));
-        addDrop(ModBlocks.THERMIUM_CLUMP, clumpDrops(ModBlocks.THERMIUM_CLUMP, ModItems.THERMIUM_NUGGET, 7));
+        addDrop(ModBlocks.THERMIUM_CLUMP, clumpDrops(ModBlocks.THERMIUM_CLUMP, ModItems.THERMIUM_NUGGET, 1));
         addDrop(ModBlocks.QUARTZ_CLUMP, clumpDrops(ModBlocks.QUARTZ_CLUMP, ModItems.QUARTZ_NUGGET, 3));
 
         this.addDrop(ModBlocks.GEM_BERRY_BUSH,

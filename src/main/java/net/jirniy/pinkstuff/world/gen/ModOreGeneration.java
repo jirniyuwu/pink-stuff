@@ -33,7 +33,7 @@ public class ModOreGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.AMETHYST_CLUMP_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DEEP_DARK), GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.DIAMOND_CLUMP_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.EMERALD_CLUMP_PLACED_KEY);

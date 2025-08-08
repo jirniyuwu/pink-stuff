@@ -332,6 +332,13 @@ public class ModItemGroups {
             entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
             entries.add(ModBlocks.MEMORY_BRICKS_WALL);
 
+            entries.add(ModBlocks.AMETHYST_ROD);
+            entries.add(ModBlocks.KUNZITE_ROD);
+            entries.add(ModBlocks.ELYSIUM_ROD);
+            entries.add(ModBlocks.THERMIUM_ROD);
+            entries.add(ModBlocks.RAW_PINLINE_ROD);
+            entries.add(ModBlocks.PINLINE_ROD);
+
             entries.add(ModBlocks.PINK_ICE);
             entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
             entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
@@ -468,6 +475,18 @@ public class ModItemGroups {
             entries.add(ModBlocks.LARGE_END_GRASS);
             entries.add(ModBlocks.CHORUS_LILY);
             entries.add(ModItems.HAZEWEAVER);
+            entries.add(ModBlocks.AMETHYST_PARTERS);
+            entries.add(ModBlocks.KUNZITE_LOVELILY);
+            entries.add(ModBlocks.ELYSIAN_SKYBERRY);
+            entries.add(ModBlocks.THERMIUM_WILTBORN);
+            entries.add(ModBlocks.MEMORIA_BOURPEER);
+
+            entries.add(ModBlocks.AMETHYST_CLUMP);
+            entries.add(ModBlocks.DIAMOND_CLUMP);
+            entries.add(ModBlocks.EMERALD_CLUMP);
+            entries.add(ModBlocks.QUARTZ_CLUMP);
+            entries.add(ModBlocks.KUNZITE_CLUMP);
+            entries.add(ModBlocks.THERMIUM_CLUMP);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
             entries.add(ModItems.CRAWLER_SPAWN_EGG);
