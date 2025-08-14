@@ -84,38 +84,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.NETHER_SULFUR_ORE);
                         entries.add(ModBlocks.SULFUR_BLOCK);
 
-                        entries.add(ModItems.RAW_MOONSTEEL);
-                        entries.add(ModItems.MOONSTEEL_NUGGET);
-                        entries.add(ModItems.MOONSTEEL_INGOT);
-
-                        entries.add(ModBlocks.STYXIAN_MOONSTEEL_ORE);
-                        entries.add(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE);
-                        entries.add(ModBlocks.RAW_MOONSTEEL_BLOCK);
-                        entries.add(ModBlocks.MOONSTEEL_BLOCK);
-
-                        entries.add(ModBlocks.MOONSTEEL_BRICKS);
-                        entries.add(ModBlocks.CHISELED_MOONSTEEL_BRICKS);
-                        entries.add(ModBlocks.MOONSTEEL_BULB);
-                        entries.add(ModBlocks.MOONSTEEL_BRICKS_SLAB);
-                        entries.add(ModBlocks.MOONSTEEL_BRICKS_STAIRS);
-                        entries.add(ModBlocks.MOONSTEEL_BRICKS_WALL);
-
-                        entries.add(ModBlocks.BLACK_GOOP);
-                        entries.add(ModBlocks.CORRUPT_ORE);
-                        entries.add(ModItems.CORRUPT_DROPLET);
-                        entries.add(ModItems.CORRUPT_MASS);
-
-                        entries.add(ModItems.CERILLE_NUGGET);
-                        entries.add(ModItems.CERILLE_INGOT);
-                        entries.add(ModBlocks.CERILLE_BLOCK);
-
-                        entries.add(ModBlocks.CERILLE_BRICKS);
-                        entries.add(ModBlocks.CHISELED_CERILLE_BRICKS);
-                        entries.add(ModBlocks.CERILLE_BULB);
-                        entries.add(ModBlocks.CERILLE_BRICKS_SLAB);
-                        entries.add(ModBlocks.CERILLE_BRICKS_STAIRS);
-                        entries.add(ModBlocks.CERILLE_BRICKS_WALL);
-
                         entries.add(ModItems.RAW_KUNZITE);
                         entries.add(ModItems.KUNZITE_NUGGET);
                         entries.add(ModBlocks.KUNZITE_CLUMP);
@@ -197,6 +165,39 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
                         entries.add(ModBlocks.RAW_PINLINE_ROD);
 
+                        entries.add(ModItems.RAW_MOONSTEEL);
+                        entries.add(ModItems.MOONSTEEL_NUGGET);
+                        entries.add(ModItems.MOONSTEEL_INGOT);
+
+                        entries.add(ModBlocks.STYXIAN_MOONSTEEL_ORE);
+                        entries.add(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE);
+                        entries.add(ModBlocks.RAW_MOONSTEEL_BLOCK);
+                        entries.add(ModBlocks.MOONSTEEL_BLOCK);
+
+                        entries.add(ModBlocks.MOONSTEEL_BRICKS);
+                        entries.add(ModBlocks.CHISELED_MOONSTEEL_BRICKS);
+                        entries.add(ModBlocks.MOONSTEEL_BULB);
+                        entries.add(ModBlocks.MOONSTEEL_BRICKS_SLAB);
+                        entries.add(ModBlocks.MOONSTEEL_BRICKS_STAIRS);
+                        entries.add(ModBlocks.MOONSTEEL_BRICKS_WALL);
+
+                        entries.add(ModBlocks.BLACK_GOOP);
+                        entries.add(ModBlocks.CORRUPT_ORE);
+                        entries.add(ModItems.CORRUPT_DROPLET);
+                        entries.add(ModItems.CORRUPT_MASS);
+                        entries.add(ModBlocks.CORRUPT_ROOTS);
+
+                        entries.add(ModItems.CERILLE_NUGGET);
+                        entries.add(ModItems.CERILLE_INGOT);
+                        entries.add(ModBlocks.CERILLE_BLOCK);
+
+                        entries.add(ModBlocks.CERILLE_BRICKS);
+                        entries.add(ModBlocks.CHISELED_CERILLE_BRICKS);
+                        entries.add(ModBlocks.CERILLE_BULB);
+                        entries.add(ModBlocks.CERILLE_BRICKS_SLAB);
+                        entries.add(ModBlocks.CERILLE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.CERILLE_BRICKS_WALL);
+
                         entries.add(ModItems.MEMORY_SHARD);
                         entries.add(ModBlocks.MEMORY_BRICKS);
                         entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);
@@ -216,6 +217,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.LARGE_END_GRASS);
                         entries.add(ModBlocks.CHORUS_LILY);
                         entries.add(ModBlocks.STYXGRASS);
+                        entries.add(ModBlocks.HANGING_STYXGRASS);
 
                         entries.add(ModBlocks.PINK_ICE);
 
@@ -652,6 +654,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.THERMIUM_WILTBORN);
             entries.add(ModBlocks.MEMORIA_BOURPEER);
             entries.add(ModBlocks.STYXGRASS);
+            entries.add(ModBlocks.HANGING_STYXGRASS);
+            entries.add(ModBlocks.CORRUPT_ROOTS);
 
             entries.add(ModBlocks.AMETHYST_CLUMP);
             entries.add(ModBlocks.DIAMOND_CLUMP);

@@ -34,6 +34,7 @@ public class ModTags {
         public static final TagKey<Block> BREAKER_BREAKABLE = createTag("breaker_breakable");
         public static final TagKey<Block> KUNZITE_GEODE_IRREPLACEABLE = createTag("kunzite_geode_irreplaceable");
         public static final TagKey<Block> BASE_STONE_STYXIA = createTag("base_stone_styxia");
+        public static final TagKey<Block> CORRUPT_BLOCKS = createTag("corrupt_blocks");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));

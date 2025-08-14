@@ -63,6 +63,12 @@ public class ModBlocks {
             properties -> new ModGrassBlock(BlockTags.DIRT, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.MOSS_CARPET).pistonBehavior(PistonBehavior.DESTROY),
                     2, 2, 14, 8, 14));
+    public static final Block HANGING_STYXGRASS = registerBlock("hanging_styxgrass",
+            properties -> new HangingStyxgrassBlock(properties.strength(0f).replaceable()
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.MOSS_CARPET).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block CORRUPT_ROOTS = registerBlock("corrupt_roots",
+            properties -> new CorruptRootsBlock(ModTags.Blocks.CORRUPT_BLOCKS, properties.strength(0f).replaceable()
+                    .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.HONEY).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block STYXIAN_AMETHYST_ORE = registerBlock("styxian_amethyst_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),

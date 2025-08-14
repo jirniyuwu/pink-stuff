@@ -144,6 +144,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
         addDrop(ModBlocks.CORRUPT_ORE, multipleOreDrops(ModBlocks.CORRUPT_ORE, ModItems.CORRUPT_DROPLET, 9, 29));
+        addDrop(ModBlocks.CORRUPT_ROOTS, multipleOreDrops(ModBlocks.CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET, 1, 2));
         addDrop(ModBlocks.STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
         addDrop(ModBlocks.STYXIAN_MOONSTEEL_ORE, oreDrops(ModBlocks.STYXIAN_MOONSTEEL_ORE, ModItems.RAW_MOONSTEEL));
@@ -157,7 +158,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COBBLED_STYXSTONE);
         addDrop(ModBlocks.MOSSY_COBBLED_STYXSTONE);
         addDrop(ModBlocks.COMPRESSED_STYXSTONE);
-        dropsWithShears(ModBlocks.STYXGRASS);
+        dropsWithSilkTouchOrShears(ModBlocks.STYXGRASS);
+        dropsWithSilkTouchOrShears(ModBlocks.HANGING_STYXGRASS);
         addDrop(ModBlocks.DEATH_FLOWERS);
         addDrop(ModBlocks.STYXCOAL_BLOCK);
         addDrop(ModBlocks.MOONSTEEL_BLOCK);

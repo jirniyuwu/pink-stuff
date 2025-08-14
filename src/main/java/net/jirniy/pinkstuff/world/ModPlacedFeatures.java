@@ -33,6 +33,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CHORUS_TREE_PLACED_KEY = registerKey("chorus_placed");
     public static final RegistryKey<PlacedFeature> ASHEN_TREE_PLACED_KEY = registerKey("ashen_placed");
     public static final RegistryKey<PlacedFeature> KEAPHE_TREE_PLACED_KEY = registerKey("keaphe_placed");
+    public static final RegistryKey<PlacedFeature> KEAPHE_FOREST_PLACED_KEY = registerKey("keaphe_forest_placed");
+    public static final RegistryKey<PlacedFeature> GIANT_KEAPHE_TREE_PLACED_KEY = registerKey("giant_keaphe_placed");
     public static final RegistryKey<PlacedFeature> CRYSTAL_CHERRY_PLACED_KEY = registerKey("crystal_cherry_placed");
     public static final RegistryKey<PlacedFeature> SNOWY_SPRUCE_PLACED_KEY = registerKey("snowy_spruce_placed");
     public static final RegistryKey<PlacedFeature> GEM_BERRY_BUSH_PLACED_KEY = registerKey("gem_berry_bush_placed");
@@ -55,12 +57,14 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CORRUPTION_CLUMP_PLACED_KEY = registerKey("corruption_clump_placed");
     public static final RegistryKey<PlacedFeature> CORRUPTION_SPIKE_PLACED_KEY = registerKey("corruption_spike_placed");
     public static final RegistryKey<PlacedFeature> CORRUPTION_DISC_PLACED_KEY = registerKey("corruption_disc_placed");
+    public static final RegistryKey<PlacedFeature> CORRUPT_ROOTS_PLACED_KEY = registerKey("corrupt_roots_placed");
     public static final RegistryKey<PlacedFeature> DEATHFLOWER_PLACED_KEY = registerKey("deathflower_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_ROCK_PLACED_KEY = registerKey("styxian_rock_placed");
     public static final RegistryKey<PlacedFeature> MOSSY_STYXIAN_ROCK_PLACED_KEY = registerKey("mossy_styxian_rock_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_VEGETATION_PLACED_KEY = registerKey("styxmoss_vegetation_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_PATCH_PLACED_KEY = registerKey("styxmoss_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXGRASS_PATCH_PLACED_KEY = registerKey("styxgrass_patch_placed");
+    public static final RegistryKey<PlacedFeature> STYXMOSS_DISC_PLACED_KEY = registerKey("styxmoss_disc_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -135,10 +139,14 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.fixed(40), YOffset.fixed(320), 2))
         ));
+        register(context, STYXMOSS_DISC_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXMOSS_DISK_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), ModBlocks.STYXGRASS
+                ));
         register(context, STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_ROCK_KEY),
-                CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, MOSSY_STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOSSY_STYXIAN_ROCK_KEY),
-                CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, STYXMOSS_VEGETATION_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXMOSS_VEGETATION_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(5, 0.5f, 3), ModBlocks.STYXGRASS
@@ -196,6 +204,14 @@ public class ModPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(0, 0.5f, 1), ModBlocks.KEAPHE_SAPLING
                 ));
+        register(context, GIANT_KEAPHE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GIANT_KEAPHE_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.5f, 2), ModBlocks.KEAPHE_SAPLING
+                ));
+        register(context, KEAPHE_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KEAPHE_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.KEAPHE_SAPLING
+                ));
 
         register(context, SNOWY_SPRUCE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SNOWY_SPRUCE_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
@@ -232,7 +248,9 @@ public class ModPlacedFeatures {
         register(context, CHORUS_LILY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CHORUS_LILY_KEY),
                 RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, STYXGRASS_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXGRASS_PATCH_KEY),
-                RarityFilterPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, CORRUPT_ROOTS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPT_ROOTS_KEY),
+                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

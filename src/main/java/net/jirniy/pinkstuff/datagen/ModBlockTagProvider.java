@@ -485,6 +485,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MABRIZE)
                 .add(ModBlocks.COMPRESSED_STYXSTONE)
                 .add(ModBlocks.BLACK_GOOP)
-                .add(ModBlocks.STYXIAN_SOIL);
+                .add(ModBlocks.STYXIAN_SOIL)
+                .add(ModBlocks.STYXMOSS);
+        valueLookupBuilder(ModTags.Blocks.CORRUPT_BLOCKS)
+                .add(ModBlocks.BLACK_GOOP)
+                .add(ModBlocks.CORRUPT_ORE);
     }
 }

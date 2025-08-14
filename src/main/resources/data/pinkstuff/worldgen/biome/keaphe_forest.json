@@ -1,13 +1,12 @@
 {
   "carvers": [
-    "minecraft:cave",
     "minecraft:canyon"
   ],
-  "downfall": 0.5,
+  "downfall": 0.8,
   "effects": {
-    "fog_color": 3675223,
-    "foliage_color": 6831997,
-    "grass_color": 8344467,
+    "fog_color": 12231144,
+    "foliage_color": 14466293,
+    "grass_color": 14397687,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2,
@@ -26,36 +25,41 @@
       }
     ],
     "music_volume": 1,
-    "sky_color": 3414365,
-    "water_color": 5652365,
-    "water_fog_color": 5784972
+    "sky_color": 12036351,
+    "water_color": 7765467,
+    "water_fog_color": 9339879,
+    "particle": {
+      "options": {
+        "type": "pinkstuff:chorus_petal_particle"
+      },
+      "probability": 0.001
+    }
   },
   "features": [
     [],
     [],
     [
-      "minecraft:amethyst_geode"
+      "minecraft:amethyst_geode",
+      "pinkstuff:mossy_styxian_rock_placed"
     ],
     [],
-    [
-      "pinkstuff:corruption_spike_placed",
-      "pinkstuff:corruption_disc_placed"
-    ],
+    [],
     [],
     [
       "pinkstuff:compressed_styxstone_placed",
       "pinkstuff:mabrize_placed",
       "pinkstuff:styxian_amethyst_ore_placed",
-      "pinkstuff:corrupt_ore_placed",
       "pinkstuff:styxcoal_ore_placed",
       "pinkstuff:moonsteel_ore_placed"
     ],
     [],
     [],
     [
-      "pinkstuff:corrupt_roots_placed",
-      "pinkstuff:styxgrass_patch_placed",
-      "pinkstuff:corruption_clump_placed"
+      "pinkstuff:styxmoss_disc_placed",
+      "pinkstuff:keaphe_placed",
+      "pinkstuff:giant_keaphe_placed",
+      "pinkstuff:keaphe_forest_placed",
+      "pinkstuff:styxgrass_patch_placed"
     ],
     []
   ],
@@ -71,5 +75,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.4
+  "temperature": 0.6
 }

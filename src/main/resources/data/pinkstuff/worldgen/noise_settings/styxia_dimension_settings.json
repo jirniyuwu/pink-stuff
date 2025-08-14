@@ -75,7 +75,29 @@
   },
   "ore_veins_enabled": false,
   "sea_level": 0,
-  "spawn_target": [],
+  "spawn_target": [
+    {
+      "temperature": [
+        0.3,
+        1
+      ],
+      "humidity": [
+        0.3,
+        0.8
+      ],
+      "continentalness": [
+        0.5,
+        1
+      ],
+      "erosion": 0,
+      "weirdness": [
+        -0.5,
+        0.6
+      ],
+      "depth": 0,
+      "offset": 0
+    }
+  ],
   "surface_rule": {
     "type": "minecraft:sequence",
     "sequence": [
@@ -106,9 +128,44 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
+                "pinkstuff:keaphe_forest"
+              ]
+            },
+            "then_run": {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:noise_threshold",
+                "noise": "minecraft:spaghetti_roughness",
+                "min_threshold": -1,
+                "max_threshold": -0.28
+              },
+              "then_run": {
+                "type": "minecraft:condition",
+                "if_true": {
+                  "type": "minecraft:stone_depth",
+                  "offset": 1,
+                  "surface_type": "floor",
+                  "add_surface_depth": false,
+                  "secondary_depth_range": 1
+                },
+                "then_run": {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "pinkstuff:styxmoss"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "minecraft:condition",
+            "if_true": {
+              "type": "minecraft:biome",
+              "biome_is": [
                 "pinkstuff:corrupted_spikes",
                 "pinkstuff:styxian_plains",
-                "pinkstuff:styxmoss_overgrowth"
+                "pinkstuff:styxmoss_overgrowth",
+                "pinkstuff:keaphe_forest"
               ]
             },
             "then_run": {

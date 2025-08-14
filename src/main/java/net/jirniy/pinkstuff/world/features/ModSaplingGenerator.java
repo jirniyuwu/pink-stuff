@@ -20,5 +20,5 @@ public class ModSaplingGenerator {
             Optional.empty(), Optional.of(ModConfiguredFeatures.SNOWY_SPRUCE_TREE_KEY), Optional.empty());
 
     public static final SaplingGenerator KEAPHE = new SaplingGenerator(JirniysPinkStuff.MOD_ID + ":keaphe",
-            Optional.empty(), Optional.of(ModConfiguredFeatures.KEAPHE_TREE_KEY), Optional.empty());
+            Optional.of(ModConfiguredFeatures.GIANT_KEAPHE_TREE_KEY), Optional.of(ModConfiguredFeatures.KEAPHE_TREE_KEY), Optional.empty());
 }

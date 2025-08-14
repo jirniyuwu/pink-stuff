@@ -26,6 +26,7 @@ import net.jirniy.pinkstuff.util.ModMapDecorations;
 import net.jirniy.pinkstuff.util.ModPotions;
 import net.jirniy.pinkstuff.world.ModBiomes;
 import net.jirniy.pinkstuff.world.features.ModFeatures;
+import net.jirniy.pinkstuff.world.features.ModTreeDecorators;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -60,6 +61,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModMapDecorations.registerMapDecorations();
 		ModBiomes.registerBiomes();
 		ModFeatures.registerFeatures();
+		ModTreeDecorators.registerTreeDecorators();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);

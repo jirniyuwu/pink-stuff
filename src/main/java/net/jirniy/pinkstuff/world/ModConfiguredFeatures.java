@@ -1,9 +1,11 @@
 package net.jirniy.pinkstuff.world;
 
+import com.google.common.collect.ImmutableList;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.util.ModTags;
+import net.jirniy.pinkstuff.world.features.HangingStyxgrassDecorator;
 import net.jirniy.pinkstuff.world.features.ModFeatures;
 import net.minecraft.block.*;
 import net.minecraft.registry.Registerable;
@@ -28,10 +30,7 @@ import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
-import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
-import net.minecraft.world.gen.foliage.PineFoliagePlacer;
+import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
@@ -58,6 +57,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHORUS_TREE_KEY = registryKey("chorus_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ASHEN_TREE_KEY = registryKey("ashen_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> KEAPHE_TREE_KEY = registryKey("keaphe_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_KEAPHE_TREE_KEY = registryKey("giant_keaphe_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SNOWY_SPRUCE_TREE_KEY = registryKey("snowy_spruce_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HAZEWEAVER_PLANT_KEY = registryKey("hazeweaver_plant");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SMALL_END_GRASS_KEY = registryKey("small_end_grass");
@@ -77,6 +77,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_CLUMP_KEY = registryKey("corruption_clump");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_SPIKE_KEY = registryKey("corruption_spike");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_DISC_KEY = registryKey("corruption_disc");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPT_ROOTS_KEY = registryKey("corrupt_roots");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPT_ORE_KEY = registryKey("corrupt_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEATHFLOWER_KEY = registryKey("deathflower");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_ROCK_KEY = registryKey("styxian_rock");
@@ -85,6 +86,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_VEGETATION_KEY = registryKey("styxmoss_vegetation");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_BONEMEAL_KEY = registryKey("styxmoss_patch_bonemeal");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_PATCH_KEY = registryKey("styxgrass_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_DISK_KEY = registryKey("styxmoss_disk_patch");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -178,6 +180,11 @@ public class ModConfiguredFeatures {
         register(context, CORRUPT_ORE_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.BLACK_GOOP), ModBlocks.CORRUPT_ORE.getDefaultState())), 3));
 
+        register(context, STYXMOSS_DISK_KEY, Feature.DISK, new DiskFeatureConfig(
+                PredicatedStateProvider.of(ModBlocks.STYXMOSS),
+                BlockPredicate.matchingBlocks(List.of(ModBlocks.STYXIAN_SOIL, ModBlocks.STYXMOSS)),
+                UniformIntProvider.create(3, 5), 1));
+
         register(context, AMETHYST_CLUMP_KEY, Feature.MULTIFACE_GROWTH, new MultifaceGrowthFeatureConfig(
                 (MultifaceGrowthBlock) ModBlocks.AMETHYST_CLUMP, 25, true, true, true, 0.6f, RegistryEntryList.of(Block::getRegistryEntry, new Block[]{Blocks.STONE, Blocks.ANDESITE, Blocks.DIORITE, Blocks.GRANITE, Blocks.DRIPSTONE_BLOCK, Blocks.CALCITE, Blocks.TUFF, Blocks.DEEPSLATE})));
         register(context, DIAMOND_CLUMP_KEY, Feature.MULTIFACE_GROWTH, new MultifaceGrowthFeatureConfig(
@@ -259,6 +266,20 @@ public class ModConfiguredFeatures {
                 ),
                 new CherryFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(1), ConstantIntProvider.create(4), 0.25F, 0.5F, 0.16666667F, 0.33333334F),
                 new TwoLayersFeatureSize(1, 0, 2))
+                .decorators(ImmutableList.of(new HangingStyxgrassDecorator(0.25f)))
+                .dirtProvider(BlockStateProvider.of(ModBlocks.STYXIAN_SOIL)).build());
+
+        register(context, GIANT_KEAPHE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.KEAPHE_LOG),
+                new GiantTrunkPlacer(14, 6, 4),
+                new WeightedBlockStateProvider(
+                        Pool.<BlockState>builder()
+                                .add(ModBlocks.KEAPHE_LEAVES.getDefaultState(), 5)
+                                .add(ModBlocks.FLOWERING_KEAPHE_LEAVES.getDefaultState(), 1)
+                ),
+                new JungleFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 2),
+                new TwoLayersFeatureSize(3, 1, 2))
+                .decorators(ImmutableList.of(new HangingStyxgrassDecorator(0.25f)))
                 .dirtProvider(BlockStateProvider.of(ModBlocks.STYXIAN_SOIL)).build());
 
         register(context, ASHEN_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
@@ -342,6 +363,10 @@ public class ModConfiguredFeatures {
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.STYXGRASS)),
                         List.of(ModBlocks.STYXMOSS, ModBlocks.STYXIAN_SOIL)));
+        register(context, CORRUPT_ROOTS_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.CORRUPT_ROOTS)),
+                        List.of(ModBlocks.STYXIAN_SOIL, ModBlocks.BLACK_GOOP, ModBlocks.CORRUPT_ORE)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {
