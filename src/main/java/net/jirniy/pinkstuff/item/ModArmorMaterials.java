@@ -45,4 +45,24 @@ public class ModArmorMaterials {
         map.put(EquipmentType.HELMET, 2);
         map.put(EquipmentType.BODY, 4);
     }), 20, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0,0.1f, ModTags.Items.PINLINE_REPAIR, PINLINE_KEY);
+
+    public static final RegistryKey<EquipmentAsset> MOONSTEEL_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel"));
+
+    public static final ArmorMaterial MOONSTEEL_ARMOR_MATERIAL = new ArmorMaterial(54, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 2);
+        map.put(EquipmentType.LEGGINGS, 3);
+        map.put(EquipmentType.CHESTPLATE, 4);
+        map.put(EquipmentType.HELMET, 2);
+        map.put(EquipmentType.BODY, 4);
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0,0.2f, ModTags.Items.MOONSTEEL_REPAIR, MOONSTEEL_KEY);
+
+    public static final RegistryKey<EquipmentAsset> CERILLE_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "cerille"));
+
+    public static final ArmorMaterial CERILLE_ARMOR_MATERIAL = new ArmorMaterial(54, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 4);
+        map.put(EquipmentType.LEGGINGS, 4);
+        map.put(EquipmentType.CHESTPLATE, 5);
+        map.put(EquipmentType.HELMET, 4);
+        map.put(EquipmentType.BODY, 4);
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1,0.1f, ModTags.Items.CERILLE_REPAIR, CERILLE_KEY);
 }

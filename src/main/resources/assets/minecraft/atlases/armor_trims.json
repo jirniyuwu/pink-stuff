@@ -84,7 +84,9 @@
         "sulfur": "pinkstuff:trims/color_palettes/sulfur",
         "pinline": "pinkstuff:trims/color_palettes/pinline",
         "raw_pinline": "pinkstuff:trims/color_palettes/raw_pinline",
-        "corrupt": "pinkstuff:trims/color_palettes/corrupt"
+        "corrupt": "pinkstuff:trims/color_palettes/corrupt",
+        "moonsteel": "pinkstuff:trims/color_palettes/moonsteel",
+        "cerille": "pinkstuff:trims/color_palettes/cerille"
       }
     }
   ]

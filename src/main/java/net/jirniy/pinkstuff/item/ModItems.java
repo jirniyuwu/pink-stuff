@@ -36,6 +36,15 @@ public class ModItems {
     public static final Item CORRUPT_MASS = registerItem("corrupt_mass",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.CORRUPT)));
 
+    public static final Item MOONSTEEL_NUGGET = registerItem("moonsteel_nugget", Item::new);
+    public static final Item MOONSTEEL_INGOT = registerItem("moonsteel_ingot",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.MOONSTEEL)));
+    public static final Item RAW_MOONSTEEL = registerItem("raw_moonsteel", Item::new);
+
+    public static final Item CERILLE_NUGGET = registerItem("cerille_nugget", Item::new);
+    public static final Item CERILLE_INGOT = registerItem("cerille_ingot",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.CERILLE)));
+
     public static final Item KUNZITE_NUGGET = registerItem("kunzite_nugget", Item::new);
     public static final Item KUNZITE = registerItem("kunzite",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.KUNZITE)));
@@ -84,6 +93,8 @@ public class ModItems {
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
     public static final Item ENERGIZED_THERMIUM = registerItem("energized_thermium", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
 
+    public static final Item STYXCOAL = registerItem("styxcoal", Item::new);
+
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
             setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 2, -2.4f)));
     public static final Item KUNZITE_PICKAXE = registerItem("kunzite_pickaxe",
@@ -116,6 +127,28 @@ public class ModItems {
             setting -> new AxeItem(ModToolMaterials.PINLINE, 7, -3.2f, setting));
     public static final Item PINLINE_HOE = registerItem("pinline_hoe",
             setting -> new HoeItem(ModToolMaterials.PINLINE, 0, -3f, setting));
+
+    public static final Item MOONSTEEL_SWORD = registerItem("moonsteel_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.MOONSTEEL, 3f, -2.2f)));
+    public static final Item MOONSTEEL_PICKAXE = registerItem("moonsteel_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.MOONSTEEL, 1.2f, -2.8f)));
+    public static final Item MOONSTEEL_SHOVEL = registerItem("moonsteel_shovel",
+            setting -> new ShovelItem(ModToolMaterials.MOONSTEEL, 2f, -3.0f, setting));
+    public static final Item MOONSTEEL_AXE = registerItem("moonsteel_axe",
+            setting -> new AxeItem(ModToolMaterials.MOONSTEEL, 6, -3.2f, setting));
+    public static final Item MOONSTEEL_HOE = registerItem("moonsteel_hoe",
+            setting -> new HoeItem(ModToolMaterials.MOONSTEEL, 0, -3f, setting));
+
+    public static final Item CERILLE_SWORD = registerItem("cerille_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.CERILLE, 5f, -2.0f)));
+    public static final Item CERILLE_PICKAXE = registerItem("cerille_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.CERILLE, 1.4f, -2.8f)));
+    public static final Item CERILLE_SHOVEL = registerItem("cerille_shovel",
+            setting -> new ShovelItem(ModToolMaterials.CERILLE, 2.2f, -3.0f, setting));
+    public static final Item CERILLE_AXE = registerItem("cerille_axe",
+            setting -> new AxeItem(ModToolMaterials.CERILLE, 8, -3.2f, setting));
+    public static final Item CERILLE_HOE = registerItem("cerille_hoe",
+            setting -> new HoeItem(ModToolMaterials.CERILLE, 0, -3f, setting));
 
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
             setting -> new HammerItem(ModToolMaterials.SPECIAL, 8, -3.4f, setting.rarity(Rarity.RARE)));
@@ -154,6 +187,24 @@ public class ModItems {
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.PINLINE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
     public static final Item PINLINE_BOOTS = registerItem("pinline_boots",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.PINLINE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
+    public static final Item MOONSTEEL_HELMET = registerItem("moonsteel_helmet",
+            setting -> new Item(setting.armor(ModArmorMaterials.MOONSTEEL_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item MOONSTEEL_CHESTPLATE = registerItem("moonsteel_chestplate",
+            setting -> new Item(setting.armor(ModArmorMaterials.MOONSTEEL_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item MOONSTEEL_LEGGINGS = registerItem("moonsteel_leggings",
+            setting -> new Item(setting.armor(ModArmorMaterials.MOONSTEEL_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item MOONSTEEL_BOOTS = registerItem("moonsteel_boots",
+            setting -> new Item(setting.armor(ModArmorMaterials.MOONSTEEL_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
+    public static final Item CERILLE_HELMET = registerItem("cerille_helmet",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.CERILLE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item CERILLE_CHESTPLATE = registerItem("cerille_chestplate",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.CERILLE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item CERILLE_LEGGINGS = registerItem("cerille_leggings",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.CERILLE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item CERILLE_BOOTS = registerItem("cerille_boots",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.CERILLE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
     public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));

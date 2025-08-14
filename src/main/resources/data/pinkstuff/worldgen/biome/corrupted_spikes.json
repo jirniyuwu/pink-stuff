@@ -1,6 +1,7 @@
 {
   "carvers": [
-    "minecraft:cave"
+    "minecraft:cave",
+    "minecraft:canyon"
   ],
   "downfall": 0.5,
   "effects": {
@@ -45,7 +46,9 @@
       "pinkstuff:compressed_styxstone_placed",
       "pinkstuff:mabrize_placed",
       "pinkstuff:styxian_amethyst_ore_placed",
-      "pinkstuff:corrupt_ore_placed"
+      "pinkstuff:corrupt_ore_placed",
+      "pinkstuff:styxcoal_ore_placed",
+      "pinkstuff:moonsteel_ore_placed"
     ],
     [],
     [],

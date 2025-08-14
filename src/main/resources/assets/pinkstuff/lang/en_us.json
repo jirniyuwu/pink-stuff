@@ -34,6 +34,12 @@
   "item.pinkstuff.prepared_pinline": "Prepared Raw Pinline",
   "item.pinkstuff.corrupt_droplet": "Corrupt Droplet",
   "item.pinkstuff.corrupt_mass": "Corrupted Mass",
+  "item.pinkstuff.styxcoal": "Styxcoal",
+  "item.pinkstuff.moonsteel_ingot": "Moonsteel Ingot",
+  "item.pinkstuff.moonsteel_nugget": "Moonsteel Nugget",
+  "item.pinkstuff.raw_moonsteel": "Raw Moonsteel",
+  "item.pinkstuff.cerille_ingot": "Cerille Ingot",
+  "item.pinkstuff.cerille_nugget": "Cerille Nugget",
 
   "item.pinkstuff.glazed_chorus_fruit": "Glazed Chorus Fruit",
   "item.pinkstuff.coal_meal": "Coal Meal",
@@ -67,6 +73,14 @@
   "item.pinkstuff.styxian_soil": "Styxian Soil",
   "item.pinkstuff.styxian_amethyst_ore": "Styxian Amethyst Ore",
   "item.pinkstuff.compressed_styxian_amethyst_ore": "Compressed Styxian Amethyst Ore",
+  "item.pinkstuff.styxian_styxcoal_ore": "Styxcoal Ore",
+  "item.pinkstuff.compressed_styxian_styxcoal_ore": "Compressed Styxcoal Ore",
+  "item.pinkstuff.styxcoal_block": "Block of Styxcoal",
+  "item.pinkstuff.styxian_moonsteel_ore": "Moonsteel Ore",
+  "item.pinkstuff.compressed_styxian_moonsteel_ore": "Compressed Moonsteel Ore",
+  "item.pinkstuff.raw_moonsteel_block": "Block of Raw Moonsteel",
+  "item.pinkstuff.moonsteel_block": "Block of Moonsteel",
+  "item.pinkstuff.cerille_block": "Block of Cerille",
 
   "item.pinkstuff.polished_amethyst_block": "Polished Amethyst Block",
   "item.pinkstuff.polished_amethyst_slab": "Polished Amethyst Slab",
@@ -128,6 +142,20 @@
   "item.pinkstuff.raw_pinline_bricks_stairs": "Raw Pinline Brick Stairs",
   "item.pinkstuff.raw_pinline_bricks_wall": "Raw Pinline Brick Wall",
   "item.pinkstuff.raw_pinline_rod": "Raw Pinline Rod",
+
+  "item.pinkstuff.moonsteel_bricks": "Moonsteel Bricks",
+  "item.pinkstuff.chiseled_moonsteel_bricks": "Chiseled Moonsteel Bricks",
+  "item.pinkstuff.moonsteel_bulb": "Moonsteel Bulb",
+  "item.pinkstuff.moonsteel_bricks_slab": "Moonsteel Brick Slab",
+  "item.pinkstuff.moonsteel_bricks_stairs": "Moonsteel Brick Stairs",
+  "item.pinkstuff.moonsteel_bricks_wall": "Moonsteel Brick Wall",
+
+  "item.pinkstuff.cerille_bricks": "Cerille Bricks",
+  "item.pinkstuff.chiseled_cerille_bricks": "Chiseled Cerille Bricks",
+  "item.pinkstuff.cerille_bulb": "Cerille Bulb",
+  "item.pinkstuff.cerille_bricks_slab": "Cerille Brick Slab",
+  "item.pinkstuff.cerille_bricks_stairs": "Cerille Brick Stairs",
+  "item.pinkstuff.cerille_bricks_wall": "Cerille Brick Wall",
 
   "item.pinkstuff.compressed_end_stone": "Compressed End Stone",
   "item.pinkstuff.compressed_end_stone_bricks": "Compressed End Stone Bricks",
@@ -277,6 +305,28 @@
   "item.pinkstuff.elysium_leggings": "Elysian Legwear",
   "item.pinkstuff.elysium_boots": "Elysian Groundwalkers",
 
+  "item.pinkstuff.moonsteel_sword": "Moonsteel Sword",
+  "item.pinkstuff.moonsteel_pickaxe": "Moonsteel Pickaxe",
+  "item.pinkstuff.moonsteel_axe": "Moonsteel Axe",
+  "item.pinkstuff.moonsteel_shovel": "Moonsteel Shovel",
+  "item.pinkstuff.moonsteel_hoe": "Moonsteel Hoe",
+
+  "item.pinkstuff.moonsteel_helmet": "Moonsteel Helmet",
+  "item.pinkstuff.moonsteel_chestplate": "Moonsteel Chestplate",
+  "item.pinkstuff.moonsteel_leggings": "Moonsteel Leggings",
+  "item.pinkstuff.moonsteel_boots": "Moonsteel Boots",
+
+  "item.pinkstuff.cerille_sword": "Cerille Greatsword",
+  "item.pinkstuff.cerille_pickaxe": "Cerille Pickaxe",
+  "item.pinkstuff.cerille_axe": "Cerille Axe",
+  "item.pinkstuff.cerille_shovel": "Cerille Shovel",
+  "item.pinkstuff.cerille_hoe": "Cerille Hoe",
+
+  "item.pinkstuff.cerille_helmet": "Cerille Headgear",
+  "item.pinkstuff.cerille_chestplate": "Cerille Breastplate",
+  "item.pinkstuff.cerille_leggings": "Cerille Legwear",
+  "item.pinkstuff.cerille_boots": "Cerille Groundwalkers",
+
   "item.pinkstuff.dawnbloomer": "The Dawnbloomer",
   "item.pinkstuff.bedrock_breaker": "Bedrock Breaker",
 
@@ -337,6 +387,8 @@
   "trim_material.pinkstuff.pinline": "Pinline Material",
   "trim_material.pinkstuff.raw_pinline": "Raw Pinline Material",
   "trim_material.pinkstuff.corrupt": "Corrupted Material",
+  "trim_material.pinkstuff.moonsteel": "Moonsteel Material",
+  "trim_material.pinkstuff.cerille": "Cerille Material",
 
   "filled_map.pinkstuff.end_temple": "End Explorer Map",
   "filled_map.pinkstuff.end_city": "End Explorer Map",

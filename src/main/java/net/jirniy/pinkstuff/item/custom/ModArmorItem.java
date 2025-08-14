@@ -26,7 +26,10 @@ public class ModArmorItem extends Item {
                             List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 5, 0, true, true)))
                     .put(ModArmorMaterials.PINLINE_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(ModEffects.GROUNDED, 5, 0, true, true),
-                                    new StatusEffectInstance(StatusEffects.HASTE, 5, 2, true, true))).build();
+                                    new StatusEffectInstance(StatusEffects.HASTE, 5, 2, true, true)))
+                    .put(ModArmorMaterials.CERILLE_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.STRENGTH, 5, 0, true, true),
+                                    new StatusEffectInstance(StatusEffects.SPEED, 5, 1, true, true))).build();
 
     public ModArmorItem(Settings settings) {
         super(settings);

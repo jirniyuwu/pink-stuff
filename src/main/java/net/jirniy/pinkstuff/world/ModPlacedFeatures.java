@@ -24,6 +24,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> THERMIUM_ORE_PLACED_KEY = registerKey("thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> DRIPSTONE_THERMIUM_ORE_PLACED_KEY = registerKey("dripstone_thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> SULFUR_ORE_PLACED_KEY = registerKey("sulfur_ore_placed");
+    public static final RegistryKey<PlacedFeature> STYXCOAL_ORE_PLACED_KEY = registerKey("styxcoal_ore_placed");
+    public static final RegistryKey<PlacedFeature> STYXCOAL_ORE_BONUS_PLACED_KEY = registerKey("styxcoal_ore_bonus_placed");
+    public static final RegistryKey<PlacedFeature> MOONSTEEL_ORE_PLACED_KEY = registerKey("moonsteel_ore_placed");
     public static final RegistryKey<PlacedFeature> PINLINE_ORE_PLACED_KEY = registerKey("pinline_ore_placed");
     public static final RegistryKey<PlacedFeature> CORRUPT_ORE_PLACED_KEY = registerKey("corrupt_ore_placed");
     public static final RegistryKey<PlacedFeature> GEM_TREE_PLACED_KEY = registerKey("gem_tree_placed");
@@ -88,6 +91,19 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(2,
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.fixed(0), YOffset.fixed(60), 1)))
+        );
+        register(context, MOONSTEEL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOONSTEEL_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(15,
+                        HeightRangePlacementModifier.of(
+                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(90), 1)))
+        );
+        register(context, STYXCOAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXCOAL_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(9,
+                        HeightRangePlacementModifier.uniform(YOffset.BOTTOM, YOffset.fixed(100)))
+        );
+        register(context, STYXCOAL_ORE_BONUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXCOAL_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(30,
+                        HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(200)))
         );
         register(context, COMPRESSEND_END_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COMPRESSED_END_STONE_KEY),
                 ModOrePlacement.modifiersWithCount(13,

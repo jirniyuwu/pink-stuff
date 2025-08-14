@@ -7,21 +7,21 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
+import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
-public class RockFeature extends Feature<SingleStateFeatureConfig> {
-    public RockFeature(Codec< SingleStateFeatureConfig > codec) {
+public class RockFeature extends Feature<SimpleBlockFeatureConfig> {
+    public RockFeature(Codec<SimpleBlockFeatureConfig> codec) {
         super(codec);
     }
 
     @Override
-    public boolean generate(FeatureContext<SingleStateFeatureConfig> context) {
+    public boolean generate(FeatureContext<SimpleBlockFeatureConfig> context) {
         BlockState blockState;
         BlockPos blockPos = context.getOrigin();
         StructureWorldAccess structureWorldAccess = context.getWorld();
         Random random = context.getRandom();
-        SingleStateFeatureConfig singleStateFeatureConfig = context.getConfig();
+        SimpleBlockFeatureConfig simpleBlockFeatureConfig = context.getConfig();
         while (blockPos.getY() > structureWorldAccess.getBottomY() + 3 && (structureWorldAccess.isAir(blockPos.down()))) {
             blockPos = blockPos.down();
         }
@@ -35,7 +35,7 @@ public class RockFeature extends Feature<SingleStateFeatureConfig> {
             float f = (float)(j + k + l) * 0.333f + 0.5f;
             for (BlockPos blockPos2 : BlockPos.iterate(blockPos.add(-j, -k, -l), blockPos.add(j, k, l))) {
                 if (!(blockPos2.getSquaredDistance(blockPos) <= (double)(f * f))) continue;
-                structureWorldAccess.setBlockState(blockPos2, singleStateFeatureConfig.state, Block.NOTIFY_ALL);
+                structureWorldAccess.setBlockState(blockPos2, simpleBlockFeatureConfig.toPlace().get(random, blockPos2), Block.NOTIFY_ALL);
             }
             blockPos = blockPos.add(-1 + random.nextInt(2), -random.nextInt(2), -1 + random.nextInt(2));
         }

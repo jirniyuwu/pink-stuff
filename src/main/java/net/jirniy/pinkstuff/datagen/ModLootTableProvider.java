@@ -65,6 +65,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STYXSTONE_BRICKS);
         addDrop(ModBlocks.COMPRESSED_STYXSTONE_BRICKS);
         addDrop(ModBlocks.MABRIZE_BRICKS);
+        addDrop(ModBlocks.MOONSTEEL_BRICKS);
+        addDrop(ModBlocks.CERILLE_BRICKS);
 
         addDrop(ModBlocks.CHISELED_AMETHYST_BRICKS);
         addDrop(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -73,6 +75,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHISELED_MEMORY_BRICKS);
         addDrop(ModBlocks.CHISELED_PINLINE_BRICKS);
         addDrop(ModBlocks.CHISELED_RAW_PINLINE_BRICKS);
+        addDrop(ModBlocks.CHISELED_MOONSTEEL_BRICKS);
+        addDrop(ModBlocks.CHISELED_CERILLE_BRICKS);
 
         addDrop(ModBlocks.AMETHYST_BULB);
         addDrop(ModBlocks.KUNZITE_BULB);
@@ -81,6 +85,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MEMORY_BULB);
         addDrop(ModBlocks.PINLINE_BULB);
         addDrop(ModBlocks.RAW_PINLINE_BULB);
+        addDrop(ModBlocks.MOONSTEEL_BULB);
+        addDrop(ModBlocks.CERILLE_BULB);
 
         addDrop(ModBlocks.POLISHED_AMETHYST_STAIRS);
         addDrop(ModBlocks.AMETHYST_BRICKS_STAIRS);
@@ -94,6 +100,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STYXSTONE_BRICKS_STAIRS);
         addDrop(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS);
         addDrop(ModBlocks.MABRIZE_BRICKS_STAIRS);
+        addDrop(ModBlocks.MOONSTEEL_BRICKS_STAIRS);
+        addDrop(ModBlocks.CERILLE_BRICKS_STAIRS);
 
         addDrop(ModBlocks.POLISHED_AMETHYST_SLAB, slabDrops(ModBlocks.POLISHED_AMETHYST_SLAB));
         addDrop(ModBlocks.AMETHYST_BRICKS_SLAB, slabDrops(ModBlocks.AMETHYST_BRICKS_SLAB));
@@ -107,6 +115,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STYXSTONE_BRICKS_SLAB, slabDrops(ModBlocks.STYXSTONE_BRICKS_SLAB));
         addDrop(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB, slabDrops(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB));
         addDrop(ModBlocks.MABRIZE_BRICKS_SLAB, slabDrops(ModBlocks.MABRIZE_BRICKS_SLAB));
+        addDrop(ModBlocks.CERILLE_BRICKS_SLAB, slabDrops(ModBlocks.CERILLE_BRICKS_SLAB));
+        addDrop(ModBlocks.MOONSTEEL_BRICKS_SLAB, slabDrops(ModBlocks.MOONSTEEL_BRICKS_SLAB));
 
         addDrop(ModBlocks.POLISHED_AMETHYST_WALL);
         addDrop(ModBlocks.AMETHYST_BRICKS_WALL);
@@ -120,6 +130,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STYXSTONE_BRICKS_WALL);
         addDrop(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL);
         addDrop(ModBlocks.MABRIZE_BRICKS_WALL);
+        addDrop(ModBlocks.MOONSTEEL_BRICKS_WALL);
+        addDrop(ModBlocks.CERILLE_BRICKS_WALL);
 
         addDrop(ModBlocks.KUNZITE_ORE, oreDrops(ModBlocks.KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.DEEPSLATE_KUNZITE_ORE, oreDrops(ModBlocks.DEEPSLATE_KUNZITE_ORE, ModItems.RAW_KUNZITE));
@@ -132,6 +144,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
         addDrop(ModBlocks.CORRUPT_ORE, multipleOreDrops(ModBlocks.CORRUPT_ORE, ModItems.CORRUPT_DROPLET, 9, 29));
+        addDrop(ModBlocks.STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
+        addDrop(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
+        addDrop(ModBlocks.STYXIAN_MOONSTEEL_ORE, oreDrops(ModBlocks.STYXIAN_MOONSTEEL_ORE, ModItems.RAW_MOONSTEEL));
+        addDrop(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE, ModItems.RAW_MOONSTEEL));
 
         addDrop(ModBlocks.STYXIAN_SOIL);
         addDrop(ModBlocks.STYXMOSS);
@@ -143,6 +159,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_STYXSTONE);
         dropsWithShears(ModBlocks.STYXGRASS);
         addDrop(ModBlocks.DEATH_FLOWERS);
+        addDrop(ModBlocks.STYXCOAL_BLOCK);
+        addDrop(ModBlocks.MOONSTEEL_BLOCK);
+        addDrop(ModBlocks.RAW_MOONSTEEL_BLOCK);
+        addDrop(ModBlocks.CERILLE_BLOCK);
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LOG);
         addDrop(ModBlocks.CRYSTAL_CHERRY_WOOD);

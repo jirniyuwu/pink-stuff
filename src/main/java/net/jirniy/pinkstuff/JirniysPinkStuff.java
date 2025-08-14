@@ -96,6 +96,8 @@ public class JirniysPinkStuff implements ModInitializer {
 			builder.add(ModItems.COAL_MEAL, 4400);
 			builder.add(ModItems.SULFUR, 400);
 			builder.add(ModBlocks.SULFUR_BLOCK, 3600);
+			builder.add(ModItems.STYXCOAL, 1600);
+			builder.add(ModBlocks.STYXCOAL_BLOCK, 16000);
 		});
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());

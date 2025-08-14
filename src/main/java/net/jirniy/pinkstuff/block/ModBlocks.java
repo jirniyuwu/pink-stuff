@@ -69,7 +69,16 @@ public class ModBlocks {
                     properties.strength(3f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block COMPRESSED_STYXIAN_AMETHYST_ORE = registerBlock("compressed_styxian_amethyst_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
-                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+                    properties.strength(5f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block STYXIAN_STYXCOAL_ORE = registerBlock("styxian_styxcoal_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
+                    properties.strength(2.8f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block COMPRESSED_STYXIAN_STYXCOAL_ORE = registerBlock("compressed_styxian_styxcoal_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
+                    properties.strength(4.8f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block STYXCOAL_BLOCK = registerBlock("styxcoal_block",
+            properties -> new Block(properties.strength(5f).requiresTool()
+                    .sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.DARK_DULL_PINK)));
 
     public static final Block DIAMOND_CLUMP = registerBlock("diamond_clump",
             properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
@@ -90,6 +99,23 @@ public class ModBlocks {
     public static final Block COMPRESSED_END_STONE = registerBlock("compressed_end_stone",
             properties -> new Block(properties.strength(10f)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.PALE_YELLOW)));
+
+    public static final Block MOONSTEEL_BLOCK = registerBlock("moonsteel_block",
+            properties -> new Block(properties.strength(7f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_AQUA)));
+    public static final Block RAW_MOONSTEEL_BLOCK = registerBlock("raw_moonsteel_block",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.DARK_AQUA)));
+    public static final Block STYXIAN_MOONSTEEL_ORE = registerBlock("styxian_moonsteel_ore",
+            properties -> new Block(properties.strength(3.2f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.BLACK)));
+    public static final Block COMPRESSED_STYXIAN_MOONSTEEL_ORE = registerBlock("compressed_styxian_moonsteel_ore",
+            properties -> new Block(properties.strength(5.2f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.BLACK)));
+
+    public static final Block CERILLE_BLOCK = registerBlock("cerille_block",
+            properties -> new Block(properties.strength(12f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_CRIMSON)));
 
     public static final Block KUNZITE_BLOCK = registerBlock("kunzite_block",
         properties -> new Block(properties.strength(4f)
@@ -361,6 +387,24 @@ public class ModBlocks {
     public static final Block CHISELED_RAW_PINLINE_BRICKS = registerBlock("chiseled_raw_pinline_bricks",
             properties -> new Block(properties.strength(5f)
                     .requiresTool().sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.PALE_GREEN)));
+    public static final Block MOONSTEEL_BRICKS = registerBlock("moonsteel_bricks",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_AQUA)));
+    public static final Block MOONSTEEL_BULB = registerBlock("moonsteel_bulb",
+            properties -> new Block(properties.strength(6f).luminance(state -> 13)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_AQUA)));
+    public static final Block CHISELED_MOONSTEEL_BRICKS = registerBlock("chiseled_moonsteel_bricks",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_AQUA)));
+    public static final Block CERILLE_BRICKS = registerBlock("cerille_bricks",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block CERILLE_BULB = registerBlock("cerille_bulb",
+            properties -> new Block(properties.strength(6f).luminance(state -> 15)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block CHISELED_CERILLE_BRICKS = registerBlock("chiseled_cerille_bricks",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_CRIMSON)));
     public static final Block COMPRESSED_END_STONE_BRICKS = registerBlock("compressed_end_stone_bricks",
             properties -> new Block(properties.strength(11f)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.PALE_YELLOW)));
@@ -381,13 +425,15 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block STYXSTONE_BRICKS_WALL = registerBlock("styxstone_bricks_wall",
             properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+
     public static final Block COMPRESSED_STYXSTONE_BRICKS_STAIRS = registerBlock("compressed_styxstone_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.COMPRESSED_STYXSTONE_BRICKS.getDefaultState(),
-                    properties.strength(5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.PALE_PURPLE)));
+                    properties.strength(5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block COMPRESSED_STYXSTONE_BRICKS_SLAB = registerBlock("compressed_styxstone_bricks_slab",
             properties -> new SlabBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block COMPRESSED_STYXSTONE_BRICKS_WALL = registerBlock("compressed_styxstone_bricks_wall",
             properties -> new WallBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+
     public static final Block MABRIZE_BRICKS_STAIRS = registerBlock("mabrize_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.MABRIZE_BRICKS.getDefaultState(),
                     properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
@@ -395,6 +441,22 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block MABRIZE_BRICKS_WALL = registerBlock("mabrize_bricks_wall",
             properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block MOONSTEEL_BRICKS_STAIRS = registerBlock("moonsteel_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.MOONSTEEL_BRICKS.getDefaultState(),
+                    properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_AQUA)));
+    public static final Block MOONSTEEL_BRICKS_SLAB = registerBlock("moonsteel_bricks_slab",
+            properties -> new SlabBlock(properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_AQUA)));
+    public static final Block MOONSTEEL_BRICKS_WALL = registerBlock("moonsteel_bricks_wall",
+            properties -> new WallBlock(properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_AQUA)));
+
+    public static final Block CERILLE_BRICKS_STAIRS = registerBlock("cerille_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.CERILLE_BRICKS.getDefaultState(),
+                    properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block CERILLE_BRICKS_SLAB = registerBlock("cerille_bricks_slab",
+            properties -> new SlabBlock(properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block CERILLE_BRICKS_WALL = registerBlock("cerille_bricks_wall",
+            properties -> new WallBlock(properties.strength(6f).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.DARK_CRIMSON)));
 
     public static final Block COMPRESSED_END_STONE_BRICKS_STAIRS = registerBlock("compressed_end_stone_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.COMPRESSED_END_STONE_BRICKS.getDefaultState(),

@@ -58,10 +58,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
 
+                        entries.add(ModItems.STYXCOAL);
+                        entries.add(ModBlocks.STYXCOAL_BLOCK);
+                        entries.add(ModBlocks.STYXIAN_STYXCOAL_ORE);
+                        entries.add(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE);
+
                         entries.add(ModItems.AMETHYST_NUGGET);
+                        entries.add(ModBlocks.AMETHYST_CLUMP);
                         entries.add(ModBlocks.STYXIAN_AMETHYST_ORE);
                         entries.add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);
-                        entries.add(ModBlocks.AMETHYST_CLUMP);
                         entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
                         entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
                         entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
@@ -78,6 +83,38 @@ public class ModItemGroups {
                         entries.add(ModItems.SULFUR);
                         entries.add(ModBlocks.NETHER_SULFUR_ORE);
                         entries.add(ModBlocks.SULFUR_BLOCK);
+
+                        entries.add(ModItems.RAW_MOONSTEEL);
+                        entries.add(ModItems.MOONSTEEL_NUGGET);
+                        entries.add(ModItems.MOONSTEEL_INGOT);
+
+                        entries.add(ModBlocks.STYXIAN_MOONSTEEL_ORE);
+                        entries.add(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE);
+                        entries.add(ModBlocks.RAW_MOONSTEEL_BLOCK);
+                        entries.add(ModBlocks.MOONSTEEL_BLOCK);
+
+                        entries.add(ModBlocks.MOONSTEEL_BRICKS);
+                        entries.add(ModBlocks.CHISELED_MOONSTEEL_BRICKS);
+                        entries.add(ModBlocks.MOONSTEEL_BULB);
+                        entries.add(ModBlocks.MOONSTEEL_BRICKS_SLAB);
+                        entries.add(ModBlocks.MOONSTEEL_BRICKS_STAIRS);
+                        entries.add(ModBlocks.MOONSTEEL_BRICKS_WALL);
+
+                        entries.add(ModBlocks.BLACK_GOOP);
+                        entries.add(ModBlocks.CORRUPT_ORE);
+                        entries.add(ModItems.CORRUPT_DROPLET);
+                        entries.add(ModItems.CORRUPT_MASS);
+
+                        entries.add(ModItems.CERILLE_NUGGET);
+                        entries.add(ModItems.CERILLE_INGOT);
+                        entries.add(ModBlocks.CERILLE_BLOCK);
+
+                        entries.add(ModBlocks.CERILLE_BRICKS);
+                        entries.add(ModBlocks.CHISELED_CERILLE_BRICKS);
+                        entries.add(ModBlocks.CERILLE_BULB);
+                        entries.add(ModBlocks.CERILLE_BRICKS_SLAB);
+                        entries.add(ModBlocks.CERILLE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.CERILLE_BRICKS_WALL);
 
                         entries.add(ModItems.RAW_KUNZITE);
                         entries.add(ModItems.KUNZITE_NUGGET);
@@ -167,11 +204,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MEMORY_BRICKS_SLAB);
                         entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
                         entries.add(ModBlocks.MEMORY_BRICKS_WALL);
-
-                        entries.add(ModBlocks.BLACK_GOOP);
-                        entries.add(ModBlocks.CORRUPT_ORE);
-                        entries.add(ModItems.CORRUPT_DROPLET);
-                        entries.add(ModItems.CORRUPT_MASS);
 
                         entries.add(ModBlocks.AMETHYST_PARTERS);
                         entries.add(ModBlocks.KUNZITE_LOVELILY);
@@ -301,6 +333,26 @@ public class ModItemGroups {
                         entries.add(ModItems.ELYSIUM_LEGGINGS);
                         entries.add(ModItems.ELYSIUM_BOOTS);
 
+                        entries.add(ModItems.MOONSTEEL_SWORD);
+                        entries.add(ModItems.MOONSTEEL_PICKAXE);
+                        entries.add(ModItems.MOONSTEEL_AXE);
+                        entries.add(ModItems.MOONSTEEL_SHOVEL);
+                        entries.add(ModItems.MOONSTEEL_HOE);
+                        entries.add(ModItems.MOONSTEEL_HELMET);
+                        entries.add(ModItems.MOONSTEEL_CHESTPLATE);
+                        entries.add(ModItems.MOONSTEEL_LEGGINGS);
+                        entries.add(ModItems.MOONSTEEL_BOOTS);
+
+                        entries.add(ModItems.CERILLE_SWORD);
+                        entries.add(ModItems.CERILLE_PICKAXE);
+                        entries.add(ModItems.CERILLE_AXE);
+                        entries.add(ModItems.CERILLE_SHOVEL);
+                        entries.add(ModItems.CERILLE_HOE);
+                        entries.add(ModItems.CERILLE_HELMET);
+                        entries.add(ModItems.CERILLE_CHESTPLATE);
+                        entries.add(ModItems.CERILLE_LEGGINGS);
+                        entries.add(ModItems.CERILLE_BOOTS);
+
                         entries.add(ModItems.PINLINE_SWORD);
                         entries.add(ModItems.PINLINE_PICKAXE);
                         entries.add(ModItems.PINLINE_AXE);
@@ -321,6 +373,7 @@ public class ModItemGroups {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.SULFUR_BLOCK);
+            entries.add(ModBlocks.STYXCOAL_BLOCK);
             entries.add(ModBlocks.RAW_KUNZITE_BLOCK);
             entries.add(ModBlocks.KUNZITE_BLOCK);
             entries.add(ModBlocks.ELYSIUM_BLOCK);
@@ -329,6 +382,9 @@ public class ModItemGroups {
             entries.add(ModBlocks.RAW_THERMIUM_BLOCK);
             entries.add(ModBlocks.THERMIUM_BLOCK);
             entries.add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
+            entries.add(ModBlocks.RAW_MOONSTEEL_BLOCK);
+            entries.add(ModBlocks.MOONSTEEL_BLOCK);
+            entries.add(ModBlocks.CERILLE_BLOCK);
 
             entries.add(ModBlocks.COBBLED_STYXSTONE);
             entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE);
@@ -337,7 +393,6 @@ public class ModItemGroups {
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
-
             entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
             entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
             entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
@@ -480,6 +535,7 @@ public class ModItemGroups {
             entries.add(ModItems.EMERALD_NUGGET);
             entries.add(ModItems.NETHERITE_NUGGET);
             entries.add(ModItems.AMETHYST_NUGGET);
+            entries.add(ModItems.STYXCOAL);
             entries.add(ModItems.SULFUR);
             entries.add(ModItems.RAW_KUNZITE);
             entries.add(ModItems.KUNZITE_NUGGET);
@@ -500,6 +556,11 @@ public class ModItemGroups {
             entries.add(ModItems.MEMORY_SHARD);
             entries.add(ModItems.CORRUPT_DROPLET);
             entries.add(ModItems.CORRUPT_MASS);
+            entries.add(ModItems.RAW_MOONSTEEL);
+            entries.add(ModItems.MOONSTEEL_NUGGET);
+            entries.add(ModItems.MOONSTEEL_INGOT);
+            entries.add(ModItems.CERILLE_NUGGET);
+            entries.add(ModItems.CERILLE_INGOT);
 
             entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
             entries.add(ModItems.CHERRY_SMITHING_TEMPLATE);
@@ -527,12 +588,27 @@ public class ModItemGroups {
             entries.add(ModItems.ELYSIUM_LEGGINGS);
             entries.add(ModItems.ELYSIUM_BOOTS);
 
+            entries.add(ModItems.MOONSTEEL_SWORD);
+            entries.add(ModItems.MOONSTEEL_AXE);
+            entries.add(ModItems.MOONSTEEL_HELMET);
+            entries.add(ModItems.MOONSTEEL_CHESTPLATE);
+            entries.add(ModItems.MOONSTEEL_LEGGINGS);
+            entries.add(ModItems.MOONSTEEL_BOOTS);
+
+            entries.add(ModItems.CERILLE_SWORD);
+            entries.add(ModItems.CERILLE_AXE);
+            entries.add(ModItems.CERILLE_HELMET);
+            entries.add(ModItems.CERILLE_CHESTPLATE);
+            entries.add(ModItems.CERILLE_LEGGINGS);
+            entries.add(ModItems.CERILLE_BOOTS);
+
             entries.add(ModItems.PINLINE_SWORD);
             entries.add(ModItems.PINLINE_AXE);
             entries.add(ModItems.PINLINE_HELMET);
             entries.add(ModItems.PINLINE_CHESTPLATE);
             entries.add(ModItems.PINLINE_LEGGINGS);
             entries.add(ModItems.PINLINE_BOOTS);
+
             entries.add(ModItems.DAWNBLOOMER);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
@@ -603,6 +679,14 @@ public class ModItemGroups {
             entries.add(ModItems.ELYSIUM_HOE);
             entries.add(ModItems.ELYSIUM_HAMMER);
             entries.add(ModItems.ELYSIUM_MULTITOOL);
+            entries.add(ModItems.MOONSTEEL_PICKAXE);
+            entries.add(ModItems.MOONSTEEL_AXE);
+            entries.add(ModItems.MOONSTEEL_SHOVEL);
+            entries.add(ModItems.MOONSTEEL_HOE);
+            entries.add(ModItems.CERILLE_PICKAXE);
+            entries.add(ModItems.CERILLE_AXE);
+            entries.add(ModItems.CERILLE_SHOVEL);
+            entries.add(ModItems.CERILLE_HOE);
             entries.add(ModItems.PINLINE_PICKAXE);
             entries.add(ModItems.PINLINE_AXE);
             entries.add(ModItems.PINLINE_SHOVEL);

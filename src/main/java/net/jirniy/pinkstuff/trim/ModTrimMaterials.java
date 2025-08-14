@@ -33,6 +33,10 @@ public class ModTrimMaterials {
             Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline"));
     public static final RegistryKey<ArmorTrimMaterial> CORRUPT = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
             Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt"));
+    public static final RegistryKey<ArmorTrimMaterial> MOONSTEEL = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel"));
+    public static final RegistryKey<ArmorTrimMaterial> CERILLE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "cerille"));
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
         register(registerable, KUNZITE, Registries.ITEM.getEntry(ModItems.KUNZITE),
@@ -51,6 +55,10 @@ public class ModTrimMaterials {
                 Style.EMPTY.withColor(TextColor.parse("#659183").getOrThrow()), "raw_pinline");
         register(registerable, CORRUPT, Registries.ITEM.getEntry(ModItems.CORRUPT_MASS),
                 Style.EMPTY.withColor(TextColor.parse("#601c22").getOrThrow()), "corrupt");
+        register(registerable, MOONSTEEL, Registries.ITEM.getEntry(ModItems.MOONSTEEL_INGOT),
+                Style.EMPTY.withColor(TextColor.parse("#596577").getOrThrow()), "moonsteel");
+        register(registerable, CERILLE, Registries.ITEM.getEntry(ModItems.CERILLE_INGOT),
+                Style.EMPTY.withColor(TextColor.parse("#ce3d4c").getOrThrow()), "cerille");
     }
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,

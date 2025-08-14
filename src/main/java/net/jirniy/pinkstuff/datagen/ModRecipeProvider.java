@@ -44,8 +44,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.RAW_THERMIUM,
                         ModBlocks.THERMIUM_ORE,
                         ModBlocks.DEEPSLATE_THERMIUM_ORE);
-                List<ItemConvertible> PINLINE_SMELTABLES = List.of(
-                        ModItems.PREPARED_PINLINE);
+                List<ItemConvertible> MOONSTEEL_SMELTABLES = List.of(
+                        ModItems.RAW_MOONSTEEL,
+                        ModBlocks.STYXIAN_MOONSTEEL_ORE,
+                        ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE);
                 offerSmelting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
                         0.25f, 40, "kunzite_smelting");
                 offerBlasting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
@@ -58,9 +60,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         2f, 320, "elysium_smelting");
                 offerBlasting(ELYSIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ELYSIUM_INGOT,
                         2f, 160, "elysium_blasting");
-                offerSmelting(PINLINE_SMELTABLES, RecipeCategory.MISC, ModItems.PINLINE_INGOT,
+                offerSmelting(MOONSTEEL_SMELTABLES, RecipeCategory.MISC, ModItems.MOONSTEEL_INGOT,
+                        2f, 320, "moonsteel_smelting");
+                offerBlasting(MOONSTEEL_SMELTABLES, RecipeCategory.MISC, ModItems.MOONSTEEL_INGOT,
+                        2f, 160, "moonsteel_blasting");
+                offerSmelting(List.of(ModItems.PREPARED_PINLINE), RecipeCategory.MISC, ModItems.PINLINE_INGOT,
                         2f, 1280, "pinline_smelting");
-                offerBlasting(PINLINE_SMELTABLES, RecipeCategory.MISC, ModItems.PINLINE_INGOT,
+                offerBlasting(List.of(ModItems.PREPARED_PINLINE), RecipeCategory.MISC, ModItems.PINLINE_INGOT,
                         2f, 640, "pinline_blasting");
                 offerSmelting(List.of(Items.MAGMA_CREAM), RecipeCategory.MISC, Items.FIRE_CHARGE,
                         0.1f, 160, "fire_charge_smelting");
@@ -74,24 +80,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         0f, 200, "cobbled_styxstone_to_styxstone_smelting");
                 offerBlasting(List.of(ModBlocks.COBBLED_STYXSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXSTONE,
                         0f, 100, "cobbled_styxstone_to_styxstone_blasting");
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.KUNZITE_BLOCK);
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.RAW_KUNZITE, RecipeCategory.DECORATIONS, ModBlocks.RAW_KUNZITE_BLOCK);
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.THERMIUM_BLOCK);
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.RAW_THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_THERMIUM_BLOCK);
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.ELYSIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.ELYSIUM_BLOCK);
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.ENERGIZED_THERMIUM, RecipeCategory.DECORATIONS, ModBlocks.ENERGIZED_THERMIUM_BLOCK);
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.SULFUR, RecipeCategory.DECORATIONS, ModBlocks.SULFUR_BLOCK);
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.PINLINE_INGOT, RecipeCategory.DECORATIONS, ModBlocks.PINLINE_BLOCK);
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,
-                        ModItems.RAW_PINLINE, RecipeCategory.DECORATIONS, ModBlocks.RAW_PINLINE_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.KUNZITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KUNZITE_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.RAW_KUNZITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_KUNZITE_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.THERMIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.THERMIUM_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.RAW_THERMIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_THERMIUM_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.ELYSIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ELYSIUM_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.ENERGIZED_THERMIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENERGIZED_THERMIUM_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.SULFUR, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFUR_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.PINLINE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.RAW_PINLINE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_PINLINE_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.STYXCOAL, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXCOAL_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.MOONSTEEL_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOONSTEEL_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.RAW_MOONSTEEL, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_MOONSTEEL_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.CERILLE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CERILLE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.CORRUPT_DROPLET, RecipeCategory.MISC, ModItems.CORRUPT_MASS);
                 createShapeless(RecipeCategory.MISC, ModItems.PREPARED_PINLINE, 1)
@@ -118,6 +132,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 conditionsFromItem(ModItems.PINK_BITS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "pink_dye_from_pink_bits")));
+                createShapeless(RecipeCategory.MISC, ModItems.CERILLE_INGOT, 1)
+                        .input(ModItems.MOONSTEEL_INGOT).input(ModItems.MOONSTEEL_INGOT)
+                        .input(ModItems.CORRUPT_MASS).input(ModItems.CORRUPT_MASS)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .criterion(hasItem(ModItems.CORRUPT_MASS), conditionsFromItem(ModItems.CORRUPT_MASS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_ingot_from_moonsteel")));
                 createShaped(RecipeCategory.MISC, ModItems.ELYSIAN_REDSTONE_CORE)
                         .pattern("EDE")
                         .pattern("DRD")
@@ -231,6 +252,99 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.PINLINE_INGOT), conditionsFromItem(ModItems.PINLINE_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_hoe")));
+
+                createShaped(RecipeCategory.COMBAT, ModItems.MOONSTEEL_SWORD)
+                        .pattern("K")
+                        .pattern("K")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_sword")));
+                createShaped(RecipeCategory.TOOLS, ModItems.MOONSTEEL_PICKAXE)
+                        .pattern("KKK")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_pickaxe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.MOONSTEEL_SHOVEL)
+                        .pattern("K")
+                        .pattern("S")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_shovel")));
+                createShaped(RecipeCategory.TOOLS, ModItems.MOONSTEEL_AXE)
+                        .pattern("KK")
+                        .pattern("KS")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_axe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.MOONSTEEL_HOE)
+                        .pattern("KK")
+                        .pattern(" S")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_hoe")));
+
+                createShaped(RecipeCategory.COMBAT, ModItems.CERILLE_SWORD)
+                        .pattern("K")
+                        .pattern("K")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_sword")));
+                createShaped(RecipeCategory.TOOLS, ModItems.CERILLE_PICKAXE)
+                        .pattern("KKK")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_pickaxe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.CERILLE_SHOVEL)
+                        .pattern("K")
+                        .pattern("S")
+                        .pattern("S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_shovel")));
+                createShaped(RecipeCategory.TOOLS, ModItems.CERILLE_AXE)
+                        .pattern("KK")
+                        .pattern("KS")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_axe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.CERILLE_HOE)
+                        .pattern("KK")
+                        .pattern(" S")
+                        .pattern(" S")
+                        .input('S', Items.STICK)
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_hoe")));
+
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_ICE, 1)
                         .pattern("PPP")
                         .pattern("PIP")
@@ -447,6 +561,68 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_boots")));
+
+                createShaped(RecipeCategory.COMBAT, ModItems.MOONSTEEL_HELMET)
+                        .pattern("KKK")
+                        .pattern("K K")
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_helmet")));
+                createShaped(RecipeCategory.COMBAT, ModItems.MOONSTEEL_CHESTPLATE)
+                        .pattern("K K")
+                        .pattern("KKK")
+                        .pattern("KKK")
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_chestplate")));
+                createShaped(RecipeCategory.COMBAT, ModItems.MOONSTEEL_LEGGINGS)
+                        .pattern("KKK")
+                        .pattern("K K")
+                        .pattern("K K")
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_leggings")));
+                createShaped(RecipeCategory.COMBAT, ModItems.MOONSTEEL_BOOTS)
+                        .pattern("K K")
+                        .pattern("K K")
+                        .input('K', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_boots")));
+
+                createShaped(RecipeCategory.COMBAT, ModItems.CERILLE_HELMET)
+                        .pattern("KKK")
+                        .pattern("K K")
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_helmet")));
+                createShaped(RecipeCategory.COMBAT, ModItems.CERILLE_CHESTPLATE)
+                        .pattern("K K")
+                        .pattern("KKK")
+                        .pattern("KKK")
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_chestplate")));
+                createShaped(RecipeCategory.COMBAT, ModItems.CERILLE_LEGGINGS)
+                        .pattern("KKK")
+                        .pattern("K K")
+                        .pattern("K K")
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_leggings")));
+                createShaped(RecipeCategory.COMBAT, ModItems.CERILLE_BOOTS)
+                        .pattern("K K")
+                        .pattern("K K")
+                        .input('K', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_boots")));
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_PLANKS, 4)
                         .input(ModTags.Items.CHORUS_LOGS).criterion(hasItem(ModBlocks.CHORUS_LOG),
@@ -934,6 +1110,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.RAW_PINLINE_BRICKS), conditionsFromItem(ModBlocks.RAW_PINLINE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_raw_pinline_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MOONSTEEL_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.MOONSTEEL_BRICKS)
+                        .criterion(hasItem(ModBlocks.MOONSTEEL_BRICKS), conditionsFromItem(ModBlocks.MOONSTEEL_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_moonsteel_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CERILLE_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.CERILLE_BRICKS)
+                        .criterion(hasItem(ModBlocks.CERILLE_BRICKS), conditionsFromItem(ModBlocks.CERILLE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_cerille_bricks")));
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BULB, 2)
                         .pattern("AAA")
@@ -998,6 +1188,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.RAW_PINLINE_BRICKS), conditionsFromItem(ModBlocks.RAW_PINLINE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bulb")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOONSTEEL_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.MOONSTEEL_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.MOONSTEEL_BRICKS), conditionsFromItem(ModBlocks.MOONSTEEL_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_bulb")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CERILLE_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.CERILLE_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.CERILLE_BRICKS), conditionsFromItem(ModBlocks.CERILLE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_bulb")));
 
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MEMORY_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.MEMORY_BRICKS))
                         .criterion(hasItem(ModBlocks.MEMORY_BRICKS), conditionsFromItem(ModBlocks.MEMORY_BRICKS))
@@ -1041,6 +1249,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.RAW_PINLINE), conditionsFromItem(ModItems.RAW_PINLINE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOONSTEEL_BRICKS, 8)
+                        .pattern("SSS")
+                        .pattern("SAS")
+                        .pattern("SSS")
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
+                        .input('A', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CERILLE_BRICKS, 8)
+                        .pattern("SSS")
+                        .pattern("SAS")
+                        .pattern("SSS")
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
+                        .input('A', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_bricks")));
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_END_STONE, 1)
                         .pattern("SSS")
                         .pattern("SSS")
@@ -1056,6 +1282,36 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.COMPRESSED_END_STONE), conditionsFromItem(ModBlocks.COMPRESSED_END_STONE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_end_stone_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOONSTEEL_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.MOONSTEEL_BRICKS))
+                        .criterion(hasItem(ModBlocks.MOONSTEEL_BRICKS), conditionsFromItem(ModBlocks.MOONSTEEL_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_bricks_slab")));
+                createStairsRecipe(ModBlocks.MOONSTEEL_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.MOONSTEEL_BRICKS))
+                        .criterion(hasItem(ModBlocks.MOONSTEEL_BRICKS), conditionsFromItem(ModBlocks.MOONSTEEL_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOONSTEEL_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.MOONSTEEL_BRICKS)
+                        .criterion(hasItem(ModBlocks.MOONSTEEL_BRICKS), conditionsFromItem(ModBlocks.MOONSTEEL_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CERILLE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.CERILLE_BRICKS))
+                        .criterion(hasItem(ModBlocks.CERILLE_BRICKS), conditionsFromItem(ModBlocks.CERILLE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_bricks_slab")));
+                createStairsRecipe(ModBlocks.CERILLE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CERILLE_BRICKS))
+                        .criterion(hasItem(ModBlocks.CERILLE_BRICKS), conditionsFromItem(ModBlocks.CERILLE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CERILLE_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.CERILLE_BRICKS)
+                        .criterion(hasItem(ModBlocks.CERILLE_BRICKS), conditionsFromItem(ModBlocks.CERILLE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_bricks_wall")));
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.PINLINE_BRICKS))
                         .criterion(hasItem(ModBlocks.PINLINE_BRICKS), conditionsFromItem(ModBlocks.PINLINE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -1233,6 +1489,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(ModItems.ELYSIUM_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_elysium")));
 
+                createShaped(RecipeCategory.MISC, ModItems.MOONSTEEL_INGOT, 1)
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .input('S', ModItems.MOONSTEEL_NUGGET)
+                        .criterion(hasItem(ModItems.MOONSTEEL_NUGGET), conditionsFromItem(ModItems.MOONSTEEL_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_from_nugget")));
+                createShapeless(RecipeCategory.MISC, ModItems.MOONSTEEL_NUGGET, 9)
+                        .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
+                        .input(ModItems.MOONSTEEL_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_moonsteel")));
+
+                createShaped(RecipeCategory.MISC, ModItems.CERILLE_INGOT, 1)
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .input('S', ModItems.CERILLE_NUGGET)
+                        .criterion(hasItem(ModItems.CERILLE_NUGGET), conditionsFromItem(ModItems.CERILLE_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_from_nugget")));
+                createShapeless(RecipeCategory.MISC, ModItems.CERILLE_NUGGET, 9)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .input(ModItems.CERILLE_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_cerille")));
+
                 createShaped(RecipeCategory.MISC, ModItems.PINLINE_INGOT, 1)
                         .pattern("SSS")
                         .pattern("SSS")
@@ -1343,6 +1625,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.RAW_PINLINE), conditionsFromItem(ModItems.RAW_PINLINE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline_rod")));
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.TORCH, 4)
+                        .pattern("C")
+                        .pattern("/")
+                        .input('/', Items.STICK)
+                        .input('C', ModItems.STYXCOAL)
+                        .criterion(hasItem(ModItems.STYXCOAL), conditionsFromItem(ModItems.STYXCOAL))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "torch_from_styxcoal")));
 
                 createShapeless(RecipeCategory.FOOD, ModItems.COAL_MEAL, 2)
                         .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
@@ -1484,7 +1775,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTemplateCopyingRecipe(ModItems.WINGFLAP_SMITHING_TEMPLATE, Items.PURPUR_BLOCK);
                 offerSmithingTrimRecipe(ModItems.OVERGROWTH_SMITHING_TEMPLATE, ModTrimPatterns.OVERGROWTH,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "overgrowth")));
-                offerSmithingTemplateCopyingRecipe(ModItems.OVERGROWTH_SMITHING_TEMPLATE, Blocks.MOSSY_COBBLESTONE);
+                offerSmithingTemplateCopyingRecipe(ModItems.OVERGROWTH_SMITHING_TEMPLATE, ModBlocks.MOSSY_COBBLED_STYXSTONE);
             }
         };
     }

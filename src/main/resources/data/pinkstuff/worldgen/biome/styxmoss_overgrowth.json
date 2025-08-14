@@ -40,7 +40,9 @@
     [
       "pinkstuff:compressed_styxstone_placed",
       "pinkstuff:mabrize_placed",
-      "pinkstuff:styxian_amethyst_ore_placed"
+      "pinkstuff:styxian_amethyst_ore_placed",
+      "pinkstuff:styxcoal_ore_placed",
+      "pinkstuff:moonsteel_ore_placed"
     ],
     [],
     [],
