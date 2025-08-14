@@ -4,7 +4,8 @@ import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.custom.*;
 import net.jirniy.pinkstuff.particle.ModParticles;
 import net.jirniy.pinkstuff.util.ModTags;
-import net.jirniy.pinkstuff.world.tree.ModSaplingGenerator;
+import net.jirniy.pinkstuff.world.ModConfiguredFeatures;
+import net.jirniy.pinkstuff.world.features.ModSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
@@ -27,18 +28,64 @@ public class ModBlocks {
     public static final Block PINK_ICE = registerBlock("pink_ice",
             properties -> new TranslucentBlock(properties.strength(8f).slipperiness(1.01f).nonOpaque()
                     .sounds(BlockSoundGroup.GLASS).mapColor(MapColor.DULL_PINK)));
+    public static final Block BLACK_GOOP = registerBlock("black_goop",
+            properties -> new BlackGoopBlock(properties.strength(4f)
+                    .sounds(BlockSoundGroup.HONEY).mapColor(MapColor.BLACK)));
+    public static final Block CORRUPT_ORE = registerBlock("corrupt_ore",
+            properties -> new BlackGoopBlock(properties.strength(9f)
+                    .sounds(BlockSoundGroup.HONEY).mapColor(MapColor.BLACK)));
+    public static final Block STYXIAN_SOIL = registerBlock("styxian_soil",
+            properties -> new Block(properties.strength(0.8f)
+                    .sounds(BlockSoundGroup.SOUL_SOIL).mapColor(MapColor.DARK_AQUA)));
+    public static final Block STYXMOSS = registerBlock("styxmoss",
+            properties -> new StyxmossBlock(ModConfiguredFeatures.STYXMOSS_PATCH_BONEMEAL_KEY, properties.strength(0.7f)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.DARK_AQUA)));
+    public static final Block STYXMOSS_CARPET = registerBlock("styxmoss_carpet",
+            properties -> new CarpetBlock(properties.strength(0.3f)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.DARK_AQUA)));
+    public static final Block STYXSTONE = registerBlock("styxstone",
+            properties -> new Block(properties.strength(1.7f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block MABRIZE = registerBlock("mabrize",
+            properties -> new Block(properties.strength(1.4f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block COBBLED_STYXSTONE = registerBlock("cobbled_styxstone",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block MOSSY_COBBLED_STYXSTONE = registerBlock("mossy_cobbled_styxstone",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block COMPRESSED_STYXSTONE = registerBlock("compressed_styxstone",
+            properties -> new Block(properties.strength(4f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+
+    public static final Block STYXGRASS = registerBlock("styxgrass",
+            properties -> new ModGrassBlock(BlockTags.DIRT, properties.strength(0f).replaceable()
+                    .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.MOSS_CARPET).pistonBehavior(PistonBehavior.DESTROY),
+                    2, 2, 14, 8, 14));
+
+    public static final Block STYXIAN_AMETHYST_ORE = registerBlock("styxian_amethyst_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block COMPRESSED_STYXIAN_AMETHYST_ORE = registerBlock("compressed_styxian_amethyst_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
     public static final Block DIAMOND_CLUMP = registerBlock("diamond_clump",
-            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
                     .sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.DIAMOND_BLUE)));
     public static final Block EMERALD_CLUMP = registerBlock("emerald_clump",
-            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
                     .sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.EMERALD_GREEN)));
     public static final Block AMETHYST_CLUMP = registerBlock("amethyst_clump",
-            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
                     .sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.PURPLE)));
     public static final Block QUARTZ_CLUMP = registerBlock("quartz_clump",
-            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
                     .sounds(BlockSoundGroup.NETHER_ORE).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final Block CORRUPTION_CLUMP = registerBlockWithoutBlockItem("corruption_clump",
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
+                    .sounds(BlockSoundGroup.HONEY).mapColor(MapColor.DARK_RED)));
 
     public static final Block COMPRESSED_END_STONE = registerBlock("compressed_end_stone",
             properties -> new Block(properties.strength(10f)
@@ -60,7 +107,7 @@ public class ModBlocks {
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block KUNZITE_CLUMP = registerBlock("kunzite_clump",
-            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
                     .sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.PURPLE)));
     public static final Block ELYSIUM_BLOCK = registerBlock("elysium_block",
             properties -> new Block(properties.strength(5f)
@@ -86,7 +133,7 @@ public class ModBlocks {
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 1),
                     properties.strength(6f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).luminance(state -> 2).mapColor(MapColor.DARK_GREEN)));
     public static final Block THERMIUM_CLUMP = registerBlock("thermium_clump",
-            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque()
+            properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
                     .luminance(state -> ModMultifaceBlock.luminanceSupplier(state, 1))
                     .sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
 
@@ -206,6 +253,41 @@ public class ModBlocks {
     public static final Block ASHEN_PLANKS = registerBlock("ashen_planks",
             properties -> new Block(properties.strength(1.3f).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
 
+    public static final Block KEAPHE_LOG = registerBlock("keaphe_log",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DARK_DULL_PINK)));
+    public static final Block KEAPHE_WOOD = registerBlock("keaphe_wood",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DARK_DULL_PINK)));
+    public static final Block STRIPPED_KEAPHE_LOG = registerBlock("stripped_keaphe_log",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.PALE_GREEN)));
+    public static final Block STRIPPED_KEAPHE_WOOD = registerBlock("stripped_keaphe_wood",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.PALE_GREEN)));
+
+    public static final Block KEAPHE_PLANKS = registerBlock("keaphe_planks",
+            properties -> new Block(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_GREEN)));
+    public static final Block KEAPHE_LEAVES = registerBlock("keaphe_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.1f, ModParticles.CHORUS_PETAL_PARTICLE, properties
+                    .mapColor(MapColor.PALE_PURPLE).strength(0.2F).ticksRandomly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+    public static final Block FLOWERING_KEAPHE_LEAVES = registerBlock("flowering_keaphe_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.1f, ModParticles.CHORUS_PETAL_PARTICLE, properties
+                    .mapColor(MapColor.PALE_PURPLE).strength(0.2F).ticksRandomly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+
+    public static final Block KEAPHE_SAPLING = registerBlock("keaphe_sapling",
+            properties -> new ModSaplingBlock(ModSaplingGenerator.KEAPHE, properties.mapColor(MapColor.DARK_DULL_PINK)
+                    .noCollision().ticksRandomly().breakInstantly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).pistonBehavior(PistonBehavior.DESTROY), BlockTags.DIRT));
+
     public static final Block AMETHYST_ROD = registerBlock("amethyst_rod",
             properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 15)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.PURPLE)));
@@ -282,6 +364,37 @@ public class ModBlocks {
     public static final Block COMPRESSED_END_STONE_BRICKS = registerBlock("compressed_end_stone_bricks",
             properties -> new Block(properties.strength(11f)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.PALE_YELLOW)));
+    public static final Block STYXSTONE_BRICKS = registerBlock("styxstone_bricks",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block COMPRESSED_STYXSTONE_BRICKS = registerBlock("compressed_styxstone_bricks",
+            properties -> new Block(properties.strength(5f).requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block MABRIZE_BRICKS = registerBlock("mabrize_bricks",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block STYXSTONE_BRICKS_STAIRS = registerBlock("styxstone_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.STYXSTONE_BRICKS.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block STYXSTONE_BRICKS_SLAB = registerBlock("styxstone_bricks_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block STYXSTONE_BRICKS_WALL = registerBlock("styxstone_bricks_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block COMPRESSED_STYXSTONE_BRICKS_STAIRS = registerBlock("compressed_styxstone_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.COMPRESSED_STYXSTONE_BRICKS.getDefaultState(),
+                    properties.strength(5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block COMPRESSED_STYXSTONE_BRICKS_SLAB = registerBlock("compressed_styxstone_bricks_slab",
+            properties -> new SlabBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block COMPRESSED_STYXSTONE_BRICKS_WALL = registerBlock("compressed_styxstone_bricks_wall",
+            properties -> new WallBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block MABRIZE_BRICKS_STAIRS = registerBlock("mabrize_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.MABRIZE_BRICKS.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block MABRIZE_BRICKS_SLAB = registerBlock("mabrize_bricks_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block MABRIZE_BRICKS_WALL = registerBlock("mabrize_bricks_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
     public static final Block COMPRESSED_END_STONE_BRICKS_STAIRS = registerBlock("compressed_end_stone_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.COMPRESSED_END_STONE_BRICKS.getDefaultState(),
@@ -409,6 +522,24 @@ public class ModBlocks {
     public static final Block ASHEN_TRAPDOOR = registerBlock("ashen_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CRIMSON, properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).nonOpaque()));
 
+    public static final Block KEAPHE_STAIRS = registerBlock("keaphe_stairs",
+            properties -> new StairsBlock(ModBlocks.KEAPHE_PLANKS.getDefaultState(),
+                    properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_GREEN)));
+    public static final Block KEAPHE_SLAB = registerBlock("keaphe_slab",
+            properties -> new SlabBlock(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_GREEN)));
+    public static final Block KEAPHE_BUTTON = registerBlock("keaphe_button",
+            properties -> new ButtonBlock(BlockSetType.CHERRY, 20, properties.strength(2f).noCollision().sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_GREEN)));
+    public static final Block KEAPHE_PRESSURE_PLATE = registerBlock("keaphe_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_GREEN)));
+    public static final Block KEAPHE_FENCE = registerBlock("keaphe_fence",
+            properties -> new FenceBlock(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD)));
+    public static final Block KEAPHE_FENCE_GATE = registerBlock("keaphe_fence_gate",
+            properties -> new FenceGateBlock(WoodType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_GREEN)));
+    public static final Block KEAPHE_DOOR = registerBlock("keaphe_door",
+            properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+    public static final Block KEAPHE_TRAPDOOR = registerBlock("keaphe_trapdoor",
+            properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+
     public static final Block DISPLAY = registerBlock("display",
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque().mapColor(MapColor.STONE_GRAY)));
     public static final Block THERMIUM_BLASTER = registerBlock("thermium_blaster",
@@ -429,6 +560,9 @@ public class ModBlocks {
     public static final Block MEMORIA_BOURPEER = registerBlock("memoria_bourpeer",
             properties -> new FlowerBlock(StatusEffects.CONDUIT_POWER, 60, properties
                     .strength(0f).offset(AbstractBlock.OffsetType.XZ).luminance(state -> 7).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DEATH_FLOWERS = registerBlock("death_flowers",
+            properties -> new FlowerbedBlock(properties.strength(0f)
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block POTTED_AMETHYST_PARTERS = registerBlockWithoutBlockItem("potted_amethyst_parters",
             properties -> new FlowerPotBlock(ModBlocks.AMETHYST_PARTERS, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
@@ -444,6 +578,8 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(ModBlocks.CRYSTAL_CHERRY_SAPLING, properties.strength(0f).nonOpaque().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_CHORUS_SAPLING = registerBlockWithoutBlockItem("potted_chorus_sapling",
             properties -> new FlowerPotBlock(ModBlocks.CHORUS_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_KEAPHE_SAPLING = registerBlockWithoutBlockItem("potted_keaphe_sapling",
+            properties -> new FlowerPotBlock(ModBlocks.KEAPHE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_SNOWY_SPRUCE_SAPLING = registerBlockWithoutBlockItem("potted_snowy_spruce_sapling",
             properties -> new FlowerPotBlock(ModBlocks.SNOWY_SPRUCE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
 

@@ -31,6 +31,11 @@ public class ModItems {
     public static final Item SULFUR = registerItem("sulfur",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.SULFUR)));
 
+    public static final Item CORRUPT_DROPLET = registerItem("corrupt_droplet",
+            setting -> new BlockItem(ModBlocks.CORRUPTION_CLUMP, setting));
+    public static final Item CORRUPT_MASS = registerItem("corrupt_mass",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.CORRUPT)));
+
     public static final Item KUNZITE_NUGGET = registerItem("kunzite_nugget", Item::new);
     public static final Item KUNZITE = registerItem("kunzite",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.KUNZITE)));

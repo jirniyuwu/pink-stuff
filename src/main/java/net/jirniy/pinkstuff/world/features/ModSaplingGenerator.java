@@ -1,4 +1,4 @@
-package net.jirniy.pinkstuff.world.tree;
+package net.jirniy.pinkstuff.world.features;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.world.ModConfiguredFeatures;
@@ -18,4 +18,7 @@ public class ModSaplingGenerator {
 
     public static final SaplingGenerator SNOWY_SPRUCE = new SaplingGenerator(JirniysPinkStuff.MOD_ID + ":snowy_spruce",
             Optional.empty(), Optional.of(ModConfiguredFeatures.SNOWY_SPRUCE_TREE_KEY), Optional.empty());
+
+    public static final SaplingGenerator KEAPHE = new SaplingGenerator(JirniysPinkStuff.MOD_ID + ":keaphe",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.KEAPHE_TREE_KEY), Optional.empty());
 }

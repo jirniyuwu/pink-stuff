@@ -8,6 +8,7 @@
   "item.pinkstuff.amethyst_clump": "Amethyst Clump",
   "item.pinkstuff.kunzite_clump": "Kunzite Clump",
   "item.pinkstuff.thermium_clump": "Thermium Clump",
+  "item.pinkstuff.corruption_clump": "Corruption Clump",
 
   "item.pinkstuff.diamond_nugget": "Diamond Nugget",
   "item.pinkstuff.emerald_nugget": "Emerald Nugget",
@@ -31,6 +32,8 @@
   "item.pinkstuff.pinline_nugget": "Pinline Nugget",
   "item.pinkstuff.raw_pinline": "Raw Pinline",
   "item.pinkstuff.prepared_pinline": "Prepared Raw Pinline",
+  "item.pinkstuff.corrupt_droplet": "Corrupt Droplet",
+  "item.pinkstuff.corrupt_mass": "Corrupted Mass",
 
   "item.pinkstuff.glazed_chorus_fruit": "Glazed Chorus Fruit",
   "item.pinkstuff.coal_meal": "Coal Meal",
@@ -42,6 +45,8 @@
   "item.pinkstuff.hazeweaver": "Hazeweaver",
 
   "item.pinkstuff.pink_ice": "Pink Ice",
+  "item.pinkstuff.black_goop": "Black Goop",
+  "item.pinkstuff.corrupt_ore": "Corrupted Ore",
   "item.pinkstuff.kunzite_block": "Block of Kunzite",
   "item.pinkstuff.raw_kunzite_block": "Block of Raw Kunzite",
   "item.pinkstuff.kunzite_ore": "Kunzite Ore",
@@ -59,6 +64,9 @@
   "item.pinkstuff.end_pinline_ore": "Pinline Ore",
   "item.pinkstuff.compressed_end_pinline_ore": "Compressed Pinline Ore",
   "item.pinkstuff.raw_pinline_block": "Block of Raw Pinline",
+  "item.pinkstuff.styxian_soil": "Styxian Soil",
+  "item.pinkstuff.styxian_amethyst_ore": "Styxian Amethyst Ore",
+  "item.pinkstuff.compressed_styxian_amethyst_ore": "Compressed Styxian Amethyst Ore",
 
   "item.pinkstuff.polished_amethyst_block": "Polished Amethyst Block",
   "item.pinkstuff.polished_amethyst_slab": "Polished Amethyst Slab",
@@ -127,6 +135,29 @@
   "item.pinkstuff.compressed_end_stone_bricks_stairs": "Compressed End Stone Brick Stairs",
   "item.pinkstuff.compressed_end_stone_bricks_wall": "Compressed End Stone Brick Wall",
 
+  "item.pinkstuff.cobbled_styxstone": "Cobbled Styxstone",
+  "item.pinkstuff.mossy_cobbled_styxstone": "Mossy Cobbled Styxstone",
+  "item.pinkstuff.styxmoss": "Styxmoss",
+  "item.pinkstuff.styxmoss_carpet": "Styxmoss Carpet",
+  "item.pinkstuff.styxgrass": "Styxgrass",
+  "item.pinkstuff.styxstone": "Styxstone",
+  "item.pinkstuff.styxstone_bricks": "Styxstone Bricks",
+  "item.pinkstuff.styxstone_bricks_slab": "Styxstone Brick Slab",
+  "item.pinkstuff.styxstone_bricks_stairs": "Styxstone Brick Stairs",
+  "item.pinkstuff.styxstone_bricks_wall": "Styxstone Brick Wall",
+
+  "item.pinkstuff.compressed_styxstone": "Compressed Styxstone",
+  "item.pinkstuff.compressed_styxstone_bricks": "Compressed Styxstone Bricks",
+  "item.pinkstuff.compressed_styxstone_bricks_slab": "Compressed Styxstone Brick Slab",
+  "item.pinkstuff.compressed_styxstone_bricks_stairs": "Compressed Styxstone Brick Stairs",
+  "item.pinkstuff.compressed_styxstone_bricks_wall": "Compressed Styxstone Brick Wall",
+
+  "item.pinkstuff.mabrize": "Mabrize",
+  "item.pinkstuff.mabrize_bricks": "Mabrize Bricks",
+  "item.pinkstuff.mabrize_bricks_slab": "Mabrize Brick Slab",
+  "item.pinkstuff.mabrize_bricks_stairs": "Mabrize Brick Stairs",
+  "item.pinkstuff.mabrize_bricks_wall": "Mabrize Brick Wall",
+
   "item.pinkstuff.crystal_cherry_log": "Crystal Cherry Log",
   "item.pinkstuff.crystal_cherry_wood": "Crystal Cherry Wood",
   "item.pinkstuff.stripped_crystal_cherry_log": "Stripped Crystal Cherry Log",
@@ -161,6 +192,24 @@
   "item.pinkstuff.chorus_button": "Chorus Button",
   "item.pinkstuff.chorus_pressure_plate": "Chorus Pressure Plate",
 
+  "item.pinkstuff.keaphe_log": "Keaphe Log",
+  "item.pinkstuff.keaphe_wood": "Keaphe Wood",
+  "item.pinkstuff.stripped_keaphe_log": "Stripped Keaphe Log",
+  "item.pinkstuff.stripped_keaphe_wood": "Stripped Keaphe Wood",
+  "item.pinkstuff.keaphe_planks": "Keaphe Planks",
+  "item.pinkstuff.keaphe_leaves": "Keaphe Leaves",
+  "item.pinkstuff.flowering_keaphe_leaves": "Flowering Keaphe Leaves",
+  "item.pinkstuff.keaphe_sapling": "Keaphe Sapling",
+
+  "item.pinkstuff.keaphe_slab": "Keaphe Slab",
+  "item.pinkstuff.keaphe_stairs": "Keaphe Stairs",
+  "item.pinkstuff.keaphe_fence": "Keaphe Fence",
+  "item.pinkstuff.keaphe_fence_gate": "Keaphe Fence Gate",
+  "item.pinkstuff.keaphe_door": "Keaphe Door",
+  "item.pinkstuff.keaphe_trapdoor": "Keaphe Trapdoor",
+  "item.pinkstuff.keaphe_button": "Keaphe Button",
+  "item.pinkstuff.keaphe_pressure_plate": "Keaphe Pressure Plate",
+
   "item.pinkstuff.ashen_log": "Ashen Log",
   "item.pinkstuff.ashen_wood": "Ashen Wood",
   "item.pinkstuff.stripped_ashen_log": "Stripped Ashen Log",
@@ -184,6 +233,7 @@
   "item.pinkstuff.elysian_skyberry": "Elysian Skyberry",
   "item.pinkstuff.thermium_wiltborn": "Thermium Wiltborn",
   "item.pinkstuff.memoria_bourpeer": "Memoria Bourpeer",
+  "item.pinkstuff.death_flowers": "Deathflowers",
 
   "item.pinkstuff.chorus_lily": "Chorus Lily",
   "item.pinkstuff.small_end_grass": "Small End Grass",
@@ -242,6 +292,11 @@
   "item.minecraft.lingering_potion.effect.grounded": "Lingering Potion of Heaviness",
   "item.minecraft.tipped_arrow.effect.grounded": "Arrow of Heaviness",
 
+  "item.minecraft.potion.effect.corrupt": "Potion of Corruption",
+  "item.minecraft.splash_potion.effect.corrupt": "Splash Potion of Corruption",
+  "item.minecraft.lingering_potion.effect.corrupt": "Lingering Potion of Corruption",
+  "item.minecraft.tipped_arrow.effect.corrupt": "Arrow of Corruption",
+
   "enchantment.pinkstuff.lightning": "Curse of Lightning",
   "enchantment.pinkstuff.fragility": "Curse of Fragility",
   "enchantment.pinkstuff.length": "Length",
@@ -251,6 +306,7 @@
 
   "effect.pinkstuff.dawnbreaker": "Dawnbreaker",
   "effect.pinkstuff.grounded": "Grounded",
+  "effect.pinkstuff.death_grip": "Death Grip",
 
   "item.pinkstuff.cherry_armor_trim_smithing_template": "Cherry Armor Trim",
   "trim_pattern.pinkstuff.cherry": "Cherry Trim Pattern",
@@ -280,6 +336,7 @@
   "trim_material.pinkstuff.sulfur": "Sulfur Material",
   "trim_material.pinkstuff.pinline": "Pinline Material",
   "trim_material.pinkstuff.raw_pinline": "Raw Pinline Material",
+  "trim_material.pinkstuff.corrupt": "Corrupted Material",
 
   "filled_map.pinkstuff.end_temple": "End Explorer Map",
   "filled_map.pinkstuff.end_city": "End Explorer Map",
@@ -289,6 +346,7 @@
   "tag.item.pinkstuff.bricks_craftable": "Bricks Crafting",
   "tag.item.pinkstuff.chorus_logs": "Chorus Logs",
   "tag.item.pinkstuff.ashen_logs": "Ashen Logs",
+  "tag.item.pinkstuff.keaphe_logs": "Keaphe Logs",
   "tag.item.pinkstuff.crystal_cherry_logs": "Crystal Cherry Logs",
   "tag.item.pinkstuff.elysium_repair": "Elysium Repair",
   "tag.item.pinkstuff.kunzite_repair": "Kunzite Repair",

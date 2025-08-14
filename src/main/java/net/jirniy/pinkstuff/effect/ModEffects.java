@@ -25,6 +25,15 @@ public class ModEffects {
                     .addAttributeModifier(EntityAttributes.FALL_DAMAGE_MULTIPLIER,
                             Identifier.of(JirniysPinkStuff.MOD_ID, "effect.grounded"),
                             (double)0.1F, EntityAttributeModifier.Operation.ADD_VALUE));
+    public static final RegistryEntry<StatusEffect> DEATH_GRIP = registerStatusEffect("death_grip",
+            new DeathGripEffect(40, StatusEffectCategory.HARMFUL, 0x341411)
+                    .addAttributeModifier(EntityAttributes.JUMP_STRENGTH,
+                            Identifier.of(JirniysPinkStuff.MOD_ID, "effect.death_grip"),
+                            (double)-0.1F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED,
+                            Identifier.of(JirniysPinkStuff.MOD_ID, "effect.death_grip"),
+                            (double)-0.1F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    );
 
     public static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(JirniysPinkStuff.MOD_ID, name), statusEffect);

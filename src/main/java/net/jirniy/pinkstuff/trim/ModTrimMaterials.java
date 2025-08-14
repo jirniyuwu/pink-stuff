@@ -31,6 +31,8 @@ public class ModTrimMaterials {
             Identifier.of(JirniysPinkStuff.MOD_ID, "pinline"));
     public static final RegistryKey<ArmorTrimMaterial> RAW_PINLINE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
             Identifier.of(JirniysPinkStuff.MOD_ID, "raw_pinline"));
+    public static final RegistryKey<ArmorTrimMaterial> CORRUPT = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt"));
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
         register(registerable, KUNZITE, Registries.ITEM.getEntry(ModItems.KUNZITE),
@@ -47,6 +49,8 @@ public class ModTrimMaterials {
                 Style.EMPTY.withColor(TextColor.parse("#9d85b1").getOrThrow()), "pinline");
         register(registerable, RAW_PINLINE, Registries.ITEM.getEntry(ModItems.RAW_PINLINE),
                 Style.EMPTY.withColor(TextColor.parse("#659183").getOrThrow()), "raw_pinline");
+        register(registerable, CORRUPT, Registries.ITEM.getEntry(ModItems.CORRUPT_MASS),
+                Style.EMPTY.withColor(TextColor.parse("#601c22").getOrThrow()), "corrupt");
     }
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,

@@ -24,6 +24,8 @@ import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.util.HammerUsageEvent;
 import net.jirniy.pinkstuff.util.ModMapDecorations;
 import net.jirniy.pinkstuff.util.ModPotions;
+import net.jirniy.pinkstuff.world.ModBiomes;
+import net.jirniy.pinkstuff.world.features.ModFeatures;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -56,6 +58,8 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
 		ModMapDecorations.registerMapDecorations();
+		ModBiomes.registerBiomes();
+		ModFeatures.registerFeatures();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
@@ -63,6 +67,8 @@ public class JirniysPinkStuff implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.CHORUS_WOOD, ModBlocks.STRIPPED_CHORUS_WOOD);
 		StrippableBlockRegistry.register(ModBlocks.ASHEN_LOG, ModBlocks.STRIPPED_ASHEN_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ASHEN_WOOD, ModBlocks.STRIPPED_ASHEN_WOOD);
+		StrippableBlockRegistry.register(ModBlocks.KEAPHE_LOG, ModBlocks.STRIPPED_KEAPHE_LOG);
+		StrippableBlockRegistry.register(ModBlocks.KEAPHE_WOOD, ModBlocks.STRIPPED_KEAPHE_WOOD);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_WOOD, 5, 5);
@@ -76,6 +82,13 @@ public class JirniysPinkStuff implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_CHORUS_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHORUS_LEAVES, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHORUS_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KEAPHE_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KEAPHE_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_KEAPHE_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_KEAPHE_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KEAPHE_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.FLOWERING_KEAPHE_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KEAPHE_PLANKS, 5, 20);
 
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.THERMIUM, 32000);
@@ -110,6 +123,9 @@ public class JirniysPinkStuff implements ModInitializer {
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.PREPARED_PINLINE, ModPotions.GROUNDED);
 			builder.registerPotionRecipe(ModPotions.GROUNDED, Items.GLOWSTONE_DUST, ModPotions.STRONG_GROUNDED);
+
+			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.CORRUPT_MASS, ModPotions.CORRUPT);
+			builder.registerPotionRecipe(ModPotions.CORRUPT, Items.GLOWSTONE_DUST, ModPotions.STRONG_CORRUPT);
 
 			builder.registerPotionRecipe(Potions.SLOW_FALLING, Items.FERMENTED_SPIDER_EYE, ModPotions.GROUNDED);
 		});

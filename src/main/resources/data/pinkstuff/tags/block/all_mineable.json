@@ -10,6 +10,7 @@
     "#pinkstuff:glass_panes",
     "minecraft:cobweb",
     "minecraft:sea_lantern",
-    "minecraft:glowstone"
+    "minecraft:glowstone",
+    "pinkstuff:black_goop"
   ]
 }

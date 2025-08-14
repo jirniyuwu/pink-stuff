@@ -15,6 +15,11 @@ public class ModPotions {
     public static final RegistryEntry<Potion> STRONG_GROUNDED = registerPotion("strong_grounded",
             new Potion("grounded", new StatusEffectInstance(ModEffects.GROUNDED, 200, 1)));
 
+    public static final RegistryEntry<Potion> CORRUPT = registerPotion("corrupt",
+            new Potion("corrupt", new StatusEffectInstance(ModEffects.DEATH_GRIP, 800, 0)));
+    public static final RegistryEntry<Potion> STRONG_CORRUPT = registerPotion("strong_corrupt",
+            new Potion("corrupt", new StatusEffectInstance(ModEffects.DEATH_GRIP, 400, 1)));
+
     public static RegistryEntry<Potion> registerPotion(String name, Potion potion) {
         return Registry.registerReference(Registries.POTION, Identifier.of(JirniysPinkStuff.MOD_ID, name), potion);
     }

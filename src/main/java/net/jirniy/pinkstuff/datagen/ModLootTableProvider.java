@@ -62,6 +62,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PINLINE_BRICKS);
         addDrop(ModBlocks.RAW_PINLINE_BRICKS);
         addDrop(ModBlocks.COMPRESSED_END_STONE_BRICKS);
+        addDrop(ModBlocks.STYXSTONE_BRICKS);
+        addDrop(ModBlocks.COMPRESSED_STYXSTONE_BRICKS);
+        addDrop(ModBlocks.MABRIZE_BRICKS);
 
         addDrop(ModBlocks.CHISELED_AMETHYST_BRICKS);
         addDrop(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -88,6 +91,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PINLINE_BRICKS_STAIRS);
         addDrop(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
         addDrop(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
+        addDrop(ModBlocks.STYXSTONE_BRICKS_STAIRS);
+        addDrop(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS);
+        addDrop(ModBlocks.MABRIZE_BRICKS_STAIRS);
 
         addDrop(ModBlocks.POLISHED_AMETHYST_SLAB, slabDrops(ModBlocks.POLISHED_AMETHYST_SLAB));
         addDrop(ModBlocks.AMETHYST_BRICKS_SLAB, slabDrops(ModBlocks.AMETHYST_BRICKS_SLAB));
@@ -98,6 +104,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAW_PINLINE_BRICKS_SLAB, slabDrops(ModBlocks.RAW_PINLINE_BRICKS_SLAB));
         addDrop(ModBlocks.PINLINE_BRICKS_SLAB, slabDrops(ModBlocks.PINLINE_BRICKS_SLAB));
         addDrop(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB, slabDrops(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB));
+        addDrop(ModBlocks.STYXSTONE_BRICKS_SLAB, slabDrops(ModBlocks.STYXSTONE_BRICKS_SLAB));
+        addDrop(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB, slabDrops(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB));
+        addDrop(ModBlocks.MABRIZE_BRICKS_SLAB, slabDrops(ModBlocks.MABRIZE_BRICKS_SLAB));
 
         addDrop(ModBlocks.POLISHED_AMETHYST_WALL);
         addDrop(ModBlocks.AMETHYST_BRICKS_WALL);
@@ -108,6 +117,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PINLINE_BRICKS_WALL);
         addDrop(ModBlocks.RAW_PINLINE_BRICKS_WALL);
         addDrop(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
+        addDrop(ModBlocks.STYXSTONE_BRICKS_WALL);
+        addDrop(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL);
+        addDrop(ModBlocks.MABRIZE_BRICKS_WALL);
 
         addDrop(ModBlocks.KUNZITE_ORE, oreDrops(ModBlocks.KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.DEEPSLATE_KUNZITE_ORE, oreDrops(ModBlocks.DEEPSLATE_KUNZITE_ORE, ModItems.RAW_KUNZITE));
@@ -117,6 +129,20 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.NETHER_SULFUR_ORE, oreDrops(ModBlocks.NETHER_SULFUR_ORE, ModItems.SULFUR));
         addDrop(ModBlocks.END_PINLINE_ORE, oreDrops(ModBlocks.END_PINLINE_ORE, ModItems.RAW_PINLINE));
         addDrop(ModBlocks.COMPRESSED_END_PINLINE_ORE, oreDrops(ModBlocks.COMPRESSED_END_PINLINE_ORE, ModItems.RAW_PINLINE));
+        addDrop(ModBlocks.STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
+        addDrop(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
+        addDrop(ModBlocks.CORRUPT_ORE, multipleOreDrops(ModBlocks.CORRUPT_ORE, ModItems.CORRUPT_DROPLET, 9, 29));
+
+        addDrop(ModBlocks.STYXIAN_SOIL);
+        addDrop(ModBlocks.STYXMOSS);
+        addDrop(ModBlocks.STYXMOSS_CARPET);
+        addDrop(ModBlocks.MABRIZE);
+        addDrop(ModBlocks.STYXSTONE, ModBlocks.COBBLED_STYXSTONE);
+        addDrop(ModBlocks.COBBLED_STYXSTONE);
+        addDrop(ModBlocks.MOSSY_COBBLED_STYXSTONE);
+        addDrop(ModBlocks.COMPRESSED_STYXSTONE);
+        dropsWithShears(ModBlocks.STYXGRASS);
+        addDrop(ModBlocks.DEATH_FLOWERS);
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LOG);
         addDrop(ModBlocks.CRYSTAL_CHERRY_WOOD);
@@ -172,6 +198,25 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ASHEN_BUTTON);
         addDrop(ModBlocks.ASHEN_PRESSURE_PLATE);
 
+        addDrop(ModBlocks.KEAPHE_LOG);
+        addDrop(ModBlocks.KEAPHE_WOOD);
+        addDrop(ModBlocks.STRIPPED_KEAPHE_LOG);
+        addDrop(ModBlocks.STRIPPED_KEAPHE_WOOD);
+        addDrop(ModBlocks.KEAPHE_PLANKS);
+
+        addDrop(ModBlocks.KEAPHE_SLAB, slabDrops(ModBlocks.KEAPHE_SLAB));
+        addDrop(ModBlocks.KEAPHE_STAIRS);
+        addDrop(ModBlocks.KEAPHE_FENCE);
+        addDrop(ModBlocks.KEAPHE_FENCE_GATE);
+        addDrop(ModBlocks.KEAPHE_DOOR, doorDrops(ModBlocks.KEAPHE_DOOR));
+        addDrop(ModBlocks.KEAPHE_TRAPDOOR);
+        addDrop(ModBlocks.KEAPHE_BUTTON);
+        addDrop(ModBlocks.KEAPHE_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.KEAPHE_SAPLING);
+        addDrop(ModBlocks.KEAPHE_LEAVES, leavesDrops(ModBlocks.KEAPHE_LEAVES, ModBlocks.KEAPHE_SAPLING, 0.05f));
+        addDrop(ModBlocks.FLOWERING_KEAPHE_LEAVES, leavesDrops(ModBlocks.FLOWERING_KEAPHE_LEAVES, ModBlocks.KEAPHE_SAPLING, 0.1f));
+
         addPottedPlantDrops(ModBlocks.POTTED_MEMORIA_BOURPEER);
         addPottedPlantDrops(ModBlocks.POTTED_THERMIUM_WILTBORN);
         addPottedPlantDrops(ModBlocks.POTTED_ELYSIAN_SKYBERRY);
@@ -179,6 +224,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPottedPlantDrops(ModBlocks.POTTED_AMETHYST_PARTERS);
         addPottedPlantDrops(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_CHORUS_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_KEAPHE_SAPLING);
 
         addDrop(ModBlocks.AMETHYST_PARTERS);
         addDrop(ModBlocks.KUNZITE_LOVELILY);
@@ -199,6 +245,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDropWithSilkTouch(ModBlocks.LARGE_END_GRASS);
         addDrop(ModBlocks.CHORUS_LILY);
 
+        addDropWithSilkTouch(ModBlocks.BLACK_GOOP);
+
         addDrop(Blocks.LARGE_AMETHYST_BUD, multipleOreDrops(Blocks.LARGE_AMETHYST_BUD, ModItems.AMETHYST_NUGGET, 2, 8));
         addDrop(Blocks.MEDIUM_AMETHYST_BUD, multipleOreDrops(Blocks.MEDIUM_AMETHYST_BUD, ModItems.AMETHYST_NUGGET, 0, 3));
 
@@ -208,6 +256,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.KUNZITE_CLUMP, clumpDrops(ModBlocks.KUNZITE_CLUMP, ModItems.KUNZITE_NUGGET, 3));
         addDrop(ModBlocks.THERMIUM_CLUMP, clumpDrops(ModBlocks.THERMIUM_CLUMP, ModItems.THERMIUM_NUGGET, 1));
         addDrop(ModBlocks.QUARTZ_CLUMP, clumpDrops(ModBlocks.QUARTZ_CLUMP, ModItems.QUARTZ_NUGGET, 3));
+        addDrop(ModBlocks.CORRUPTION_CLUMP, multifaceGrowthDrops(Block.getBlockFromItem(ModItems.CORRUPT_DROPLET)));
 
         this.addDrop(ModBlocks.GEM_BERRY_BUSH,
                 block -> this.applyExplosionDecay(

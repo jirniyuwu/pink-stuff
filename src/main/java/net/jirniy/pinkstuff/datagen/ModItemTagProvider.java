@@ -92,7 +92,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CHORUS_LOG.asItem())
                 .add(ModBlocks.CHORUS_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_CHORUS_LOG.asItem())
-                .add(ModBlocks.STRIPPED_CHORUS_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_CHORUS_WOOD.asItem())
+                .add(ModBlocks.KEAPHE_LOG.asItem())
+                .add(ModBlocks.KEAPHE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_KEAPHE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_KEAPHE_WOOD.asItem());
         valueLookupBuilder(ItemTags.LOGS)
                 .add(ModBlocks.ASHEN_LOG.asItem())
                 .add(ModBlocks.ASHEN_WOOD.asItem())
@@ -101,7 +105,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS.asItem())
                 .add(ModBlocks.CHORUS_PLANKS.asItem())
-                .add(ModBlocks.ASHEN_PLANKS.asItem());
+                .add(ModBlocks.ASHEN_PLANKS.asItem())
+                .add(ModBlocks.KEAPHE_PLANKS.asItem());
         valueLookupBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.ELYSIUM_HELMET)
@@ -124,6 +129,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.ELYSIAN_SKYBERRY.asItem())
                 .add(ModBlocks.MEMORIA_BOURPEER.asItem())
                 .add(ModBlocks.THERMIUM_WILTBORN.asItem())
+                .add(ModBlocks.DEATH_FLOWERS.asItem())
                 .add(ModItems.HAZEWEAVER);
         valueLookupBuilder(ItemTags.SAPLINGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem())
@@ -136,7 +142,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MEMORY_SHARD)
                 .add(ModItems.SULFUR)
                 .add(ModItems.PINLINE_INGOT)
-                .add(ModItems.RAW_PINLINE);
+                .add(ModItems.RAW_PINLINE)
+                .add(ModItems.CORRUPT_MASS);
         valueLookupBuilder(ItemTags.SLABS)
                 .add(ModBlocks.AMETHYST_BRICKS_SLAB.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_SLAB.asItem())
@@ -146,7 +153,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MEMORY_BRICKS_SLAB.asItem())
                 .add(ModBlocks.PINLINE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB.asItem())
-                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB.asItem());
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB.asItem())
+                .add(ModBlocks.STYXSTONE_BRICKS_SLAB.asItem())
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB.asItem())
+                .add(ModBlocks.MABRIZE_BRICKS_SLAB.asItem());
         valueLookupBuilder(ItemTags.STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_STAIRS.asItem())
@@ -156,7 +166,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MEMORY_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.PINLINE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS.asItem())
-                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS.asItem());
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.STYXSTONE_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.MABRIZE_BRICKS_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL.asItem())
@@ -166,39 +179,50 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MEMORY_BRICKS_WALL.asItem())
                 .add(ModBlocks.PINLINE_BRICKS_WALL.asItem())
                 .add(ModBlocks.RAW_PINLINE_BRICKS_WALL.asItem())
-                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL.asItem());
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL.asItem())
+                .add(ModBlocks.STYXSTONE_BRICKS_WALL.asItem())
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL.asItem())
+                .add(ModBlocks.MABRIZE_BRICKS_WALL.asItem());
         valueLookupBuilder(ItemTags.WOODEN_SLABS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB.asItem())
                 .add(ModBlocks.CHORUS_SLAB.asItem())
-                .add(ModBlocks.ASHEN_SLAB.asItem());
+                .add(ModBlocks.ASHEN_SLAB.asItem())
+                .add(ModBlocks.KEAPHE_SLAB.asItem());
         valueLookupBuilder(ItemTags.WOODEN_STAIRS)
                 .add(ModBlocks.CRYSTAL_CHERRY_STAIRS.asItem())
                 .add(ModBlocks.CHORUS_STAIRS.asItem())
-                .add(ModBlocks.ASHEN_STAIRS.asItem());
+                .add(ModBlocks.ASHEN_STAIRS.asItem())
+                .add(ModBlocks.KEAPHE_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WOODEN_FENCES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE.asItem())
                 .add(ModBlocks.CHORUS_FENCE.asItem())
-                .add(ModBlocks.ASHEN_FENCE_GATE.asItem());
+                .add(ModBlocks.ASHEN_FENCE.asItem())
+                .add(ModBlocks.KEAPHE_FENCE.asItem());
         valueLookupBuilder(ItemTags.FENCE_GATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE.asItem())
                 .add(ModBlocks.CHORUS_FENCE_GATE.asItem())
-                .add(ModBlocks.ASHEN_FENCE_GATE.asItem());
+                .add(ModBlocks.ASHEN_FENCE_GATE.asItem())
+                .add(ModBlocks.KEAPHE_FENCE_GATE.asItem());
         valueLookupBuilder(ItemTags.WOODEN_DOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_DOOR.asItem())
                 .add(ModBlocks.CHORUS_DOOR.asItem())
-                .add(ModBlocks.ASHEN_DOOR.asItem());
+                .add(ModBlocks.ASHEN_DOOR.asItem())
+                .add(ModBlocks.KEAPHE_DOOR.asItem());
         valueLookupBuilder(ItemTags.WOODEN_TRAPDOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR.asItem())
                 .add(ModBlocks.CHORUS_TRAPDOOR.asItem())
-                .add(ModBlocks.ASHEN_TRAPDOOR.asItem());
+                .add(ModBlocks.ASHEN_TRAPDOOR.asItem())
+                .add(ModBlocks.KEAPHE_TRAPDOOR.asItem());
         valueLookupBuilder(ItemTags.WOODEN_BUTTONS)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON.asItem())
                 .add(ModBlocks.CHORUS_BUTTON.asItem())
-                .add(ModBlocks.ASHEN_BUTTON.asItem());
+                .add(ModBlocks.ASHEN_BUTTON.asItem())
+                .add(ModBlocks.KEAPHE_BUTTON.asItem());
         valueLookupBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE.asItem())
                 .add(ModBlocks.CHORUS_PRESSURE_PLATE.asItem())
-                .add(ModBlocks.ASHEN_PRESSURE_PLATE.asItem());
+                .add(ModBlocks.ASHEN_PRESSURE_PLATE.asItem())
+                .add(ModBlocks.KEAPHE_PRESSURE_PLATE.asItem());
         valueLookupBuilder(ModTags.Items.CRYSTAL_CHERRY_LOGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG.asItem())
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD.asItem())
@@ -214,16 +238,26 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.ASHEN_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_ASHEN_LOG.asItem())
                 .add(ModBlocks.STRIPPED_ASHEN_WOOD.asItem());
+        valueLookupBuilder(ModTags.Items.KEAPHE_LOGS)
+                .add(ModBlocks.KEAPHE_LOG.asItem())
+                .add(ModBlocks.KEAPHE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_KEAPHE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_KEAPHE_WOOD.asItem());
         valueLookupBuilder(ModTags.Items.BRICKS_CRAFTABLE)
                 .add(Blocks.COBBLESTONE.asItem())
                 .add(Blocks.COBBLED_DEEPSLATE.asItem())
                 .add(Blocks.NETHERRACK.asItem())
                 .add(Blocks.BLACKSTONE.asItem())
                 .add(Blocks.END_STONE.asItem())
-                .add(ModBlocks.COMPRESSED_END_STONE.asItem());
+                .add(ModBlocks.COMPRESSED_END_STONE.asItem())
+                .add(ModBlocks.STYXSTONE.asItem())
+                .add(ModBlocks.COMPRESSED_STYXSTONE.asItem())
+                .add(ModBlocks.COBBLED_STYXSTONE.asItem());
         valueLookupBuilder(ItemTags.STONE_CRAFTING_MATERIALS)
+                .add(ModBlocks.COMPRESSED_STYXSTONE.asItem())
                 .add(ModBlocks.COMPRESSED_END_STONE.asItem());
         valueLookupBuilder(ItemTags.STONE_TOOL_MATERIALS)
+                .add(ModBlocks.COMPRESSED_STYXSTONE.asItem())
                 .add(ModBlocks.COMPRESSED_END_STONE.asItem());
     }
 }

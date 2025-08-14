@@ -20,6 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool compressedEndStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_END_STONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool ashenPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ASHEN_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool keaphePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KEAPHE_PLANKS);
         BlockStateModelGenerator.BlockTexturePool chorusPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
         BlockStateModelGenerator.BlockTexturePool crystalCherryPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         BlockStateModelGenerator.BlockTexturePool polishedAmethystPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_AMETHYST_BLOCK);
@@ -30,6 +31,9 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool memoryBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MEMORY_BRICKS);
         BlockStateModelGenerator.BlockTexturePool pinlineBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINLINE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool rawPinlineBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_PINLINE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool styxstoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.STYXSTONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool compressedStyxstoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_STYXSTONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool mabrizeBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MABRIZE_BRICKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_AMETHYST_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -56,6 +60,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.CHORUS_SAPLING, ModBlocks.POTTED_CHORUS_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HAZEWEAVER_PLANT, ModBlocks.POTTED_HAZEWEAVER_PLANT, BlockStateModelGenerator.CrossType.TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.SNOWY_SPRUCE_SAPLING, ModBlocks.POTTED_SNOWY_SPRUCE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.KEAPHE_SAPLING, ModBlocks.POTTED_KEAPHE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
         crystalCherryPool.stairs(ModBlocks.CRYSTAL_CHERRY_STAIRS);
         crystalCherryPool.slab(ModBlocks.CRYSTAL_CHERRY_SLAB);
@@ -83,6 +88,15 @@ public class ModModelProvider extends FabricModelProvider {
         ashenPool.fenceGate(ModBlocks.ASHEN_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.ASHEN_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.ASHEN_TRAPDOOR);
+
+        keaphePool.stairs(ModBlocks.KEAPHE_STAIRS);
+        keaphePool.slab(ModBlocks.KEAPHE_SLAB);
+        keaphePool.button(ModBlocks.KEAPHE_BUTTON);
+        keaphePool.pressurePlate(ModBlocks.KEAPHE_PRESSURE_PLATE);
+        keaphePool.fence(ModBlocks.KEAPHE_FENCE);
+        keaphePool.fenceGate(ModBlocks.KEAPHE_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.KEAPHE_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.KEAPHE_TRAPDOOR);
 
         polishedAmethystPool.stairs(ModBlocks.POLISHED_AMETHYST_STAIRS);
         polishedAmethystPool.slab(ModBlocks.POLISHED_AMETHYST_SLAB);
@@ -120,6 +134,18 @@ public class ModModelProvider extends FabricModelProvider {
         compressedEndStonePool.slab(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
         compressedEndStonePool.wall(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
 
+        compressedStyxstoneBricksPool.stairs(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS);
+        compressedStyxstoneBricksPool.slab(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB);
+        compressedStyxstoneBricksPool.wall(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL);
+
+        styxstoneBricksPool.stairs(ModBlocks.STYXSTONE_BRICKS_STAIRS);
+        styxstoneBricksPool.slab(ModBlocks.STYXSTONE_BRICKS_SLAB);
+        styxstoneBricksPool.wall(ModBlocks.STYXSTONE_BRICKS_WALL);
+
+        mabrizeBricksPool.stairs(ModBlocks.MABRIZE_BRICKS_STAIRS);
+        mabrizeBricksPool.slab(ModBlocks.MABRIZE_BRICKS_SLAB);
+        mabrizeBricksPool.wall(ModBlocks.MABRIZE_BRICKS_WALL);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_END_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_ICE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BLOCK);
@@ -138,6 +164,19 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_END_PINLINE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINLINE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINLINE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACK_GOOP);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CORRUPT_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_STYXSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_COBBLED_STYXSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_SOIL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MABRIZE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_AMETHYST_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);
+
+        blockStateModelGenerator.registerFlowerbed(ModBlocks.DEATH_FLOWERS);
+        blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.STYXMOSS, ModBlocks.STYXMOSS_CARPET);
 
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.AMETHYST_CLUMP);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.DIAMOND_CLUMP);
@@ -145,6 +184,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.KUNZITE_CLUMP);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.THERMIUM_CLUMP);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.QUARTZ_CLUMP);
+        blockStateModelGenerator.registerMultifaceBlockModel(ModBlocks.CORRUPTION_CLUMP);
 
         blockStateModelGenerator.registerRod(ModBlocks.KUNZITE_ROD);
         blockStateModelGenerator.registerRod(ModBlocks.ELYSIUM_ROD);
@@ -157,6 +197,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.CHORUS_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.SNOWY_SPRUCE_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerSingleton(ModBlocks.KEAPHE_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerSingleton(ModBlocks.FLOWERING_KEAPHE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.GEM_BERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 GemBerryBushBlock.AGE, 0, 1, 2, 3);
 
@@ -164,6 +206,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(ModBlocks.MEDIUM_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.LARGE_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.CHORUS_LILY, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.STYXGRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
         blockStateModelGenerator.createLogTexturePool(ModBlocks.CRYSTAL_CHERRY_LOG).log(ModBlocks.CRYSTAL_CHERRY_LOG).wood(ModBlocks.CRYSTAL_CHERRY_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).log(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).wood(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
@@ -172,6 +215,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createLogTexturePool(ModBlocks.ENERGIZED_THERMIUM_BLOCK).log(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.ASHEN_LOG).log(ModBlocks.ASHEN_LOG).wood(ModBlocks.ASHEN_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_ASHEN_LOG).log(ModBlocks.STRIPPED_ASHEN_LOG).wood(ModBlocks.STRIPPED_ASHEN_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.KEAPHE_LOG).log(ModBlocks.KEAPHE_LOG).wood(ModBlocks.KEAPHE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_KEAPHE_LOG).log(ModBlocks.STRIPPED_KEAPHE_LOG).wood(ModBlocks.STRIPPED_KEAPHE_WOOD);
     }
 
     @Override
@@ -185,6 +230,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.NETHERITE_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SULFUR, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.CORRUPT_DROPLET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CORRUPT_MASS, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.KUNZITE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.KUNZITE, Models.GENERATED);
@@ -236,6 +284,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BEDROCK_BREAKER, Models.HANDHELD);
 
         itemModelGenerator.register(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.KEAPHE_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.CHORUS_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.SNOWY_SPRUCE_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.AMETHYST_PARTERS.asItem(), Models.GENERATED);

@@ -88,7 +88,26 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPRESSED_END_STONE)
                 .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL)
                 .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB)
-                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS)
+                .add(ModBlocks.STYXSTONE)
+                .add(ModBlocks.COMPRESSED_STYXSTONE)
+                .add(ModBlocks.STYXIAN_AMETHYST_ORE)
+                .add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE)
+                .add(ModBlocks.STYXSTONE_BRICKS)
+                .add(ModBlocks.STYXSTONE_BRICKS_WALL)
+                .add(ModBlocks.STYXSTONE_BRICKS_SLAB)
+                .add(ModBlocks.STYXSTONE_BRICKS_STAIRS)
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS)
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL)
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB)
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS)
+                .add(ModBlocks.COBBLED_STYXSTONE)
+                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE)
+                .add(ModBlocks.MABRIZE)
+                .add(ModBlocks.MABRIZE_BRICKS)
+                .add(ModBlocks.MABRIZE_BRICKS_WALL)
+                .add(ModBlocks.MABRIZE_BRICKS_SLAB)
+                .add(ModBlocks.MABRIZE_BRICKS_STAIRS);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
@@ -102,15 +121,29 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_PRESSURE_PLATE)
                 .add(ModBlocks.CHORUS_STAIRS)
                 .add(ModBlocks.CHORUS_DOOR)
-                .add(ModBlocks.CHORUS_TRAPDOOR);
+                .add(ModBlocks.CHORUS_TRAPDOOR)
+                .add(ModBlocks.KEAPHE_SLAB)
+                .add(ModBlocks.KEAPHE_BUTTON)
+                .add(ModBlocks.KEAPHE_PRESSURE_PLATE)
+                .add(ModBlocks.KEAPHE_STAIRS)
+                .add(ModBlocks.KEAPHE_DOOR)
+                .add(ModBlocks.KEAPHE_TRAPDOOR);
+        valueLookupBuilder(BlockTags.SHOVEL_MINEABLE)
+                .add(ModBlocks.STYXIAN_SOIL);
+        valueLookupBuilder(BlockTags.HOE_MINEABLE)
+                .add(ModBlocks.STYXMOSS)
+                .add(ModBlocks.STYXMOSS_CARPET);
         valueLookupBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS)
                 .add(ModBlocks.CHORUS_PLANKS)
-                .add(ModBlocks.ASHEN_PLANKS);
+                .add(ModBlocks.ASHEN_PLANKS)
+                .add(ModBlocks.KEAPHE_PLANKS);
         valueLookupBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.CRYSTAL_CHERRY_LEAVES)
                 .add(ModBlocks.CHORUS_LEAVES)
-                .add(ModBlocks.SNOWY_SPRUCE_LEAVES);
+                .add(ModBlocks.SNOWY_SPRUCE_LEAVES)
+                .add(ModBlocks.KEAPHE_LEAVES)
+                .add(ModBlocks.FLOWERING_KEAPHE_LEAVES);
         valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.AMETHYST_BULB)
                 .add(ModBlocks.KUNZITE_BULB)
@@ -119,7 +152,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPRESSED_END_STONE_BRICKS)
                 .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL)
                 .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB)
-                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS)
+                .add(ModBlocks.COMPRESSED_STYXSTONE);
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.RAW_KUNZITE_BLOCK)
@@ -169,7 +203,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_LOG)
                 .add(ModBlocks.CHORUS_WOOD)
                 .add(ModBlocks.STRIPPED_CHORUS_LOG)
-                .add(ModBlocks.STRIPPED_CHORUS_WOOD);
+                .add(ModBlocks.STRIPPED_CHORUS_WOOD)
+                .add(ModBlocks.KEAPHE_LOG)
+                .add(ModBlocks.KEAPHE_WOOD)
+                .add(ModBlocks.STRIPPED_KEAPHE_LOG)
+                .add(ModBlocks.STRIPPED_KEAPHE_WOOD);
         valueLookupBuilder(BlockTags.LOGS)
                 .add(ModBlocks.ASHEN_LOG)
                 .add(ModBlocks.ASHEN_WOOD)
@@ -180,11 +218,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE)
                 .add(ModBlocks.CHORUS_FENCE)
-                .add(ModBlocks.ASHEN_FENCE);
+                .add(ModBlocks.ASHEN_FENCE)
+                .add(ModBlocks.KEAPHE_FENCE);
         valueLookupBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE)
                 .add(ModBlocks.CHORUS_FENCE_GATE)
-                .add(ModBlocks.ASHEN_FENCE_GATE);
+                .add(ModBlocks.ASHEN_FENCE_GATE)
+                .add(ModBlocks.KEAPHE_FENCE_GATE);
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL)
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
@@ -194,7 +234,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MEMORY_BRICKS_WALL)
                 .add(ModBlocks.PINLINE_BRICKS_WALL)
                 .add(ModBlocks.RAW_PINLINE_BRICKS_WALL)
-                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL)
+                .add(ModBlocks.STYXSTONE_BRICKS_WALL)
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL)
+                .add(ModBlocks.MABRIZE_BRICKS_WALL);
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.KUNZITE_BLOCK)
                 .add(ModBlocks.ELYSIUM_BLOCK)
@@ -217,7 +260,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING)
                 .add(ModBlocks.POTTED_CHORUS_SAPLING)
                 .add(ModBlocks.POTTED_HAZEWEAVER_PLANT)
-                .add(ModBlocks.POTTED_SNOWY_SPRUCE_SAPLING);
+                .add(ModBlocks.POTTED_SNOWY_SPRUCE_SAPLING)
+                .add(ModBlocks.POTTED_KEAPHE_SAPLING);
         valueLookupBuilder(BlockTags.ICE)
                 .add(ModBlocks.PINK_ICE);
         valueLookupBuilder(BlockTags.SLABS)
@@ -229,7 +273,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MEMORY_BRICKS_SLAB)
                 .add(ModBlocks.PINLINE_BRICKS_SLAB)
                 .add(ModBlocks.RAW_PINLINE_BRICKS_SLAB)
-                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB)
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB)
+                .add(ModBlocks.STYXSTONE_BRICKS_SLAB)
+                .add(ModBlocks.MABRIZE_BRICKS_SLAB);
         valueLookupBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS)
                 .add(ModBlocks.ELYSIUM_BRICKS_STAIRS)
@@ -239,31 +286,40 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MEMORY_BRICKS_STAIRS)
                 .add(ModBlocks.PINLINE_BRICKS_STAIRS)
                 .add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS)
-                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
+                .add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS)
+                .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS)
+                .add(ModBlocks.STYXSTONE_BRICKS_STAIRS)
+                .add(ModBlocks.MABRIZE_BRICKS_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_SLABS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CHORUS_SLAB)
-                .add(ModBlocks.ASHEN_SLAB);
+                .add(ModBlocks.ASHEN_SLAB)
+                .add(ModBlocks.KEAPHE_SLAB);
         valueLookupBuilder(BlockTags.WOODEN_STAIRS)
                 .add(ModBlocks.CRYSTAL_CHERRY_STAIRS)
                 .add(ModBlocks.CHORUS_STAIRS)
-                .add(ModBlocks.ASHEN_STAIRS);
+                .add(ModBlocks.ASHEN_STAIRS)
+                .add(ModBlocks.KEAPHE_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_DOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_DOOR)
                 .add(ModBlocks.CHORUS_DOOR)
-                .add(ModBlocks.ASHEN_DOOR);
+                .add(ModBlocks.ASHEN_DOOR)
+                .add(ModBlocks.KEAPHE_DOOR);
         valueLookupBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR)
                 .add(ModBlocks.CHORUS_TRAPDOOR)
-                .add(ModBlocks.ASHEN_TRAPDOOR);
+                .add(ModBlocks.ASHEN_TRAPDOOR)
+                .add(ModBlocks.KEAPHE_TRAPDOOR);
         valueLookupBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
                 .add(ModBlocks.CHORUS_BUTTON)
-                .add(ModBlocks.ASHEN_BUTTON);
+                .add(ModBlocks.ASHEN_BUTTON)
+                .add(ModBlocks.KEAPHE_BUTTON);
         valueLookupBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE)
                 .add(ModBlocks.CHORUS_PRESSURE_PLATE)
-                .add(ModBlocks.ASHEN_PRESSURE_PLATE);
+                .add(ModBlocks.ASHEN_PRESSURE_PLATE)
+                .add(ModBlocks.KEAPHE_PRESSURE_PLATE);
         valueLookupBuilder(ModTags.Blocks.CRYSTAL_CHERRY_LOGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
@@ -279,6 +335,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ASHEN_WOOD)
                 .add(ModBlocks.STRIPPED_ASHEN_LOG)
                 .add(ModBlocks.STRIPPED_ASHEN_WOOD);
+        valueLookupBuilder(ModTags.Blocks.KEAPHE_LOGS)
+                .add(ModBlocks.KEAPHE_LOG)
+                .add(ModBlocks.KEAPHE_WOOD)
+                .add(ModBlocks.STRIPPED_KEAPHE_LOG)
+                .add(ModBlocks.STRIPPED_KEAPHE_WOOD);
         valueLookupBuilder(ModTags.Blocks.END_STONE)
                 .add(ModBlocks.COMPRESSED_END_STONE)
                 .add(Blocks.END_STONE);
@@ -348,5 +409,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ELYSIAN_SKYBERRY)
                 .add(ModBlocks.MEMORIA_BOURPEER)
                 .add(ModBlocks.THERMIUM_WILTBORN);
+        valueLookupBuilder(BlockTags.DIRT)
+                .add(ModBlocks.STYXIAN_SOIL)
+                .add(ModBlocks.STYXMOSS);
+        valueLookupBuilder(BlockTags.OVERWORLD_CARVER_REPLACEABLES)
+                .add(ModBlocks.STYXSTONE)
+                .add(ModBlocks.STYXIAN_SOIL)
+                .add(ModBlocks.COMPRESSED_STYXSTONE)
+                .add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE)
+                .add(ModBlocks.STYXIAN_AMETHYST_ORE)
+                .add(ModBlocks.MABRIZE);
+        valueLookupBuilder(BlockTags.MOSS_REPLACEABLE)
+                .add(ModBlocks.STYXSTONE)
+                .add(ModBlocks.STYXIAN_SOIL)
+                .add(ModBlocks.COMPRESSED_STYXSTONE)
+                .add(ModBlocks.MABRIZE);
     }
 }

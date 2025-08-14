@@ -28,6 +28,30 @@ public class ModItemGroups {
                         entries.add(ModBlocks.EMERALD_CLUMP);
                         entries.add(ModItems.NETHERITE_NUGGET);
 
+                        entries.add(ModBlocks.STYXIAN_SOIL);
+                        entries.add(ModBlocks.STYXMOSS);
+                        entries.add(ModBlocks.STYXMOSS_CARPET);
+                        entries.add(ModBlocks.COBBLED_STYXSTONE);
+                        entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE);
+
+                        entries.add(ModBlocks.STYXSTONE);
+                        entries.add(ModBlocks.STYXSTONE_BRICKS);
+                        entries.add(ModBlocks.STYXSTONE_BRICKS_SLAB);
+                        entries.add(ModBlocks.STYXSTONE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.STYXSTONE_BRICKS_WALL);
+
+                        entries.add(ModBlocks.COMPRESSED_STYXSTONE);
+                        entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS);
+                        entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB);
+                        entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL);
+
+                        entries.add(ModBlocks.MABRIZE);
+                        entries.add(ModBlocks.MABRIZE_BRICKS);
+                        entries.add(ModBlocks.MABRIZE_BRICKS_SLAB);
+                        entries.add(ModBlocks.MABRIZE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.MABRIZE_BRICKS_WALL);
+
                         entries.add(ModBlocks.COMPRESSED_END_STONE);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -35,6 +59,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
 
                         entries.add(ModItems.AMETHYST_NUGGET);
+                        entries.add(ModBlocks.STYXIAN_AMETHYST_ORE);
+                        entries.add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);
                         entries.add(ModBlocks.AMETHYST_CLUMP);
                         entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
                         entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
@@ -142,6 +168,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
                         entries.add(ModBlocks.MEMORY_BRICKS_WALL);
 
+                        entries.add(ModBlocks.BLACK_GOOP);
+                        entries.add(ModBlocks.CORRUPT_ORE);
+                        entries.add(ModItems.CORRUPT_DROPLET);
+                        entries.add(ModItems.CORRUPT_MASS);
+
                         entries.add(ModBlocks.AMETHYST_PARTERS);
                         entries.add(ModBlocks.KUNZITE_LOVELILY);
                         entries.add(ModBlocks.ELYSIAN_SKYBERRY);
@@ -152,8 +183,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MEDIUM_END_GRASS);
                         entries.add(ModBlocks.LARGE_END_GRASS);
                         entries.add(ModBlocks.CHORUS_LILY);
+                        entries.add(ModBlocks.STYXGRASS);
 
                         entries.add(ModBlocks.PINK_ICE);
+
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_WOOD);
                         entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
@@ -202,6 +235,24 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ASHEN_TRAPDOOR);
                         entries.add(ModBlocks.ASHEN_PRESSURE_PLATE);
                         entries.add(ModBlocks.ASHEN_BUTTON);
+
+                        entries.add(ModBlocks.KEAPHE_LOG);
+                        entries.add(ModBlocks.KEAPHE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_KEAPHE_LOG);
+                        entries.add(ModBlocks.STRIPPED_KEAPHE_WOOD);
+                        entries.add(ModBlocks.KEAPHE_PLANKS);
+                        entries.add(ModBlocks.KEAPHE_LEAVES);
+                        entries.add(ModBlocks.FLOWERING_KEAPHE_LEAVES);
+                        entries.add(ModBlocks.KEAPHE_SAPLING);
+
+                        entries.add(ModBlocks.KEAPHE_SLAB);
+                        entries.add(ModBlocks.KEAPHE_STAIRS);
+                        entries.add(ModBlocks.KEAPHE_FENCE);
+                        entries.add(ModBlocks.KEAPHE_FENCE_GATE);
+                        entries.add(ModBlocks.KEAPHE_DOOR);
+                        entries.add(ModBlocks.KEAPHE_TRAPDOOR);
+                        entries.add(ModBlocks.KEAPHE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.KEAPHE_BUTTON);
 
                         entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
                         entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
@@ -279,6 +330,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.THERMIUM_BLOCK);
             entries.add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
 
+            entries.add(ModBlocks.COBBLED_STYXSTONE);
+            entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE);
             entries.add(ModBlocks.COMPRESSED_END_STONE);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -331,6 +384,18 @@ public class ModItemGroups {
             entries.add(ModBlocks.MEMORY_BRICKS_SLAB);
             entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
             entries.add(ModBlocks.MEMORY_BRICKS_WALL);
+            entries.add(ModBlocks.STYXSTONE_BRICKS);
+            entries.add(ModBlocks.STYXSTONE_BRICKS_SLAB);
+            entries.add(ModBlocks.STYXSTONE_BRICKS_STAIRS);
+            entries.add(ModBlocks.STYXSTONE_BRICKS_WALL);
+            entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS);
+            entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB);
+            entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS);
+            entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL);
+            entries.add(ModBlocks.MABRIZE_BRICKS);
+            entries.add(ModBlocks.MABRIZE_BRICKS_SLAB);
+            entries.add(ModBlocks.MABRIZE_BRICKS_STAIRS);
+            entries.add(ModBlocks.MABRIZE_BRICKS_WALL);
 
             entries.add(ModBlocks.AMETHYST_ROD);
             entries.add(ModBlocks.KUNZITE_ROD);
@@ -385,6 +450,19 @@ public class ModItemGroups {
             entries.add(ModBlocks.ASHEN_TRAPDOOR);
             entries.add(ModBlocks.ASHEN_PRESSURE_PLATE);
             entries.add(ModBlocks.ASHEN_BUTTON);
+            entries.add(ModBlocks.KEAPHE_LOG);
+            entries.add(ModBlocks.KEAPHE_WOOD);
+            entries.add(ModBlocks.STRIPPED_KEAPHE_LOG);
+            entries.add(ModBlocks.STRIPPED_KEAPHE_WOOD);
+            entries.add(ModBlocks.KEAPHE_PLANKS);
+            entries.add(ModBlocks.KEAPHE_SLAB);
+            entries.add(ModBlocks.KEAPHE_STAIRS);
+            entries.add(ModBlocks.KEAPHE_FENCE);
+            entries.add(ModBlocks.KEAPHE_FENCE_GATE);
+            entries.add(ModBlocks.KEAPHE_DOOR);
+            entries.add(ModBlocks.KEAPHE_TRAPDOOR);
+            entries.add(ModBlocks.KEAPHE_PRESSURE_PLATE);
+            entries.add(ModBlocks.KEAPHE_BUTTON);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ModItems.GLAZED_CHORUS_FRUIT);
@@ -420,6 +498,8 @@ public class ModItemGroups {
             entries.add(ModItems.PINLINE_NUGGET);
             entries.add(ModItems.PINLINE_INGOT);
             entries.add(ModItems.MEMORY_SHARD);
+            entries.add(ModItems.CORRUPT_DROPLET);
+            entries.add(ModItems.CORRUPT_MASS);
 
             entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
             entries.add(ModItems.CHERRY_SMITHING_TEMPLATE);
@@ -456,6 +536,16 @@ public class ModItemGroups {
             entries.add(ModItems.DAWNBLOOMER);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(ModBlocks.BLACK_GOOP);
+            entries.add(ModBlocks.STYXSTONE);
+            entries.add(ModBlocks.COBBLED_STYXSTONE);
+            entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE);
+            entries.add(ModBlocks.COMPRESSED_STYXSTONE);
+            entries.add(ModBlocks.MABRIZE);
+            entries.add(ModBlocks.STYXIAN_SOIL);
+            entries.add(ModBlocks.STYXMOSS);
+            entries.add(ModBlocks.STYXMOSS_CARPET);
+
             entries.add(ModBlocks.COMPRESSED_END_STONE);
             entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
             entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
@@ -467,6 +557,11 @@ public class ModItemGroups {
             entries.add(ModBlocks.CHORUS_LOG);
             entries.add(ModBlocks.CHORUS_LEAVES);
             entries.add(ModBlocks.CHORUS_SAPLING);
+
+            entries.add(ModBlocks.KEAPHE_LOG);
+            entries.add(ModBlocks.FLOWERING_KEAPHE_LEAVES);
+            entries.add(ModBlocks.KEAPHE_LEAVES);
+            entries.add(ModBlocks.KEAPHE_SAPLING);
 
             entries.add(ModBlocks.ASHEN_LOG);
 
@@ -480,6 +575,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.ELYSIAN_SKYBERRY);
             entries.add(ModBlocks.THERMIUM_WILTBORN);
             entries.add(ModBlocks.MEMORIA_BOURPEER);
+            entries.add(ModBlocks.STYXGRASS);
 
             entries.add(ModBlocks.AMETHYST_CLUMP);
             entries.add(ModBlocks.DIAMOND_CLUMP);
