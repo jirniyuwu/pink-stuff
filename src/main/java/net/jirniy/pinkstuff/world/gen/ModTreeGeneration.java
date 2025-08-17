@@ -20,8 +20,5 @@ public class ModTreeGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SNOWY_PLAINS,
                         BiomeKeys.SNOWY_TAIGA, BiomeKeys.ICE_SPIKES),
                 GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.SNOWY_SPRUCE_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.CORRUPTED_SPIKES),
-                GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.SNOWY_SPRUCE_PLACED_KEY);
     }
 }

@@ -9,7 +9,7 @@ public class ModGamerules {
     public static final GameRules.Key<GameRules.BooleanRule> DISABLE_CORRUPTION_SPREAD =
             GameRuleRegistry.register("disableCorruptionSpread", GameRules.Category.UPDATES, GameRuleFactory.createBooleanRule(false));
     public static final GameRules.Key<GameRules.IntRule> CORRUPTION_SPREAD_CHANCE =
-            GameRuleRegistry.register("corruptionSpreadChance", GameRules.Category.UPDATES, GameRuleFactory.createIntRule(60));
+            GameRuleRegistry.register("corruptionSpreadChance", GameRules.Category.UPDATES, GameRuleFactory.createIntRule(60, 1, 65536));
 
 
     public static void registerGamerules() {

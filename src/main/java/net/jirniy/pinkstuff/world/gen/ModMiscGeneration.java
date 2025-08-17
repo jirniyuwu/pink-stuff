@@ -8,9 +8,6 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class ModMiscGeneration {
     public static void generateMisc() {
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.CORRUPTED_SPIKES),
-                GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.CORRUPTION_DISC_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.STYXIAN_STONY_HILLS),
-                GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.CORRUPTION_DISC_PLACED_KEY);
+
     }
 }

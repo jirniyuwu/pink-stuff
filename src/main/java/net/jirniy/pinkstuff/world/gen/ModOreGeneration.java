@@ -24,17 +24,10 @@ public class ModOreGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BASALT_DELTAS), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.SULFUR_ORE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.STYXIAN_PLAINS, ModBiomes.CORRUPTED_SPIKES, ModBiomes.STYXIAN_STONY_HILLS), GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.STYXIAN_AMETHYST_ORE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS,
                         BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.PINLINE_ORE_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.COMPRESSEND_END_STONE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.STYXIAN_PLAINS, ModBiomes.CORRUPTED_SPIKES, ModBiomes.STYXIAN_STONY_HILLS), GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.COMPRESSED_STYXSTONE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.AMETHYST_CLUMP_PLACED_KEY);

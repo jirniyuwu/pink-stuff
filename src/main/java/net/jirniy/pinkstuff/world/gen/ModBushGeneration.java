@@ -22,8 +22,5 @@ public class ModBushGeneration {
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LARGE_END_GRASS_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CHORUS_LILY_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.STYXIAN_PLAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DEATHFLOWER_PLACED_KEY);
     }
 }
