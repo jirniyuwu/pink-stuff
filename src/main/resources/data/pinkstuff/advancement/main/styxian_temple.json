@@ -1,0 +1,44 @@
+{
+  "parent": "pinkstuff:main/enter_styxia",
+  "criteria": {
+    "desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": "pinkstuff:styxian_temple"
+          }
+        }
+      }
+    },
+    "forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": "pinkstuff:overgrown_temple"
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.styxian_temple.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:mossy_cobbled_styxstone"
+    },
+    "title": {
+      "translate": "advancements.main.styxian_temple.title"
+    }
+  },
+  "requirements": [
+    [
+      "forest",
+      "desert"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

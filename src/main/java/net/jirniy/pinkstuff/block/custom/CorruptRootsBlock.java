@@ -31,15 +31,18 @@ public class CorruptRootsBlock extends ModGrassBlock {
     }
 
     protected void applyStatusEffect(Entity entity) {
-        if (entity.getType() == EntityType.PLAYER) {
-            final LivingEntity livingEntity = (LivingEntity) entity;
-            if (livingEntity.hasStatusEffect(ModEffects.DEATH_GRIP)) {
-                if ((livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getDuration() < 40) || livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getAmplifier() > 0) {
-                    livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));
-                }
-            } else {
+        if (entity instanceof LivingEntity livingEntity) {
+            applyStatusEffect(livingEntity);
+        }
+    }
+
+    protected void applyStatusEffect(LivingEntity livingEntity) {
+        if (livingEntity.hasStatusEffect(ModEffects.DEATH_GRIP)) {
+            if ((livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getDuration() < 40) || livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getAmplifier() > 0) {
                 livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));
             }
+        } else {
+            livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));
         }
     }
 }

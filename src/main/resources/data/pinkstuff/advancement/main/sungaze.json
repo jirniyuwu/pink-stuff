@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/enter_styxia",
+  "criteria": {
+    "sungaze": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:sungaze"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.sungaze.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:sungaze"
+    },
+    "title": {
+      "translate": "advancements.main.sungaze.title"
+    }
+  },
+  "requirements": [
+    [
+      "sungaze"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/corrupted_spikes",
+  "criteria": {
+    "enter": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": "pinkstuff:corrupt_tower"
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.corrupt_tower.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:styxstone_bricks"
+    },
+    "title": {
+      "translate": "advancements.main.corrupt_tower.title"
+    }
+  },
+  "requirements": [
+    [
+      "enter"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

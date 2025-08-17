@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.fabricmc.fabric.impl.object.builder.FabricEntityTypeImpl;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.util.ModGamerules;
@@ -25,6 +26,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -135,20 +137,12 @@ public class BlackGoopBlock extends TranslucentBlock {
     }
 
     protected void applyStatusEffect(Entity entity) {
-        if (entity.getType() == EntityType.PLAYER) {
-            final LivingEntity livingEntity = (LivingEntity) entity;
-            if (livingEntity.hasStatusEffect(ModEffects.DEATH_GRIP)) {
-                if ((livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getDuration() < 40) || livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getAmplifier() > 0) {
-                    livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));
-                }
-            } else {
-                livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));
-            }
+        if (entity instanceof LivingEntity livingEntity) {
+            applyStatusEffect(livingEntity);
         }
     }
 
-    protected void applyStatusEffect(PlayerEntity entity) {
-        final LivingEntity livingEntity = (LivingEntity) entity;
+    protected void applyStatusEffect(LivingEntity livingEntity) {
         if (livingEntity.hasStatusEffect(ModEffects.DEATH_GRIP)) {
             if ((livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getDuration() < 40) || livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getAmplifier() > 0) {
                 livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));

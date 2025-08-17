@@ -1,0 +1,43 @@
+{
+  "parent": "pinkstuff:main/sungaze",
+  "criteria": {
+    "sunblaze_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:sunblaze_helmet"
+          },
+          {
+            "items": "pinkstuff:sunblaze_chestplate"
+          },
+          {
+            "items": "pinkstuff:sunblaze_leggings"
+          },
+          {
+            "items": "pinkstuff:sunblaze_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.full_sunblaze.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:sunblaze_chestplate"
+    },
+    "title": {
+      "translate": "advancements.main.full_sunblaze.title"
+    },
+    "frame": "goal"
+  },
+  "requirements": [
+    [
+      "sunblaze_armor"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

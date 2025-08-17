@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/corrupt_droplet",
+  "criteria": {
+    "cerille_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:cerille_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.cerille_ingot.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:cerille_ingot"
+    },
+    "title": {
+      "translate": "advancements.main.cerille_ingot.title"
+    }
+  },
+  "requirements": [
+    [
+      "cerille_ingot"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

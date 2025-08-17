@@ -1,0 +1,43 @@
+{
+  "parent": "pinkstuff:main/cerille_ingot",
+  "criteria": {
+    "cerille_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:cerille_helmet"
+          },
+          {
+            "items": "pinkstuff:cerille_chestplate"
+          },
+          {
+            "items": "pinkstuff:cerille_leggings"
+          },
+          {
+            "items": "pinkstuff:cerille_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.full_cerille.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:cerille_chestplate"
+    },
+    "frame": "goal",
+    "title": {
+      "translate": "advancements.main.full_cerille.title"
+    }
+  },
+  "requirements": [
+    [
+      "cerille_armor"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

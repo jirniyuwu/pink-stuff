@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/enter_styxia",
+  "criteria": {
+    "enter": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:corrupted_spikes"
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.corrupted_spikes.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:black_goop"
+    },
+    "title": {
+      "translate": "advancements.main.corrupted_spikes.title"
+    }
+  },
+  "requirements": [
+    [
+      "enter"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/root",
+  "criteria": {
+    "enter": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "dimension": "pinkstuff:styxia"
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.enter_styxia.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:styxstone"
+    },
+    "title": {
+      "translate": "advancements.main.enter_styxia.title"
+    }
+  },
+  "requirements": [
+    [
+      "enter"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

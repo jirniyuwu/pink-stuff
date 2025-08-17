@@ -1,0 +1,99 @@
+{
+  "parent": "pinkstuff:main/corrupted_spikes",
+  "criteria": {
+    "corrupted_spikes": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:corrupted_spikes"
+          }
+        }
+      }
+    },
+    "styxian_plains": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:styxian_plains"
+          }
+        }
+      }
+    },
+    "styxmoss_overgrowth": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:styxmoss_overgrowth"
+          }
+        }
+      }
+    },
+    "keaphe_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:keaphe_forest"
+          }
+        }
+      }
+    },
+    "styxian_stony_hills": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:styxian_stony_hills"
+          }
+        }
+      }
+    },
+    "dry_outskirts": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:dry_outskirts"
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.explore_styxia.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:cerille_boots"
+    },
+    "frame": "challenge",
+    "title": {
+      "translate": "advancements.main.explore_styxia.title"
+    }
+  },
+  "requirements": [
+    [
+      "corrupted_spikes"
+    ],
+    [
+      "styxian_plains"
+    ],
+    [
+      "styxmoss_overgrowth"
+    ],
+    [
+      "keaphe_forest"
+    ],
+    [
+      "styxian_stony_hills"
+    ],
+    [
+      "dry_outskirts"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

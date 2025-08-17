@@ -1,0 +1,33 @@
+{
+  "parent": "pinkstuff:main/corrupted_spikes",
+  "criteria": {
+    "corrupt_droplet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:corrupt_droplet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.corrupt_droplet.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:corrupt_droplet"
+    },
+    "title": {
+      "translate": "advancements.main.corrupt_droplet.title"
+    }
+  },
+  "requirements": [
+    [
+      "corrupt_droplet"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
