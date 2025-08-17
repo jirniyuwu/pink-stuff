@@ -165,11 +165,33 @@
         {
           "type": "minecraft:item",
           "name": "pinkstuff:cherry_armor_trim_smithing_template",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "weight": 1
         },
         {
           "type": "minecraft:item",
           "name": "pinkstuff:bloom_armor_trim_smithing_template",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "weight": 3
         }
       ]

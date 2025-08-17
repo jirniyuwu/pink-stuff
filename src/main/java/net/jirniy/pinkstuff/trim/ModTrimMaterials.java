@@ -37,6 +37,8 @@ public class ModTrimMaterials {
             Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel"));
     public static final RegistryKey<ArmorTrimMaterial> CERILLE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
             Identifier.of(JirniysPinkStuff.MOD_ID, "cerille"));
+    public static final RegistryKey<ArmorTrimMaterial> SUNGAZE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "sungaze"));
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
         register(registerable, KUNZITE, Registries.ITEM.getEntry(ModItems.KUNZITE),
@@ -59,6 +61,8 @@ public class ModTrimMaterials {
                 Style.EMPTY.withColor(TextColor.parse("#596577").getOrThrow()), "moonsteel");
         register(registerable, CERILLE, Registries.ITEM.getEntry(ModItems.CERILLE_INGOT),
                 Style.EMPTY.withColor(TextColor.parse("#ce3d4c").getOrThrow()), "cerille");
+        register(registerable, SUNGAZE, Registries.ITEM.getEntry(ModItems.SUNGAZE),
+                Style.EMPTY.withColor(TextColor.parse("#ffffae").getOrThrow()), "sungaze");
     }
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,

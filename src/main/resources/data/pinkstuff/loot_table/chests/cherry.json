@@ -180,7 +180,39 @@
         {
           "type": "minecraft:item",
           "name": "pinkstuff:bloom_armor_trim_smithing_template",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "decoration": "pinkstuff:styxian_portal",
+              "destination": "pinkstuff:styxian_portal",
+              "function": "minecraft:exploration_map",
+              "skip_existing_chunks": false,
+              "zoom": 2
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.pinkstuff.styxian_portal"
+              },
+              "target": "item_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "weight": 2
         }
       ]
     }

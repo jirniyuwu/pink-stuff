@@ -1,0 +1,96 @@
+{
+  "name": "pinkstuff:corrupt_tower/room",
+  "fallback": "pinkstuff:corrupt_tower/roof",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/room1",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/room2",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/room3",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/room4",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/room5",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/room6",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/room7",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/roof1",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_tower/roof2",
+        "processors": "pinkstuff:corruption",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

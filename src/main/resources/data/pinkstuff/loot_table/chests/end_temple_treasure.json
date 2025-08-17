@@ -501,16 +501,49 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:spire_armor_trim_smithing_template",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "weight": 5
         },
         {
           "type": "minecraft:item",
           "name": "pinkstuff:shell_armor_trim_smithing_template",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "weight": 4
         },
         {
           "type": "minecraft:item",
           "name": "pinkstuff:wingflap_armor_trim_smithing_template",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "weight": 1
         }
       ],

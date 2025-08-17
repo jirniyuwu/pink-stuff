@@ -12,6 +12,7 @@ public class ModMapDecorations {
     public static final RegistryEntry<MapDecorationType> END_CITY = register("end_city", "end_city", true, 0x704F6F, false, true);
     public static final RegistryEntry<MapDecorationType> CHAMBERS = register("chambers", "chambers", true, 0x64459F, false, true);
     public static final RegistryEntry<MapDecorationType> PILLAGER_OUTPOST = register("pillager_outpost", "outpost", true, 0x462D15, false, true);
+    public static final RegistryEntry<MapDecorationType> STYXIAN_PORTAL = register("styxian_portal", "styxian_portal", true, 0x9E2F3A, false, true);
 
     private static RegistryEntry<MapDecorationType> register(String id, String assetId, boolean showOnItemFrame, int mapColor, boolean trackCount, boolean explorationMapElement) {
         MapDecorationType mapDecorationType = new MapDecorationType(Identifier.of(JirniysPinkStuff.MOD_ID, assetId), showOnItemFrame, mapColor, explorationMapElement, trackCount);

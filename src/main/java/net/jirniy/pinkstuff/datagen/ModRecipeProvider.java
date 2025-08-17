@@ -48,6 +48,86 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.RAW_MOONSTEEL,
                         ModBlocks.STYXIAN_MOONSTEEL_ORE,
                         ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE);
+                List<ItemConvertible> KUNZITE_GEAR = List.of(
+                        ModItems.KUNZITE_SWORD,
+                        ModItems.KUNZITE_PICKAXE,
+                        ModItems.KUNZITE_AXE,
+                        ModItems.KUNZITE_SHOVEL,
+                        ModItems.KUNZITE_HOE,
+                        ModItems.KUNZITE_HELMET,
+                        ModItems.KUNZITE_CHESTPLATE,
+                        ModItems.KUNZITE_LEGGINGS,
+                        ModItems.KUNZITE_BOOTS);
+                List<ItemConvertible> ELYSIUM_GEAR = List.of(
+                        ModItems.ELYSIUM_SWORD,
+                        ModItems.ELYSIUM_PICKAXE,
+                        ModItems.ELYSIUM_AXE,
+                        ModItems.ELYSIUM_SHOVEL,
+                        ModItems.ELYSIUM_HOE,
+                        ModItems.ELYSIUM_HELMET,
+                        ModItems.ELYSIUM_CHESTPLATE,
+                        ModItems.ELYSIUM_LEGGINGS,
+                        ModItems.ELYSIUM_BOOTS);
+                List<ItemConvertible> MOONSTEEL_GEAR = List.of(
+                        ModItems.MOONSTEEL_SWORD,
+                        ModItems.MOONSTEEL_PICKAXE,
+                        ModItems.MOONSTEEL_AXE,
+                        ModItems.MOONSTEEL_SHOVEL,
+                        ModItems.MOONSTEEL_HOE,
+                        ModItems.MOONSTEEL_HELMET,
+                        ModItems.MOONSTEEL_CHESTPLATE,
+                        ModItems.MOONSTEEL_LEGGINGS,
+                        ModItems.MOONSTEEL_BOOTS);
+                List<ItemConvertible> CERILLE_GEAR = List.of(
+                        ModItems.CERILLE_SWORD,
+                        ModItems.CERILLE_PICKAXE,
+                        ModItems.CERILLE_AXE,
+                        ModItems.CERILLE_SHOVEL,
+                        ModItems.CERILLE_HOE,
+                        ModItems.CERILLE_HELMET,
+                        ModItems.CERILLE_CHESTPLATE,
+                        ModItems.CERILLE_LEGGINGS,
+                        ModItems.CERILLE_BOOTS);
+                List<ItemConvertible> PINLINE_GEAR = List.of(
+                        ModItems.PINLINE_SWORD,
+                        ModItems.PINLINE_PICKAXE,
+                        ModItems.PINLINE_AXE,
+                        ModItems.PINLINE_SHOVEL,
+                        ModItems.PINLINE_HOE,
+                        ModItems.PINLINE_HELMET,
+                        ModItems.PINLINE_CHESTPLATE,
+                        ModItems.PINLINE_LEGGINGS,
+                        ModItems.PINLINE_BOOTS);
+                List<ItemConvertible> SUNBLAZE_GEAR = List.of(
+                        ModItems.SUNBLAZE_SWORD,
+                        ModItems.SUNBLAZE_PICKAXE,
+                        ModItems.SUNBLAZE_AXE,
+                        ModItems.SUNBLAZE_SHOVEL,
+                        ModItems.SUNBLAZE_HOE,
+                        ModItems.SUNBLAZE_HELMET,
+                        ModItems.SUNBLAZE_CHESTPLATE,
+                        ModItems.SUNBLAZE_LEGGINGS,
+                        ModItems.SUNBLAZE_BOOTS);
+                List<ItemConvertible> DIAMOND_GEAR = List.of(
+                        Items.DIAMOND_SWORD,
+                        Items.DIAMOND_PICKAXE,
+                        Items.DIAMOND_AXE,
+                        Items.DIAMOND_SHOVEL,
+                        Items.DIAMOND_HOE,
+                        Items.DIAMOND_HELMET,
+                        Items.DIAMOND_CHESTPLATE,
+                        Items.DIAMOND_LEGGINGS,
+                        Items.DIAMOND_BOOTS);
+                List<ItemConvertible> NETHERITE_GEAR = List.of(
+                        Items.NETHERITE_SWORD,
+                        Items.NETHERITE_PICKAXE,
+                        Items.NETHERITE_AXE,
+                        Items.NETHERITE_SHOVEL,
+                        Items.NETHERITE_HOE,
+                        Items.NETHERITE_HELMET,
+                        Items.NETHERITE_CHESTPLATE,
+                        Items.NETHERITE_LEGGINGS,
+                        Items.NETHERITE_BOOTS);
                 offerSmelting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
                         0.25f, 40, "kunzite_smelting");
                 offerBlasting(KUNZITE_SMELTABLES, RecipeCategory.MISC, ModItems.KUNZITE,
@@ -64,6 +144,38 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         2f, 320, "moonsteel_smelting");
                 offerBlasting(MOONSTEEL_SMELTABLES, RecipeCategory.MISC, ModItems.MOONSTEEL_INGOT,
                         2f, 160, "moonsteel_blasting");
+                offerSmelting(KUNZITE_GEAR, RecipeCategory.MISC, ModItems.KUNZITE_NUGGET,
+                        0f, 200, "kunzite_gear_smelting");
+                offerBlasting(KUNZITE_GEAR, RecipeCategory.MISC, ModItems.KUNZITE_NUGGET,
+                        0f, 100, "kunzite_gear_blasting");
+                offerSmelting(ELYSIUM_GEAR, RecipeCategory.MISC, ModItems.ELYSIUM_NUGGET,
+                        0f, 200, "elysium_gear_smelting");
+                offerBlasting(ELYSIUM_GEAR, RecipeCategory.MISC, ModItems.ELYSIUM_NUGGET,
+                        0f, 100, "elysium_gear_blasting");
+                offerSmelting(MOONSTEEL_GEAR, RecipeCategory.MISC, ModItems.MOONSTEEL_NUGGET,
+                        0f, 200, "moonsteel_gear_smelting");
+                offerBlasting(MOONSTEEL_GEAR, RecipeCategory.MISC, ModItems.MOONSTEEL_NUGGET,
+                        0f, 100, "moonsteel_gear_blasting");
+                offerSmelting(CERILLE_GEAR, RecipeCategory.MISC, ModItems.CERILLE_NUGGET,
+                        0f, 200, "cerille_gear_smelting");
+                offerBlasting(CERILLE_GEAR, RecipeCategory.MISC, ModItems.CERILLE_NUGGET,
+                        0f, 100, "cerille_gear_blasting");
+                offerSmelting(PINLINE_GEAR, RecipeCategory.MISC, ModItems.PINLINE_NUGGET,
+                        0f, 200, "pinline_gear_smelting");
+                offerBlasting(PINLINE_GEAR, RecipeCategory.MISC, ModItems.PINLINE_NUGGET,
+                        0f, 100, "pinline_gear_blasting");
+                offerSmelting(SUNBLAZE_GEAR, RecipeCategory.MISC, ModItems.SUNGAZE_NUGGET,
+                        0f, 200, "sunblaze_gear_smelting");
+                offerBlasting(SUNBLAZE_GEAR, RecipeCategory.MISC, ModItems.SUNGAZE_NUGGET,
+                        0f, 100, "sunblaze_gear_blasting");
+                offerSmelting(DIAMOND_GEAR, RecipeCategory.MISC, ModItems.DIAMOND_NUGGET,
+                        0f, 200, "diamond_gear_smelting");
+                offerBlasting(DIAMOND_GEAR, RecipeCategory.MISC, ModItems.DIAMOND_NUGGET,
+                        0f, 100, "diamond_gear_blasting");
+                offerSmelting(NETHERITE_GEAR, RecipeCategory.MISC, ModItems.NETHERITE_NUGGET,
+                        0f, 200, "netherite_gear_smelting");
+                offerBlasting(NETHERITE_GEAR, RecipeCategory.MISC, ModItems.NETHERITE_NUGGET,
+                        0f, 100, "netherite_gear_blasting");
                 offerSmelting(List.of(ModItems.PREPARED_PINLINE), RecipeCategory.MISC, ModItems.PINLINE_INGOT,
                         2f, 1280, "pinline_smelting");
                 offerBlasting(List.of(ModItems.PREPARED_PINLINE), RecipeCategory.MISC, ModItems.PINLINE_INGOT,
@@ -107,6 +219,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.CERILLE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CERILLE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
+                        ModItems.SUNGAZE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNGAZE_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.CORRUPT_DROPLET, RecipeCategory.MISC, ModItems.CORRUPT_MASS);
                 createShapeless(RecipeCategory.MISC, ModItems.PREPARED_PINLINE, 1)
                         .input(ModItems.KUNZITE).input(ModItems.KUNZITE).input(ModItems.KUNZITE).input(ModItems.KUNZITE)
@@ -133,8 +247,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "pink_dye_from_pink_bits")));
                 createShapeless(RecipeCategory.MISC, ModItems.CERILLE_INGOT, 1)
-                        .input(ModItems.MOONSTEEL_INGOT).input(ModItems.MOONSTEEL_INGOT)
-                        .input(ModItems.CORRUPT_MASS).input(ModItems.CORRUPT_MASS)
+                        .input(ModItems.MOONSTEEL_INGOT).input(ModItems.MOONSTEEL_INGOT).input(ModItems.MOONSTEEL_INGOT)
+                        .input(ModItems.CORRUPT_MASS).input(ModItems.CORRUPT_MASS).input(ModItems.CORRUPT_MASS)
                         .criterion(hasItem(ModItems.MOONSTEEL_INGOT), conditionsFromItem(ModItems.MOONSTEEL_INGOT))
                         .criterion(hasItem(ModItems.CORRUPT_MASS), conditionsFromItem(ModItems.CORRUPT_MASS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -344,6 +458,52 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_hoe")));
+
+                createShaped(RecipeCategory.COMBAT, ModItems.SUNBLAZE_SWORD)
+                        .pattern("G")
+                        .pattern("G")
+                        .pattern("/")
+                        .input('/', Items.STICK)
+                        .input('G', ModItems.SUNGAZE)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_sword")));
+                createShaped(RecipeCategory.TOOLS, ModItems.SUNBLAZE_PICKAXE)
+                        .pattern("GGG")
+                        .pattern(" / ")
+                        .pattern(" / ")
+                        .input('/', Items.STICK)
+                        .input('G', ModItems.SUNGAZE)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_pickaxe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.SUNBLAZE_SHOVEL)
+                        .pattern("G")
+                        .pattern("/")
+                        .pattern("/")
+                        .input('/', Items.STICK)
+                        .input('G', ModItems.SUNGAZE)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_shovel")));
+                createShaped(RecipeCategory.TOOLS, ModItems.SUNBLAZE_AXE)
+                        .pattern("GG")
+                        .pattern("G/")
+                        .pattern(" /")
+                        .input('/', Items.STICK)
+                        .input('G', ModItems.SUNGAZE)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_axe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.SUNBLAZE_HOE)
+                        .pattern("GG")
+                        .pattern(" /")
+                        .pattern(" /")
+                        .input('/', Items.STICK)
+                        .input('G', ModItems.SUNGAZE)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_hoe")));
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_ICE, 1)
                         .pattern("PPP")
@@ -623,6 +783,41 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_boots")));
+
+                createShaped(RecipeCategory.COMBAT, ModItems.SUNBLAZE_HELMET)
+                        .pattern("TGT")
+                        .pattern("G G")
+                        .input('G', ModItems.SUNGAZE)
+                        .input('T', ModItems.THERMIUM)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_helmet")));
+                createShaped(RecipeCategory.COMBAT, ModItems.SUNBLAZE_CHESTPLATE)
+                        .pattern("G G")
+                        .pattern("TGT")
+                        .pattern("GGG")
+                        .input('G', ModItems.SUNGAZE)
+                        .input('T', ModItems.THERMIUM)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_chestplate")));
+                createShaped(RecipeCategory.COMBAT, ModItems.SUNBLAZE_LEGGINGS)
+                        .pattern("TGT")
+                        .pattern("G G")
+                        .pattern("G G")
+                        .input('G', ModItems.SUNGAZE)
+                        .input('T', ModItems.THERMIUM)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_leggings")));
+                createShaped(RecipeCategory.COMBAT, ModItems.SUNBLAZE_BOOTS)
+                        .pattern("T T")
+                        .pattern("G G")
+                        .input('G', ModItems.SUNGAZE)
+                        .input('T', ModItems.THERMIUM)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_boots")));
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_PLANKS, 4)
                         .input(ModTags.Items.CHORUS_LOGS).criterion(hasItem(ModBlocks.CHORUS_LOG),
@@ -1055,6 +1250,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "display")));
+                createShaped(RecipeCategory.DECORATIONS, ModBlocks.MOONSTEEL_CHAIN, 1)
+                        .pattern("S")
+                        .pattern("/")
+                        .pattern("S")
+                        .input('S', ModItems.MOONSTEEL_NUGGET)
+                        .input('/', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.MOONSTEEL_NUGGET), conditionsFromItem(ModItems.MOONSTEEL_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_chain")));
+                createShaped(RecipeCategory.DECORATIONS, ModBlocks.MOONSTEEL_LANTERN, 1)
+                        .pattern("SSS")
+                        .pattern("S/S")
+                        .pattern("SSS")
+                        .input('S', ModItems.MOONSTEEL_NUGGET)
+                        .input('/', Items.TORCH)
+                        .criterion(hasItem(ModItems.MOONSTEEL_NUGGET), conditionsFromItem(ModItems.MOONSTEEL_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_lantern")));
+
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THERMIUM_BLASTER, 1)
                         .pattern("AAA")
@@ -1528,6 +1742,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(ModItems.PINLINE_INGOT).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_pinline")));
 
+                createShaped(RecipeCategory.MISC, ModItems.SUNGAZE, 1)
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .pattern("SSS")
+                        .input('S', ModItems.SUNGAZE_NUGGET)
+                        .criterion(hasItem(ModItems.SUNGAZE_NUGGET), conditionsFromItem(ModItems.SUNGAZE_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sungaze_from_nugget")));
+                createShapeless(RecipeCategory.MISC, ModItems.SUNGAZE_NUGGET, 9)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .input(ModItems.SUNGAZE).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "nugget_from_sungaze")));
+
                 createShaped(RecipeCategory.MISC, ModBlocks.AMETHYST_CLUMP, 1)
                         .pattern("S S")
                         .pattern(" S ")
@@ -1655,6 +1882,50 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "bedrock_breaker")));
 
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXIA_PORTAL_FRAME, 1)
+                        .pattern("N N")
+                        .pattern("CCC")
+                        .pattern("NSN")
+                        .input('N', ModItems.MOONSTEEL_NUGGET)
+                        .input('S', ModBlocks.STYXSTONE)
+                        .input('C', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModBlocks.STYXSTONE), conditionsFromItem(ModBlocks.STYXSTONE))
+                        .criterion(hasItem(ModBlocks.STYXIA_PORTAL_FRAME), conditionsFromItem(ModBlocks.STYXIA_PORTAL_FRAME))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "styxia_portal_frame")));
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_SANDSTONE, 1)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.PINK_SAND)
+                        .criterion(hasItem(ModBlocks.PINK_SAND), conditionsFromItem(ModBlocks.PINK_SAND))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pink_sand")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_SANDSTONE_SLAB, Ingredient.ofItem(ModBlocks.PINK_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.PINK_SANDSTONE), conditionsFromItem(ModBlocks.PINK_SANDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pink_sandstone_slab")));
+                createStairsRecipe(ModBlocks.PINK_SANDSTONE_STAIRS, Ingredient.ofItem(ModBlocks.PINK_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.PINK_SANDSTONE), conditionsFromItem(ModBlocks.PINK_SANDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "pink_sandstone_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_SANDSTONE_WALL, ModBlocks.PINK_SANDSTONE);
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB, Ingredient.ofItem(ModBlocks.SMOOTH_PINK_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.SMOOTH_PINK_SANDSTONE), conditionsFromItem(ModBlocks.SMOOTH_PINK_SANDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "smooth_pink_sandstone_slab")));
+                createStairsRecipe(ModBlocks.PINK_SANDSTONE_STAIRS, Ingredient.ofItem(ModBlocks.SMOOTH_PINK_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.SMOOTH_PINK_SANDSTONE), conditionsFromItem(ModBlocks.SMOOTH_PINK_SANDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "smooth_pink_sandstone_stairs")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_PINK_SANDSTONE_SLAB, Ingredient.ofItem(ModBlocks.CUT_PINK_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.CUT_PINK_SANDSTONE), conditionsFromItem(ModBlocks.CUT_PINK_SANDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cut_pink_sandstone_slab")));
+                offerChiseledBlockRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_PINK_SANDSTONE, ModBlocks.PINK_SANDSTONE);
+                offerSmelting(List.of(ModBlocks.PINK_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_PINK_SANDSTONE,
+                        0f, 200, "smooth_pink_sandstone");
+
                 createShapeless(RecipeCategory.DECORATIONS, ModBlocks.AMETHYST_PARTERS, 1)
                         .input(ItemTags.FLOWERS).input(ModItems.AMETHYST_NUGGET)
                         .criterion(hasItem(ModItems.AMETHYST_NUGGET), conditionsFromItem(ModItems.AMETHYST_NUGGET))
@@ -1776,6 +2047,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTrimRecipe(ModItems.OVERGROWTH_SMITHING_TEMPLATE, ModTrimPatterns.OVERGROWTH,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "overgrowth")));
                 offerSmithingTemplateCopyingRecipe(ModItems.OVERGROWTH_SMITHING_TEMPLATE, ModBlocks.MOSSY_COBBLED_STYXSTONE);
+                offerSmithingTrimRecipe(ModItems.CORRUPTION_SMITHING_TEMPLATE, ModTrimPatterns.CORRUPTION,
+                        RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "corruption")));
+                offerSmithingTemplateCopyingRecipe(ModItems.CORRUPTION_SMITHING_TEMPLATE, ModBlocks.BLACK_GOOP);
             }
         };
     }

@@ -1,6 +1,10 @@
 {
   "item.pinkstuff.crawler_spawn_egg": "Crawler Spawn Egg",
   "entity.pinkstuff.crawler": "Crawler",
+  "item.pinkstuff.corrupted_zombie_spawn_egg": "Corrupted Zombie Spawn Egg",
+  "entity.pinkstuff.corrupted_zombie": "Corrupted Zombie",
+  "item.pinkstuff.corrupted_skeleton_spawn_egg": "Corrupted Skeleton Spawn Egg",
+  "entity.pinkstuff.corrupted_skeleton": "Corrupted Skeleton",
 
   "item.pinkstuff.diamond_clump": "Diamond Clump",
   "item.pinkstuff.emerald_clump": "Emerald Clump",
@@ -40,6 +44,8 @@
   "item.pinkstuff.raw_moonsteel": "Raw Moonsteel",
   "item.pinkstuff.cerille_ingot": "Cerille Ingot",
   "item.pinkstuff.cerille_nugget": "Cerille Nugget",
+  "item.pinkstuff.sungaze": "Sungaze",
+  "item.pinkstuff.sungaze_nugget": "Sungaze Nugget",
 
   "item.pinkstuff.glazed_chorus_fruit": "Glazed Chorus Fruit",
   "item.pinkstuff.coal_meal": "Coal Meal",
@@ -48,6 +54,7 @@
   "item.pinkstuff.godfruit": "Godfruit",
   "item.pinkstuff.crystal_carrot": "Crystal Carrot",
   "item.pinkstuff.gem_berry": "Gem Berries",
+  "item.pinkstuff.charmberry": "Charmberries",
   "item.pinkstuff.hazeweaver": "Hazeweaver",
 
   "item.pinkstuff.pink_ice": "Pink Ice",
@@ -78,9 +85,30 @@
   "item.pinkstuff.styxcoal_block": "Block of Styxcoal",
   "item.pinkstuff.styxian_moonsteel_ore": "Moonsteel Ore",
   "item.pinkstuff.compressed_styxian_moonsteel_ore": "Compressed Moonsteel Ore",
+  "item.pinkstuff.styxian_lapis_ore": "Styxian Lapis Ore",
+  "item.pinkstuff.compressed_styxian_lapis_ore": "Compressed Styxian Lapis Ore",
   "item.pinkstuff.raw_moonsteel_block": "Block of Raw Moonsteel",
   "item.pinkstuff.moonsteel_block": "Block of Moonsteel",
   "item.pinkstuff.cerille_block": "Block of Cerille",
+  "item.pinkstuff.styxian_sungaze_ore": "Styxian Sungaze Ore",
+  "item.pinkstuff.compressed_styxian_sungaze_ore": "Compressed Styxian Sungaze Ore",
+  "item.pinkstuff.sungaze_block": "Block of Sungaze",
+  "item.pinkstuff.styxia_portal_frame": "Corrupt Portal Frame",
+  "item.pinkstuff.styxia_portal": "Corrupt Portal",
+  "item.pinkstuff.moonsteel_chain": "Moonsteel Chain",
+  "item.pinkstuff.moonsteel_lantern": "Moonsteel Lantern",
+
+  "item.pinkstuff.pink_sand": "Pink Sand",
+  "item.pinkstuff.pink_sandstone": "Pink Sandstone",
+  "item.pinkstuff.cut_pink_sandstone": "Cut Pink Sandstone",
+  "item.pinkstuff.smooth_pink_sandstone": "Smooth Pink Sandstone",
+  "item.pinkstuff.chiseled_pink_sandstone": "Chiseled Pink Sandstone",
+  "item.pinkstuff.pink_sandstone_slab": "Pink Sandstone Slab",
+  "item.pinkstuff.cut_pink_sandstone_slab": "Cut Pink Sandstone Slab",
+  "item.pinkstuff.smooth_pink_sandstone_slab": "Smooth Pink Sandstone Slab",
+  "item.pinkstuff.pink_sandstone_stairs": "Pink Sandstone Stairs",
+  "item.pinkstuff.smooth_pink_sandstone_stairs": "Smooth Pink Sandstone Stairs",
+  "item.pinkstuff.pink_sandstone_wall": "Pink Sandstone Wall",
 
   "item.pinkstuff.polished_amethyst_block": "Polished Amethyst Block",
   "item.pinkstuff.polished_amethyst_slab": "Polished Amethyst Slab",
@@ -167,6 +195,7 @@
   "item.pinkstuff.mossy_cobbled_styxstone": "Mossy Cobbled Styxstone",
   "item.pinkstuff.styxmoss": "Styxmoss",
   "item.pinkstuff.styxmoss_carpet": "Styxmoss Carpet",
+  "item.pinkstuff.styxmoss_vine": "Styxmoss Vine",
   "item.pinkstuff.styxgrass": "Styxgrass",
   "item.pinkstuff.hanging_styxgrass": "Hanging Styxgrass",
   "item.pinkstuff.corrupt_roots": "Corrupted Roots",
@@ -318,7 +347,7 @@
   "item.pinkstuff.moonsteel_leggings": "Moonsteel Leggings",
   "item.pinkstuff.moonsteel_boots": "Moonsteel Boots",
 
-  "item.pinkstuff.cerille_sword": "Cerille Greatsword",
+  "item.pinkstuff.cerille_sword": "Cerille Sword",
   "item.pinkstuff.cerille_pickaxe": "Cerille Pickaxe",
   "item.pinkstuff.cerille_axe": "Cerille Axe",
   "item.pinkstuff.cerille_shovel": "Cerille Shovel",
@@ -329,6 +358,17 @@
   "item.pinkstuff.cerille_leggings": "Cerille Legwear",
   "item.pinkstuff.cerille_boots": "Cerille Groundwalkers",
 
+  "item.pinkstuff.sunblaze_sword": "Sunblaze Sword",
+  "item.pinkstuff.sunblaze_pickaxe": "Sunblaze Pickaxe",
+  "item.pinkstuff.sunblaze_axe": "Sunblaze Axe",
+  "item.pinkstuff.sunblaze_shovel": "Sunblaze Shovel",
+  "item.pinkstuff.sunblaze_hoe": "Sunblaze Hoe",
+
+  "item.pinkstuff.sunblaze_helmet": "Sunblaze Helmet",
+  "item.pinkstuff.sunblaze_chestplate": "Sunblaze Chestplate",
+  "item.pinkstuff.sunblaze_leggings": "Sunblaze Leggings",
+  "item.pinkstuff.sunblaze_boots": "Sunblaze Boots",
+
   "item.pinkstuff.dawnbloomer": "The Dawnbloomer",
   "item.pinkstuff.bedrock_breaker": "Bedrock Breaker",
 
@@ -337,6 +377,7 @@
   "block.pinkstuff.thermium_blaster": "Thermium-powered Heat Blaster",
 
   "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
+  "block.pinkstuff.charmberry_bush": "Charmberries Bush",
   "block.pinkstuff.hazeweaver_plant": "Hazeweaver",
 
   "item.minecraft.potion.effect.grounded": "Potion of Heaviness",
@@ -380,6 +421,8 @@
   "trim_pattern.pinkstuff.wingflap": "Wingflap Trim Pattern",
   "item.pinkstuff.overgrowth_armor_trim_smithing_template": "Overgrowth Armor Trim",
   "trim_pattern.pinkstuff.overgrowth": "Overgrowth Trim Pattern",
+  "item.pinkstuff.corruption_armor_trim_smithing_template": "Corruption Armor Trim",
+  "trim_pattern.pinkstuff.corruption": "Corruption Trim Pattern",
 
   "trim_material.pinkstuff.kunzite": "Kunzite Material",
   "trim_material.pinkstuff.elysium": "Elysian Material",
@@ -391,11 +434,13 @@
   "trim_material.pinkstuff.corrupt": "Corrupted Material",
   "trim_material.pinkstuff.moonsteel": "Moonsteel Material",
   "trim_material.pinkstuff.cerille": "Cerille Material",
+  "trim_material.pinkstuff.sungaze": "Sungaze Material",
 
   "filled_map.pinkstuff.end_temple": "End Explorer Map",
   "filled_map.pinkstuff.end_city": "End Explorer Map",
   "filled_map.pinkstuff.chambers": "Amethyst Chambers Map",
   "filled_map.pinkstuff.pillager_outpost": "Pillager Explorer Map",
+  "filled_map.pinkstuff.styxian_portal": "Corrupt Explorer Map",
 
   "tag.item.pinkstuff.bricks_craftable": "Bricks Crafting",
   "tag.item.pinkstuff.chorus_logs": "Chorus Logs",
@@ -405,7 +450,14 @@
   "tag.item.pinkstuff.elysium_repair": "Elysium Repair",
   "tag.item.pinkstuff.kunzite_repair": "Kunzite Repair",
   "tag.item.pinkstuff.pinline_repair": "Pinline Repair",
+  "tag.item.pinkstuff.moonsteel_repair": "Moonsteel Repair",
+  "tag.item.pinkstuff.cerille_repair": "Cerille Repair",
+  "tag.item.pinkstuff.sunblaze_repair": "Sunblaze Repair",
   "tag.item.pinkstuff.special_repair": "Special Repair",
+
+  "gamerule.disableCorruptionSpread": "Disable Corruption Spread",
+  "gamerule.corruptionSpreadChance": "Corruption Spread Chance",
+  "gamerule.corruptionSpreadChance.description": "Chance in 1/value per direction for Corruption to spread per Random tick",
 
   "advancements.main.root.description": "Enter the Pink forest~",
   "advancements.main.root.title": "The Enchanted Realm",

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "pinkstuff:sunblaze"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "pinkstuff:sunblaze"
+      }
+    ]
+  }
+}

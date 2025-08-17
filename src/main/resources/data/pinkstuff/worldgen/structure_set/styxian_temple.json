@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      "structure": "pinkstuff:styxian_temple",
+      "weight": 1
+    },
+    {
+      "structure": "pinkstuff:overgrown_temple",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 20,
+    "separation": 12,
+    "spread_type": "linear",
+    "salt": 948122
+  }
+}

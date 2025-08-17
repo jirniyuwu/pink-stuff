@@ -59,7 +59,9 @@
         "pinkstuff:trims/entity/humanoid/wingflap",
         "pinkstuff:trims/entity/humanoid_leggings/wingflap",
         "pinkstuff:trims/entity/humanoid/overgrowth",
-        "pinkstuff:trims/entity/humanoid_leggings/overgrowth"
+        "pinkstuff:trims/entity/humanoid_leggings/overgrowth",
+        "pinkstuff:trims/entity/humanoid/corruption",
+        "pinkstuff:trims/entity/humanoid_leggings/corruption"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {
@@ -86,7 +88,8 @@
         "raw_pinline": "pinkstuff:trims/color_palettes/raw_pinline",
         "corrupt": "pinkstuff:trims/color_palettes/corrupt",
         "moonsteel": "pinkstuff:trims/color_palettes/moonsteel",
-        "cerille": "pinkstuff:trims/color_palettes/cerille"
+        "cerille": "pinkstuff:trims/color_palettes/cerille",
+        "sungaze": "pinkstuff:trims/color_palettes/sungaze"
       }
     }
   ]

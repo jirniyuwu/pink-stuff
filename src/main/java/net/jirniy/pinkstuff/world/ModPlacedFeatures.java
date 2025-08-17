@@ -27,6 +27,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STYXCOAL_ORE_PLACED_KEY = registerKey("styxcoal_ore_placed");
     public static final RegistryKey<PlacedFeature> STYXCOAL_ORE_BONUS_PLACED_KEY = registerKey("styxcoal_ore_bonus_placed");
     public static final RegistryKey<PlacedFeature> MOONSTEEL_ORE_PLACED_KEY = registerKey("moonsteel_ore_placed");
+    public static final RegistryKey<PlacedFeature> SUNGAZE_ORE_PLACED_KEY = registerKey("sungaze_ore_placed");
+    public static final RegistryKey<PlacedFeature> STYXIAN_LAPIS_ORE_PLACED_KEY = registerKey("styxian_lapis_ore_placed");
     public static final RegistryKey<PlacedFeature> PINLINE_ORE_PLACED_KEY = registerKey("pinline_ore_placed");
     public static final RegistryKey<PlacedFeature> CORRUPT_ORE_PLACED_KEY = registerKey("corrupt_ore_placed");
     public static final RegistryKey<PlacedFeature> GEM_TREE_PLACED_KEY = registerKey("gem_tree_placed");
@@ -99,7 +101,16 @@ public class ModPlacedFeatures {
         register(context, MOONSTEEL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOONSTEEL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(15,
                         HeightRangePlacementModifier.of(
-                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(90), 1)))
+                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(120), 1)))
+        );
+        register(context, SUNGAZE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SUNGAZE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(3,
+                        HeightRangePlacementModifier.of(
+                                BiasedToBottomHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(35), 1)))
+        );
+        register(context, STYXIAN_LAPIS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_LAPIS_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(7,
+                        HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(5), YOffset.fixed(35)))
         );
         register(context, STYXCOAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXCOAL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(9,
@@ -208,9 +219,9 @@ public class ModPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.5f, 2), ModBlocks.KEAPHE_SAPLING
                 ));
-        register(context, KEAPHE_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KEAPHE_TREE_KEY),
+        register(context, KEAPHE_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.TALL_KEAPHE_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.KEAPHE_SAPLING
+                        PlacedFeatures.createCountExtraModifier(5, 0.5f, 2), ModBlocks.KEAPHE_SAPLING
                 ));
 
         register(context, SNOWY_SPRUCE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SNOWY_SPRUCE_TREE_KEY),

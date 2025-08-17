@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
@@ -21,19 +22,26 @@ import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.particle.ModParticles;
 import net.jirniy.pinkstuff.recipe.ModRecipes;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
-import net.jirniy.pinkstuff.util.HammerUsageEvent;
-import net.jirniy.pinkstuff.util.ModMapDecorations;
-import net.jirniy.pinkstuff.util.ModPotions;
+import net.jirniy.pinkstuff.util.*;
 import net.jirniy.pinkstuff.world.ModBiomes;
+import net.jirniy.pinkstuff.world.dimension.ModDimensions;
 import net.jirniy.pinkstuff.world.features.ModFeatures;
 import net.jirniy.pinkstuff.world.features.ModTreeDecorators;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
+import net.kyrptonaught.customportalapi.CustomPortalBlock;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.entity.mob.SkeletonEntity;
+import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.TranslatableOption;
 import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradeOffers;
 import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
 import org.slf4j.Logger;
@@ -60,8 +68,10 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModPotions.registerPotions();
 		ModMapDecorations.registerMapDecorations();
 		ModBiomes.registerBiomes();
+		ModDimensions.registerDimensions();
 		ModFeatures.registerFeatures();
 		ModTreeDecorators.registerTreeDecorators();
+		ModGamerules.registerGamerules();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
@@ -123,6 +133,8 @@ public class JirniysPinkStuff implements ModInitializer {
 		});
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CRAWLER, CrawlerEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_ZOMBIE, ZombieEntity.createZombieAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_SKELETON, SkeletonEntity.createAbstractSkeletonAttributes());
 
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.PREPARED_PINLINE, ModPotions.GROUNDED);
@@ -176,6 +188,10 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.HAZEWEAVER, 1),
 					new ItemStack(Items.EMERALD, 1), 10, 7, 0.04f));
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL,
+					(entity, random) -> new TradeOffers.SellMapFactory(
+							5, ModTags.Structures.STYXIAN_PORTAL, "filled_map.pinkstuff.styxian_portal", ModMapDecorations.STYXIAN_PORTAL, 3, 12
+			).create(entity, random));
 		});
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 2, factories -> {
 			factories.add((entity, random) -> new TradeOffer(
@@ -190,5 +206,20 @@ public class JirniysPinkStuff implements ModInitializer {
 					new TradedItem(Items.EMERALD, random.nextBetween(20, 30)),
 					new ItemStack(ModItems.CRYSTAL_CARROT, 4), 4, 7, 0.08f));
 		});
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.CARTOGRAPHER, 2, factories -> {
+			factories.add((entity, random) -> new TradeOffers.SellMapFactory(
+					15, ModTags.Structures.STYXIAN_PORTAL, "filled_map.pinkstuff.styxian_portal", ModMapDecorations.STYXIAN_PORTAL, 3, 12
+			).create(entity, random));
+		});
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.CARTOGRAPHER, 3, factories -> {
+			factories.add((entity, random) -> new TradeOffers.SellMapFactory(
+					30, ModTags.Structures.CHAMBERS, "filled_map.pinkstuff.chambers", ModMapDecorations.CHAMBERS, 3, 12
+			).create(entity, random));
+		});
+
+		CustomPortalBuilder.beginPortal().flatPortal().forcedSize(3, 3).tintColor(0x341411)
+				.frameBlock(ModBlocks.STYXIA_PORTAL_FRAME).lightWithItem(ModItems.MEMORY_SHARD).onlyLightInOverworld()
+				.destDimID(Identifier.of(JirniysPinkStuff.MOD_ID, "styxia")).customPortalBlock((CustomPortalBlock) ModBlocks.STYXIA_PORTAL)
+				.registerPortal();
 	}
 }

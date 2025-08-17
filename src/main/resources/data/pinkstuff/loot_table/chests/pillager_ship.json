@@ -30,7 +30,18 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:sentry_armor_trim_smithing_template"
+          "name": "minecraft:sentry_armor_trim_smithing_template",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
         },
         {
           "type": "minecraft:item",

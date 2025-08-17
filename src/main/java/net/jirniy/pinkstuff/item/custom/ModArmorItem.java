@@ -23,13 +23,16 @@ public class ModArmorItem extends Item {
     private static final Map<ArmorMaterial, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 5, 0, true, true)))
+                            List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 5, 0, true, true),
+                                    new StatusEffectInstance(StatusEffects.REGENERATION, 5, 0, true, true)))
                     .put(ModArmorMaterials.PINLINE_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(ModEffects.GROUNDED, 5, 0, true, true),
                                     new StatusEffectInstance(StatusEffects.HASTE, 5, 2, true, true)))
                     .put(ModArmorMaterials.CERILLE_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(StatusEffects.STRENGTH, 5, 0, true, true),
-                                    new StatusEffectInstance(StatusEffects.SPEED, 5, 1, true, true))).build();
+                                    new StatusEffectInstance(StatusEffects.SPEED, 5, 1, true, true)))
+                    .put(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 5, 0, true, true))).build();
 
     public ModArmorItem(Settings settings) {
         super(settings);

@@ -9,6 +9,8 @@ import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.block.entity.renderer.DisplayBlockEntityRenderer;
 import net.jirniy.pinkstuff.entity.ModEntities;
+import net.jirniy.pinkstuff.entity.client.CorruptedSkeletonRenderer;
+import net.jirniy.pinkstuff.entity.client.CorruptedZombieRenderer;
 import net.jirniy.pinkstuff.entity.client.CrawlerModel;
 import net.jirniy.pinkstuff.entity.client.CrawlerRenderer;
 import net.jirniy.pinkstuff.particle.ChorusPetalParticle;
@@ -31,6 +33,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CHORUS_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.GEM_BERRY_BUSH, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.CHARMBERRY_BUSH, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.HAZEWEAVER_PLANT, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.ASHEN_DOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.ASHEN_TRAPDOOR, BlockRenderLayer.CUTOUT);
@@ -45,6 +48,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.DEATH_FLOWERS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.STYXGRASS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.HANGING_STYXGRASS, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.STYXMOSS_VINE, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CORRUPT_ROOTS, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.AMETHYST_CLUMP, BlockRenderLayer.CUTOUT);
@@ -54,6 +58,9 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.DIAMOND_CLUMP, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.EMERALD_CLUMP, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CORRUPTION_CLUMP, BlockRenderLayer.CUTOUT);
+
+        BlockRenderLayerMap.putBlock(ModBlocks.MOONSTEEL_CHAIN, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.MOONSTEEL_LANTERN, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.SMALL_END_GRASS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.MEDIUM_END_GRASS, BlockRenderLayer.CUTOUT);
@@ -73,6 +80,8 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(CrawlerModel.CRAWLER, CrawlerModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.CRAWLER, CrawlerRenderer::new);
+        EntityRendererRegistry.register(ModEntities.CORRUPTED_ZOMBIE, CorruptedZombieRenderer::new);
+        EntityRendererRegistry.register(ModEntities.CORRUPTED_SKELETON, CorruptedSkeletonRenderer::new);
 
         BlockEntityRendererFactories.register(ModBlockEntities.DISPLAY_BE, DisplayBlockEntityRenderer::new);
 

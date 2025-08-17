@@ -31,6 +31,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CERILLE_INGOT);
         valueLookupBuilder(ModTags.Items.MOONSTEEL_REPAIR)
                 .add(ModItems.MOONSTEEL_INGOT);
+        valueLookupBuilder(ModTags.Items.SUNBLAZE_REPAIR)
+                .add(ModItems.SUNGAZE)
+                .add(ModItems.THERMIUM);
 
         valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.KUNZITE_SWORD)
@@ -38,6 +41,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PINLINE_SWORD)
                 .add(ModItems.MOONSTEEL_SWORD)
                 .add(ModItems.CERILLE_SWORD)
+                .add(ModItems.SUNBLAZE_SWORD)
                 .add(ModItems.DAWNBLOOMER);
         valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.KUNZITE_PICKAXE)
@@ -45,6 +49,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PINLINE_PICKAXE)
                 .add(ModItems.MOONSTEEL_PICKAXE)
                 .add(ModItems.CERILLE_PICKAXE)
+                .add(ModItems.SUNBLAZE_PICKAXE)
                 .add(ModItems.ELYSIUM_HAMMER)
                 .add(ModItems.ELYSIUM_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
@@ -55,11 +60,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PINLINE_SHOVEL)
                 .add(ModItems.MOONSTEEL_SHOVEL)
                 .add(ModItems.CERILLE_SHOVEL)
+                .add(ModItems.SUNBLAZE_SHOVEL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.AXES)
                 .add(ModItems.KUNZITE_AXE)
                 .add(ModItems.ELYSIUM_AXE)
                 .add(ModItems.PINLINE_AXE)
+                .add(ModItems.MOONSTEEL_AXE)
+                .add(ModItems.CERILLE_AXE)
+                .add(ModItems.SUNBLAZE_AXE)
                 .add(ModItems.ELYSIUM_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.HOES)
@@ -68,6 +77,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PINLINE_HOE)
                 .add(ModItems.MOONSTEEL_HOE)
                 .add(ModItems.CERILLE_HOE)
+                .add(ModItems.SUNBLAZE_HOE)
                 .add(ModItems.ELYSIUM_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.ARMOR_ENCHANTABLE)
@@ -90,7 +100,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CERILLE_HELMET)
                 .add(ModItems.CERILLE_CHESTPLATE)
                 .add(ModItems.CERILLE_LEGGINGS)
-                .add(ModItems.CERILLE_BOOTS);
+                .add(ModItems.CERILLE_BOOTS)
+                .add(ModItems.SUNBLAZE_HELMET)
+                .add(ModItems.SUNBLAZE_CHESTPLATE)
+                .add(ModItems.SUNBLAZE_LEGGINGS)
+                .add(ModItems.SUNBLAZE_BOOTS);
         valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.KUNZITE_CHESTPLATE)
@@ -111,7 +125,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CERILLE_HELMET)
                 .add(ModItems.CERILLE_CHESTPLATE)
                 .add(ModItems.CERILLE_LEGGINGS)
-                .add(ModItems.CERILLE_BOOTS);
+                .add(ModItems.CERILLE_BOOTS)
+                .add(ModItems.SUNBLAZE_HELMET)
+                .add(ModItems.SUNBLAZE_CHESTPLATE)
+                .add(ModItems.SUNBLAZE_LEGGINGS)
+                .add(ModItems.SUNBLAZE_BOOTS);
         valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG.asItem())
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD.asItem())
@@ -140,25 +158,29 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ELYSIUM_HELMET)
                 .add(ModItems.PINLINE_HELMET)
                 .add(ModItems.MOONSTEEL_HELMET)
-                .add(ModItems.CERILLE_HELMET);
+                .add(ModItems.CERILLE_HELMET)
+                .add(ModItems.SUNBLAZE_HELMET);
         valueLookupBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_CHESTPLATE)
                 .add(ModItems.ELYSIUM_CHESTPLATE)
                 .add(ModItems.PINLINE_CHESTPLATE)
                 .add(ModItems.MOONSTEEL_CHESTPLATE)
-                .add(ModItems.CERILLE_CHESTPLATE);
+                .add(ModItems.CERILLE_CHESTPLATE)
+                .add(ModItems.SUNBLAZE_CHESTPLATE);
         valueLookupBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_LEGGINGS)
                 .add(ModItems.ELYSIUM_LEGGINGS)
                 .add(ModItems.PINLINE_LEGGINGS)
                 .add(ModItems.MOONSTEEL_LEGGINGS)
-                .add(ModItems.CERILLE_LEGGINGS);
+                .add(ModItems.CERILLE_LEGGINGS)
+                .add(ModItems.SUNBLAZE_LEGGINGS);
         valueLookupBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_BOOTS)
                 .add(ModItems.ELYSIUM_BOOTS)
                 .add(ModItems.PINLINE_BOOTS)
                 .add(ModItems.MOONSTEEL_BOOTS)
-                .add(ModItems.CERILLE_BOOTS);
+                .add(ModItems.CERILLE_BOOTS)
+                .add(ModItems.SUNBLAZE_BOOTS);
         valueLookupBuilder(ItemTags.FLOWERS)
                 .add(ModBlocks.AMETHYST_PARTERS.asItem())
                 .add(ModBlocks.KUNZITE_LOVELILY.asItem())
@@ -181,7 +203,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RAW_PINLINE)
                 .add(ModItems.CORRUPT_MASS)
                 .add(ModItems.MOONSTEEL_INGOT)
-                .add(ModItems.CERILLE_INGOT);
+                .add(ModItems.CERILLE_INGOT)
+                .add(ModItems.SUNGAZE);
         valueLookupBuilder(ItemTags.SLABS)
                 .add(ModBlocks.AMETHYST_BRICKS_SLAB.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_SLAB.asItem())
@@ -196,7 +219,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.MABRIZE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_SLAB.asItem())
-                .add(ModBlocks.MOONSTEEL_BRICKS_SLAB.asItem());
+                .add(ModBlocks.MOONSTEEL_BRICKS_SLAB.asItem())
+                .add(ModBlocks.PINK_SANDSTONE_SLAB.asItem())
+                .add(ModBlocks.CUT_PINK_SANDSTONE_SLAB.asItem())
+                .add(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB.asItem());
         valueLookupBuilder(ItemTags.STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_STAIRS.asItem())
@@ -211,7 +237,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.MABRIZE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_STAIRS.asItem())
-                .add(ModBlocks.MOONSTEEL_BRICKS_STAIRS.asItem());
+                .add(ModBlocks.MOONSTEEL_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.PINK_SANDSTONE_STAIRS.asItem())
+                .add(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL.asItem())
@@ -226,7 +254,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL.asItem())
                 .add(ModBlocks.MABRIZE_BRICKS_WALL.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_WALL.asItem())
-                .add(ModBlocks.MOONSTEEL_BRICKS_WALL.asItem());
+                .add(ModBlocks.MOONSTEEL_BRICKS_WALL.asItem())
+                .add(ModBlocks.PINK_SANDSTONE_WALL.asItem());
         valueLookupBuilder(ItemTags.WOODEN_SLABS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB.asItem())
                 .add(ModBlocks.CHORUS_SLAB.asItem())
@@ -305,5 +334,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.COMPRESSED_END_STONE.asItem());
         valueLookupBuilder(ItemTags.COALS)
                 .add(ModItems.STYXCOAL);
+        valueLookupBuilder(ItemTags.SAND)
+                .add(ModBlocks.PINK_SAND.asItem());
     }
 }

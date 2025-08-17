@@ -4,10 +4,7 @@ package net.jirniy.pinkstuff.item;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.entity.ModEntities;
-import net.jirniy.pinkstuff.item.custom.BreakerItem;
-import net.jirniy.pinkstuff.item.custom.HammerItem;
-import net.jirniy.pinkstuff.item.custom.ModArmorItem;
-import net.jirniy.pinkstuff.item.custom.MultitoolItem;
+import net.jirniy.pinkstuff.item.custom.*;
 import net.jirniy.pinkstuff.trim.ModTrimMaterials;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
@@ -45,6 +42,10 @@ public class ModItems {
     public static final Item CERILLE_INGOT = registerItem("cerille_ingot",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.CERILLE)));
 
+    public static final Item SUNGAZE_NUGGET = registerItem("sungaze_nugget", Item::new);
+    public static final Item SUNGAZE = registerItem("sungaze",
+            setting -> new Item(setting.trimMaterial(ModTrimMaterials.SUNGAZE)));
+
     public static final Item KUNZITE_NUGGET = registerItem("kunzite_nugget", Item::new);
     public static final Item KUNZITE = registerItem("kunzite",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.KUNZITE)));
@@ -81,12 +82,19 @@ public class ModItems {
     public static final Item GEM_BERRY = registerItem("gem_berry",
             setting -> new BlockItem(ModBlocks.GEM_BERRY_BUSH, setting
                     .food(ModFoodComponents.GEM_BERRY, ModFoodComponents.GEM_BERRY_EFFECT)));
+    public static final Item CHARMBERRY = registerItem("charmberry",
+            setting -> new BlockItem(ModBlocks.CHARMBERRY_BUSH, setting
+                    .food(ModFoodComponents.CHARMBERRY, ModFoodComponents.CHARMBERRY_EFFECT)));
     public static final Item HAZEWEAVER = registerItem("hazeweaver",
             setting -> new BlockItem(ModBlocks.HAZEWEAVER_PLANT, setting
                     .food(ModFoodComponents.HAZEWEAVER, ModFoodComponents.HAZEWEAVER_EFFECT)));
 
     public static final Item CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
             setting -> new SpawnEggItem(ModEntities.CRAWLER, setting));
+    public static final Item CORRUPTED_ZOMBIE_SPAWN_EGG = registerItem("corrupted_zombie_spawn_egg",
+            setting -> new SpawnEggItem(ModEntities.CORRUPTED_ZOMBIE, setting));
+    public static final Item CORRUPTED_SKELETON_SPAWN_EGG = registerItem("corrupted_skeleton_spawn_egg",
+            setting -> new SpawnEggItem(ModEntities.CORRUPTED_SKELETON, setting));
 
     public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
     public static final Item THERMIUM = registerItem("thermium", setting -> new Item(setting.trimMaterial(ModTrimMaterials.THERMIUM)));
@@ -129,7 +137,7 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.PINLINE, 0, -3f, setting));
 
     public static final Item MOONSTEEL_SWORD = registerItem("moonsteel_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.MOONSTEEL, 3f, -2.2f)));
+            setting -> new Item(setting.sword(ModToolMaterials.MOONSTEEL, 2.5f, -2.4f)));
     public static final Item MOONSTEEL_PICKAXE = registerItem("moonsteel_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.MOONSTEEL, 1.2f, -2.8f)));
     public static final Item MOONSTEEL_SHOVEL = registerItem("moonsteel_shovel",
@@ -140,7 +148,7 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.MOONSTEEL, 0, -3f, setting));
 
     public static final Item CERILLE_SWORD = registerItem("cerille_sword",
-            setting -> new Item(setting.sword(ModToolMaterials.CERILLE, 5f, -2.0f)));
+            setting -> new Item(setting.sword(ModToolMaterials.CERILLE, 4f, -2.2f)));
     public static final Item CERILLE_PICKAXE = registerItem("cerille_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.CERILLE, 1.4f, -2.8f)));
     public static final Item CERILLE_SHOVEL = registerItem("cerille_shovel",
@@ -150,12 +158,23 @@ public class ModItems {
     public static final Item CERILLE_HOE = registerItem("cerille_hoe",
             setting -> new HoeItem(ModToolMaterials.CERILLE, 0, -3f, setting));
 
+    public static final Item SUNBLAZE_SWORD = registerItem("sunblaze_sword",
+            setting -> new SunblazeSwordItem(setting.sword(ModToolMaterials.SUNBLAZE, 3.5f, -2.0f)));
+    public static final Item SUNBLAZE_PICKAXE = registerItem("sunblaze_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.SUNBLAZE, 1.6f, -2.8f)));
+    public static final Item SUNBLAZE_SHOVEL = registerItem("sunblaze_shovel",
+            setting -> new ShovelItem(ModToolMaterials.SUNBLAZE, 2.4f, -3.0f, setting));
+    public static final Item SUNBLAZE_AXE = registerItem("sunblaze_axe",
+            setting -> new AxeItem(ModToolMaterials.SUNBLAZE, 9, -3.4f, setting));
+    public static final Item SUNBLAZE_HOE = registerItem("sunblaze_hoe",
+            setting -> new HoeItem(ModToolMaterials.SUNBLAZE, 0, -3f, setting));
+
     public static final Item ELYSIUM_HAMMER = registerItem("elysium_hammer",
             setting -> new HammerItem(ModToolMaterials.SPECIAL, 8, -3.4f, setting.rarity(Rarity.RARE)));
     public static final Item ELYSIUM_MULTITOOL = registerItem("elysium_multitool",
             setting -> new MultitoolItem(ModToolMaterials.SPECIAL, 3, -1f, setting.rarity(Rarity.RARE)));
     public static final Item DAWNBLOOMER = registerItem("dawnbloomer",
-            setting -> new Item(setting.sword(ModToolMaterials.SPECIAL, 7, -1.8f).rarity(Rarity.RARE)));
+            setting -> new DawnbloomerItem(setting.sword(ModToolMaterials.SPECIAL, 7, -1.8f).rarity(Rarity.RARE)));
     public static final Item NETHERITE_MULTITOOL = registerItem("netherite_multitool",
             setting -> new MultitoolItem(ToolMaterial.NETHERITE, 3, -1f, setting.rarity(Rarity.UNCOMMON)));
     public static final Item BEDROCK_BREAKER = registerItem("bedrock_breaker",
@@ -206,6 +225,15 @@ public class ModItems {
     public static final Item CERILLE_BOOTS = registerItem("cerille_boots",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.CERILLE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
+    public static final Item SUNBLAZE_HELMET = registerItem("sunblaze_helmet",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item SUNBLAZE_CHESTPLATE = registerItem("sunblaze_chestplate",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item SUNBLAZE_LEGGINGS = registerItem("sunblaze_leggings",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item SUNBLAZE_BOOTS = registerItem("sunblaze_boots",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
     public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
     public static final Item BLOOM_SMITHING_TEMPLATE = registerItem("bloom_armor_trim_smithing_template",
@@ -225,6 +253,8 @@ public class ModItems {
     public static final Item WINGFLAP_SMITHING_TEMPLATE = registerItem("wingflap_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
     public static final Item OVERGROWTH_SMITHING_TEMPLATE = registerItem("overgrowth_armor_trim_smithing_template",
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
+    public static final Item CORRUPTION_SMITHING_TEMPLATE = registerItem("corruption_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
 
 

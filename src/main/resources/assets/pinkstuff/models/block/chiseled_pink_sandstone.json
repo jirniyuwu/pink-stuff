@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "pinkstuff:block/cut_pink_sandstone",
+    "east": "pinkstuff:block/chiseled_pink_sandstone",
+    "north": "pinkstuff:block/chiseled_pink_sandstone",
+    "particle": "pinkstuff:block/chiseled_pink_sandstone",
+    "south": "pinkstuff:block/chiseled_pink_sandstone",
+    "up": "pinkstuff:block/cut_pink_sandstone",
+    "west": "pinkstuff:block/chiseled_pink_sandstone"
+  }
+}

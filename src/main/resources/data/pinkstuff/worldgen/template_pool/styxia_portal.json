@@ -1,0 +1,16 @@
+{
+  "name": "pinkstuff:styxia_portal",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxia/styxia_portal_overworld",
+        "processors": "pinkstuff:styxia_portal",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

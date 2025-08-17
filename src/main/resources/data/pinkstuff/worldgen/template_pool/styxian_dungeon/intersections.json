@@ -1,0 +1,66 @@
+{
+  "name": "pinkstuff:styxian_dungeon/intersections",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/intersection_room1",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/intersection_room2",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/intersection_room5",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/intersection_room6",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/intersection_room7",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/intersection_room8",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

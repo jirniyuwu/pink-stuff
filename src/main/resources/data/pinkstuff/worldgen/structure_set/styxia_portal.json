@@ -1,0 +1,19 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 70,
+    "separation": 30,
+    "spread_type": "triangular",
+    "salt": 589321
+  },
+  "structures": [
+    {
+      "structure": "pinkstuff:styxia_portal_overworld",
+      "weight": 1
+    },
+    {
+      "structure": "pinkstuff:styxia_portal_styxia",
+      "weight": 1
+    }
+  ]
+}

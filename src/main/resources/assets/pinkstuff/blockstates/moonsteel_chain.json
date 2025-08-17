@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "pinkstuff:block/moonsteel_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "pinkstuff:block/moonsteel_chain"
+    },
+    "axis=z": {
+      "model": "pinkstuff:block/moonsteel_chain",
+      "x": 90
+    }
+  }
+}

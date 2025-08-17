@@ -1,0 +1,86 @@
+{
+  "name": "pinkstuff:styxian_dungeon/edges",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/spawner_room1",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/spawner_room2",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/spawner_room3",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/spawner_room4",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/treasure_room1",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/treasure_room2",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/treasure_room3",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_dungeon/treasure_room4",
+        "processors": "pinkstuff:dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

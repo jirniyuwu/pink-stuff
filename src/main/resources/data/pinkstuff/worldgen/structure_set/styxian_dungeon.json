@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "pinkstuff:styxian_dungeon",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 12,
+    "separation": 5,
+    "spread_type": "linear",
+    "salt": 1894821
+  }
+}

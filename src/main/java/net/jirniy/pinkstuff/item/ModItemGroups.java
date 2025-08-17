@@ -20,6 +20,9 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.pinkstuff.kunzite_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CRAWLER_SPAWN_EGG);
+                        entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
+                        entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
+
                         entries.add(ModItems.QUARTZ_NUGGET);
                         entries.add(ModBlocks.QUARTZ_CLUMP);
                         entries.add(ModItems.DIAMOND_NUGGET);
@@ -57,6 +60,18 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
+
+                        entries.add(ModBlocks.PINK_SAND);
+                        entries.add(ModBlocks.PINK_SANDSTONE);
+                        entries.add(ModBlocks.PINK_SANDSTONE_SLAB);
+                        entries.add(ModBlocks.PINK_SANDSTONE_STAIRS);
+                        entries.add(ModBlocks.PINK_SANDSTONE_WALL);
+                        entries.add(ModBlocks.SMOOTH_PINK_SANDSTONE);
+                        entries.add(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB);
+                        entries.add(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS);
+                        entries.add(ModBlocks.CUT_PINK_SANDSTONE);
+                        entries.add(ModBlocks.CUT_PINK_SANDSTONE_SLAB);
+                        entries.add(ModBlocks.CHISELED_PINK_SANDSTONE);
 
                         entries.add(ModItems.STYXCOAL);
                         entries.add(ModBlocks.STYXCOAL_BLOCK);
@@ -180,6 +195,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MOONSTEEL_BRICKS_SLAB);
                         entries.add(ModBlocks.MOONSTEEL_BRICKS_STAIRS);
                         entries.add(ModBlocks.MOONSTEEL_BRICKS_WALL);
+                        entries.add(ModBlocks.MOONSTEEL_CHAIN);
+                        entries.add(ModBlocks.MOONSTEEL_LANTERN);
 
                         entries.add(ModBlocks.BLACK_GOOP);
                         entries.add(ModBlocks.CORRUPT_ORE);
@@ -198,6 +215,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CERILLE_BRICKS_STAIRS);
                         entries.add(ModBlocks.CERILLE_BRICKS_WALL);
 
+                        entries.add(ModItems.SUNGAZE_NUGGET);
+                        entries.add(ModItems.SUNGAZE);
+                        entries.add(ModBlocks.STYXIAN_SUNGAZE_ORE);
+                        entries.add(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE);
+                        entries.add(ModBlocks.SUNGAZE_BLOCK);
+
                         entries.add(ModItems.MEMORY_SHARD);
                         entries.add(ModBlocks.MEMORY_BRICKS);
                         entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);
@@ -205,6 +228,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MEMORY_BRICKS_SLAB);
                         entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
                         entries.add(ModBlocks.MEMORY_BRICKS_WALL);
+
+                        entries.add(ModBlocks.STYXIAN_LAPIS_ORE);
+                        entries.add(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE);
+
+                        entries.add(ModBlocks.STYXIA_PORTAL_FRAME);
 
                         entries.add(ModBlocks.AMETHYST_PARTERS);
                         entries.add(ModBlocks.KUNZITE_LOVELILY);
@@ -218,6 +246,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHORUS_LILY);
                         entries.add(ModBlocks.STYXGRASS);
                         entries.add(ModBlocks.HANGING_STYXGRASS);
+                        entries.add(ModBlocks.STYXMOSS_VINE);
 
                         entries.add(ModBlocks.PINK_ICE);
 
@@ -298,6 +327,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GODFRUIT);
                         entries.add(ModItems.CRYSTAL_CARROT);
                         entries.add(ModItems.GEM_BERRY);
+                        entries.add(ModItems.CHARMBERRY);
                         entries.add(ModItems.HAZEWEAVER);
 
                         entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
@@ -310,6 +340,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SHELL_SMITHING_TEMPLATE);
                         entries.add(ModItems.WINGFLAP_SMITHING_TEMPLATE);
                         entries.add(ModItems.OVERGROWTH_SMITHING_TEMPLATE);
+                        entries.add(ModItems.CORRUPTION_SMITHING_TEMPLATE);
 
                         entries.add(ModItems.NETHERITE_MULTITOOL);
 
@@ -355,6 +386,16 @@ public class ModItemGroups {
                         entries.add(ModItems.CERILLE_LEGGINGS);
                         entries.add(ModItems.CERILLE_BOOTS);
 
+                        entries.add(ModItems.SUNBLAZE_SWORD);
+                        entries.add(ModItems.SUNBLAZE_PICKAXE);
+                        entries.add(ModItems.SUNBLAZE_AXE);
+                        entries.add(ModItems.SUNBLAZE_SHOVEL);
+                        entries.add(ModItems.SUNBLAZE_HOE);
+                        entries.add(ModItems.SUNBLAZE_HELMET);
+                        entries.add(ModItems.SUNBLAZE_CHESTPLATE);
+                        entries.add(ModItems.SUNBLAZE_LEGGINGS);
+                        entries.add(ModItems.SUNBLAZE_BOOTS);
+
                         entries.add(ModItems.PINLINE_SWORD);
                         entries.add(ModItems.PINLINE_PICKAXE);
                         entries.add(ModItems.PINLINE_AXE);
@@ -387,6 +428,18 @@ public class ModItemGroups {
             entries.add(ModBlocks.RAW_MOONSTEEL_BLOCK);
             entries.add(ModBlocks.MOONSTEEL_BLOCK);
             entries.add(ModBlocks.CERILLE_BLOCK);
+            entries.add(ModBlocks.SUNGAZE_BLOCK);
+
+            entries.add(ModBlocks.PINK_SANDSTONE);
+            entries.add(ModBlocks.PINK_SANDSTONE_SLAB);
+            entries.add(ModBlocks.PINK_SANDSTONE_STAIRS);
+            entries.add(ModBlocks.PINK_SANDSTONE_WALL);
+            entries.add(ModBlocks.SMOOTH_PINK_SANDSTONE);
+            entries.add(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB);
+            entries.add(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS);
+            entries.add(ModBlocks.CUT_PINK_SANDSTONE);
+            entries.add(ModBlocks.CUT_PINK_SANDSTONE_SLAB);
+            entries.add(ModBlocks.CHISELED_PINK_SANDSTONE);
 
             entries.add(ModBlocks.COBBLED_STYXSTONE);
             entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE);
@@ -435,6 +488,20 @@ public class ModItemGroups {
             entries.add(ModBlocks.RAW_PINLINE_BRICKS_SLAB);
             entries.add(ModBlocks.RAW_PINLINE_BRICKS_STAIRS);
             entries.add(ModBlocks.RAW_PINLINE_BRICKS_WALL);
+            entries.add(ModBlocks.MOONSTEEL_BRICKS);
+            entries.add(ModBlocks.CHISELED_MOONSTEEL_BRICKS);
+            entries.add(ModBlocks.MOONSTEEL_BULB);
+            entries.add(ModBlocks.MOONSTEEL_BRICKS_SLAB);
+            entries.add(ModBlocks.MOONSTEEL_BRICKS_STAIRS);
+            entries.add(ModBlocks.MOONSTEEL_BRICKS_WALL);
+            entries.add(ModBlocks.MOONSTEEL_CHAIN);
+            entries.add(ModBlocks.MOONSTEEL_LANTERN);
+            entries.add(ModBlocks.CERILLE_BRICKS);
+            entries.add(ModBlocks.CHISELED_CERILLE_BRICKS);
+            entries.add(ModBlocks.CERILLE_BULB);
+            entries.add(ModBlocks.CERILLE_BRICKS_SLAB);
+            entries.add(ModBlocks.CERILLE_BRICKS_STAIRS);
+            entries.add(ModBlocks.CERILLE_BRICKS_WALL);
             entries.add(ModBlocks.MEMORY_BRICKS);
             entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);
             entries.add(ModBlocks.MEMORY_BULB);
@@ -453,6 +520,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.MABRIZE_BRICKS_SLAB);
             entries.add(ModBlocks.MABRIZE_BRICKS_STAIRS);
             entries.add(ModBlocks.MABRIZE_BRICKS_WALL);
+
+            entries.add(ModBlocks.MOONSTEEL_CHAIN);
 
             entries.add(ModBlocks.AMETHYST_ROD);
             entries.add(ModBlocks.KUNZITE_ROD);
@@ -529,6 +598,7 @@ public class ModItemGroups {
             entries.add(ModItems.GODFRUIT);
             entries.add(ModItems.CRYSTAL_CARROT);
             entries.add(ModItems.GEM_BERRY);
+            entries.add(ModItems.CHARMBERRY);
             entries.add(ModItems.HAZEWEAVER);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
@@ -563,6 +633,8 @@ public class ModItemGroups {
             entries.add(ModItems.MOONSTEEL_INGOT);
             entries.add(ModItems.CERILLE_NUGGET);
             entries.add(ModItems.CERILLE_INGOT);
+            entries.add(ModItems.SUNGAZE_NUGGET);
+            entries.add(ModItems.SUNGAZE);
 
             entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
             entries.add(ModItems.CHERRY_SMITHING_TEMPLATE);
@@ -574,6 +646,7 @@ public class ModItemGroups {
             entries.add(ModItems.SHELL_SMITHING_TEMPLATE);
             entries.add(ModItems.WINGFLAP_SMITHING_TEMPLATE);
             entries.add(ModItems.OVERGROWTH_SMITHING_TEMPLATE);
+            entries.add(ModItems.CORRUPTION_SMITHING_TEMPLATE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(ModItems.KUNZITE_SWORD);
@@ -604,6 +677,13 @@ public class ModItemGroups {
             entries.add(ModItems.CERILLE_LEGGINGS);
             entries.add(ModItems.CERILLE_BOOTS);
 
+            entries.add(ModItems.SUNBLAZE_SWORD);
+            entries.add(ModItems.SUNBLAZE_AXE);
+            entries.add(ModItems.SUNBLAZE_HELMET);
+            entries.add(ModItems.SUNBLAZE_CHESTPLATE);
+            entries.add(ModItems.SUNBLAZE_LEGGINGS);
+            entries.add(ModItems.SUNBLAZE_BOOTS);
+
             entries.add(ModItems.PINLINE_SWORD);
             entries.add(ModItems.PINLINE_AXE);
             entries.add(ModItems.PINLINE_HELMET);
@@ -614,6 +694,28 @@ public class ModItemGroups {
             entries.add(ModItems.DAWNBLOOMER);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(ModBlocks.KUNZITE_ORE);
+            entries.add(ModBlocks.AMETHYST_KUNZITE_ORE);
+            entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
+            entries.add(ModBlocks.THERMIUM_ORE);
+            entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
+            entries.add(ModBlocks.NETHER_SULFUR_ORE);
+            entries.add(ModBlocks.END_PINLINE_ORE);
+            entries.add(ModBlocks.COMPRESSED_END_PINLINE_ORE);
+            entries.add(ModBlocks.STYXIAN_STYXCOAL_ORE);
+            entries.add(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE);
+            entries.add(ModBlocks.STYXIAN_MOONSTEEL_ORE);
+            entries.add(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE);
+            entries.add(ModBlocks.STYXIAN_SUNGAZE_ORE);
+            entries.add(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE);
+            entries.add(ModBlocks.STYXIAN_LAPIS_ORE);
+            entries.add(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE);
+            entries.add(ModBlocks.STYXIAN_AMETHYST_ORE);
+            entries.add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);
+            entries.add(ModBlocks.CORRUPT_ORE);
+
+            entries.add(ModBlocks.PINK_SAND);
+            entries.add(ModBlocks.PINK_SANDSTONE);
             entries.add(ModBlocks.BLACK_GOOP);
             entries.add(ModBlocks.STYXSTONE);
             entries.add(ModBlocks.COBBLED_STYXSTONE);
@@ -655,6 +757,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.MEMORIA_BOURPEER);
             entries.add(ModBlocks.STYXGRASS);
             entries.add(ModBlocks.HANGING_STYXGRASS);
+            entries.add(ModBlocks.STYXMOSS_VINE);
             entries.add(ModBlocks.CORRUPT_ROOTS);
 
             entries.add(ModBlocks.AMETHYST_CLUMP);
@@ -666,8 +769,13 @@ public class ModItemGroups {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
             entries.add(ModItems.CRAWLER_SPAWN_EGG);
+            entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
+            entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(ModBlocks.MOONSTEEL_CHAIN);
+            entries.add(ModBlocks.MOONSTEEL_LANTERN);
+            entries.add(ModBlocks.STYXIA_PORTAL_FRAME);
             entries.add(ModBlocks.THERMIUM_BLASTER);
             entries.add(ModBlocks.DISPLAY);
         });
@@ -691,6 +799,10 @@ public class ModItemGroups {
             entries.add(ModItems.CERILLE_AXE);
             entries.add(ModItems.CERILLE_SHOVEL);
             entries.add(ModItems.CERILLE_HOE);
+            entries.add(ModItems.SUNBLAZE_PICKAXE);
+            entries.add(ModItems.SUNBLAZE_AXE);
+            entries.add(ModItems.SUNBLAZE_SHOVEL);
+            entries.add(ModItems.SUNBLAZE_HOE);
             entries.add(ModItems.PINLINE_PICKAXE);
             entries.add(ModItems.PINLINE_AXE);
             entries.add(ModItems.PINLINE_SHOVEL);

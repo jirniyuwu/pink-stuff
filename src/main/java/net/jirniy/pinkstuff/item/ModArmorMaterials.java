@@ -48,7 +48,7 @@ public class ModArmorMaterials {
 
     public static final RegistryKey<EquipmentAsset> MOONSTEEL_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel"));
 
-    public static final ArmorMaterial MOONSTEEL_ARMOR_MATERIAL = new ArmorMaterial(54, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+    public static final ArmorMaterial MOONSTEEL_ARMOR_MATERIAL = new ArmorMaterial(33, Util.make(new EnumMap<>(EquipmentType.class), map -> {
         map.put(EquipmentType.BOOTS, 2);
         map.put(EquipmentType.LEGGINGS, 3);
         map.put(EquipmentType.CHESTPLATE, 4);
@@ -58,11 +58,21 @@ public class ModArmorMaterials {
 
     public static final RegistryKey<EquipmentAsset> CERILLE_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "cerille"));
 
-    public static final ArmorMaterial CERILLE_ARMOR_MATERIAL = new ArmorMaterial(54, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+    public static final ArmorMaterial CERILLE_ARMOR_MATERIAL = new ArmorMaterial(158, Util.make(new EnumMap<>(EquipmentType.class), map -> {
         map.put(EquipmentType.BOOTS, 4);
         map.put(EquipmentType.LEGGINGS, 4);
         map.put(EquipmentType.CHESTPLATE, 5);
         map.put(EquipmentType.HELMET, 4);
         map.put(EquipmentType.BODY, 4);
     }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1,0.1f, ModTags.Items.CERILLE_REPAIR, CERILLE_KEY);
+
+    public static final RegistryKey<EquipmentAsset> SUNBLAZE_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze"));
+
+    public static final ArmorMaterial SUNBLAZE_ARMOR_MATERIAL = new ArmorMaterial(160, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 4);
+        map.put(EquipmentType.LEGGINGS, 5);
+        map.put(EquipmentType.CHESTPLATE, 7);
+        map.put(EquipmentType.HELMET, 4);
+        map.put(EquipmentType.BODY, 4);
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2,0.15f, ModTags.Items.SUNBLAZE_REPAIR, SUNBLAZE_KEY);
 }

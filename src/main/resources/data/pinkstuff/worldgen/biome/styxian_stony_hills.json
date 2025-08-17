@@ -21,7 +21,7 @@
           "max_delay": 24000,
           "min_delay": 12000,
           "replace_current_music": false,
-          "sound": "minecraft:music.overworld.cherry_grove"
+          "sound": "minecraft:music.overworld.frozen_peaks"
         },
         "weight": 1
       }
@@ -47,14 +47,15 @@
       "pinkstuff:styxian_amethyst_ore_placed",
       "pinkstuff:styxcoal_ore_placed",
       "pinkstuff:styxcoal_ore_bonus_placed",
-      "pinkstuff:moonsteel_ore_placed"
+      "pinkstuff:moonsteel_ore_placed",
+      "pinkstuff:sungaze_ore_placed"
     ],
     [],
     [],
     [],
     []
   ],
-  "has_precipitation": true,
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [],

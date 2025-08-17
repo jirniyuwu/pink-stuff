@@ -9,6 +9,7 @@ import net.jirniy.pinkstuff.world.features.ModSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleTypes;
@@ -18,21 +19,29 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.ColorCode;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import java.util.function.Function;
 
 public class ModBlocks {
+    public static final Block STYXIA_PORTAL = registerBlockWithoutBlockItem("styxia_portal",
+            properties -> new StyxiaPortalBlock(properties.strength(-1).noCollision().nonOpaque().pistonBehavior(PistonBehavior.BLOCK)
+                    .luminance(state -> 15).sounds(BlockSoundGroup.GLASS).mapColor(DyeColor.BLACK)));
+    public static final Block STYXIA_PORTAL_FRAME = registerBlock("styxia_portal_frame",
+            properties -> new StyxiaPortalFrameBlock(properties.strength(100, -1).nonOpaque().pistonBehavior(PistonBehavior.BLOCK)
+                    .sounds(BlockSoundGroup.GLASS).mapColor(DyeColor.BLACK)));
 
     public static final Block PINK_ICE = registerBlock("pink_ice",
             properties -> new TranslucentBlock(properties.strength(8f).slipperiness(1.01f).nonOpaque()
                     .sounds(BlockSoundGroup.GLASS).mapColor(MapColor.DULL_PINK)));
     public static final Block BLACK_GOOP = registerBlock("black_goop",
-            properties -> new BlackGoopBlock(properties.strength(4f)
+            properties -> new BlackGoopBlock(properties.strength(4f).ticksRandomly()
                     .sounds(BlockSoundGroup.HONEY).mapColor(MapColor.BLACK)));
     public static final Block CORRUPT_ORE = registerBlock("corrupt_ore",
-            properties -> new BlackGoopBlock(properties.strength(9f)
+            properties -> new BlackGoopBlock(properties.strength(9f).ticksRandomly()
                     .sounds(BlockSoundGroup.HONEY).mapColor(MapColor.BLACK)));
     public static final Block STYXIAN_SOIL = registerBlock("styxian_soil",
             properties -> new Block(properties.strength(0.8f)
@@ -59,6 +68,36 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
 
+    public static final Block PINK_SAND = registerBlock("pink_sand",
+            properties -> new SandBlock(new ColorCode(0xB561B5), properties.strength(1f)
+                    .sounds(BlockSoundGroup.SOUL_SAND).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block PINK_SANDSTONE = registerBlock("pink_sandstone",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CUT_PINK_SANDSTONE = registerBlock("cut_pink_sandstone",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CHISELED_PINK_SANDSTONE = registerBlock("chiseled_pink_sandstone",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block SMOOTH_PINK_SANDSTONE = registerBlock("smooth_pink_sandstone",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block PINK_SANDSTONE_STAIRS = registerBlock("pink_sandstone_stairs",
+            properties -> new StairsBlock(ModBlocks.PINK_SANDSTONE.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block PINK_SANDSTONE_SLAB = registerBlock("pink_sandstone_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block PINK_SANDSTONE_WALL = registerBlock("pink_sandstone_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block SMOOTH_PINK_SANDSTONE_STAIRS = registerBlock("smooth_pink_sandstone_stairs",
+            properties -> new StairsBlock(ModBlocks.SMOOTH_PINK_SANDSTONE.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block SMOOTH_PINK_SANDSTONE_SLAB = registerBlock("smooth_pink_sandstone_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CUT_PINK_SANDSTONE_SLAB = registerBlock("cut_pink_sandstone_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.PALE_PURPLE)));
+
     public static final Block STYXGRASS = registerBlock("styxgrass",
             properties -> new ModGrassBlock(BlockTags.DIRT, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.MOSS_CARPET).pistonBehavior(PistonBehavior.DESTROY),
@@ -66,6 +105,9 @@ public class ModBlocks {
     public static final Block HANGING_STYXGRASS = registerBlock("hanging_styxgrass",
             properties -> new HangingStyxgrassBlock(properties.strength(0f).replaceable()
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.MOSS_CARPET).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block STYXMOSS_VINE = registerBlock("styxmoss_vine",
+            properties -> new VineBlock(properties.mapColor(MapColor.PALE_PURPLE).replaceable().noCollision()
+                    .ticksRandomly().strength(0.2F).sounds(BlockSoundGroup.MOSS_CARPET).burnable().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block CORRUPT_ROOTS = registerBlock("corrupt_roots",
             properties -> new CorruptRootsBlock(ModTags.Blocks.CORRUPT_BLOCKS, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.HONEY).pistonBehavior(PistonBehavior.DESTROY)));
@@ -82,9 +124,24 @@ public class ModBlocks {
     public static final Block COMPRESSED_STYXIAN_STYXCOAL_ORE = registerBlock("compressed_styxian_styxcoal_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
                     properties.strength(4.8f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block STYXIAN_LAPIS_ORE = registerBlock("styxian_lapis_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 5),
+                    properties.strength(4.8f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.LAPIS_BLUE)));
+    public static final Block COMPRESSED_STYXIAN_LAPIS_ORE = registerBlock("compressed_styxian_lapis_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 5),
+                    properties.strength(6.8f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.LAPIS_BLUE)));
+    public static final Block STYXIAN_SUNGAZE_ORE = registerBlock("styxian_sungaze_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(5, 7),
+                    properties.strength(5.8f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.YELLOW)));
+    public static final Block COMPRESSED_STYXIAN_SUNGAZE_ORE = registerBlock("compressed_styxian_sungaze_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(5, 7),
+                    properties.strength(7.8f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.YELLOW)));
     public static final Block STYXCOAL_BLOCK = registerBlock("styxcoal_block",
             properties -> new Block(properties.strength(5f).requiresTool()
                     .sounds(BlockSoundGroup.NETHERRACK).mapColor(MapColor.DARK_DULL_PINK)));
+    public static final Block SUNGAZE_BLOCK = registerBlock("sungaze_block",
+            properties -> new Block(properties.strength(6f).requiresTool()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
 
     public static final Block DIAMOND_CLUMP = registerBlock("diamond_clump",
             properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
@@ -668,9 +725,18 @@ public class ModBlocks {
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY),
                     5, 5, 11, 13, 11));
 
+    public static final Block MOONSTEEL_LANTERN = registerBlock("moonsteel_lantern",
+            properties -> new LanternBlock(properties.strength(1).nonOpaque()
+                    .sounds(BlockSoundGroup.LANTERN).pistonBehavior(PistonBehavior.DESTROY).luminance(state -> 15)));
+    public static final Block MOONSTEEL_CHAIN = registerBlock("moonsteel_chain",
+            properties -> new ChainBlock(properties.strength(1).nonOpaque().sounds(BlockSoundGroup.CHAIN)));
+
     public static final Block GEM_BERRY_BUSH = registerBlockWithoutBlockItem("gem_berry_bush",
             properties -> new GemBerryBushBlock(properties.mapColor(MapColor.DARK_GREEN).ticksRandomly()
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).luminance(GemBerryBushBlock::getLuminance).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block CHARMBERRY_BUSH = registerBlockWithoutBlockItem("charmberry_bush",
+            properties -> new CharmberryBushBlock(properties.mapColor(MapColor.PALE_PURPLE).ticksRandomly()
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block HAZEWEAVER_PLANT = registerBlockWithoutBlockItem("hazeweaver_plant",
             properties -> new FlowerBlock(StatusEffects.SATURATION, 2, properties.mapColor(MapColor.GREEN)
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));

@@ -3,7 +3,10 @@ package net.jirniy.pinkstuff.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.effect.ModEffects;
+import net.jirniy.pinkstuff.util.ModGamerules;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.TranslucentBlock;
 import net.minecraft.block.entity.BlockEntity;
@@ -15,7 +18,12 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -55,6 +63,75 @@ public class BlackGoopBlock extends TranslucentBlock {
     protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
         applyStatusEffect(entity);
         super.onEntityCollision(state, world, pos, entity, handler);
+    }
+
+    @Override
+    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        if (!world.getGameRules().getBoolean(ModGamerules.DISABLE_CORRUPTION_SPREAD)) {
+            spread(world, pos, random);
+        }
+        super.randomTick(state, world, pos, random);
+    }
+
+    protected void spread(ServerWorld world, BlockPos pos, Random random) {
+        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+            if (!world.isAir(pos.down())) {
+                if (world.getBlockState(pos.down()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
+                    world.setBlockState(pos.down(), ModBlocks.BLACK_GOOP.getDefaultState());
+                    world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
+                            SoundCategory.BLOCKS, 1f, 1, true);
+                }
+            }
+        }
+        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+            if (!world.isAir(pos.up())) {
+                if (world.getBlockState(pos.up()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
+                    world.setBlockState(pos.up(), ModBlocks.BLACK_GOOP.getDefaultState());
+                    world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
+                            SoundCategory.BLOCKS, 1f, 1, true);
+                }
+            } else if (random.nextInt(5) == 1) {
+                world.setBlockState(pos.up(), ModBlocks.CORRUPT_ROOTS.getDefaultState());
+                world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
+                        SoundCategory.BLOCKS, 1f, 1, true);
+            }
+        }
+        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+            if (!world.isAir(pos.east())) {
+                if (world.getBlockState(pos.east()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
+                    world.setBlockState(pos.east(), ModBlocks.BLACK_GOOP.getDefaultState());
+                    world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
+                            SoundCategory.BLOCKS, 1f, 1, true);
+                }
+            }
+        }
+        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+            if (!world.isAir(pos.west())) {
+                if (world.getBlockState(pos.west()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
+                    world.setBlockState(pos.west(), ModBlocks.BLACK_GOOP.getDefaultState());
+                    world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
+                            SoundCategory.BLOCKS, 1f, 1, true);
+                }
+            }
+        }
+        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+            if (!world.isAir(pos.north())) {
+                if (world.getBlockState(pos.north()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
+                    world.setBlockState(pos.north(), ModBlocks.BLACK_GOOP.getDefaultState());
+                    world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
+                            SoundCategory.BLOCKS, 1f, 1, true);
+                }
+            }
+        }
+        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+            if (!world.isAir(pos.south())) {
+                if (world.getBlockState(pos.south()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
+                    world.setBlockState(pos.south(), ModBlocks.BLACK_GOOP.getDefaultState());
+                    world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
+                            SoundCategory.BLOCKS, 1f, 1, true);
+                }
+            }
+        }
     }
 
     protected void applyStatusEffect(Entity entity) {

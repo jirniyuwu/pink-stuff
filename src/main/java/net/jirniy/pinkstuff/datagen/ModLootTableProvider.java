@@ -42,6 +42,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.THERMIUM_BLASTER);
         addDropWithSilkTouch(ModBlocks.PINK_ICE);
         addDrop(ModBlocks.COMPRESSED_END_STONE);
+        addDrop(ModBlocks.MOONSTEEL_LANTERN);
+        addDrop(ModBlocks.MOONSTEEL_CHAIN);
 
         addDrop(ModBlocks.KUNZITE_BLOCK);
         addDrop(ModBlocks.RAW_KUNZITE_BLOCK);
@@ -149,6 +151,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
         addDrop(ModBlocks.STYXIAN_MOONSTEEL_ORE, oreDrops(ModBlocks.STYXIAN_MOONSTEEL_ORE, ModItems.RAW_MOONSTEEL));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE, ModItems.RAW_MOONSTEEL));
+        addDrop(ModBlocks.STYXIAN_LAPIS_ORE, multipleOreDrops(ModBlocks.STYXIAN_LAPIS_ORE, Items.LAPIS_LAZULI, 4, 8));
+        addDrop(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE, Items.LAPIS_LAZULI, 4, 8));
+        addDrop(ModBlocks.STYXIAN_SUNGAZE_ORE, oreDrops(ModBlocks.STYXIAN_SUNGAZE_ORE, ModItems.SUNGAZE));
+        addDrop(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE, ModItems.SUNGAZE));
 
         addDrop(ModBlocks.STYXIAN_SOIL);
         addDrop(ModBlocks.STYXMOSS);
@@ -158,13 +164,27 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COBBLED_STYXSTONE);
         addDrop(ModBlocks.MOSSY_COBBLED_STYXSTONE);
         addDrop(ModBlocks.COMPRESSED_STYXSTONE);
-        dropsWithSilkTouchOrShears(ModBlocks.STYXGRASS);
-        dropsWithSilkTouchOrShears(ModBlocks.HANGING_STYXGRASS);
+        addDrop(ModBlocks.STYXGRASS, dropsWithShears(ModBlocks.STYXGRASS));
+        addDrop(ModBlocks.HANGING_STYXGRASS, dropsWithShears(ModBlocks.HANGING_STYXGRASS));
+        addDrop(ModBlocks.STYXMOSS_VINE, dropsWithShears(ModBlocks.STYXMOSS_VINE));
         addDrop(ModBlocks.DEATH_FLOWERS);
         addDrop(ModBlocks.STYXCOAL_BLOCK);
         addDrop(ModBlocks.MOONSTEEL_BLOCK);
         addDrop(ModBlocks.RAW_MOONSTEEL_BLOCK);
         addDrop(ModBlocks.CERILLE_BLOCK);
+        addDrop(ModBlocks.SUNGAZE_BLOCK);
+
+        addDrop(ModBlocks.PINK_SAND);
+        addDrop(ModBlocks.PINK_SANDSTONE);
+        addDrop(ModBlocks.CUT_PINK_SANDSTONE);
+        addDrop(ModBlocks.CHISELED_PINK_SANDSTONE);
+        addDrop(ModBlocks.SMOOTH_PINK_SANDSTONE);
+        addDrop(ModBlocks.PINK_SANDSTONE_SLAB, slabDrops(ModBlocks.PINK_SANDSTONE_SLAB));
+        addDrop(ModBlocks.CUT_PINK_SANDSTONE_SLAB, slabDrops(ModBlocks.CUT_PINK_SANDSTONE_SLAB));
+        addDrop(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB, slabDrops(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB));
+        addDrop(ModBlocks.PINK_SANDSTONE_STAIRS);
+        addDrop(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS);
+        addDrop(ModBlocks.PINK_SANDSTONE_WALL);
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LOG);
         addDrop(ModBlocks.CRYSTAL_CHERRY_WOOD);
@@ -291,6 +311,19 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                         ).pool(LootPool.builder().conditionally(
                                         BlockStatePropertyLootCondition.builder(ModBlocks.GEM_BERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(GemBerryBushBlock.AGE, 2))
                                 ).with(ItemEntry.builder(ModItems.GEM_BERRY))
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+        this.addDrop(ModBlocks.CHARMBERRY_BUSH,
+                block -> this.applyExplosionDecay(
+                        block,LootTable.builder().pool(LootPool.builder().conditionally(
+                                                BlockStatePropertyLootCondition.builder(ModBlocks.CHARMBERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(GemBerryBushBlock.AGE, 3))
+                                        )
+                                        .with(ItemEntry.builder(ModItems.CHARMBERRY))
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
+                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                        ).pool(LootPool.builder().conditionally(
+                                        BlockStatePropertyLootCondition.builder(ModBlocks.CHARMBERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(GemBerryBushBlock.AGE, 2))
+                                ).with(ItemEntry.builder(ModItems.CHARMBERRY))
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
     }

@@ -36,6 +36,9 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool mabrizeBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MABRIZE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool moonsteelBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOONSTEEL_BRICKS);
         BlockStateModelGenerator.BlockTexturePool cerilleBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CERILLE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool pinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINK_SANDSTONE);
+        BlockStateModelGenerator.BlockTexturePool smoothPinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SMOOTH_PINK_SANDSTONE);
+        BlockStateModelGenerator.BlockTexturePool cutPinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CUT_PINK_SANDSTONE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_AMETHYST_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -160,6 +163,15 @@ public class ModModelProvider extends FabricModelProvider {
         cerilleBricksPool.slab(ModBlocks.CERILLE_BRICKS_SLAB);
         cerilleBricksPool.wall(ModBlocks.CERILLE_BRICKS_WALL);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_SAND);
+        pinkSandstonePool.stairs(ModBlocks.PINK_SANDSTONE_STAIRS);
+        pinkSandstonePool.slab(ModBlocks.PINK_SANDSTONE_SLAB);
+        pinkSandstonePool.wall(ModBlocks.PINK_SANDSTONE_WALL);
+        cutPinkSandstonePool.slab(ModBlocks.CUT_PINK_SANDSTONE_SLAB);
+        smoothPinkSandstonePool.stairs(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS);
+        smoothPinkSandstonePool.slab(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.CHISELED_PINK_SANDSTONE);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_END_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_ICE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BLOCK);
@@ -193,9 +205,14 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXCOAL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_MOONSTEEL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_LAPIS_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOONSTEEL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_MOONSTEEL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CERILLE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_SUNGAZE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUNGAZE_BLOCK);
 
         blockStateModelGenerator.registerFlowerbed(ModBlocks.DEATH_FLOWERS);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.STYXMOSS, ModBlocks.STYXMOSS_CARPET);
@@ -208,6 +225,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.THERMIUM_CLUMP);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.QUARTZ_CLUMP);
         blockStateModelGenerator.registerMultifaceBlockModel(ModBlocks.CORRUPTION_CLUMP);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.STYXMOSS_VINE);
 
         blockStateModelGenerator.registerRod(ModBlocks.KUNZITE_ROD);
         blockStateModelGenerator.registerRod(ModBlocks.ELYSIUM_ROD);
@@ -217,12 +235,15 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerRod(ModBlocks.RAW_PINLINE_ROD);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);
+        blockStateModelGenerator.registerLantern(ModBlocks.MOONSTEEL_LANTERN);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.CHORUS_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.SNOWY_SPRUCE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.KEAPHE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.FLOWERING_KEAPHE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.GEM_BERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
+                GemBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.CHARMBERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 GemBerryBushBlock.AGE, 0, 1, 2, 3);
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.SMALL_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -246,6 +267,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CRAWLER_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CORRUPTED_SKELETON_SPAWN_EGG, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.AMETHYST_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DIAMOND_NUGGET, Models.GENERATED);
@@ -257,9 +280,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STYXCOAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.MOONSTEEL_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.MOONSTEEL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.MOONSTEEL_CHAIN.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MOONSTEEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CERILLE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CERILLE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SUNGAZE_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SUNGAZE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.CORRUPT_DROPLET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPT_MASS, Models.GENERATED);
@@ -323,6 +349,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CERILLE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CERILLE_HOE, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.SUNBLAZE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SUNBLAZE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SUNBLAZE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SUNBLAZE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SUNBLAZE_HOE, Models.HANDHELD);
+
         itemModelGenerator.register(ModItems.BEDROCK_BREAKER, Models.HANDHELD);
 
         itemModelGenerator.register(ModBlocks.CRYSTAL_CHERRY_SAPLING.asItem(), Models.GENERATED);
@@ -347,6 +379,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SHELL_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.WINGFLAP_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.OVERGROWTH_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CORRUPTION_SMITHING_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.registerArmor(ModItems.KUNZITE_HELMET,
                 ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
@@ -392,6 +425,14 @@ public class ModModelProvider extends FabricModelProvider {
                 ModArmorMaterials.CERILLE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.CERILLE_BOOTS,
                 ModArmorMaterials.CERILLE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
-        
+
+        itemModelGenerator.registerArmor(ModItems.SUNBLAZE_HELMET,
+                ModArmorMaterials.SUNBLAZE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.SUNBLAZE_CHESTPLATE,
+                ModArmorMaterials.SUNBLAZE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.SUNBLAZE_LEGGINGS,
+                ModArmorMaterials.SUNBLAZE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.SUNBLAZE_BOOTS,
+                ModArmorMaterials.SUNBLAZE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
     }
 }
