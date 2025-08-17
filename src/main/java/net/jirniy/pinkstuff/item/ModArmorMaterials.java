@@ -68,11 +68,11 @@ public class ModArmorMaterials {
 
     public static final RegistryKey<EquipmentAsset> SUNBLAZE_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze"));
 
-    public static final ArmorMaterial SUNBLAZE_ARMOR_MATERIAL = new ArmorMaterial(160, Util.make(new EnumMap<>(EquipmentType.class), map -> {
-        map.put(EquipmentType.BOOTS, 4);
-        map.put(EquipmentType.LEGGINGS, 5);
-        map.put(EquipmentType.CHESTPLATE, 7);
-        map.put(EquipmentType.HELMET, 4);
-        map.put(EquipmentType.BODY, 4);
-    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2,0.15f, ModTags.Items.SUNBLAZE_REPAIR, SUNBLAZE_KEY);
+    public static final ArmorMaterial SUNBLAZE_ARMOR_MATERIAL = new ArmorMaterial(77, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 3);
+        map.put(EquipmentType.LEGGINGS, 4);
+        map.put(EquipmentType.CHESTPLATE, 6);
+        map.put(EquipmentType.HELMET, 3);
+        map.put(EquipmentType.BODY, 3);
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.5f,0.15f, ModTags.Items.SUNBLAZE_REPAIR, SUNBLAZE_KEY);
 }

@@ -460,20 +460,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_hoe")));
 
                 createShaped(RecipeCategory.COMBAT, ModItems.SUNBLAZE_SWORD)
-                        .pattern("G")
+                        .pattern("T")
                         .pattern("G")
                         .pattern("/")
                         .input('/', Items.STICK)
                         .input('G', ModItems.SUNGAZE)
+                        .input('T', ModItems.THERMIUM)
                         .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_sword")));
                 createShaped(RecipeCategory.TOOLS, ModItems.SUNBLAZE_PICKAXE)
-                        .pattern("GGG")
+                        .pattern("GTG")
                         .pattern(" / ")
                         .pattern(" / ")
                         .input('/', Items.STICK)
                         .input('G', ModItems.SUNGAZE)
+                        .input('T', ModItems.THERMIUM)
                         .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_pickaxe")));

@@ -18,5 +18,5 @@ public class ModToolMaterials {
     public static final ToolMaterial CERILLE = new ToolMaterial(ModTags.Blocks.INCORRECT_FOR_CERILLE_TOOL,
             2300, 14.0f, 2.0f, 26, ModTags.Items.CERILLE_REPAIR);
     public static final ToolMaterial SUNBLAZE = new ToolMaterial(ModTags.Blocks.INCORRECT_FOR_SUNBLAZE_TOOL,
-            1840, 20.0f, 2.0f, 28, ModTags.Items.SUNBLAZE_REPAIR);
+            390, 20.0f, 2.0f, 28, ModTags.Items.SUNBLAZE_REPAIR);
 }
