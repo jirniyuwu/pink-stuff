@@ -339,5 +339,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.STYXCOAL);
         valueLookupBuilder(ItemTags.SAND)
                 .add(ModBlocks.PINK_SAND.asItem());
+        valueLookupBuilder(ModTags.Items.THERMIUM_FUEL_INSERTABLE)
+                .add(ModBlocks.THERMIUM_BLOCK.asItem())
+                .add(ModItems.THERMIUM)
+                .add(ModItems.THERMIUM_NUGGET)
+                .add(ModItems.ENERGIZED_THERMIUM);
     }
 }

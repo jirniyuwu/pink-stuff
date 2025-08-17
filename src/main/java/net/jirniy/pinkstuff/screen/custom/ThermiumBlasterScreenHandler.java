@@ -2,6 +2,7 @@ package net.jirniy.pinkstuff.screen.custom;
 
 import net.jirniy.pinkstuff.block.entity.custom.ThermiumBlasterBlockEntity;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -18,7 +19,7 @@ public class ThermiumBlasterScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
     public final ThermiumBlasterBlockEntity blockEntity;
     public ThermiumBlasterScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
-        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
+        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(4));
     }
 
     public ThermiumBlasterScreenHandler(int syncId, PlayerInventory playerInventory,
@@ -28,8 +29,9 @@ public class ThermiumBlasterScreenHandler extends ScreenHandler {
         this.blockEntity = ((ThermiumBlasterBlockEntity) blockEntity);
         this.propertyDelegate = arrayPropertyDelegate;
 
-        this.addSlot(new Slot(inventory, 0, 54, 34));
-        this.addSlot(new Slot(inventory, 1, 104, 34));
+        this.addSlot(new Slot(inventory, 0, 54, 27));
+        this.addSlot(new Slot(inventory, 1, 104, 27));
+        this.addSlot(new Slot(inventory, 2, 8, 52));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -40,6 +42,9 @@ public class ThermiumBlasterScreenHandler extends ScreenHandler {
     public boolean isCrafting() {
         return propertyDelegate.get(0) > 0;
     }
+    public boolean hasFuel() {
+        return propertyDelegate.get(2) > 0;
+    }
 
     public int getScaledArrowProgress() {
         int progress = this.propertyDelegate.get(0);
@@ -49,6 +54,18 @@ public class ThermiumBlasterScreenHandler extends ScreenHandler {
         return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
     }
 
+    public int getScaledFuelBar() {
+        int fuel = this.propertyDelegate.get(2);
+        int maxFuel = this.propertyDelegate.get(3);
+        int fuelPixelSize = 141;
+
+        if (maxFuel != 0 && fuel >= 8 && (fuel * fuelPixelSize / maxFuel < 1)) {
+            return 1;
+        }
+
+        return maxFuel != 0 && fuel != 0 ? fuel * fuelPixelSize / maxFuel : 0;
+    }
+
     @Override
     public ItemStack quickMove(PlayerEntity player, int invSlot) {
         ItemStack newStack = ItemStack.EMPTY;
@@ -56,6 +73,17 @@ public class ThermiumBlasterScreenHandler extends ScreenHandler {
         if (slot != null && slot.hasStack()) {
             ItemStack originalStack = slot.getStack();
             newStack = originalStack.copy();
+
+            if (originalStack.isIn(ModTags.Items.THERMIUM_FUEL_INSERTABLE)) {
+                if (invSlot < this.inventory.size()) {
+                    if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
+                        return ItemStack.EMPTY;
+                    }
+                } else if (!this.insertItem(originalStack, 2, this.inventory.size(), false)) {
+                    return ItemStack.EMPTY;
+                }
+            }
+
             if (invSlot < this.inventory.size()) {
                 if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
                     return ItemStack.EMPTY;

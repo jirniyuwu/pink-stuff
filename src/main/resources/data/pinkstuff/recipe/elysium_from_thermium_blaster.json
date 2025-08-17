@@ -1,0 +1,9 @@
+{
+  "type": "pinkstuff:thermium_blaster",
+  "ingredient": "pinkstuff:crystal_glitter",
+  "fuel_cost": 8,
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:elysium_ingot"
+  }
+}

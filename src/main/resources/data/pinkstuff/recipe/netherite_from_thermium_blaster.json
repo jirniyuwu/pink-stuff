@@ -1,9 +1,9 @@
 {
   "type": "pinkstuff:thermium_blaster",
-  "ingredient": "minecraft:raw_iron",
+  "ingredient": "minecraft:ancient_debris",
   "fuel_cost": 4,
   "result": {
     "count": 1,
-    "id": "minecraft:iron_ingot"
+    "id": "minecraft:netherite_scrap"
   }
 }

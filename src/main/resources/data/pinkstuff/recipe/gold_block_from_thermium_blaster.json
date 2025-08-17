@@ -1,0 +1,9 @@
+{
+  "type": "pinkstuff:thermium_blaster",
+  "ingredient": "minecraft:raw_gold_block",
+  "fuel_cost": 18,
+  "result": {
+    "count": 1,
+    "id": "minecraft:gold_block"
+  }
+}

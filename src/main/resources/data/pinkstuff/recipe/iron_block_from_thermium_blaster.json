@@ -1,0 +1,9 @@
+{
+  "type": "pinkstuff:thermium_blaster",
+  "ingredient": "minecraft:raw_iron_block",
+  "fuel_cost": 36,
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_block"
+  }
+}

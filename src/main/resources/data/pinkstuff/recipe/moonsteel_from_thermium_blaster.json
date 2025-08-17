@@ -1,9 +1,9 @@
 {
   "type": "pinkstuff:thermium_blaster",
-  "ingredient": "minecraft:raw_gold",
+  "ingredient": "pinkstuff:raw_moonsteel",
   "fuel_cost": 2,
   "result": {
     "count": 1,
-    "id": "minecraft:gold_ingot"
+    "id": "pinkstuff:moonsteel_ingot"
   }
 }

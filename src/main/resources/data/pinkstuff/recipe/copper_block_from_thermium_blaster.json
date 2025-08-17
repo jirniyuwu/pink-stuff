@@ -1,0 +1,9 @@
+{
+  "type": "pinkstuff:thermium_blaster",
+  "ingredient": "minecraft:raw_copper_block",
+  "fuel_cost": 9,
+  "result": {
+    "count": 1,
+    "id": "minecraft:copper_block"
+  }
+}

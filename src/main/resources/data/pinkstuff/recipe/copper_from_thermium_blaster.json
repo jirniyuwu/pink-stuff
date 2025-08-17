@@ -1,8 +1,9 @@
 {
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "minecraft:raw_copper",
+  "fuel_cost": 1,
   "result": {
-    "count": 8,
+    "count": 1,
     "id": "minecraft:copper_ingot"
   }
 }
