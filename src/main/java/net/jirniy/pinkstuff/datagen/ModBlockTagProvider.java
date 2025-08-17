@@ -133,7 +133,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STYXIA_PORTAL_FRAME)
                 .add(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE)
                 .add(ModBlocks.STYXIAN_SUNGAZE_ORE)
-                .add(ModBlocks.SUNGAZE_BLOCK);
+                .add(ModBlocks.SUNGAZE_BLOCK)
+                .add(ModBlocks.SUNGAZE_BRICKS)
+                .add(ModBlocks.CHISELED_SUNGAZE_BRICKS)
+                .add(ModBlocks.SUNGAZE_BULB)
+                .add(ModBlocks.SUNGAZE_BRICKS_STAIRS)
+                .add(ModBlocks.SUNGAZE_BRICKS_WALL)
+                .add(ModBlocks.SUNGAZE_BRICKS_SLAB);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
@@ -239,7 +245,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STYXIAN_LAPIS_ORE)
                 .add(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE)
                 .add(ModBlocks.STYXIAN_SUNGAZE_ORE)
-                .add(ModBlocks.SUNGAZE_BLOCK);
+                .add(ModBlocks.SUNGAZE_BLOCK)
+                .add(ModBlocks.SUNGAZE_BRICKS)
+                .add(ModBlocks.CHISELED_SUNGAZE_BRICKS)
+                .add(ModBlocks.SUNGAZE_BULB)
+                .add(ModBlocks.SUNGAZE_BRICKS_STAIRS)
+                .add(ModBlocks.SUNGAZE_BRICKS_WALL)
+                .add(ModBlocks.SUNGAZE_BRICKS_SLAB);
         valueLookupBuilder(ModTags.Blocks.NEEDS_KUNZITE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
         valueLookupBuilder(ModTags.Blocks.NEEDS_PINLINE_TOOL)
@@ -311,6 +323,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MABRIZE_BRICKS_WALL)
                 .add(ModBlocks.MOONSTEEL_BRICKS_WALL)
                 .add(ModBlocks.CERILLE_BRICKS_WALL)
+                .add(ModBlocks.SUNGAZE_BRICKS_WALL)
                 .add(ModBlocks.PINK_SANDSTONE_WALL);
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.KUNZITE_BLOCK)
@@ -353,6 +366,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MABRIZE_BRICKS_SLAB)
                 .add(ModBlocks.MOONSTEEL_BRICKS_SLAB)
                 .add(ModBlocks.CERILLE_BRICKS_SLAB)
+                .add(ModBlocks.SUNGAZE_BRICKS_SLAB)
                 .add(ModBlocks.CUT_PINK_SANDSTONE_SLAB)
                 .add(ModBlocks.PINK_SANDSTONE_SLAB)
                 .add(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB);
@@ -371,6 +385,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MABRIZE_BRICKS_STAIRS)
                 .add(ModBlocks.MOONSTEEL_BRICKS_STAIRS)
                 .add(ModBlocks.CERILLE_BRICKS_STAIRS)
+                .add(ModBlocks.SUNGAZE_BRICKS_STAIRS)
                 .add(ModBlocks.PINK_SANDSTONE_STAIRS)
                 .add(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_SLABS)

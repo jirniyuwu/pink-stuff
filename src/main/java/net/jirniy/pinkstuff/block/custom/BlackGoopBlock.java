@@ -27,6 +27,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.Difficulty;
+import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -143,6 +144,11 @@ public class BlackGoopBlock extends TranslucentBlock {
     }
 
     protected void applyStatusEffect(LivingEntity livingEntity) {
+        if (livingEntity instanceof PlayerEntity playerEntity) {
+            if (playerEntity.getGameMode() == GameMode.SPECTATOR) {
+                return;
+            }
+        }
         if (livingEntity.hasStatusEffect(ModEffects.DEATH_GRIP)) {
             if ((livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getDuration() < 40) || livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getAmplifier() > 0) {
                 livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));

@@ -221,6 +221,13 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE);
                         entries.add(ModBlocks.SUNGAZE_BLOCK);
 
+                        entries.add(ModBlocks.SUNGAZE_BRICKS);
+                        entries.add(ModBlocks.CHISELED_SUNGAZE_BRICKS);
+                        entries.add(ModBlocks.SUNGAZE_BULB);
+                        entries.add(ModBlocks.SUNGAZE_BRICKS_SLAB);
+                        entries.add(ModBlocks.SUNGAZE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.SUNGAZE_BRICKS_WALL);
+
                         entries.add(ModItems.MEMORY_SHARD);
                         entries.add(ModBlocks.MEMORY_BRICKS);
                         entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);
@@ -502,6 +509,12 @@ public class ModItemGroups {
             entries.add(ModBlocks.CERILLE_BRICKS_SLAB);
             entries.add(ModBlocks.CERILLE_BRICKS_STAIRS);
             entries.add(ModBlocks.CERILLE_BRICKS_WALL);
+            entries.add(ModBlocks.SUNGAZE_BRICKS);
+            entries.add(ModBlocks.CHISELED_SUNGAZE_BRICKS);
+            entries.add(ModBlocks.SUNGAZE_BULB);
+            entries.add(ModBlocks.SUNGAZE_BRICKS_SLAB);
+            entries.add(ModBlocks.SUNGAZE_BRICKS_STAIRS);
+            entries.add(ModBlocks.SUNGAZE_BRICKS_WALL);
             entries.add(ModBlocks.MEMORY_BRICKS);
             entries.add(ModBlocks.CHISELED_MEMORY_BRICKS);
             entries.add(ModBlocks.MEMORY_BULB);

@@ -11,6 +11,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
 
 public class CorruptRootsBlock extends ModGrassBlock {
@@ -37,6 +38,11 @@ public class CorruptRootsBlock extends ModGrassBlock {
     }
 
     protected void applyStatusEffect(LivingEntity livingEntity) {
+        if (livingEntity instanceof PlayerEntity playerEntity) {
+            if (playerEntity.getGameMode() == GameMode.SPECTATOR) {
+                return;
+            }
+        }
         if (livingEntity.hasStatusEffect(ModEffects.DEATH_GRIP)) {
             if ((livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getDuration() < 40) || livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getAmplifier() > 0) {
                 livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));

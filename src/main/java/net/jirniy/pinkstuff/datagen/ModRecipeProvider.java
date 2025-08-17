@@ -1338,6 +1338,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.CERILLE_BRICKS), conditionsFromItem(ModBlocks.CERILLE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_cerille_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SUNGAZE_BRICKS, 4)
+                        .pattern("BB")
+                        .pattern("BB")
+                        .input('B', ModBlocks.SUNGAZE_BRICKS)
+                        .criterion(hasItem(ModBlocks.SUNGAZE_BRICKS), conditionsFromItem(ModBlocks.SUNGAZE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "chiseled_sungaze_bricks")));
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BULB, 2)
                         .pattern("AAA")
@@ -1420,6 +1427,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.CERILLE_BRICKS), conditionsFromItem(ModBlocks.CERILLE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_bulb")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNGAZE_BULB, 2)
+                        .pattern("AAA")
+                        .pattern("AGA")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.SUNGAZE_BRICKS)
+                        .input('G', Blocks.GLOWSTONE)
+                        .criterion(hasItem(ModBlocks.SUNGAZE_BRICKS), conditionsFromItem(ModBlocks.SUNGAZE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sungaze_bulb")));
 
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MEMORY_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.MEMORY_BRICKS))
                         .criterion(hasItem(ModBlocks.MEMORY_BRICKS), conditionsFromItem(ModBlocks.MEMORY_BRICKS))
@@ -1481,6 +1497,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNGAZE_BRICKS, 8)
+                        .pattern("SSS")
+                        .pattern("SAS")
+                        .pattern("SSS")
+                        .input('S', ModTags.Items.BRICKS_CRAFTABLE)
+                        .input('A', ModItems.SUNGAZE)
+                        .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sungaze_bricks")));
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_END_STONE, 1)
                         .pattern("SSS")
                         .pattern("SSS")
@@ -1526,6 +1551,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.CERILLE_BRICKS), conditionsFromItem(ModBlocks.CERILLE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNGAZE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.SUNGAZE_BRICKS))
+                        .criterion(hasItem(ModBlocks.SUNGAZE_BRICKS), conditionsFromItem(ModBlocks.SUNGAZE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sungaze_bricks_slab")));
+                createStairsRecipe(ModBlocks.SUNGAZE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.SUNGAZE_BRICKS))
+                        .criterion(hasItem(ModBlocks.SUNGAZE_BRICKS), conditionsFromItem(ModBlocks.SUNGAZE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sungaze_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNGAZE_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.SUNGAZE_BRICKS)
+                        .criterion(hasItem(ModBlocks.SUNGAZE_BRICKS), conditionsFromItem(ModBlocks.SUNGAZE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sungaze_bricks_wall")));
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINLINE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.PINLINE_BRICKS))
                         .criterion(hasItem(ModBlocks.PINLINE_BRICKS), conditionsFromItem(ModBlocks.PINLINE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,

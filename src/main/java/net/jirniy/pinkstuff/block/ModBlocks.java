@@ -480,6 +480,15 @@ public class ModBlocks {
     public static final Block MABRIZE_BRICKS = registerBlock("mabrize_bricks",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block SUNGAZE_BRICKS = registerBlock("sungaze_bricks",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block SUNGAZE_BULB = registerBlock("sungaze_bulb",
+            properties -> new Block(properties.strength(6f).luminance(state -> 15)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block CHISELED_SUNGAZE_BRICKS = registerBlock("chiseled_sungaze_bricks",
+            properties -> new Block(properties.strength(6f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
 
     public static final Block STYXSTONE_BRICKS_STAIRS = registerBlock("styxstone_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.STYXSTONE_BRICKS.getDefaultState(),
@@ -584,6 +593,14 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(3f).luminance(state -> 11).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
     public static final Block THERMIUM_BRICKS_WALL = registerBlock("thermium_bricks_wall",
             properties -> new WallBlock(properties.strength(3f).luminance(state -> 11).requiresTool().sounds(BlockSoundGroup.IRON).mapColor(MapColor.LIME)));
+
+    public static final Block SUNGAZE_BRICKS_STAIRS = registerBlock("sungaze_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.SUNGAZE_BRICKS.getDefaultState(),
+                    properties.strength(6f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block SUNGAZE_BRICKS_SLAB = registerBlock("sungaze_bricks_slab",
+            properties -> new SlabBlock(properties.strength(6f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block SUNGAZE_BRICKS_WALL = registerBlock("sungaze_bricks_wall",
+            properties -> new WallBlock(properties.strength(6f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
 
     public static final Block MEMORY_BRICKS_STAIRS = registerBlock("memory_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.MEMORY_BRICKS.getDefaultState(),

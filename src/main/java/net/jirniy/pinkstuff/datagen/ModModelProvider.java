@@ -36,6 +36,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool mabrizeBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MABRIZE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool moonsteelBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOONSTEEL_BRICKS);
         BlockStateModelGenerator.BlockTexturePool cerilleBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CERILLE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool sungazeBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SUNGAZE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool pinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINK_SANDSTONE);
         BlockStateModelGenerator.BlockTexturePool smoothPinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SMOOTH_PINK_SANDSTONE);
         BlockStateModelGenerator.BlockTexturePool cutPinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CUT_PINK_SANDSTONE);
@@ -49,6 +50,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_RAW_PINLINE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_CERILLE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_MOONSTEEL_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_SUNGAZE_BRICKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AMETHYST_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KUNZITE_BULB);
@@ -59,6 +61,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINLINE_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CERILLE_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOONSTEEL_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUNGAZE_BULB);
 
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.AMETHYST_PARTERS, ModBlocks.POTTED_AMETHYST_PARTERS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.KUNZITE_LOVELILY, ModBlocks.POTTED_KUNZITE_LOVELILY, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -162,6 +165,10 @@ public class ModModelProvider extends FabricModelProvider {
         cerilleBricksPool.stairs(ModBlocks.CERILLE_BRICKS_STAIRS);
         cerilleBricksPool.slab(ModBlocks.CERILLE_BRICKS_SLAB);
         cerilleBricksPool.wall(ModBlocks.CERILLE_BRICKS_WALL);
+
+        sungazeBricksPool.stairs(ModBlocks.SUNGAZE_BRICKS_STAIRS);
+        sungazeBricksPool.slab(ModBlocks.SUNGAZE_BRICKS_SLAB);
+        sungazeBricksPool.wall(ModBlocks.SUNGAZE_BRICKS_WALL);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_SAND);
         pinkSandstonePool.stairs(ModBlocks.PINK_SANDSTONE_STAIRS);

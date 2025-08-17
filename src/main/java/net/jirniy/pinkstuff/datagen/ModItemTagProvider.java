@@ -219,6 +219,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.MABRIZE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_SLAB.asItem())
+                .add(ModBlocks.SUNGAZE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.MOONSTEEL_BRICKS_SLAB.asItem())
                 .add(ModBlocks.PINK_SANDSTONE_SLAB.asItem())
                 .add(ModBlocks.CUT_PINK_SANDSTONE_SLAB.asItem())
@@ -237,6 +238,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.MABRIZE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.SUNGAZE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.MOONSTEEL_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.PINK_SANDSTONE_STAIRS.asItem())
                 .add(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS.asItem());
@@ -254,6 +256,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL.asItem())
                 .add(ModBlocks.MABRIZE_BRICKS_WALL.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_WALL.asItem())
+                .add(ModBlocks.SUNGAZE_BRICKS_WALL.asItem())
                 .add(ModBlocks.MOONSTEEL_BRICKS_WALL.asItem())
                 .add(ModBlocks.PINK_SANDSTONE_WALL.asItem());
         valueLookupBuilder(ItemTags.WOODEN_SLABS)
