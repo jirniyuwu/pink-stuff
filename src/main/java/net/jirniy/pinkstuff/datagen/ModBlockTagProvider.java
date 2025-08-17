@@ -139,7 +139,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SUNGAZE_BULB)
                 .add(ModBlocks.SUNGAZE_BRICKS_STAIRS)
                 .add(ModBlocks.SUNGAZE_BRICKS_WALL)
-                .add(ModBlocks.SUNGAZE_BRICKS_SLAB);
+                .add(ModBlocks.SUNGAZE_BRICKS_SLAB)
+                .add(ModBlocks.PINK_SANDSTONE)
+                .add(ModBlocks.PINK_SANDSTONE_STAIRS)
+                .add(ModBlocks.PINK_SANDSTONE_WALL)
+                .add(ModBlocks.PINK_SANDSTONE_SLAB)
+                .add(ModBlocks.SMOOTH_PINK_SANDSTONE)
+                .add(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS)
+                .add(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB)
+                .add(ModBlocks.CUT_PINK_SANDSTONE)
+                .add(ModBlocks.CUT_PINK_SANDSTONE_SLAB)
+                .add(ModBlocks.CHISELED_PINK_SANDSTONE);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)

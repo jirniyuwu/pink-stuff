@@ -32,7 +32,8 @@
     },
     "title": {
       "translate": "advancements.main.styxian_temple.title"
-    }
+    },
+    "show_toast": true
   },
   "requirements": [
     [

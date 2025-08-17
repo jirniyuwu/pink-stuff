@@ -25,6 +25,7 @@
     "description": {
       "translate": "advancements.main.full_cerille.description"
     },
+    "show_toast": true,
     "icon": {
       "count": 1,
       "id": "pinkstuff:cerille_chestplate"

@@ -29,6 +29,7 @@
       "count": 1,
       "id": "pinkstuff:pinline_chestplate"
     },
+    "show_toast": true,
     "title": {
       "translate": "advancements.main.full_pinline.title"
     }

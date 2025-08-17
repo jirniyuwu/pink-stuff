@@ -16,6 +16,7 @@
     "description": {
       "translate": "advancements.main.corrupt_droplet.description"
     },
+    "show_toast": true,
     "icon": {
       "count": 1,
       "id": "pinkstuff:corrupt_droplet"

@@ -16,6 +16,7 @@
     "description": {
       "translate": "advancements.main.corrupted_spikes.description"
     },
+    "show_toast": true,
     "icon": {
       "count": 1,
       "id": "pinkstuff:black_goop"

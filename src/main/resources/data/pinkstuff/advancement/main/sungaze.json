@@ -22,7 +22,8 @@
     },
     "title": {
       "translate": "advancements.main.sungaze.title"
-    }
+    },
+    "show_toast": true
   },
   "requirements": [
     [

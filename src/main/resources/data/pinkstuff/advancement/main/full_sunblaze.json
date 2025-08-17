@@ -32,6 +32,7 @@
     "title": {
       "translate": "advancements.main.full_sunblaze.title"
     },
+    "show_toast": true,
     "frame": "goal"
   },
   "requirements": [

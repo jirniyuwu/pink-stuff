@@ -70,6 +70,7 @@
       "count": 1,
       "id": "pinkstuff:cerille_boots"
     },
+    "show_toast": true,
     "frame": "challenge",
     "title": {
       "translate": "advancements.main.explore_styxia.title"
