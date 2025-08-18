@@ -2,6 +2,7 @@
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "minecraft:raw_copper",
   "fuel_cost": 1,
+  "cooking_time": 1,
   "result": {
     "count": 1,
     "id": "minecraft:copper_ingot"

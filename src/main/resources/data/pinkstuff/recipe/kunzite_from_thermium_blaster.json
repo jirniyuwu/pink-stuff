@@ -2,6 +2,7 @@
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "pinkstuff:raw_kunzite",
   "fuel_cost": 2,
+  "cooking_time": 1,
   "result": {
     "count": 1,
     "id": "pinkstuff:kunzite"

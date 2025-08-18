@@ -2,6 +2,7 @@
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "pinkstuff:prepared_pinline",
   "fuel_cost": 4,
+  "cooking_time": 8,
   "result": {
     "count": 1,
     "id": "pinkstuff:pinline_ingot"

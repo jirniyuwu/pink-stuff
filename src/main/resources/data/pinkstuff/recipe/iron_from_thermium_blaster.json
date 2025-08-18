@@ -2,6 +2,7 @@
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "minecraft:raw_iron",
   "fuel_cost": 4,
+  "cooking_time": 2,
   "result": {
     "count": 1,
     "id": "minecraft:iron_ingot"

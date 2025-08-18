@@ -2,6 +2,7 @@
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "pinkstuff:raw_moonsteel_block",
   "fuel_cost": 18,
+  "cooking_time": 9,
   "result": {
     "count": 1,
     "id": "pinkstuff:moonsteel_block"

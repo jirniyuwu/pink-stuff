@@ -2,6 +2,7 @@
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "minecraft:ancient_debris",
   "fuel_cost": 4,
+  "cooking_time": 16,
   "result": {
     "count": 1,
     "id": "minecraft:netherite_scrap"

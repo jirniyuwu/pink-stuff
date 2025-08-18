@@ -14,7 +14,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public record ThermiumBlasterRecipe(Ingredient inputItem, ItemStack output, int fuelCost) implements Recipe<ThermiumBlasterRecipeInput> {
+public record ThermiumBlasterRecipe(Ingredient inputItem, ItemStack output, int fuelCost, int cookingTime) implements Recipe<ThermiumBlasterRecipeInput> {
     public DefaultedList<Ingredient> getIngredients() {
         DefaultedList<Ingredient> list = DefaultedList.of();
         list.add(this.inputItem);
@@ -59,7 +59,8 @@ public record ThermiumBlasterRecipe(Ingredient inputItem, ItemStack output, int 
         public static final MapCodec<ThermiumBlasterRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
                 Ingredient.CODEC.fieldOf("ingredient").forGetter(ThermiumBlasterRecipe::inputItem),
                 ItemStack.CODEC.fieldOf("result").forGetter(ThermiumBlasterRecipe::output),
-                Codec.intRange(0, 65536).fieldOf("fuel_cost").forGetter(ThermiumBlasterRecipe::fuelCost)
+                Codec.intRange(0, 65536).fieldOf("fuel_cost").forGetter(ThermiumBlasterRecipe::fuelCost),
+                Codec.intRange(0, 65536).fieldOf("cooking_time").forGetter(ThermiumBlasterRecipe::cookingTime)
         ).apply(inst, ThermiumBlasterRecipe::new));
 
         public static final PacketCodec<RegistryByteBuf, ThermiumBlasterRecipe> STREAM_CODEC =
@@ -67,6 +68,7 @@ public record ThermiumBlasterRecipe(Ingredient inputItem, ItemStack output, int 
                         Ingredient.PACKET_CODEC, ThermiumBlasterRecipe::inputItem,
                         ItemStack.PACKET_CODEC, ThermiumBlasterRecipe::output,
                         PacketCodecs.codec(Codec.intRange(0, 65536)), ThermiumBlasterRecipe::fuelCost,
+                        PacketCodecs.codec(Codec.intRange(0, 65536)), ThermiumBlasterRecipe::cookingTime,
                         ThermiumBlasterRecipe::new);
 
         @Override

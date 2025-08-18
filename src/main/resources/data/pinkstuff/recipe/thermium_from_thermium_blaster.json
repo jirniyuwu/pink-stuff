@@ -2,6 +2,7 @@
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "pinkstuff:raw_thermium",
   "fuel_cost": 16,
+  "cooking_time": 8,
   "result": {
     "count": 1,
     "id": "pinkstuff:thermium"

@@ -48,7 +48,7 @@ public class ThermiumBlasterBlockEntity extends BlockEntity implements ExtendedS
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 4;
+    private int maxProgress = 20;
 
     private int fuel = 0;
     private int maxFuel = 8192;
@@ -144,7 +144,7 @@ public class ThermiumBlasterBlockEntity extends BlockEntity implements ExtendedS
     protected void readData(ReadView view) {
         Inventories.readData(view, inventory);
         progress = view.getInt("THERMIUM_BLASTER.progress", 0);
-        maxProgress = view.getInt("THERMIUM_BLASTER.max_progress", 4);
+        maxProgress = view.getInt("THERMIUM_BLASTER.max_progress", 20);
         fuel = view.getInt("THERMIUM_BLASTER.fuel", 0);
         maxFuel = view.getInt("THERMIUM_BLASTER.max_fuel", 8192);
         super.readData(view);
@@ -153,6 +153,7 @@ public class ThermiumBlasterBlockEntity extends BlockEntity implements ExtendedS
     public void tick(World world, BlockPos pos, BlockState state) {
         addFuel();
         if(hasRecipe() && isFuelEnoughToCraft()) {
+            getCookingTime();
             increaseCraftingProgress();
             markDirty(world, pos, state);
 
@@ -224,6 +225,11 @@ public class ThermiumBlasterBlockEntity extends BlockEntity implements ExtendedS
 
         ItemStack output = recipe.get().value().output();
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private void getCookingTime() {
+        Optional<RecipeEntry<ThermiumBlasterRecipe>> recipe = getCurrentRecipe();
+        this.maxProgress = recipe.get().value().cookingTime();
     }
 
     private boolean isFuelEnoughToCraft() {

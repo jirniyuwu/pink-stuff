@@ -2,6 +2,7 @@
   "type": "pinkstuff:thermium_blaster",
   "ingredient": "minecraft:raw_gold",
   "fuel_cost": 2,
+  "cooking_time": 2,
   "result": {
     "count": 1,
     "id": "minecraft:gold_ingot"
