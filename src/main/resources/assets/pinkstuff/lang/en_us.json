@@ -463,6 +463,15 @@
   "tag.item.pinkstuff.sunblaze_repair": "Sunblaze Repair",
   "tag.item.pinkstuff.special_repair": "Special Repair",
 
+  "painting.pinkstuff.deliverer.title": "Deliverer",
+  "painting.pinkstuff.deliverer.author": "Hoyoverse",
+  "painting.pinkstuff.worldbearing.title": "Worldbearing",
+  "painting.pinkstuff.worldbearing.author": "Hoyoverse",
+  "painting.pinkstuff.pinkhouse.title": "Pink house",
+  "painting.pinkstuff.pinkhouse.author": "JirniyUwU",
+  "painting.pinkstuff.forgotten.title": "Forgotten",
+  "painting.pinkstuff.forgotten.author": "JirniyUwU",
+
   "gamerule.disableCorruptionSpread": "Disable corruption spread",
   "gamerule.corruptionSpreadChance": "Corruption spread chance",
   "gamerule.corruptionSpreadChance.description": "Chance in 1/value per direction for Corruption to spread per Random tick",

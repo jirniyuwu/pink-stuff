@@ -1,0 +1,13 @@
+{
+  "asset_id": "pinkstuff:forgotten",
+  "height": 2,
+  "width": 4,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.pinkstuff.forgotten.title"
+  },
+  "author": {
+    "color": "gray",
+    "translate": "painting.pinkstuff.forgotten.author"
+  }
+}

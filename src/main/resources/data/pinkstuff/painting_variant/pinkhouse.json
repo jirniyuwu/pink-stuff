@@ -1,0 +1,13 @@
+{
+  "asset_id": "pinkstuff:pinkhouse",
+  "height": 3,
+  "width": 3,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.pinkstuff.pinkhouse.title"
+  },
+  "author": {
+    "color": "gray",
+    "translate": "painting.pinkstuff.pinkhouse.author"
+  }
+}
