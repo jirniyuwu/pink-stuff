@@ -32,6 +32,8 @@ public class CrawlerRenderer extends MobEntityRenderer<CrawlerEntity, CrawlerRen
                         Identifier.of(JirniysPinkStuff.MOD_ID, "textures/entity/crawler/crawler_resin.png"));
                 map.put(CrawlerVariant.ICE,
                         Identifier.of(JirniysPinkStuff.MOD_ID, "textures/entity/crawler/crawler_ice.png"));
+                map.put(CrawlerVariant.SUNGAZE,
+                        Identifier.of(JirniysPinkStuff.MOD_ID, "textures/entity/crawler/crawler_sungaze.png"));
             });
     
     public CrawlerRenderer(EntityRendererFactory.Context context) {
@@ -46,7 +48,7 @@ public class CrawlerRenderer extends MobEntityRenderer<CrawlerEntity, CrawlerRen
     public void render(CrawlerRenderState state, MatrixStack matrixStack,
                        VertexConsumerProvider vertexConsumerProvider, int i) {
         if(state.baby) {
-            matrixStack.scale(0.5f, 0.5f, 0.5f);
+            matrixStack.scale(0.7f, 0.7f, 0.7f);
         } else {
             matrixStack.scale(1f, 1f, 1f);
         }

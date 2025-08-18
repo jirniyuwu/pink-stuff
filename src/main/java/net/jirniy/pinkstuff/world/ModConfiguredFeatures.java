@@ -181,7 +181,7 @@ public class ModConfiguredFeatures {
         register(context, PINLINE_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(endPinlineOres, 64));
         register(context, STYXCOAL_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianStyxcoalOres, 16));
         register(context, MOONSTEEL_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianMoonsteelOres, 11));
-        register(context, SUNGAZE_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianSungazeOres, 7));
+        register(context, SUNGAZE_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianSungazeOres, 7, 0.2f));
         register(context, STYXIAN_LAPIS_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianLapisOres, 8));
         register(context, COMPRESSED_END_STONE_KEY, Feature.ORE, new OreFeatureConfig(compressedEndStone, 64, 0.3f));
         register(context, COMPRESSED_STYXSTONE_KEY, Feature.ORE, new OreFeatureConfig(

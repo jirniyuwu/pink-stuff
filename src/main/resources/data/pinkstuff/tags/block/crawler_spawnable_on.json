@@ -1,12 +1,9 @@
 {
   "values": [
+    "#pinkstuff:base_stone_styxia",
+    "#minecraft:base_stone_overworld",
+    "#minecraft:base_stone_nether",
     "minecraft:grass_block",
-    "minecraft:stone",
-    "minecraft:granite",
-    "minecraft:diorite",
-    "minecraft:andesite",
-    "minecraft:tuff",
-    "minecraft:deepslate",
     "minecraft:sculk",
     "minecraft:ice",
     "minecraft:packed_ice",
@@ -14,8 +11,6 @@
     "minecraft:snow",
     "minecraft:moss_block",
     "minecraft:pale_moss_block",
-    "minecraft:clay",
-    "minecraft:netherrack",
-    "minecraft:nether_quartz_ore"
+    "minecraft:clay"
   ]
 }

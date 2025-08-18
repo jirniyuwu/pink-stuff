@@ -3,6 +3,8 @@ package net.jirniy.pinkstuff.entity.custom;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
+import net.jirniy.pinkstuff.world.ModBiomes;
+import net.jirniy.pinkstuff.world.dimension.ModDimensions;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -64,14 +66,14 @@ public class CrawlerEntity extends AnimalEntity {
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.MAX_HEALTH, 60)
+                .add(EntityAttributes.MAX_HEALTH, 80)
                 .add(EntityAttributes.MOVEMENT_SPEED, 0.1)
                 .add(EntityAttributes.ATTACK_DAMAGE, 0)
                 .add(EntityAttributes.FOLLOW_RANGE, 20)
                 .add(EntityAttributes.TEMPT_RANGE, 12)
-                .add(EntityAttributes.JUMP_STRENGTH, 0.35)
+                .add(EntityAttributes.JUMP_STRENGTH, 0.4)
                 .add(EntityAttributes.KNOCKBACK_RESISTANCE, 0.4)
-                .add(EntityAttributes.STEP_HEIGHT, 0.2);
+                .add(EntityAttributes.STEP_HEIGHT, 0.5);
     }
 
     private void setupAnimationStates() {
@@ -165,27 +167,32 @@ public class CrawlerEntity extends AnimalEntity {
             setVariant(variant);
             return super.initialize(world, difficulty, spawnReason, entityData);
         }
-        if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.DEEP_DARK) {
-            variant = CrawlerVariant.DIAMOND;
-        } else if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.PALE_GARDEN) {
-            variant = CrawlerVariant.RESIN;
-        } else if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.CHERRY_GROVE ||
-                   world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.LUSH_CAVES) {
-            variant = CrawlerVariant.KUNZITE;
-        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.IS_MOUNTAIN)) {
-            variant = CrawlerVariant.EMERALD;
-        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.IS_NETHER)) {
-            variant = CrawlerVariant.QUARTZ;
-        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.VILLAGE_SNOWY_HAS_STRUCTURE) ||
-                   world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.FROZEN_OCEAN ||
-                   world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.DEEP_FROZEN_OCEAN ||
-                   world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.FROZEN_RIVER) {
-            variant = CrawlerVariant.ICE;
-        } else {
-            variant = CrawlerVariant.DEFAULT;
-        }
-        setVariant(variant);
+        setVariant(getVariantFromBiome(world));
         return super.initialize(world, difficulty, spawnReason, entityData);
+    }
+
+    private CrawlerVariant getVariantFromBiome(ServerWorldAccess world) {
+        if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.DEEP_DARK) {
+            return CrawlerVariant.DIAMOND;
+        } else if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.PALE_GARDEN) {
+            return CrawlerVariant.RESIN;
+        } else if (world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.CHERRY_GROVE ||
+                world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.LUSH_CAVES) {
+            return CrawlerVariant.KUNZITE;
+        } else if (world.getBiome(this.getBlockPos()).isIn(ModTags.Biomes.IS_STYXIA)) {
+            return CrawlerVariant.SUNGAZE;
+        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.IS_MOUNTAIN)) {
+            return CrawlerVariant.EMERALD;
+        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.IS_NETHER)) {
+            return CrawlerVariant.QUARTZ;
+        } else if (world.getBiome(this.getBlockPos()).isIn(BiomeTags.VILLAGE_SNOWY_HAS_STRUCTURE) ||
+                world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.FROZEN_OCEAN ||
+                world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.DEEP_FROZEN_OCEAN ||
+                world.getBiome(this.getBlockPos()).getKey().get() == BiomeKeys.FROZEN_RIVER) {
+            return CrawlerVariant.ICE;
+        } else {
+            return CrawlerVariant.DEFAULT;
+        }
     }
 
     @Nullable

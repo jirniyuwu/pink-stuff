@@ -11,7 +11,8 @@ public enum CrawlerVariant {
     KUNZITE(4),
     THERMIUM(5),
     RESIN(6),
-    ICE(7);
+    ICE(7),
+    SUNGAZE(8);
 
     private static final CrawlerVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.
             comparingInt(CrawlerVariant::getId)).toArray(CrawlerVariant[]::new);
