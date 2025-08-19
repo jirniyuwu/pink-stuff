@@ -98,6 +98,12 @@
   "item.pinkstuff.moonsteel_chain": "Moonsteel Chain",
   "item.pinkstuff.moonsteel_lantern": "Moonsteel Lantern",
 
+  "item.pinkstuff.crawler_stone": "Stone with Crawler",
+  "item.pinkstuff.crawler_deepslate": "Deepslate with Crawler",
+  "item.pinkstuff.crawler_netherrack": "Netherrack with Crawler",
+  "item.pinkstuff.crawler_styxstone": "Styxstone with Crawler",
+  "item.pinkstuff.crawler_compressed_styxstone": "Compressed Styxstone with Crawler",
+
   "item.pinkstuff.pink_sand": "Pink Sand",
   "item.pinkstuff.pink_sandstone": "Pink Sandstone",
   "item.pinkstuff.cut_pink_sandstone": "Cut Pink Sandstone",

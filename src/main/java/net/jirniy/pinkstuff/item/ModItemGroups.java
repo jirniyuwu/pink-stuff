@@ -23,6 +23,12 @@ public class ModItemGroups {
                         entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
                         entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
 
+                        entries.add(ModBlocks.CRAWLER_STONE);
+                        entries.add(ModBlocks.CRAWLER_DEEPSLATE);
+                        entries.add(ModBlocks.CRAWLER_NETHERRACK);
+                        entries.add(ModBlocks.CRAWLER_STYXSTONE);
+                        entries.add(ModBlocks.CRAWLER_COMPRESSED_STYXSTONE);
+
                         entries.add(ModItems.QUARTZ_NUGGET);
                         entries.add(ModBlocks.QUARTZ_CLUMP);
                         entries.add(ModItems.DIAMOND_NUGGET);
@@ -726,6 +732,12 @@ public class ModItemGroups {
             entries.add(ModBlocks.STYXIAN_AMETHYST_ORE);
             entries.add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);
             entries.add(ModBlocks.CORRUPT_ORE);
+
+            entries.add(ModBlocks.CRAWLER_STONE);
+            entries.add(ModBlocks.CRAWLER_DEEPSLATE);
+            entries.add(ModBlocks.CRAWLER_NETHERRACK);
+            entries.add(ModBlocks.CRAWLER_STYXSTONE);
+            entries.add(ModBlocks.CRAWLER_COMPRESSED_STYXSTONE);
 
             entries.add(ModBlocks.PINK_SAND);
             entries.add(ModBlocks.PINK_SANDSTONE);

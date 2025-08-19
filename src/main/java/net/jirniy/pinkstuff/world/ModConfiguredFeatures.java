@@ -47,6 +47,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> KUNZITE_ORE_KEY = registryKey("kunzite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_AMETHYST_ORE_KEY = registryKey("styxian_amethyst_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> THERMIUM_ORE_KEY = registryKey("thermium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> THERMIUM_ORE_DRIPSTONE_KEY = registryKey("thermium_ore_dripstone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SULFUR_ORE_KEY = registryKey("sulfur_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PINLINE_ORE_KEY = registryKey("pinline_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXCOAL_ORE_KEY = registryKey("styxcoal_ore");
@@ -90,6 +91,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_BONEMEAL_KEY = registryKey("styxmoss_patch_bonemeal");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_PATCH_KEY = registryKey("styxgrass_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_DISK_KEY = registryKey("styxmoss_disk_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CRAWLER_STONE_KEY = registryKey("crawler_stone");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -135,6 +137,12 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_SUNGAZE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_SUNGAZE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> crawlerStone =
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.STONE), ModBlocks.CRAWLER_STONE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.DEEPSLATE), ModBlocks.CRAWLER_DEEPSLATE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(NETHERRACK), ModBlocks.CRAWLER_NETHERRACK.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.CRAWLER_STYXSTONE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.CRAWLER_COMPRESSED_STYXSTONE.getDefaultState()));
 
         register(context, DEATHFLOWER_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(96, 6, 2,
                 PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(flowerbed(ModBlocks.DEATH_FLOWERS))))));
@@ -176,6 +184,7 @@ public class ModConfiguredFeatures {
 
         register(context, KUNZITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldKunziteOres, 15));
         register(context, THERMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldThermiumOres, 3, 0.3f));
+        register(context, THERMIUM_ORE_DRIPSTONE_KEY, Feature.ORE, new OreFeatureConfig(overworldThermiumOres, 5, 0.1f));
         register(context, SULFUR_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(netherSulfurOres, 25));
         register(context, STYXIAN_AMETHYST_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(styxianAmethystOres, 40));
         register(context, PINLINE_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(endPinlineOres, 64));
@@ -188,6 +197,7 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.COMPRESSED_STYXSTONE.getDefaultState())), 64, 0.3f));
         register(context, MABRIZE_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.MABRIZE.getDefaultState())), 30, 0.0f));
+        register(context, CRAWLER_STONE_KEY, Feature.REPLACE_SINGLE_BLOCK, new EmeraldOreFeatureConfig(crawlerStone));
 
         register(context, CORRUPTION_SPIKE_KEY, ModFeatures.CORRUPTION_SPIKE, new DefaultFeatureConfig());
         register(context, CORRUPTION_DISC_KEY, Feature.DISK, new DiskFeatureConfig(

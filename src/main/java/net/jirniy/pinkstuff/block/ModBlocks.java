@@ -34,6 +34,22 @@ public class ModBlocks {
             properties -> new StyxiaPortalFrameBlock(properties.strength(100, -1).nonOpaque().pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.GLASS).mapColor(DyeColor.BLACK)));
 
+    public static final Block CRAWLER_STONE = registerBlock("crawler_stone",
+            properties -> new CrawlerBlock(properties.strength(0.8f).pistonBehavior(PistonBehavior.DESTROY)
+                    .sounds(BlockSoundGroup.SUSPICIOUS_GRAVEL).mapColor(MapColor.STONE_GRAY)));
+    public static final Block CRAWLER_DEEPSLATE = registerBlock("crawler_deepslate",
+            properties -> new CrawlerBlock(properties.strength(1.2f).pistonBehavior(PistonBehavior.DESTROY)
+                    .sounds(BlockSoundGroup.SUSPICIOUS_GRAVEL).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block CRAWLER_NETHERRACK = registerBlock("crawler_netherrack",
+            properties -> new CrawlerBlock(properties.strength(0.6f).pistonBehavior(PistonBehavior.DESTROY)
+                    .sounds(BlockSoundGroup.SUSPICIOUS_GRAVEL).mapColor(MapColor.DULL_RED)));
+    public static final Block CRAWLER_STYXSTONE = registerBlock("crawler_styxstone",
+            properties -> new CrawlerBlock(properties.strength(1f).pistonBehavior(PistonBehavior.DESTROY)
+                    .sounds(BlockSoundGroup.SUSPICIOUS_GRAVEL).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block CRAWLER_COMPRESSED_STYXSTONE = registerBlock("crawler_compressed_styxstone",
+            properties -> new CrawlerBlock(properties.strength(1.4f).pistonBehavior(PistonBehavior.DESTROY)
+                    .sounds(BlockSoundGroup.SUSPICIOUS_GRAVEL).mapColor(MapColor.PURPLE)));
+
     public static final Block PINK_ICE = registerBlock("pink_ice",
             properties -> new TranslucentBlock(properties.strength(8f).slipperiness(1.01f).nonOpaque()
                     .sounds(BlockSoundGroup.GLASS).mapColor(MapColor.DULL_PINK)));

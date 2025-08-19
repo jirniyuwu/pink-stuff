@@ -220,6 +220,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_SUNGAZE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUNGAZE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_DEEPSLATE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_NETHERRACK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_STYXSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_COMPRESSED_STYXSTONE);
 
         blockStateModelGenerator.registerFlowerbed(ModBlocks.DEATH_FLOWERS);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.STYXMOSS, ModBlocks.STYXMOSS_CARPET);

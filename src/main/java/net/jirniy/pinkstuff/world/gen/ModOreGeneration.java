@@ -41,5 +41,10 @@ public class ModOreGeneration {
                 ModPlacedFeatures.KUNZITE_CLUMP_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.THERMIUM_CLUMP_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.CRAWLER_STONE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.NETHER_WASTES), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.CRAWLER_STONE_PLACED_KEY);
     }
 }
