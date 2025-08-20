@@ -1,0 +1,13 @@
+{
+  "asset_id": "pinkstuff:bugs",
+  "height": 2,
+  "width": 3,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.pinkstuff.bugs.title"
+  },
+  "author": {
+    "color": "gray",
+    "translate": "painting.pinkstuff.bugs.author"
+  }
+}

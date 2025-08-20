@@ -1,0 +1,13 @@
+{
+  "asset_id": "pinkstuff:new_end",
+  "height": 3,
+  "width": 4,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.pinkstuff.new_end.title"
+  },
+  "author": {
+    "color": "gray",
+    "translate": "painting.pinkstuff.new_end.author"
+  }
+}
