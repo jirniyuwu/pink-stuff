@@ -5,6 +5,8 @@
   "entity.pinkstuff.corrupted_zombie": "Corrupted Zombie",
   "item.pinkstuff.corrupted_skeleton_spawn_egg": "Corrupted Skeleton Spawn Egg",
   "entity.pinkstuff.corrupted_skeleton": "Corrupted Skeleton",
+  "item.pinkstuff.amethyst_blaze_spawn_egg": "Amethyst Blaze Spawn Egg",
+  "entity.pinkstuff.amethyst_blaze": "Amethyst Blaze",
 
   "item.pinkstuff.diamond_clump": "Diamond Clump",
   "item.pinkstuff.emerald_clump": "Emerald Clump",
@@ -46,6 +48,7 @@
   "item.pinkstuff.cerille_nugget": "Cerille Nugget",
   "item.pinkstuff.sungaze": "Sungaze",
   "item.pinkstuff.sungaze_nugget": "Sungaze Nugget",
+  "item.pinkstuff.amethyst_blaze_rod": "Amethyst Blaze Rod",
 
   "item.pinkstuff.glazed_chorus_fruit": "Glazed Chorus Fruit",
   "item.pinkstuff.coal_meal": "Coal Meal",

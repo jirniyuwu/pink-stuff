@@ -16,6 +16,7 @@ import net.jirniy.pinkstuff.component.ModDataComponentTypes;
 import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.enchantment.ModEnchantmentEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
+import net.jirniy.pinkstuff.entity.custom.AmethystBlazeEntity;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
@@ -32,6 +33,7 @@ import net.kyrptonaught.customportalapi.CustomPortalBlock;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
+import net.minecraft.entity.projectile.ExplosiveProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
@@ -135,6 +137,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.CRAWLER, CrawlerEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_ZOMBIE, ZombieEntity.createZombieAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_SKELETON, SkeletonEntity.createAbstractSkeletonAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeEntity.createAmethystBlazeAttributes());
 
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.PREPARED_PINLINE, ModPotions.GROUNDED);

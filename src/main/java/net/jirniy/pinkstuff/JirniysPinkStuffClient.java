@@ -9,10 +9,7 @@ import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.block.entity.renderer.DisplayBlockEntityRenderer;
 import net.jirniy.pinkstuff.entity.ModEntities;
-import net.jirniy.pinkstuff.entity.client.CorruptedSkeletonRenderer;
-import net.jirniy.pinkstuff.entity.client.CorruptedZombieRenderer;
-import net.jirniy.pinkstuff.entity.client.CrawlerModel;
-import net.jirniy.pinkstuff.entity.client.CrawlerRenderer;
+import net.jirniy.pinkstuff.entity.client.*;
 import net.jirniy.pinkstuff.particle.ChorusPetalParticle;
 import net.jirniy.pinkstuff.particle.DawnbreakParticle;
 import net.jirniy.pinkstuff.particle.ModParticles;
@@ -82,6 +79,8 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.CRAWLER, CrawlerRenderer::new);
         EntityRendererRegistry.register(ModEntities.CORRUPTED_ZOMBIE, CorruptedZombieRenderer::new);
         EntityRendererRegistry.register(ModEntities.CORRUPTED_SKELETON, CorruptedSkeletonRenderer::new);
+        EntityRendererRegistry.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeRenderer::new);
+        EntityRendererRegistry.register(ModEntities.AMETHYST_FIREBALL, AmethystFireballRenderer::new);
 
         BlockEntityRendererFactories.register(ModBlockEntities.DISPLAY_BE, DisplayBlockEntityRenderer::new);
 

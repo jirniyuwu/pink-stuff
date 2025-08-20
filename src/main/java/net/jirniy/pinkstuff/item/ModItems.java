@@ -25,6 +25,8 @@ public class ModItems {
     public static final Item QUARTZ_NUGGET = registerItem("quartz_nugget", Item::new);
     public static final Item NETHERITE_NUGGET = registerItem("netherite_nugget", Item::new);
 
+    public static final Item AMETHYST_BLAZE_ROD = registerItem("amethyst_blaze_rod", Item::new);
+
     public static final Item SULFUR = registerItem("sulfur",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.SULFUR)));
 
@@ -95,6 +97,8 @@ public class ModItems {
             setting -> new SpawnEggItem(ModEntities.CORRUPTED_ZOMBIE, setting));
     public static final Item CORRUPTED_SKELETON_SPAWN_EGG = registerItem("corrupted_skeleton_spawn_egg",
             setting -> new SpawnEggItem(ModEntities.CORRUPTED_SKELETON, setting));
+    public static final Item AMETHYST_BLAZE_SPAWN_EGG = registerItem("amethyst_blaze_spawn_egg",
+            setting -> new SpawnEggItem(ModEntities.AMETHYST_BLAZE, setting));
 
     public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
     public static final Item THERMIUM = registerItem("thermium", setting -> new Item(setting.trimMaterial(ModTrimMaterials.THERMIUM)));

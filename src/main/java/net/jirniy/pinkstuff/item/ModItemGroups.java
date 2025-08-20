@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CRAWLER_SPAWN_EGG);
                         entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
                         entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
+                        entries.add(ModItems.AMETHYST_BLAZE_SPAWN_EGG);
 
                         entries.add(ModBlocks.CRAWLER_STONE);
                         entries.add(ModBlocks.CRAWLER_DEEPSLATE);
@@ -36,6 +37,8 @@ public class ModItemGroups {
                         entries.add(ModItems.EMERALD_NUGGET);
                         entries.add(ModBlocks.EMERALD_CLUMP);
                         entries.add(ModItems.NETHERITE_NUGGET);
+
+                        entries.add(ModItems.AMETHYST_BLAZE_ROD);
 
                         entries.add(ModBlocks.STYXIAN_SOIL);
                         entries.add(ModBlocks.STYXMOSS);
@@ -694,6 +697,8 @@ public class ModItemGroups {
             entries.add(ModItems.SUNGAZE_NUGGET);
             entries.add(ModItems.SUNGAZE);
 
+            entries.add(ModItems.AMETHYST_BLAZE_ROD);
+
             entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
             entries.add(ModItems.CHERRY_SMITHING_TEMPLATE);
             entries.add(ModItems.SWORDMASTER_SMITHING_TEMPLATE);
@@ -827,6 +832,7 @@ public class ModItemGroups {
             entries.add(ModItems.CRAWLER_SPAWN_EGG);
             entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
             entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
+            entries.add(ModItems.AMETHYST_BLAZE_SPAWN_EGG);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(ModBlocks.MOONSTEEL_CHAIN);

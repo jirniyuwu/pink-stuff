@@ -1,9 +1,8 @@
 package net.jirniy.pinkstuff.entity;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
-import net.jirniy.pinkstuff.entity.custom.CorruptedSkeletonEntity;
-import net.jirniy.pinkstuff.entity.custom.CorruptedZombieEntity;
-import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
+import net.jirniy.pinkstuff.entity.custom.*;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -19,6 +18,10 @@ public class ModEntities {
             RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupted_zombie"));
     private static final RegistryKey<EntityType<?>> CORRUPTED_SKELETON_KEY =
             RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupted_skeleton"));
+    private static final RegistryKey<EntityType<?>> AMETHYST_BLAZE_KEY =
+            RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_blaze"));
+    private static final RegistryKey<EntityType<?>> AMETHYST_FIREBALL_KEY =
+            RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_fireball"));
 
     public static final EntityType<CrawlerEntity> CRAWLER = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "crawler"),
@@ -35,6 +38,15 @@ public class ModEntities {
             EntityType.Builder.create(CorruptedSkeletonEntity::new, SpawnGroup.MONSTER)
                     .dimensions(0.6f, 1.85f).build(CORRUPTED_SKELETON_KEY));
 
+    public static final EntityType<AmethystBlazeEntity> AMETHYST_BLAZE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_blaze"),
+            EntityType.Builder.create(AmethystBlazeEntity::new, SpawnGroup.MONSTER)
+                    .dimensions(0.7f, 1.8f).build(AMETHYST_BLAZE_KEY));
+
+    public static final EntityType<AmethystFireballEntity> AMETHYST_FIREBALL = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_fireball"),
+            EntityType.Builder.create(AmethystFireballEntity::new, SpawnGroup.MISC)
+                    .dimensions(1f, 1f).build(AMETHYST_FIREBALL_KEY));
 
     public static void registerModEntities() {
         JirniysPinkStuff.LOGGER.info("Registering Mod Entities for " + JirniysPinkStuff.MOD_ID);

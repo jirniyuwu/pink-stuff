@@ -19,5 +19,6 @@ public class MobEntitySpawns {
 
         SpawnRestriction.register(ModEntities.CORRUPTED_SKELETON, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);
         SpawnRestriction.register(ModEntities.CORRUPTED_ZOMBIE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);
+        SpawnRestriction.register(ModEntities.AMETHYST_BLAZE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);
     }
 }

@@ -299,12 +299,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CRAWLER_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPTED_SKELETON_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AMETHYST_BLAZE_SPAWN_EGG, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.AMETHYST_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DIAMOND_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUARTZ_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.EMERALD_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.NETHERITE_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.AMETHYST_BLAZE_ROD, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SULFUR, Models.GENERATED);
         itemModelGenerator.register(ModItems.STYXCOAL, Models.GENERATED);
