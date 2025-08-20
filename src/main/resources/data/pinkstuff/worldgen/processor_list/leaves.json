@@ -1,0 +1,37 @@
+[
+  {
+    "processor_type": "minecraft:rule",
+    "rules": [
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:keaphe_leaves"
+        },
+        "output_state": {
+          "Name": "pinkstuff:keaphe_leaves",
+          "Properties": {
+            "persistent": "true"
+          }
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:flowering_keaphe_leaves"
+        },
+        "output_state": {
+          "Name": "pinkstuff:flowering_keaphe_leaves",
+          "Properties": {
+            "persistent": "true"
+          }
+        }
+      }
+    ]
+  }
+]
