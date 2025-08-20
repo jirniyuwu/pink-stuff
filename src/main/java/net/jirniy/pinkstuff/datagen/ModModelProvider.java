@@ -40,6 +40,11 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool pinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINK_SANDSTONE);
         BlockStateModelGenerator.BlockTexturePool smoothPinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SMOOTH_PINK_SANDSTONE);
         BlockStateModelGenerator.BlockTexturePool cutPinkSandstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CUT_PINK_SANDSTONE);
+        BlockStateModelGenerator.BlockTexturePool cobbledStyxstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COBBLED_STYXSTONE);
+        BlockStateModelGenerator.BlockTexturePool mossyCobbledStyxstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_COBBLED_STYXSTONE);
+        BlockStateModelGenerator.BlockTexturePool polishedStyxstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_STYXSTONE);
+        BlockStateModelGenerator.BlockTexturePool polishedCompressedStyxstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_COMPRESSED_STYXSTONE);
+        BlockStateModelGenerator.BlockTexturePool polishedMabrizePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_MABRIZE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_AMETHYST_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -149,14 +154,29 @@ public class ModModelProvider extends FabricModelProvider {
         compressedStyxstoneBricksPool.stairs(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS);
         compressedStyxstoneBricksPool.slab(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB);
         compressedStyxstoneBricksPool.wall(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL);
+        polishedCompressedStyxstonePool.stairs(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_STAIRS);
+        polishedCompressedStyxstonePool.slab(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_SLAB);
+        polishedCompressedStyxstonePool.wall(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_WALL);
 
         styxstoneBricksPool.stairs(ModBlocks.STYXSTONE_BRICKS_STAIRS);
         styxstoneBricksPool.slab(ModBlocks.STYXSTONE_BRICKS_SLAB);
         styxstoneBricksPool.wall(ModBlocks.STYXSTONE_BRICKS_WALL);
+        polishedStyxstonePool.stairs(ModBlocks.POLISHED_STYXSTONE_STAIRS);
+        polishedStyxstonePool.slab(ModBlocks.POLISHED_STYXSTONE_SLAB);
+        polishedStyxstonePool.wall(ModBlocks.POLISHED_STYXSTONE_WALL);
+        cobbledStyxstonePool.stairs(ModBlocks.COBBLED_STYXSTONE_STAIRS);
+        cobbledStyxstonePool.slab(ModBlocks.COBBLED_STYXSTONE_SLAB);
+        cobbledStyxstonePool.wall(ModBlocks.COBBLED_STYXSTONE_WALL);
+        mossyCobbledStyxstonePool.stairs(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS);
+        mossyCobbledStyxstonePool.slab(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB);
+        mossyCobbledStyxstonePool.wall(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL);
 
         mabrizeBricksPool.stairs(ModBlocks.MABRIZE_BRICKS_STAIRS);
         mabrizeBricksPool.slab(ModBlocks.MABRIZE_BRICKS_SLAB);
         mabrizeBricksPool.wall(ModBlocks.MABRIZE_BRICKS_WALL);
+        polishedMabrizePool.stairs(ModBlocks.POLISHED_MABRIZE_STAIRS);
+        polishedMabrizePool.slab(ModBlocks.POLISHED_MABRIZE_SLAB);
+        polishedMabrizePool.wall(ModBlocks.POLISHED_MABRIZE_WALL);
 
         moonsteelBricksPool.stairs(ModBlocks.MOONSTEEL_BRICKS_STAIRS);
         moonsteelBricksPool.slab(ModBlocks.MOONSTEEL_BRICKS_SLAB);
@@ -200,8 +220,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACK_GOOP);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CORRUPT_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXSTONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COBBLED_STYXSTONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_COBBLED_STYXSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_SOIL);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MABRIZE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXSTONE);

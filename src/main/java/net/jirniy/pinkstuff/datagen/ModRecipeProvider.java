@@ -1621,11 +1621,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.COBBLED_STYXSTONE), conditionsFromItem(ModBlocks.COBBLED_STYXSTONE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_styxstone")));
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_STYXSTONE_BRICKS, 4)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_COMPRESSED_STYXSTONE, 4)
                         .pattern("SS")
                         .pattern("SS")
                         .input('S', ModBlocks.COMPRESSED_STYXSTONE)
                         .criterion(hasItem(ModBlocks.COMPRESSED_STYXSTONE), conditionsFromItem(ModBlocks.COMPRESSED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_compressed_styxstone")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_STYXSTONE_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.POLISHED_COMPRESSED_STYXSTONE)
+                        .criterion(hasItem(ModBlocks.POLISHED_COMPRESSED_STYXSTONE), conditionsFromItem(ModBlocks.POLISHED_COMPRESSED_STYXSTONE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_styxstone_bricks")));
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.COMPRESSED_STYXSTONE_BRICKS))
@@ -1643,11 +1650,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.COMPRESSED_STYXSTONE_BRICKS), conditionsFromItem(ModBlocks.COMPRESSED_STYXSTONE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "compressed_styxstone_bricks_wall")));
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXSTONE_BRICKS, 4)
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_COMPRESSED_STYXSTONE_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_COMPRESSED_STYXSTONE))
+                        .criterion(hasItem(ModBlocks.POLISHED_COMPRESSED_STYXSTONE), conditionsFromItem(ModBlocks.POLISHED_COMPRESSED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_compressed_styxstone_slab")));
+                createStairsRecipe(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_COMPRESSED_STYXSTONE))
+                        .criterion(hasItem(ModBlocks.POLISHED_COMPRESSED_STYXSTONE), conditionsFromItem(ModBlocks.POLISHED_COMPRESSED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_compressed_styxstone_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_COMPRESSED_STYXSTONE_WALL, ModBlocks.POLISHED_COMPRESSED_STYXSTONE);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STYXSTONE, 4)
                         .pattern("SS")
                         .pattern("SS")
                         .input('S', ModBlocks.COBBLED_STYXSTONE)
                         .criterion(hasItem(ModBlocks.COBBLED_STYXSTONE), conditionsFromItem(ModBlocks.COBBLED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_styxstone")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXSTONE_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.POLISHED_STYXSTONE)
+                        .criterion(hasItem(ModBlocks.POLISHED_STYXSTONE), conditionsFromItem(ModBlocks.POLISHED_STYXSTONE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "styxstone_bricks")));
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXSTONE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.STYXSTONE_BRICKS))
@@ -1665,11 +1688,45 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.STYXSTONE_BRICKS), conditionsFromItem(ModBlocks.STYXSTONE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "styxstone_bricks_wall")));
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MABRIZE_BRICKS, 4)
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STYXSTONE_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_STYXSTONE))
+                        .criterion(hasItem(ModBlocks.POLISHED_STYXSTONE), conditionsFromItem(ModBlocks.POLISHED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_styxstone_slab")));
+                createStairsRecipe(ModBlocks.POLISHED_STYXSTONE_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_STYXSTONE))
+                        .criterion(hasItem(ModBlocks.POLISHED_STYXSTONE), conditionsFromItem(ModBlocks.POLISHED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_styxstone_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STYXSTONE_WALL, ModBlocks.POLISHED_STYXSTONE);
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COBBLED_STYXSTONE_SLAB, Ingredient.ofItem(ModBlocks.COBBLED_STYXSTONE))
+                        .criterion(hasItem(ModBlocks.COBBLED_STYXSTONE), conditionsFromItem(ModBlocks.COBBLED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cobbled_styxstone_slab")));
+                createStairsRecipe(ModBlocks.COBBLED_STYXSTONE_STAIRS, Ingredient.ofItem(ModBlocks.COBBLED_STYXSTONE))
+                        .criterion(hasItem(ModBlocks.COBBLED_STYXSTONE), conditionsFromItem(ModBlocks.COBBLED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cobbled_styxstone_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COBBLED_STYXSTONE_WALL, ModBlocks.COBBLED_STYXSTONE);
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB, Ingredient.ofItem(ModBlocks.MOSSY_COBBLED_STYXSTONE))
+                        .criterion(hasItem(ModBlocks.MOSSY_COBBLED_STYXSTONE), conditionsFromItem(ModBlocks.MOSSY_COBBLED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "mossy_cobbled_styxstone_slab")));
+                createStairsRecipe(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS, Ingredient.ofItem(ModBlocks.MOSSY_COBBLED_STYXSTONE))
+                        .criterion(hasItem(ModBlocks.MOSSY_COBBLED_STYXSTONE), conditionsFromItem(ModBlocks.MOSSY_COBBLED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "mossy_cobbled_styxstone_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL, ModBlocks.MOSSY_COBBLED_STYXSTONE);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MABRIZE, 4)
                         .pattern("SS")
                         .pattern("SS")
                         .input('S', ModBlocks.MABRIZE)
                         .criterion(hasItem(ModBlocks.MABRIZE), conditionsFromItem(ModBlocks.MABRIZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_mabrize")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MABRIZE_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.MABRIZE_BRICKS)
+                        .criterion(hasItem(ModBlocks.MABRIZE_BRICKS), conditionsFromItem(ModBlocks.MABRIZE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mabrize_bricks")));
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MABRIZE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.MABRIZE_BRICKS))
@@ -1687,6 +1744,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.MABRIZE_BRICKS), conditionsFromItem(ModBlocks.MABRIZE_BRICKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mabrize_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MABRIZE_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_MABRIZE))
+                        .criterion(hasItem(ModBlocks.POLISHED_MABRIZE), conditionsFromItem(ModBlocks.POLISHED_MABRIZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_mabrize_slab")));
+                createStairsRecipe(ModBlocks.POLISHED_MABRIZE_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_MABRIZE))
+                        .criterion(hasItem(ModBlocks.POLISHED_MABRIZE), conditionsFromItem(ModBlocks.POLISHED_MABRIZE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_mabrize_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MABRIZE_WALL, ModBlocks.POLISHED_MABRIZE);
 
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.AMETHYST_NUGGET, RecipeCategory.MISC, Items.AMETHYST_SHARD);

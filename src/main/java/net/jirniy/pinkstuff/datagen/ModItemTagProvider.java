@@ -223,7 +223,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MOONSTEEL_BRICKS_SLAB.asItem())
                 .add(ModBlocks.PINK_SANDSTONE_SLAB.asItem())
                 .add(ModBlocks.CUT_PINK_SANDSTONE_SLAB.asItem())
-                .add(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB.asItem());
+                .add(ModBlocks.SMOOTH_PINK_SANDSTONE_SLAB.asItem())
+                .add(ModBlocks.POLISHED_STYXSTONE_SLAB.asItem())
+                .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_SLAB.asItem())
+                .add(ModBlocks.POLISHED_MABRIZE_SLAB.asItem())
+                .add(ModBlocks.COBBLED_STYXSTONE_SLAB.asItem())
+                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB.asItem());
         valueLookupBuilder(ItemTags.STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_STAIRS.asItem())
@@ -241,7 +246,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.SUNGAZE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.MOONSTEEL_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.PINK_SANDSTONE_STAIRS.asItem())
-                .add(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS.asItem());
+                .add(ModBlocks.SMOOTH_PINK_SANDSTONE_STAIRS.asItem())
+                .add(ModBlocks.POLISHED_STYXSTONE_STAIRS.asItem())
+                .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_STAIRS.asItem())
+                .add(ModBlocks.POLISHED_MABRIZE_STAIRS.asItem())
+                .add(ModBlocks.COBBLED_STYXSTONE_STAIRS.asItem())
+                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL.asItem())
@@ -258,7 +268,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CERILLE_BRICKS_WALL.asItem())
                 .add(ModBlocks.SUNGAZE_BRICKS_WALL.asItem())
                 .add(ModBlocks.MOONSTEEL_BRICKS_WALL.asItem())
-                .add(ModBlocks.PINK_SANDSTONE_WALL.asItem());
+                .add(ModBlocks.PINK_SANDSTONE_WALL.asItem())
+                .add(ModBlocks.POLISHED_STYXSTONE_WALL.asItem())
+                .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_WALL.asItem())
+                .add(ModBlocks.POLISHED_MABRIZE_WALL.asItem())
+                .add(ModBlocks.COBBLED_STYXSTONE_WALL.asItem())
+                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL.asItem());
         valueLookupBuilder(ItemTags.WOODEN_SLABS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB.asItem())
                 .add(ModBlocks.CHORUS_SLAB.asItem())

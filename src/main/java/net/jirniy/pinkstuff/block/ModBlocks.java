@@ -71,7 +71,13 @@ public class ModBlocks {
     public static final Block STYXSTONE = registerBlock("styxstone",
             properties -> new Block(properties.strength(1.7f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block POLISHED_STYXSTONE = registerBlock("polished_styxstone",
+            properties -> new Block(properties.strength(1.7f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block MABRIZE = registerBlock("mabrize",
+            properties -> new Block(properties.strength(1.4f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block POLISHED_MABRIZE = registerBlock("polished_mabrize",
             properties -> new Block(properties.strength(1.4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block COBBLED_STYXSTONE = registerBlock("cobbled_styxstone",
@@ -81,6 +87,9 @@ public class ModBlocks {
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block COMPRESSED_STYXSTONE = registerBlock("compressed_styxstone",
+            properties -> new Block(properties.strength(4f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block POLISHED_COMPRESSED_STYXSTONE = registerBlock("polished_compressed_styxstone",
             properties -> new Block(properties.strength(4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
 
@@ -506,6 +515,22 @@ public class ModBlocks {
             properties -> new Block(properties.strength(6f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
 
+    public static final Block COBBLED_STYXSTONE_STAIRS = registerBlock("cobbled_styxstone_stairs",
+            properties -> new StairsBlock(ModBlocks.COBBLED_STYXSTONE.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block COBBLED_STYXSTONE_SLAB = registerBlock("cobbled_styxstone_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block COBBLED_STYXSTONE_WALL = registerBlock("cobbled_styxstone_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+
+    public static final Block MOSSY_COBBLED_STYXSTONE_STAIRS = registerBlock("mossy_cobbled_styxstone_stairs",
+            properties -> new StairsBlock(ModBlocks.MOSSY_COBBLED_STYXSTONE.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block MOSSY_COBBLED_STYXSTONE_SLAB = registerBlock("mossy_cobbled_styxstone_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block MOSSY_COBBLED_STYXSTONE_WALL = registerBlock("mossy_cobbled_styxstone_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+
     public static final Block STYXSTONE_BRICKS_STAIRS = registerBlock("styxstone_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.STYXSTONE_BRICKS.getDefaultState(),
                     properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
@@ -513,6 +538,14 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
     public static final Block STYXSTONE_BRICKS_WALL = registerBlock("styxstone_bricks_wall",
             properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
+
+    public static final Block POLISHED_STYXSTONE_STAIRS = registerBlock("polished_styxstone_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_STYXSTONE.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block POLISHED_STYXSTONE_SLAB = registerBlock("polished_styxstone_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block POLISHED_STYXSTONE_WALL = registerBlock("polished_styxstone_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
 
     public static final Block COMPRESSED_STYXSTONE_BRICKS_STAIRS = registerBlock("compressed_styxstone_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.COMPRESSED_STYXSTONE_BRICKS.getDefaultState(),
@@ -522,13 +555,29 @@ public class ModBlocks {
     public static final Block COMPRESSED_STYXSTONE_BRICKS_WALL = registerBlock("compressed_styxstone_bricks_wall",
             properties -> new WallBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_BLACK)));
 
+    public static final Block POLISHED_COMPRESSED_STYXSTONE_STAIRS = registerBlock("polished_compressed_styxstone_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_COMPRESSED_STYXSTONE.getDefaultState(),
+                    properties.strength(5f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block POLISHED_COMPRESSED_STYXSTONE_SLAB = registerBlock("polished_compressed_styxstone_slab",
+            properties -> new SlabBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block POLISHED_COMPRESSED_STYXSTONE_WALL = registerBlock("polished_compressed_styxstone_wall",
+            properties -> new WallBlock(properties.strength(5f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+
     public static final Block MABRIZE_BRICKS_STAIRS = registerBlock("mabrize_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.MABRIZE_BRICKS.getDefaultState(),
-                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block MABRIZE_BRICKS_SLAB = registerBlock("mabrize_bricks_slab",
-            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block MABRIZE_BRICKS_WALL = registerBlock("mabrize_bricks_wall",
-            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE)));
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block POLISHED_MABRIZE_STAIRS = registerBlock("polished_mabrize_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_MABRIZE.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block POLISHED_MABRIZE_SLAB = registerBlock("polished_mabrize_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block POLISHED_MABRIZE_WALL = registerBlock("polished_mabrize_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
     public static final Block MOONSTEEL_BRICKS_STAIRS = registerBlock("moonsteel_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.MOONSTEEL_BRICKS.getDefaultState(),
