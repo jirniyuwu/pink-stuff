@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "pinkstuff:giant_keaphe",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 50,
+    "separation": 20,
+    "spread_type": "triangular",
+    "salt": 5918369
+  }
+}
