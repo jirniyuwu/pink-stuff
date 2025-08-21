@@ -1,6 +1,5 @@
 package net.jirniy.pinkstuff.entity.custom;
 
-import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -10,17 +9,12 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.mob.BlazeEntity;
 import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.DragonFireballEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.SmallFireballEntity;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
@@ -48,7 +42,7 @@ public class AmethystBlazeEntity extends BlazeEntity {
 
     @Override
     public boolean isInvulnerableTo(ServerWorld world, DamageSource source) {
-        if (source == world.getDamageSources().magic()) {
+        if (source.isOf(DamageTypes.MAGIC)) {
             return true;
         }
         return super.isInvulnerableTo(world, source);
@@ -57,10 +51,11 @@ public class AmethystBlazeEntity extends BlazeEntity {
     public static DefaultAttributeContainer.Builder createAmethystBlazeAttributes() {
         return HostileEntity.createHostileAttributes()
                 .add(EntityAttributes.SCALE, 1.2F)
-                .add(EntityAttributes.MAX_HEALTH, 80.0F)
+                .add(EntityAttributes.MAX_HEALTH, 40.0F)
                 .add(EntityAttributes.ATTACK_DAMAGE, (double)8.0F)
                 .add(EntityAttributes.MOVEMENT_SPEED, (double)0.3F)
-                .add(EntityAttributes.FOLLOW_RANGE, (double)64.0F);
+                .add(EntityAttributes.FOLLOW_RANGE, (double)64.0F)
+                .add(EntityAttributes.FALL_DAMAGE_MULTIPLIER, 0.0F);
     }
 
     @Override

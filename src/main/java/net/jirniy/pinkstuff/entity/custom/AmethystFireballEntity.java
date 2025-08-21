@@ -8,6 +8,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.projectile.DragonFireballEntity;
 import net.minecraft.entity.projectile.ExplosiveProjectileEntity;
+import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
@@ -15,6 +16,7 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -38,11 +40,27 @@ public class AmethystFireballEntity extends ExplosiveProjectileEntity {
         this.velocityDirty = true;
     }
 
+    @Override
+    protected double getGravity() {
+        return 0.002f;
+    }
+
+    @Override
+    public boolean hasNoGravity() {
+        return false;
+    }
+
+    @Override
+    public void tick() {
+        this.applyGravity();
+        super.tick();
+    }
+
     protected void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
         if (hitResult.getType() != HitResult.Type.ENTITY || !this.isOwner(((EntityHitResult)hitResult).getEntity())) {
             if (!this.getWorld().isClient) {
-                List<LivingEntity> list = this.getWorld().getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox().expand((double)4.0F, (double)2.0F, (double)4.0F));
+                List<LivingEntity> list = this.getWorld().getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox().expand((double)2.0F, (double)2.0F, (double)2.0F));
                 AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(this.getWorld(), this.getX(), this.getY(), this.getZ());
                 Entity entity = this.getOwner();
                 if (entity instanceof LivingEntity) {
@@ -77,7 +95,7 @@ public class AmethystFireballEntity extends ExplosiveProjectileEntity {
     }
 
     protected ParticleEffect getParticleType() {
-        return ParticleTypes.DRAGON_BREATH;
+        return ModParticles.STYXIAN_FLAME_PARTICLE;
     }
 
     protected boolean isBurning() {

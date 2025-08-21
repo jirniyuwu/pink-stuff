@@ -41,12 +41,12 @@ public class ModEntities {
     public static final EntityType<AmethystBlazeEntity> AMETHYST_BLAZE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_blaze"),
             EntityType.Builder.create(AmethystBlazeEntity::new, SpawnGroup.MONSTER)
-                    .dimensions(0.7f, 1.8f).build(AMETHYST_BLAZE_KEY));
+                    .dimensions(0.7f, 2.0f).build(AMETHYST_BLAZE_KEY));
 
     public static final EntityType<AmethystFireballEntity> AMETHYST_FIREBALL = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_fireball"),
             EntityType.Builder.create(AmethystFireballEntity::new, SpawnGroup.MISC)
-                    .dimensions(1f, 1f).build(AMETHYST_FIREBALL_KEY));
+                    .dimensions(0.5f, 0.5f).build(AMETHYST_FIREBALL_KEY));
 
     public static void registerModEntities() {
         JirniysPinkStuff.LOGGER.info("Registering Mod Entities for " + JirniysPinkStuff.MOD_ID);
