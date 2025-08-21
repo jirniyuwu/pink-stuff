@@ -1,0 +1,66 @@
+{
+  "name": "pinkstuff:large_styxian_dungeon/rooms",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/end1",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/end2",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/end3",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/end4",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room3",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room7",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

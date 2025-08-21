@@ -463,6 +463,8 @@
   "trim_pattern.pinkstuff.overgrowth": "Overgrowth Trim Pattern",
   "item.pinkstuff.corruption_armor_trim_smithing_template": "Corruption Armor Trim",
   "trim_pattern.pinkstuff.corruption": "Corruption Trim Pattern",
+  "item.pinkstuff.forbidden_armor_trim_smithing_template": "Forbidden Armor Trim",
+  "trim_pattern.pinkstuff.forbidden": "Forbidden Trim Pattern",
 
   "trim_material.pinkstuff.kunzite": "Kunzite Material",
   "trim_material.pinkstuff.elysium": "Elysian Material",
@@ -504,6 +506,8 @@
   "painting.pinkstuff.pinkhouse.author": "JirniyUwU",
   "painting.pinkstuff.forgotten.title": "Forgotten",
   "painting.pinkstuff.forgotten.author": "JirniyUwU",
+  "painting.pinkstuff.tree.title": "Tree",
+  "painting.pinkstuff.tree.author": "JirniyUwU",
 
   "gamerule.disableCorruptionSpread": "Disable corruption spread",
   "gamerule.corruptionSpreadChance": "Corruption spread chance",

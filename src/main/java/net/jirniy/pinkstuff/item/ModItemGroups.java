@@ -379,6 +379,7 @@ public class ModItemGroups {
                         entries.add(ModItems.WINGFLAP_SMITHING_TEMPLATE);
                         entries.add(ModItems.OVERGROWTH_SMITHING_TEMPLATE);
                         entries.add(ModItems.CORRUPTION_SMITHING_TEMPLATE);
+                        entries.add(ModItems.FORBIDDEN_SMITHING_TEMPLATE);
 
                         entries.add(ModItems.NETHERITE_MULTITOOL);
 
@@ -718,6 +719,7 @@ public class ModItemGroups {
             entries.add(ModItems.WINGFLAP_SMITHING_TEMPLATE);
             entries.add(ModItems.OVERGROWTH_SMITHING_TEMPLATE);
             entries.add(ModItems.CORRUPTION_SMITHING_TEMPLATE);
+            entries.add(ModItems.FORBIDDEN_SMITHING_TEMPLATE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(ModItems.KUNZITE_SWORD);

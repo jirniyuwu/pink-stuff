@@ -248,7 +248,7 @@ public class ModItems {
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
     public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
-            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.RARE)));
     public static final Item BLOOM_SMITHING_TEMPLATE = registerItem("bloom_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.UNCOMMON)));
     public static final Item SWORDMASTER_SMITHING_TEMPLATE = registerItem("swordmaster_armor_trim_smithing_template",
@@ -264,11 +264,13 @@ public class ModItems {
     public static final Item SHELL_SMITHING_TEMPLATE = registerItem("shell_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.UNCOMMON)));
     public static final Item WINGFLAP_SMITHING_TEMPLATE = registerItem("wingflap_armor_trim_smithing_template",
-            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.RARE)));
     public static final Item OVERGROWTH_SMITHING_TEMPLATE = registerItem("overgrowth_armor_trim_smithing_template",
-            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.RARE)));
     public static final Item CORRUPTION_SMITHING_TEMPLATE = registerItem("corruption_armor_trim_smithing_template",
-            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.EPIC)));
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.RARE)));
+    public static final Item FORBIDDEN_SMITHING_TEMPLATE = registerItem("forbidden_armor_trim_smithing_template",
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.UNCOMMON)));
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {

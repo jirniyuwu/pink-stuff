@@ -1,0 +1,266 @@
+{
+  "name": "pinkstuff:large_styxian_dungeon/rooms",
+  "fallback": "pinkstuff:large_styxian_dungeon/end",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/start1",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/start2",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/start3",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/start4",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room1",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room2",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room3",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room4",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room5",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room6",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room7",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room8",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/room9",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/corridor1",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/corridor2",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/corridor3",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/corridor4",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/staircase1",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/staircase2",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/staircase3",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/staircase4",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/staircase4",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/end1",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/end2",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/end3",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:large_styxian_dungeon/end4",
+        "processors": "pinkstuff:large_styxian_dungeon",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

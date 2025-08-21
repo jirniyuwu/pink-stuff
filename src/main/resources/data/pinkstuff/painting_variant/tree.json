@@ -1,0 +1,13 @@
+{
+  "asset_id": "pinkstuff:tree",
+  "height": 3,
+  "width": 4,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.pinkstuff.tree.title"
+  },
+  "author": {
+    "color": "gray",
+    "translate": "painting.pinkstuff.tree.author"
+  }
+}
