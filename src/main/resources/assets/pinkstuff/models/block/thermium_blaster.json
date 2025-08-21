@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "pinkstuff:block/polished_amethyst_block",
+		"1": "pinkstuff:block/thermium_blaster_top",
 		"2": "pinkstuff:block/thermium_blaster_front",
 		"3": "pinkstuff:block/thermium_blaster_side",
 		"4": "minecraft:block/polished_deepslate",

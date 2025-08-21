@@ -415,6 +415,9 @@ public class ModBlocks {
     public static final Block POLISHED_AMETHYST_BLOCK = registerBlock("polished_amethyst_block",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
+    public static final Block AMETHYST_TILES = registerBlock("amethyst_tiles",
+            properties -> new Block(properties.strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block CHISELED_AMETHYST_BRICKS = registerBlock("chiseled_amethyst_bricks",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
@@ -625,6 +628,14 @@ public class ModBlocks {
     public static final Block POLISHED_AMETHYST_SLAB = registerBlock("polished_amethyst_slab",
             properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
     public static final Block POLISHED_AMETHYST_WALL = registerBlock("polished_amethyst_wall",
+            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
+
+    public static final Block AMETHYST_TILES_STAIRS = registerBlock("amethyst_tiles_stairs",
+            properties -> new StairsBlock(ModBlocks.AMETHYST_TILES.getDefaultState(),
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
+    public static final Block AMETHYST_TILES_SLAB = registerBlock("amethyst_tiles_slab",
+            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
+    public static final Block AMETHYST_TILES_WALL = registerBlock("amethyst_tiles_wall",
             properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));
 
     public static final Block AMETHYST_BRICKS_STAIRS = registerBlock("amethyst_bricks_stairs",

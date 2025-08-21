@@ -113,6 +113,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
                         entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
                         entries.add(ModBlocks.POLISHED_AMETHYST_WALL);
+                        entries.add(ModBlocks.AMETHYST_TILES);
+                        entries.add(ModBlocks.AMETHYST_TILES_SLAB);
+                        entries.add(ModBlocks.AMETHYST_TILES_STAIRS);
+                        entries.add(ModBlocks.AMETHYST_TILES_WALL);
 
                         entries.add(ModBlocks.AMETHYST_BRICKS);
                         entries.add(ModBlocks.CHISELED_AMETHYST_BRICKS);
@@ -519,6 +523,10 @@ public class ModItemGroups {
             entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
             entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
             entries.add(ModBlocks.POLISHED_AMETHYST_WALL);
+            entries.add(ModBlocks.AMETHYST_TILES);
+            entries.add(ModBlocks.AMETHYST_TILES_SLAB);
+            entries.add(ModBlocks.AMETHYST_TILES_STAIRS);
+            entries.add(ModBlocks.AMETHYST_TILES_WALL);
             entries.add(ModBlocks.AMETHYST_BRICKS);
             entries.add(ModBlocks.CHISELED_AMETHYST_BRICKS);
             entries.add(ModBlocks.AMETHYST_BULB);

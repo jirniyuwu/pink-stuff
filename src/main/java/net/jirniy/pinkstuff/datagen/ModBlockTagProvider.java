@@ -172,7 +172,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COBBLED_STYXSTONE_STAIRS)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB)
-                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS);
+                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS)
+                .add(ModBlocks.AMETHYST_TILES)
+                .add(ModBlocks.AMETHYST_TILES_WALL)
+                .add(ModBlocks.AMETHYST_TILES_SLAB)
+                .add(ModBlocks.AMETHYST_TILES_STAIRS);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
@@ -361,6 +365,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_STYXSTONE_WALL)
                 .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_WALL)
                 .add(ModBlocks.POLISHED_MABRIZE_WALL)
+                .add(ModBlocks.AMETHYST_TILES_WALL)
                 .add(ModBlocks.COBBLED_STYXSTONE_WALL)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL);
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
@@ -411,6 +416,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_STYXSTONE_SLAB)
                 .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_SLAB)
                 .add(ModBlocks.POLISHED_MABRIZE_SLAB)
+                .add(ModBlocks.AMETHYST_TILES_SLAB)
                 .add(ModBlocks.COBBLED_STYXSTONE_SLAB)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB);
         valueLookupBuilder(BlockTags.STAIRS)
@@ -434,6 +440,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_STYXSTONE_STAIRS)
                 .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_STAIRS)
                 .add(ModBlocks.POLISHED_MABRIZE_STAIRS)
+                .add(ModBlocks.AMETHYST_TILES_STAIRS)
                 .add(ModBlocks.COBBLED_STYXSTONE_STAIRS)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_SLABS)

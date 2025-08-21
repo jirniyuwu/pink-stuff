@@ -24,6 +24,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool chorusPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
         BlockStateModelGenerator.BlockTexturePool crystalCherryPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         BlockStateModelGenerator.BlockTexturePool polishedAmethystPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_AMETHYST_BLOCK);
+        BlockStateModelGenerator.BlockTexturePool amethystTilesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AMETHYST_TILES);
         BlockStateModelGenerator.BlockTexturePool amethystBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AMETHYST_BRICKS);
         BlockStateModelGenerator.BlockTexturePool kunziteBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KUNZITE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool elysiumBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ELYSIUM_BRICKS);
@@ -118,10 +119,12 @@ public class ModModelProvider extends FabricModelProvider {
         polishedAmethystPool.stairs(ModBlocks.POLISHED_AMETHYST_STAIRS);
         polishedAmethystPool.slab(ModBlocks.POLISHED_AMETHYST_SLAB);
         polishedAmethystPool.wall(ModBlocks.POLISHED_AMETHYST_WALL);
-
         amethystBricksPool.stairs(ModBlocks.AMETHYST_BRICKS_STAIRS);
         amethystBricksPool.slab(ModBlocks.AMETHYST_BRICKS_SLAB);
         amethystBricksPool.wall(ModBlocks.AMETHYST_BRICKS_WALL);
+        amethystTilesPool.stairs(ModBlocks.AMETHYST_TILES_STAIRS);
+        amethystTilesPool.slab(ModBlocks.AMETHYST_TILES_SLAB);
+        amethystTilesPool.wall(ModBlocks.AMETHYST_TILES_WALL);
 
         kunziteBricksPool.stairs(ModBlocks.KUNZITE_BRICKS_STAIRS);
         kunziteBricksPool.slab(ModBlocks.KUNZITE_BRICKS_SLAB);

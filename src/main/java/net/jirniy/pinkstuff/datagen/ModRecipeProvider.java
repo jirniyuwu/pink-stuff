@@ -1753,6 +1753,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "polished_mabrize_stairs")));
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MABRIZE_WALL, ModBlocks.POLISHED_MABRIZE);
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES_SLAB, Ingredient.ofItem(ModBlocks.AMETHYST_TILES))
+                        .criterion(hasItem(ModBlocks.AMETHYST_TILES), conditionsFromItem(ModBlocks.AMETHYST_TILES))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_tiles_slab")));
+                createStairsRecipe(ModBlocks.AMETHYST_TILES_STAIRS, Ingredient.ofItem(ModBlocks.AMETHYST_TILES))
+                        .criterion(hasItem(ModBlocks.AMETHYST_TILES), conditionsFromItem(ModBlocks.AMETHYST_TILES))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_tiles_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES_WALL, ModBlocks.AMETHYST_TILES);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.POLISHED_AMETHYST_BLOCK)
+                        .criterion(hasItem(ModBlocks.POLISHED_AMETHYST_BLOCK), conditionsFromItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_tiles")));
 
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.AMETHYST_NUGGET, RecipeCategory.MISC, Items.AMETHYST_SHARD);

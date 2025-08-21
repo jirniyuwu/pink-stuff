@@ -227,6 +227,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.POLISHED_STYXSTONE_SLAB.asItem())
                 .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_SLAB.asItem())
                 .add(ModBlocks.POLISHED_MABRIZE_SLAB.asItem())
+                .add(ModBlocks.AMETHYST_TILES_SLAB.asItem())
                 .add(ModBlocks.COBBLED_STYXSTONE_SLAB.asItem())
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB.asItem());
         valueLookupBuilder(ItemTags.STAIRS)
@@ -251,6 +252,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_STAIRS.asItem())
                 .add(ModBlocks.POLISHED_MABRIZE_STAIRS.asItem())
                 .add(ModBlocks.COBBLED_STYXSTONE_STAIRS.asItem())
+                .add(ModBlocks.AMETHYST_TILES_STAIRS.asItem())
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL.asItem())
@@ -272,6 +274,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.POLISHED_STYXSTONE_WALL.asItem())
                 .add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_WALL.asItem())
                 .add(ModBlocks.POLISHED_MABRIZE_WALL.asItem())
+                .add(ModBlocks.AMETHYST_TILES_WALL.asItem())
                 .add(ModBlocks.COBBLED_STYXSTONE_WALL.asItem())
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL.asItem());
         valueLookupBuilder(ItemTags.WOODEN_SLABS)
