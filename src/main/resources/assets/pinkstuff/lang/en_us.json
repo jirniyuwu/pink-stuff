@@ -333,6 +333,8 @@
   "item.pinkstuff.thermium_wiltborn": "Thermium Wiltborn",
   "item.pinkstuff.memoria_bourpeer": "Memoria Bourpeer",
   "item.pinkstuff.death_flowers": "Deathflowers",
+  "item.pinkstuff.cotton": "Cotton",
+  "item.pinkstuff.cotton_seeds": "Cotton Seeds",
 
   "item.pinkstuff.chorus_lily": "Chorus Lily",
   "item.pinkstuff.small_end_grass": "Small End Grass",
@@ -419,6 +421,7 @@
   "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
   "block.pinkstuff.charmberry_bush": "Charmberries Bush",
   "block.pinkstuff.hazeweaver_plant": "Hazeweaver",
+  "block.pinkstuff.cotton": "Cotton",
 
   "item.minecraft.potion.effect.grounded": "Potion of Heaviness",
   "item.minecraft.splash_potion.effect.grounded": "Splash Potion of Heaviness",

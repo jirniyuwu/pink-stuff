@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.datagen;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
 import net.jirniy.pinkstuff.item.ModItems;
@@ -278,6 +279,7 @@ public class ModModelProvider extends FabricModelProvider {
                 GemBerryBushBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.CHARMBERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 GemBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(ModBlocks.COTTON, CottonCropBlock.AGE, 0, 1, 2, 3, 4);
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.SMALL_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.MEDIUM_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -347,6 +349,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIUM_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GODFRUIT, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTAL_CARROT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COTTON, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.THERMIUM_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.THERMIUM, Models.GENERATED);

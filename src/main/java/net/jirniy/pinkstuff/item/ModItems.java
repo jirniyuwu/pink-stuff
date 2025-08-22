@@ -116,6 +116,10 @@ public class ModItems {
 
     public static final Item STYXCOAL = registerItem("styxcoal", Item::new);
 
+    public static final Item COTTON_SEEDS = registerItem("cotton_seeds",
+            setting -> new BlockItem(ModBlocks.COTTON, setting));
+    public static final Item COTTON = registerItem("cotton", Item::new);
+
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
             setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 2, -2.4f)));
     public static final Item KUNZITE_PICKAXE = registerItem("kunzite_pickaxe",

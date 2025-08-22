@@ -836,6 +836,9 @@ public class ModBlocks {
     public static final Block POTTED_HAZEWEAVER_PLANT = registerBlockWithoutBlockItem("potted_hazeweaver_plant",
             properties -> new FlowerPotBlock(ModBlocks.HAZEWEAVER_PLANT, properties.strength(0f).nonOpaque().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
 
+    public static final Block COTTON = registerBlockWithoutBlockItem("cotton",
+            properties -> new CottonCropBlock(properties.mapColor(MapColor.TERRACOTTA_BROWN).ticksRandomly().breakInstantly()
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name))));

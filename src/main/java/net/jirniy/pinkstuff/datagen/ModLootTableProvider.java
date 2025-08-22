@@ -2,8 +2,8 @@ package net.jirniy.pinkstuff.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.fabricmc.fabric.api.loot.v3.FabricLootTableBuilder;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.minecraft.block.Block;
@@ -355,6 +355,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 ).with(ItemEntry.builder(ModItems.CHARMBERRY))
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+
+        BlockStatePropertyLootCondition.Builder cottonBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.COTTON)
+                .properties(StatePredicate.Builder.create().exactMatch(CottonCropBlock.AGE, CottonCropBlock.MAX_AGE));
+        this.addDrop(ModBlocks.COTTON, this.cropDrops(ModBlocks.COTTON, ModItems.COTTON, ModItems.COTTON_SEEDS, cottonBuilder));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

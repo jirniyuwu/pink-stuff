@@ -287,6 +287,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STYXMOSS_VINE);
                         entries.add(ModBlocks.DEATH_FLOWERS);
 
+                        entries.add(ModItems.COTTON_SEEDS);
+                        entries.add(ModItems.COTTON);
+
                         entries.add(ModBlocks.PINK_ICE);
 
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
@@ -707,6 +710,8 @@ public class ModItemGroups {
             entries.add(ModItems.SUNGAZE_NUGGET);
             entries.add(ModItems.SUNGAZE);
 
+            entries.add(ModItems.COTTON);
+
             entries.add(ModItems.AMETHYST_BLAZE_ROD);
 
             entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
@@ -832,6 +837,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.STYXMOSS_VINE);
             entries.add(ModBlocks.DEATH_FLOWERS);
             entries.add(ModBlocks.CORRUPT_ROOTS);
+            entries.add(ModItems.COTTON_SEEDS);
+            entries.add(ModItems.COTTON);
 
             entries.add(ModBlocks.AMETHYST_CLUMP);
             entries.add(ModBlocks.DIAMOND_CLUMP);

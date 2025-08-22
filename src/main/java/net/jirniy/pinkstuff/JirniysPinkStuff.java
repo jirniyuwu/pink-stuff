@@ -5,10 +5,7 @@ import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
-import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
-import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
-import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.fabricmc.fabric.api.registry.*;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.component.ModDataComponentTypes;
@@ -220,5 +217,8 @@ public class JirniysPinkStuff implements ModInitializer {
 				.frameBlock(ModBlocks.STYXIA_PORTAL_FRAME).lightWithItem(ModItems.MEMORY_SHARD).onlyLightInOverworld()
 				.destDimID(Identifier.of(JirniysPinkStuff.MOD_ID, "styxia")).customPortalBlock((CustomPortalBlock) ModBlocks.STYXIA_PORTAL)
 				.registerPortal();
+
+		CompostingChanceRegistry.INSTANCE.add(ModItems.COTTON, 0.5F);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.COTTON_SEEDS, 0.25F);
 	}
 }

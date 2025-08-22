@@ -362,5 +362,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.THERMIUM)
                 .add(ModItems.THERMIUM_NUGGET)
                 .add(ModItems.ENERGIZED_THERMIUM);
+        valueLookupBuilder(ItemTags.VILLAGER_PLANTABLE_SEEDS)
+                .add(ModItems.COTTON_SEEDS);
     }
 }

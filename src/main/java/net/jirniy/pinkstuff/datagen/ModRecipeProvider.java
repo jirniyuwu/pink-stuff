@@ -2147,6 +2147,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "dye_from_death_flowers")));
 
+                createShaped(RecipeCategory.MISC, Items.LEATHER, 1)
+                        .pattern("CD")
+                        .pattern("CC")
+                        .input('D', Items.BROWN_DYE)
+                        .input('C', ModItems.COTTON)
+                        .criterion(hasItem(ModItems.COTTON), conditionsFromItem(ModItems.COTTON))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "leather_from_cotton")));
+                createShaped(RecipeCategory.MISC, Blocks.WHITE_WOOL, 1)
+                        .pattern("CCC")
+                        .pattern("CCC")
+                        .pattern("CCC")
+                        .input('C', ModItems.COTTON)
+                        .criterion(hasItem(ModItems.COTTON), conditionsFromItem(ModItems.COTTON))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wool_from_cotton")));
+
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));
                 offerSmithingTemplateCopyingRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModBlocks.CRYSTAL_CHERRY_LOG);
