@@ -10,6 +10,8 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageTypes;
+import net.minecraft.entity.effect.InstantStatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.BlazeEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -42,7 +44,8 @@ public class AmethystBlazeEntity extends BlazeEntity {
 
     @Override
     public boolean isInvulnerableTo(ServerWorld world, DamageSource source) {
-        if (source.isOf(DamageTypes.MAGIC)) {
+        if (source.getAttacker() != null && source.getAttacker().getType() == ModEntities.AMETHYST_BLAZE
+        || source.isOf(DamageTypes.INDIRECT_MAGIC) || source.isOf(DamageTypes.MAGIC)) {
             return true;
         }
         return super.isInvulnerableTo(world, source);
