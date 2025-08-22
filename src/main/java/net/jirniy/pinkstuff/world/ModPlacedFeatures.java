@@ -73,6 +73,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STYXGRASS_CEILING_PLACED_KEY = registerKey("styxgrass_ceiling_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_DISC_PLACED_KEY = registerKey("styxmoss_disc_placed");
     public static final RegistryKey<PlacedFeature> CRAWLER_STONE_PLACED_KEY = registerKey("crawler_stone_placed");
+    public static final RegistryKey<PlacedFeature> COTTON_PATCH_PLACED_KEY = registerKey("cotton_patch_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -282,6 +283,8 @@ public class ModPlacedFeatures {
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, CORRUPT_ROOTS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPT_ROOTS_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, COTTON_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COTTON_PATCH_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

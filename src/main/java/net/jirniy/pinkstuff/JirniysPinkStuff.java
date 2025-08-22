@@ -105,6 +105,7 @@ public class JirniysPinkStuff implements ModInitializer {
 			builder.add(ModBlocks.SULFUR_BLOCK, 3600);
 			builder.add(ModItems.STYXCOAL, 1600);
 			builder.add(ModBlocks.STYXCOAL_BLOCK, 16000);
+			builder.add(ModItems.COTTON, 40);
 		});
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
@@ -193,6 +194,11 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.add((entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.GEM_BERRY, random.nextBetween(10, 30)),
 					new ItemStack(Items.EMERALD, 1), 16, 7, 0.04f));
+		});
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.SHEPHERD, 3, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.COTTON, random.nextBetween(3, 6)),
+					new ItemStack(Items.EMERALD, 1), 16, 7, 0.06f));
 		});
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 3, factories -> {
 			factories.add((entity, random) -> new TradeOffer(

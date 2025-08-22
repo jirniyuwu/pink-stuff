@@ -279,7 +279,7 @@ public class ModModelProvider extends FabricModelProvider {
                 GemBerryBushBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.CHARMBERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 GemBerryBushBlock.AGE, 0, 1, 2, 3);
-        blockStateModelGenerator.registerCrop(ModBlocks.COTTON, CottonCropBlock.AGE, 0, 1, 2, 3, 4);
+        blockStateModelGenerator.registerCrop(ModBlocks.COTTON, CottonCropBlock.AGE, 0, 1, 2, 3, 4, 5);
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.SMALL_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.MEDIUM_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);

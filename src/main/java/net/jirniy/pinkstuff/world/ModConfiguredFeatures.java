@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.world;
 import com.google.common.collect.ImmutableList;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.block.custom.HangingStyxgrassBlock;
 import net.jirniy.pinkstuff.util.ModTags;
@@ -96,6 +97,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_CEILING_KEY = registryKey("styxgrass_ceiling");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_DISK_KEY = registryKey("styxmoss_disk_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRAWLER_STONE_KEY = registryKey("crawler_stone");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> COTTON_PATCH_KEY = registryKey("cotton_patch");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -428,6 +430,14 @@ public class ModConfiguredFeatures {
                                         .add(ModBlocks.CORRUPT_ROOTS.getDefaultState(), 1)
                                         .add(AIR.getDefaultState(), 2))),
                         List.of(ModBlocks.STYXIAN_SOIL, ModBlocks.BLACK_GOOP, ModBlocks.CORRUPT_ORE)));
+        register(context, COTTON_PATCH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(
+                                Pool.<BlockState>builder()
+                                        .add(ModBlocks.COTTON.getDefaultState().with(CottonCropBlock.AGE, 0), 1)
+                                        .add(ModBlocks.COTTON.getDefaultState().with(CottonCropBlock.AGE, 1), 2)
+                                        .add(ModBlocks.COTTON.getDefaultState().with(CottonCropBlock.AGE, 2), 2))),
+                        List.of(Blocks.DIRT, GRASS_BLOCK)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {
