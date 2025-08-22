@@ -2141,6 +2141,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "snowy_spruce_leaves")));
 
+                createShapeless(RecipeCategory.MISC, Items.PURPLE_DYE, 1)
+                        .input(ModBlocks.DEATH_FLOWERS)
+                        .criterion(hasItem(ModBlocks.DEATH_FLOWERS), conditionsFromItem(ModBlocks.DEATH_FLOWERS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "dye_from_death_flowers")));
+
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));
                 offerSmithingTemplateCopyingRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModBlocks.CRYSTAL_CHERRY_LOG);
