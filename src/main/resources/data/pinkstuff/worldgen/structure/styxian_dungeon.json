@@ -25,12 +25,12 @@
   "start_pool": "pinkstuff:styxian_dungeon/intersections",
   "size": 3,
   "start_height": {
-    "type": "minecraft:uniform",
+    "type": "minecraft:trapezoid",
     "min_inclusive": {
-      "absolute": -20
+      "above_bottom": -70
     },
     "max_inclusive": {
-      "absolute": -70
+      "above_bottom": -5
     }
   },
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
