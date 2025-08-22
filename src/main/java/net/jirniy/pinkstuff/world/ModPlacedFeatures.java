@@ -8,9 +8,12 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.heightprovider.BiasedToBottomHeightProvider;
 import net.minecraft.world.gen.placementmodifier.*;
@@ -63,9 +66,11 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> DEATHFLOWER_PLACED_KEY = registerKey("deathflower_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_ROCK_PLACED_KEY = registerKey("styxian_rock_placed");
     public static final RegistryKey<PlacedFeature> MOSSY_STYXIAN_ROCK_PLACED_KEY = registerKey("mossy_styxian_rock_placed");
+    public static final RegistryKey<PlacedFeature> STYXIAN_CLAY_PATCH_PLACED_KEY = registerKey("styxian_clay_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_VEGETATION_PLACED_KEY = registerKey("styxmoss_vegetation_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_PATCH_PLACED_KEY = registerKey("styxmoss_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXGRASS_PATCH_PLACED_KEY = registerKey("styxgrass_patch_placed");
+    public static final RegistryKey<PlacedFeature> STYXGRASS_CEILING_PLACED_KEY = registerKey("styxgrass_ceiling_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_DISC_PLACED_KEY = registerKey("styxmoss_disc_placed");
     public static final RegistryKey<PlacedFeature> CRAWLER_STONE_PLACED_KEY = registerKey("crawler_stone_placed");
 
@@ -164,14 +169,22 @@ public class ModPlacedFeatures {
                 CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, MOSSY_STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOSSY_STYXIAN_ROCK_KEY),
                 CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, STYXIAN_CLAY_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_CLAY_PATCH_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), ModBlocks.STYXGRASS
+                ));
         register(context, STYXMOSS_VEGETATION_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXMOSS_VEGETATION_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(5, 0.5f, 3), ModBlocks.STYXGRASS
                 ));
         register(context, STYXMOSS_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXMOSS_PATCH_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(3, 0.5f, 1), ModBlocks.STYXGRASS
-                ));
+                new PlacementModifier[]{CountPlacementModifier.of(125), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
+        register(context, STYXGRASS_CEILING_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXGRASS_CEILING_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(125), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)), BiomePlacementModifier.of()});
 
         register(context, AMETHYST_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETHYST_CLUMP_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(10, 30)),

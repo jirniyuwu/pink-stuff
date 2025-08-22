@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
+import net.jirniy.pinkstuff.block.custom.HangingStyxgrassBlock;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.jirniy.pinkstuff.world.features.HangingStyxgrassDecorator;
 import net.jirniy.pinkstuff.world.features.ModFeatures;
@@ -31,6 +32,7 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
+import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
@@ -86,10 +88,12 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEATHFLOWER_KEY = registryKey("deathflower");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_ROCK_KEY = registryKey("styxian_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOSSY_STYXIAN_ROCK_KEY = registryKey("mossy_styxian_rock");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_CLAY_PATCH_KEY = registryKey("styxian_clay_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_KEY = registryKey("styxmoss_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_VEGETATION_KEY = registryKey("styxmoss_vegetation");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_BONEMEAL_KEY = registryKey("styxmoss_patch_bonemeal");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_PATCH_KEY = registryKey("styxgrass_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_CEILING_KEY = registryKey("styxgrass_ceiling");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_DISK_KEY = registryKey("styxmoss_disk_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRAWLER_STONE_KEY = registryKey("crawler_stone");
 
@@ -150,6 +154,10 @@ public class ModConfiguredFeatures {
         register(context, MOSSY_STYXIAN_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE.getDefaultState(), 3)
                 .add(ModBlocks.COBBLED_STYXSTONE.getDefaultState(), 1))));
+        register(context, STYXIAN_CLAY_PATCH_KEY, Feature.ORE, new OreFeatureConfig(
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXIAN_SOIL), CLAY.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), CLAY.getDefaultState())),
+                10));
         register(context, STYXMOSS_VEGETATION_KEY, Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                         .add(ModBlocks.STYXMOSS_CARPET.getDefaultState(), 10)
@@ -181,6 +189,16 @@ public class ModConfiguredFeatures {
                         VerticalSurfaceType.FLOOR,
                         ConstantIntProvider.create(1), 0.2f, 5, 0.8f,
                         UniformIntProvider.create(4, 6), 0.5f));
+        register(context, STYXGRASS_CEILING_KEY, Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
+                        BlockStateProvider.of(ModBlocks.STYXMOSS), PlacedFeatures.createEntry(Feature.BLOCK_COLUMN,
+                        new BlockColumnFeatureConfig(List.of(BlockColumnFeatureConfig.createLayer(
+                                UniformIntProvider.create(1, 3), BlockStateProvider.of(ModBlocks.HANGING_STYXGRASS.getDefaultState().with(HangingStyxgrassBlock.TIP, false))),
+                                BlockColumnFeatureConfig.createLayer(ConstantIntProvider.create(1),
+                                        BlockStateProvider.of(ModBlocks.HANGING_STYXGRASS.getDefaultState().with(HangingStyxgrassBlock.TIP, true)))),
+                                Direction.DOWN, BlockPredicate.IS_AIR, true)),
+                VerticalSurfaceType.CEILING, UniformIntProvider.create(1, 2), 0.5F, 5,
+                        0.25F, UniformIntProvider.create(3, 6), 0.3F));
 
         register(context, KUNZITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldKunziteOres, 15));
         register(context, THERMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldThermiumOres, 3, 0.3f));

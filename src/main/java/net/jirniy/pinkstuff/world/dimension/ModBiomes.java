@@ -1,4 +1,4 @@
-package net.jirniy.pinkstuff.world;
+package net.jirniy.pinkstuff.world.dimension;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.minecraft.registry.RegistryKey;

@@ -3,8 +3,6 @@ package net.jirniy.pinkstuff.entity.custom;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
-import net.jirniy.pinkstuff.world.ModBiomes;
-import net.jirniy.pinkstuff.world.dimension.ModDimensions;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;

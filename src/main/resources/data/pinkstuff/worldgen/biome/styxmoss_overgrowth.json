@@ -50,9 +50,10 @@
     [],
     [
       "pinkstuff:keaphe_placed",
+      "pinkstuff:styxian_clay_placed",
       "pinkstuff:styxmoss_patch_placed",
       "pinkstuff:styxmoss_vegetation_placed",
-      "pinkstuff:styxgrass_patch_placed"
+      "pinkstuff:styxgrass_ceiling_placed"
     ],
     []
   ],
