@@ -1,5 +1,8 @@
 {
-  "carvers": [],
+  "carvers": [
+    "pinkstuff:styxia_cave",
+    "pinkstuff:styxia_canyon"
+  ],
   "downfall": 0.8,
   "effects": {
     "fog_color": 12885479,

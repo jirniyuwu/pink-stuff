@@ -157,7 +157,7 @@ public class ModConfiguredFeatures {
         register(context, STYXIAN_CLAY_PATCH_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXIAN_SOIL), CLAY.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), CLAY.getDefaultState())),
-                10));
+                14));
         register(context, STYXMOSS_VEGETATION_KEY, Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                         .add(ModBlocks.STYXMOSS_CARPET.getDefaultState(), 10)
@@ -198,7 +198,7 @@ public class ModConfiguredFeatures {
                                         BlockStateProvider.of(ModBlocks.HANGING_STYXGRASS.getDefaultState().with(HangingStyxgrassBlock.TIP, true)))),
                                 Direction.DOWN, BlockPredicate.IS_AIR, true)),
                 VerticalSurfaceType.CEILING, UniformIntProvider.create(1, 2), 0.5F, 5,
-                        0.25F, UniformIntProvider.create(3, 6), 0.3F));
+                        0.1F, UniformIntProvider.create(3, 6), 0.3F));
 
         register(context, KUNZITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldKunziteOres, 15));
         register(context, THERMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldThermiumOres, 3, 0.3f));
@@ -208,7 +208,7 @@ public class ModConfiguredFeatures {
         register(context, PINLINE_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(endPinlineOres, 64));
         register(context, STYXCOAL_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianStyxcoalOres, 16));
         register(context, MOONSTEEL_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianMoonsteelOres, 11));
-        register(context, SUNGAZE_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianSungazeOres, 7, 0.2f));
+        register(context, SUNGAZE_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianSungazeOres, 7, 0.4f));
         register(context, STYXIAN_LAPIS_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianLapisOres, 8));
         register(context, COMPRESSED_END_STONE_KEY, Feature.ORE, new OreFeatureConfig(compressedEndStone, 64, 0.3f));
         register(context, COMPRESSED_STYXSTONE_KEY, Feature.ORE, new OreFeatureConfig(

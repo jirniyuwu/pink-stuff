@@ -115,8 +115,8 @@ public class ModPlacedFeatures {
                                 BiasedToBottomHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(35), 1)))
         );
         register(context, STYXIAN_LAPIS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_LAPIS_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(7,
-                        HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(5), YOffset.fixed(35)))
+                ModOrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(5), YOffset.fixed(45)))
         );
         register(context, STYXCOAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXCOAL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(9,
@@ -141,7 +141,8 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(90))));
 
         register(context, DEATHFLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEATHFLOWER_KEY),
-                NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(),
+                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
         register(context, CORRUPTION_SPIKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTION_SPIKE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
@@ -170,9 +171,9 @@ public class ModPlacedFeatures {
         register(context, MOSSY_STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOSSY_STYXIAN_ROCK_KEY),
                 CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, STYXIAN_CLAY_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_CLAY_PATCH_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), ModBlocks.STYXGRASS
-                ));
+                new PlacementModifier[]{CountPlacementModifier.of(8), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
         register(context, STYXMOSS_VEGETATION_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXMOSS_VEGETATION_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(5, 0.5f, 3), ModBlocks.STYXGRASS

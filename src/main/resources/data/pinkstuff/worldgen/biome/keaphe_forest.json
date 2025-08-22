@@ -1,6 +1,7 @@
 {
   "carvers": [
-    "minecraft:canyon"
+    "minecraft:canyon",
+    "pinkstuff:styxia_canyon"
   ],
   "downfall": 0.8,
   "effects": {
