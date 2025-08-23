@@ -6,6 +6,7 @@ import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.custom.*;
 import net.jirniy.pinkstuff.trim.ModTrimMaterials;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.BannerPatternsComponent;
 import net.minecraft.component.type.BlocksAttacksComponent;

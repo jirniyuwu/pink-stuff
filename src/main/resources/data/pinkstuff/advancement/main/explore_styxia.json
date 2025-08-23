@@ -11,6 +11,16 @@
         }
       }
     },
+    "ashen_farlands": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:ashen_farlands"
+          }
+        }
+      }
+    },
     "styxian_plains": {
       "trigger": "minecraft:location",
       "conditions": {
@@ -94,6 +104,9 @@
     ],
     [
       "dry_outskirts"
+    ],
+    [
+      "ashen_farlands"
     ]
   ],
   "sends_telemetry_event": false

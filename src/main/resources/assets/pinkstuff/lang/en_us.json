@@ -75,6 +75,8 @@
   "item.pinkstuff.thermium_ore": "Thermium Ore",
   "item.pinkstuff.deepslate_thermium_ore": "Deepslate Thermium Ore",
   "item.pinkstuff.nether_sulfur_ore": "Nether Sulfur Ore",
+  "item.pinkstuff.styxian_sulfur_ore": "Styxian Sulfur Ore",
+  "item.pinkstuff.compressed_styxian_sulfur_ore": "Compressed Styxian Sulfur Ore",
   "item.pinkstuff.sulfur_block": "Block of Sulfur",
   "item.pinkstuff.pinline_block": "Block of Pinline",
   "item.pinkstuff.end_pinline_ore": "Pinline Ore",
@@ -118,6 +120,7 @@
   "item.pinkstuff.pink_sandstone_stairs": "Pink Sandstone Stairs",
   "item.pinkstuff.smooth_pink_sandstone_stairs": "Smooth Pink Sandstone Stairs",
   "item.pinkstuff.pink_sandstone_wall": "Pink Sandstone Wall",
+  "item.pinkstuff.ash_block": "Block of Ash",
 
   "item.pinkstuff.polished_amethyst_block": "Polished Amethyst Block",
   "item.pinkstuff.polished_amethyst_slab": "Polished Amethyst Slab",
@@ -499,6 +502,7 @@
   "tag.item.pinkstuff.moonsteel_repair": "Moonsteel Repair",
   "tag.item.pinkstuff.cerille_repair": "Cerille Repair",
   "tag.item.pinkstuff.sunblaze_repair": "Sunblaze Repair",
+  "tag.item.pinkstuff.amethyst_repair": "Amethyst Repair",
   "tag.item.pinkstuff.special_repair": "Special Repair",
 
   "painting.pinkstuff.new_end.title": "New End",

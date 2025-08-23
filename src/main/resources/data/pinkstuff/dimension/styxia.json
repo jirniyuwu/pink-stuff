@@ -141,6 +141,33 @@
           }
         },
         {
+          "biome": "pinkstuff:ashen_farlands",
+          "parameters": {
+            "temperature": [
+              0.7,
+              1
+            ],
+            "humidity": [
+              -1,
+              -0.5
+            ],
+            "continentalness": [
+              0.1,
+              1
+            ],
+            "erosion": [
+              -0.7,
+              0.2
+            ],
+            "weirdness": [
+              0.4,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
           "biome": "pinkstuff:styxian_plains",
           "parameters": {
             "temperature": [

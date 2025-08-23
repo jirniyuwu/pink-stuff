@@ -241,12 +241,15 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CERILLE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_SUNGAZE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_SULFUR_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUNGAZE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_DEEPSLATE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_NETHERRACK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_STYXSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_COMPRESSED_STYXSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ASH_BLOCK);
 
         blockStateModelGenerator.registerFlowerbed(ModBlocks.DEATH_FLOWERS);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.STYXMOSS, ModBlocks.STYXMOSS_CARPET);
@@ -405,7 +408,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModBlocks.ELYSIAN_SKYBERRY.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.THERMIUM_WILTBORN.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.MEMORIA_BOURPEER.asItem(), Models.GENERATED);
-
         itemModelGenerator.register(ModItems.HAZEWEAVER, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.CHERRY_SMITHING_TEMPLATE, Models.GENERATED);

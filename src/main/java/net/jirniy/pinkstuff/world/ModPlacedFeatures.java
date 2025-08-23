@@ -27,6 +27,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> THERMIUM_ORE_PLACED_KEY = registerKey("thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> DRIPSTONE_THERMIUM_ORE_PLACED_KEY = registerKey("dripstone_thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> SULFUR_ORE_PLACED_KEY = registerKey("sulfur_ore_placed");
+    public static final RegistryKey<PlacedFeature> STYXIAN_SULFUR_ORE_PLACED_KEY = registerKey("styxian_sulfur_ore_placed");
     public static final RegistryKey<PlacedFeature> STYXCOAL_ORE_PLACED_KEY = registerKey("styxcoal_ore_placed");
     public static final RegistryKey<PlacedFeature> STYXCOAL_ORE_BONUS_PLACED_KEY = registerKey("styxcoal_ore_bonus_placed");
     public static final RegistryKey<PlacedFeature> MOONSTEEL_ORE_PLACED_KEY = registerKey("moonsteel_ore_placed");
@@ -37,6 +38,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> GEM_TREE_PLACED_KEY = registerKey("gem_tree_placed");
     public static final RegistryKey<PlacedFeature> CHORUS_TREE_PLACED_KEY = registerKey("chorus_placed");
     public static final RegistryKey<PlacedFeature> ASHEN_TREE_PLACED_KEY = registerKey("ashen_placed");
+    public static final RegistryKey<PlacedFeature> STYXIAN_ASHEN_TREE_PLACED_KEY = registerKey("styxian_ashen_placed");
     public static final RegistryKey<PlacedFeature> KEAPHE_TREE_PLACED_KEY = registerKey("keaphe_placed");
     public static final RegistryKey<PlacedFeature> KEAPHE_FOREST_PLACED_KEY = registerKey("keaphe_forest_placed");
     public static final RegistryKey<PlacedFeature> GIANT_KEAPHE_TREE_PLACED_KEY = registerKey("giant_keaphe_placed");
@@ -74,6 +76,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STYXMOSS_DISC_PLACED_KEY = registerKey("styxmoss_disc_placed");
     public static final RegistryKey<PlacedFeature> CRAWLER_STONE_PLACED_KEY = registerKey("crawler_stone_placed");
     public static final RegistryKey<PlacedFeature> COTTON_PATCH_PLACED_KEY = registerKey("cotton_patch_placed");
+    public static final RegistryKey<PlacedFeature> STYXIAN_DELTA_PLACED_KEY = registerKey("styxian_delta_placed");
+    public static final RegistryKey<PlacedFeature> ASH_PATCH_PLACED_KEY = registerKey("ash_patch_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -94,6 +98,10 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(8,
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(100), 1)))
+        );
+        register(context, STYXIAN_SULFUR_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_SULFUR_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(12,
+                        HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(120)))
         );
         register(context, STYXIAN_AMETHYST_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_AMETHYST_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(3,
@@ -140,6 +148,10 @@ public class ModPlacedFeatures {
         register(context, MABRIZE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MABRIZE_KEY),
                 ModOrePlacement.modifiersWithCount(9,
                         HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(90))));
+        register(context, STYXIAN_DELTA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_DELTA_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(90), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
 
         register(context, DEATHFLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEATHFLOWER_KEY),
                 NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(),
@@ -188,6 +200,11 @@ public class ModPlacedFeatures {
                         EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
                         RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)), BiomePlacementModifier.of()});
 
+        register(context, ASH_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ASH_PATCH_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(80), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
+
         register(context, AMETHYST_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETHYST_CLUMP_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(UniformIntProvider.create(10, 30)),
                         PlacedFeatures.BOTTOM_TO_120_RANGE, SquarePlacementModifier.of(),
@@ -230,6 +247,10 @@ public class ModPlacedFeatures {
         register(context, ASHEN_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ASHEN_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(0, 0.1f, 1), Blocks.DEAD_BUSH
+                ));
+        register(context, STYXIAN_ASHEN_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ASHEN_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.25f, 1), Blocks.DEAD_BUSH
                 ));
 
         register(context, KEAPHE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KEAPHE_TREE_KEY),

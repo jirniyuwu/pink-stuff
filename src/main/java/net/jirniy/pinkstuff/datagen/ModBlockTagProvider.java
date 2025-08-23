@@ -133,6 +133,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STYXIA_PORTAL_FRAME)
                 .add(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE)
                 .add(ModBlocks.STYXIAN_SUNGAZE_ORE)
+                .add(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE)
+                .add(ModBlocks.STYXIAN_SULFUR_ORE)
                 .add(ModBlocks.SUNGAZE_BLOCK)
                 .add(ModBlocks.SUNGAZE_BRICKS)
                 .add(ModBlocks.CHISELED_SUNGAZE_BRICKS)
@@ -241,6 +243,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE)
                 .add(ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE)
                 .add(ModBlocks.STYXIAN_MOONSTEEL_ORE)
+                .add(ModBlocks.STYXIAN_SULFUR_ORE)
+                .add(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE)
                 .add(ModBlocks.MOONSTEEL_BLOCK)
                 .add(ModBlocks.RAW_MOONSTEEL_BLOCK)
                 .add(ModBlocks.MOONSTEEL_BLOCK)
@@ -577,7 +581,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE)
                 .add(ModBlocks.STYXIAN_LAPIS_ORE)
                 .add(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE)
-                .add(ModBlocks.STYXIAN_SUNGAZE_ORE);
+                .add(ModBlocks.STYXIAN_SUNGAZE_ORE)
+                .add(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE)
+                .add(ModBlocks.STYXIAN_SULFUR_ORE);
         valueLookupBuilder(BlockTags.MOSS_REPLACEABLE)
                 .add(ModBlocks.STYXSTONE)
                 .add(ModBlocks.STYXIAN_SOIL)
@@ -587,6 +593,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STYXSTONE)
                 .add(ModBlocks.MABRIZE)
                 .add(ModBlocks.COMPRESSED_STYXSTONE)
+                .add(ModBlocks.ASH_BLOCK)
                 .add(ModBlocks.PINK_SAND)
                 .add(ModBlocks.PINK_SANDSTONE)
                 .add(ModBlocks.STYXIAN_SOIL)
@@ -595,6 +602,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLACK_GOOP)
                 .add(ModBlocks.CORRUPT_ORE);
         valueLookupBuilder(BlockTags.SAND)
+                .add(ModBlocks.ASH_BLOCK)
                 .add(ModBlocks.PINK_SAND);
         valueLookupBuilder(BlockTags.FEATURES_CANNOT_REPLACE)
                 .add(ModBlocks.STYXIA_PORTAL)

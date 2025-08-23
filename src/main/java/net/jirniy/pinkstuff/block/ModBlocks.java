@@ -93,6 +93,10 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
 
+    public static final Block ASH_BLOCK = registerBlock("ash_block",
+            properties -> new SandBlock(new ColorCode(0x494E52), properties.strength(0.6f)
+                    .sounds(BlockSoundGroup.SOUL_SAND).mapColor(MapColor.STONE_GRAY)));
+
     public static final Block PINK_SAND = registerBlock("pink_sand",
             properties -> new SandBlock(new ColorCode(0xB561B5), properties.strength(1f)
                     .sounds(BlockSoundGroup.SOUL_SAND).mapColor(MapColor.PALE_PURPLE)));
@@ -258,6 +262,12 @@ public class ModBlocks {
     public static final Block NETHER_SULFUR_ORE = registerBlock("nether_sulfur_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
                     properties.strength(3f).requiresTool().mapColor(MapColor.DULL_RED).sounds(BlockSoundGroup.NETHER_ORE)));
+    public static final Block STYXIAN_SULFUR_ORE = registerBlock("styxian_sulfur_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
+                    properties.strength(2.4f).requiresTool().mapColor(MapColor.PALE_PURPLE).sounds(BlockSoundGroup.POLISHED_DEEPSLATE)));
+    public static final Block COMPRESSED_STYXIAN_SULFUR_ORE = registerBlock("compressed_styxian_sulfur_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
+                    properties.strength(4.6f).requiresTool().mapColor(MapColor.PURPLE).sounds(BlockSoundGroup.POLISHED_DEEPSLATE)));
     public static final Block SULFUR_BLOCK = registerBlock("sulfur_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.BASALT).mapColor(MapColor.PALE_YELLOW)));

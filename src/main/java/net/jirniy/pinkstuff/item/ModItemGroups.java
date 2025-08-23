@@ -99,6 +99,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CUT_PINK_SANDSTONE);
                         entries.add(ModBlocks.CUT_PINK_SANDSTONE_SLAB);
                         entries.add(ModBlocks.CHISELED_PINK_SANDSTONE);
+                        entries.add(ModBlocks.ASH_BLOCK);
 
                         entries.add(ModItems.STYXCOAL);
                         entries.add(ModBlocks.STYXCOAL_BLOCK);
@@ -128,6 +129,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SULFUR);
                         entries.add(ModBlocks.NETHER_SULFUR_ORE);
+                        entries.add(ModBlocks.STYXIAN_SULFUR_ORE);
+                        entries.add(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE);
                         entries.add(ModBlocks.SULFUR_BLOCK);
 
                         entries.add(ModItems.RAW_KUNZITE);
@@ -779,6 +782,9 @@ public class ModItemGroups {
             entries.add(ModBlocks.THERMIUM_ORE);
             entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
             entries.add(ModBlocks.NETHER_SULFUR_ORE);
+            entries.add(ModBlocks.STYXIAN_SULFUR_ORE);
+            entries.add(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE);
+            entries.add(ModBlocks.STYXIAN_MOONSTEEL_ORE);
             entries.add(ModBlocks.END_PINLINE_ORE);
             entries.add(ModBlocks.COMPRESSED_END_PINLINE_ORE);
             entries.add(ModBlocks.STYXIAN_STYXCOAL_ORE);
@@ -795,6 +801,7 @@ public class ModItemGroups {
 
             entries.add(ModBlocks.PINK_SAND);
             entries.add(ModBlocks.PINK_SANDSTONE);
+            entries.add(ModBlocks.ASH_BLOCK);
             entries.add(ModBlocks.BLACK_GOOP);
             entries.add(ModBlocks.STYXSTONE);
             entries.add(ModBlocks.COMPRESSED_STYXSTONE);

@@ -6,6 +6,7 @@ import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -20,7 +21,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
         valueLookupBuilder(ModTags.Items.KUNZITE_REPAIR)
-                .add(ModItems.KUNZITE);
+                .add(ModItems.KUNZITE)
+                .add(Items.AMETHYST_SHARD);
         valueLookupBuilder(ModTags.Items.ELYSIUM_REPAIR)
                 .add(ModItems.ELYSIUM_INGOT);
         valueLookupBuilder(ModTags.Items.PINLINE_REPAIR)

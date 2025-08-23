@@ -55,6 +55,7 @@ public class ModTags {
         public static final TagKey<Item> MOONSTEEL_REPAIR = createTag("moonsteel_repair");
         public static final TagKey<Item> CERILLE_REPAIR = createTag("cerille_repair");
         public static final TagKey<Item> SUNBLAZE_REPAIR = createTag("sunblaze_repair");
+        public static final TagKey<Item> AMETHYST_REPAIR = createTag("amethyst_repair");
         public static final TagKey<Item> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Item> CHORUS_LOGS = createTag("chorus_logs");
         public static final TagKey<Item> ASHEN_LOGS = createTag("ashen_logs");

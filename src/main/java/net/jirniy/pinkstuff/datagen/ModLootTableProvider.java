@@ -170,6 +170,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.THERMIUM_ORE, multipleOreDrops(ModBlocks.THERMIUM_ORE, ModItems.RAW_THERMIUM, 1, 2));
         addDrop(ModBlocks.DEEPSLATE_THERMIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_THERMIUM_ORE, ModItems.RAW_THERMIUM, 1, 3));
         addDrop(ModBlocks.NETHER_SULFUR_ORE, oreDrops(ModBlocks.NETHER_SULFUR_ORE, ModItems.SULFUR));
+        addDrop(ModBlocks.STYXIAN_SULFUR_ORE, oreDrops(ModBlocks.STYXIAN_SULFUR_ORE, ModItems.SULFUR));
+        addDrop(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE, ModItems.SULFUR));
         addDrop(ModBlocks.END_PINLINE_ORE, oreDrops(ModBlocks.END_PINLINE_ORE, ModItems.RAW_PINLINE));
         addDrop(ModBlocks.COMPRESSED_END_PINLINE_ORE, oreDrops(ModBlocks.COMPRESSED_END_PINLINE_ORE, ModItems.RAW_PINLINE));
         addDrop(ModBlocks.STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
@@ -202,6 +204,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAW_MOONSTEEL_BLOCK);
         addDrop(ModBlocks.CERILLE_BLOCK);
         addDrop(ModBlocks.SUNGAZE_BLOCK);
+        addDrop(ModBlocks.ASH_BLOCK);
 
         addDrop(ModBlocks.PINK_SAND);
         addDrop(ModBlocks.PINK_SANDSTONE);
