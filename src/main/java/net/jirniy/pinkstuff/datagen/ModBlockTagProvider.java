@@ -617,5 +617,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE);
         valueLookupBuilder(BlockTags.CROPS)
                 .add(ModBlocks.COTTON);
+        valueLookupBuilder(BlockTags.CLIMBABLE)
+                .add(ModBlocks.STYXMOSS_VINE);
     }
 }

@@ -9,6 +9,7 @@ import net.jirniy.pinkstuff.block.custom.HangingStyxgrassBlock;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.jirniy.pinkstuff.world.features.HangingStyxgrassDecorator;
 import net.jirniy.pinkstuff.world.features.ModFeatures;
+import net.jirniy.pinkstuff.world.features.StyxmossVineDecorator;
 import net.minecraft.block.*;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -333,7 +334,7 @@ public class ModConfiguredFeatures {
                 ),
                 new CherryFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(1), ConstantIntProvider.create(4), 0.25F, 0.5F, 0.16666667F, 0.33333334F),
                 new TwoLayersFeatureSize(1, 0, 2))
-                .decorators(ImmutableList.of(new HangingStyxgrassDecorator(0.25f)))
+                .decorators(ImmutableList.of(new HangingStyxgrassDecorator(0.25f), new StyxmossVineDecorator()))
                 .dirtProvider(BlockStateProvider.of(ModBlocks.STYXIAN_SOIL)).build());
 
         register(context, TALL_KEAPHE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(

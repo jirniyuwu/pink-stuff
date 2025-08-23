@@ -9,6 +9,7 @@ import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 
 public class ModTreeDecorators<P extends TreeDecorator> {
     public static final TreeDecoratorType<HangingStyxgrassDecorator> HANGING_STYXGRASS = register("hanging_styxgrass", HangingStyxgrassDecorator.CODEC);
+    public static final TreeDecoratorType<StyxmossVineDecorator> STYXMOSS_VINE = register("styxmoss_vine", StyxmossVineDecorator.CODEC);
 
     private static <P extends TreeDecorator> TreeDecoratorType<P> register(String id, MapCodec<P> codec) {
         return Registry.register(Registries.TREE_DECORATOR_TYPE, id, new TreeDecoratorType<P>(codec));
