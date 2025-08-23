@@ -12,7 +12,10 @@
           "probability": 0.4
         },
         "output_state": {
-          "Name": "pinkstuff:black_goop"
+          "Name": "pinkstuff:black_goop",
+          "Properties": {
+            "spreadable": "false"
+          }
         }
       },
       {
@@ -90,7 +93,10 @@
           "probability": 0.2
         },
         "output_state": {
-          "Name": "pinkstuff:black_goop"
+          "Name": "pinkstuff:black_goop",
+          "Properties": {
+            "spreadable": "false"
+          }
         }
       },
       {
@@ -116,7 +122,10 @@
           "probability": 0.2
         },
         "output_state": {
-          "Name": "pinkstuff:black_goop"
+          "Name": "pinkstuff:black_goop",
+          "Properties": {
+            "spreadable": "false"
+          }
         }
       },
       {
@@ -142,7 +151,10 @@
           "probability": 0.2
         },
         "output_state": {
-          "Name": "pinkstuff:black_goop"
+          "Name": "pinkstuff:black_goop",
+          "Properties": {
+            "spreadable": "false"
+          }
         }
       },
       {

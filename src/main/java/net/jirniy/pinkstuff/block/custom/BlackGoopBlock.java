@@ -1,7 +1,6 @@
 package net.jirniy.pinkstuff.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.fabricmc.fabric.impl.object.builder.FabricEntityTypeImpl;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.util.ModGamerules;
@@ -13,26 +12,29 @@ import net.minecraft.block.TranslucentBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCollisionHandler;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.property.Properties;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class BlackGoopBlock extends TranslucentBlock {
     public static final MapCodec<BlackGoopBlock> CODEC = createCodec(BlackGoopBlock::new);
+    public static final BooleanProperty SPREADABLE = BooleanProperty.of("spreadable");
 
     public MapCodec<BlackGoopBlock> getCodec() {
         return CODEC;
@@ -70,10 +72,41 @@ public class BlackGoopBlock extends TranslucentBlock {
 
     @Override
     protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!world.getGameRules().getBoolean(ModGamerules.DISABLE_CORRUPTION_SPREAD)) {
+        if (!world.getGameRules().getBoolean(ModGamerules.DISABLE_CORRUPTION_SPREAD) && state.get(SPREADABLE)) {
             spread(world, pos, random);
         }
         super.randomTick(state, world, pos, random);
+    }
+
+    @Override
+    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+        if (placer != null && placer.isPlayer()) {
+            world.setBlockState(pos, state.with(SPREADABLE, false));
+        }
+        super.onPlaced(world, pos, state, placer, itemStack);
+    }
+
+    @Override
+    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (stack.isOf(Items.SHEARS)) {
+            if (state.get(SPREADABLE) == true) {
+                world.setBlockState(pos, state.with(SPREADABLE, false));
+                stack.damage(1, player);
+                world.playSoundAtBlockCenterClient(pos, SoundEvents.ITEM_SHEARS_SNIP, SoundCategory.BLOCKS, 1, 1, true);
+                world.addBlockBreakParticles(pos, state);
+            } else if (state.get(SPREADABLE) == false) {
+                world.setBlockState(pos, state.with(SPREADABLE, true));
+                stack.damage(1, player);
+                world.playSoundAtBlockCenterClient(pos, SoundEvents.ITEM_SHEARS_SNIP, SoundCategory.BLOCKS, 1, 1, true);
+                world.addBlockBreakParticles(pos, state);
+            }
+        }
+        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(SPREADABLE);
     }
 
     protected void spread(ServerWorld world, BlockPos pos, Random random) {
@@ -93,7 +126,7 @@ public class BlackGoopBlock extends TranslucentBlock {
                     world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
                             SoundCategory.BLOCKS, 1f, 1, true);
                 }
-            } else if (random.nextInt(5) == 1) {
+            } else if (random.nextInt(20) == 1) {
                 world.setBlockState(pos.up(), ModBlocks.CORRUPT_ROOTS.getDefaultState());
                 world.playSoundAtBlockCenterClient(pos.south(), SoundEvents.BLOCK_HONEY_BLOCK_SLIDE,
                         SoundCategory.BLOCKS, 1f, 1, true);
