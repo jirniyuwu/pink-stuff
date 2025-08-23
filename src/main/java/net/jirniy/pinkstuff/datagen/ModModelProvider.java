@@ -254,6 +254,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerbed(ModBlocks.DEATH_FLOWERS);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.STYXMOSS, ModBlocks.STYXMOSS_CARPET);
         blockStateModelGenerator.registerHangingMoss(ModBlocks.HANGING_STYXGRASS);
+        blockStateModelGenerator.registerHangingMoss(ModBlocks.HANGING_STYXMOSS);
 
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.AMETHYST_CLUMP);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.DIAMOND_CLUMP);

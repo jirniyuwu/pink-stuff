@@ -287,6 +287,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHORUS_LILY);
                         entries.add(ModBlocks.STYXGRASS);
                         entries.add(ModBlocks.HANGING_STYXGRASS);
+                        entries.add(ModBlocks.HANGING_STYXMOSS);
                         entries.add(ModBlocks.STYXMOSS_VINE);
                         entries.add(ModBlocks.DEATH_FLOWERS);
 
@@ -841,6 +842,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.MEMORIA_BOURPEER);
             entries.add(ModBlocks.STYXGRASS);
             entries.add(ModBlocks.HANGING_STYXGRASS);
+            entries.add(ModBlocks.HANGING_STYXMOSS);
             entries.add(ModBlocks.STYXMOSS_VINE);
             entries.add(ModBlocks.DEATH_FLOWERS);
             entries.add(ModBlocks.CORRUPT_ROOTS);

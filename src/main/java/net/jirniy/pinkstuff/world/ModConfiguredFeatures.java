@@ -203,9 +203,9 @@ public class ModConfiguredFeatures {
                 new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
                         BlockStateProvider.of(ModBlocks.STYXMOSS), PlacedFeatures.createEntry(Feature.BLOCK_COLUMN,
                         new BlockColumnFeatureConfig(List.of(BlockColumnFeatureConfig.createLayer(
-                                UniformIntProvider.create(1, 3), BlockStateProvider.of(ModBlocks.HANGING_STYXGRASS.getDefaultState().with(HangingStyxgrassBlock.TIP, false))),
+                                UniformIntProvider.create(1, 3), BlockStateProvider.of(ModBlocks.HANGING_STYXMOSS.getDefaultState().with(HangingStyxgrassBlock.TIP, false))),
                                 BlockColumnFeatureConfig.createLayer(ConstantIntProvider.create(1),
-                                        BlockStateProvider.of(ModBlocks.HANGING_STYXGRASS.getDefaultState().with(HangingStyxgrassBlock.TIP, true)))),
+                                        BlockStateProvider.of(ModBlocks.HANGING_STYXMOSS.getDefaultState().with(HangingStyxgrassBlock.TIP, true)))),
                                 Direction.DOWN, BlockPredicate.IS_AIR, true)),
                 VerticalSurfaceType.CEILING, UniformIntProvider.create(1, 2), 0.5F, 5,
                         0.1F, UniformIntProvider.create(3, 6), 0.3F));

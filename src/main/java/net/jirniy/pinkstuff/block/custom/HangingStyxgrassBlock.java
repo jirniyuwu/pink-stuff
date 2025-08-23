@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff.block.custom;
 
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HangingMossBlock;
 import net.minecraft.block.MultifaceBlock;
@@ -31,6 +32,6 @@ public class HangingStyxgrassBlock extends HangingMossBlock {
     private boolean canPlaceAt(BlockView world, BlockPos pos) {
         BlockState blockState;
         BlockPos blockPos = pos.offset(Direction.UP);
-        return MultifaceBlock.canGrowOn(world, Direction.UP, blockPos, blockState = world.getBlockState(blockPos)) || blockState.isOf(ModBlocks.HANGING_STYXGRASS);
+        return MultifaceBlock.canGrowOn(world, Direction.UP, blockPos, blockState = world.getBlockState(blockPos)) || blockState.isOf(this);
     }
 }

@@ -197,6 +197,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_STYXSTONE);
         addDrop(ModBlocks.STYXGRASS, dropsWithShears(ModBlocks.STYXGRASS));
         addDrop(ModBlocks.HANGING_STYXGRASS, dropsWithShears(ModBlocks.HANGING_STYXGRASS));
+        addDrop(ModBlocks.HANGING_STYXMOSS, dropsWithShears(ModBlocks.HANGING_STYXMOSS));
         addDrop(ModBlocks.STYXMOSS_VINE, dropsWithShears(ModBlocks.STYXMOSS_VINE));
         addDrop(ModBlocks.DEATH_FLOWERS, segmentedDrops(ModBlocks.DEATH_FLOWERS));
         addDrop(ModBlocks.STYXCOAL_BLOCK);

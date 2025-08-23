@@ -134,6 +134,9 @@ public class ModBlocks {
     public static final Block HANGING_STYXGRASS = registerBlock("hanging_styxgrass",
             properties -> new HangingStyxgrassBlock(properties.strength(0f).replaceable()
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.MOSS_CARPET).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block HANGING_STYXMOSS = registerBlock("hanging_styxmoss",
+            properties -> new HangingStyxgrassBlock(properties.strength(0f).replaceable()
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.MOSS_CARPET).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block STYXMOSS_VINE = registerBlock("styxmoss_vine",
             properties -> new VineBlock(properties.mapColor(MapColor.PALE_PURPLE).replaceable().noCollision()
                     .ticksRandomly().strength(0.2F).sounds(BlockSoundGroup.MOSS_CARPET).burnable().pistonBehavior(PistonBehavior.DESTROY)));
