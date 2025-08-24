@@ -162,6 +162,36 @@
           "predicate_type": "minecraft:always_true"
         },
         "input_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:black_goop"
+        },
+        "output_state": {
+          "Name": "pinkstuff:black_goop",
+          "Properties": {
+            "spreadable": "false"
+          }
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:corrupt_ore"
+        },
+        "output_state": {
+          "Name": "pinkstuff:corrupt_ore",
+          "Properties": {
+            "spreadable": "false"
+          }
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
           "predicate_type": "minecraft:random_block_match",
           "block": "pinkstuff:chiseled_pink_sandstone",
           "probability": 0.3
