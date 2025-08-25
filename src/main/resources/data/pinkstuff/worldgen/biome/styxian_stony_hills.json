@@ -54,7 +54,9 @@
     ],
     [],
     [],
-    [],
+    [
+      "pinkstuff:styxian_gravel_placed"
+    ],
     []
   ],
   "has_precipitation": false,

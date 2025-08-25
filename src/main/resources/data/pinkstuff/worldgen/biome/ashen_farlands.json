@@ -60,7 +60,8 @@
       "minecraft:spring_delta",
       "minecraft:patch_fire",
       "minecraft:patch_dead_bush_2",
-      "pinkstuff:styxian_ashen_placed"
+      "pinkstuff:styxian_ashen_placed",
+      "pinkstuff:styxian_gravel_placed"
     ]
   ],
   "has_precipitation": false,

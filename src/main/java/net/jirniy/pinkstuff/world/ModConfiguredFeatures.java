@@ -46,7 +46,6 @@ import java.util.OptionalInt;
 import static net.minecraft.block.Blocks.*;
 
 public class ModConfiguredFeatures {
-    // CF -> PF -> WG
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> KUNZITE_ORE_KEY = registryKey("kunzite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_AMETHYST_ORE_KEY = registryKey("styxian_amethyst_ore");
@@ -92,6 +91,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_ROCK_KEY = registryKey("styxian_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOSSY_STYXIAN_ROCK_KEY = registryKey("mossy_styxian_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_CLAY_PATCH_KEY = registryKey("styxian_clay_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_GRAVEL_PATCH_KEY = registryKey("styxian_gravel_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_KEY = registryKey("styxmoss_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_VEGETATION_KEY = registryKey("styxmoss_vegetation");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_BONEMEAL_KEY = registryKey("styxmoss_patch_bonemeal");
@@ -168,6 +168,11 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXIAN_SOIL), CLAY.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), CLAY.getDefaultState())),
                 14));
+        register(context, STYXIAN_GRAVEL_PATCH_KEY, Feature.ORE, new OreFeatureConfig(
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.ASH_BLOCK), GRAVEL.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), GRAVEL.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), GRAVEL.getDefaultState())),
+                18));
         register(context, STYXMOSS_VEGETATION_KEY, Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                         .add(ModBlocks.STYXMOSS_CARPET.getDefaultState(), 10)
