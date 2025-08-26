@@ -21,5 +21,12 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
                 .add(ModEntities.CORRUPTED_ZOMBIE);
         valueLookupBuilder(EntityTypeTags.SENSITIVE_TO_BANE_OF_ARTHROPODS)
                 .add(ModEntities.CRAWLER);
+        valueLookupBuilder(EntityTypeTags.SKELETONS)
+                .add(ModEntities.CORRUPTED_SKELETON);
+        valueLookupBuilder(EntityTypeTags.ZOMBIES)
+                .add(ModEntities.CORRUPTED_ZOMBIE);
+        valueLookupBuilder(EntityTypeTags.INVERTED_HEALING_AND_HARM)
+                .add(ModEntities.CORRUPTED_SKELETON)
+                .add(ModEntities.CORRUPTED_ZOMBIE);
     }
 }

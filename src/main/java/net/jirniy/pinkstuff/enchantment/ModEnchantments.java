@@ -47,7 +47,7 @@ public class ModEnchantments {
         register(registerable, CLEANSE, new Enchantment.Builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                 items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
-                3,
+                5,
                 4,
                 Enchantment.leveledCost(4, 12),
                 Enchantment.leveledCost(19, 9),
