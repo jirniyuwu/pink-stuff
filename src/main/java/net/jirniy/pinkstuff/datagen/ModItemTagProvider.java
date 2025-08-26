@@ -54,6 +54,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SUNBLAZE_PICKAXE)
                 .add(ModItems.ELYSIUM_HAMMER)
                 .add(ModItems.ELYSIUM_MULTITOOL)
+                .add(ModItems.SUNBLAZE_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.SHOVELS)
                 .add(ModItems.KUNZITE_SHOVEL)
@@ -63,6 +64,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MOONSTEEL_SHOVEL)
                 .add(ModItems.CERILLE_SHOVEL)
                 .add(ModItems.SUNBLAZE_SHOVEL)
+                .add(ModItems.SUNBLAZE_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.AXES)
                 .add(ModItems.KUNZITE_AXE)
@@ -72,6 +74,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CERILLE_AXE)
                 .add(ModItems.SUNBLAZE_AXE)
                 .add(ModItems.ELYSIUM_MULTITOOL)
+                .add(ModItems.SUNBLAZE_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.HOES)
                 .add(ModItems.KUNZITE_HOE)
@@ -81,6 +84,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CERILLE_HOE)
                 .add(ModItems.SUNBLAZE_HOE)
                 .add(ModItems.ELYSIUM_MULTITOOL)
+                .add(ModItems.SUNBLAZE_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_HELMET)

@@ -410,6 +410,7 @@
   "item.pinkstuff.sunblaze_axe": "Sunblaze Axe",
   "item.pinkstuff.sunblaze_shovel": "Sunblaze Shovel",
   "item.pinkstuff.sunblaze_hoe": "Sunblaze Hoe",
+  "item.pinkstuff.sunblaze_multitool": "Sunblaze Multitool",
 
   "item.pinkstuff.sunblaze_helmet": "Sunblaze Helmet",
   "item.pinkstuff.sunblaze_chestplate": "Sunblaze Chestplate",
@@ -574,6 +575,8 @@
   "advancements.main.pinline_ingot.title": "End-stained alloy",
   "advancements.main.netherite_multitool.description": "Craft a Netherite Multitool by combining Tools of The Nether and metal of The End",
   "advancements.main.netherite_multitool.title": "One for all",
+  "advancements.main.sunblaze_multitool.description": "Craft a Sunblaze Multitool",
+  "advancements.main.sunblaze_multitool.title": "Compromised Sun",
   "advancements.main.full_pinline.description": "Obtain a full set of Pinline armor",
   "advancements.main.full_pinline.title": "Heavy yet Lightweight",
   "advancements.main.enter_styxia.description": "Enter Styxia, the \"Dead\" dimension",

@@ -439,6 +439,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SUNBLAZE_AXE);
                         entries.add(ModItems.SUNBLAZE_SHOVEL);
                         entries.add(ModItems.SUNBLAZE_HOE);
+                        entries.add(ModItems.SUNBLAZE_MULTITOOL);
                         entries.add(ModItems.SUNBLAZE_HELMET);
                         entries.add(ModItems.SUNBLAZE_CHESTPLATE);
                         entries.add(ModItems.SUNBLAZE_LEGGINGS);
@@ -901,6 +902,7 @@ public class ModItemGroups {
             entries.add(ModItems.SUNBLAZE_AXE);
             entries.add(ModItems.SUNBLAZE_SHOVEL);
             entries.add(ModItems.SUNBLAZE_HOE);
+            entries.add(ModItems.SUNBLAZE_MULTITOOL);
             entries.add(ModItems.PINLINE_PICKAXE);
             entries.add(ModItems.PINLINE_AXE);
             entries.add(ModItems.PINLINE_SHOVEL);

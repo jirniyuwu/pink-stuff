@@ -316,7 +316,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.EMERALD_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.NETHERITE_NUGGET, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.AMETHYST_BLAZE_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AMETHYST_BLAZE_ROD, Models.HANDHELD_ROD);
 
         itemModelGenerator.register(ModItems.SULFUR, Models.GENERATED);
         itemModelGenerator.register(ModItems.STYXCOAL, Models.GENERATED);

@@ -1,0 +1,35 @@
+{
+  "parent": "pinkstuff:main/sungaze",
+  "criteria": {
+    "sunblaze_multitool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:sunblaze_multitool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.sunblaze_multitool.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:sunblaze_multitool"
+    },
+    "title": {
+      "translate": "advancements.main.sunblaze_multitool.title"
+    },
+    "show_toast": true,
+    "frame": "goal"
+  },
+  "requirements": [
+    [
+      "sunblaze_multitool"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

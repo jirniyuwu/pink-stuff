@@ -104,6 +104,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.SUNBLAZE_AXE,
                         ModItems.SUNBLAZE_SHOVEL,
                         ModItems.SUNBLAZE_HOE,
+                        ModItems.SUNBLAZE_MULTITOOL,
                         ModItems.SUNBLAZE_HELMET,
                         ModItems.SUNBLAZE_CHESTPLATE,
                         ModItems.SUNBLAZE_LEGGINGS,
@@ -180,6 +181,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         2f, 1280, "pinline_smelting");
                 offerBlasting(List.of(ModItems.PREPARED_PINLINE), RecipeCategory.MISC, ModItems.PINLINE_INGOT,
                         2f, 640, "pinline_blasting");
+                offerSmelting(List.of(ModBlocks.PINK_SAND.asItem()), RecipeCategory.MISC, Blocks.GLASS,
+                        1f, 200, "pink_sand_to_glass_smelting");
+                offerBlasting(List.of(ModBlocks.PINK_SAND.asItem()), RecipeCategory.MISC, Blocks.GLASS,
+                        1f, 100, "pink_sand_to_glass_blasting");
                 offerSmelting(List.of(Items.MAGMA_CREAM), RecipeCategory.MISC, Items.FIRE_CHARGE,
                         0.1f, 160, "fire_charge_smelting");
                 offerBlasting(List.of(Items.MAGMA_CREAM), RecipeCategory.MISC, Items.FIRE_CHARGE,
@@ -506,6 +511,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.SUNGAZE), conditionsFromItem(ModItems.SUNGAZE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_hoe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.SUNBLAZE_MULTITOOL)
+                        .pattern("III")
+                        .pattern("PAS")
+                        .pattern("TBT")
+                        .input('I', ModItems.AMETHYST_BLAZE_ROD)
+                        .input('T', ModItems.THERMIUM)
+                        .input('B', ModBlocks.SUNGAZE_BLOCK.asItem())
+                        .input('P', ModItems.SUNBLAZE_PICKAXE)
+                        .input('S', ModItems.SUNBLAZE_SHOVEL)
+                        .input('A', ModItems.SUNBLAZE_AXE)
+                        .criterion(hasItem(ModItems.AMETHYST_BLAZE_ROD), conditionsFromItem(ModItems.AMETHYST_BLAZE_ROD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunblaze_multitool")));
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_ICE, 1)
                         .pattern("PPP")

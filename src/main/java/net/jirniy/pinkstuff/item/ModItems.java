@@ -198,6 +198,8 @@ public class ModItems {
             setting -> new DawnbloomerItem(setting.sword(ModToolMaterials.SPECIAL, 7, -1.8f).rarity(Rarity.RARE)));
     public static final Item NETHERITE_MULTITOOL = registerItem("netherite_multitool",
             setting -> new MultitoolItem(ToolMaterial.NETHERITE, 3, -1f, setting.rarity(Rarity.UNCOMMON)));
+    public static final Item SUNBLAZE_MULTITOOL = registerItem("sunblaze_multitool",
+            setting -> new MultitoolItem(ModToolMaterials.SUNBLAZE, 1.5f, -1f, setting.rarity(Rarity.UNCOMMON)));
     public static final Item BEDROCK_BREAKER = registerItem("bedrock_breaker",
             setting -> new BreakerItem(setting.maxCount(16)));
 
