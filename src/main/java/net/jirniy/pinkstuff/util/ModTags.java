@@ -2,8 +2,11 @@ package net.jirniy.pinkstuff.util;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.EntityTypeTags;
 import net.minecraft.registry.tag.StructureTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
@@ -87,6 +90,14 @@ public class ModTags {
 
         private static TagKey<Structure> createTag(String name) {
             return TagKey.of(RegistryKeys.STRUCTURE, Identifier.of(JirniysPinkStuff.MOD_ID, name));
+        }
+    }
+
+    public static class Entities {
+        public static final TagKey<EntityType<?>> CLEANSE_APPLICABLE = createTag("corrupt");
+
+        private static TagKey<EntityType<?>> createTag(String name) {
+            return TagKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, name));
         }
     }
 }
