@@ -58,6 +58,7 @@
   "item.pinkstuff.crystal_carrot": "Crystal Carrot",
   "item.pinkstuff.gem_berry": "Gem Berries",
   "item.pinkstuff.charmberry": "Charmberries",
+  "item.pinkstuff.berry_salad": "Berry Salad",
   "item.pinkstuff.hazeweaver": "Hazeweaver",
 
   "item.pinkstuff.pink_ice": "Pink Ice",
@@ -497,6 +498,7 @@
   "tag.item.pinkstuff.ashen_logs": "Ashen Logs",
   "tag.item.pinkstuff.keaphe_logs": "Keaphe Logs",
   "tag.item.pinkstuff.crystal_cherry_logs": "Crystal Cherry Logs",
+  "tag.item.pinkstuff.berries": "Any Berry",
   "tag.item.pinkstuff.elysium_repair": "Elysium Repair",
   "tag.item.pinkstuff.kunzite_repair": "Kunzite Repair",
   "tag.item.pinkstuff.pinline_repair": "Pinline Repair",

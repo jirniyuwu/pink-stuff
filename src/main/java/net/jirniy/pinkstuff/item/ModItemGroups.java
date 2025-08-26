@@ -374,6 +374,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CRYSTAL_CARROT);
                         entries.add(ModItems.GEM_BERRY);
                         entries.add(ModItems.CHARMBERRY);
+                        entries.add(ModItems.BERRY_SALAD);
                         entries.add(ModItems.HAZEWEAVER);
 
                         entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
@@ -677,6 +678,7 @@ public class ModItemGroups {
             entries.add(ModItems.CRYSTAL_CARROT);
             entries.add(ModItems.GEM_BERRY);
             entries.add(ModItems.CHARMBERRY);
+            entries.add(ModItems.BERRY_SALAD);
             entries.add(ModItems.HAZEWEAVER);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {

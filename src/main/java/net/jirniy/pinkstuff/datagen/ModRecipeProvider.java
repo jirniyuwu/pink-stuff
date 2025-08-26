@@ -2087,6 +2087,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mossy_cobbled_styxstone")));
 
+                createShapeless(RecipeCategory.MISC, ModItems.BERRY_SALAD, 1)
+                        .input(ModTags.Items.BERRIES).input(ModTags.Items.BERRIES).input(ModTags.Items.BERRIES).input(Items.BOWL)
+                        .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "berry_salad")));
+
                 createShapeless(RecipeCategory.MISC, Items.GUNPOWDER, 1)
                         .input(ModItems.SULFUR).input(ItemTags.COALS).input(ItemTags.COALS)
                         .criterion(hasItem(ModItems.SULFUR), conditionsFromItem(ModItems.SULFUR))

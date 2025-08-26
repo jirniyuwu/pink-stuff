@@ -25,9 +25,13 @@ public class ModFoodComponents {
     public static final FoodComponent GEM_BERRY = new FoodComponent.Builder().nutrition(2).saturationModifier(0.2f).build();
     public static final ConsumableComponent GEM_BERRY_EFFECT = food().consumeSeconds(0.8F).build();
 
-    public static final FoodComponent CHARMBERRY = new FoodComponent.Builder().nutrition(2).saturationModifier(0.3f).build();
+    public static final FoodComponent CHARMBERRY = new FoodComponent.Builder().nutrition(2).saturationModifier(0.5f).build();
     public static final ConsumableComponent CHARMBERRY_EFFECT = food().consumeSeconds(1F)
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20, 0), 0.8f)).build();
+
+    public static final FoodComponent BERRY_SALAD = new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).build();
+    public static final ConsumableComponent BERRY_SALAD_EFFECT = food().consumeEffect(new ApplyEffectsConsumeEffect(
+            new StatusEffectInstance(StatusEffects.REGENERATION, 100, 0), 1f)).build();
 
     public static final FoodComponent COAL_MEAL = new FoodComponent.Builder().nutrition(1).saturationModifier(0.2f).build();
     public static final ConsumableComponent COAL_MEAL_EFFECT = food()
