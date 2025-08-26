@@ -3,6 +3,8 @@ package net.jirniy.pinkstuff.world.gen;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.jirniy.pinkstuff.entity.ModEntities;
+import net.jirniy.pinkstuff.entity.custom.CorruptedSkeletonEntity;
+import net.jirniy.pinkstuff.entity.custom.CorruptedZombieEntity;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.SpawnLocationTypes;
@@ -17,8 +19,8 @@ public class MobEntitySpawns {
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.NETHER_WASTES), SpawnGroup.CREATURE, ModEntities.CRAWLER, 6, 1, 4);
         SpawnRestriction.register(ModEntities.CRAWLER, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CrawlerEntity::canSpawn);
 
-        SpawnRestriction.register(ModEntities.CORRUPTED_SKELETON, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);
-        SpawnRestriction.register(ModEntities.CORRUPTED_ZOMBIE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);
+        SpawnRestriction.register(ModEntities.CORRUPTED_SKELETON, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CorruptedSkeletonEntity::canSpawn);
+        SpawnRestriction.register(ModEntities.CORRUPTED_ZOMBIE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CorruptedZombieEntity::canSpawn);
         SpawnRestriction.register(ModEntities.AMETHYST_BLAZE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);
     }
 }

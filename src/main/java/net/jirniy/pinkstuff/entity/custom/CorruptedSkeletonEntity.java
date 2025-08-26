@@ -2,14 +2,21 @@ package net.jirniy.pinkstuff.entity.custom;
 
 import net.jirniy.pinkstuff.effect.ModEffects;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.Difficulty;
+import net.minecraft.world.LightType;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
 public class CorruptedSkeletonEntity extends SkeletonEntity {
@@ -39,9 +46,12 @@ public class CorruptedSkeletonEntity extends SkeletonEntity {
     protected int getBurningDuration() {
         return 0;
     }
-
     @Override
     public boolean isOnFire() {
         return false;
+    }
+
+    public static boolean canSpawn(EntityType<? extends HostileEntity> type, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
+        return world.getDifficulty() != Difficulty.PEACEFUL && world.getLightLevel(LightType.BLOCK, pos) <= 0 && canMobSpawn(type, world, spawnReason, pos, random);
     }
 }
