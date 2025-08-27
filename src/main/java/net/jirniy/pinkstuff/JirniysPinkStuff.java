@@ -17,6 +17,7 @@ import net.jirniy.pinkstuff.enchantment.ModEnchantmentEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.custom.AmethystBlazeEntity;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
+import net.jirniy.pinkstuff.entity.custom.ExofairyEntity;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.particle.ModParticles;
@@ -158,6 +159,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		});
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CRAWLER, CrawlerEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.EXOFAIRY, ExofairyEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_ZOMBIE, ZombieEntity.createZombieAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_SKELETON, SkeletonEntity.createAbstractSkeletonAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeEntity.createAmethystBlazeAttributes());

@@ -1,6 +1,8 @@
 {
   "item.pinkstuff.crawler_spawn_egg": "Crawler Spawn Egg",
   "entity.pinkstuff.crawler": "Crawler",
+  "item.pinkstuff.exofairy_spawn_egg": "Exofairy Spawn Egg",
+  "entity.pinkstuff.exofairy": "Exofairy",
   "item.pinkstuff.corrupted_zombie_spawn_egg": "Corrupted Zombie Spawn Egg",
   "entity.pinkstuff.corrupted_zombie": "Corrupted Zombie",
   "item.pinkstuff.corrupted_skeleton_spawn_egg": "Corrupted Skeleton Spawn Egg",
@@ -25,6 +27,7 @@
   "item.pinkstuff.kunzite_nugget": "Kunzite Nugget",
   "item.pinkstuff.raw_kunzite": "Raw Kunzite",
   "item.pinkstuff.pink_bits": "Pink bits",
+  "item.pinkstuff.magic_glitter": "Magic Glitter",
   "item.pinkstuff.crystal_glitter": "Crystal Glitter",
   "item.pinkstuff.elysium_nugget": "Elysium Nugget",
   "item.pinkstuff.elysium_ingot": "Elysium Ingot",
@@ -59,6 +62,8 @@
   "item.pinkstuff.gem_berry": "Gem Berries",
   "item.pinkstuff.charmberry": "Charmberries",
   "item.pinkstuff.berry_salad": "Berry Salad",
+  "item.pinkstuff.fairy_meat": "Fairy Meat",
+  "item.pinkstuff.cooked_fairy_meat": "Cooked Fairy Meat",
   "item.pinkstuff.hazeweaver": "Hazeweaver",
 
   "item.pinkstuff.pink_ice": "Pink Ice",

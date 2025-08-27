@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:thermium_blaster",
+  "ingredient": "pinkstuff:magic_glitter",
+  "fuel_cost": 32,
+  "cooking_time": 200,
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:elysium_nugget"
+  }
+}

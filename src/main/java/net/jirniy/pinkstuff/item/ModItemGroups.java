@@ -20,6 +20,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.pinkstuff.kunzite_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CRAWLER_SPAWN_EGG);
+                        entries.add(ModItems.EXOFAIRY_SPAWN_EGG);
                         entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
                         entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
                         entries.add(ModItems.AMETHYST_BLAZE_SPAWN_EGG);
@@ -153,6 +154,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.KUNZITE_BRICKS_WALL);
                         entries.add(ModBlocks.KUNZITE_ROD);
 
+                        entries.add(ModItems.MAGIC_GLITTER);
                         entries.add(ModItems.CRYSTAL_GLITTER);
                         entries.add(ModItems.ELYSIUM_NUGGET);
                         entries.add(ModItems.ELYSIUM_INGOT);
@@ -376,6 +378,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CHARMBERRY);
                         entries.add(ModItems.BERRY_SALAD);
                         entries.add(ModItems.HAZEWEAVER);
+                        entries.add(ModItems.RAW_FAIRY_MEAT);
+                        entries.add(ModItems.COOKED_FAIRY_MEAT);
 
                         entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
                         entries.add(ModItems.CHERRY_SMITHING_TEMPLATE);
@@ -694,6 +698,7 @@ public class ModItemGroups {
             entries.add(ModItems.KUNZITE_NUGGET);
             entries.add(ModItems.KUNZITE);
             entries.add(ModItems.PINK_BITS);
+            entries.add(ModItems.MAGIC_GLITTER);
             entries.add(ModItems.CRYSTAL_GLITTER);
             entries.add(ModItems.ELYSIUM_NUGGET);
             entries.add(ModItems.ELYSIUM_INGOT);
@@ -838,6 +843,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.LARGE_END_GRASS);
             entries.add(ModBlocks.CHORUS_LILY);
             entries.add(ModItems.HAZEWEAVER);
+            entries.add(ModItems.RAW_FAIRY_MEAT);
+            entries.add(ModItems.COOKED_FAIRY_MEAT);
             entries.add(ModBlocks.AMETHYST_PARTERS);
             entries.add(ModBlocks.KUNZITE_LOVELILY);
             entries.add(ModBlocks.ELYSIAN_SKYBERRY);
@@ -861,6 +868,7 @@ public class ModItemGroups {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
             entries.add(ModItems.CRAWLER_SPAWN_EGG);
+            entries.add(ModItems.EXOFAIRY_SPAWN_EGG);
             entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
             entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
             entries.add(ModItems.AMETHYST_BLAZE_SPAWN_EGG);

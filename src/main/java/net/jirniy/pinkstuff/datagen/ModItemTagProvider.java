@@ -400,5 +400,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CHARMBERRY)
                 .add(Items.GLOW_BERRIES)
                 .add(Items.SWEET_BERRIES);
+        valueLookupBuilder(ItemTags.MEAT)
+                .add(ModItems.COOKED_FAIRY_MEAT)
+                .add(ModItems.RAW_FAIRY_MEAT);
     }
 }

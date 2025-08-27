@@ -33,6 +33,12 @@ public class ModFoodComponents {
     public static final ConsumableComponent BERRY_SALAD_EFFECT = food().consumeEffect(new ApplyEffectsConsumeEffect(
             new StatusEffectInstance(StatusEffects.REGENERATION, 100, 0), 1f)).build();
 
+    public static final FoodComponent RAW_FAIRY_MEAT = new FoodComponent.Builder().nutrition(2).saturationModifier(0.5f).build();
+    public static final ConsumableComponent RAW_FAIRY_MEAT_EFFECT = food().build();
+    public static final FoodComponent COOKED_FAIRY_MEAT = new FoodComponent.Builder().nutrition(5).saturationModifier(0.8f).build();
+    public static final ConsumableComponent COOKED_FAIRY_MEAT_EFFECT = food().consumeEffect(new ApplyEffectsConsumeEffect(
+            new StatusEffectInstance(StatusEffects.REGENERATION, 160, 0), 0.8f)).build();
+
     public static final FoodComponent COAL_MEAL = new FoodComponent.Builder().nutrition(1).saturationModifier(0.2f).build();
     public static final ConsumableComponent COAL_MEAL_EFFECT = food()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.POISON, 80, 0), 1f)).build();

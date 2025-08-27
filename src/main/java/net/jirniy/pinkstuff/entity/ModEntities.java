@@ -2,6 +2,7 @@ package net.jirniy.pinkstuff.entity;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.entity.custom.*;
+import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -14,6 +15,8 @@ import net.minecraft.util.Identifier;
 public class ModEntities {
     private static final RegistryKey<EntityType<?>> CRAWLER_KEY =
             RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "crawler"));
+    private static final RegistryKey<EntityType<?>> EXOFAIRY_KEY =
+            RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "exofairy"));
     private static final RegistryKey<EntityType<?>> CORRUPTED_ZOMBIE_KEY =
             RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupted_zombie"));
     private static final RegistryKey<EntityType<?>> CORRUPTED_SKELETON_KEY =
@@ -27,6 +30,11 @@ public class ModEntities {
             Identifier.of(JirniysPinkStuff.MOD_ID, "crawler"),
             EntityType.Builder.create(CrawlerEntity::new, SpawnGroup.CREATURE)
                     .dimensions(0.5f, 0.25f).build(CRAWLER_KEY));
+
+    public static final EntityType<ExofairyEntity> EXOFAIRY = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "exofairy"),
+            EntityType.Builder.create(ExofairyEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(0.35F, 0.6F).build(EXOFAIRY_KEY));
 
     public static final EntityType<CorruptedZombieEntity> CORRUPTED_ZOMBIE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "corrupted_zombie"),

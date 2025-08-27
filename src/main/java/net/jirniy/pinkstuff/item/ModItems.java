@@ -63,6 +63,7 @@ public class ModItems {
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.KUNZITE)));
     public static final Item RAW_KUNZITE = registerItem("raw_kunzite", Item::new);
 
+    public static final Item MAGIC_GLITTER = registerItem("magic_glitter", Item::new);
     public static final Item CRYSTAL_GLITTER = registerItem("crystal_glitter", Item::new);
     public static final Item ELYSIUM_NUGGET = registerItem("elysium_nugget", Item::new);
     public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot",
@@ -103,9 +104,15 @@ public class ModItems {
     public static final Item HAZEWEAVER = registerItem("hazeweaver",
             setting -> new BlockItem(ModBlocks.HAZEWEAVER_PLANT, setting
                     .food(ModFoodComponents.HAZEWEAVER, ModFoodComponents.HAZEWEAVER_EFFECT)));
+    public static final Item RAW_FAIRY_MEAT = registerItem("fairy_meat",
+            setting -> new Item(setting.food(ModFoodComponents.RAW_FAIRY_MEAT, ModFoodComponents.RAW_FAIRY_MEAT_EFFECT)));
+    public static final Item COOKED_FAIRY_MEAT = registerItem("cooked_fairy_meat",
+            setting -> new Item(setting.food(ModFoodComponents.COOKED_FAIRY_MEAT, ModFoodComponents.COOKED_FAIRY_MEAT_EFFECT)));
 
     public static final Item CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
             setting -> new SpawnEggItem(ModEntities.CRAWLER, setting));
+    public static final Item EXOFAIRY_SPAWN_EGG = registerItem("exofairy_spawn_egg",
+            setting -> new SpawnEggItem(ModEntities.EXOFAIRY, setting));
     public static final Item CORRUPTED_ZOMBIE_SPAWN_EGG = registerItem("corrupted_zombie_spawn_egg",
             setting -> new SpawnEggItem(ModEntities.CORRUPTED_ZOMBIE, setting));
     public static final Item CORRUPTED_SKELETON_SPAWN_EGG = registerItem("corrupted_skeleton_spawn_egg",

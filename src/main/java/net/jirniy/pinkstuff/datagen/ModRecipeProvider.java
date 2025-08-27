@@ -12,7 +12,7 @@ import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -193,6 +193,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         0f, 1280, "fire_to_charcoal_smelting");
                 offerBlasting(List.of(Items.FIRE_CHARGE), RecipeCategory.MISC, Items.CHARCOAL,
                         0f, 640, "fire_to_charcoal_blasting");
+                offerSmelting(List.of(ModItems.RAW_FAIRY_MEAT), RecipeCategory.FOOD, ModItems.COOKED_FAIRY_MEAT,
+                        1f, 200, "fairy_meat_smelting");
+                offerFoodCookingRecipe("smoking", RecipeSerializer.SMOKING, SmokingRecipe::new,
+                        100, ModItems.RAW_FAIRY_MEAT, ModItems.COOKED_FAIRY_MEAT, 0.1f);
                 offerSmelting(List.of(ModBlocks.COBBLED_STYXSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXSTONE,
                         0f, 200, "cobbled_styxstone_to_styxstone_smelting");
                 offerBlasting(List.of(ModBlocks.COBBLED_STYXSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXSTONE,
@@ -239,6 +243,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.KUNZITE), conditionsFromItem(ModItems.KUNZITE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_glitter")));
+                createShapeless(RecipeCategory.MISC, ModItems.CRYSTAL_GLITTER, 1)
+                        .input(ModItems.KUNZITE).input(Items.DIAMOND).input(Items.QUARTZ).input(Items.AMETHYST_SHARD)
+                        .input(ModItems.MAGIC_GLITTER).input(ModItems.MAGIC_GLITTER)
+                        .criterion(hasItem(ModItems.MAGIC_GLITTER), conditionsFromItem(ModItems.MAGIC_GLITTER))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crystal_glitter_from_magic_glitter")));
                 createShapeless(RecipeCategory.MISC, ModItems.KUNZITE, 1)
                         .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)
                         .input(ModItems.PINK_BITS).input(ModItems.PINK_BITS).input(ModItems.PINK_BITS)

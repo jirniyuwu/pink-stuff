@@ -306,6 +306,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CRAWLER_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EXOFAIRY_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPTED_SKELETON_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.AMETHYST_BLAZE_SPAWN_EGG, Models.GENERATED);
@@ -336,6 +337,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.KUNZITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_KUNZITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTAL_GLITTER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAGIC_GLITTER, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.ELYSIUM_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIUM_INGOT, Models.GENERATED);
@@ -354,6 +356,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GODFRUIT, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTAL_CARROT, Models.GENERATED);
         itemModelGenerator.register(ModItems.BERRY_SALAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_FAIRY_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_FAIRY_MEAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.COTTON, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.THERMIUM_NUGGET, Models.GENERATED);
