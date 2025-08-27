@@ -253,7 +253,8 @@ public class ModConfiguredFeatures {
         register(context, CORRUPTION_SPIKE_KEY, ModFeatures.CORRUPTION_SPIKE, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BLACK_GOOP)));
         register(context, AMETHYST_SPIKE_KEY, ModFeatures.CORRUPTION_SPIKE, new SimpleBlockFeatureConfig(
                 new WeightedBlockStateProvider(Pool.<BlockState>builder()
-                .add(AMETHYST_BLOCK.getDefaultState(), 29)
+                .add(ModBlocks.GLOWING_AMETHYST.getDefaultState(), 2)
+                .add(AMETHYST_BLOCK.getDefaultState(), 5)
                 .add(BUDDING_AMETHYST.getDefaultState(), 1))));
         register(context, CORRUPTION_DISC_KEY, Feature.DISK, new DiskFeatureConfig(
                 PredicatedStateProvider.of(ModBlocks.BLACK_GOOP),

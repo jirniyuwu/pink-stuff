@@ -109,6 +109,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.AMETHYST_NUGGET);
                         entries.add(ModBlocks.AMETHYST_CLUMP);
+                        entries.add(ModBlocks.GLOWING_AMETHYST);
                         entries.add(ModBlocks.STYXIAN_AMETHYST_ORE);
                         entries.add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);
                         entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
@@ -822,6 +823,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.STYXIAN_SOIL);
             entries.add(ModBlocks.STYXMOSS);
             entries.add(ModBlocks.STYXMOSS_CARPET);
+
+            entries.add(ModBlocks.GLOWING_AMETHYST);
 
             entries.add(ModBlocks.COMPRESSED_END_STONE);
             entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);

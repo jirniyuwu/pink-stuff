@@ -20,6 +20,16 @@
           }
         }
       }
+    },
+    "cherry": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": "pinkstuff:crystal_city"
+          }
+        }
+      }
     }
   },
   "display": {
@@ -38,7 +48,8 @@
   "requirements": [
     [
       "forest",
-      "desert"
+      "desert",
+      "cherry"
     ]
   ],
   "sends_telemetry_event": false

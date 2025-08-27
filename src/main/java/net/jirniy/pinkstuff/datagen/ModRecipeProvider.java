@@ -2180,6 +2180,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "glowing_cherry_leaves")));
 
+                createShapeless(RecipeCategory.MISC, ModBlocks.GLOWING_AMETHYST, 1)
+                        .input(Blocks.AMETHYST_BLOCK).input(Items.GLOWSTONE_DUST).input(Items.GLOWSTONE_DUST).input(Items.GLOWSTONE_DUST)
+                        .criterion(hasItem(Blocks.AMETHYST_BLOCK), conditionsFromItem(Blocks.AMETHYST_BLOCK))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "glowing_amethyst")));
+
                 createShapeless(RecipeCategory.MISC, Items.PURPLE_DYE, 1)
                         .input(ModBlocks.DEATH_FLOWERS)
                         .criterion(hasItem(ModBlocks.DEATH_FLOWERS), conditionsFromItem(ModBlocks.DEATH_FLOWERS))

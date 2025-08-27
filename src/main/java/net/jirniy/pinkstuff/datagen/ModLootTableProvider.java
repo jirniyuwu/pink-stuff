@@ -61,6 +61,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.POLISHED_MABRIZE);
         addDrop(ModBlocks.AMETHYST_BRICKS);
         addDrop(ModBlocks.POLISHED_AMETHYST_BLOCK);
+        addDrop(ModBlocks.GLOWING_AMETHYST, Blocks.AMETHYST_BLOCK);
         addDrop(ModBlocks.AMETHYST_TILES);
         addDrop(ModBlocks.KUNZITE_BRICKS);
         addDrop(ModBlocks.ELYSIUM_BRICKS);
