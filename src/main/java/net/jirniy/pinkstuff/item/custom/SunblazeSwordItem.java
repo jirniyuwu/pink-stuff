@@ -5,12 +5,14 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.mojang.datafixers.util.Pair;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
@@ -34,6 +36,11 @@ public class SunblazeSwordItem extends Item {
     @Override
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         target.setOnFireForTicks(80);
+        if (attacker.isPlayer()) {
+            if (attacker.getRandom().nextInt(10) == 1) {
+                attacker.addStatusEffect(new StatusEffectInstance(ModEffects.DAWNBREAKER, 80, 0));
+            }
+        }
         super.postHit(stack, target, attacker);
     }
 

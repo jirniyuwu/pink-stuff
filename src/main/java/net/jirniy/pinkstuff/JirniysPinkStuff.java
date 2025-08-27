@@ -1,5 +1,8 @@
 package net.jirniy.pinkstuff;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.MultimapBuilder;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
@@ -27,13 +30,16 @@ import net.jirniy.pinkstuff.world.features.ModTreeDecorators;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
 import net.kyrptonaught.customportalapi.CustomPortalBlock;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
-import net.minecraft.block.LadderBlock;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
-import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
@@ -41,6 +47,7 @@ import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOffers;
 import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
+import net.minecraft.world.event.GameEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -112,20 +119,21 @@ public class JirniysPinkStuff implements ModInitializer {
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-			if (player.getMainHandStack().getItem() == ModItems.DAWNBLOOMER && !world.isClient()) {
+			if (entity.isLiving() && !world.isClient()) {
+				LivingEntity livingEntity = (LivingEntity) entity;
 				ServerWorld serverWorld = (ServerWorld) world;
-				serverWorld.spawnParticles(ModParticles.RIFT_PARTICLE,
-						entity.getX(), entity.getY() + (entity.getEyeHeight(entity.getPose()) / 1.5),
-						entity.getZ(), 1, 0, 0, 0, 0);
-			}
-			if (player.hasStatusEffect(ModEffects.DAWNBREAKER) && !world.isClient()) {
-				ServerWorld serverWorld = (ServerWorld) world;
-				serverWorld.spawnParticles(ModParticles.DAWNBREAK_PARTICLE,
-						entity.getX(), entity.getY() + (entity.getEyeHeight(entity.getPose()) / 1.5),
-						entity.getZ(), 1, 0, 0, 0, 0);
-				entity.damage((ServerWorld) world, world.getDamageSources().magic(),
-						2 + player.getStatusEffect(ModEffects.DAWNBREAKER).getAmplifier());
-				player.removeStatusEffect(ModEffects.DAWNBREAKER);
+				if (player.hasStatusEffect(ModEffects.DAWNBREAKER)) {
+					serverWorld.spawnParticles(ModParticles.DAWNBREAK_PARTICLE,
+							entity.getX(), entity.getY() + (entity.getEyeHeight(entity.getPose()) / 1.5),
+							entity.getZ(), 1, 0, 0, 0, 0);
+					float healthAfter = livingEntity.getHealth() - (2 + player.getStatusEffect(ModEffects.DAWNBREAKER).getAmplifier());
+					if (healthAfter <= 0) {
+						livingEntity.setHealth(0.001f);
+					} else {
+						livingEntity.setHealth(healthAfter);
+					}
+					player.removeStatusEffect(ModEffects.DAWNBREAKER);
+				}
 			}
 			return ActionResult.PASS;
 		});

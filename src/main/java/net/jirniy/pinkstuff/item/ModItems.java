@@ -180,7 +180,7 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterials.CERILLE, 0, -3f, setting));
 
     public static final Item SUNBLAZE_SWORD = registerItem("sunblaze_sword",
-            setting -> new SunblazeSwordItem(setting.sword(ModToolMaterials.SUNBLAZE, 3.5f, -2.0f)));
+            setting -> new SunblazeSwordItem(setting.sword(ModToolMaterials.SUNBLAZE, 3f, -2.0f)));
     public static final Item SUNBLAZE_PICKAXE = registerItem("sunblaze_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.SUNBLAZE, 1.6f, -2.8f)));
     public static final Item SUNBLAZE_SHOVEL = registerItem("sunblaze_shovel",
