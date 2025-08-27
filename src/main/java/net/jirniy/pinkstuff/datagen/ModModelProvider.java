@@ -429,6 +429,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.OVERGROWTH_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPTION_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FORBIDDEN_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FAIRYTALE_SMITHING_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.registerArmor(ModItems.KUNZITE_HELMET,
                 ModArmorMaterials.KUNZITE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);

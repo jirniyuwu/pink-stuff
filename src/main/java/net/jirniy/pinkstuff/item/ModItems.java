@@ -288,6 +288,8 @@ public class ModItems {
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.RARE)));
     public static final Item FORBIDDEN_SMITHING_TEMPLATE = registerItem("forbidden_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.UNCOMMON)));
+    public static final Item FAIRYTALE_SMITHING_TEMPLATE = registerItem("fairytale_armor_trim_smithing_template",
+            setting -> SmithingTemplateItem.of(setting.rarity(Rarity.RARE)));
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {

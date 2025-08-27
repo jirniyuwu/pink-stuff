@@ -2239,6 +2239,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTrimRecipe(ModItems.FORBIDDEN_SMITHING_TEMPLATE, ModTrimPatterns.FORBIDDEN,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "forbidden")));
                 offerSmithingTemplateCopyingRecipe(ModItems.FORBIDDEN_SMITHING_TEMPLATE, ModBlocks.COMPRESSED_STYXSTONE);
+                offerSmithingTrimRecipe(ModItems.FAIRYTALE_SMITHING_TEMPLATE, ModTrimPatterns.FAIRYTALE,
+                        RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "fairytale")));
+                offerSmithingTemplateCopyingRecipe(ModItems.FAIRYTALE_SMITHING_TEMPLATE, ModBlocks.POLISHED_AMETHYST_BLOCK);
             }
         };
     }
