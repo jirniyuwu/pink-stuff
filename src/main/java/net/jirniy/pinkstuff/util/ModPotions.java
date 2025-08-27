@@ -22,6 +22,13 @@ public class ModPotions {
     public static final RegistryEntry<Potion> STRONG_LIFE_TRADE = registerPotion("strong_life_trade",
             new Potion("life_trade", new StatusEffectInstance(ModEffects.LIFE_TRADE, 1800, 1)));
 
+    public static final RegistryEntry<Potion> FAIRY_SUPPORT = registerPotion("fairy_support",
+            new Potion("fairy_support", new StatusEffectInstance(ModEffects.FAIRY_SUPPORT, 900, 0)));
+    public static final RegistryEntry<Potion> LONG_FAIRY_SUPPORT = registerPotion("long_fairy_support",
+            new Potion("fairy_support", new StatusEffectInstance(ModEffects.FAIRY_SUPPORT, 1800, 0)));
+    public static final RegistryEntry<Potion> STRONG_FAIRY_SUPPORT = registerPotion("strong_fairy_support",
+            new Potion("fairy_support", new StatusEffectInstance(ModEffects.FAIRY_SUPPORT, 400, 1)));
+
     public static final RegistryEntry<Potion> CORRUPT = registerPotion("corrupt",
             new Potion("corrupt", new StatusEffectInstance(ModEffects.DEATH_GRIP, 800, 0)));
     public static final RegistryEntry<Potion> STRONG_CORRUPT = registerPotion("strong_corrupt",

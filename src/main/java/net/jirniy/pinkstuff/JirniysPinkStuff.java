@@ -173,6 +173,10 @@ public class JirniysPinkStuff implements ModInitializer {
 			builder.registerPotionRecipe(ModPotions.LIFE_TRADE, Items.GLOWSTONE_DUST, ModPotions.STRONG_LIFE_TRADE);
 			builder.registerPotionRecipe(ModPotions.LIFE_TRADE, Items.REDSTONE, ModPotions.LONG_LIFE_TRADE);
 
+			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.MAGIC_GLITTER, ModPotions.FAIRY_SUPPORT);
+			builder.registerPotionRecipe(ModPotions.FAIRY_SUPPORT, Items.GLOWSTONE_DUST, ModPotions.STRONG_FAIRY_SUPPORT);
+			builder.registerPotionRecipe(ModPotions.FAIRY_SUPPORT, Items.REDSTONE, ModPotions.LONG_FAIRY_SUPPORT);
+
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.CORRUPT_MASS, ModPotions.CORRUPT);
 			builder.registerPotionRecipe(ModPotions.CORRUPT, Items.GLOWSTONE_DUST, ModPotions.STRONG_CORRUPT);
 
