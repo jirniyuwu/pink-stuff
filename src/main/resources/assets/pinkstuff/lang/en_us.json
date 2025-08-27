@@ -439,6 +439,11 @@
   "item.minecraft.lingering_potion.effect.corrupt": "Lingering Potion of Corruption",
   "item.minecraft.tipped_arrow.effect.corrupt": "Arrow of Corruption",
 
+  "item.minecraft.potion.effect.life_trade": "Potion of Heartblaze",
+  "item.minecraft.splash_potion.effect.life_trade": "Splash Potion of Heartblaze",
+  "item.minecraft.lingering_potion.effect.life_trade": "Lingering Potion of Heartblaze",
+  "item.minecraft.tipped_arrow.effect.life_trade": "Arrow of Heartblaze",
+
   "enchantment.pinkstuff.lightning": "Curse of Lightning",
   "enchantment.pinkstuff.fragility": "Curse of Fragility",
   "enchantment.pinkstuff.length": "Length",
@@ -450,6 +455,7 @@
   "effect.pinkstuff.dawnbreaker": "Dawnbreaker",
   "effect.pinkstuff.grounded": "Grounded",
   "effect.pinkstuff.death_grip": "Death Grip",
+  "effect.pinkstuff.life_trade": "Life Trade",
 
   "item.pinkstuff.cherry_armor_trim_smithing_template": "Cherry Armor Trim",
   "trim_pattern.pinkstuff.cherry": "Cherry Trim Pattern",

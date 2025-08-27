@@ -15,6 +15,13 @@ public class ModPotions {
     public static final RegistryEntry<Potion> STRONG_GROUNDED = registerPotion("strong_grounded",
             new Potion("grounded", new StatusEffectInstance(ModEffects.GROUNDED, 200, 1)));
 
+    public static final RegistryEntry<Potion> LIFE_TRADE = registerPotion("life_trade",
+            new Potion("life_trade", new StatusEffectInstance(ModEffects.LIFE_TRADE, 3600, 0)));
+    public static final RegistryEntry<Potion> LONG_LIFE_TRADE = registerPotion("long_life_trade",
+            new Potion("life_trade", new StatusEffectInstance(ModEffects.LIFE_TRADE, 9600, 0)));
+    public static final RegistryEntry<Potion> STRONG_LIFE_TRADE = registerPotion("strong_life_trade",
+            new Potion("life_trade", new StatusEffectInstance(ModEffects.LIFE_TRADE, 1800, 1)));
+
     public static final RegistryEntry<Potion> CORRUPT = registerPotion("corrupt",
             new Potion("corrupt", new StatusEffectInstance(ModEffects.DEATH_GRIP, 800, 0)));
     public static final RegistryEntry<Potion> STRONG_CORRUPT = registerPotion("strong_corrupt",

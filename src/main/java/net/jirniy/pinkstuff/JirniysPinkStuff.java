@@ -41,6 +41,7 @@ import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
@@ -137,6 +138,24 @@ public class JirniysPinkStuff implements ModInitializer {
 			}
 			return ActionResult.PASS;
 		});
+		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+			if (entity.isLiving() && !world.isClient()) {
+				LivingEntity livingEntity = (LivingEntity) entity;
+				ServerWorld serverWorld = (ServerWorld) world;
+				if (player.hasStatusEffect(ModEffects.LIFE_TRADE)) {
+					float damage = 1 + player.getStatusEffect(ModEffects.LIFE_TRADE).getAmplifier();
+					float healthAfter = livingEntity.getHealth() - damage;
+					if (healthAfter <= 0) {
+						player.heal(damage * 4);
+						livingEntity.setHealth(0.001f);
+					} else {
+						livingEntity.setHealth(healthAfter);
+					}
+					player.damage(serverWorld, serverWorld.getDamageSources().generic(), damage / 2);
+				}
+			}
+			return ActionResult.PASS;
+		});
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CRAWLER, CrawlerEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_ZOMBIE, ZombieEntity.createZombieAttributes());
@@ -146,6 +165,10 @@ public class JirniysPinkStuff implements ModInitializer {
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.PREPARED_PINLINE, ModPotions.GROUNDED);
 			builder.registerPotionRecipe(ModPotions.GROUNDED, Items.GLOWSTONE_DUST, ModPotions.STRONG_GROUNDED);
+
+			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.ELYSIUM_INGOT, ModPotions.LIFE_TRADE);
+			builder.registerPotionRecipe(ModPotions.LIFE_TRADE, Items.GLOWSTONE_DUST, ModPotions.STRONG_LIFE_TRADE);
+			builder.registerPotionRecipe(ModPotions.LIFE_TRADE, Items.REDSTONE, ModPotions.LONG_LIFE_TRADE);
 
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.CORRUPT_MASS, ModPotions.CORRUPT);
 			builder.registerPotionRecipe(ModPotions.CORRUPT, Items.GLOWSTONE_DUST, ModPotions.STRONG_CORRUPT);

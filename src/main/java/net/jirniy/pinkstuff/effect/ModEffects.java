@@ -14,6 +14,8 @@ public class ModEffects {
 
     public static final RegistryEntry<StatusEffect> DAWNBREAKER = registerStatusEffect("dawnbreaker",
             new BlankEffect(StatusEffectCategory.BENEFICIAL, 0xFFC1AD));
+    public static final RegistryEntry<StatusEffect> LIFE_TRADE = registerStatusEffect("life_trade",
+            new BlankEffect(StatusEffectCategory.NEUTRAL, 0xFF495C));
     public static final RegistryEntry<StatusEffect> GROUNDED = registerStatusEffect("grounded",
             new GroundedEffect(StatusEffectCategory.HARMFUL, 0xA39CB2)
                     .addAttributeModifier(EntityAttributes.GRAVITY,
