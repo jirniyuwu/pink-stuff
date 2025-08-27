@@ -49,10 +49,9 @@ public class ExofairyEntity extends AnimalEntity {
         this.goalSelector.add(0, new AnimalMateGoal(this, 1.15D));
         this.goalSelector.add(1, new TemptGoal(this, 1.1D, Ingredient.ofItems(ModItems.CHARMBERRY), false));
         this.goalSelector.add(2, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
-        this.goalSelector.add(4, new FlyGoal(this, 1.0D));
+        this.goalSelector.add(3, new FlyGoal(this, 1.0D));
+        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
         this.goalSelector.add(5, new LookAroundGoal(this));
-        this.goalSelector.add(6, new WanderAroundFarGoal(this, 1.0D));
     }
 
     @Override

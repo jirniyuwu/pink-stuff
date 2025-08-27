@@ -11,6 +11,16 @@
         }
       }
     },
+    "magic_crystals": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:magic_crystals"
+          }
+        }
+      }
+    },
     "ashen_farlands": {
       "trigger": "minecraft:location",
       "conditions": {
@@ -107,6 +117,9 @@
     ],
     [
       "ashen_farlands"
+    ],
+    [
+      "magic_crystals"
     ]
   ],
   "sends_telemetry_event": false

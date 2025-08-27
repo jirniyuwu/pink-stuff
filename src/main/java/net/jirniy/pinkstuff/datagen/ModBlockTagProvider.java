@@ -229,7 +229,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_LEAVES)
                 .add(ModBlocks.SNOWY_SPRUCE_LEAVES)
                 .add(ModBlocks.KEAPHE_LEAVES)
-                .add(ModBlocks.FLOWERING_KEAPHE_LEAVES);
+                .add(ModBlocks.FLOWERING_KEAPHE_LEAVES)
+                .add(ModBlocks.GLOWING_CHERRY_LEAVES);
         valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.AMETHYST_BULB)
                 .add(ModBlocks.KUNZITE_BULB)
@@ -563,6 +564,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_LILY);
         valueLookupBuilder(BlockTags.BEE_ATTRACTIVE)
                 .add(ModBlocks.CRYSTAL_CHERRY_LEAVES)
+                .add(ModBlocks.GLOWING_CHERRY_LEAVES)
                 .add(ModBlocks.KUNZITE_LOVELILY)
                 .add(ModBlocks.AMETHYST_PARTERS)
                 .add(ModBlocks.ELYSIAN_SKYBERRY)

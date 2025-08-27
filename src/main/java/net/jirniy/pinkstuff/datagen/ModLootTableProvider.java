@@ -236,6 +236,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 1, 2));
+        addDrop(ModBlocks.GLOWING_CHERRY_LEAVES, leavesDrops(ModBlocks.GLOWING_CHERRY_LEAVES, Blocks.CHERRY_SAPLING, 0.05f));
 
         addDrop(ModBlocks.CHORUS_LOG);
         addDrop(ModBlocks.CHORUS_WOOD);

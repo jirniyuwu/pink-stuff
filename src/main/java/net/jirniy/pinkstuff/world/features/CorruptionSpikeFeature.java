@@ -7,22 +7,23 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.StructureWorldAccess;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
-public class CorruptionSpikeFeature extends Feature<DefaultFeatureConfig> {
-    public CorruptionSpikeFeature(Codec<DefaultFeatureConfig> codec) {
+public class CorruptionSpikeFeature extends Feature<SimpleBlockFeatureConfig> {
+    public CorruptionSpikeFeature(Codec<SimpleBlockFeatureConfig> codec) {
         super(codec);
     }
 
     @Override
-    public boolean generate(FeatureContext<DefaultFeatureConfig> context) {
+    public boolean generate(FeatureContext<SimpleBlockFeatureConfig> context) {
         int l;
         int k;
         BlockPos blockPos = context.getOrigin();
         Random random = context.getRandom();
         StructureWorldAccess structureWorldAccess = context.getWorld();
+        SimpleBlockFeatureConfig simpleBlockFeatureConfig = context.getConfig();
         while (structureWorldAccess.isAir(blockPos) && blockPos.getY() > structureWorldAccess.getBottomY() + 2) {
             blockPos = blockPos.down();
         }
@@ -46,11 +47,11 @@ public class CorruptionSpikeFeature extends Feature<DefaultFeatureConfig> {
                         continue;
                     BlockState blockState = structureWorldAccess.getBlockState(blockPos.add(m, k, n));
                     if (blockState.isAir() || isSoil(blockState) || blockState.isOf(ModBlocks.STYXIAN_SOIL) || blockState.isOf(ModBlocks.STYXSTONE)) {
-                        this.setBlockState(structureWorldAccess, blockPos.add(m, k, n), ModBlocks.BLACK_GOOP.getDefaultState());
+                        this.setBlockState(structureWorldAccess, blockPos.add(m, k, n), simpleBlockFeatureConfig.toPlace().get(random, blockPos));
                     }
                     if (k == 0 || l <= 1 || !(blockState = structureWorldAccess.getBlockState(blockPos.add(m, -k, n))).isAir() && !isSoil(blockState) && !blockState.isOf(ModBlocks.STYXIAN_SOIL) && !blockState.isOf(ModBlocks.STYXSTONE))
                         continue;
-                    this.setBlockState(structureWorldAccess, blockPos.add(m, -k, n), ModBlocks.BLACK_GOOP.getDefaultState());
+                    this.setBlockState(structureWorldAccess, blockPos.add(m, -k, n), simpleBlockFeatureConfig.toPlace().get(random, blockPos));
                 }
             }
         }
@@ -69,7 +70,7 @@ public class CorruptionSpikeFeature extends Feature<DefaultFeatureConfig> {
                     p = random.nextInt(5);
                 }
                 while (blockPos2.getY() > 50 && ((blockState2 = structureWorldAccess.getBlockState(blockPos2)).isAir() || isSoil(blockState2) || blockState2.isOf(ModBlocks.STYXIAN_SOIL) || blockState2.isOf(ModBlocks.STYXSTONE) || blockState2.isOf(ModBlocks.BLACK_GOOP))) {
-                    this.setBlockState(structureWorldAccess, blockPos2, ModBlocks.BLACK_GOOP.getDefaultState());
+                    this.setBlockState(structureWorldAccess, blockPos2, simpleBlockFeatureConfig.toPlace().get(random, blockPos));
                     blockPos2 = blockPos2.down();
                     if (--p > 0) continue;
                     blockPos2 = blockPos2.down(random.nextInt(5) + 1);

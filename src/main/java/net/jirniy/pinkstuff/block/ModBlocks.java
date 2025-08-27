@@ -317,6 +317,13 @@ public class ModBlocks {
                     .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
                     .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
                     .solidBlock(Blocks::never)));
+    public static final Block GLOWING_CHERRY_LEAVES = registerBlock("glowing_cherry_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.1f, ParticleTypes.CHERRY_LEAVES, properties
+                    .mapColor(MapColor.PINK).strength(0.2F).ticksRandomly().luminance(state -> 8)
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
 
     public static final Block CRYSTAL_CHERRY_SAPLING = registerBlock("crystal_cherry_sapling",
             properties -> new ModSaplingBlock(ModSaplingGenerator.CRYSTAL_CHERRY, properties.mapColor(MapColor.PINK)

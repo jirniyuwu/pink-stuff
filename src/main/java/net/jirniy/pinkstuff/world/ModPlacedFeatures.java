@@ -42,6 +42,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> KEAPHE_TREE_PLACED_KEY = registerKey("keaphe_placed");
     public static final RegistryKey<PlacedFeature> KEAPHE_FOREST_PLACED_KEY = registerKey("keaphe_forest_placed");
     public static final RegistryKey<PlacedFeature> GIANT_KEAPHE_TREE_PLACED_KEY = registerKey("giant_keaphe_placed");
+    public static final RegistryKey<PlacedFeature> GIANT_CHERRY_TREE_PLACED_KEY = registerKey("giant_cherry_placed");
     public static final RegistryKey<PlacedFeature> CRYSTAL_CHERRY_PLACED_KEY = registerKey("crystal_cherry_placed");
     public static final RegistryKey<PlacedFeature> SNOWY_SPRUCE_PLACED_KEY = registerKey("snowy_spruce_placed");
     public static final RegistryKey<PlacedFeature> GEM_BERRY_BUSH_PLACED_KEY = registerKey("gem_berry_bush_placed");
@@ -65,6 +66,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CORRUPTION_SPIKE_PLACED_KEY = registerKey("corruption_spike_placed");
     public static final RegistryKey<PlacedFeature> CORRUPTION_DISC_PLACED_KEY = registerKey("corruption_disc_placed");
     public static final RegistryKey<PlacedFeature> CORRUPT_ROOTS_PLACED_KEY = registerKey("corrupt_roots_placed");
+    public static final RegistryKey<PlacedFeature> AMETHYST_SPIKE_PLACED_KEY = registerKey("amethyst_spike_placed");
     public static final RegistryKey<PlacedFeature> DEATHFLOWER_PLACED_KEY = registerKey("deathflower_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_ROCK_PLACED_KEY = registerKey("styxian_rock_placed");
     public static final RegistryKey<PlacedFeature> MOSSY_STYXIAN_ROCK_PLACED_KEY = registerKey("mossy_styxian_rock_placed");
@@ -77,6 +79,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STYXMOSS_DISC_PLACED_KEY = registerKey("styxmoss_disc_placed");
     public static final RegistryKey<PlacedFeature> CRAWLER_STONE_PLACED_KEY = registerKey("crawler_stone_placed");
     public static final RegistryKey<PlacedFeature> COTTON_PATCH_PLACED_KEY = registerKey("cotton_patch_placed");
+    public static final RegistryKey<PlacedFeature> AMETHYST_PATCH_PLACED_KEY = registerKey("amethyst_patch_placed");
+    public static final RegistryKey<PlacedFeature> CHARMBERRY_PATCH_PLACED_KEY = registerKey("charmberry_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_DELTA_PLACED_KEY = registerKey("styxian_delta_placed");
     public static final RegistryKey<PlacedFeature> ASH_PATCH_PLACED_KEY = registerKey("ash_patch_placed");
 
@@ -161,6 +165,10 @@ public class ModPlacedFeatures {
         register(context, CORRUPTION_SPIKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTION_SPIKE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(6, 0.5f, 3), Blocks.SHORT_GRASS
+                ));
+        register(context, AMETHYST_SPIKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETHYST_SPIKE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), Blocks.SHORT_GRASS
                 ));
         register(context, CORRUPTION_DISC_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTION_DISC_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
@@ -266,6 +274,10 @@ public class ModPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.5f, 2), ModBlocks.KEAPHE_SAPLING
                 ));
+        register(context, GIANT_CHERRY_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GIANT_CHERRY_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), ModBlocks.CRYSTAL_CHERRY_SAPLING
+                ));
         register(context, KEAPHE_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.TALL_KEAPHE_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(5, 0.5f, 2), ModBlocks.KEAPHE_SAPLING
@@ -311,6 +323,10 @@ public class ModPlacedFeatures {
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, COTTON_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COTTON_PATCH_KEY),
                 RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, AMETHYST_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETHYST_PATCH_KEY),
+                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, CHARMBERRY_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CHARMBERRY_PATCH_KEY),
+                RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

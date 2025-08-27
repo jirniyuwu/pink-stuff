@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.world;
 import com.google.common.collect.ImmutableList;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.block.custom.CharmberryBushBlock;
 import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.block.custom.HangingStyxgrassBlock;
@@ -66,6 +67,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> KEAPHE_TREE_KEY = registryKey("keaphe_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TALL_KEAPHE_TREE_KEY = registryKey("tall_keaphe_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_KEAPHE_TREE_KEY = registryKey("giant_keaphe_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_CHERRY_TREE_KEY = registryKey("giant_cherry_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SNOWY_SPRUCE_TREE_KEY = registryKey("snowy_spruce_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HAZEWEAVER_PLANT_KEY = registryKey("hazeweaver_plant");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SMALL_END_GRASS_KEY = registryKey("small_end_grass");
@@ -87,6 +89,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_DISC_KEY = registryKey("corruption_disc");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPT_ROOTS_KEY = registryKey("corrupt_roots");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPT_ORE_KEY = registryKey("corrupt_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AMETHYST_SPIKE_KEY = registryKey("amethyst_spike");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEATHFLOWER_KEY = registryKey("deathflower");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_ROCK_KEY = registryKey("styxian_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOSSY_STYXIAN_ROCK_KEY = registryKey("mossy_styxian_rock");
@@ -100,6 +103,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_DISK_KEY = registryKey("styxmoss_disk_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRAWLER_STONE_KEY = registryKey("crawler_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> COTTON_PATCH_KEY = registryKey("cotton_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CHARMBERRY_PATCH_KEY = registryKey("charmberry_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AMETHYST_PATCH_KEY = registryKey("amethyst_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_DELTA_KEY = registryKey("styxian_delta");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ASH_PATCH_KEY = registryKey("ash_patch");
 
@@ -245,7 +250,11 @@ public class ModConfiguredFeatures {
         register(context, STYXIAN_DELTA_KEY, Feature.DELTA_FEATURE, new DeltaFeatureConfig(
                 Blocks.LAVA.getDefaultState(), Blocks.MAGMA_BLOCK.getDefaultState(), UniformIntProvider.create(3, 5), UniformIntProvider.create(1, 3)));
 
-        register(context, CORRUPTION_SPIKE_KEY, ModFeatures.CORRUPTION_SPIKE, new DefaultFeatureConfig());
+        register(context, CORRUPTION_SPIKE_KEY, ModFeatures.CORRUPTION_SPIKE, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BLACK_GOOP)));
+        register(context, AMETHYST_SPIKE_KEY, ModFeatures.CORRUPTION_SPIKE, new SimpleBlockFeatureConfig(
+                new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                .add(AMETHYST_BLOCK.getDefaultState(), 29)
+                .add(BUDDING_AMETHYST.getDefaultState(), 1))));
         register(context, CORRUPTION_DISC_KEY, Feature.DISK, new DiskFeatureConfig(
                 PredicatedStateProvider.of(ModBlocks.BLACK_GOOP),
                 BlockPredicate.matchingBlocks(List.of(ModBlocks.STYXIAN_SOIL, ModBlocks.STYXSTONE)),
@@ -367,6 +376,19 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(3, 1, 2))
                 .decorators(ImmutableList.of(new HangingStyxgrassDecorator(0.25f)))
                 .dirtProvider(BlockStateProvider.of(ModBlocks.STYXIAN_SOIL)).build());
+        register(context, GIANT_CHERRY_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(CHERRY_LOG),
+                new GiantTrunkPlacer(10, 6, 4),
+                new WeightedBlockStateProvider(
+                        Pool.<BlockState>builder()
+                                .add(CHERRY_LEAVES.getDefaultState(), 2)
+                                .add(ModBlocks.GLOWING_CHERRY_LEAVES.getDefaultState(), 1)
+                ),
+                new SpruceFoliagePlacer(ConstantIntProvider.create(4),
+                        ConstantIntProvider.create(0),
+                        UniformIntProvider.create(6, 8)),
+                new TwoLayersFeatureSize(3, 1, 2))
+                .dirtProvider(BlockStateProvider.of(ModBlocks.STYXIAN_SOIL)).build());
 
         register(context, ASHEN_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.ASHEN_LOG),
@@ -464,6 +486,22 @@ public class ModConfiguredFeatures {
                                         .add(ModBlocks.COTTON.getDefaultState().with(CottonCropBlock.AGE, 1), 2)
                                         .add(ModBlocks.COTTON.getDefaultState().with(CottonCropBlock.AGE, 2), 2))),
                         List.of(Blocks.DIRT, GRASS_BLOCK)));
+        register(context, CHARMBERRY_PATCH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(
+                                Pool.<BlockState>builder()
+                                        .add(ModBlocks.CHARMBERRY_BUSH.getDefaultState().with(CharmberryBushBlock.AGE, 2), 2)
+                                        .add(ModBlocks.CHARMBERRY_BUSH.getDefaultState().with(CharmberryBushBlock.AGE, 3), 1))),
+                        List.of(ModBlocks.STYXIAN_SOIL, ModBlocks.STYXMOSS)));
+        register(context, AMETHYST_PATCH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(
+                                Pool.<BlockState>builder()
+                                        .add(AMETHYST_CLUSTER.getDefaultState().with(AmethystClusterBlock.FACING, Direction.UP), 1)
+                                        .add(SMALL_AMETHYST_BUD.getDefaultState().with(AmethystClusterBlock.FACING, Direction.UP), 5)
+                                        .add(MEDIUM_AMETHYST_BUD.getDefaultState().with(AmethystClusterBlock.FACING, Direction.UP), 3)
+                                        .add(LARGE_AMETHYST_BUD.getDefaultState().with(AmethystClusterBlock.FACING, Direction.UP), 2))),
+                        List.of(ModBlocks.STYXIAN_SOIL, AMETHYST_BLOCK)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {

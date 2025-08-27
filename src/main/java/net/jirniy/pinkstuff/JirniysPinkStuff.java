@@ -93,6 +93,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.GLOWING_CHERRY_LEAVES, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHORUS_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHORUS_WOOD, 5, 5);

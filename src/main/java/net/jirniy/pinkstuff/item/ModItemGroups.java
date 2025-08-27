@@ -304,6 +304,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
+                        entries.add(ModBlocks.GLOWING_CHERRY_LEAVES);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_SAPLING);
 
                         entries.add(ModBlocks.CRYSTAL_CHERRY_SLAB);
@@ -623,6 +624,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
             entries.add(ModBlocks.CRYSTAL_CHERRY_PLANKS);
             entries.add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
+            entries.add(ModBlocks.GLOWING_CHERRY_LEAVES);
             entries.add(ModBlocks.CRYSTAL_CHERRY_SAPLING);
             entries.add(ModBlocks.CRYSTAL_CHERRY_SLAB);
             entries.add(ModBlocks.CRYSTAL_CHERRY_STAIRS);
@@ -825,6 +827,7 @@ public class ModItemGroups {
 
             entries.add(ModBlocks.CRYSTAL_CHERRY_LOG);
             entries.add(ModBlocks.CRYSTAL_CHERRY_LEAVES);
+            entries.add(ModBlocks.GLOWING_CHERRY_LEAVES);
             entries.add(ModBlocks.CRYSTAL_CHERRY_SAPLING);
 
             entries.add(ModBlocks.CHORUS_LOG);

@@ -2174,6 +2174,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Blocks.SPRUCE_LEAVES), conditionsFromItem(Blocks.SPRUCE_LEAVES))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "snowy_spruce_leaves")));
+                createShapeless(RecipeCategory.MISC, ModBlocks.GLOWING_CHERRY_LEAVES, 1)
+                        .input(Blocks.CHERRY_LEAVES).input(Items.GLOWSTONE_DUST)
+                        .criterion(hasItem(Blocks.CHERRY_LEAVES), conditionsFromItem(Blocks.CHERRY_LEAVES))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "glowing_cherry_leaves")));
 
                 createShapeless(RecipeCategory.MISC, Items.PURPLE_DYE, 1)
                         .input(ModBlocks.DEATH_FLOWERS)
