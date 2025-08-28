@@ -36,6 +36,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool styxstoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.STYXSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool compressedStyxstoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_STYXSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool mabrizeBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MABRIZE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool ametaneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AMETANE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool moonsteelBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOONSTEEL_BRICKS);
         BlockStateModelGenerator.BlockTexturePool cerilleBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CERILLE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool sungazeBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SUNGAZE_BRICKS);
@@ -47,6 +48,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool polishedStyxstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_STYXSTONE);
         BlockStateModelGenerator.BlockTexturePool polishedCompressedStyxstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_COMPRESSED_STYXSTONE);
         BlockStateModelGenerator.BlockTexturePool polishedMabrizePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_MABRIZE);
+        BlockStateModelGenerator.BlockTexturePool polishedAmetanePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_AMETANE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_AMETHYST_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -182,6 +184,13 @@ public class ModModelProvider extends FabricModelProvider {
         polishedMabrizePool.slab(ModBlocks.POLISHED_MABRIZE_SLAB);
         polishedMabrizePool.wall(ModBlocks.POLISHED_MABRIZE_WALL);
 
+        ametaneBricksPool.stairs(ModBlocks.AMETANE_BRICKS_STAIRS);
+        ametaneBricksPool.slab(ModBlocks.AMETANE_BRICKS_SLAB);
+        ametaneBricksPool.wall(ModBlocks.AMETANE_BRICKS_WALL);
+        polishedAmetanePool.stairs(ModBlocks.POLISHED_AMETANE_STAIRS);
+        polishedAmetanePool.slab(ModBlocks.POLISHED_AMETANE_SLAB);
+        polishedAmetanePool.wall(ModBlocks.POLISHED_AMETANE_WALL);
+
         moonsteelBricksPool.stairs(ModBlocks.MOONSTEEL_BRICKS_STAIRS);
         moonsteelBricksPool.slab(ModBlocks.MOONSTEEL_BRICKS_SLAB);
         moonsteelBricksPool.wall(ModBlocks.MOONSTEEL_BRICKS_WALL);
@@ -227,6 +236,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_SOIL);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MABRIZE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AMETANE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_AMETHYST_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);

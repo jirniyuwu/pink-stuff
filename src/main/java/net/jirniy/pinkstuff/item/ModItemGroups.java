@@ -83,6 +83,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MABRIZE_BRICKS_STAIRS);
                         entries.add(ModBlocks.MABRIZE_BRICKS_WALL);
 
+                        entries.add(ModBlocks.AMETANE);
+                        entries.add(ModBlocks.POLISHED_AMETANE);
+                        entries.add(ModBlocks.POLISHED_AMETANE_SLAB);
+                        entries.add(ModBlocks.POLISHED_AMETANE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_AMETANE_WALL);
+                        entries.add(ModBlocks.AMETANE_BRICKS);
+                        entries.add(ModBlocks.AMETANE_BRICKS_SLAB);
+                        entries.add(ModBlocks.AMETANE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.AMETANE_BRICKS_WALL);
+
                         entries.add(ModBlocks.COMPRESSED_END_STONE);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -532,6 +542,15 @@ public class ModItemGroups {
             entries.add(ModBlocks.MABRIZE_BRICKS_SLAB);
             entries.add(ModBlocks.MABRIZE_BRICKS_STAIRS);
             entries.add(ModBlocks.MABRIZE_BRICKS_WALL);
+            entries.add(ModBlocks.AMETANE);
+            entries.add(ModBlocks.POLISHED_AMETANE);
+            entries.add(ModBlocks.POLISHED_AMETANE_SLAB);
+            entries.add(ModBlocks.POLISHED_AMETANE_STAIRS);
+            entries.add(ModBlocks.POLISHED_AMETANE_WALL);
+            entries.add(ModBlocks.AMETANE_BRICKS);
+            entries.add(ModBlocks.AMETANE_BRICKS_SLAB);
+            entries.add(ModBlocks.AMETANE_BRICKS_STAIRS);
+            entries.add(ModBlocks.AMETANE_BRICKS_WALL);
             entries.add(ModBlocks.COMPRESSED_END_STONE);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -820,6 +839,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.STYXSTONE);
             entries.add(ModBlocks.COMPRESSED_STYXSTONE);
             entries.add(ModBlocks.MABRIZE);
+            entries.add(ModBlocks.AMETANE);
             entries.add(ModBlocks.STYXIAN_SOIL);
             entries.add(ModBlocks.STYXMOSS);
             entries.add(ModBlocks.STYXMOSS_CARPET);

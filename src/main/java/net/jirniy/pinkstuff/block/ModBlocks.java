@@ -80,6 +80,12 @@ public class ModBlocks {
     public static final Block POLISHED_MABRIZE = registerBlock("polished_mabrize",
             properties -> new Block(properties.strength(1.4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block AMETANE = registerBlock("ametane",
+            properties -> new Block(properties.strength(1.4f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block POLISHED_AMETANE = registerBlock("polished_ametane",
+            properties -> new Block(properties.strength(1.4f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block COBBLED_STYXSTONE = registerBlock("cobbled_styxstone",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
@@ -532,6 +538,9 @@ public class ModBlocks {
     public static final Block MABRIZE_BRICKS = registerBlock("mabrize_bricks",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block AMETANE_BRICKS = registerBlock("ametane_bricks",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block SUNGAZE_BRICKS = registerBlock("sungaze_bricks",
             properties -> new Block(properties.strength(6f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
@@ -604,6 +613,22 @@ public class ModBlocks {
     public static final Block POLISHED_MABRIZE_SLAB = registerBlock("polished_mabrize_slab",
             properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block POLISHED_MABRIZE_WALL = registerBlock("polished_mabrize_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block AMETANE_BRICKS_STAIRS = registerBlock("ametane_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.AMETANE_BRICKS.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block AMETANE_BRICKS_SLAB = registerBlock("ametane_bricks_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block AMETANE_BRICKS_WALL = registerBlock("ametane_bricks_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block POLISHED_AMETANE_STAIRS = registerBlock("polished_ametane_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_AMETANE.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block POLISHED_AMETANE_SLAB = registerBlock("polished_ametane_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block POLISHED_AMETANE_WALL = registerBlock("polished_ametane_wall",
             properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
     public static final Block MOONSTEEL_BRICKS_STAIRS = registerBlock("moonsteel_bricks_stairs",

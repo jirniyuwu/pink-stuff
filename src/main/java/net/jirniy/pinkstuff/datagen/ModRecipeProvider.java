@@ -1781,6 +1781,44 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "polished_mabrize_stairs")));
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MABRIZE_WALL, ModBlocks.POLISHED_MABRIZE);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETANE, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.AMETANE)
+                        .criterion(hasItem(ModBlocks.AMETANE), conditionsFromItem(ModBlocks.AMETANE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_ametane")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETANE_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.AMETANE_BRICKS)
+                        .criterion(hasItem(ModBlocks.AMETANE_BRICKS), conditionsFromItem(ModBlocks.AMETANE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ametane_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETANE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.AMETANE_BRICKS))
+                        .criterion(hasItem(ModBlocks.AMETANE_BRICKS), conditionsFromItem(ModBlocks.AMETANE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ametane_bricks_slab")));
+                createStairsRecipe(ModBlocks.AMETANE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.AMETANE_BRICKS))
+                        .criterion(hasItem(ModBlocks.AMETANE_BRICKS), conditionsFromItem(ModBlocks.AMETANE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ametane_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETANE_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.AMETANE_BRICKS)
+                        .criterion(hasItem(ModBlocks.AMETANE_BRICKS), conditionsFromItem(ModBlocks.AMETANE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ametane_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETANE_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_AMETANE))
+                        .criterion(hasItem(ModBlocks.POLISHED_AMETANE), conditionsFromItem(ModBlocks.POLISHED_AMETANE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_ametane_slab")));
+                createStairsRecipe(ModBlocks.POLISHED_AMETANE_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_AMETANE))
+                        .criterion(hasItem(ModBlocks.POLISHED_AMETANE), conditionsFromItem(ModBlocks.POLISHED_AMETANE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_ametane_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETANE_WALL, ModBlocks.POLISHED_AMETANE);
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES_SLAB, Ingredient.ofItem(ModBlocks.AMETHYST_TILES))
                         .criterion(hasItem(ModBlocks.AMETHYST_TILES), conditionsFromItem(ModBlocks.AMETHYST_TILES))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
