@@ -4,7 +4,9 @@ import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.util.ModTags;
+import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.AboveGroundTargeting;
 import net.minecraft.entity.ai.NoPenaltySolidTargeting;
@@ -14,9 +16,11 @@ import net.minecraft.entity.ai.pathing.BirdNavigation;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.PathAwareEntity;
+import net.minecraft.entity.passive.AllayEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -25,9 +29,13 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
@@ -59,6 +67,18 @@ public class ExofairyEntity extends AnimalEntity {
         this.goalSelector.add(4, new FlyGoal(this, 1.0D));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
         this.goalSelector.add(6, new LookAroundGoal(this));
+    }
+
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_ALLAY_AMBIENT_WITHOUT_ITEM;
+    }
+
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return SoundEvents.ENTITY_ALLAY_HURT;
+    }
+
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_ALLAY_DEATH;
     }
 
     @Override
@@ -93,6 +113,9 @@ public class ExofairyEntity extends AnimalEntity {
                 }
             }
             this.heal(1.0F);
+            if (this.hasStatusEffect(ModEffects.DEATH_GRIP)) {
+                this.damage((ServerWorld) this.getWorld(), this.getWorld().getDamageSources().wither(), this.getMaxHealth());
+            }
         }
     }
 
