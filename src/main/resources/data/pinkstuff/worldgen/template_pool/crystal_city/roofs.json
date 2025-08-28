@@ -1,13 +1,33 @@
 {
-  "name": "pinkstuff:crystal_city/up",
-  "fallback": "pinkstuff:crystal_city/roofs",
+  "name": "pinkstuff:crystal_city/roofs",
+  "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:crystal_city/staircase/up1",
+        "location": "pinkstuff:crystal_city/roofs/roof1",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:crystal_city/roofs/roof2",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:crystal_city/roofs/roof3",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }
@@ -17,7 +37,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:crystal_city/staircase/up2",
+        "location": "pinkstuff:crystal_city/roofs/roof4",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }
@@ -27,37 +47,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "pinkstuff:crystal_city/staircase/up3",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:crystal_city/staircase/up4",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:crystal_city/staircase/up5",
-        "processors": "minecraft:empty",
-        "override_liquid_settings": "ignore_waterlogging"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "pinkstuff:crystal_city/staircase/room3",
+        "location": "pinkstuff:crystal_city/roofs/roof5",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }

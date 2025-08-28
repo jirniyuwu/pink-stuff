@@ -3,6 +3,12 @@
   "fallback": "pinkstuff:crystal_city/random",
   "elements": [
     {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
       "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
@@ -23,11 +29,21 @@
       }
     },
     {
-      "weight": 3,
+      "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:crystal_city/rooms/room5",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:crystal_city/rooms/room7",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }
@@ -68,6 +84,16 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:crystal_city/roofs/roof4",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:crystal_city/roofs/roof5",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }

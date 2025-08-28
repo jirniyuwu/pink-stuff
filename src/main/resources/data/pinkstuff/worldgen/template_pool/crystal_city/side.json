@@ -87,6 +87,16 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
+        "location": "pinkstuff:crystal_city/staircase/side9",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
         "location": "pinkstuff:crystal_city/rooms/room1",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
@@ -128,6 +138,16 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:crystal_city/rooms/room6",
+        "processors": "minecraft:empty",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:crystal_city/rooms/room7",
         "processors": "minecraft:empty",
         "override_liquid_settings": "ignore_waterlogging"
       }
