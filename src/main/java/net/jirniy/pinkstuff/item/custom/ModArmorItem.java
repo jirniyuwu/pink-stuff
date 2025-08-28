@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.item.custom;
 import com.google.common.collect.ImmutableMap;
 import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
+import net.jirniy.pinkstuff.particle.ModParticles;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.Entity;
@@ -43,7 +44,7 @@ public class ModArmorItem extends Item {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
                 if(hasFullSuitOfArmorOn(player)) {
-                    evaluateArmorEffects(player);
+                    evaluateArmorEffects(player, world);
                 }
             }
         }
@@ -51,14 +52,22 @@ public class ModArmorItem extends Item {
         super.inventoryTick(stack, world, entity, slot);
     }
 
-    private void evaluateArmorEffects(PlayerEntity player) {
+    private void evaluateArmorEffects(PlayerEntity player, ServerWorld world) {
         for (Map.Entry<ArmorMaterial, List<StatusEffectInstance>> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
             ArmorMaterial mapArmorMaterial = entry.getKey();
             List<StatusEffectInstance> mapStatusEffects = entry.getValue();
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
+                addParticle(player, world);
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffects);
             }
+        }
+    }
+
+    private void addParticle(PlayerEntity player, ServerWorld world) {
+        if (player.getRandom().nextBetween(1, 32) == 1) {
+            world.spawnParticles(ModParticles.SPARKLE_PARTICLE, player.getX(), player.getY() + player.getHeight()/2, player.getZ(),
+                    1, player.getWidth()/2 + 0.1, player.getHeight()/2, player.getWidth()/2 + 0.1, 1);
         }
     }
 

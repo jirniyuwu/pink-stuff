@@ -13,8 +13,10 @@ public class ModParticles {
             registerParticle("rift_particle", FabricParticleTypes.simple(true));
     public static final SimpleParticleType DAWNBREAK_PARTICLE =
             registerParticle("dawnbreak_particle", FabricParticleTypes.simple(true));
+    public static final SimpleParticleType SPARKLE_PARTICLE =
+            registerParticle("sparkle_particle", FabricParticleTypes.simple(false));
     public static final SimpleParticleType CHORUS_PETAL_PARTICLE =
-            registerParticle("chorus_petal_particle", FabricParticleTypes.simple(true));
+            registerParticle("chorus_petal_particle", FabricParticleTypes.simple(false));
     public static final SimpleParticleType STYXIAN_FLAME_PARTICLE =
             registerParticle("styxian_flame_particle", FabricParticleTypes.simple(true));
 

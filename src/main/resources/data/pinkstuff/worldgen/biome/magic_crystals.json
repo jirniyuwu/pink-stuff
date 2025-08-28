@@ -31,9 +31,9 @@
     "water_fog_color": 10902768,
     "particle": {
       "options": {
-        "type": "minecraft:enchanted_hit"
+        "type": "pinkstuff:sparkle_particle"
       },
-      "probability": 0.005
+      "probability": 0.0025
     }
   },
   "features": [

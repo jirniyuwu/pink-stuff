@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.entity.custom;
 import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.ModItems;
+import net.jirniy.pinkstuff.particle.ModParticles;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
@@ -93,6 +94,17 @@ public class ExofairyEntity extends AnimalEntity {
         birdNavigation.setMaxFollowRange(48.0F);
         return birdNavigation;
     }
+
+    @Override
+    public void tick() {
+        if (!this.getWorld().isClient() && this.isAlive() && !this.isInDanger() && this.age % this.getRandom().nextBetween(2, 13) == 0) {
+            ServerWorld world = (ServerWorld) this.getWorld();
+            world.spawnParticles(ModParticles.SPARKLE_PARTICLE, this.getX(), this.getY() + this.getHeight()/2, this.getZ(),
+                    1, this.getWidth(), this.getHeight(), this.getWidth(), 1);
+        }
+        super.tick();
+    }
+
     public void travel(Vec3d movementInput) {
         this.travelFlying(movementInput, this.getMovementSpeed());
     }
