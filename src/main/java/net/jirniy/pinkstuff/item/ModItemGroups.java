@@ -122,6 +122,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GLOWING_AMETHYST);
                         entries.add(ModBlocks.STYXIAN_AMETHYST_ORE);
                         entries.add(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);
+                        entries.add(ModBlocks.AMETHYST_LAMP);
                         entries.add(ModBlocks.POLISHED_AMETHYST_BLOCK);
                         entries.add(ModBlocks.POLISHED_AMETHYST_SLAB);
                         entries.add(ModBlocks.POLISHED_AMETHYST_STAIRS);
@@ -708,6 +709,11 @@ public class ModItemGroups {
             entries.add(ModItems.CHARMBERRY);
             entries.add(ModItems.BERRY_SALAD);
             entries.add(ModItems.HAZEWEAVER);
+            entries.add(ModItems.RAW_FAIRY_MEAT);
+            entries.add(ModItems.COOKED_FAIRY_MEAT);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
+            entries.add(ModBlocks.AMETHYST_LAMP);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(ModItems.QUARTZ_NUGGET);
@@ -871,8 +877,6 @@ public class ModItemGroups {
             entries.add(ModBlocks.LARGE_END_GRASS);
             entries.add(ModBlocks.CHORUS_LILY);
             entries.add(ModItems.HAZEWEAVER);
-            entries.add(ModItems.RAW_FAIRY_MEAT);
-            entries.add(ModItems.COOKED_FAIRY_MEAT);
             entries.add(ModBlocks.AMETHYST_PARTERS);
             entries.add(ModBlocks.KUNZITE_LOVELILY);
             entries.add(ModBlocks.ELYSIAN_SKYBERRY);

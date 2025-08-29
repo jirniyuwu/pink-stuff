@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "pinkstuff:block/amethyst_lamp_14"
+  }
+}

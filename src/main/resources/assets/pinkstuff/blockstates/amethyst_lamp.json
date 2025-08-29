@@ -1,0 +1,100 @@
+{
+  "variants": {
+    "power=0,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_0"
+    },
+    "power=1,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_1"
+    },
+    "power=2,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_2"
+    },
+    "power=3,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_3"
+    },
+    "power=4,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_4"
+    },
+    "power=5,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_5"
+    },
+    "power=6,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_6"
+    },
+    "power=7,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_7"
+    },
+    "power=8,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_8"
+    },
+    "power=9,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_9"
+    },
+    "power=10,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_10"
+    },
+    "power=11,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_11"
+    },
+    "power=12,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_12"
+    },
+    "power=13,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_13"
+    },
+    "power=14,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_14"
+    },
+    "power=15,preserve=false": {
+      "model": "pinkstuff:block/amethyst_lamp_15"
+    },
+    "power=0,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_0p"
+    },
+    "power=1,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_1p"
+    },
+    "power=2,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_2p"
+    },
+    "power=3,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_3p"
+    },
+    "power=4,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_4p"
+    },
+    "power=5,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_5p"
+    },
+    "power=6,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_6p"
+    },
+    "power=7,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_7p"
+    },
+    "power=8,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_8p"
+    },
+    "power=9,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_9p"
+    },
+    "power=10,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_10p"
+    },
+    "power=11,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_11p"
+    },
+    "power=12,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_12p"
+    },
+    "power=13,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_13p"
+    },
+    "power=14,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_14p"
+    },
+    "power=15,preserve=true": {
+      "model": "pinkstuff:block/amethyst_lamp_15p"
+    }
+  }
+}

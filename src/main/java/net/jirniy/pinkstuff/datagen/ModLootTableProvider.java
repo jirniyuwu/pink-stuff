@@ -45,6 +45,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_END_STONE);
         addDrop(ModBlocks.MOONSTEEL_LANTERN);
         addDrop(ModBlocks.MOONSTEEL_CHAIN);
+        addDrop(ModBlocks.AMETHYST_LAMP);
 
         addDrop(ModBlocks.KUNZITE_BLOCK);
         addDrop(ModBlocks.RAW_KUNZITE_BLOCK);

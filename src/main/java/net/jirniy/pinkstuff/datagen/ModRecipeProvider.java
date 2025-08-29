@@ -2072,6 +2072,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "bedrock_breaker")));
 
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.AMETHYST_LAMP, 1)
+                        .pattern("ECE")
+                        .pattern("CLC")
+                        .pattern("ECE")
+                        .input('E', ModItems.MOONSTEEL_INGOT)
+                        .input('C', Items.AMETHYST_BLOCK)
+                        .input('L', Items.REDSTONE_LAMP)
+                        .criterion(hasItem(Items.REDSTONE_LAMP), conditionsFromItem(Items.REDSTONE_LAMP))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_lamp")));
+
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXIA_PORTAL_FRAME, 1)
                         .pattern("N N")
                         .pattern("CCC")
