@@ -182,6 +182,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ELYSIUM_ROD);
 
                         entries.add(ModItems.RAW_THERMIUM);
+                        entries.add(ModItems.THERMIUM_WASTE);
                         entries.add(ModItems.THERMIUM_NUGGET);
                         entries.add(ModBlocks.THERMIUM_CLUMP);
                         entries.add(ModItems.THERMIUM);
@@ -733,6 +734,7 @@ public class ModItemGroups {
             entries.add(ModItems.ELYSIUM_INGOT);
             entries.add(ModItems.ELYSIAN_REDSTONE_CORE);
             entries.add(ModItems.RAW_THERMIUM);
+            entries.add(ModItems.THERMIUM_WASTE);
             entries.add(ModItems.THERMIUM_NUGGET);
             entries.add(ModItems.THERMIUM);
             entries.add(ModItems.ENERGIZED_THERMIUM);

@@ -33,6 +33,7 @@ import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -180,6 +181,7 @@ public class ThermiumBlasterBlockEntity extends BlockEntity implements ExtendedS
         this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
         decreaseFuel(fuelCost);
+        createWaste(fuelCost);
     }
 
     private boolean hasCraftingFinished() {
@@ -188,6 +190,18 @@ public class ThermiumBlasterBlockEntity extends BlockEntity implements ExtendedS
 
     private void increaseCraftingProgress() {
         this.progress++;
+    }
+
+    private void createWaste(int fuelCost) {
+        BlockPos pos = this.getPos();
+        if (this.getWorld() != null) {
+            Random random = this.getWorld().getRandom();
+            if (fuelCost % 20 != 0 && random.nextBetween(1, fuelCost % 20) == 1) {
+                ItemScatterer.spawn(this.getWorld(), pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.THERMIUM_WASTE, (int)(fuelCost / 20) + 1));
+            } else {
+                ItemScatterer.spawn(this.getWorld(), pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.THERMIUM_WASTE, (int)fuelCost / 20));
+            }
+        }
     }
 
     private void addFuel() {

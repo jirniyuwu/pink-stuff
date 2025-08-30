@@ -373,6 +373,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.COTTON, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.THERMIUM_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.THERMIUM_WASTE, Models.GENERATED);
         itemModelGenerator.register(ModItems.THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENERGIZED_THERMIUM, Models.GENERATED);

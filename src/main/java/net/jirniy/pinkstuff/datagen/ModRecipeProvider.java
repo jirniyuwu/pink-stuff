@@ -193,6 +193,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         0f, 1280, "fire_to_charcoal_smelting");
                 offerBlasting(List.of(Items.FIRE_CHARGE), RecipeCategory.MISC, Items.CHARCOAL,
                         0f, 640, "fire_to_charcoal_blasting");
+                offerSmelting(List.of(ModItems.THERMIUM_WASTE), RecipeCategory.MISC, ModItems.THERMIUM_NUGGET,
+                        0.1f, 400, "thermium_waste_smelting");
+                offerBlasting(List.of(ModItems.THERMIUM_WASTE), RecipeCategory.MISC, ModItems.THERMIUM_NUGGET,
+                        0.1f, 200, "thermium_waste_blasting");
                 offerSmelting(List.of(ModItems.RAW_FAIRY_MEAT), RecipeCategory.FOOD, ModItems.COOKED_FAIRY_MEAT,
                         1f, 200, "fairy_meat_smelting");
                 offerFoodCookingRecipe("smoking", RecipeSerializer.SMOKING, SmokingRecipe::new,

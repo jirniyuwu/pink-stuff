@@ -122,6 +122,7 @@ public class ModItems {
 
     public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
     public static final Item THERMIUM = registerItem("thermium", setting -> new Item(setting.trimMaterial(ModTrimMaterials.THERMIUM)));
+    public static final Item THERMIUM_WASTE = registerItem("thermium_waste", Item::new);
     public static final Item RAW_THERMIUM = registerItem("raw_thermium", Item::new);
     public static final Item ENERGIZED_THERMIUM = registerItem("energized_thermium", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
 
