@@ -1809,8 +1809,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MABRIZE_BRICKS, 4)
                         .pattern("SS")
                         .pattern("SS")
-                        .input('S', ModBlocks.MABRIZE_BRICKS)
-                        .criterion(hasItem(ModBlocks.MABRIZE_BRICKS), conditionsFromItem(ModBlocks.MABRIZE_BRICKS))
+                        .input('S', ModBlocks.POLISHED_MABRIZE)
+                        .criterion(hasItem(ModBlocks.POLISHED_MABRIZE), conditionsFromItem(ModBlocks.POLISHED_MABRIZE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mabrize_bricks")));
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MABRIZE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.MABRIZE_BRICKS))
@@ -1891,6 +1891,34 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.POLISHED_AMETHYST_BLOCK), conditionsFromItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_tiles")));
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ASH, 1)
+                        .input(ModBlocks.ASH_BLOCK).input(ModBlocks.ASH_BLOCK).input(Blocks.BASALT).input(Blocks.BASALT)
+                        .criterion(hasItem(ModBlocks.ASH_BLOCK), conditionsFromItem(ModBlocks.ASH_BLOCK))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "packed_ash")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ASH_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.PACKED_ASH)
+                        .criterion(hasItem(ModBlocks.PACKED_ASH), conditionsFromItem(ModBlocks.PACKED_ASH))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ash_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ASH_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.ASH_BRICKS))
+                        .criterion(hasItem(ModBlocks.ASH_BRICKS), conditionsFromItem(ModBlocks.ASH_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ash_bricks_slab")));
+                createStairsRecipe(ModBlocks.ASH_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.ASH_BRICKS))
+                        .criterion(hasItem(ModBlocks.ASH_BRICKS), conditionsFromItem(ModBlocks.ASH_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ash_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ASH_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.ASH_BRICKS)
+                        .criterion(hasItem(ModBlocks.ASH_BRICKS), conditionsFromItem(ModBlocks.ASH_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ash_bricks_wall")));
 
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.AMETHYST_NUGGET, RecipeCategory.MISC, Items.AMETHYST_SHARD);
@@ -2110,9 +2138,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 createShapeless(RecipeCategory.FOOD, ModItems.COAL_MEAL, 2)
                         .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
-                        .input(Items.COAL).input(Items.COAL).input(Items.COAL)
+                        .input(ItemTags.COALS).input(ItemTags.COALS).input(ItemTags.COALS)
                         .input(ModItems.THERMIUM_NUGGET).input(Items.WHEAT).input(ModItems.THERMIUM_NUGGET)
-                        .input(Items.COAL).input(Items.COAL).input(Items.COAL)
+                        .input(ItemTags.COALS).input(ItemTags.COALS).input(ItemTags.COALS)
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "coal_meal")));
 

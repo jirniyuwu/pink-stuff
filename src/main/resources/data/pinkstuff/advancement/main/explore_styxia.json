@@ -11,6 +11,16 @@
         }
       }
     },
+    "eroded_wastelands": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:eroded_wastelands"
+          }
+        }
+      }
+    },
     "magic_crystals": {
       "trigger": "minecraft:location",
       "conditions": {
@@ -120,6 +130,9 @@
     ],
     [
       "magic_crystals"
+    ],
+    [
+      "eroded_wastelands"
     ]
   ],
   "sends_telemetry_event": false

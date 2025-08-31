@@ -102,6 +102,20 @@ public class ModBlocks {
     public static final Block ASH_BLOCK = registerBlock("ash_block",
             properties -> new SandBlock(new ColorCode(0x494E52), properties.strength(0.6f)
                     .sounds(BlockSoundGroup.SOUL_SAND).mapColor(MapColor.STONE_GRAY)));
+    public static final Block PACKED_ASH = registerBlock("packed_ash",
+            properties -> new Block(properties.strength(1.2f).requiresTool()
+                    .sounds(BlockSoundGroup.PACKED_MUD).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block ASH_BRICKS = registerBlock("ash_bricks",
+            properties -> new Block(properties.strength(1.4f).requiresTool()
+                    .sounds(BlockSoundGroup.MUD_BRICKS).mapColor(MapColor.DEEPSLATE_GRAY)));
+
+    public static final Block ASH_BRICKS_STAIRS = registerBlock("ash_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.ASH_BRICKS.getDefaultState(),
+                    properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block ASH_BRICKS_SLAB = registerBlock("ash_bricks_slab",
+            properties -> new SlabBlock(properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block ASH_BRICKS_WALL = registerBlock("ash_bricks_wall",
+            properties -> new WallBlock(properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS).mapColor(MapColor.DEEPSLATE_GRAY)));
 
     public static final Block PINK_SAND = registerBlock("pink_sand",
             properties -> new SandBlock(new ColorCode(0xB561B5), properties.strength(1f)

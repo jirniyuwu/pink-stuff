@@ -38,6 +38,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool compressedStyxstoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_STYXSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool mabrizeBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MABRIZE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool ametaneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AMETANE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool ashBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ASH_BRICKS);
         BlockStateModelGenerator.BlockTexturePool moonsteelBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOONSTEEL_BRICKS);
         BlockStateModelGenerator.BlockTexturePool cerilleBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CERILLE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool sungazeBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SUNGAZE_BRICKS);
@@ -213,6 +214,10 @@ public class ModModelProvider extends FabricModelProvider {
         sungazeBricksPool.slab(ModBlocks.SUNGAZE_BRICKS_SLAB);
         sungazeBricksPool.wall(ModBlocks.SUNGAZE_BRICKS_WALL);
 
+        ashBricksPool.stairs(ModBlocks.ASH_BRICKS_STAIRS);
+        ashBricksPool.slab(ModBlocks.ASH_BRICKS_SLAB);
+        ashBricksPool.wall(ModBlocks.ASH_BRICKS_WALL);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_SAND);
         pinkSandstonePool.stairs(ModBlocks.PINK_SANDSTONE_STAIRS);
         pinkSandstonePool.slab(ModBlocks.PINK_SANDSTONE_SLAB);
@@ -273,6 +278,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_STYXSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRAWLER_COMPRESSED_STYXSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ASH_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_ASH);
 
         blockStateModelGenerator.registerFlowerbed(ModBlocks.DEATH_FLOWERS);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.STYXMOSS, ModBlocks.STYXMOSS_CARPET);

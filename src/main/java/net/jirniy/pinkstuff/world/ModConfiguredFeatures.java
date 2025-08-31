@@ -235,7 +235,10 @@ public class ModConfiguredFeatures {
                         0.1F, UniformIntProvider.create(3, 6), 0.3F));
         register(context, ASH_PATCH_KEY, Feature.VEGETATION_PATCH,
                 new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
-                        BlockStateProvider.of(ModBlocks.ASH_BLOCK), PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                        new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                                .add(ModBlocks.ASH_BLOCK.getDefaultState(), 29)
+                                .add(ModBlocks.PACKED_ASH.getDefaultState(), 1)),
+                        PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                                 .add(DEAD_BUSH.getDefaultState(), 1)
                                 .add(Blocks.AIR.getDefaultState(), 49)))),

@@ -98,11 +98,11 @@
               0.2
             ],
             "continentalness": [
-              0.4,
+              0.5,
               1
             ],
             "erosion": [
-              0.4,
+              0.5,
               1
             ],
             "weirdness": [

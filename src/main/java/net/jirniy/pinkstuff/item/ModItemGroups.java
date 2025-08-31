@@ -111,6 +111,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CUT_PINK_SANDSTONE_SLAB);
                         entries.add(ModBlocks.CHISELED_PINK_SANDSTONE);
                         entries.add(ModBlocks.ASH_BLOCK);
+                        entries.add(ModBlocks.PACKED_ASH);
+                        entries.add(ModBlocks.ASH_BRICKS);
+                        entries.add(ModBlocks.ASH_BRICKS_SLAB);
+                        entries.add(ModBlocks.ASH_BRICKS_STAIRS);
+                        entries.add(ModBlocks.ASH_BRICKS_WALL);
 
                         entries.add(ModItems.STYXCOAL);
                         entries.add(ModBlocks.STYXCOAL_BLOCK);
@@ -525,8 +530,12 @@ public class ModItemGroups {
             entries.add(ModBlocks.CUT_PINK_SANDSTONE);
             entries.add(ModBlocks.CUT_PINK_SANDSTONE_SLAB);
             entries.add(ModBlocks.CHISELED_PINK_SANDSTONE);
+            entries.add(ModBlocks.PACKED_ASH);
+            entries.add(ModBlocks.ASH_BRICKS);
+            entries.add(ModBlocks.ASH_BRICKS_SLAB);
+            entries.add(ModBlocks.ASH_BRICKS_STAIRS);
+            entries.add(ModBlocks.ASH_BRICKS_WALL);
 
-            entries.add(ModBlocks.STYXSTONE);
             entries.add(ModBlocks.POLISHED_STYXSTONE);
             entries.add(ModBlocks.POLISHED_STYXSTONE_SLAB);
             entries.add(ModBlocks.POLISHED_STYXSTONE_STAIRS);
@@ -543,7 +552,6 @@ public class ModItemGroups {
             entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB);
             entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS);
             entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL);
-            entries.add(ModBlocks.COMPRESSED_STYXSTONE);
             entries.add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE);
             entries.add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_SLAB);
             entries.add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_STAIRS);

@@ -7,7 +7,8 @@
     "pinkstuff:styxian_plains",
     "pinkstuff:styxian_stony_hills",
     "pinkstuff:ashen_farlands",
-    "pinkstuff:magic_crystals"
+    "pinkstuff:magic_crystals",
+    "pinkstuff:eroded_wastelands"
   ],
   "step": "surface_structures",
   "terrain_adaptation": "encapsulate",
