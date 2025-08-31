@@ -1847,8 +1847,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETANE_BRICKS, 4)
                         .pattern("SS")
                         .pattern("SS")
-                        .input('S', ModBlocks.AMETANE_BRICKS)
-                        .criterion(hasItem(ModBlocks.AMETANE_BRICKS), conditionsFromItem(ModBlocks.AMETANE_BRICKS))
+                        .input('S', ModBlocks.POLISHED_AMETANE)
+                        .criterion(hasItem(ModBlocks.POLISHED_AMETANE), conditionsFromItem(ModBlocks.POLISHED_AMETANE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "ametane_bricks")));
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETANE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.AMETANE_BRICKS))
