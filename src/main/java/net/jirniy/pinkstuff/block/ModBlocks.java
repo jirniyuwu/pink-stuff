@@ -156,6 +156,12 @@ public class ModBlocks {
     public static final Block COMPRESSED_STYXIAN_AMETHYST_ORE = registerBlock("compressed_styxian_amethyst_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
                     properties.strength(5f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block STYXIAN_THERMIUM_ORE = registerBlock("styxian_thermium_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4),
+                    properties.strength(5f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE).luminance(state -> 3)));
+    public static final Block COMPRESSED_STYXIAN_THERMIUM_ORE = registerBlock("compressed_styxian_thermium_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4),
+                    properties.strength(7f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE).luminance(state -> 2)));
     public static final Block STYXIAN_STYXCOAL_ORE = registerBlock("styxian_styxcoal_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
                     properties.strength(2.8f).requiresTool().sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
@@ -427,6 +433,22 @@ public class ModBlocks {
             properties -> new ModSaplingBlock(ModSaplingGenerator.KEAPHE, properties.mapColor(MapColor.DARK_DULL_PINK)
                     .noCollision().ticksRandomly().breakInstantly()
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).pistonBehavior(PistonBehavior.DESTROY), BlockTags.DIRT));
+
+    public static final Block WASTEWOOD_LOG = registerBlock("wastewood_log",
+            properties -> new PillarBlock(properties
+                    .strength(3.0F).sounds(BlockSoundGroup.NETHER_WOOD).burnable().mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block WASTEWOOD_WOOD = registerBlock("wastewood_wood",
+            properties -> new PillarBlock(properties
+                    .strength(3.0F).sounds(BlockSoundGroup.NETHER_WOOD).burnable().mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block STRIPPED_WASTEWOOD_LOG = registerBlock("stripped_wastewood_log",
+            properties -> new PillarBlock(properties
+                    .strength(3.0F).sounds(BlockSoundGroup.NETHER_WOOD).burnable().mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block STRIPPED_WASTEWOOD_WOOD = registerBlock("stripped_wastewood_wood",
+            properties -> new PillarBlock(properties
+                    .strength(3.0F).sounds(BlockSoundGroup.NETHER_WOOD).burnable().mapColor(MapColor.TERRACOTTA_GRAY)));
+
+    public static final Block WASTEWOOD_PLANKS = registerBlock("wastewood_planks",
+            properties -> new Block(properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.TERRACOTTA_GRAY)));
 
     public static final Block AMETHYST_ROD = registerBlock("amethyst_rod",
             properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 15)
@@ -808,6 +830,24 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
     public static final Block KEAPHE_TRAPDOOR = registerBlock("keaphe_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+
+    public static final Block WASTEWOOD_STAIRS = registerBlock("wastewood_stairs",
+            properties -> new StairsBlock(ModBlocks.WASTEWOOD_PLANKS.getDefaultState(),
+                    properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block WASTEWOOD_SLAB = registerBlock("wastewood_slab",
+            properties -> new SlabBlock(properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block WASTEWOOD_BUTTON = registerBlock("wastewood_button",
+            properties -> new ButtonBlock(BlockSetType.CRIMSON, 20, properties.strength(3f).noCollision().sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block WASTEWOOD_PRESSURE_PLATE = registerBlock("wastewood_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block WASTEWOOD_FENCE = registerBlock("wastewood_fence",
+            properties -> new FenceBlock(properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD)));
+    public static final Block WASTEWOOD_FENCE_GATE = registerBlock("wastewood_fence_gate",
+            properties -> new FenceGateBlock(WoodType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block WASTEWOOD_DOOR = registerBlock("wastewood_door",
+            properties -> new DoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
+    public static final Block WASTEWOOD_TRAPDOOR = registerBlock("wastewood_trapdoor",
+            properties -> new TrapdoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
 
     public static final Block DISPLAY = registerBlock("display",
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque().mapColor(MapColor.STONE_GRAY)));

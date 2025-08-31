@@ -50,6 +50,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> KUNZITE_ORE_KEY = registryKey("kunzite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_AMETHYST_ORE_KEY = registryKey("styxian_amethyst_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_THERMIUM_ORE_KEY = registryKey("styxian_thermium_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> THERMIUM_ORE_KEY = registryKey("thermium_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> THERMIUM_ORE_DRIPSTONE_KEY = registryKey("thermium_ore_dripstone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SULFUR_ORE_KEY = registryKey("sulfur_ore");
@@ -67,6 +68,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> KEAPHE_TREE_KEY = registryKey("keaphe_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TALL_KEAPHE_TREE_KEY = registryKey("tall_keaphe_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_KEAPHE_TREE_KEY = registryKey("giant_keaphe_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> WASTEWOOD_TREE_KEY = registryKey("wastewood_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_CHERRY_TREE_KEY = registryKey("giant_cherry_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SNOWY_SPRUCE_TREE_KEY = registryKey("snowy_spruce_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HAZEWEAVER_PLANT_KEY = registryKey("hazeweaver_plant");
@@ -143,6 +145,11 @@ public class ModConfiguredFeatures {
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_AMETHYST_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_AMETHYST_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> styxianThermiumOres =
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_THERMIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_THERMIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_THERMIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> styxianStyxcoalOres =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_STYXCOAL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_STYXCOAL_ORE.getDefaultState()),
@@ -242,6 +249,7 @@ public class ModConfiguredFeatures {
         register(context, SULFUR_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(netherSulfurOres, 25));
         register(context, STYXIAN_SULFUR_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianSulfurOres, 13));
         register(context, STYXIAN_AMETHYST_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(styxianAmethystOres, 40));
+        register(context, STYXIAN_THERMIUM_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(styxianThermiumOres, 50));
         register(context, PINLINE_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(endPinlineOres, 64));
         register(context, STYXCOAL_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianStyxcoalOres, 16));
         register(context, MOONSTEEL_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianMoonsteelOres, 11));
@@ -386,6 +394,15 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(3, 1, 2))
                 .decorators(ImmutableList.of(new HangingStyxgrassDecorator(0.25f)))
                 .dirtProvider(BlockStateProvider.of(ModBlocks.STYXIAN_SOIL)).build());
+
+        register(context, WASTEWOOD_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.WASTEWOOD_LOG),
+                new BendingTrunkPlacer(6, 1, 1, 6, UniformIntProvider.create(1, 2)),
+                BlockStateProvider.of(AIR),
+                new BlobFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), 1),
+                new TwoLayersFeatureSize(1, 0, 2))
+                .dirtProvider(BlockStateProvider.of(ModBlocks.STYXSTONE)).build());
+
         register(context, GIANT_CHERRY_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(CHERRY_LOG),
                 new GiantTrunkPlacer(10, 6, 4),

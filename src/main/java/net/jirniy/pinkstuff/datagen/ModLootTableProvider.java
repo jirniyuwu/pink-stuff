@@ -186,6 +186,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_END_PINLINE_ORE, oreDrops(ModBlocks.COMPRESSED_END_PINLINE_ORE, ModItems.RAW_PINLINE));
         addDrop(ModBlocks.STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE, ModItems.AMETHYST_NUGGET, 3, 7));
+        addDrop(ModBlocks.STYXIAN_THERMIUM_ORE, multipleOreDrops(ModBlocks.STYXIAN_THERMIUM_ORE, ModItems.THERMIUM_WASTE, 1, 3));
+        addDrop(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE, ModItems.THERMIUM_WASTE, 1, 3));
         addDrop(ModBlocks.CORRUPT_ORE, multipleOreDrops(ModBlocks.CORRUPT_ORE, ModItems.CORRUPT_DROPLET, 9, 29));
         addDrop(ModBlocks.CORRUPT_ROOTS, multipleOreDrops(ModBlocks.CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET, 1, 2));
         addDrop(ModBlocks.STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
@@ -303,6 +305,21 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.KEAPHE_SAPLING);
         addDrop(ModBlocks.KEAPHE_LEAVES, leavesDrops(ModBlocks.KEAPHE_LEAVES, ModBlocks.KEAPHE_SAPLING, 0.05f));
         addDrop(ModBlocks.FLOWERING_KEAPHE_LEAVES, leavesDrops(ModBlocks.FLOWERING_KEAPHE_LEAVES, ModBlocks.KEAPHE_SAPLING, 0.1f));
+
+        addDrop(ModBlocks.WASTEWOOD_LOG);
+        addDrop(ModBlocks.WASTEWOOD_WOOD);
+        addDrop(ModBlocks.STRIPPED_WASTEWOOD_LOG);
+        addDrop(ModBlocks.STRIPPED_WASTEWOOD_WOOD);
+        addDrop(ModBlocks.WASTEWOOD_PLANKS);
+
+        addDrop(ModBlocks.WASTEWOOD_SLAB, slabDrops(ModBlocks.WASTEWOOD_SLAB));
+        addDrop(ModBlocks.WASTEWOOD_STAIRS);
+        addDrop(ModBlocks.WASTEWOOD_FENCE);
+        addDrop(ModBlocks.WASTEWOOD_FENCE_GATE);
+        addDrop(ModBlocks.WASTEWOOD_DOOR, doorDrops(ModBlocks.WASTEWOOD_DOOR));
+        addDrop(ModBlocks.WASTEWOOD_TRAPDOOR);
+        addDrop(ModBlocks.WASTEWOOD_BUTTON);
+        addDrop(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
 
         addPottedPlantDrops(ModBlocks.POTTED_MEMORIA_BOURPEER);
         addPottedPlantDrops(ModBlocks.POTTED_THERMIUM_WILTBORN);

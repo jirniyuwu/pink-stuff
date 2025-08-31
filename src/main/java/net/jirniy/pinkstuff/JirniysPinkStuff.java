@@ -87,6 +87,8 @@ public class JirniysPinkStuff implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.ASHEN_WOOD, ModBlocks.STRIPPED_ASHEN_WOOD);
 		StrippableBlockRegistry.register(ModBlocks.KEAPHE_LOG, ModBlocks.STRIPPED_KEAPHE_LOG);
 		StrippableBlockRegistry.register(ModBlocks.KEAPHE_WOOD, ModBlocks.STRIPPED_KEAPHE_WOOD);
+		StrippableBlockRegistry.register(ModBlocks.WASTEWOOD_LOG, ModBlocks.STRIPPED_WASTEWOOD_LOG);
+		StrippableBlockRegistry.register(ModBlocks.WASTEWOOD_WOOD, ModBlocks.STRIPPED_WASTEWOOD_WOOD);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_WOOD, 5, 5);
@@ -108,6 +110,11 @@ public class JirniysPinkStuff implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KEAPHE_LEAVES, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.FLOWERING_KEAPHE_LEAVES, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KEAPHE_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WASTEWOOD_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WASTEWOOD_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_WASTEWOOD_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_WASTEWOOD_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WASTEWOOD_PLANKS, 5, 20);
 
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.THERMIUM, 32000);

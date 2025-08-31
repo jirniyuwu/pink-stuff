@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool compressedEndStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_END_STONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool ashenPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ASHEN_PLANKS);
         BlockStateModelGenerator.BlockTexturePool keaphePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KEAPHE_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool wastewoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WASTEWOOD_PLANKS);
         BlockStateModelGenerator.BlockTexturePool chorusPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
         BlockStateModelGenerator.BlockTexturePool crystalCherryPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         BlockStateModelGenerator.BlockTexturePool polishedAmethystPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_AMETHYST_BLOCK);
@@ -118,6 +119,15 @@ public class ModModelProvider extends FabricModelProvider {
         keaphePool.fenceGate(ModBlocks.KEAPHE_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.KEAPHE_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.KEAPHE_TRAPDOOR);
+
+        wastewoodPool.stairs(ModBlocks.WASTEWOOD_STAIRS);
+        wastewoodPool.slab(ModBlocks.WASTEWOOD_SLAB);
+        wastewoodPool.button(ModBlocks.WASTEWOOD_BUTTON);
+        wastewoodPool.pressurePlate(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
+        wastewoodPool.fence(ModBlocks.WASTEWOOD_FENCE);
+        wastewoodPool.fenceGate(ModBlocks.WASTEWOOD_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.WASTEWOOD_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.WASTEWOOD_TRAPDOOR);
 
         polishedAmethystPool.stairs(ModBlocks.POLISHED_AMETHYST_STAIRS);
         polishedAmethystPool.slab(ModBlocks.POLISHED_AMETHYST_SLAB);
@@ -240,6 +250,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_AMETHYST_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_THERMIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_STYXCOAL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXCOAL_BLOCK);
@@ -313,6 +325,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_ASHEN_LOG).log(ModBlocks.STRIPPED_ASHEN_LOG).wood(ModBlocks.STRIPPED_ASHEN_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.KEAPHE_LOG).log(ModBlocks.KEAPHE_LOG).wood(ModBlocks.KEAPHE_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_KEAPHE_LOG).log(ModBlocks.STRIPPED_KEAPHE_LOG).wood(ModBlocks.STRIPPED_KEAPHE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.WASTEWOOD_LOG).log(ModBlocks.WASTEWOOD_LOG).wood(ModBlocks.WASTEWOOD_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_WASTEWOOD_LOG).log(ModBlocks.STRIPPED_WASTEWOOD_LOG).wood(ModBlocks.STRIPPED_WASTEWOOD_WOOD);
     }
 
     @Override

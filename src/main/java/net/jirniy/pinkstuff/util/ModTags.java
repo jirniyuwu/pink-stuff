@@ -35,6 +35,7 @@ public class ModTags {
         public static final TagKey<Block> CHORUS_LOGS = createTag("chorus_logs");
         public static final TagKey<Block> ASHEN_LOGS = createTag("ashen_logs");
         public static final TagKey<Block> KEAPHE_LOGS = createTag("keaphe_logs");
+        public static final TagKey<Block> WASTEWOOD_LOGS = createTag("wastewood_logs");
         public static final TagKey<Block> END_STONE = createTag("end_stone");
         public static final TagKey<Block> GLASS = createTag("glass");
         public static final TagKey<Block> GLASS_PANES = createTag("glass_panes");
@@ -63,6 +64,7 @@ public class ModTags {
         public static final TagKey<Item> CHORUS_LOGS = createTag("chorus_logs");
         public static final TagKey<Item> ASHEN_LOGS = createTag("ashen_logs");
         public static final TagKey<Item> KEAPHE_LOGS = createTag("keaphe_logs");
+        public static final TagKey<Item> WASTEWOOD_LOGS = createTag("wastewood_logs");
         public static final TagKey<Item> BRICKS_CRAFTABLE = createTag("bricks_craftable");
         public static final TagKey<Item> THERMIUM_FUEL_INSERTABLE = createTag("thermium_fuel_insertable");
         public static final TagKey<Item> BERRIES = createTag("berries");

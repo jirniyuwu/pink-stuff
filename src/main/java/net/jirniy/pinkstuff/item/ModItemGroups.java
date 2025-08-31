@@ -189,6 +189,8 @@ public class ModItemGroups {
                         entries.add(ModItems.ENERGIZED_THERMIUM);
                         entries.add(ModBlocks.THERMIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
+                        entries.add(ModBlocks.STYXIAN_THERMIUM_ORE);
+                        entries.add(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE);
                         entries.add(ModBlocks.RAW_THERMIUM_BLOCK);
                         entries.add(ModBlocks.THERMIUM_BLOCK);
                         entries.add(ModBlocks.ENERGIZED_THERMIUM_BLOCK);
@@ -378,6 +380,21 @@ public class ModItemGroups {
                         entries.add(ModBlocks.KEAPHE_TRAPDOOR);
                         entries.add(ModBlocks.KEAPHE_PRESSURE_PLATE);
                         entries.add(ModBlocks.KEAPHE_BUTTON);
+
+                        entries.add(ModBlocks.WASTEWOOD_LOG);
+                        entries.add(ModBlocks.WASTEWOOD_WOOD);
+                        entries.add(ModBlocks.STRIPPED_WASTEWOOD_LOG);
+                        entries.add(ModBlocks.STRIPPED_WASTEWOOD_WOOD);
+                        entries.add(ModBlocks.WASTEWOOD_PLANKS);
+
+                        entries.add(ModBlocks.WASTEWOOD_SLAB);
+                        entries.add(ModBlocks.WASTEWOOD_STAIRS);
+                        entries.add(ModBlocks.WASTEWOOD_FENCE);
+                        entries.add(ModBlocks.WASTEWOOD_FENCE_GATE);
+                        entries.add(ModBlocks.WASTEWOOD_DOOR);
+                        entries.add(ModBlocks.WASTEWOOD_TRAPDOOR);
+                        entries.add(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
+                        entries.add(ModBlocks.WASTEWOOD_BUTTON);
 
                         entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
                         entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
@@ -698,6 +715,19 @@ public class ModItemGroups {
             entries.add(ModBlocks.KEAPHE_TRAPDOOR);
             entries.add(ModBlocks.KEAPHE_PRESSURE_PLATE);
             entries.add(ModBlocks.KEAPHE_BUTTON);
+            entries.add(ModBlocks.WASTEWOOD_LOG);
+            entries.add(ModBlocks.WASTEWOOD_WOOD);
+            entries.add(ModBlocks.STRIPPED_WASTEWOOD_LOG);
+            entries.add(ModBlocks.STRIPPED_WASTEWOOD_WOOD);
+            entries.add(ModBlocks.WASTEWOOD_PLANKS);
+            entries.add(ModBlocks.WASTEWOOD_SLAB);
+            entries.add(ModBlocks.WASTEWOOD_STAIRS);
+            entries.add(ModBlocks.WASTEWOOD_FENCE);
+            entries.add(ModBlocks.WASTEWOOD_FENCE_GATE);
+            entries.add(ModBlocks.WASTEWOOD_DOOR);
+            entries.add(ModBlocks.WASTEWOOD_TRAPDOOR);
+            entries.add(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
+            entries.add(ModBlocks.WASTEWOOD_BUTTON);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ModItems.GLAZED_CHORUS_FRUIT);
@@ -822,6 +852,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.DEEPSLATE_KUNZITE_ORE);
             entries.add(ModBlocks.THERMIUM_ORE);
             entries.add(ModBlocks.DEEPSLATE_THERMIUM_ORE);
+            entries.add(ModBlocks.STYXIAN_THERMIUM_ORE);
+            entries.add(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE);
             entries.add(ModBlocks.NETHER_SULFUR_ORE);
             entries.add(ModBlocks.STYXIAN_SULFUR_ORE);
             entries.add(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE);
@@ -873,6 +905,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.KEAPHE_SAPLING);
 
             entries.add(ModBlocks.ASHEN_LOG);
+            entries.add(ModBlocks.WASTEWOOD_LOG);
 
             entries.add(ModBlocks.SMALL_END_GRASS);
             entries.add(ModBlocks.MEDIUM_END_GRASS);

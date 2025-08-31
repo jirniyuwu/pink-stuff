@@ -173,7 +173,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.KEAPHE_LOG.asItem())
                 .add(ModBlocks.KEAPHE_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_KEAPHE_LOG.asItem())
-                .add(ModBlocks.STRIPPED_KEAPHE_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_KEAPHE_WOOD.asItem())
+                .add(ModBlocks.WASTEWOOD_LOG.asItem())
+                .add(ModBlocks.WASTEWOOD_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_WASTEWOOD_LOG.asItem())
+                .add(ModBlocks.STRIPPED_WASTEWOOD_WOOD.asItem());
         valueLookupBuilder(ItemTags.LOGS)
                 .add(ModBlocks.ASHEN_LOG.asItem())
                 .add(ModBlocks.ASHEN_WOOD.asItem())
@@ -183,7 +187,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_PLANKS.asItem())
                 .add(ModBlocks.CHORUS_PLANKS.asItem())
                 .add(ModBlocks.ASHEN_PLANKS.asItem())
-                .add(ModBlocks.KEAPHE_PLANKS.asItem());
+                .add(ModBlocks.KEAPHE_PLANKS.asItem())
+                .add(ModBlocks.WASTEWOOD_PLANKS.asItem());
         valueLookupBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.ELYSIUM_HELMET)
@@ -318,42 +323,50 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB.asItem())
                 .add(ModBlocks.CHORUS_SLAB.asItem())
                 .add(ModBlocks.ASHEN_SLAB.asItem())
-                .add(ModBlocks.KEAPHE_SLAB.asItem());
+                .add(ModBlocks.KEAPHE_SLAB.asItem())
+                .add(ModBlocks.WASTEWOOD_SLAB.asItem());
         valueLookupBuilder(ItemTags.WOODEN_STAIRS)
                 .add(ModBlocks.CRYSTAL_CHERRY_STAIRS.asItem())
                 .add(ModBlocks.CHORUS_STAIRS.asItem())
                 .add(ModBlocks.ASHEN_STAIRS.asItem())
-                .add(ModBlocks.KEAPHE_STAIRS.asItem());
+                .add(ModBlocks.KEAPHE_STAIRS.asItem())
+                .add(ModBlocks.WASTEWOOD_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WOODEN_FENCES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE.asItem())
                 .add(ModBlocks.CHORUS_FENCE.asItem())
                 .add(ModBlocks.ASHEN_FENCE.asItem())
-                .add(ModBlocks.KEAPHE_FENCE.asItem());
+                .add(ModBlocks.KEAPHE_FENCE.asItem())
+                .add(ModBlocks.WASTEWOOD_FENCE.asItem());
         valueLookupBuilder(ItemTags.FENCE_GATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE.asItem())
                 .add(ModBlocks.CHORUS_FENCE_GATE.asItem())
                 .add(ModBlocks.ASHEN_FENCE_GATE.asItem())
-                .add(ModBlocks.KEAPHE_FENCE_GATE.asItem());
+                .add(ModBlocks.KEAPHE_FENCE_GATE.asItem())
+                .add(ModBlocks.WASTEWOOD_FENCE_GATE.asItem());
         valueLookupBuilder(ItemTags.WOODEN_DOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_DOOR.asItem())
                 .add(ModBlocks.CHORUS_DOOR.asItem())
                 .add(ModBlocks.ASHEN_DOOR.asItem())
-                .add(ModBlocks.KEAPHE_DOOR.asItem());
+                .add(ModBlocks.KEAPHE_DOOR.asItem())
+                .add(ModBlocks.WASTEWOOD_DOOR.asItem());
         valueLookupBuilder(ItemTags.WOODEN_TRAPDOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR.asItem())
                 .add(ModBlocks.CHORUS_TRAPDOOR.asItem())
                 .add(ModBlocks.ASHEN_TRAPDOOR.asItem())
-                .add(ModBlocks.KEAPHE_TRAPDOOR.asItem());
+                .add(ModBlocks.KEAPHE_TRAPDOOR.asItem())
+                .add(ModBlocks.WASTEWOOD_TRAPDOOR.asItem());
         valueLookupBuilder(ItemTags.WOODEN_BUTTONS)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON.asItem())
                 .add(ModBlocks.CHORUS_BUTTON.asItem())
                 .add(ModBlocks.ASHEN_BUTTON.asItem())
-                .add(ModBlocks.KEAPHE_BUTTON.asItem());
+                .add(ModBlocks.KEAPHE_BUTTON.asItem())
+                .add(ModBlocks.WASTEWOOD_BUTTON.asItem());
         valueLookupBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE.asItem())
                 .add(ModBlocks.CHORUS_PRESSURE_PLATE.asItem())
                 .add(ModBlocks.ASHEN_PRESSURE_PLATE.asItem())
-                .add(ModBlocks.KEAPHE_PRESSURE_PLATE.asItem());
+                .add(ModBlocks.KEAPHE_PRESSURE_PLATE.asItem())
+                .add(ModBlocks.WASTEWOOD_PRESSURE_PLATE.asItem());
         valueLookupBuilder(ModTags.Items.CRYSTAL_CHERRY_LOGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG.asItem())
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD.asItem())
@@ -374,6 +387,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.KEAPHE_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_KEAPHE_LOG.asItem())
                 .add(ModBlocks.STRIPPED_KEAPHE_WOOD.asItem());
+        valueLookupBuilder(ModTags.Items.WASTEWOOD_LOGS)
+                .add(ModBlocks.WASTEWOOD_LOG.asItem())
+                .add(ModBlocks.WASTEWOOD_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_WASTEWOOD_LOG.asItem())
+                .add(ModBlocks.STRIPPED_WASTEWOOD_WOOD.asItem());
         valueLookupBuilder(ModTags.Items.BRICKS_CRAFTABLE)
                 .add(Blocks.COBBLESTONE.asItem())
                 .add(Blocks.COBBLED_DEEPSLATE.asItem())

@@ -24,6 +24,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> KUNZITE_ORE_PLACED_KEY = registerKey("kunzite_ore_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_AMETHYST_ORE_PLACED_KEY = registerKey("styxian_amethyst_ore_placed");
+    public static final RegistryKey<PlacedFeature> STYXIAN_THERMIUM_ORE_PLACED_KEY = registerKey("styxian_thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> THERMIUM_ORE_PLACED_KEY = registerKey("thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> DRIPSTONE_THERMIUM_ORE_PLACED_KEY = registerKey("dripstone_thermium_ore_placed");
     public static final RegistryKey<PlacedFeature> SULFUR_ORE_PLACED_KEY = registerKey("sulfur_ore_placed");
@@ -42,6 +43,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> KEAPHE_TREE_PLACED_KEY = registerKey("keaphe_placed");
     public static final RegistryKey<PlacedFeature> KEAPHE_FOREST_PLACED_KEY = registerKey("keaphe_forest_placed");
     public static final RegistryKey<PlacedFeature> GIANT_KEAPHE_TREE_PLACED_KEY = registerKey("giant_keaphe_placed");
+    public static final RegistryKey<PlacedFeature> WASTEWOOD_TREE_PLACED_KEY = registerKey("wastewood_placed");
     public static final RegistryKey<PlacedFeature> GIANT_CHERRY_TREE_PLACED_KEY = registerKey("giant_cherry_placed");
     public static final RegistryKey<PlacedFeature> CRYSTAL_CHERRY_PLACED_KEY = registerKey("crystal_cherry_placed");
     public static final RegistryKey<PlacedFeature> SNOWY_SPRUCE_PLACED_KEY = registerKey("snowy_spruce_placed");
@@ -113,6 +115,11 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(3,
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(100), 1)))
+        );
+        register(context, STYXIAN_THERMIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_THERMIUM_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(8,
+                        HeightRangePlacementModifier.of(
+                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(160), 1)))
         );
         register(context, PINLINE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINLINE_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(2,
@@ -273,6 +280,10 @@ public class ModPlacedFeatures {
         register(context, KEAPHE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KEAPHE_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(0, 0.5f, 1), ModBlocks.KEAPHE_SAPLING
+                ));
+        register(context, WASTEWOOD_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WASTEWOOD_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(0, 0.5f, 1), Blocks.MOSS_CARPET
                 ));
         register(context, GIANT_KEAPHE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GIANT_KEAPHE_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
