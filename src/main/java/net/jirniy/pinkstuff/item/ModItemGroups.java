@@ -93,6 +93,17 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AMETANE_BRICKS_STAIRS);
                         entries.add(ModBlocks.AMETANE_BRICKS_WALL);
 
+                        entries.add(ModBlocks.BLACK_GOOP);
+                        entries.add(ModBlocks.CORESTONE);
+                        entries.add(ModBlocks.POLISHED_CORESTONE);
+                        entries.add(ModBlocks.POLISHED_CORESTONE_SLAB);
+                        entries.add(ModBlocks.POLISHED_CORESTONE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_CORESTONE_WALL);
+                        entries.add(ModBlocks.CORESTONE_BRICKS);
+                        entries.add(ModBlocks.CORESTONE_BRICKS_SLAB);
+                        entries.add(ModBlocks.CORESTONE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.CORESTONE_BRICKS_WALL);
+
                         entries.add(ModBlocks.COMPRESSED_END_STONE);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -254,7 +265,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MOONSTEEL_CHAIN);
                         entries.add(ModBlocks.MOONSTEEL_LANTERN);
 
-                        entries.add(ModBlocks.BLACK_GOOP);
                         entries.add(ModBlocks.CORRUPT_ORE);
                         entries.add(ModItems.CORRUPT_DROPLET);
                         entries.add(ModItems.CORRUPT_MASS);
@@ -560,7 +570,6 @@ public class ModItemGroups {
             entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_SLAB);
             entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS);
             entries.add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_WALL);
-            entries.add(ModBlocks.MABRIZE);
             entries.add(ModBlocks.POLISHED_MABRIZE);
             entries.add(ModBlocks.POLISHED_MABRIZE_SLAB);
             entries.add(ModBlocks.POLISHED_MABRIZE_STAIRS);
@@ -569,7 +578,6 @@ public class ModItemGroups {
             entries.add(ModBlocks.MABRIZE_BRICKS_SLAB);
             entries.add(ModBlocks.MABRIZE_BRICKS_STAIRS);
             entries.add(ModBlocks.MABRIZE_BRICKS_WALL);
-            entries.add(ModBlocks.AMETANE);
             entries.add(ModBlocks.POLISHED_AMETANE);
             entries.add(ModBlocks.POLISHED_AMETANE_SLAB);
             entries.add(ModBlocks.POLISHED_AMETANE_STAIRS);
@@ -578,6 +586,14 @@ public class ModItemGroups {
             entries.add(ModBlocks.AMETANE_BRICKS_SLAB);
             entries.add(ModBlocks.AMETANE_BRICKS_STAIRS);
             entries.add(ModBlocks.AMETANE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_CORESTONE);
+            entries.add(ModBlocks.POLISHED_CORESTONE_SLAB);
+            entries.add(ModBlocks.POLISHED_CORESTONE_STAIRS);
+            entries.add(ModBlocks.POLISHED_CORESTONE_WALL);
+            entries.add(ModBlocks.CORESTONE_BRICKS);
+            entries.add(ModBlocks.CORESTONE_BRICKS_SLAB);
+            entries.add(ModBlocks.CORESTONE_BRICKS_STAIRS);
+            entries.add(ModBlocks.CORESTONE_BRICKS_WALL);
             entries.add(ModBlocks.COMPRESSED_END_STONE);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -884,6 +900,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.PINK_SANDSTONE);
             entries.add(ModBlocks.ASH_BLOCK);
             entries.add(ModBlocks.BLACK_GOOP);
+            entries.add(ModBlocks.CORESTONE);
             entries.add(ModBlocks.STYXSTONE);
             entries.add(ModBlocks.COMPRESSED_STYXSTONE);
             entries.add(ModBlocks.MABRIZE);

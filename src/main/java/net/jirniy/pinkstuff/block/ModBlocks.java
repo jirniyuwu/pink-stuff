@@ -86,6 +86,12 @@ public class ModBlocks {
     public static final Block POLISHED_AMETANE = registerBlock("polished_ametane",
             properties -> new Block(properties.strength(1.4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORESTONE = registerBlock("corestone",
+            properties -> new Block(properties.strength(2.5f).requiresTool()
+                    .sounds(BlockSoundGroup.RESIN).mapColor(MapColor.BLACK)));
+    public static final Block POLISHED_CORESTONE = registerBlock("polished_corestone",
+            properties -> new Block(properties.strength(2.5f).requiresTool()
+                    .sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
     public static final Block COBBLED_STYXSTONE = registerBlock("cobbled_styxstone",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
@@ -576,6 +582,9 @@ public class ModBlocks {
     public static final Block MABRIZE_BRICKS = registerBlock("mabrize_bricks",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORESTONE_BRICKS = registerBlock("corestone_bricks",
+            properties -> new Block(properties.strength(3f).requiresTool()
+                    .sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
     public static final Block AMETANE_BRICKS = registerBlock("ametane_bricks",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
@@ -652,6 +661,22 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block POLISHED_MABRIZE_WALL = registerBlock("polished_mabrize_wall",
             properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block CORESTONE_BRICKS_STAIRS = registerBlock("corestone_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.CORESTONE_BRICKS.getDefaultState(),
+                    properties.strength(3f).requiresTool().sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
+    public static final Block CORESTONE_BRICKS_SLAB = registerBlock("corestone_bricks_slab",
+            properties -> new SlabBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
+    public static final Block CORESTONE_BRICKS_WALL = registerBlock("corestone_bricks_wall",
+            properties -> new WallBlock(properties.strength(3f).requiresTool().sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
+
+    public static final Block POLISHED_CORESTONE_STAIRS = registerBlock("polished_corestone_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_CORESTONE.getDefaultState(),
+                    properties.strength(2.5f).requiresTool().sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
+    public static final Block POLISHED_CORESTONE_SLAB = registerBlock("polished_corestone_slab",
+            properties -> new SlabBlock(properties.strength(2.5f).requiresTool().sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
+    public static final Block POLISHED_CORESTONE_WALL = registerBlock("polished_corestone_wall",
+            properties -> new WallBlock(properties.strength(2.5f).requiresTool().sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
 
     public static final Block AMETANE_BRICKS_STAIRS = registerBlock("ametane_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.AMETANE_BRICKS.getDefaultState(),

@@ -1875,6 +1875,51 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "polished_ametane_stairs")));
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETANE_WALL, ModBlocks.POLISHED_AMETANE);
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORESTONE, 2)
+                        .criterion(hasItem(ModBlocks.BLACK_GOOP), conditionsFromItem(ModBlocks.BLACK_GOOP))
+                        .input(ModBlocks.BLACK_GOOP).input(ModBlocks.BLACK_GOOP)
+                        .input(ModTags.Items.BRICKS_CRAFTABLE).input(ModTags.Items.BRICKS_CRAFTABLE)
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "corestone_from_black_goop")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CORESTONE, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.CORESTONE)
+                        .criterion(hasItem(ModBlocks.CORESTONE), conditionsFromItem(ModBlocks.CORESTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_corestone")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORESTONE_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.POLISHED_CORESTONE)
+                        .criterion(hasItem(ModBlocks.POLISHED_CORESTONE), conditionsFromItem(ModBlocks.POLISHED_CORESTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "corestone_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORESTONE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.CORESTONE_BRICKS))
+                        .criterion(hasItem(ModBlocks.CORESTONE_BRICKS), conditionsFromItem(ModBlocks.CORESTONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "corestone_bricks_slab")));
+                createStairsRecipe(ModBlocks.CORESTONE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CORESTONE_BRICKS))
+                        .criterion(hasItem(ModBlocks.CORESTONE_BRICKS), conditionsFromItem(ModBlocks.CORESTONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "corestone_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORESTONE_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.CORESTONE_BRICKS)
+                        .criterion(hasItem(ModBlocks.CORESTONE_BRICKS), conditionsFromItem(ModBlocks.CORESTONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "corestone_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CORESTONE_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_CORESTONE))
+                        .criterion(hasItem(ModBlocks.POLISHED_CORESTONE), conditionsFromItem(ModBlocks.POLISHED_CORESTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_corestone_slab")));
+                createStairsRecipe(ModBlocks.POLISHED_CORESTONE_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_CORESTONE))
+                        .criterion(hasItem(ModBlocks.POLISHED_CORESTONE), conditionsFromItem(ModBlocks.POLISHED_CORESTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_corestone_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CORESTONE_WALL, ModBlocks.POLISHED_CORESTONE);
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES_SLAB, Ingredient.ofItem(ModBlocks.AMETHYST_TILES))
                         .criterion(hasItem(ModBlocks.AMETHYST_TILES), conditionsFromItem(ModBlocks.AMETHYST_TILES))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,

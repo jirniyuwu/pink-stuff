@@ -57,6 +57,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> COMPRESSED_STYXSTONE_PLACED_KEY = registerKey("compressed_styxstone_placed");
     public static final RegistryKey<PlacedFeature> MABRIZE_PLACED_KEY = registerKey("mabrize_placed");
     public static final RegistryKey<PlacedFeature> AMETANE_PLACED_KEY = registerKey("ametane_placed");
+    public static final RegistryKey<PlacedFeature> CORESTONE_PLACED_KEY = registerKey("corestone_placed");
     public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_LUSH_PLACED_KEY = registerKey("kunzite_geode_lush_placed");
     public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_CHERRY_PLACED_KEY = registerKey("kunzite_geode_cherry_placed");
     public static final RegistryKey<PlacedFeature> AMETHYST_CLUMP_PLACED_KEY = registerKey("amethyst_clump_placed");
@@ -164,6 +165,9 @@ public class ModPlacedFeatures {
         register(context, AMETANE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETANE_KEY),
                 ModOrePlacement.modifiersWithCount(14,
                         HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(120))));
+        register(context, CORESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORESTONE_KEY),
+                ModOrePlacement.modifiersWithCount(30,
+                        HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(20), YOffset.fixed(160))));
         register(context, STYXIAN_DELTA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_DELTA_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(90), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
                         EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
