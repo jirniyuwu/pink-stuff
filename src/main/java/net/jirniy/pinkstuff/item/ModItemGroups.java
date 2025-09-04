@@ -269,6 +269,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CORRUPT_DROPLET);
                         entries.add(ModItems.CORRUPT_MASS);
                         entries.add(ModBlocks.CORRUPT_ROOTS);
+                        entries.add(ModBlocks.HANGING_CORRUPT_ROOTS);
 
                         entries.add(ModItems.CERILLE_NUGGET);
                         entries.add(ModItems.CERILLE_INGOT);
@@ -977,6 +978,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.STYXMOSS_VINE);
             entries.add(ModBlocks.DEATH_FLOWERS);
             entries.add(ModBlocks.CORRUPT_ROOTS);
+            entries.add(ModBlocks.HANGING_CORRUPT_ROOTS);
             entries.add(ModItems.COTTON_SEEDS);
             entries.add(ModItems.COTTON);
 

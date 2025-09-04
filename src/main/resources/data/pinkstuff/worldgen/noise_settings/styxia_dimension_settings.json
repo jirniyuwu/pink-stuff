@@ -182,6 +182,7 @@
               "type": "minecraft:biome",
               "biome_is": [
                 "pinkstuff:corrupted_spikes",
+                "pinkstuff:corrupt_cavegarden",
                 "pinkstuff:styxian_plains",
                 "pinkstuff:styxmoss_overgrowth",
                 "pinkstuff:keaphe_forest",

@@ -10,6 +10,16 @@
           }
         }
       }
+    },
+    "enter2": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:corrupt_cavegarden"
+          }
+        }
+      }
     }
   },
   "display": {
@@ -27,7 +37,8 @@
   },
   "requirements": [
     [
-      "enter"
+      "enter",
+      "enter2"
     ]
   ],
   "sends_telemetry_event": false

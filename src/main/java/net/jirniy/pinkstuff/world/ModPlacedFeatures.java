@@ -39,6 +39,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> GEM_TREE_PLACED_KEY = registerKey("gem_tree_placed");
     public static final RegistryKey<PlacedFeature> CHORUS_TREE_PLACED_KEY = registerKey("chorus_placed");
     public static final RegistryKey<PlacedFeature> ASHEN_TREE_PLACED_KEY = registerKey("ashen_placed");
+    public static final RegistryKey<PlacedFeature> CORRERIE_TREE_PLACED_KEY = registerKey("correrie_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_ASHEN_TREE_PLACED_KEY = registerKey("styxian_ashen_placed");
     public static final RegistryKey<PlacedFeature> KEAPHE_TREE_PLACED_KEY = registerKey("keaphe_placed");
     public static final RegistryKey<PlacedFeature> KEAPHE_FOREST_PLACED_KEY = registerKey("keaphe_forest_placed");
@@ -79,7 +80,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STYXMOSS_VEGETATION_PLACED_KEY = registerKey("styxmoss_vegetation_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_PATCH_PLACED_KEY = registerKey("styxmoss_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXGRASS_PATCH_PLACED_KEY = registerKey("styxgrass_patch_placed");
+    public static final RegistryKey<PlacedFeature> CORRUPTION_PATCH_PLACED_KEY = registerKey("corruption_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXGRASS_CEILING_PLACED_KEY = registerKey("styxgrass_ceiling_placed");
+    public static final RegistryKey<PlacedFeature> CORRUPTION_CEILING_PLACED_KEY = registerKey("corruption_ceiling_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_DISC_PLACED_KEY = registerKey("styxmoss_disc_placed");
     public static final RegistryKey<PlacedFeature> CRAWLER_STONE_PLACED_KEY = registerKey("crawler_stone_placed");
     public static final RegistryKey<PlacedFeature> COTTON_PATCH_PLACED_KEY = registerKey("cotton_patch_placed");
@@ -167,7 +170,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(120))));
         register(context, CORESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORESTONE_KEY),
                 ModOrePlacement.modifiersWithCount(30,
-                        HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(20), YOffset.fixed(160))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(20), YOffset.fixed(140))));
         register(context, STYXIAN_DELTA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_DELTA_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(90), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
                         EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
@@ -223,7 +226,16 @@ public class ModPlacedFeatures {
                 new PlacementModifier[]{CountPlacementModifier.of(125), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
                         EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
                         RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
+        register(context, CORRUPTION_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTION_PATCH_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(125), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        SurfaceThresholdFilterPlacementModifier.of(Heightmap.Type.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -13),
+                        EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
         register(context, STYXGRASS_CEILING_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXGRASS_CEILING_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(125), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)), BiomePlacementModifier.of()});
+        register(context, CORRUPTION_CEILING_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTION_CEILING_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(125), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
                         EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
                         RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)), BiomePlacementModifier.of()});
@@ -279,6 +291,11 @@ public class ModPlacedFeatures {
         register(context, STYXIAN_ASHEN_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ASHEN_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.25f, 1), Blocks.DEAD_BUSH
+                ));
+
+        register(context, CORRERIE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRERIE_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.25f, 1), ModBlocks.CORRUPT_ROOTS
                 ));
 
         register(context, KEAPHE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KEAPHE_TREE_KEY),

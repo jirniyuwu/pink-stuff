@@ -65,6 +65,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRYSTAL_CHERRY_KEY = registryKey("crystal_cherry");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHORUS_TREE_KEY = registryKey("chorus_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ASHEN_TREE_KEY = registryKey("ashen_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CORRERIE_TREE_KEY = registryKey("correrie_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> KEAPHE_TREE_KEY = registryKey("keaphe_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TALL_KEAPHE_TREE_KEY = registryKey("tall_keaphe_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_KEAPHE_TREE_KEY = registryKey("giant_keaphe_tree");
@@ -102,8 +103,10 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_KEY = registryKey("styxmoss_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_VEGETATION_KEY = registryKey("styxmoss_vegetation");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_BONEMEAL_KEY = registryKey("styxmoss_patch_bonemeal");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_PATCH_KEY = registryKey("corruption_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_PATCH_KEY = registryKey("styxgrass_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_CEILING_KEY = registryKey("styxgrass_ceiling");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_CEILING_KEY = registryKey("corruption_ceiling");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_DISK_KEY = registryKey("styxmoss_disk_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRAWLER_STONE_KEY = registryKey("crawler_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> COTTON_PATCH_KEY = registryKey("cotton_patch");
@@ -224,6 +227,15 @@ public class ModConfiguredFeatures {
                         VerticalSurfaceType.FLOOR,
                         ConstantIntProvider.create(1), 0.2f, 5, 0.8f,
                         UniformIntProvider.create(4, 6), 0.5f));
+        register(context, CORRUPTION_PATCH_KEY, Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(ModTags.Blocks.CORRUPTABLE_BLOCKS,
+                        BlockStateProvider.of(ModBlocks.BLACK_GOOP), PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                                .add(ModBlocks.CORRUPT_ROOTS.getDefaultState(), 1)
+                                .add(Blocks.AIR.getDefaultState(), 49)))),
+                        VerticalSurfaceType.FLOOR,
+                        ConstantIntProvider.create(1), 0.2f, 5, 0.8f,
+                        UniformIntProvider.create(2, 4), 0.5f));
         register(context, STYXGRASS_CEILING_KEY, Feature.VEGETATION_PATCH,
                 new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
                         BlockStateProvider.of(ModBlocks.STYXMOSS), PlacedFeatures.createEntry(Feature.BLOCK_COLUMN,
@@ -234,6 +246,16 @@ public class ModConfiguredFeatures {
                                 Direction.DOWN, BlockPredicate.IS_AIR, true)),
                 VerticalSurfaceType.CEILING, UniformIntProvider.create(1, 2), 0.5F, 5,
                         0.1F, UniformIntProvider.create(3, 6), 0.3F));
+        register(context, CORRUPTION_CEILING_KEY, Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(ModTags.Blocks.CORRUPTABLE_BLOCKS,
+                        BlockStateProvider.of(ModBlocks.BLACK_GOOP), PlacedFeatures.createEntry(Feature.BLOCK_COLUMN,
+                        new BlockColumnFeatureConfig(List.of(BlockColumnFeatureConfig.createLayer(
+                                        UniformIntProvider.create(1, 6), BlockStateProvider.of(ModBlocks.HANGING_CORRUPT_ROOTS.getDefaultState().with(HangingStyxgrassBlock.TIP, false))),
+                                BlockColumnFeatureConfig.createLayer(ConstantIntProvider.create(1),
+                                        BlockStateProvider.of(ModBlocks.HANGING_CORRUPT_ROOTS.getDefaultState().with(HangingStyxgrassBlock.TIP, true)))),
+                                Direction.DOWN, BlockPredicate.IS_AIR, true)),
+                        VerticalSurfaceType.CEILING, UniformIntProvider.create(1, 2), 0.5F, 5,
+                        0.15F, UniformIntProvider.create(3, 6), 0.3F));
         register(context, ASH_PATCH_KEY, Feature.VEGETATION_PATCH,
                 new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
                         new WeightedBlockStateProvider(Pool.<BlockState>builder()
@@ -430,6 +452,14 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), 1),
                 new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
                 .dirtProvider(BlockStateProvider.of(ModBlocks.ASHEN_LOG)).build());
+
+        register(context, CORRERIE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.CORRERIE_LOG),
+                new ForkingTrunkPlacer(5, 3, 2),
+                BlockStateProvider.of(AIR),
+                new BlobFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), 1),
+                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
+                .dirtProvider(BlockStateProvider.of(ModBlocks.BLACK_GOOP)).build());
 
         register(context, SNOWY_SPRUCE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(SPRUCE_LOG),

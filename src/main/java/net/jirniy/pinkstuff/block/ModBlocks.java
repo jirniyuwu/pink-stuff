@@ -169,6 +169,9 @@ public class ModBlocks {
     public static final Block CORRUPT_ROOTS = registerBlock("corrupt_roots",
             properties -> new CorruptRootsBlock(ModTags.Blocks.CORRUPT_BLOCKS, properties.strength(0f).replaceable()
                     .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.HONEY).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block HANGING_CORRUPT_ROOTS = registerBlock("hanging_corrupt_roots",
+            properties -> new HangingCorruptRootsBlock(properties.strength(0f).replaceable()
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.HONEY).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block STYXIAN_AMETHYST_ORE = registerBlock("styxian_amethyst_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),

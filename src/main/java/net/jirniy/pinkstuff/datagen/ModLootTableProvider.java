@@ -202,6 +202,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE, ModItems.THERMIUM_WASTE, 1, 3));
         addDrop(ModBlocks.CORRUPT_ORE, multipleOreDrops(ModBlocks.CORRUPT_ORE, ModItems.CORRUPT_DROPLET, 9, 29));
         addDrop(ModBlocks.CORRUPT_ROOTS, multipleOreDrops(ModBlocks.CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET, 1, 2));
+        addDrop(ModBlocks.HANGING_CORRUPT_ROOTS, oreDrops(ModBlocks.HANGING_CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET));
         addDrop(ModBlocks.STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
         addDrop(ModBlocks.STYXIAN_MOONSTEEL_ORE, oreDrops(ModBlocks.STYXIAN_MOONSTEEL_ORE, ModItems.RAW_MOONSTEEL));

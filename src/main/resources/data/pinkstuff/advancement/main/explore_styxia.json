@@ -11,6 +11,16 @@
         }
       }
     },
+    "corrupt_cavegarden": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:corrupt_cavegarden"
+          }
+        }
+      }
+    },
     "eroded_wastelands": {
       "trigger": "minecraft:location",
       "conditions": {
@@ -133,6 +143,9 @@
     ],
     [
       "eroded_wastelands"
+    ],
+    [
+      "corrupt_cavegarden"
     ]
   ],
   "sends_telemetry_event": false
