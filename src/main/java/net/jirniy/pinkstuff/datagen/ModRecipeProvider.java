@@ -925,6 +925,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "stripped_wastewood_wood")));
 
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRERIE_PLANKS, 4)
+                        .input(ModTags.Items.CORRERIE_LOGS).criterion(hasItem(ModBlocks.CORRERIE_LOG),
+                                conditionsFromItem(ModBlocks.CORRERIE_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_planks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRERIE_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.CORRERIE_LOG)
+                        .criterion(hasItem(ModBlocks.CORRERIE_LOG), conditionsFromItem(ModBlocks.CORRERIE_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_wood")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_CORRERIE_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.STRIPPED_CORRERIE_LOG)
+                        .criterion(hasItem(ModBlocks.STRIPPED_CORRERIE_LOG), conditionsFromItem(ModBlocks.STRIPPED_CORRERIE_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "stripped_correrie_wood")));
+
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYSTAL_CHERRY_PLANKS, 4)
                         .input(ModTags.Items.CRYSTAL_CHERRY_LOGS).criterion(hasItem(ModBlocks.CRYSTAL_CHERRY_LOG),
                                 conditionsFromItem(ModBlocks.CRYSTAL_CHERRY_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -1160,6 +1179,38 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.WASTEWOOD_PLANKS), conditionsFromItem(ModBlocks.WASTEWOOD_PLANKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "wastewood_stairs")));
+                createDoorRecipe(ModBlocks.CORRERIE_DOOR, Ingredient.ofItem(ModBlocks.CORRERIE_PLANKS))
+                        .criterion(hasItem(ModBlocks.CORRERIE_PLANKS), conditionsFromItem(ModBlocks.CORRERIE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_door")));
+                createTrapdoorRecipe(ModBlocks.CORRERIE_TRAPDOOR, Ingredient.ofItem(ModBlocks.CORRERIE_PLANKS))
+                        .criterion(hasItem(ModBlocks.CORRERIE_PLANKS), conditionsFromItem(ModBlocks.CORRERIE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_trapdoor")));
+                createButtonRecipe(ModBlocks.CORRERIE_BUTTON, Ingredient.ofItem(ModBlocks.CORRERIE_PLANKS))
+                        .criterion(hasItem(ModBlocks.CORRERIE_PLANKS), conditionsFromItem(ModBlocks.CORRERIE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_button")));
+                createPressurePlateRecipe(RecipeCategory.REDSTONE, ModBlocks.CORRERIE_PRESSURE_PLATE, Ingredient.ofItem(ModBlocks.CORRERIE_PLANKS))
+                        .criterion(hasItem(ModBlocks.CORRERIE_PLANKS), conditionsFromItem(ModBlocks.CORRERIE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_pressure_plate")));
+                createFenceGateRecipe(ModBlocks.CORRERIE_FENCE_GATE, Ingredient.ofItem(ModBlocks.CORRERIE_PLANKS))
+                        .criterion(hasItem(ModBlocks.CORRERIE_PLANKS), conditionsFromItem(ModBlocks.CORRERIE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_fence_gate")));
+                createFenceRecipe(ModBlocks.CORRERIE_FENCE, Ingredient.ofItem(ModBlocks.CORRERIE_PLANKS))
+                        .criterion(hasItem(ModBlocks.CORRERIE_PLANKS), conditionsFromItem(ModBlocks.CORRERIE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_fence")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRERIE_SLAB, Ingredient.ofItem(ModBlocks.CORRERIE_PLANKS))
+                        .criterion(hasItem(ModBlocks.CORRERIE_PLANKS), conditionsFromItem(ModBlocks.CORRERIE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_slab")));
+                createStairsRecipe(ModBlocks.CORRERIE_STAIRS, Ingredient.ofItem(ModBlocks.CORRERIE_PLANKS))
+                        .criterion(hasItem(ModBlocks.CORRERIE_PLANKS), conditionsFromItem(ModBlocks.CORRERIE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "correrie_stairs")));
 
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETHYST_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
                         .criterion(hasItem(ModBlocks.POLISHED_AMETHYST_BLOCK), conditionsFromItem(ModBlocks.POLISHED_AMETHYST_BLOCK))

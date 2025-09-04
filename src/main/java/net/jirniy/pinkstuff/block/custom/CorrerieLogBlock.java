@@ -2,19 +2,14 @@ package net.jirniy.pinkstuff.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.jirniy.pinkstuff.block.ModBlocks;
-import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.util.ModGamerules;
 import net.jirniy.pinkstuff.util.ModTags;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.TranslucentBlock;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityCollisionHandler;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.tag.BlockTags;
@@ -23,53 +18,31 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
-public class BlackGoopBlock extends TranslucentBlock {
-    public static final MapCodec<BlackGoopBlock> CODEC = createCodec(BlackGoopBlock::new);
+public class CorrerieLogBlock extends Block {
+    public static final MapCodec<CorrerieLogBlock> CODEC = createCodec(CorrerieLogBlock::new);
     public static final BooleanProperty SPREADABLE = BooleanProperty.of("spreadable");
+    public static final EnumProperty<Direction.Axis> AXIS;
 
-    public MapCodec<BlackGoopBlock> getCodec() {
+    public MapCodec<CorrerieLogBlock> getCodec() {
         return CODEC;
     }
 
-    public BlackGoopBlock(AbstractBlock.Settings settings) {
+    public CorrerieLogBlock(Settings settings) {
         super(settings);
-    }
-
-    @Override
-    protected void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
-        applyStatusEffect(player);
-        super.onBlockBreakStart(state, world, pos, player);
-    }
-
-    @Override
-    public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
-        if (!world.isClient() && state.getBlock() == ModBlocks.CORRUPT_ORE) {
-            dropExperience((ServerWorld) world, pos, 10);
-        }
-        super.afterBreak(world, player, pos, state, blockEntity, tool);
-    }
-
-    @Override
-    public void onEntityLand(BlockView world, Entity entity) {
-        applyStatusEffect(entity);
-        super.onEntityLand(world, entity);
-    }
-
-    @Override
-    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
-        applyStatusEffect(entity);
-        super.onEntityCollision(state, world, pos, entity, handler);
+        this.setDefaultState((BlockState)this.getDefaultState().with(AXIS, Direction.Axis.Y));
     }
 
     @Override
@@ -86,6 +59,30 @@ public class BlackGoopBlock extends TranslucentBlock {
             world.setBlockState(pos, state.with(SPREADABLE, false));
         }
         super.onPlaced(world, pos, state, placer, itemStack);
+    }
+
+    protected BlockState rotate(BlockState state, BlockRotation rotation) {
+        return changeRotation(state, rotation);
+    }
+
+    public static BlockState changeRotation(BlockState state, BlockRotation rotation) {
+        switch (rotation) {
+            case COUNTERCLOCKWISE_90:
+            case CLOCKWISE_90:
+                switch ((Direction.Axis)state.get(AXIS)) {
+                    case X -> {
+                        return (BlockState)state.with(AXIS, Direction.Axis.Z);
+                    }
+                    case Z -> {
+                        return (BlockState)state.with(AXIS, Direction.Axis.X);
+                    }
+                    default -> {
+                        return state;
+                    }
+                }
+            default:
+                return state;
+        }
     }
 
     @Override
@@ -111,6 +108,13 @@ public class BlackGoopBlock extends TranslucentBlock {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(SPREADABLE);
+        builder.add(AXIS);
+    }
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        return (BlockState)this.getDefaultState().with(AXIS, ctx.getSide().getAxis());
+    }
+    static {
+        AXIS = Properties.AXIS;
     }
 
     protected void spread(ServerWorld world, BlockPos pos, Random random) {
@@ -195,27 +199,6 @@ public class BlackGoopBlock extends TranslucentBlock {
                             SoundCategory.BLOCKS, 1f, 1, true);
                 }
             }
-        }
-    }
-
-    protected void applyStatusEffect(Entity entity) {
-        if (entity instanceof LivingEntity livingEntity) {
-            applyStatusEffect(livingEntity);
-        }
-    }
-
-    protected void applyStatusEffect(LivingEntity livingEntity) {
-        if (livingEntity instanceof PlayerEntity playerEntity) {
-            if (playerEntity.getGameMode() == GameMode.SPECTATOR) {
-                return;
-            }
-        }
-        if (livingEntity.hasStatusEffect(ModEffects.DEATH_GRIP)) {
-            if ((livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getDuration() < 40) || livingEntity.getStatusEffect(ModEffects.DEATH_GRIP).getAmplifier() > 0) {
-                livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));
-            }
-        } else {
-            livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 40, 0, false, false, true));
         }
     }
 }

@@ -470,6 +470,22 @@ public class ModBlocks {
     public static final Block WASTEWOOD_PLANKS = registerBlock("wastewood_planks",
             properties -> new Block(properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.TERRACOTTA_GRAY)));
 
+    public static final Block CORRERIE_LOG = registerBlock("correrie_log",
+            properties -> new CorrerieLogBlock(properties.ticksRandomly()
+                    .strength(3.0F).sounds(BlockSoundGroup.NETHER_WOOD).burnable().mapColor(MapColor.BLACK)));
+    public static final Block CORRERIE_WOOD = registerBlock("correrie_wood",
+            properties -> new CorrerieLogBlock(properties.ticksRandomly()
+                    .strength(3.0F).sounds(BlockSoundGroup.NETHER_WOOD).burnable().mapColor(MapColor.BLACK)));
+    public static final Block STRIPPED_CORRERIE_LOG = registerBlock("stripped_correrie_log",
+            properties -> new CorrerieLogBlock(properties.ticksRandomly()
+                    .strength(3.0F).sounds(BlockSoundGroup.NETHER_WOOD).burnable().mapColor(MapColor.BLACK)));
+    public static final Block STRIPPED_CORRERIE_WOOD = registerBlock("stripped_correrie_wood",
+            properties -> new CorrerieLogBlock(properties.ticksRandomly()
+                    .strength(3.0F).sounds(BlockSoundGroup.NETHER_WOOD).burnable().mapColor(MapColor.BLACK)));
+
+    public static final Block CORRERIE_PLANKS = registerBlock("correrie_planks",
+            properties -> new Block(properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.BLACK)));
+
     public static final Block AMETHYST_ROD = registerBlock("amethyst_rod",
             properties -> new ModRodBlock(null, properties.breakInstantly().luminance(state -> 15)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER).mapColor(MapColor.PURPLE)));
@@ -886,6 +902,24 @@ public class ModBlocks {
     public static final Block WASTEWOOD_DOOR = registerBlock("wastewood_door",
             properties -> new DoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
     public static final Block WASTEWOOD_TRAPDOOR = registerBlock("wastewood_trapdoor",
+            properties -> new TrapdoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
+
+    public static final Block CORRERIE_STAIRS = registerBlock("correrie_stairs",
+            properties -> new StairsBlock(ModBlocks.CORRERIE_PLANKS.getDefaultState(),
+                    properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.BLACK)));
+    public static final Block CORRERIE_SLAB = registerBlock("correrie_slab",
+            properties -> new SlabBlock(properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.BLACK)));
+    public static final Block CORRERIE_BUTTON = registerBlock("correrie_button",
+            properties -> new ButtonBlock(BlockSetType.CRIMSON, 20, properties.strength(3f).noCollision().sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.BLACK)));
+    public static final Block CORRERIE_PRESSURE_PLATE = registerBlock("correrie_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.BLACK)));
+    public static final Block CORRERIE_FENCE = registerBlock("correrie_fence",
+            properties -> new FenceBlock(properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD)));
+    public static final Block CORRERIE_FENCE_GATE = registerBlock("correrie_fence_gate",
+            properties -> new FenceGateBlock(WoodType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.BLACK)));
+    public static final Block CORRERIE_DOOR = registerBlock("correrie_door",
+            properties -> new DoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
+    public static final Block CORRERIE_TRAPDOOR = registerBlock("correrie_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
 
     public static final Block DISPLAY = registerBlock("display",

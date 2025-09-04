@@ -232,6 +232,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WASTEWOOD_STAIRS)
                 .add(ModBlocks.WASTEWOOD_DOOR)
                 .add(ModBlocks.WASTEWOOD_TRAPDOOR)
+                .add(ModBlocks.CORRERIE_SLAB)
+                .add(ModBlocks.CORRERIE_BUTTON)
+                .add(ModBlocks.CORRERIE_PRESSURE_PLATE)
+                .add(ModBlocks.CORRERIE_STAIRS)
+                .add(ModBlocks.CORRERIE_DOOR)
+                .add(ModBlocks.CORRERIE_TRAPDOOR)
                 .add(ModBlocks.PINK_SANDSTONE)
                 .add(ModBlocks.CUT_PINK_SANDSTONE)
                 .add(ModBlocks.CHISELED_PINK_SANDSTONE)
@@ -257,7 +263,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_PLANKS)
                 .add(ModBlocks.ASHEN_PLANKS)
                 .add(ModBlocks.KEAPHE_PLANKS)
-                .add(ModBlocks.WASTEWOOD_PLANKS);
+                .add(ModBlocks.WASTEWOOD_PLANKS)
+                .add(ModBlocks.CORRERIE_PLANKS);
         valueLookupBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.CRYSTAL_CHERRY_LEAVES)
                 .add(ModBlocks.CHORUS_LEAVES)
@@ -382,7 +389,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WASTEWOOD_LOG)
                 .add(ModBlocks.WASTEWOOD_WOOD)
                 .add(ModBlocks.STRIPPED_WASTEWOOD_LOG)
-                .add(ModBlocks.STRIPPED_WASTEWOOD_WOOD);
+                .add(ModBlocks.STRIPPED_WASTEWOOD_WOOD)
+                .add(ModBlocks.CORRERIE_LOG)
+                .add(ModBlocks.CORRERIE_WOOD)
+                .add(ModBlocks.STRIPPED_CORRERIE_LOG)
+                .add(ModBlocks.STRIPPED_CORRERIE_WOOD);
         valueLookupBuilder(BlockTags.LOGS)
                 .add(ModBlocks.ASHEN_LOG)
                 .add(ModBlocks.ASHEN_WOOD)
@@ -395,13 +406,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_FENCE)
                 .add(ModBlocks.ASHEN_FENCE)
                 .add(ModBlocks.KEAPHE_FENCE)
-                .add(ModBlocks.WASTEWOOD_FENCE);
+                .add(ModBlocks.WASTEWOOD_FENCE)
+                .add(ModBlocks.CORRERIE_FENCE);
         valueLookupBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_FENCE_GATE)
                 .add(ModBlocks.CHORUS_FENCE_GATE)
                 .add(ModBlocks.ASHEN_FENCE_GATE)
                 .add(ModBlocks.KEAPHE_FENCE_GATE)
-                .add(ModBlocks.WASTEWOOD_FENCE_GATE);
+                .add(ModBlocks.WASTEWOOD_FENCE_GATE)
+                .add(ModBlocks.CORRERIE_FENCE_GATE);
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.AMETHYST_BRICKS_WALL)
                 .add(ModBlocks.KUNZITE_BRICKS_WALL)
@@ -520,37 +533,43 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_SLAB)
                 .add(ModBlocks.ASHEN_SLAB)
                 .add(ModBlocks.KEAPHE_SLAB)
-                .add(ModBlocks.WASTEWOOD_SLAB);
+                .add(ModBlocks.WASTEWOOD_SLAB)
+                .add(ModBlocks.CORRERIE_SLAB);
         valueLookupBuilder(BlockTags.WOODEN_STAIRS)
                 .add(ModBlocks.CRYSTAL_CHERRY_STAIRS)
                 .add(ModBlocks.CHORUS_STAIRS)
                 .add(ModBlocks.ASHEN_STAIRS)
                 .add(ModBlocks.KEAPHE_STAIRS)
-                .add(ModBlocks.WASTEWOOD_STAIRS);
+                .add(ModBlocks.WASTEWOOD_STAIRS)
+                .add(ModBlocks.CORRERIE_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_DOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_DOOR)
                 .add(ModBlocks.CHORUS_DOOR)
                 .add(ModBlocks.ASHEN_DOOR)
                 .add(ModBlocks.KEAPHE_DOOR)
-                .add(ModBlocks.WASTEWOOD_DOOR);
+                .add(ModBlocks.WASTEWOOD_DOOR)
+                .add(ModBlocks.CORRERIE_DOOR);
         valueLookupBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR)
                 .add(ModBlocks.CHORUS_TRAPDOOR)
                 .add(ModBlocks.ASHEN_TRAPDOOR)
                 .add(ModBlocks.KEAPHE_TRAPDOOR)
-                .add(ModBlocks.WASTEWOOD_TRAPDOOR);
+                .add(ModBlocks.WASTEWOOD_TRAPDOOR)
+                .add(ModBlocks.CORRERIE_TRAPDOOR);
         valueLookupBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
                 .add(ModBlocks.CHORUS_BUTTON)
                 .add(ModBlocks.ASHEN_BUTTON)
                 .add(ModBlocks.KEAPHE_BUTTON)
+                .add(ModBlocks.CORRERIE_BUTTON)
                 .add(ModBlocks.WASTEWOOD_BUTTON);
         valueLookupBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE)
                 .add(ModBlocks.CHORUS_PRESSURE_PLATE)
                 .add(ModBlocks.ASHEN_PRESSURE_PLATE)
                 .add(ModBlocks.KEAPHE_PRESSURE_PLATE)
-                .add(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
+                .add(ModBlocks.WASTEWOOD_PRESSURE_PLATE)
+                .add(ModBlocks.CORRERIE_PRESSURE_PLATE);
         valueLookupBuilder(ModTags.Blocks.CRYSTAL_CHERRY_LOGS)
                 .add(ModBlocks.CRYSTAL_CHERRY_LOG)
                 .add(ModBlocks.CRYSTAL_CHERRY_WOOD)
@@ -571,6 +590,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WASTEWOOD_WOOD)
                 .add(ModBlocks.STRIPPED_WASTEWOOD_LOG)
                 .add(ModBlocks.STRIPPED_WASTEWOOD_WOOD);
+        valueLookupBuilder(ModTags.Blocks.CORRERIE_LOGS)
+                .add(ModBlocks.CORRERIE_LOG)
+                .add(ModBlocks.CORRERIE_WOOD)
+                .add(ModBlocks.STRIPPED_CORRERIE_LOG)
+                .add(ModBlocks.STRIPPED_CORRERIE_WOOD);
         valueLookupBuilder(ModTags.Blocks.KEAPHE_LOGS)
                 .add(ModBlocks.KEAPHE_LOG)
                 .add(ModBlocks.KEAPHE_WOOD)
@@ -686,6 +710,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STYXMOSS);
         valueLookupBuilder(ModTags.Blocks.CORRUPT_BLOCKS)
                 .add(ModBlocks.BLACK_GOOP)
+                .add(ModBlocks.CORRERIE_LOG)
+                .add(ModBlocks.CORRERIE_WOOD)
+                .add(ModBlocks.STRIPPED_CORRERIE_LOG)
+                .add(ModBlocks.STRIPPED_CORRERIE_WOOD)
                 .add(ModBlocks.CORESTONE)
                 .add(ModBlocks.CORRUPT_ORE);
         valueLookupBuilder(BlockTags.SAND)

@@ -411,6 +411,21 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
                         entries.add(ModBlocks.WASTEWOOD_BUTTON);
 
+                        entries.add(ModBlocks.CORRERIE_LOG);
+                        entries.add(ModBlocks.CORRERIE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_CORRERIE_LOG);
+                        entries.add(ModBlocks.STRIPPED_CORRERIE_WOOD);
+                        entries.add(ModBlocks.CORRERIE_PLANKS);
+
+                        entries.add(ModBlocks.CORRERIE_SLAB);
+                        entries.add(ModBlocks.CORRERIE_STAIRS);
+                        entries.add(ModBlocks.CORRERIE_FENCE);
+                        entries.add(ModBlocks.CORRERIE_FENCE_GATE);
+                        entries.add(ModBlocks.CORRERIE_DOOR);
+                        entries.add(ModBlocks.CORRERIE_TRAPDOOR);
+                        entries.add(ModBlocks.CORRERIE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.CORRERIE_BUTTON);
+
                         entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
                         entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);
 
@@ -752,6 +767,19 @@ public class ModItemGroups {
             entries.add(ModBlocks.WASTEWOOD_TRAPDOOR);
             entries.add(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
             entries.add(ModBlocks.WASTEWOOD_BUTTON);
+            entries.add(ModBlocks.CORRERIE_LOG);
+            entries.add(ModBlocks.CORRERIE_WOOD);
+            entries.add(ModBlocks.STRIPPED_CORRERIE_LOG);
+            entries.add(ModBlocks.STRIPPED_CORRERIE_WOOD);
+            entries.add(ModBlocks.CORRERIE_PLANKS);
+            entries.add(ModBlocks.CORRERIE_SLAB);
+            entries.add(ModBlocks.CORRERIE_STAIRS);
+            entries.add(ModBlocks.CORRERIE_FENCE);
+            entries.add(ModBlocks.CORRERIE_FENCE_GATE);
+            entries.add(ModBlocks.CORRERIE_DOOR);
+            entries.add(ModBlocks.CORRERIE_TRAPDOOR);
+            entries.add(ModBlocks.CORRERIE_PRESSURE_PLATE);
+            entries.add(ModBlocks.CORRERIE_BUTTON);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ModItems.GLAZED_CHORUS_FRUIT);
@@ -931,6 +959,7 @@ public class ModItemGroups {
 
             entries.add(ModBlocks.ASHEN_LOG);
             entries.add(ModBlocks.WASTEWOOD_LOG);
+            entries.add(ModBlocks.CORRERIE_LOG);
 
             entries.add(ModBlocks.SMALL_END_GRASS);
             entries.add(ModBlocks.MEDIUM_END_GRASS);

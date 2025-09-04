@@ -23,6 +23,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool ashenPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ASHEN_PLANKS);
         BlockStateModelGenerator.BlockTexturePool keaphePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KEAPHE_PLANKS);
         BlockStateModelGenerator.BlockTexturePool wastewoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WASTEWOOD_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool correriePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CORRERIE_PLANKS);
         BlockStateModelGenerator.BlockTexturePool chorusPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
         BlockStateModelGenerator.BlockTexturePool crystalCherryPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRYSTAL_CHERRY_PLANKS);
         BlockStateModelGenerator.BlockTexturePool polishedAmethystPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_AMETHYST_BLOCK);
@@ -131,6 +132,15 @@ public class ModModelProvider extends FabricModelProvider {
         wastewoodPool.fenceGate(ModBlocks.WASTEWOOD_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.WASTEWOOD_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.WASTEWOOD_TRAPDOOR);
+
+        correriePool.stairs(ModBlocks.CORRERIE_STAIRS);
+        correriePool.slab(ModBlocks.CORRERIE_SLAB);
+        correriePool.button(ModBlocks.CORRERIE_BUTTON);
+        correriePool.pressurePlate(ModBlocks.CORRERIE_PRESSURE_PLATE);
+        correriePool.fence(ModBlocks.CORRERIE_FENCE);
+        correriePool.fenceGate(ModBlocks.CORRERIE_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.CORRERIE_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.CORRERIE_TRAPDOOR);
 
         polishedAmethystPool.stairs(ModBlocks.POLISHED_AMETHYST_STAIRS);
         polishedAmethystPool.slab(ModBlocks.POLISHED_AMETHYST_SLAB);
@@ -343,6 +353,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_KEAPHE_LOG).log(ModBlocks.STRIPPED_KEAPHE_LOG).wood(ModBlocks.STRIPPED_KEAPHE_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.WASTEWOOD_LOG).log(ModBlocks.WASTEWOOD_LOG).wood(ModBlocks.WASTEWOOD_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_WASTEWOOD_LOG).log(ModBlocks.STRIPPED_WASTEWOOD_LOG).wood(ModBlocks.STRIPPED_WASTEWOOD_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.CORRERIE_LOG).log(ModBlocks.CORRERIE_LOG).wood(ModBlocks.CORRERIE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_CORRERIE_LOG).log(ModBlocks.STRIPPED_CORRERIE_LOG).wood(ModBlocks.STRIPPED_CORRERIE_WOOD);
     }
 
     @Override

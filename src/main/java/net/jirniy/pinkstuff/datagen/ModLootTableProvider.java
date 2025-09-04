@@ -335,6 +335,21 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WASTEWOOD_BUTTON);
         addDrop(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
 
+        addDrop(ModBlocks.CORRERIE_LOG);
+        addDrop(ModBlocks.CORRERIE_WOOD);
+        addDrop(ModBlocks.STRIPPED_CORRERIE_LOG);
+        addDrop(ModBlocks.STRIPPED_CORRERIE_WOOD);
+        addDrop(ModBlocks.CORRERIE_PLANKS);
+
+        addDrop(ModBlocks.CORRERIE_SLAB, slabDrops(ModBlocks.CORRERIE_SLAB));
+        addDrop(ModBlocks.CORRERIE_STAIRS);
+        addDrop(ModBlocks.CORRERIE_FENCE);
+        addDrop(ModBlocks.CORRERIE_FENCE_GATE);
+        addDrop(ModBlocks.CORRERIE_DOOR, doorDrops(ModBlocks.CORRERIE_DOOR));
+        addDrop(ModBlocks.CORRERIE_TRAPDOOR);
+        addDrop(ModBlocks.CORRERIE_BUTTON);
+        addDrop(ModBlocks.CORRERIE_PRESSURE_PLATE);
+
         addPottedPlantDrops(ModBlocks.POTTED_MEMORIA_BOURPEER);
         addPottedPlantDrops(ModBlocks.POTTED_THERMIUM_WILTBORN);
         addPottedPlantDrops(ModBlocks.POTTED_ELYSIAN_SKYBERRY);
