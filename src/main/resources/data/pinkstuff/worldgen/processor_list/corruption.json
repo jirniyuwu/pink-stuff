@@ -24,7 +24,7 @@
         },
         "input_predicate": {
           "predicate_type": "minecraft:random_block_match",
-          "block": "pinkstuff:keaphe_planks",
+          "block": "pinkstuff:correrie_planks",
           "probability": 0.3
         },
         "output_state": {
