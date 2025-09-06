@@ -58,6 +58,7 @@
       "pinkstuff:corruption_patch_placed",
       "pinkstuff:correrie_placed",
       "pinkstuff:corrupt_roots_placed",
+      "pinkstuff:styxgrass_patch_placed",
       "pinkstuff:corruption_clump_placed",
       "pinkstuff:corruption_ceiling_placed"
     ],
@@ -75,10 +76,16 @@
         "type": "pinkstuff:corrupted_zombie",
         "maxCount": 1,
         "minCount": 1,
-        "weight": 1
+        "weight": 9
       },
       {
         "type": "pinkstuff:corrupted_skeleton",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "pinkstuff:corruption_blaze",
         "maxCount": 1,
         "minCount": 1,
         "weight": 1

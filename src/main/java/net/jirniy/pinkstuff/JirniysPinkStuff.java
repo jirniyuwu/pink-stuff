@@ -1,8 +1,5 @@
 package net.jirniy.pinkstuff;
 
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.MultimapBuilder;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
@@ -16,6 +13,7 @@ import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.enchantment.ModEnchantmentEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.custom.AmethystBlazeEntity;
+import net.jirniy.pinkstuff.entity.custom.CorruptionBlazeEntity;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
 import net.jirniy.pinkstuff.entity.custom.ExofairyEntity;
 import net.jirniy.pinkstuff.item.ModItemGroups;
@@ -32,24 +30,18 @@ import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
 import net.kyrptonaught.customportalapi.CustomPortalBlock;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOffers;
 import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
-import net.minecraft.world.event.GameEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -178,6 +170,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_ZOMBIE, ZombieEntity.createZombieAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_SKELETON, SkeletonEntity.createAbstractSkeletonAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeEntity.createAmethystBlazeAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTION_BLAZE, CorruptionBlazeEntity.createCorruptionBlazeAttributes());
 
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.PREPARED_PINLINE, ModPotions.GROUNDED);

@@ -9,6 +9,10 @@
   "entity.pinkstuff.corrupted_skeleton": "Corrupted Skeleton",
   "item.pinkstuff.amethyst_blaze_spawn_egg": "Amethyst Blaze Spawn Egg",
   "entity.pinkstuff.amethyst_blaze": "Amethyst Blaze",
+  "item.pinkstuff.corruption_blaze_spawn_egg": "Corrupt Blaze Spawn Egg",
+  "entity.pinkstuff.corruption_blaze": "Corrupt Blaze",
+  "entity.pinkstuff.amethyst_fireball": "Amethyst Fireball",
+  "entity.pinkstuff.corruption_fireball": "Corruption Fireball",
 
   "item.pinkstuff.diamond_clump": "Diamond Clump",
   "item.pinkstuff.emerald_clump": "Emerald Clump",

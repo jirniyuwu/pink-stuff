@@ -16,6 +16,7 @@ import net.jirniy.pinkstuff.screen.custom.DisplayScreen;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.particle.FlameParticle;
+import net.minecraft.client.particle.SculkChargePopParticle;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
@@ -83,7 +84,9 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.CORRUPTED_ZOMBIE, CorruptedZombieRenderer::new);
         EntityRendererRegistry.register(ModEntities.CORRUPTED_SKELETON, CorruptedSkeletonRenderer::new);
         EntityRendererRegistry.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeRenderer::new);
+        EntityRendererRegistry.register(ModEntities.CORRUPTION_BLAZE, CorruptionBlazeRenderer::new);
         EntityRendererRegistry.register(ModEntities.AMETHYST_FIREBALL, AmethystFireballRenderer::new);
+        EntityRendererRegistry.register(ModEntities.CORRUPTION_FIREBALL, CorruptionFireballRenderer::new);
 
         BlockEntityRendererFactories.register(ModBlockEntities.DISPLAY_BE, DisplayBlockEntityRenderer::new);
 
@@ -95,5 +98,6 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.SPARKLE_PARTICLE, SparkleParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.CHORUS_PETAL_PARTICLE, ChorusPetalParticle.ChorusPetalFactory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.STYXIAN_FLAME_PARTICLE, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.CORRUPTION_POP_PARTICLE, SculkChargePopParticle.Factory::new);
     }
 }

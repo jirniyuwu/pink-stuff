@@ -23,8 +23,12 @@ public class ModEntities {
             RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupted_skeleton"));
     private static final RegistryKey<EntityType<?>> AMETHYST_BLAZE_KEY =
             RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_blaze"));
+    private static final RegistryKey<EntityType<?>> CORRUPTION_BLAZE_KEY =
+            RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "corruption_blaze"));
     private static final RegistryKey<EntityType<?>> AMETHYST_FIREBALL_KEY =
             RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_fireball"));
+    private static final RegistryKey<EntityType<?>> CORRUPTION_FIREBALL_KEY =
+            RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "corruption_fireball"));
 
     public static final EntityType<CrawlerEntity> CRAWLER = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "crawler"),
@@ -50,11 +54,19 @@ public class ModEntities {
             Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_blaze"),
             EntityType.Builder.create(AmethystBlazeEntity::new, SpawnGroup.MONSTER)
                     .dimensions(0.7f, 2.0f).build(AMETHYST_BLAZE_KEY));
+    public static final EntityType<CorruptionBlazeEntity> CORRUPTION_BLAZE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "corruption_blaze"),
+            EntityType.Builder.create(CorruptionBlazeEntity::new, SpawnGroup.MONSTER)
+                    .dimensions(0.7f, 1.6f).build(CORRUPTION_BLAZE_KEY));
 
     public static final EntityType<AmethystFireballEntity> AMETHYST_FIREBALL = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_fireball"),
             EntityType.Builder.create(AmethystFireballEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 0.5f).build(AMETHYST_FIREBALL_KEY));
+    public static final EntityType<CorruptionFireballEntity> CORRUPTION_FIREBALL = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(JirniysPinkStuff.MOD_ID, "corruption_fireball"),
+            EntityType.Builder.create(CorruptionFireballEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5f, 0.5f).build(CORRUPTION_FIREBALL_KEY));
 
     public static void registerModEntities() {
         JirniysPinkStuff.LOGGER.info("Registering Mod Entities for " + JirniysPinkStuff.MOD_ID);

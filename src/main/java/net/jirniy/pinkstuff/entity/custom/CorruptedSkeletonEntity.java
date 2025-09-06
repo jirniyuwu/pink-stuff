@@ -52,6 +52,6 @@ public class CorruptedSkeletonEntity extends SkeletonEntity {
     }
 
     public static boolean canSpawn(EntityType<? extends HostileEntity> type, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
-        return world.getDifficulty() != Difficulty.PEACEFUL && world.getLightLevel(LightType.BLOCK, pos) <= 0 && canMobSpawn(type, world, spawnReason, pos, random);
+        return world.getDifficulty() != Difficulty.PEACEFUL && (SpawnReason.isAnySpawner(spawnReason) || world.getLightLevel(LightType.BLOCK, pos) <= 0) && canMobSpawn(type, world, spawnReason, pos, random);
     }
 }

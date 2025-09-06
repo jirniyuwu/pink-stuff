@@ -2,6 +2,7 @@ package net.jirniy.pinkstuff.particle;
 
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
+import net.minecraft.client.particle.SculkChargePopParticle;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.registry.Registries;
@@ -19,6 +20,8 @@ public class ModParticles {
             registerParticle("chorus_petal_particle", FabricParticleTypes.simple(false));
     public static final SimpleParticleType STYXIAN_FLAME_PARTICLE =
             registerParticle("styxian_flame_particle", FabricParticleTypes.simple(true));
+    public static final SimpleParticleType CORRUPTION_POP_PARTICLE =
+            registerParticle("corruption_pop_particle", FabricParticleTypes.simple(true));
 
     private static SimpleParticleType registerParticle(String name, SimpleParticleType particleType) {
         return Registry.register(Registries.PARTICLE_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, name), particleType);

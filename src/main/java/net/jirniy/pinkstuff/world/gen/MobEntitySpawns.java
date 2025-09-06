@@ -3,10 +3,7 @@ package net.jirniy.pinkstuff.world.gen;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.jirniy.pinkstuff.entity.ModEntities;
-import net.jirniy.pinkstuff.entity.custom.CorruptedSkeletonEntity;
-import net.jirniy.pinkstuff.entity.custom.CorruptedZombieEntity;
-import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
-import net.jirniy.pinkstuff.entity.custom.ExofairyEntity;
+import net.jirniy.pinkstuff.entity.custom.*;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.SpawnLocationTypes;
 import net.minecraft.entity.SpawnRestriction;
@@ -24,5 +21,6 @@ public class MobEntitySpawns {
         SpawnRestriction.register(ModEntities.CORRUPTED_SKELETON, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CorruptedSkeletonEntity::canSpawn);
         SpawnRestriction.register(ModEntities.CORRUPTED_ZOMBIE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CorruptedZombieEntity::canSpawn);
         SpawnRestriction.register(ModEntities.AMETHYST_BLAZE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);
+        SpawnRestriction.register(ModEntities.CORRUPTION_BLAZE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CorruptionBlazeEntity::canSpawn);
     }
 }

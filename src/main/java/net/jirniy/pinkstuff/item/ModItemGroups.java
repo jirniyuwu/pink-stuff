@@ -24,6 +24,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
                         entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
                         entries.add(ModItems.AMETHYST_BLAZE_SPAWN_EGG);
+                        entries.add(ModItems.CORRUPTION_BLAZE_SPAWN_EGG);
 
                         entries.add(ModBlocks.CRAWLER_STONE);
                         entries.add(ModBlocks.CRAWLER_DEEPSLATE);
@@ -995,6 +996,7 @@ public class ModItemGroups {
             entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
             entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
             entries.add(ModItems.AMETHYST_BLAZE_SPAWN_EGG);
+            entries.add(ModItems.CORRUPTION_BLAZE_SPAWN_EGG);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(ModBlocks.MOONSTEEL_CHAIN);

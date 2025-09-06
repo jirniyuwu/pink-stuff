@@ -1,29 +1,29 @@
 package net.jirniy.pinkstuff.entity.custom;
 
 import net.jirniy.pinkstuff.entity.ModEntities;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ProjectileDeflection;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageTypes;
-import net.minecraft.entity.effect.InstantStatusEffect;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.BlazeEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.Difficulty;
+import net.minecraft.world.LightType;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 import java.util.EnumSet;
 
-public class AmethystBlazeEntity extends BlazeEntity {
-    public AmethystBlazeEntity(EntityType<? extends BlazeEntity> entityType, World world) {
+public class CorruptionBlazeEntity extends BlazeEntity {
+    public CorruptionBlazeEntity(EntityType<? extends BlazeEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -44,35 +44,30 @@ public class AmethystBlazeEntity extends BlazeEntity {
 
     @Override
     public boolean isInvulnerableTo(ServerWorld world, DamageSource source) {
-        if (source.getAttacker() != null && source.getAttacker().getType() == ModEntities.AMETHYST_BLAZE
-        || source.isOf(DamageTypes.INDIRECT_MAGIC) || source.isOf(DamageTypes.MAGIC)) {
+        if (source.getAttacker() != null && source.getAttacker().getType() == ModEntities.CORRUPTION_BLAZE
+        || source.isOf(DamageTypes.WITHER) || source.isOf(DamageTypes.INDIRECT_MAGIC) || source.isOf(DamageTypes.MAGIC)) {
             return true;
         }
         return super.isInvulnerableTo(world, source);
     }
 
-    public static DefaultAttributeContainer.Builder createAmethystBlazeAttributes() {
+    public static DefaultAttributeContainer.Builder createCorruptionBlazeAttributes() {
         return HostileEntity.createHostileAttributes()
-                .add(EntityAttributes.SCALE, 1.2F)
-                .add(EntityAttributes.MAX_HEALTH, 40.0F)
-                .add(EntityAttributes.ATTACK_DAMAGE, (double)8.0F)
-                .add(EntityAttributes.MOVEMENT_SPEED, (double)0.3F)
-                .add(EntityAttributes.FOLLOW_RANGE, (double)64.0F)
+                .add(EntityAttributes.SCALE, 0.95F)
+                .add(EntityAttributes.MAX_HEALTH, 15.0F)
+                .add(EntityAttributes.ATTACK_DAMAGE, (double)6.0F)
+                .add(EntityAttributes.MOVEMENT_SPEED, (double)0.4F)
+                .add(EntityAttributes.FOLLOW_RANGE, (double)32.0F)
                 .add(EntityAttributes.FALL_DAMAGE_MULTIPLIER, 0.0F);
     }
 
-    @Override
-    public ProjectileDeflection getProjectileDeflection(ProjectileEntity projectile) {
-        return ProjectileDeflection.REDIRECTED;
-    }
-
     static class ShootGoal extends Goal {
-        private final AmethystBlazeEntity blaze;
+        private final CorruptionBlazeEntity blaze;
         private int fireballsFired;
         private int fireballCooldown;
         private int targetNotVisibleTicks;
 
-        public ShootGoal(AmethystBlazeEntity blaze) {
+        public ShootGoal(CorruptionBlazeEntity blaze) {
             this.blaze = blaze;
             this.setControls(EnumSet.of(Control.MOVE, Control.LOOK));
         }
@@ -125,7 +120,7 @@ public class AmethystBlazeEntity extends BlazeEntity {
                         ++this.fireballsFired;
                         if (this.fireballsFired == 1) {
                             this.fireballCooldown = 60;
-                        } else if (this.fireballsFired <= 4) {
+                        } else if (this.fireballsFired <= 7) {
                             this.fireballCooldown = 6;
                         } else {
                             this.fireballCooldown = 100;
@@ -140,7 +135,7 @@ public class AmethystBlazeEntity extends BlazeEntity {
 
                             for(int i = 0; i < 1; ++i) {
                                 Vec3d vec3d = new Vec3d(this.blaze.getRandom().nextTriangular(e, 2.297 * h), f, this.blaze.getRandom().nextTriangular(g, 2.297 * h));
-                                AmethystFireballEntity smallFireballEntity = new AmethystFireballEntity(ModEntities.AMETHYST_FIREBALL, blaze.getWorld());
+                                CorruptionFireballEntity smallFireballEntity = new CorruptionFireballEntity(ModEntities.CORRUPTION_FIREBALL, blaze.getWorld());
                                 smallFireballEntity.setVelocityWithAcceleration(vec3d.normalize(), 0.1f);
                                 smallFireballEntity.setRotation(blaze.getYaw(), blaze.getPitch());
                                 smallFireballEntity.setPosition(blaze.getX(), this.blaze.getBodyY((double)0.5F) + (double)0.5F, blaze.getZ());
@@ -163,5 +158,9 @@ public class AmethystBlazeEntity extends BlazeEntity {
         private double getFollowRange() {
             return this.blaze.getAttributeValue(EntityAttributes.FOLLOW_RANGE);
         }
+    }
+
+    public static boolean canSpawn(EntityType<? extends HostileEntity> type, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
+        return world.getDifficulty() != Difficulty.PEACEFUL && (SpawnReason.isAnySpawner(spawnReason) || world.getLightLevel(LightType.BLOCK, pos) <= 0) && canMobSpawn(type, world, spawnReason, pos, random);
     }
 }

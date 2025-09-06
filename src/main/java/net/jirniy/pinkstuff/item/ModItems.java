@@ -119,6 +119,8 @@ public class ModItems {
             setting -> new SpawnEggItem(ModEntities.CORRUPTED_SKELETON, setting));
     public static final Item AMETHYST_BLAZE_SPAWN_EGG = registerItem("amethyst_blaze_spawn_egg",
             setting -> new SpawnEggItem(ModEntities.AMETHYST_BLAZE, setting));
+    public static final Item CORRUPTION_BLAZE_SPAWN_EGG = registerItem("corruption_blaze_spawn_egg",
+            setting -> new SpawnEggItem(ModEntities.CORRUPTION_BLAZE, setting));
 
     public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
     public static final Item THERMIUM = registerItem("thermium", setting -> new Item(setting.trimMaterial(ModTrimMaterials.THERMIUM)));

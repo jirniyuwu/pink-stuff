@@ -1,16 +1,14 @@
 package net.jirniy.pinkstuff.entity.custom;
 
-import net.jirniy.pinkstuff.entity.ModEntities;
-import net.jirniy.pinkstuff.entity.client.AmethystFireballRenderer;
+import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.particle.ModParticles;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.projectile.DragonFireballEntity;
 import net.minecraft.entity.projectile.ExplosiveProjectileEntity;
-import net.minecraft.entity.projectile.FireballEntity;
+import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
@@ -19,12 +17,11 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class AmethystFireballEntity extends ExplosiveProjectileEntity {
-    public AmethystFireballEntity(EntityType<? extends AmethystFireballEntity> entityType, World world) {
+public class CorruptionFireballEntity extends ExplosiveProjectileEntity {
+    public CorruptionFireballEntity(EntityType<? extends CorruptionFireballEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -92,16 +89,16 @@ public class AmethystFireballEntity extends ExplosiveProjectileEntity {
                     areaEffectCloudEntity.setOwner((LivingEntity)entity);
                 }
 
-                areaEffectCloudEntity.setParticleType(ModParticles.STYXIAN_FLAME_PARTICLE);
-                areaEffectCloudEntity.setRadius(1.5F);
-                areaEffectCloudEntity.setDuration(100);
+                areaEffectCloudEntity.setParticleType(ModParticles.CORRUPTION_POP_PARTICLE);
+                areaEffectCloudEntity.setRadius(2F);
+                areaEffectCloudEntity.setDuration(200);
                 areaEffectCloudEntity.setPotionDurationScale(0.25F);
-                areaEffectCloudEntity.addEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1, 0));
+                areaEffectCloudEntity.addEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 80, 0));
                 if (!list.isEmpty()) {
                     for(LivingEntity livingEntity : list) {
                         World world = livingEntity.getWorld();
                         if (!world.isClient()) {
-                            livingEntity.damage((ServerWorld) world, world.getDamageSources().magic(), 4);
+                            livingEntity.damage((ServerWorld) world, world.getDamageSources().magic(), 2);
                         }
                         double d = this.squaredDistanceTo(livingEntity);
                         if (d < (double)16.0F) {
@@ -118,7 +115,7 @@ public class AmethystFireballEntity extends ExplosiveProjectileEntity {
     }
 
     protected ParticleEffect getParticleType() {
-        return ModParticles.STYXIAN_FLAME_PARTICLE;
+        return ModParticles.CORRUPTION_POP_PARTICLE;
     }
 
     protected boolean isBurning() {

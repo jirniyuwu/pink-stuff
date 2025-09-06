@@ -18,7 +18,8 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         valueLookupBuilder(ModTags.Entities.CLEANSE_APPLICABLE)
                 .add(ModEntities.CORRUPTED_SKELETON)
-                .add(ModEntities.CORRUPTED_ZOMBIE);
+                .add(ModEntities.CORRUPTED_ZOMBIE)
+                .add(ModEntities.CORRUPTION_BLAZE);
         valueLookupBuilder(EntityTypeTags.SENSITIVE_TO_BANE_OF_ARTHROPODS)
                 .add(ModEntities.CRAWLER);
         valueLookupBuilder(EntityTypeTags.SKELETONS)
