@@ -32,6 +32,9 @@ public class ModFoodComponents {
     public static final FoodComponent BERRY_SALAD = new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).build();
     public static final ConsumableComponent BERRY_SALAD_EFFECT = food().consumeEffect(new ApplyEffectsConsumeEffect(
             new StatusEffectInstance(StatusEffects.REGENERATION, 100, 0), 1f)).build();
+    public static final FoodComponent FLESHY_STEW = new FoodComponent.Builder().nutrition(7).saturationModifier(0.3f).build();
+    public static final ConsumableComponent FLESHY_STEW_EFFECT = food().consumeEffect(new ApplyEffectsConsumeEffect(
+            new StatusEffectInstance(StatusEffects.HUNGER, 200, 0), 0.6f)).build();
 
     public static final FoodComponent RAW_FAIRY_MEAT = new FoodComponent.Builder().nutrition(2).saturationModifier(0.5f).build();
     public static final ConsumableComponent RAW_FAIRY_MEAT_EFFECT = food().build();

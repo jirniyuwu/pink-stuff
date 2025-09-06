@@ -440,6 +440,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GEM_BERRY);
                         entries.add(ModItems.CHARMBERRY);
                         entries.add(ModItems.BERRY_SALAD);
+                        entries.add(ModItems.FLESHY_STEW);
                         entries.add(ModItems.HAZEWEAVER);
                         entries.add(ModItems.RAW_FAIRY_MEAT);
                         entries.add(ModItems.COOKED_FAIRY_MEAT);
@@ -793,6 +794,7 @@ public class ModItemGroups {
             entries.add(ModItems.GEM_BERRY);
             entries.add(ModItems.CHARMBERRY);
             entries.add(ModItems.BERRY_SALAD);
+            entries.add(ModItems.FLESHY_STEW);
             entries.add(ModItems.HAZEWEAVER);
             entries.add(ModItems.RAW_FAIRY_MEAT);
             entries.add(ModItems.COOKED_FAIRY_MEAT);

@@ -2349,6 +2349,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "berry_salad")));
+                createShapeless(RecipeCategory.MISC, ModItems.FLESHY_STEW, 1)
+                        .input(ModItems.CORRUPT_MASS).input(Items.ROTTEN_FLESH).input(Items.ROTTEN_FLESH).input(Items.BOWL)
+                        .criterion(hasItem(ModItems.CORRUPT_MASS), conditionsFromItem(ModItems.CORRUPT_MASS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "fleshy_stew")));
 
                 createShapeless(RecipeCategory.MISC, Items.GUNPOWDER, 1)
                         .input(ModItems.SULFUR).input(ItemTags.COALS).input(ItemTags.COALS)
