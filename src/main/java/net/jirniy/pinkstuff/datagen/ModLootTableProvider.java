@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.block.custom.CorruptSproutsCropBlock;
 import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.item.ModItems;
@@ -201,8 +202,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STYXIAN_THERMIUM_ORE, multipleOreDrops(ModBlocks.STYXIAN_THERMIUM_ORE, ModItems.THERMIUM_WASTE, 1, 3));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE, ModItems.THERMIUM_WASTE, 1, 3));
         addDrop(ModBlocks.CORRUPT_ORE, multipleOreDrops(ModBlocks.CORRUPT_ORE, ModItems.CORRUPT_DROPLET, 9, 29));
-        addDrop(ModBlocks.CORRUPT_ROOTS, multipleOreDrops(ModBlocks.CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET, 1, 2));
-        addDrop(ModBlocks.HANGING_CORRUPT_ROOTS, oreDrops(ModBlocks.HANGING_CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET));
         addDrop(ModBlocks.STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE, ModItems.STYXCOAL));
         addDrop(ModBlocks.STYXIAN_MOONSTEEL_ORE, oreDrops(ModBlocks.STYXIAN_MOONSTEEL_ORE, ModItems.RAW_MOONSTEEL));
@@ -211,6 +210,17 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE, Items.LAPIS_LAZULI, 4, 8));
         addDrop(ModBlocks.STYXIAN_SUNGAZE_ORE, oreDrops(ModBlocks.STYXIAN_SUNGAZE_ORE, ModItems.SUNGAZE));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE, ModItems.SUNGAZE));
+
+        addDrop(ModBlocks.CORRUPT_ROOTS, multipleOreDrops(ModBlocks.CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET, 1, 2)
+                .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F))
+                        .conditionally(this.createWithoutShearsOrSilkTouchCondition())
+                        .with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(ModBlocks.CORRUPT_ROOTS, ItemEntry.builder(ModItems.CORRUPT_SPROUTS)))
+                                .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.1f)))));
+        addDrop(ModBlocks.HANGING_CORRUPT_ROOTS, oreDrops(ModBlocks.HANGING_CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET)
+                .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F))
+                        .conditionally(this.createWithoutShearsOrSilkTouchCondition())
+                        .with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(ModBlocks.CORRUPT_ROOTS, ItemEntry.builder(ModItems.CORRUPT_SPROUTS)))
+                                .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.025f)))));
 
         addDrop(ModBlocks.STYXIAN_SOIL);
         addDrop(ModBlocks.STYXMOSS);
@@ -422,6 +432,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder cottonBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.COTTON)
                 .properties(StatePredicate.Builder.create().exactMatch(CottonCropBlock.AGE, CottonCropBlock.MAX_AGE));
         this.addDrop(ModBlocks.COTTON, this.cropDrops(ModBlocks.COTTON, ModItems.COTTON, ModItems.COTTON_SEEDS, cottonBuilder));
+        BlockStatePropertyLootCondition.Builder corruptSproutsBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.CORRUPT_SPROUTS)
+                .properties(StatePredicate.Builder.create().exactMatch(CorruptSproutsCropBlock.AGE, CorruptSproutsCropBlock.MAX_AGE));
+        this.addDrop(ModBlocks.CORRUPT_SPROUTS, this.cropDrops(ModBlocks.CORRUPT_SPROUTS, ModItems.MATURE_SPROUT, ModItems.CORRUPT_SPROUTS, corruptSproutsBuilder));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

@@ -70,6 +70,8 @@
   "item.pinkstuff.fleshy_stew": "Fleshy Stew",
   "item.pinkstuff.fairy_meat": "Fairy Meat",
   "item.pinkstuff.cooked_fairy_meat": "Cooked Fairy Meat",
+  "item.pinkstuff.mature_sprout": "Mature Sprout",
+  "item.pinkstuff.dead_sprout": "Dead Sprout",
   "item.pinkstuff.hazeweaver": "Hazeweaver",
 
   "item.pinkstuff.pink_ice": "Pink Ice",
@@ -410,6 +412,7 @@
   "item.pinkstuff.death_flowers": "Deathflowers",
   "item.pinkstuff.cotton": "Cotton",
   "item.pinkstuff.cotton_seeds": "Cotton Seeds",
+  "item.pinkstuff.corrupt_sprouts": "Corrupt Sprouts",
 
   "item.pinkstuff.chorus_lily": "Chorus Lily",
   "item.pinkstuff.small_end_grass": "Small End Grass",
@@ -498,6 +501,7 @@
   "block.pinkstuff.charmberry_bush": "Charmberries Bush",
   "block.pinkstuff.hazeweaver_plant": "Hazeweaver",
   "block.pinkstuff.cotton": "Cotton",
+  "block.pinkstuff.corrupt_sprouts": "Corrupt Sprouts",
 
   "item.minecraft.potion.effect.grounded": "Potion of Heaviness",
   "item.minecraft.splash_potion.effect.grounded": "Splash Potion of Heaviness",

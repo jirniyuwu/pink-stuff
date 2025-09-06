@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.datagen;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.jirniy.pinkstuff.block.ModBlocks;
+import net.jirniy.pinkstuff.block.custom.CorruptSproutsCropBlock;
 import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
@@ -335,6 +336,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.CHARMBERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 GemBerryBushBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(ModBlocks.COTTON, CottonCropBlock.AGE, 0, 1, 2, 3, 4, 5);
+        blockStateModelGenerator.registerCrop(ModBlocks.CORRUPT_SPROUTS, CorruptSproutsCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.SMALL_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.MEDIUM_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -415,6 +417,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FLESHY_STEW, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_FAIRY_MEAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_FAIRY_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MATURE_SPROUT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DEAD_SPROUT, Models.GENERATED);
         itemModelGenerator.register(ModItems.COTTON, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.THERMIUM_NUGGET, Models.GENERATED);

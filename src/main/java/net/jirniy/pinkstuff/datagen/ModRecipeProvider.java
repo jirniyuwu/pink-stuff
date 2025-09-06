@@ -200,11 +200,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmelting(List.of(ModItems.RAW_FAIRY_MEAT), RecipeCategory.FOOD, ModItems.COOKED_FAIRY_MEAT,
                         1f, 200, "fairy_meat_smelting");
                 offerFoodCookingRecipe("smoking", RecipeSerializer.SMOKING, SmokingRecipe::new,
-                        100, ModItems.RAW_FAIRY_MEAT, ModItems.COOKED_FAIRY_MEAT, 0.1f);
+                        100, ModItems.RAW_FAIRY_MEAT, ModItems.COOKED_FAIRY_MEAT, 1f);
+                offerSmelting(List.of(ModItems.MATURE_SPROUT), RecipeCategory.FOOD, ModItems.DEAD_SPROUT,
+                        1f, 200, "mature_sprout_smelting");
+                offerFoodCookingRecipe("smoking", RecipeSerializer.SMOKING, SmokingRecipe::new,
+                        100, ModItems.MATURE_SPROUT, ModItems.DEAD_SPROUT, 1f);
                 offerSmelting(List.of(ModBlocks.COBBLED_STYXSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXSTONE,
                         0f, 200, "cobbled_styxstone_to_styxstone_smelting");
                 offerBlasting(List.of(ModBlocks.COBBLED_STYXSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXSTONE,
                         0f, 100, "cobbled_styxstone_to_styxstone_blasting");
+                offerSmelting(List.of(ModItems.CORRUPT_SPROUTS), RecipeCategory.MISC, ModItems.CORRUPT_DROPLET,
+                        0.1f, 200, "corrupt_sprouts_smelting");
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.KUNZITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KUNZITE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
@@ -2442,6 +2448,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.COTTON), conditionsFromItem(ModItems.COTTON))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "wool_from_cotton")));
+                createShaped(RecipeCategory.MISC, ModItems.CORRUPT_MASS, 1)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModItems.DEAD_SPROUT)
+                        .criterion(hasItem(ModItems.DEAD_SPROUT), conditionsFromItem(ModItems.DEAD_SPROUT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_mass_from_dead_sprout")));
 
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));

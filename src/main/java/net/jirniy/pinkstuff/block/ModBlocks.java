@@ -1006,6 +1006,9 @@ public class ModBlocks {
     public static final Block COTTON = registerBlockWithoutBlockItem("cotton",
             properties -> new CottonCropBlock(properties.mapColor(MapColor.TERRACOTTA_BROWN).ticksRandomly().breakInstantly()
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block CORRUPT_SPROUTS = registerBlockWithoutBlockItem("corrupt_sprouts",
+            properties -> new CorruptSproutsCropBlock(properties.mapColor(MapColor.DARK_CRIMSON).ticksRandomly().breakInstantly()
+                    .noCollision().nonOpaque().sounds(BlockSoundGroup.HONEY).pistonBehavior(PistonBehavior.DESTROY)));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name))));

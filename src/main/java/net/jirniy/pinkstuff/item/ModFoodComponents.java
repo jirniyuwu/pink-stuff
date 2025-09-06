@@ -1,5 +1,6 @@
 package net.jirniy.pinkstuff.item;
 
+import net.jirniy.pinkstuff.effect.ModEffects;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -41,6 +42,13 @@ public class ModFoodComponents {
     public static final FoodComponent COOKED_FAIRY_MEAT = new FoodComponent.Builder().nutrition(5).saturationModifier(0.8f).build();
     public static final ConsumableComponent COOKED_FAIRY_MEAT_EFFECT = food().consumeEffect(new ApplyEffectsConsumeEffect(
             new StatusEffectInstance(StatusEffects.REGENERATION, 160, 0), 0.8f)).build();
+
+
+    public static final FoodComponent MATURE_SPROUT = new FoodComponent.Builder().nutrition(2).saturationModifier(0.4f).build();
+    public static final ConsumableComponent MATURE_SPROUT_EFFECT = food().consumeEffect(new ApplyEffectsConsumeEffect(
+            new StatusEffectInstance(ModEffects.DEATH_GRIP, 160, 1), 0.8f)).build();
+    public static final FoodComponent DEAD_SPROUT = new FoodComponent.Builder().nutrition(6).saturationModifier(0.2f).build();
+    public static final ConsumableComponent DEAD_SPROUT_EFFECT = food().build();
 
     public static final FoodComponent COAL_MEAL = new FoodComponent.Builder().nutrition(1).saturationModifier(0.2f).build();
     public static final ConsumableComponent COAL_MEAL_EFFECT = food()

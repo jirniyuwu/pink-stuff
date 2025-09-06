@@ -324,7 +324,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.HANGING_STYXMOSS);
                         entries.add(ModBlocks.STYXMOSS_VINE);
                         entries.add(ModBlocks.DEATH_FLOWERS);
-
+                        entries.add(ModItems.CORRUPT_SPROUTS);
                         entries.add(ModItems.COTTON_SEEDS);
                         entries.add(ModItems.COTTON);
 
@@ -444,6 +444,8 @@ public class ModItemGroups {
                         entries.add(ModItems.HAZEWEAVER);
                         entries.add(ModItems.RAW_FAIRY_MEAT);
                         entries.add(ModItems.COOKED_FAIRY_MEAT);
+                        entries.add(ModItems.MATURE_SPROUT);
+                        entries.add(ModItems.DEAD_SPROUT);
 
                         entries.add(ModItems.BLOOM_SMITHING_TEMPLATE);
                         entries.add(ModItems.CHERRY_SMITHING_TEMPLATE);
@@ -798,6 +800,8 @@ public class ModItemGroups {
             entries.add(ModItems.HAZEWEAVER);
             entries.add(ModItems.RAW_FAIRY_MEAT);
             entries.add(ModItems.COOKED_FAIRY_MEAT);
+            entries.add(ModItems.MATURE_SPROUT);
+            entries.add(ModItems.DEAD_SPROUT);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
             entries.add(ModBlocks.AMETHYST_LAMP);
@@ -982,6 +986,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.DEATH_FLOWERS);
             entries.add(ModBlocks.CORRUPT_ROOTS);
             entries.add(ModBlocks.HANGING_CORRUPT_ROOTS);
+            entries.add(ModItems.CORRUPT_SPROUTS);
             entries.add(ModItems.COTTON_SEEDS);
             entries.add(ModItems.COTTON);
 

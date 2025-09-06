@@ -442,7 +442,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.THERMIUM_NUGGET)
                 .add(ModItems.ENERGIZED_THERMIUM);
         valueLookupBuilder(ItemTags.VILLAGER_PLANTABLE_SEEDS)
-                .add(ModItems.COTTON_SEEDS);
+                .add(ModItems.COTTON_SEEDS)
+                .add(ModItems.CORRUPT_SPROUTS);
         valueLookupBuilder(ModTags.Items.BERRIES)
                 .add(ModItems.GEM_BERRY)
                 .add(ModItems.CHARMBERRY)
@@ -450,6 +451,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.SWEET_BERRIES);
         valueLookupBuilder(ItemTags.MEAT)
                 .add(ModItems.COOKED_FAIRY_MEAT)
-                .add(ModItems.RAW_FAIRY_MEAT);
+                .add(ModItems.RAW_FAIRY_MEAT)
+                .add(ModItems.MATURE_SPROUT)
+                .add(ModItems.DEAD_SPROUT);
     }
 }

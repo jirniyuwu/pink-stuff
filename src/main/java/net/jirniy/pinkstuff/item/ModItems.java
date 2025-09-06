@@ -137,6 +137,13 @@ public class ModItems {
             setting -> new BlockItem(ModBlocks.COTTON, setting));
     public static final Item COTTON = registerItem("cotton", Item::new);
 
+    public static final Item CORRUPT_SPROUTS = registerItem("corrupt_sprouts",
+            setting -> new BlockItem(ModBlocks.CORRUPT_SPROUTS, setting));
+    public static final Item MATURE_SPROUT = registerItem("mature_sprout",
+            setting -> new Item(setting.food(ModFoodComponents.MATURE_SPROUT, ModFoodComponents.MATURE_SPROUT_EFFECT)));
+    public static final Item DEAD_SPROUT = registerItem("dead_sprout",
+            setting -> new Item(setting.food(ModFoodComponents.DEAD_SPROUT, ModFoodComponents.DEAD_SPROUT_EFFECT)));
+
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
             setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 2, -2.4f)));
     public static final Item KUNZITE_PICKAXE = registerItem("kunzite_pickaxe",
