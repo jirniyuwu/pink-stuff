@@ -3,6 +3,10 @@
     {
       "structure": "pinkstuff:crystal_city",
       "weight": 1
+    },
+    {
+      "structure": "pinkstuff:corrupt_well",
+      "weight": 1
     }
   ],
   "placement": {

@@ -1,0 +1,110 @@
+[
+  {
+    "processor_type": "minecraft:rule",
+    "rules": [
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:corestone_bricks",
+          "probability": 0.2
+        },
+        "output_state": {
+          "Name": "pinkstuff:black_goop",
+          "Properties": {
+            "spreadable": "false"
+          }
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:polished_corestone",
+          "probability": 0.2
+        },
+        "output_state": {
+          "Name": "pinkstuff:black_goop",
+          "Properties": {
+            "spreadable": "false"
+          }
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:corestone_bricks",
+          "probability": 0.4
+        },
+        "output_state": {
+          "Name": "pinkstuff:corestone"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:polished_corestone",
+          "probability": 0.3
+        },
+        "output_state": {
+          "Name": "pinkstuff:corestone"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:corestone",
+          "probability": 0.2
+        },
+        "output_state": {
+          "Name": "pinkstuff:black_goop",
+          "Properties": {
+            "spreadable": "false"
+          }
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:corestone",
+          "probability": 0.1
+        },
+        "output_state": {
+          "Name": "pinkstuff:polished_corestone"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:corestone",
+          "probability": 0.4
+        },
+        "output_state": {
+          "Name": "pinkstuff:polished_corestone_slab",
+          "Properties": {
+            "type": "bottom"
+          }
+        }
+      }
+    ]
+  }
+]

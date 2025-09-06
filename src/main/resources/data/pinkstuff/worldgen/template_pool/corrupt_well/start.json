@@ -1,0 +1,16 @@
+{
+  "name": "pinkstuff:corrupt_well/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_well/start",
+        "processors": "pinkstuff:corrupt_well",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

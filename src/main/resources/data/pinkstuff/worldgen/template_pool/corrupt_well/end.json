@@ -1,0 +1,66 @@
+{
+  "name": "pinkstuff:corrupt_well/rooms",
+  "fallback": "pinkstuff:corrupt_well/end",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_well/rooms/room1",
+        "processors": "pinkstuff:corrupt_well",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_well/rooms/room4",
+        "processors": "pinkstuff:corrupt_well",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_well/rooms/room5",
+        "processors": "pinkstuff:corrupt_well",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_well/hallways/end1",
+        "processors": "pinkstuff:corrupt_well",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_well/hallways/end2",
+        "processors": "pinkstuff:corrupt_well",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:corrupt_well/hallways/end3",
+        "processors": "pinkstuff:corrupt_well",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}
