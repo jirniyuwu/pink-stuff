@@ -5,8 +5,6 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.SimpleParticleType;
 import org.jetbrains.annotations.Nullable;
 
-import java.awt.*;
-
 public class SparkleParticle extends AnimatedParticle {
     public SparkleParticle(ClientWorld clientWorld, double x, double y, double z, SpriteProvider spriteProvider) {
         super(clientWorld, x, y, z, spriteProvider, 0);

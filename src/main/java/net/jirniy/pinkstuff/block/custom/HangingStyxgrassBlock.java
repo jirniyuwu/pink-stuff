@@ -1,7 +1,5 @@
 package net.jirniy.pinkstuff.block.custom;
 
-import net.jirniy.pinkstuff.block.ModBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HangingMossBlock;
 import net.minecraft.block.MultifaceBlock;

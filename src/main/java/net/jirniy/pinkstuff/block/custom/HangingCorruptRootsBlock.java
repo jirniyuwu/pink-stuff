@@ -2,21 +2,14 @@ package net.jirniy.pinkstuff.block.custom;
 
 import net.jirniy.pinkstuff.effect.ModEffects;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HangingMossBlock;
-import net.minecraft.block.MultifaceBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCollisionHandler;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.world.BlockView;
 import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
 
 public class HangingCorruptRootsBlock extends HangingStyxgrassBlock {
     public HangingCorruptRootsBlock(Settings settings) {

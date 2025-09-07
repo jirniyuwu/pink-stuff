@@ -5,7 +5,6 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.SimpleParticleType;
-import org.jetbrains.annotations.Nullable;
 
 public class ChorusPetalParticle extends SpriteBillboardParticle {
     private static final float SPEED_SCALE = 0.0025F;

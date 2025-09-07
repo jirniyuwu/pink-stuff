@@ -5,15 +5,9 @@ import net.jirniy.pinkstuff.entity.custom.ExofairyEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.client.render.entity.ZombieEntityRenderer;
 import net.minecraft.client.render.entity.feature.HeldItemFeatureRenderer;
-import net.minecraft.client.render.entity.model.AllayEntityModel;
-import net.minecraft.client.render.entity.model.EntityModelLayers;
-import net.minecraft.client.render.entity.state.AllayEntityRenderState;
 import net.minecraft.client.render.entity.state.ArmedEntityRenderState;
-import net.minecraft.client.render.entity.state.ZombieEntityRenderState;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.passive.AllayEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 

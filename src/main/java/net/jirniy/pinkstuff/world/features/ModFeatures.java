@@ -3,7 +3,9 @@ package net.jirniy.pinkstuff.world.features;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
 
 public class ModFeatures {
     public static final Feature<SimpleBlockFeatureConfig> CORRUPTION_SPIKE = register("corruption_spike", new CorruptionSpikeFeature(SimpleBlockFeatureConfig.CODEC));

@@ -2,8 +2,6 @@ package net.jirniy.pinkstuff.entity;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.entity.custom.*;
-import net.jirniy.pinkstuff.util.ModTags;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;

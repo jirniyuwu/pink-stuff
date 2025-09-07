@@ -3,7 +3,6 @@ package net.jirniy.pinkstuff.world.features;
 import com.mojang.serialization.MapCodec;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.VineBlock;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;

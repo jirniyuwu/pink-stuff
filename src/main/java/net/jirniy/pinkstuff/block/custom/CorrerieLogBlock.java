@@ -6,7 +6,6 @@ import net.jirniy.pinkstuff.util.ModGamerules;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.PillarBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;

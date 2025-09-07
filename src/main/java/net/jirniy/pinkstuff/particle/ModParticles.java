@@ -2,8 +2,6 @@ package net.jirniy.pinkstuff.particle;
 
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
-import net.minecraft.client.particle.SculkChargePopParticle;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
