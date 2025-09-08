@@ -82,6 +82,22 @@
             }
           ],
           "name": "pinkstuff:corrupt_mass",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "pinkstuff:forbidden_mechanism",
           "weight": 1
         },
         {

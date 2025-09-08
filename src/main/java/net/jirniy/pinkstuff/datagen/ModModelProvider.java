@@ -385,6 +385,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_MOONSTEEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CERILLE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CERILLE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FORBIDDEN_MECHANISM, Models.GENERATED);
         itemModelGenerator.register(ModItems.SUNGAZE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.SUNGAZE, Models.GENERATED);
 

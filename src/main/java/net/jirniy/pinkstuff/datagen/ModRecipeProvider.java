@@ -290,6 +290,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elysian_redstone_core")));
+                createShaped(RecipeCategory.MISC, ModItems.FORBIDDEN_MECHANISM)
+                        .pattern("EDE")
+                        .pattern("DRD")
+                        .pattern("EDE")
+                        .input('R', ModItems.SUNGAZE)
+                        .input('D', ModItems.CERILLE_INGOT)
+                        .input('E', ModItems.MATURE_SPROUT)
+                        .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "forbidden_mechanism")));
                 createShaped(RecipeCategory.MISC, ModItems.ENERGIZED_THERMIUM)
                         .pattern("TNT")
                         .pattern("TBT")
@@ -485,6 +495,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_hoe")));
+                createShaped(RecipeCategory.TOOLS, ModItems.SUNSHADE)
+                        .pattern("CTC")
+                        .pattern("CSC")
+                        .pattern(" N ")
+                        .input('N', ModItems.AMETHYST_BLAZE_ROD)
+                        .input('S', ModItems.CERILLE_SWORD)
+                        .input('C', ModItems.FORBIDDEN_MECHANISM)
+                        .input('T', ModItems.THERMIUM)
+                        .criterion(hasItem(ModItems.FORBIDDEN_MECHANISM), conditionsFromItem(ModItems.FORBIDDEN_MECHANISM))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "sunshade")));
 
                 createShaped(RecipeCategory.COMBAT, ModItems.SUNBLAZE_SWORD)
                         .pattern("T")

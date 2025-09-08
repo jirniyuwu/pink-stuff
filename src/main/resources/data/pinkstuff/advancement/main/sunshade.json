@@ -1,0 +1,34 @@
+{
+  "parent": "pinkstuff:main/cerille_ingot",
+  "criteria": {
+    "sunshade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "pinkstuff:sunshade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.main.sunshade.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "pinkstuff:sunshade"
+    },
+    "title": {
+      "translate": "advancements.main.sunshade.title"
+    },
+    "frame": "goal"
+  },
+  "requirements": [
+    [
+      "sunshade"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

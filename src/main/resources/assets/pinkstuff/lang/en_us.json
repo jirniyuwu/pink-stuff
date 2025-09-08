@@ -54,6 +54,7 @@
   "item.pinkstuff.raw_moonsteel": "Raw Moonsteel",
   "item.pinkstuff.cerille_ingot": "Cerille Ingot",
   "item.pinkstuff.cerille_nugget": "Cerille Nugget",
+  "item.pinkstuff.forbidden_mechanism": "Forbidden Mechanism",
   "item.pinkstuff.sungaze": "Sungaze",
   "item.pinkstuff.sungaze_nugget": "Sungaze Nugget",
   "item.pinkstuff.amethyst_blaze_rod": "Amethyst Blaze Rod",
@@ -491,6 +492,7 @@
   "item.pinkstuff.sunblaze_boots": "Sunblaze Boots",
 
   "item.pinkstuff.dawnbloomer": "The Dawnbloomer",
+  "item.pinkstuff.sunshade": "The Sunshade",
   "item.pinkstuff.bedrock_breaker": "Bedrock Breaker",
 
   "item.pinkstuff.display": "Item Display",
@@ -637,6 +639,8 @@
   "advancements.main.elysium_sword.title": "Greatest forgery of heavens",
   "advancements.main.dawnbloomer.description": "Enhance the Elysian Greatsword with the crystal memories",
   "advancements.main.dawnbloomer.title": "Dawn awaits",
+  "advancements.main.sunshade.description": "Forge the Sunshade by combiding a Cerille Sword with Forbidden Mechanism of corruption",
+  "advancements.main.sunshade.title": "Everlasting as the Moon",
   "advancements.main.elysium_hammer.description": "Obtain the Elysian Greathammer by enhancing the Elysian Pickaxe with crystal memory",
   "advancements.main.elysium_hammer.title": "Stonebreaker 9000",
   "advancements.main.elysium_multitool.description": "Craft the Elysian Multitool by combining three different Elysian Tools",

@@ -275,6 +275,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CERILLE_NUGGET);
                         entries.add(ModItems.CERILLE_INGOT);
                         entries.add(ModBlocks.CERILLE_BLOCK);
+                        entries.add(ModItems.FORBIDDEN_MECHANISM);
 
                         entries.add(ModBlocks.CERILLE_BRICKS);
                         entries.add(ModBlocks.CHISELED_CERILLE_BRICKS);
@@ -528,6 +529,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PINLINE_BOOTS);
 
                         entries.add(ModItems.DAWNBLOOMER);
+                        entries.add(ModItems.SUNSHADE);
                     })
                     .build());
 
@@ -840,6 +842,7 @@ public class ModItemGroups {
             entries.add(ModItems.MOONSTEEL_INGOT);
             entries.add(ModItems.CERILLE_NUGGET);
             entries.add(ModItems.CERILLE_INGOT);
+            entries.add(ModItems.FORBIDDEN_MECHANISM);
             entries.add(ModItems.SUNGAZE_NUGGET);
             entries.add(ModItems.SUNGAZE);
 
@@ -905,6 +908,7 @@ public class ModItemGroups {
             entries.add(ModItems.PINLINE_BOOTS);
 
             entries.add(ModItems.DAWNBLOOMER);
+            entries.add(ModItems.SUNSHADE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(ModBlocks.KUNZITE_ORE);

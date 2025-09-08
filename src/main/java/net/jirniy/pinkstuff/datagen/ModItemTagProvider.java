@@ -44,7 +44,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MOONSTEEL_SWORD)
                 .add(ModItems.CERILLE_SWORD)
                 .add(ModItems.SUNBLAZE_SWORD)
-                .add(ModItems.DAWNBLOOMER);
+                .add(ModItems.DAWNBLOOMER)
+                .add(ModItems.SUNSHADE);
         valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.KUNZITE_PICKAXE)
                 .add(ModItems.ELYSIUM_PICKAXE)

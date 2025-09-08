@@ -100,5 +100,6 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.CHORUS_PETAL_PARTICLE, ChorusPetalParticle.ChorusPetalFactory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.STYXIAN_FLAME_PARTICLE, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.CORRUPTION_POP_PARTICLE, SculkChargePopParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.CERILLE_SLASH_PARTICLE, CerilleSlashParticle.Factory::new);
     }
 }

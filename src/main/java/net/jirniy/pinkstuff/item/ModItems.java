@@ -43,6 +43,7 @@ public class ModItems {
     public static final Item CERILLE_NUGGET = registerItem("cerille_nugget", Item::new);
     public static final Item CERILLE_INGOT = registerItem("cerille_ingot",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.CERILLE)));
+    public static final Item FORBIDDEN_MECHANISM = registerItem("forbidden_mechanism", Item::new);
 
     public static final Item SUNGAZE_NUGGET = registerItem("sungaze_nugget", Item::new);
     public static final Item SUNGAZE = registerItem("sungaze",
@@ -58,7 +59,8 @@ public class ModItems {
     public static final Item ELYSIUM_NUGGET = registerItem("elysium_nugget", Item::new);
     public static final Item ELYSIUM_INGOT = registerItem("elysium_ingot",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.ELYSIUM)));
-    public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core", setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
+    public static final Item ELYSIAN_REDSTONE_CORE = registerItem("elysian_redstone_core",
+            setting -> new Item(setting.rarity(Rarity.UNCOMMON)));
     public static final Item PINK_BITS = registerItem("pink_bits", Item::new);
     public static final Item MEMORY_SHARD = registerItem("memory_shard",
             setting -> new Item(setting.rarity(Rarity.RARE).trimMaterial(ModTrimMaterials.MEMORY)));
@@ -206,6 +208,8 @@ public class ModItems {
             setting -> new MultitoolItem(ModToolMaterials.SPECIAL, 3, -1f, setting.rarity(Rarity.RARE)));
     public static final Item DAWNBLOOMER = registerItem("dawnbloomer",
             setting -> new DawnbloomerItem(setting.sword(ModToolMaterials.SPECIAL, 7, -1.8f).rarity(Rarity.RARE)));
+    public static final Item SUNSHADE = registerItem("sunshade",
+            setting -> new SunshadeItem(setting.sword(ModToolMaterials.SUNSHADE, 5.5f, -2.4f).useCooldown(5).rarity(Rarity.RARE)));
     public static final Item NETHERITE_MULTITOOL = registerItem("netherite_multitool",
             setting -> new MultitoolItem(ToolMaterial.NETHERITE, 3, -1f, setting.rarity(Rarity.UNCOMMON)));
     public static final Item SUNBLAZE_MULTITOOL = registerItem("sunblaze_multitool",
