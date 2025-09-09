@@ -184,6 +184,14 @@ public class JirniysPinkStuff implements ModInitializer {
 			builder.registerPotionRecipe(ModPotions.FAIRY_SUPPORT, Items.GLOWSTONE_DUST, ModPotions.STRONG_FAIRY_SUPPORT);
 			builder.registerPotionRecipe(ModPotions.FAIRY_SUPPORT, Items.REDSTONE, ModPotions.LONG_FAIRY_SUPPORT);
 
+			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.CERILLE_NUGGET, ModPotions.HEARTBREAK);
+			builder.registerPotionRecipe(ModPotions.HEARTBREAK, Items.GLOWSTONE_DUST, ModPotions.STRONG_HEARTBREAK);
+			builder.registerPotionRecipe(ModPotions.HEARTBREAK, Items.REDSTONE, ModPotions.LONG_HEARTBREAK);
+
+			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.RAW_MOONSTEEL, ModPotions.VULNERABILITY);
+			builder.registerPotionRecipe(ModPotions.VULNERABILITY, Items.GLOWSTONE_DUST, ModPotions.STRONG_VULNERABILITY);
+			builder.registerPotionRecipe(ModPotions.VULNERABILITY, Items.REDSTONE, ModPotions.LONG_VULNERABILITY);
+
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.CORRUPT_MASS, ModPotions.CORRUPT);
 			builder.registerPotionRecipe(ModPotions.CORRUPT, Items.GLOWSTONE_DUST, ModPotions.STRONG_CORRUPT);
 

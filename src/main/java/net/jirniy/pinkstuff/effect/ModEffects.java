@@ -5,6 +5,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -40,8 +41,20 @@ public class ModEffects {
                             (double)-0.05F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                     .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED,
                             Identifier.of(JirniysPinkStuff.MOD_ID, "effect.death_grip"),
-                            (double)-0.1F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    );
+                            (double)-0.1F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+    public static final RegistryEntry<StatusEffect> VULNERABILITY = registerStatusEffect("vulnerability",
+            new FairySupportStatusEffect(StatusEffectCategory.HARMFUL, 0x4F5C6E)
+                    .addAttributeModifier(EntityAttributes.ARMOR,
+                            Identifier.of(JirniysPinkStuff.MOD_ID, "effect.vulnerability"),
+                            (double)-2.0F, EntityAttributeModifier.Operation.ADD_VALUE)
+                    .addAttributeModifier(EntityAttributes.ARMOR_TOUGHNESS,
+                            Identifier.of(JirniysPinkStuff.MOD_ID, "effect.vulnerability"),
+                            (double)-0.5F, EntityAttributeModifier.Operation.ADD_VALUE));
+    public static final RegistryEntry<StatusEffect> HEARTBREAK = registerStatusEffect("heartbreak",
+            new FairySupportStatusEffect(StatusEffectCategory.HARMFUL, 0xC6223B)
+                    .addAttributeModifier(EntityAttributes.MAX_HEALTH,
+                            Identifier.of(JirniysPinkStuff.MOD_ID, "effect.heartbreak"),
+                            (double)-1.0F, EntityAttributeModifier.Operation.ADD_VALUE));
 
     public static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(JirniysPinkStuff.MOD_ID, name), statusEffect);

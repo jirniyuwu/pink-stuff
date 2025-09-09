@@ -22,6 +22,21 @@ public class ModPotions {
     public static final RegistryEntry<Potion> STRONG_LIFE_TRADE = registerPotion("strong_life_trade",
             new Potion("life_trade", new StatusEffectInstance(ModEffects.LIFE_TRADE, 1800, 1)));
 
+    public static final RegistryEntry<Potion> VULNERABILITY = registerPotion("vulnerability",
+            new Potion("vulnerability", new StatusEffectInstance(ModEffects.VULNERABILITY, 3600, 0)));
+    public static final RegistryEntry<Potion> LONG_VULNERABILITY = registerPotion("long_vulnerability",
+            new Potion("vulnerability", new StatusEffectInstance(ModEffects.VULNERABILITY, 9600, 0)));
+    public static final RegistryEntry<Potion> STRONG_VULNERABILITY = registerPotion("strong_vulnerability",
+            new Potion("vulnerability", new StatusEffectInstance(ModEffects.VULNERABILITY, 1800, 1)));
+
+
+    public static final RegistryEntry<Potion> HEARTBREAK = registerPotion("heartbreak",
+            new Potion("heartbreak", new StatusEffectInstance(ModEffects.HEARTBREAK, 3600, 0)));
+    public static final RegistryEntry<Potion> LONG_HEARTBREAK = registerPotion("long_heartbreak",
+            new Potion("heartbreak", new StatusEffectInstance(ModEffects.HEARTBREAK, 9600, 0)));
+    public static final RegistryEntry<Potion> STRONG_HEARTBREAK = registerPotion("strong_heartbreak",
+            new Potion("heartbreak", new StatusEffectInstance(ModEffects.HEARTBREAK, 1800, 1)));
+
     public static final RegistryEntry<Potion> FAIRY_SUPPORT = registerPotion("fairy_support",
             new Potion("fairy_support", new StatusEffectInstance(ModEffects.FAIRY_SUPPORT, 900, 0)));
     public static final RegistryEntry<Potion> LONG_FAIRY_SUPPORT = registerPotion("long_fairy_support",

@@ -525,6 +525,16 @@
   "item.minecraft.lingering_potion.effect.fairy_support": "Lingering Potion of Fairy's Help",
   "item.minecraft.tipped_arrow.effect.fairy_support": "Arrow of Fairy's Help",
 
+  "item.minecraft.potion.effect.vulnerability": "Potion of Vulnerability",
+  "item.minecraft.splash_potion.effect.vulnerability": "Splash Potion of Vulnerability",
+  "item.minecraft.lingering_potion.effect.vulnerability": "Lingering Potion of Vulnerability",
+  "item.minecraft.tipped_arrow.effect.vulnerability": "Arrow of Vulnerability",
+
+  "item.minecraft.potion.effect.heartbreak": "Potion of Lifeless",
+  "item.minecraft.splash_potion.effect.heartbreak": "Splash Potion of Lifeless",
+  "item.minecraft.lingering_potion.effect.heartbreak": "Lingering Potion of Lifeless",
+  "item.minecraft.tipped_arrow.effect.heartbreak": "Arrow of Lifeless",
+
   "enchantment.pinkstuff.lightning": "Curse of Lightning",
   "enchantment.pinkstuff.fragility": "Curse of Fragility",
   "enchantment.pinkstuff.length": "Length",
@@ -538,6 +548,8 @@
   "effect.pinkstuff.death_grip": "Death Grip",
   "effect.pinkstuff.life_trade": "Life Trade",
   "effect.pinkstuff.fairy_support": "Fairy Support",
+  "effect.pinkstuff.vulnerability": "Vulnerability",
+  "effect.pinkstuff.heartbreak": "Heartbreak",
 
   "item.pinkstuff.cherry_armor_trim_smithing_template": "Cherry Armor Trim",
   "trim_pattern.pinkstuff.cherry": "Cherry Trim Pattern",
