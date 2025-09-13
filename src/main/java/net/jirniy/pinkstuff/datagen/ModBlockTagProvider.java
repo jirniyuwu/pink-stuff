@@ -207,6 +207,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ASH_BRICKS_SLAB)
                 .add(ModBlocks.ASH_BRICKS_STAIRS);
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.BLUE_MUSHROOM_BLOCK)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB)
                 .add(ModBlocks.CRYSTAL_CHERRY_BUTTON)
                 .add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE)
@@ -740,6 +741,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.ENDERMAN_HOLDABLE)
                 .add(ModBlocks.CORESTONE)
                 .add(ModBlocks.COBBLED_STYXSTONE)
-                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE);
+                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE)
+                .add(ModBlocks.BLUE_MUSHROOM);
+        valueLookupBuilder(BlockTags.REPLACEABLE_BY_MUSHROOMS)
+                .add(ModBlocks.BLUE_MUSHROOM);
     }
 }

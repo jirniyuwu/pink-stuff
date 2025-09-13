@@ -18,7 +18,7 @@ public class HugeBlueMushroomFeature extends HugeMushroomFeature {
     }
 
     protected void generateCap(WorldAccess world, Random random, BlockPos start, int y, BlockPos.Mutable mutable, HugeMushroomFeatureConfig config) {
-        for(int i = y - 2; i <= y; ++i) {
+        for(int i = y - 1; i <= y; ++i) {
             int j = i < y ? config.foliageRadius : config.foliageRadius - 1;
             int k = config.foliageRadius - 2;
 
@@ -34,7 +34,7 @@ public class HugeBlueMushroomFeature extends HugeMushroomFeature {
                         mutable.set(start, l, i, m);
                         BlockState blockState = config.capProvider.get(random, start);
                         if (blockState.contains(MushroomBlock.WEST) && blockState.contains(MushroomBlock.EAST) && blockState.contains(MushroomBlock.NORTH) && blockState.contains(MushroomBlock.SOUTH) && blockState.contains(MushroomBlock.UP)) {
-                            blockState = (BlockState)((BlockState)((BlockState)((BlockState)((BlockState)blockState.with(MushroomBlock.UP, i >= y - 1)).with(MushroomBlock.WEST, l < -k)).with(MushroomBlock.EAST, l > k)).with(MushroomBlock.NORTH, m < -k)).with(MushroomBlock.SOUTH, m > k);
+                            blockState = (BlockState)((BlockState)((BlockState)((BlockState)((BlockState)blockState.with(MushroomBlock.UP, i >= y - 1)).with(MushroomBlock.DOWN, !(i >= y - 1)).with(MushroomBlock.WEST, l < -k)).with(MushroomBlock.EAST, l > k)).with(MushroomBlock.NORTH, m < -k)).with(MushroomBlock.SOUTH, m > k);
                         }
 
                         this.generateStem(world, mutable, blockState);
@@ -43,6 +43,15 @@ public class HugeBlueMushroomFeature extends HugeMushroomFeature {
             }
         }
 
+    }
+
+    protected int getHeight(Random random) {
+        int i = random.nextInt(5) + 5;
+        if (random.nextInt(7) == 0) {
+            i += random.nextInt(6);
+        }
+
+        return i;
     }
 
     protected int getCapSize(int i, int j, int capSize, int y) {
