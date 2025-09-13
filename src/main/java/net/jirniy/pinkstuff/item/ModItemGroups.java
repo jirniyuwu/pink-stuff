@@ -328,6 +328,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CORRUPT_SPROUTS);
                         entries.add(ModItems.COTTON_SEEDS);
                         entries.add(ModItems.COTTON);
+                        entries.add(ModBlocks.BLUE_MUSHROOM);
+                        entries.add(ModBlocks.BLUE_MUSHROOM_BLOCK);
 
                         entries.add(ModBlocks.PINK_ICE);
 
@@ -993,6 +995,8 @@ public class ModItemGroups {
             entries.add(ModItems.CORRUPT_SPROUTS);
             entries.add(ModItems.COTTON_SEEDS);
             entries.add(ModItems.COTTON);
+            entries.add(ModBlocks.BLUE_MUSHROOM);
+            entries.add(ModBlocks.BLUE_MUSHROOM_BLOCK);
 
             entries.add(ModBlocks.AMETHYST_CLUMP);
             entries.add(ModBlocks.DIAMOND_CLUMP);

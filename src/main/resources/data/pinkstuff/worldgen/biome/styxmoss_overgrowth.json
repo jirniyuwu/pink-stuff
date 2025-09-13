@@ -54,10 +54,12 @@
     [],
     [
       "pinkstuff:keaphe_placed",
+      "pinkstuff:mossy_fallen_keaphe_placed",
       "pinkstuff:styxian_clay_placed",
       "pinkstuff:styxmoss_patch_placed",
       "pinkstuff:styxmoss_vegetation_placed",
-      "pinkstuff:styxgrass_ceiling_placed"
+      "pinkstuff:styxgrass_ceiling_placed",
+      "pinkstuff:blue_mushroom_patch_placed"
     ],
     []
   ],

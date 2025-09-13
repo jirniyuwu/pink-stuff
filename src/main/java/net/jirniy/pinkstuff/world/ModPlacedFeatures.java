@@ -90,6 +90,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CHARMBERRY_PATCH_PLACED_KEY = registerKey("charmberry_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_DELTA_PLACED_KEY = registerKey("styxian_delta_placed");
     public static final RegistryKey<PlacedFeature> ASH_PATCH_PLACED_KEY = registerKey("ash_patch_placed");
+    public static final RegistryKey<PlacedFeature> FALLEN_KEAPHE_PLACED = registerKey("fallen_keaphe_placed");
+    public static final RegistryKey<PlacedFeature> MOSSY_FALLEN_KEAPHE_PLACED = registerKey("mossy_fallen_keaphe_placed");
+    public static final RegistryKey<PlacedFeature> BLUE_MUSHROOM_PATCH_PLACED = registerKey("blue_mushroom_patch_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -333,6 +336,20 @@ public class ModPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(0, 0.2f, 1), ModBlocks.CHORUS_SAPLING
                 ));
+
+        register(context, FALLEN_KEAPHE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.FALLEN_KEAPHE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), ModBlocks.KEAPHE_SAPLING
+                ));
+        register(context, MOSSY_FALLEN_KEAPHE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.FALLEN_KEAPHE_MOSSY_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(0, 0.25f, 1), ModBlocks.KEAPHE_SAPLING
+                ));
+
+        register(context, BLUE_MUSHROOM_PATCH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUE_MUSHROOM_PATCH_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
 
         register(context, KUNZITE_GEODE_LUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_GEODE_KEY),
                 HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(40)),

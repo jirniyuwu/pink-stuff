@@ -38,6 +38,7 @@ import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.treedecorator.AttachedToLogsTreeDecorator;
 import net.minecraft.world.gen.trunk.*;
 
 import java.util.List;
@@ -113,6 +114,10 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETHYST_PATCH_KEY = registryKey("amethyst_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_DELTA_KEY = registryKey("styxian_delta");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ASH_PATCH_KEY = registryKey("ash_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLUE_MUSHROOM_PATCH_KEY = registryKey("blue_mushroom_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_BLUE_MUSHROOM_KEY = registryKey("huge_blue_mushroom");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_KEAPHE_KEY = registryKey("fallen_keaphe");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_KEAPHE_MOSSY_KEY = registryKey("fallen_keaphe_mossy");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -564,6 +569,30 @@ public class ModConfiguredFeatures {
                                         .add(MEDIUM_AMETHYST_BUD.getDefaultState().with(AmethystClusterBlock.FACING, Direction.UP), 3)
                                         .add(LARGE_AMETHYST_BUD.getDefaultState().with(AmethystClusterBlock.FACING, Direction.UP), 2))),
                         List.of(ModBlocks.STYXIAN_SOIL, AMETHYST_BLOCK)));
+
+        register(context, BLUE_MUSHROOM_PATCH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BLUE_MUSHROOM)),
+                        List.of(ModBlocks.STYXMOSS, ModBlocks.STYXIAN_SOIL, ModBlocks.STYXSTONE, ModBlocks.COMPRESSED_STYXSTONE)));
+
+        register(context, HUGE_BLUE_MUSHROOM_KEY, ModFeatures.HUGE_BLUE_MUSHROOM, new HugeMushroomFeatureConfig(
+                BlockStateProvider.of(ModBlocks.BLUE_MUSHROOM_BLOCK),
+                BlockStateProvider.of(MUSHROOM_STEM), 2));
+
+        register(context, FALLEN_KEAPHE_KEY, Feature.FALLEN_TREE, new FallenTreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.KEAPHE_LOG), UniformIntProvider.create(6, 11))
+                .logDecorators(ImmutableList.of(new AttachedToLogsTreeDecorator(0.1F,
+                BlockStateProvider.of(ModBlocks.BLUE_MUSHROOM), List.of(Direction.UP))))
+                .build());
+        register(context, FALLEN_KEAPHE_MOSSY_KEY, Feature.FALLEN_TREE, new FallenTreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.KEAPHE_LOG), UniformIntProvider.create(4, 6))
+                .logDecorators(ImmutableList.of(new AttachedToLogsTreeDecorator(0.5F,
+                        new WeightedBlockStateProvider(
+                                Pool.<BlockState>builder()
+                                        .add(ModBlocks.BLUE_MUSHROOM.getDefaultState(), 1)
+                                        .add(ModBlocks.STYXMOSS_CARPET.getDefaultState(), 2)), List.of(Direction.UP))))
+                .stumpDecorators(ImmutableList.of(new StyxmossVineDecorator()))
+                .build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {

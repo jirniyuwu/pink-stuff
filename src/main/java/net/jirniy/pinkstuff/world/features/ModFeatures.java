@@ -5,11 +5,13 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.HugeMushroomFeatureConfig;
 import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
 
 public class ModFeatures {
     public static final Feature<SimpleBlockFeatureConfig> CORRUPTION_SPIKE = register("corruption_spike", new CorruptionSpikeFeature(SimpleBlockFeatureConfig.CODEC));
     public static final Feature<SimpleBlockFeatureConfig> ROCK = register("rock", new RockFeature(SimpleBlockFeatureConfig.CODEC));
+    public static final Feature<HugeMushroomFeatureConfig> HUGE_BLUE_MUSHROOM = register("huge_blue_mushroom", new HugeBlueMushroomFeature(HugeMushroomFeatureConfig.CODEC));
 
     private static <C extends FeatureConfig, F extends Feature<C>> F register(String name, F feature) {
         return (F) Registry.register(Registries.FEATURE, name, feature);

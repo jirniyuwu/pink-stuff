@@ -7,6 +7,7 @@ import net.jirniy.pinkstuff.util.ModTags;
 import net.jirniy.pinkstuff.world.ModConfiguredFeatures;
 import net.jirniy.pinkstuff.world.features.ModSaplingGenerator;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -22,6 +23,7 @@ import net.minecraft.util.ColorCode;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.feature.TreeConfiguredFeatures;
 
 import java.util.function.Function;
 
@@ -1008,6 +1010,14 @@ public class ModBlocks {
     public static final Block CORRUPT_SPROUTS = registerBlockWithoutBlockItem("corrupt_sprouts",
             properties -> new CorruptSproutsCropBlock(properties.mapColor(MapColor.DARK_CRIMSON).ticksRandomly().breakInstantly()
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.HONEY).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block BLUE_MUSHROOM = registerBlock("blue_mushroom",
+            properties -> new MushroomPlantBlock(ModConfiguredFeatures.HUGE_BLUE_MUSHROOM_KEY,
+            properties.mapColor(MapColor.LAPIS_BLUE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS)
+                    .luminance((state) -> 2).postProcess(Blocks::always).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block BLUE_MUSHROOM_BLOCK = registerBlock("blue_mushroom_block",
+            properties -> new MushroomBlock(properties.mapColor(MapColor.LAPIS_BLUE).instrument(NoteBlockInstrument.BASS)
+                    .strength(0.2F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name))));

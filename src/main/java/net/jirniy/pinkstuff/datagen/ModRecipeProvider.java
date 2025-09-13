@@ -2479,6 +2479,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_mass_from_dead_sprout")));
 
+                createShapeless(RecipeCategory.MISC, Items.MUSHROOM_STEW, 1)
+                        .input(ModBlocks.BLUE_MUSHROOM).input(Items.RED_MUSHROOM).input(Items.BOWL)
+                        .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "mushroom_stew_blue_and_red")));
+                createShapeless(RecipeCategory.MISC, Items.MUSHROOM_STEW, 1)
+                        .input(ModBlocks.BLUE_MUSHROOM).input(Items.BROWN_MUSHROOM).input(Items.BOWL)
+                        .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "mushroom_stew_blue_and_brown")));
+
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));
                 offerSmithingTemplateCopyingRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModBlocks.CRYSTAL_CHERRY_LOG);

@@ -376,6 +376,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.THERMIUM_WILTBORN);
         addDrop(ModBlocks.MEMORIA_BOURPEER);
         addDrop(ModBlocks.HAZEWEAVER_PLANT, ModItems.HAZEWEAVER);
+        addDrop(ModBlocks.BLUE_MUSHROOM);
 
         addDrop(ModBlocks.KUNZITE_ROD);
         addDrop(ModBlocks.AMETHYST_ROD);
@@ -401,6 +402,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.THERMIUM_CLUMP, clumpDrops(ModBlocks.THERMIUM_CLUMP, ModItems.THERMIUM_NUGGET, 1));
         addDrop(ModBlocks.QUARTZ_CLUMP, clumpDrops(ModBlocks.QUARTZ_CLUMP, ModItems.QUARTZ_NUGGET, 3));
         addDrop(ModBlocks.CORRUPTION_CLUMP, multifaceGrowthDrops(Block.getBlockFromItem(ModItems.CORRUPT_DROPLET)));
+        addDrop(ModBlocks.BLUE_MUSHROOM_BLOCK, mushroomBlockDrops(ModBlocks.BLUE_MUSHROOM_BLOCK, ModBlocks.BLUE_MUSHROOM));
 
         this.addDrop(ModBlocks.GEM_BERRY_BUSH,
                 block -> this.applyExplosionDecay(
