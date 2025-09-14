@@ -992,6 +992,12 @@ public class ModBlocks {
     public static final Block MOONSTEEL_CHAIN = registerBlock("moonsteel_chain",
             properties -> new ChainBlock(properties.strength(1).nonOpaque().sounds(BlockSoundGroup.CHAIN)));
 
+    public static final Block CERILLE_LANTERN = registerBlock("cerille_lantern",
+            properties -> new LanternBlock(properties.strength(1).nonOpaque()
+                    .sounds(BlockSoundGroup.LANTERN).pistonBehavior(PistonBehavior.DESTROY).luminance(state -> 12)));
+    public static final Block CERILLE_CHAIN = registerBlock("cerille_chain",
+            properties -> new ChainBlock(properties.strength(1).nonOpaque().sounds(BlockSoundGroup.CHAIN)));
+
     public static final Block GEM_BERRY_BUSH = registerBlockWithoutBlockItem("gem_berry_bush",
             properties -> new GemBerryBushBlock(properties.mapColor(MapColor.DARK_GREEN).ticksRandomly()
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).luminance(GemBerryBushBlock::getLuminance).pistonBehavior(PistonBehavior.DESTROY)));

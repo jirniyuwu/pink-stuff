@@ -283,6 +283,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CERILLE_BRICKS_SLAB);
                         entries.add(ModBlocks.CERILLE_BRICKS_STAIRS);
                         entries.add(ModBlocks.CERILLE_BRICKS_WALL);
+                        entries.add(ModBlocks.CERILLE_CHAIN);
+                        entries.add(ModBlocks.CERILLE_LANTERN);
 
                         entries.add(ModItems.SUNGAZE_NUGGET);
                         entries.add(ModItems.SUNGAZE);
@@ -681,6 +683,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.CERILLE_BRICKS_SLAB);
             entries.add(ModBlocks.CERILLE_BRICKS_STAIRS);
             entries.add(ModBlocks.CERILLE_BRICKS_WALL);
+            entries.add(ModBlocks.CERILLE_CHAIN);
+            entries.add(ModBlocks.CERILLE_LANTERN);
             entries.add(ModBlocks.SUNGAZE_BRICKS);
             entries.add(ModBlocks.CHISELED_SUNGAZE_BRICKS);
             entries.add(ModBlocks.SUNGAZE_BULB);

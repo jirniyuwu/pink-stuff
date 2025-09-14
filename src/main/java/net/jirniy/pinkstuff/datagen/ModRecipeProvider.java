@@ -1434,6 +1434,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.MOONSTEEL_NUGGET), conditionsFromItem(ModItems.MOONSTEEL_NUGGET))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "moonsteel_lantern")));
+                createShaped(RecipeCategory.DECORATIONS, ModBlocks.CERILLE_CHAIN, 1)
+                        .pattern("S")
+                        .pattern("/")
+                        .pattern("S")
+                        .input('S', ModItems.CERILLE_NUGGET)
+                        .input('/', ModItems.CERILLE_INGOT)
+                        .criterion(hasItem(ModItems.CERILLE_NUGGET), conditionsFromItem(ModItems.CERILLE_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_chain")));
+                createShaped(RecipeCategory.DECORATIONS, ModBlocks.CERILLE_LANTERN, 1)
+                        .pattern("SSS")
+                        .pattern("S/S")
+                        .pattern("SSS")
+                        .input('S', ModItems.CERILLE_NUGGET)
+                        .input('/', Items.TORCH)
+                        .criterion(hasItem(ModItems.CERILLE_NUGGET), conditionsFromItem(ModItems.CERILLE_NUGGET))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cerille_lantern")));
 
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THERMIUM_BLASTER, 1)

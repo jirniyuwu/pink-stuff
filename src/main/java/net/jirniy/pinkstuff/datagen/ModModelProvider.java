@@ -329,6 +329,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);
         blockStateModelGenerator.registerMushroomBlock(ModBlocks.BLUE_MUSHROOM_BLOCK);
         blockStateModelGenerator.registerLantern(ModBlocks.MOONSTEEL_LANTERN);
+        blockStateModelGenerator.registerLantern(ModBlocks.CERILLE_LANTERN);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRYSTAL_CHERRY_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.GLOWING_CHERRY_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.CHORUS_LEAVES, TexturedModel.LEAVES);
@@ -387,6 +388,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MOONSTEEL_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.MOONSTEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModBlocks.MOONSTEEL_CHAIN.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.CERILLE_CHAIN.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MOONSTEEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CERILLE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CERILLE_INGOT, Models.GENERATED);
