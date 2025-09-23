@@ -93,6 +93,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> FALLEN_KEAPHE_PLACED = registerKey("fallen_keaphe_placed");
     public static final RegistryKey<PlacedFeature> MOSSY_FALLEN_KEAPHE_PLACED = registerKey("mossy_fallen_keaphe_placed");
     public static final RegistryKey<PlacedFeature> BLUE_MUSHROOM_PATCH_PLACED = registerKey("blue_mushroom_patch_placed");
+    public static final RegistryKey<PlacedFeature> SIMPLE_CRYSTAL_CHERRY_PLACED = registerKey("simple_crystal_cherry_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
