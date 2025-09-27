@@ -286,6 +286,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CERILLE_BRICKS_WALL);
                         entries.add(ModBlocks.CERILLE_CHAIN);
                         entries.add(ModBlocks.CERILLE_LANTERN);
+                        entries.add(ModBlocks.CORRUPT_CAULDRON);
 
                         entries.add(ModItems.SUNGAZE_NUGGET);
                         entries.add(ModItems.SUNGAZE);
@@ -1024,6 +1025,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.MOONSTEEL_LANTERN);
             entries.add(ModBlocks.STYXIA_PORTAL_FRAME);
             entries.add(ModBlocks.THERMIUM_BLASTER);
+            entries.add(ModBlocks.CORRUPT_CAULDRON);
             entries.add(ModBlocks.DISPLAY);
 
             entries.add(ModBlocks.CRAWLER_STONE);

@@ -2,6 +2,8 @@ package net.jirniy.pinkstuff.screen;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
+import net.jirniy.pinkstuff.block.entity.custom.CorruptCauldronBlockEntity;
+import net.jirniy.pinkstuff.screen.custom.CorruptCauldronScreenHandler;
 import net.jirniy.pinkstuff.screen.custom.DisplayScreenHandler;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreenHandler;
 import net.minecraft.registry.Registries;
@@ -17,6 +19,9 @@ public class ModScreenHandlers {
     public static final ScreenHandlerType<ThermiumBlasterScreenHandler> THERMIUM_BLASTER_SCREEN_HANDLER =
             Registry.register(Registries.SCREEN_HANDLER, Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_blaster_handler"),
                     new ExtendedScreenHandlerType<>(ThermiumBlasterScreenHandler::new, BlockPos.PACKET_CODEC));
+    public static final ScreenHandlerType<CorruptCauldronScreenHandler> CORRUPT_CAULDRON_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_cauldron_handler"),
+                    new ExtendedScreenHandlerType<>(CorruptCauldronScreenHandler::new, BlockPos.PACKET_CODEC));
 
     public static void registerScreenHandlers() {
         JirniysPinkStuff.LOGGER.info("Registering Screen Handlers for " + JirniysPinkStuff.MOD_ID);

@@ -13,6 +13,7 @@
   "entity.pinkstuff.corruption_blaze": "Corrupt Blaze",
   "entity.pinkstuff.amethyst_fireball": "Amethyst Fireball",
   "entity.pinkstuff.corruption_fireball": "Corruption Fireball",
+  "entity.minecraft.villager.pinkstuff.corrupt_forger": "Corrupt Forger",
 
   "item.pinkstuff.diamond_clump": "Diamond Clump",
   "item.pinkstuff.emerald_clump": "Emerald Clump",
@@ -503,6 +504,7 @@
   "item.pinkstuff.display": "Item Display",
   "item.pinkstuff.thermium_blaster": "Thermium Blaster",
   "block.pinkstuff.thermium_blaster": "Thermium-powered Heat Blaster",
+  "item.pinkstuff.corrupt_cauldron": "Corrupt Cauldron",
 
   "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
   "block.pinkstuff.charmberry_bush": "Charmberries Bush",
@@ -610,6 +612,7 @@
   "tag.item.pinkstuff.correrie_logs": "Correrie Logs",
   "tag.item.pinkstuff.crystal_cherry_logs": "Crystal Cherry Logs",
   "tag.item.pinkstuff.berries": "Any Berry",
+  "tag.item.pinkstuff.corrupt_mass_convertible": "Corrupt Mass Convertible",
   "tag.item.pinkstuff.elysium_repair": "Elysium Repair",
   "tag.item.pinkstuff.kunzite_repair": "Kunzite Repair",
   "tag.item.pinkstuff.pinline_repair": "Pinline Repair",
@@ -704,6 +707,8 @@
   "advancements.main.corrupt_droplet.title": "Death Tears",
   "advancements.main.cerille_ingot.description": "Forge an alloy out of Moonsteel and Corruption",
   "advancements.main.cerille_ingot.title": "Midnight Corruption",
+  "advancements.main.corrupt_cauldron.description": "Craft a Corrupted Cauldron",
+  "advancements.main.corrupt_cauldron.title": "Forbidden Brewery",
   "advancements.main.full_cerille.description": "Obtain a full set of Cerille armor",
   "advancements.main.full_cerille.title": "Corrupted Forgery",
   "advancements.main.corrupt_tower.description": "Find a forgotten tower, consumed by corruption",

@@ -455,5 +455,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RAW_FAIRY_MEAT)
                 .add(ModItems.MATURE_SPROUT)
                 .add(ModItems.DEAD_SPROUT);
+        valueLookupBuilder(ModTags.Items.CORRUPT_MASS_CONVERTIBLE)
+                .add(Items.DIAMOND)
+                .add(ModItems.CORRUPT_MASS)
+                .add(ModItems.DEAD_SPROUT)
+                .add(Items.NETHERITE_SCRAP)
+                .add(Items.NETHERITE_INGOT)
+                .add(Items.FERMENTED_SPIDER_EYE)
+                .add(Items.ENDER_PEARL)
+                .add(ModItems.ELYSIUM_INGOT);
     }
 }

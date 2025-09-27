@@ -1466,6 +1466,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_blaster")));
 
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUPT_CAULDRON, 1)
+                        .pattern("DTD")
+                        .pattern("BBB")
+                        .pattern("DBD")
+                        .input('T', ModItems.FORBIDDEN_MECHANISM)
+                        .input('B', ModBlocks.CORRERIE_PLANKS)
+                        .input('D', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModItems.FORBIDDEN_MECHANISM), conditionsFromItem(ModItems.FORBIDDEN_MECHANISM))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_cauldron")));
+
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_AMETHYST_BRICKS, 4)
                         .pattern("BB")
                         .pattern("BB")

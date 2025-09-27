@@ -33,7 +33,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.server.world.ServerWorld;
@@ -45,6 +44,8 @@ import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Optional;
 
 public class JirniysPinkStuff implements ModInitializer {
 	public static final String MOD_ID = "pinkstuff";
@@ -71,6 +72,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModFeatures.registerFeatures();
 		ModTreeDecorators.registerTreeDecorators();
 		ModGamerules.registerGamerules();
+		ModVillagers.registerVillagers();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
@@ -276,6 +278,82 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.add((entity, random) -> new TradeOffers.SellMapFactory(
 					30, ModTags.Structures.CHAMBERS, "filled_map.pinkstuff.chambers", ModMapDecorations.CHAMBERS, 3, 12
 			).create(entity, random));
+		});
+
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 0, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.EMERALD_NUGGET, 11),
+					new ItemStack(ModItems.CORRUPT_SPROUTS, 8), 8, 3, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.EMERALD_NUGGET, 4),
+					new ItemStack(ModItems.CORRUPT_DROPLET, 2), 8, 3, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.DEAD_SPROUT, 1),
+					new ItemStack(ModItems.EMERALD_NUGGET, 3), 4, 7, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModBlocks.CORRERIE_LOG, 5),
+					new ItemStack(ModItems.EMERALD_NUGGET, 2), 6, 4, 0.08f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 1, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.MATURE_SPROUT, 1), 4, 3, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 4),
+					new ItemStack(ModItems.CORRUPT_MASS, 1), 2, 11, 0.12f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.AMETHYST_BLAZE_ROD, 1),
+					new ItemStack(Items.EMERALD, 1), 4, 7, 0.08f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 2, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.EMERALD_NUGGET, 3),
+					new ItemStack(ModBlocks.CORESTONE, 3), 8, 2, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModBlocks.BLACK_GOOP, 12),
+					new ItemStack(ModItems.EMERALD_NUGGET, 3), 5, 2, 0.12f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.SUNGAZE, 1),
+					new ItemStack(Items.EMERALD, 3), 3, 8, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.MAGIC_GLITTER, 3),
+					new ItemStack(Items.EMERALD, 1), 4, 7, 0.08f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 3, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.MOONSTEEL_INGOT, 2), 3, 14, 0.12f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(ModBlocks.CORRUPT_ROOTS, 1), 7, 3, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(ModBlocks.HANGING_CORRUPT_ROOTS, 1), 7, 3, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(ModItems.RAW_FAIRY_MEAT, 3), 5, 6, 0.08f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 4, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.FORBIDDEN_MECHANISM, 1),
+					new ItemStack(Items.EMERALD, 5), 3, 15, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 4),
+					new ItemStack(Items.OBSIDIAN, 1), 5, 8, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2), Optional.of(new TradedItem(Items.BOWL, 1)),
+					new ItemStack(ModItems.FLESHY_STEW, 1), 9, 3, 0.08f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 5, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 24),
+					new ItemStack(ModItems.FORBIDDEN_SMITHING_TEMPLATE, 1), 3, 12, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModBlocks.CORRUPT_ORE, 1), Optional.of(new TradedItem(Items.EMERALD, 4)),
+					new ItemStack(ModItems.CORRUPT_MASS, 4), 3, 8, 0.08f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 23),
+					new ItemStack(ModItems.CORRUPTION_SMITHING_TEMPLATE, 1), 3, 12, 0.08f));
 		});
 
 		CustomPortalBuilder.beginPortal().flatPortal().forcedSize(3, 3).tintColor(0x341411)

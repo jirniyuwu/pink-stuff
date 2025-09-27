@@ -12,6 +12,7 @@ import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.client.*;
 import net.jirniy.pinkstuff.particle.*;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
+import net.jirniy.pinkstuff.screen.custom.CorruptCauldronScreen;
 import net.jirniy.pinkstuff.screen.custom.DisplayScreen;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
@@ -96,6 +97,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
 
         HandledScreens.register(ModScreenHandlers.DISPLAY_SCREEN_HANDLER, DisplayScreen::new);
         HandledScreens.register(ModScreenHandlers.THERMIUM_BLASTER_SCREEN_HANDLER, ThermiumBlasterScreen::new);
+        HandledScreens.register(ModScreenHandlers.CORRUPT_CAULDRON_SCREEN_HANDLER, CorruptCauldronScreen::new);
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.RIFT_PARTICLE, RiftParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.DAWNBREAK_PARTICLE, DawnbreakParticle.Factory::new);

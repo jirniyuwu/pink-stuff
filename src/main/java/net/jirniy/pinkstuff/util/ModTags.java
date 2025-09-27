@@ -67,6 +67,7 @@ public class ModTags {
         public static final TagKey<Item> BRICKS_CRAFTABLE = createTag("bricks_craftable");
         public static final TagKey<Item> THERMIUM_FUEL_INSERTABLE = createTag("thermium_fuel_insertable");
         public static final TagKey<Item> BERRIES = createTag("berries");
+        public static final TagKey<Item> CORRUPT_MASS_CONVERTIBLE = createTag("corrupt_mass_convertible");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(JirniysPinkStuff.MOD_ID, name));

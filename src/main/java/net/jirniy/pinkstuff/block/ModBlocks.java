@@ -932,7 +932,9 @@ public class ModBlocks {
     public static final Block DISPLAY = registerBlock("display",
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque().mapColor(MapColor.STONE_GRAY)));
     public static final Block THERMIUM_BLASTER = registerBlock("thermium_blaster",
-            properties -> new ThermiumBlasterBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6).mapColor(MapColor.PURPLE)));
+            properties -> new ThermiumBlasterBlock(properties.strength(4f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6).mapColor(MapColor.PURPLE)));
+    public static final Block CORRUPT_CAULDRON = registerBlock("corrupt_cauldron",
+            properties -> new CorruptCauldronBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.DARK_CRIMSON)));
 
     public static final Block AMETHYST_PARTERS = registerBlock("amethyst_parters",
             properties -> new FlowerBlock(StatusEffects.STRENGTH, 5, properties.strength(0f)

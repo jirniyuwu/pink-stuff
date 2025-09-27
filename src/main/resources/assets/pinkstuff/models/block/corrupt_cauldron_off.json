@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "pinkstuff:block/corrupt_cauldron_bottom",
+    "east": "pinkstuff:block/corrupt_cauldron_side_off",
+    "north": "pinkstuff:block/corrupt_cauldron_side_off",
+    "particle": "pinkstuff:block/corrupt_cauldron_side_off",
+    "south": "pinkstuff:block/corrupt_cauldron_side_off",
+    "up": "pinkstuff:block/corrupt_cauldron_top_off",
+    "west": "pinkstuff:block/corrupt_cauldron_side_off"
+  }
+}

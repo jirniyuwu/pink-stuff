@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=true": {
+      "model": "pinkstuff:block/corrupt_cauldron_on"
+    },
+    "lit=false": {
+      "model": "pinkstuff:block/corrupt_cauldron_off"
+    }
+  }
+}

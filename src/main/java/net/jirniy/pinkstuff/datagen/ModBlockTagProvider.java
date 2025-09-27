@@ -61,6 +61,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ELYSIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BRICKS_WALL)
                 .add(ModBlocks.THERMIUM_BLASTER)
+                .add(ModBlocks.CORRUPT_CAULDRON)
                 .add(ModBlocks.MEMORY_BRICKS)
                 .add(ModBlocks.CHISELED_MEMORY_BRICKS)
                 .add(ModBlocks.MEMORY_BULB)
