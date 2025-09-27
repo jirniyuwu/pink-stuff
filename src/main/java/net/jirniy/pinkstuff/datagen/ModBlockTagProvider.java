@@ -251,6 +251,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CUT_PINK_SANDSTONE_SLAB);
         valueLookupBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.STYXIAN_SOIL)
+                .add(ModBlocks.ROOTED_STYXIAN_SOIL)
                 .add(ModBlocks.PINK_SAND)
                 .add(ModBlocks.ASH_BLOCK);
         valueLookupBuilder(BlockTags.HOE_MINEABLE)
@@ -693,6 +694,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STYXIAN_SULFUR_ORE);
         valueLookupBuilder(BlockTags.MOSS_REPLACEABLE)
                 .add(ModBlocks.STYXSTONE)
+                .add(ModBlocks.ROOTED_STYXIAN_SOIL)
                 .add(ModBlocks.STYXIAN_SOIL)
                 .add(ModBlocks.COMPRESSED_STYXSTONE)
                 .add(ModBlocks.MABRIZE)

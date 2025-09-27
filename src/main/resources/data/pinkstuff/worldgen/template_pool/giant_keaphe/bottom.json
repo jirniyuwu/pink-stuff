@@ -8,7 +8,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:giant_keaphe/bottom",
-        "processors": "minecraft:empty",
+        "processors": "pinkstuff:roots",
         "override_liquid_settings": "ignore_waterlogging"
       }
     }

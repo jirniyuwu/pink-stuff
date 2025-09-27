@@ -33,6 +33,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.server.world.ServerWorld;
@@ -83,6 +84,9 @@ public class JirniysPinkStuff implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.WASTEWOOD_WOOD, ModBlocks.STRIPPED_WASTEWOOD_WOOD);
 		StrippableBlockRegistry.register(ModBlocks.CORRERIE_LOG, ModBlocks.STRIPPED_CORRERIE_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CORRERIE_WOOD, ModBlocks.STRIPPED_CORRERIE_WOOD);
+
+		TillableBlockRegistry.register(ModBlocks.ROOTED_STYXIAN_SOIL,
+				itemUsageContext -> !itemUsageContext.shouldCancelInteraction(), ModBlocks.STYXIAN_SOIL.getDefaultState());
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_WOOD, 5, 5);

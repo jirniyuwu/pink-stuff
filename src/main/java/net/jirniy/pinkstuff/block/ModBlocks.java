@@ -63,6 +63,9 @@ public class ModBlocks {
     public static final Block STYXIAN_SOIL = registerBlock("styxian_soil",
             properties -> new Block(properties.strength(0.8f)
                     .sounds(BlockSoundGroup.SOUL_SOIL).mapColor(MapColor.DARK_AQUA)));
+    public static final Block ROOTED_STYXIAN_SOIL = registerBlock("rooted_styxian_soil",
+            properties -> new Block(properties.strength(1f)
+                    .sounds(BlockSoundGroup.ROOTED_DIRT).mapColor(MapColor.DARK_AQUA)));
     public static final Block STYXMOSS = registerBlock("styxmoss",
             properties -> new StyxmossBlock(ModConfiguredFeatures.STYXMOSS_PATCH_BONEMEAL_KEY, properties.strength(0.7f)
                     .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.DARK_AQUA)));

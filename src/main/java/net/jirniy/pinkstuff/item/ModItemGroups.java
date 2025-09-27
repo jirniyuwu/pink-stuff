@@ -43,6 +43,7 @@ public class ModItemGroups {
                         entries.add(ModItems.AMETHYST_BLAZE_ROD);
 
                         entries.add(ModBlocks.STYXIAN_SOIL);
+                        entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);
                         entries.add(ModBlocks.STYXMOSS);
                         entries.add(ModBlocks.STYXMOSS_CARPET);
                         entries.add(ModBlocks.COBBLED_STYXSTONE);
@@ -952,6 +953,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.MABRIZE);
             entries.add(ModBlocks.AMETANE);
             entries.add(ModBlocks.STYXIAN_SOIL);
+            entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);
             entries.add(ModBlocks.STYXMOSS);
             entries.add(ModBlocks.STYXMOSS_CARPET);
 

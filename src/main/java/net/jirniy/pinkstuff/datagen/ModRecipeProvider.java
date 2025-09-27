@@ -2444,6 +2444,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Items.CHORUS_FRUIT), conditionsFromItem(Items.CHORUS_FRUIT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "glazed_chorus_fruit")));
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROOTED_STYXIAN_SOIL, 8).group("rooted_styxian_soil")
+                        .input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.STYXIAN_SOIL)
+                        .input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.KEAPHE_LOG).input(ModBlocks.STYXIAN_SOIL)
+                        .input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.STYXIAN_SOIL)
+                        .criterion(hasItem(ModBlocks.STYXIAN_SOIL), conditionsFromItem(ModBlocks.STYXIAN_SOIL))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "rooted_styxian_soil_from_log")));
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROOTED_STYXIAN_SOIL, 8).group("rooted_styxian_soil")
+                        .input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.STYXIAN_SOIL)
+                        .input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.KEAPHE_WOOD).input(ModBlocks.STYXIAN_SOIL)
+                        .input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.STYXIAN_SOIL).input(ModBlocks.STYXIAN_SOIL)
+                        .criterion(hasItem(ModBlocks.STYXIAN_SOIL), conditionsFromItem(ModBlocks.STYXIAN_SOIL))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "rooted_styxian_soil_from_wood")));
 
                 createShapeless(RecipeCategory.MISC, ModBlocks.SNOWY_SPRUCE_SAPLING, 1)
                         .input(Blocks.SPRUCE_SAPLING).input(Items.SNOWBALL).input(Items.SNOWBALL).input(Items.SNOWBALL)
