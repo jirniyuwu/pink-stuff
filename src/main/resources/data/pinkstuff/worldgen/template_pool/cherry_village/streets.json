@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 3,
+      "weight": 5,
       "element": {
         "element_type": "minecraft:empty_pool_element"
       }
@@ -86,7 +86,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:cherry_village/streets/neighborhood1",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -95,7 +95,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:cherry_village/streets/neighborhood2",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -104,7 +104,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:cherry_village/streets/neighborhood3",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
@@ -113,16 +113,16 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:cherry_village/streets/neighborhood4",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     },
     {
-      "weight": 3,
+      "weight": 5,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:cherry_village/streets/special",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:cherry_village_paths"
       }
     }
   ]

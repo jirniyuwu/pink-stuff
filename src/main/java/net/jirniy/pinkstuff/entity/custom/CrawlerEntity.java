@@ -106,6 +106,8 @@ public class CrawlerEntity extends AnimalEntity {
         baby.setVariant(variant);
         if (random.nextBetween(0, 50) == 50) {
             baby.setVariant(CrawlerVariant.THERMIUM);
+        } else if (random.nextBetween(0, 100) == 100) {
+            baby.setVariant(getVariantFromBiome(world));
         }
         return baby;
     }
@@ -163,6 +165,8 @@ public class CrawlerEntity extends AnimalEntity {
         if (spawnReason == SpawnReason.SPAWN_ITEM_USE) {
             variant = Util.getRandom(CrawlerVariant.values(), this.random);
             setVariant(variant);
+            return super.initialize(world, difficulty, spawnReason, entityData);
+        } else if (this.getVariant() == null) {
             return super.initialize(world, difficulty, spawnReason, entityData);
         }
         setVariant(getVariantFromBiome(world));
