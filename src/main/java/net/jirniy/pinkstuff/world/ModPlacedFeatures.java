@@ -58,6 +58,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> COMPRESSED_STYXSTONE_PLACED_KEY = registerKey("compressed_styxstone_placed");
     public static final RegistryKey<PlacedFeature> MABRIZE_PLACED_KEY = registerKey("mabrize_placed");
     public static final RegistryKey<PlacedFeature> AMETANE_PLACED_KEY = registerKey("ametane_placed");
+    public static final RegistryKey<PlacedFeature> WASTEROCK_PLACED_KEY = registerKey("wasterock_placed");
     public static final RegistryKey<PlacedFeature> CORESTONE_PLACED_KEY = registerKey("corestone_placed");
     public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_LUSH_PLACED_KEY = registerKey("kunzite_geode_lush_placed");
     public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_CHERRY_PLACED_KEY = registerKey("kunzite_geode_cherry_placed");
@@ -74,6 +75,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> AMETHYST_SPIKE_PLACED_KEY = registerKey("amethyst_spike_placed");
     public static final RegistryKey<PlacedFeature> DEATHFLOWER_PLACED_KEY = registerKey("deathflower_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_ROCK_PLACED_KEY = registerKey("styxian_rock_placed");
+    public static final RegistryKey<PlacedFeature> WASTEROCK_ROCK_PLACED_KEY = registerKey("wasterock_rock_placed");
     public static final RegistryKey<PlacedFeature> MOSSY_STYXIAN_ROCK_PLACED_KEY = registerKey("mossy_styxian_rock_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_CLAY_PATCH_PLACED_KEY = registerKey("styxian_clay_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_GRAVEL_PATCH_PLACED_KEY = registerKey("styxian_gravel_placed");
@@ -175,6 +177,9 @@ public class ModPlacedFeatures {
         register(context, CORESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORESTONE_KEY),
                 ModOrePlacement.modifiersWithCount(30,
                         HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(20), YOffset.fixed(140))));
+        register(context, WASTEROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WASTEROCK_KEY),
+                ModOrePlacement.modifiersWithCount(10,
+                        HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(30), YOffset.fixed(120))));
         register(context, STYXIAN_DELTA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_DELTA_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(90), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
                         EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
@@ -211,6 +216,8 @@ public class ModPlacedFeatures {
                                 BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(35), 1)
                         )));
         register(context, STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_ROCK_KEY),
+                CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, WASTEROCK_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WASTEROCK_ROCK_KEY),
                 CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, MOSSY_STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOSSY_STYXIAN_ROCK_KEY),
                 CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());

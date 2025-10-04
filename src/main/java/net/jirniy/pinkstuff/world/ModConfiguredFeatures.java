@@ -81,6 +81,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_STYXSTONE_KEY = registryKey("compressed_styxstone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MABRIZE_KEY = registryKey("mabrize");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETANE_KEY = registryKey("ametane");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> WASTEROCK_KEY = registryKey("wasterock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORESTONE_KEY = registryKey("corestone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> KUNZITE_GEODE_KEY = registryKey("kunzite_geode");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETHYST_CLUMP_KEY = registryKey("amethyst_clump");
@@ -97,6 +98,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETHYST_SPIKE_KEY = registryKey("amethyst_spike");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEATHFLOWER_KEY = registryKey("deathflower");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_ROCK_KEY = registryKey("styxian_rock");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> WASTEROCK_ROCK_KEY = registryKey("wasterock_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOSSY_STYXIAN_ROCK_KEY = registryKey("mossy_styxian_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_CLAY_PATCH_KEY = registryKey("styxian_clay_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_GRAVEL_PATCH_KEY = registryKey("styxian_gravel_patch");
@@ -137,6 +139,7 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> styxianSulfurOres =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_SULFUR_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_SULFUR_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.WASTEROCK), ModBlocks.STYXIAN_SULFUR_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_SULFUR_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE.getDefaultState()));
 
@@ -152,31 +155,37 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_AMETHYST_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_AMETHYST_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_AMETHYST_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.WASTEROCK), ModBlocks.STYXIAN_AMETHYST_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> styxianThermiumOres =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_THERMIUM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_THERMIUM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_THERMIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.WASTEROCK), ModBlocks.STYXIAN_THERMIUM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_THERMIUM_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> styxianStyxcoalOres =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_STYXCOAL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_STYXCOAL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_STYXCOAL_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.WASTEROCK), ModBlocks.STYXIAN_STYXCOAL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_STYXCOAL_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> styxianMoonsteelOres =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_MOONSTEEL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_MOONSTEEL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_MOONSTEEL_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.WASTEROCK), ModBlocks.STYXIAN_MOONSTEEL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_MOONSTEEL_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> styxianLapisOres =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_LAPIS_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_LAPIS_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_LAPIS_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.WASTEROCK), ModBlocks.STYXIAN_LAPIS_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> styxianSungazeOres =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.STYXIAN_SUNGAZE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.MABRIZE), ModBlocks.STYXIAN_SUNGAZE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.AMETANE), ModBlocks.STYXIAN_SUNGAZE_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.WASTEROCK), ModBlocks.STYXIAN_SUNGAZE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> crawlerStone =
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.STONE), ModBlocks.CRAWLER_STONE.getDefaultState()),
@@ -188,6 +197,7 @@ public class ModConfiguredFeatures {
         register(context, DEATHFLOWER_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(96, 6, 2,
                 PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(flowerbed(ModBlocks.DEATH_FLOWERS))))));
         register(context, STYXIAN_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.COBBLED_STYXSTONE)));
+        register(context, WASTEROCK_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.WASTEROCK)));
         register(context, MOSSY_STYXIAN_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE.getDefaultState(), 3)
                 .add(ModBlocks.COBBLED_STYXSTONE.getDefaultState(), 1))));
@@ -292,6 +302,8 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.MABRIZE.getDefaultState())), 30, 0.0f));
         register(context, AMETANE_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.AMETANE.getDefaultState())), 19, 0.1f));
+        register(context, WASTEROCK_KEY, Feature.ORE, new OreFeatureConfig(
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.WASTEROCK.getDefaultState())), 24, 0f));
         register(context, CORESTONE_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new TagMatchRuleTest(ModTags.Blocks.BASE_STONE_STYXIA), ModBlocks.CORESTONE.getDefaultState())), 40));
         register(context, CRAWLER_STONE_KEY, Feature.REPLACE_SINGLE_BLOCK, new EmeraldOreFeatureConfig(crawlerStone));
@@ -330,7 +342,7 @@ public class ModConfiguredFeatures {
         register(context, THERMIUM_CLUMP_KEY, Feature.MULTIFACE_GROWTH, new MultifaceGrowthFeatureConfig(
                 (MultifaceGrowthBlock) ModBlocks.THERMIUM_CLUMP, 15, true, true, true, 0.2f, RegistryEntryList.of(Block::getRegistryEntry, new Block[]{Blocks.STONE, Blocks.ANDESITE, Blocks.DIORITE, Blocks.GRANITE, Blocks.DRIPSTONE_BLOCK, Blocks.CALCITE, Blocks.TUFF, Blocks.DEEPSLATE})));
         register(context, CORRUPTION_CLUMP_KEY, Feature.MULTIFACE_GROWTH, new MultifaceGrowthFeatureConfig(
-                (MultifaceGrowthBlock) ModBlocks.CORRUPTION_CLUMP, 40, true, true, true, 0.6f, RegistryEntryList.of(Block::getRegistryEntry, new Block[]{ModBlocks.BLACK_GOOP, ModBlocks.STYXSTONE, ModBlocks.CORESTONE, ModBlocks.COMPRESSED_STYXSTONE, ModBlocks.MABRIZE, ModBlocks.AMETANE})));
+                (MultifaceGrowthBlock) ModBlocks.CORRUPTION_CLUMP, 40, true, true, true, 0.6f, RegistryEntryList.of(Block::getRegistryEntry, new Block[]{ModBlocks.BLACK_GOOP, ModBlocks.STYXSTONE, ModBlocks.CORESTONE, ModBlocks.COMPRESSED_STYXSTONE, ModBlocks.MABRIZE, ModBlocks.AMETANE, ModBlocks.WASTEROCK})));
 
         register(context, GEM_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 new WeightedBlockStateProvider(

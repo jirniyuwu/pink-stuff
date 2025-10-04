@@ -1985,6 +1985,45 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "polished_ametane_stairs")));
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_AMETANE_WALL, ModBlocks.POLISHED_AMETANE);
 
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_WASTEROCK, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.WASTEROCK)
+                        .criterion(hasItem(ModBlocks.WASTEROCK), conditionsFromItem(ModBlocks.WASTEROCK))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_wasterock")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WASTEROCK_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.POLISHED_WASTEROCK)
+                        .criterion(hasItem(ModBlocks.POLISHED_WASTEROCK), conditionsFromItem(ModBlocks.POLISHED_WASTEROCK))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wasterock_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WASTEROCK_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.WASTEROCK_BRICKS))
+                        .criterion(hasItem(ModBlocks.WASTEROCK_BRICKS), conditionsFromItem(ModBlocks.WASTEROCK_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wasterock_bricks_slab")));
+                createStairsRecipe(ModBlocks.WASTEROCK_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.WASTEROCK_BRICKS))
+                        .criterion(hasItem(ModBlocks.WASTEROCK_BRICKS), conditionsFromItem(ModBlocks.WASTEROCK_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wasterock_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WASTEROCK_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.WASTEROCK_BRICKS)
+                        .criterion(hasItem(ModBlocks.WASTEROCK_BRICKS), conditionsFromItem(ModBlocks.WASTEROCK_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wasterock_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_WASTEROCK_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_WASTEROCK))
+                        .criterion(hasItem(ModBlocks.POLISHED_WASTEROCK), conditionsFromItem(ModBlocks.POLISHED_WASTEROCK))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_wasterock_slab")));
+                createStairsRecipe(ModBlocks.POLISHED_WASTEROCK_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_WASTEROCK))
+                        .criterion(hasItem(ModBlocks.POLISHED_WASTEROCK), conditionsFromItem(ModBlocks.POLISHED_WASTEROCK))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_wasterock_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_WASTEROCK_WALL, ModBlocks.POLISHED_WASTEROCK);
+
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORESTONE, 2)
                         .criterion(hasItem(ModBlocks.BLACK_GOOP), conditionsFromItem(ModBlocks.BLACK_GOOP))
                         .input(ModBlocks.BLACK_GOOP).input(ModBlocks.BLACK_GOOP)

@@ -90,6 +90,12 @@ public class ModBlocks {
     public static final Block POLISHED_AMETANE = registerBlock("polished_ametane",
             properties -> new Block(properties.strength(1.4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block WASTEROCK = registerBlock("wasterock",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.TUFF).mapColor(MapColor.TERRACOTTA_LIME)));
+    public static final Block POLISHED_WASTEROCK = registerBlock("polished_wasterock",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.TUFF).mapColor(MapColor.TERRACOTTA_LIME)));
     public static final Block CORESTONE = registerBlock("corestone",
             properties -> new Block(properties.strength(2.5f).requiresTool()
                     .sounds(BlockSoundGroup.RESIN).mapColor(MapColor.BLACK)));
@@ -611,6 +617,9 @@ public class ModBlocks {
     public static final Block AMETANE_BRICKS = registerBlock("ametane_bricks",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block WASTEROCK_BRICKS = registerBlock("wasterock_bricks",
+            properties -> new Block(properties.strength(2.4f).requiresTool()
+                    .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_LIME)));
     public static final Block SUNGAZE_BRICKS = registerBlock("sungaze_bricks",
             properties -> new Block(properties.strength(6f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
@@ -716,6 +725,22 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block POLISHED_AMETANE_WALL = registerBlock("polished_ametane_wall",
             properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block WASTEROCK_BRICKS_STAIRS = registerBlock("wasterock_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.WASTEROCK_BRICKS.getDefaultState(),
+                    properties.strength(2.4f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_LIME)));
+    public static final Block WASTEROCK_BRICKS_SLAB = registerBlock("wasterock_bricks_slab",
+            properties -> new SlabBlock(properties.strength(2.4f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_LIME)));
+    public static final Block WASTEROCK_BRICKS_WALL = registerBlock("wasterock_bricks_wall",
+            properties -> new WallBlock(properties.strength(2.4f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_LIME)));
+
+    public static final Block POLISHED_WASTEROCK_STAIRS = registerBlock("polished_wasterock_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_WASTEROCK.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF).mapColor(MapColor.TERRACOTTA_LIME)));
+    public static final Block POLISHED_WASTEROCK_SLAB = registerBlock("polished_wasterock_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF).mapColor(MapColor.TERRACOTTA_LIME)));
+    public static final Block POLISHED_WASTEROCK_WALL = registerBlock("polished_wasterock_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF).mapColor(MapColor.TERRACOTTA_LIME)));
 
     public static final Block MOONSTEEL_BRICKS_STAIRS = registerBlock("moonsteel_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.MOONSTEEL_BRICKS.getDefaultState(),

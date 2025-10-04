@@ -41,7 +41,8 @@
     [],
     [
       "minecraft:amethyst_geode",
-      "pinkstuff:styxian_rock_placed"
+      "pinkstuff:styxian_rock_placed",
+      "pinkstuff:wasterock_rock_placed"
     ],
     [],
     [],
@@ -49,6 +50,7 @@
     [
       "pinkstuff:compressed_styxstone_placed",
       "pinkstuff:mabrize_placed",
+      "pinkstuff:wasterock_placed",
       "pinkstuff:styxian_thermium_ore_placed",
       "pinkstuff:styxcoal_ore_placed",
       "pinkstuff:moonsteel_ore_placed"

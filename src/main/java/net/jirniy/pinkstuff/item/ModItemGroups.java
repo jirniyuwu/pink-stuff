@@ -95,6 +95,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AMETANE_BRICKS_STAIRS);
                         entries.add(ModBlocks.AMETANE_BRICKS_WALL);
 
+                        entries.add(ModBlocks.WASTEROCK);
+                        entries.add(ModBlocks.POLISHED_WASTEROCK);
+                        entries.add(ModBlocks.POLISHED_WASTEROCK_SLAB);
+                        entries.add(ModBlocks.POLISHED_WASTEROCK_STAIRS);
+                        entries.add(ModBlocks.POLISHED_WASTEROCK_WALL);
+                        entries.add(ModBlocks.WASTEROCK_BRICKS);
+                        entries.add(ModBlocks.WASTEROCK_BRICKS_SLAB);
+                        entries.add(ModBlocks.WASTEROCK_BRICKS_STAIRS);
+                        entries.add(ModBlocks.WASTEROCK_BRICKS_WALL);
+
                         entries.add(ModBlocks.BLACK_GOOP);
                         entries.add(ModBlocks.CORESTONE);
                         entries.add(ModBlocks.POLISHED_CORESTONE);
@@ -614,6 +624,14 @@ public class ModItemGroups {
             entries.add(ModBlocks.AMETANE_BRICKS_SLAB);
             entries.add(ModBlocks.AMETANE_BRICKS_STAIRS);
             entries.add(ModBlocks.AMETANE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_WASTEROCK);
+            entries.add(ModBlocks.POLISHED_WASTEROCK_SLAB);
+            entries.add(ModBlocks.POLISHED_WASTEROCK_STAIRS);
+            entries.add(ModBlocks.POLISHED_WASTEROCK_WALL);
+            entries.add(ModBlocks.WASTEROCK_BRICKS);
+            entries.add(ModBlocks.WASTEROCK_BRICKS_SLAB);
+            entries.add(ModBlocks.WASTEROCK_BRICKS_STAIRS);
+            entries.add(ModBlocks.WASTEROCK_BRICKS_WALL);
             entries.add(ModBlocks.POLISHED_CORESTONE);
             entries.add(ModBlocks.POLISHED_CORESTONE_SLAB);
             entries.add(ModBlocks.POLISHED_CORESTONE_STAIRS);
@@ -953,6 +971,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.COMPRESSED_STYXSTONE);
             entries.add(ModBlocks.MABRIZE);
             entries.add(ModBlocks.AMETANE);
+            entries.add(ModBlocks.WASTEROCK);
             entries.add(ModBlocks.STYXIAN_SOIL);
             entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);
             entries.add(ModBlocks.STYXMOSS);

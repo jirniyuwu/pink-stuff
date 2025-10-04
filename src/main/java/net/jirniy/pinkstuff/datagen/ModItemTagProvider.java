@@ -262,6 +262,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MABRIZE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.CORESTONE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.AMETANE_BRICKS_SLAB.asItem())
+                .add(ModBlocks.WASTEROCK_BRICKS_SLAB.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.SUNGAZE_BRICKS_SLAB.asItem())
                 .add(ModBlocks.MOONSTEEL_BRICKS_SLAB.asItem())
@@ -273,6 +274,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.POLISHED_MABRIZE_SLAB.asItem())
                 .add(ModBlocks.POLISHED_CORESTONE_SLAB.asItem())
                 .add(ModBlocks.POLISHED_AMETANE_SLAB.asItem())
+                .add(ModBlocks.POLISHED_WASTEROCK_SLAB.asItem())
                 .add(ModBlocks.AMETHYST_TILES_SLAB.asItem())
                 .add(ModBlocks.COBBLED_STYXSTONE_SLAB.asItem())
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB.asItem());
@@ -291,6 +293,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MABRIZE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.CORESTONE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.AMETANE_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.WASTEROCK_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.SUNGAZE_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.MOONSTEEL_BRICKS_STAIRS.asItem())
@@ -301,6 +304,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.POLISHED_MABRIZE_STAIRS.asItem())
                 .add(ModBlocks.POLISHED_CORESTONE_STAIRS.asItem())
                 .add(ModBlocks.POLISHED_AMETANE_STAIRS.asItem())
+                .add(ModBlocks.POLISHED_WASTEROCK_STAIRS.asItem())
                 .add(ModBlocks.COBBLED_STYXSTONE_STAIRS.asItem())
                 .add(ModBlocks.AMETHYST_TILES_STAIRS.asItem())
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS.asItem());
@@ -319,6 +323,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MABRIZE_BRICKS_WALL.asItem())
                 .add(ModBlocks.CORESTONE_BRICKS_WALL.asItem())
                 .add(ModBlocks.AMETANE_BRICKS_WALL.asItem())
+                .add(ModBlocks.WASTEROCK_BRICKS_WALL.asItem())
                 .add(ModBlocks.CERILLE_BRICKS_WALL.asItem())
                 .add(ModBlocks.SUNGAZE_BRICKS_WALL.asItem())
                 .add(ModBlocks.MOONSTEEL_BRICKS_WALL.asItem())
@@ -328,6 +333,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.POLISHED_MABRIZE_WALL.asItem())
                 .add(ModBlocks.POLISHED_CORESTONE_WALL.asItem())
                 .add(ModBlocks.POLISHED_AMETANE_WALL.asItem())
+                .add(ModBlocks.POLISHED_WASTEROCK_WALL.asItem())
                 .add(ModBlocks.AMETHYST_TILES_WALL.asItem())
                 .add(ModBlocks.COBBLED_STYXSTONE_WALL.asItem())
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL.asItem());
