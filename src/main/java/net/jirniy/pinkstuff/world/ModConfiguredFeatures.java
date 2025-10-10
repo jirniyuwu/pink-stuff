@@ -489,23 +489,26 @@ public class ModConfiguredFeatures {
                 new WeightedBlockStateProvider(
                         Pool.<BlockState>builder()
                                 .add(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState(), 3)
+                                .add(ModBlocks.FRAGILE_AMETHYST.getDefaultState(), 2)
                                 .add(AMETHYST_BLOCK.getDefaultState(), 1)
                 ),
                 new WeightedBlockStateProvider(
                         Pool.<BlockState>builder()
                                 .add(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState(), 1)
                                 .add(AMETHYST_BLOCK.getDefaultState(), 1)
+                                .add(ModBlocks.FRAGILE_AMETHYST.getDefaultState(), 1)
                 ),
                 new WeightedBlockStateProvider(
                         Pool.<BlockState>builder()
                                 .add(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState(), 1)
                                 .add(AMETHYST_BLOCK.getDefaultState(), 3)
+                                .add(ModBlocks.FRAGILE_AMETHYST.getDefaultState(), 1)
                 ),
-                BlockStateProvider.of(GRANITE),
+                BlockStateProvider.of(ModBlocks.AMETANE),
                 List.of(ModBlocks.AMETHYST_KUNZITE_ORE.getDefaultState()),
                 ModTags.Blocks.KUNZITE_GEODE_IRREPLACEABLE,
                 BlockTags.GEODE_INVALID_BLOCKS),
-                new GeodeLayerThicknessConfig(0.6, 0.8, 0.9, 1.2),
+                new GeodeLayerThicknessConfig(0.6, 0.8, 0.9, 1.6),
                 new GeodeCrackConfig(0.2, (double)1.0F, 2),
                 0.35, 0.083, true,
                 UniformIntProvider.create(2, 5), UniformIntProvider.create(1, 3), UniformIntProvider.create(1, 2),

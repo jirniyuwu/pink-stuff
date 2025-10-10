@@ -207,6 +207,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS)
                 .add(ModBlocks.GLOWING_AMETHYST)
+                .add(ModBlocks.FRAGILE_AMETHYST)
                 .add(ModBlocks.AMETHYST_TILES)
                 .add(ModBlocks.AMETHYST_TILES_WALL)
                 .add(ModBlocks.AMETHYST_TILES_SLAB)

@@ -286,6 +286,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CORESTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AMETANE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WASTEROCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FRAGILE_AMETHYST);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STYXIAN_AMETHYST_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPRESSED_STYXIAN_AMETHYST_ORE);

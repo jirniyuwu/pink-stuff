@@ -512,6 +512,9 @@ public class ModBlocks {
     public static final Block GLOWING_AMETHYST = registerBlock("glowing_amethyst",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE).luminance(state -> 4)));
+    public static final Block FRAGILE_AMETHYST = registerBlock("fragile_amethyst",
+            properties -> new FragileBlock(4, properties.strength(0.6f).sounds(BlockSoundGroup.AMETHYST_CLUSTER)
+                    .mapColor(MapColor.PURPLE)));
     public static final Block AMETHYST_BRICKS = registerBlock("amethyst_bricks",
             properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.PURPLE)));

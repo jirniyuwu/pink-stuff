@@ -360,11 +360,11 @@ public class ModPlacedFeatures {
                         RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
 
         register(context, KUNZITE_GEODE_LUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_GEODE_KEY),
-                HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(40)),
-                PlacedFeatures.createCountExtraModifier(0, 0.5f, 1));
+                HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(40)), RarityFilterPlacementModifier.of(18),
+                SquarePlacementModifier.of());
         register(context, KUNZITE_GEODE_CHERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_GEODE_KEY),
-                HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(100)),
-                PlacedFeatures.createCountExtraModifier(1, 0.5f, 1));
+                HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(100)), RarityFilterPlacementModifier.of(12),
+                SquarePlacementModifier.of());
 
         register(context, GEM_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_BERRY_BUSH_KEY),
                 RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());

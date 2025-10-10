@@ -11,16 +11,8 @@
           "feature": "pinkstuff:crystal_cherry",
           "placement": [
             {
-              "type": "minecraft:block_predicate_filter",
-              "predicate": {
-                "type": "minecraft:would_survive",
-                "state": {
-                  "Name": "pinkstuff:crystal_cherry_sapling",
-                  "Properties": {
-                    "stage": "0"
-                  }
-                }
-              }
+              "type": "minecraft:count",
+              "count": 1
             }
           ]
         }
