@@ -213,6 +213,16 @@
       }
     },
     {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:chambers/hallways/straight11",
+        "processors": "pinkstuff:chambers",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
       "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
