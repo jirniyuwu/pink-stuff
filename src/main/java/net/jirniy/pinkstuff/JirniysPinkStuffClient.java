@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
+import net.fabricmc.fabric.impl.client.rendering.hud.HudElementRegistryImpl;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.block.entity.renderer.DisplayBlockEntityRenderer;
@@ -20,6 +22,7 @@ import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.particle.SculkChargePopParticle;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.client.render.entity.EntityRendererFactories;
 
 public class JirniysPinkStuffClient implements ClientModInitializer {
     @Override
@@ -83,15 +86,15 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_KEAPHE_SAPLING, BlockRenderLayer.CUTOUT);
 
         EntityModelLayerRegistry.registerModelLayer(CrawlerModel.CRAWLER, CrawlerModel::getTexturedModelData);
-        EntityRendererRegistry.register(ModEntities.CRAWLER, CrawlerRenderer::new);
+        EntityRendererFactories.register(ModEntities.CRAWLER, CrawlerRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ExofairyModel.EXOFAIRY, ExofairyModel::getTexturedModelData);
-        EntityRendererRegistry.register(ModEntities.EXOFAIRY, ExofairyRenderer::new);
-        EntityRendererRegistry.register(ModEntities.CORRUPTED_ZOMBIE, CorruptedZombieRenderer::new);
-        EntityRendererRegistry.register(ModEntities.CORRUPTED_SKELETON, CorruptedSkeletonRenderer::new);
-        EntityRendererRegistry.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeRenderer::new);
-        EntityRendererRegistry.register(ModEntities.CORRUPTION_BLAZE, CorruptionBlazeRenderer::new);
-        EntityRendererRegistry.register(ModEntities.AMETHYST_FIREBALL, AmethystFireballRenderer::new);
-        EntityRendererRegistry.register(ModEntities.CORRUPTION_FIREBALL, CorruptionFireballRenderer::new);
+        EntityRendererFactories.register(ModEntities.EXOFAIRY, ExofairyRenderer::new);
+        EntityRendererFactories.register(ModEntities.CORRUPTED_ZOMBIE, CorruptedZombieRenderer::new);
+        EntityRendererFactories.register(ModEntities.CORRUPTED_SKELETON, CorruptedSkeletonRenderer::new);
+        EntityRendererFactories.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeRenderer::new);
+        EntityRendererFactories.register(ModEntities.CORRUPTION_BLAZE, CorruptionBlazeRenderer::new);
+        EntityRendererFactories.register(ModEntities.AMETHYST_FIREBALL, AmethystFireballRenderer::new);
+        EntityRendererFactories.register(ModEntities.CORRUPTION_FIREBALL, CorruptionFireballRenderer::new);
 
         BlockEntityRendererFactories.register(ModBlockEntities.DISPLAY_BE, DisplayBlockEntityRenderer::new);
 
