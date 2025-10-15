@@ -29,7 +29,7 @@ import java.util.function.Function;
 
 public class ModBlocks {
     public static final Block STYXIA_PORTAL = registerBlockWithoutBlockItem("styxia_portal",
-            properties -> new StyxiaPortalBlock(properties.strength(-1).noCollision().nonOpaque().pistonBehavior(PistonBehavior.BLOCK)
+            properties -> new Block(properties.strength(-1).noCollision().nonOpaque().pistonBehavior(PistonBehavior.BLOCK)
                     .luminance(state -> 15).sounds(BlockSoundGroup.GLASS).mapColor(DyeColor.BLACK)));
     public static final Block STYXIA_PORTAL_FRAME = registerBlock("styxia_portal_frame",
             properties -> new StyxiaPortalFrameBlock(properties.strength(100, -1).nonOpaque().pistonBehavior(PistonBehavior.BLOCK)

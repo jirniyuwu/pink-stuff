@@ -57,7 +57,7 @@ public class ModEnchantments {
                 .exclusiveSet(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET))
                 .addEffect(EnchantmentEffectComponentTypes.DAMAGE,
                         new AddEnchantmentEffect(EnchantmentLevelBasedValue.linear(2.5F)),
-                        EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
+                        EntityPropertiesLootCondition.builder(LootContext.EntityReference.THIS,
                                 net.minecraft.predicate.entity.EntityPredicate.Builder.create()
                                         .type(EntityTypePredicate.create(registerable.getRegistryLookup(RegistryKeys.ENTITY_TYPE),
                                                 ModTags.Entities.CLEANSE_APPLICABLE))))

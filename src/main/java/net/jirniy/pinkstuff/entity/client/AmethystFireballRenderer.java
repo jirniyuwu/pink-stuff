@@ -6,9 +6,11 @@ import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.state.EntityRenderState;
+import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
@@ -25,18 +27,18 @@ public class AmethystFireballRenderer extends EntityRenderer<AmethystFireballEnt
         return 15;
     }
 
-    public void render(EntityRenderState state, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
+    public void render(EntityRenderState renderState, MatrixStack matrices, OrderedRenderCommandQueue queue, CameraRenderState cameraState) {
         matrices.push();
-        matrices.scale(1.0F, 1.0F, 1.0F);
-        matrices.multiply(this.dispatcher.getRotation());
-        MatrixStack.Entry entry = matrices.peek();
-        VertexConsumer vertexConsumer = vertexConsumers.getBuffer(LAYER);
-        produceVertex(vertexConsumer, entry, light, 0.0F, 0, 0, 1);
-        produceVertex(vertexConsumer, entry, light, 1.0F, 0, 1, 1);
-        produceVertex(vertexConsumer, entry, light, 1.0F, 1, 1, 0);
-        produceVertex(vertexConsumer, entry, light, 0.0F, 1, 0, 0);
+        matrices.scale(2.0F, 2.0F, 2.0F);
+        matrices.multiply(cameraState.orientation);
+        queue.submitCustom(matrices, LAYER, (entry, vertexConsumer) -> {
+            produceVertex(vertexConsumer, entry, renderState.light, 0.0F, 0, 0, 1);
+            produceVertex(vertexConsumer, entry, renderState.light, 1.0F, 0, 1, 1);
+            produceVertex(vertexConsumer, entry, renderState.light, 1.0F, 1, 1, 0);
+            produceVertex(vertexConsumer, entry, renderState.light, 0.0F, 1, 0, 0);
+        });
         matrices.pop();
-        super.render(state, matrices, vertexConsumers, light);
+        super.render(renderState, matrices, queue, cameraState);
     }
 
     private static void produceVertex(VertexConsumer vertexConsumer, MatrixStack.Entry matrix, int light, float x, int z, int textureU, int textureV) {

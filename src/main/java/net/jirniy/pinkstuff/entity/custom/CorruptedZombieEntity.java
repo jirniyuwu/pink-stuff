@@ -33,7 +33,7 @@ public class CorruptedZombieEntity extends ZombieEntity {
     public boolean tryAttack(ServerWorld world, Entity target) {
         boolean bl = super.tryAttack(world, target);
         if (bl && this.getMainHandStack().isEmpty() && target instanceof LivingEntity) {
-            float f = this.getWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
+            float f = this.getEntityWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
             ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 80 * (int)f, 1), this);
         }
 

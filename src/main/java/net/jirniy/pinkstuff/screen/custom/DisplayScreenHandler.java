@@ -13,7 +13,7 @@ import net.minecraft.util.math.BlockPos;
 public class DisplayScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     public DisplayScreenHandler(int syncId, PlayerInventory playerInventory, BlockPos pos) {
-        this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(pos));
+        this(syncId, playerInventory, playerInventory.player.getEntityWorld().getBlockEntity(pos));
     }
 
     public DisplayScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity) {

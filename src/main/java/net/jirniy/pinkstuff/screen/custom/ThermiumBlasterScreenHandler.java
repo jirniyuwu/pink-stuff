@@ -19,7 +19,7 @@ public class ThermiumBlasterScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
     public final ThermiumBlasterBlockEntity blockEntity;
     public ThermiumBlasterScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
-        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(4));
+        this(syncId, inventory, inventory.player.getEntityWorld().getBlockEntity(pos), new ArrayPropertyDelegate(4));
     }
 
     public ThermiumBlasterScreenHandler(int syncId, PlayerInventory playerInventory,

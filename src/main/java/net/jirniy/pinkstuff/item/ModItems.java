@@ -105,17 +105,17 @@ public class ModItems {
             setting -> new Item(setting.food(ModFoodComponents.COOKED_FAIRY_MEAT, ModFoodComponents.COOKED_FAIRY_MEAT_EFFECT)));
 
     public static final Item CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
-            setting -> new SpawnEggItem(ModEntities.CRAWLER, setting));
+            setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.CRAWLER)));
     public static final Item EXOFAIRY_SPAWN_EGG = registerItem("exofairy_spawn_egg",
-            setting -> new SpawnEggItem(ModEntities.EXOFAIRY, setting));
+            setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.EXOFAIRY)));
     public static final Item CORRUPTED_ZOMBIE_SPAWN_EGG = registerItem("corrupted_zombie_spawn_egg",
-            setting -> new SpawnEggItem(ModEntities.CORRUPTED_ZOMBIE, setting));
+            setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.CORRUPTED_ZOMBIE)));
     public static final Item CORRUPTED_SKELETON_SPAWN_EGG = registerItem("corrupted_skeleton_spawn_egg",
-            setting -> new SpawnEggItem(ModEntities.CORRUPTED_SKELETON, setting));
+            setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.CORRUPTED_SKELETON)));
     public static final Item AMETHYST_BLAZE_SPAWN_EGG = registerItem("amethyst_blaze_spawn_egg",
-            setting -> new SpawnEggItem(ModEntities.AMETHYST_BLAZE, setting));
+            setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.AMETHYST_BLAZE)));
     public static final Item CORRUPTION_BLAZE_SPAWN_EGG = registerItem("corruption_blaze_spawn_egg",
-            setting -> new SpawnEggItem(ModEntities.CORRUPTION_BLAZE, setting));
+            setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.CORRUPTION_BLAZE)));
 
     public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
     public static final Item THERMIUM = registerItem("thermium", setting -> new Item(setting.trimMaterial(ModTrimMaterials.THERMIUM)));

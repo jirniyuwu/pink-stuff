@@ -92,8 +92,8 @@ public class ExofairyEntity extends AnimalEntity {
 
     @Override
     public void tick() {
-        if (!this.getWorld().isClient() && this.isAlive() && !this.isInDanger() && this.age % this.getRandom().nextBetween(2, 13) == 0) {
-            ServerWorld world = (ServerWorld) this.getWorld();
+        if (!this.getEntityWorld().isClient() && this.isAlive() && !this.isInDanger() && this.age % this.getRandom().nextBetween(2, 13) == 0) {
+            ServerWorld world = (ServerWorld) this.getEntityWorld();
             world.spawnParticles(ModParticles.SPARKLE_PARTICLE, this.getX(), this.getY() + this.getHeight()/2, this.getZ(),
                     1, this.getWidth(), this.getHeight(), this.getWidth(), 1);
         }
@@ -108,8 +108,8 @@ public class ExofairyEntity extends AnimalEntity {
     }
     public void tickMovement() {
         super.tickMovement();
-        if (!this.getWorld().isClient && this.isAlive() && this.age % 10 == 0) {
-            PlayerEntity player = this.getWorld().getClosestPlayer(this, 5);
+        if (!this.getEntityWorld().isClient() && this.isAlive() && this.age % 10 == 0) {
+            PlayerEntity player = this.getEntityWorld().getClosestPlayer(this, 5);
             if (player != null && !this.isInDanger()) {
                 if (player.hasStatusEffect(ModEffects.FAIRY_SUPPORT)) {
                     if ((player.getStatusEffect(ModEffects.FAIRY_SUPPORT).getDuration() < 40) || player.getStatusEffect(ModEffects.FAIRY_SUPPORT).getAmplifier() > 0) {
@@ -121,7 +121,7 @@ public class ExofairyEntity extends AnimalEntity {
             }
             this.heal(1.0F);
             if (this.hasStatusEffect(ModEffects.DEATH_GRIP)) {
-                this.damage((ServerWorld) this.getWorld(), this.getWorld().getDamageSources().wither(), this.getMaxHealth());
+                this.damage((ServerWorld) this.getEntityWorld(), this.getEntityWorld().getDamageSources().wither(), this.getMaxHealth());
             }
         }
     }
@@ -162,7 +162,7 @@ public class ExofairyEntity extends AnimalEntity {
             return this.mob.getRecentDamageSource() != null && this.mob.getRecentDamageSource().isIn(DamageTypeTags.PANIC_CAUSES);
         }
         protected boolean findTarget() {
-            PlayerEntity nearestPlayer = this.mob.getWorld().getClosestPlayer(this.mob, 10);
+            PlayerEntity nearestPlayer = this.mob.getEntityWorld().getClosestPlayer(this.mob, 10);
             Vec3d mobPos = this.mob.getRotationVec(0.0F);
             Vec3d vec3d;
             vec3d = AboveGroundTargeting.find(this.mob, 10, 6, mobPos.x, mobPos.z, ((float)Math.PI / 2F), 5, 1);

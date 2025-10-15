@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.particle;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.SimpleParticleType;
+import net.minecraft.util.math.random.Random;
 import org.jetbrains.annotations.Nullable;
 
 public class CerilleSlashParticle extends AnimatedParticle {
@@ -11,12 +12,11 @@ public class CerilleSlashParticle extends AnimatedParticle {
 
         this.maxAge = this.random.nextBetween(4, 16);
         this.scale = (float) this.random.nextBetween(8, 12) / 16;
-        this.setSpriteForAge(spriteProvider);
     }
 
     @Override
-    public ParticleTextureSheet getType() {
-        return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
+    public RenderType getRenderType() {
+        return RenderType.PARTICLE_ATLAS_TRANSLUCENT;
     }
 
     public static class Factory implements ParticleFactory<SimpleParticleType> {
@@ -27,7 +27,7 @@ public class CerilleSlashParticle extends AnimatedParticle {
         }
 
         @Override
-        public @Nullable Particle createParticle(SimpleParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+        public @Nullable Particle createParticle(SimpleParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, Random random) {
             return new CerilleSlashParticle(world, x, y, z, this.spriteProvider);
         }
     }

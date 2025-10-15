@@ -133,18 +133,18 @@ public class AmethystBlazeEntity extends BlazeEntity {
                         if (this.fireballsFired > 1) {
                             double h = Math.sqrt(Math.sqrt(d)) * (double)0.5F;
                             if (!this.blaze.isSilent()) {
-                                this.blaze.getWorld().syncWorldEvent((Entity)null, 1018, this.blaze.getBlockPos(), 0);
+                                this.blaze.getEntityWorld().syncWorldEvent((Entity)null, 1018, this.blaze.getBlockPos(), 0);
                             }
 
                             for(int i = 0; i < 1; ++i) {
                                 Vec3d vec3d = new Vec3d(this.blaze.getRandom().nextTriangular(e, 2.297 * h), f, this.blaze.getRandom().nextTriangular(g, 2.297 * h));
-                                AmethystFireballEntity smallFireballEntity = new AmethystFireballEntity(ModEntities.AMETHYST_FIREBALL, blaze.getWorld());
+                                AmethystFireballEntity smallFireballEntity = new AmethystFireballEntity(ModEntities.AMETHYST_FIREBALL, blaze.getEntityWorld());
                                 smallFireballEntity.setVelocityWithAcceleration(vec3d.normalize(), 0.1f);
                                 smallFireballEntity.setRotation(blaze.getYaw(), blaze.getPitch());
                                 smallFireballEntity.setPosition(blaze.getX(), this.blaze.getBodyY((double)0.5F) + (double)0.5F, blaze.getZ());
                                 smallFireballEntity.refreshPosition();
                                 smallFireballEntity.setOwner(blaze);
-                                this.blaze.getWorld().spawnEntity(smallFireballEntity);
+                                this.blaze.getEntityWorld().spawnEntity(smallFireballEntity);
                             }
                         }
                     }

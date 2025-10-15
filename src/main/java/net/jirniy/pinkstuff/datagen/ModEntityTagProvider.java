@@ -29,5 +29,7 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
         valueLookupBuilder(EntityTypeTags.INVERTED_HEALING_AND_HARM)
                 .add(ModEntities.CORRUPTED_SKELETON)
                 .add(ModEntities.CORRUPTED_ZOMBIE);
+        valueLookupBuilder(EntityTypeTags.CANDIDATE_FOR_IRON_GOLEM_GIFT)
+                .add(ModEntities.EXOFAIRY);
     }
 }

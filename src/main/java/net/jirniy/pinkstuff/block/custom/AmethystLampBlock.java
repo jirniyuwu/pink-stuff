@@ -11,6 +11,7 @@ import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.block.WireOrientation;
 import net.minecraft.world.event.GameEvent;
@@ -31,7 +32,7 @@ public class AmethystLampBlock extends Block {
         if (!player.canModifyBlocks()) {
             return super.onUse(state, world, pos, player, hit);
         } else {
-            if (!world.isClient) {
+            if (!world.isClient()) {
                 BlockState blockState = (BlockState)state.cycle(PRESERVE);
                 world.setBlockState(pos, blockState, 2);
                 world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, blockState));
@@ -53,7 +54,7 @@ public class AmethystLampBlock extends Block {
     }
 
     protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, @Nullable WireOrientation wireOrientation, boolean notify) {
-        if (!world.isClient && !state.get(PRESERVE)) {
+        if (!world.isClient() && !state.get(PRESERVE)) {
             int redstone = world.getReceivedRedstonePower(pos);
             world.setBlockState(pos, state.with(POWER, redstone));
         }
@@ -65,7 +66,7 @@ public class AmethystLampBlock extends Block {
     }
 
     @Override
-    protected int getComparatorOutput(BlockState state, World world, BlockPos pos) {
+    protected int getComparatorOutput(BlockState state, World world, BlockPos pos, Direction direction) {
         return state.get(POWER);
     }
 

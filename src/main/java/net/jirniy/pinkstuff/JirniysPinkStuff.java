@@ -27,8 +27,6 @@ import net.jirniy.pinkstuff.world.dimension.ModDimensions;
 import net.jirniy.pinkstuff.world.features.ModFeatures;
 import net.jirniy.pinkstuff.world.features.ModTreeDecorators;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
-import net.kyrptonaught.customportalapi.CustomPortalBlock;
-import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
@@ -356,10 +354,10 @@ public class JirniysPinkStuff implements ModInitializer {
 					new ItemStack(ModItems.CORRUPTION_SMITHING_TEMPLATE, 1), 3, 12, 0.08f));
 		});
 
-		CustomPortalBuilder.beginPortal().flatPortal().forcedSize(3, 3).tintColor(0x341411)
-				.frameBlock(ModBlocks.STYXIA_PORTAL_FRAME).lightWithItem(ModItems.MEMORY_SHARD).onlyLightInOverworld()
-				.destDimID(Identifier.of(JirniysPinkStuff.MOD_ID, "styxia")).customPortalBlock((CustomPortalBlock) ModBlocks.STYXIA_PORTAL)
-				.registerPortal();
+		// CustomPortalBuilder.beginPortal().flatPortal().forcedSize(3, 3).tintColor(0x341411)
+		//	  	  .frameBlock(ModBlocks.STYXIA_PORTAL_FRAME).lightWithItem(ModItems.MEMORY_SHARD).onlyLightInOverworld()
+		//	  	  .destDimID(Identifier.of(JirniysPinkStuff.MOD_ID, "styxia")).customPortalBlock((CustomPortalBlock) ModBlocks.STYXIA_PORTAL)
+		//        .registerPortal();
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.COTTON, 0.5F);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.COTTON_SEEDS, 0.25F);

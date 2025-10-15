@@ -49,21 +49,21 @@ public class AmethystFireballEntity extends ExplosiveProjectileEntity {
     private void tickInitialBubbleColumnCollision() {
         if (this.firstUpdate) {
             for(BlockPos blockPos : BlockPos.iterate(this.getBoundingBox())) {
-                BlockState blockState = this.getWorld().getBlockState(blockPos);
+                BlockState blockState = this.getEntityWorld().getBlockState(blockPos);
                 if (blockState.isOf(Blocks.BUBBLE_COLUMN)) {
-                    blockState.onEntityCollision(this.getWorld(), blockPos, this, EntityCollisionHandler.DUMMY);
+                    blockState.onEntityCollision(this.getEntityWorld(), blockPos, this, EntityCollisionHandler.DUMMY, true);
                 }
             }
         }
     }
     private void applyDrag() {
         Vec3d vec3d = this.getVelocity();
-        Vec3d vec3d2 = this.getPos();
+        Vec3d vec3d2 = this.getEntityPos();
         float g;
         if (this.isTouchingWater()) {
             for(int i = 0; i < 4; ++i) {
                 float f = 0.25F;
-                this.getWorld().addParticleClient(ParticleTypes.BUBBLE, vec3d2.x - vec3d.x * (double)0.25F, vec3d2.y - vec3d.y * (double)0.25F, vec3d2.z - vec3d.z * (double)0.25F, vec3d.x, vec3d.y, vec3d.z);
+                this.getEntityWorld().addParticleClient(ParticleTypes.BUBBLE, vec3d2.x - vec3d.x * (double)0.25F, vec3d2.y - vec3d.y * (double)0.25F, vec3d2.z - vec3d.z * (double)0.25F, vec3d.x, vec3d.y, vec3d.z);
             }
             g = 0.8F;
         } else {
@@ -79,9 +79,9 @@ public class AmethystFireballEntity extends ExplosiveProjectileEntity {
     protected void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
         if (hitResult.getType() != HitResult.Type.ENTITY || !this.isOwner(((EntityHitResult)hitResult).getEntity())) {
-            if (!this.getWorld().isClient) {
-                List<LivingEntity> list = this.getWorld().getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox().expand((double)2.0F, (double)2.0F, (double)2.0F));
-                AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(this.getWorld(), this.getX(), this.getY(), this.getZ());
+            if (!this.getEntityWorld().isClient()) {
+                List<LivingEntity> list = this.getEntityWorld().getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox().expand((double)2.0F, (double)2.0F, (double)2.0F));
+                AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(this.getEntityWorld(), this.getX(), this.getY(), this.getZ());
                 Entity entity = this.getOwner();
                 if (entity instanceof LivingEntity) {
                     areaEffectCloudEntity.setOwner((LivingEntity)entity);
@@ -94,7 +94,7 @@ public class AmethystFireballEntity extends ExplosiveProjectileEntity {
                 areaEffectCloudEntity.addEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1, 0));
                 if (!list.isEmpty()) {
                     for(LivingEntity livingEntity : list) {
-                        World world = livingEntity.getWorld();
+                        World world = livingEntity.getEntityWorld();
                         if (!world.isClient()) {
                             livingEntity.damage((ServerWorld) world, world.getDamageSources().magic(), 4);
                         }
@@ -105,7 +105,7 @@ public class AmethystFireballEntity extends ExplosiveProjectileEntity {
                         }
                     }
                 }
-                this.getWorld().spawnEntity(areaEffectCloudEntity);
+                this.getEntityWorld().spawnEntity(areaEffectCloudEntity);
                 this.discard();
             }
 

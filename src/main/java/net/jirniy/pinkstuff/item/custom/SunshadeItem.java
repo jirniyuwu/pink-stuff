@@ -25,8 +25,8 @@ import java.util.List;
 public class SunshadeItem extends Item {
     @Override
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if (!attacker.getWorld().isClient()) {
-            ServerWorld serverWorld = (ServerWorld) attacker.getWorld();
+        if (!attacker.getEntityWorld().isClient()) {
+            ServerWorld serverWorld = (ServerWorld) attacker.getEntityWorld();
             serverWorld.spawnParticles(ModParticles.CORRUPTION_POP_PARTICLE,
                     target.getX(), target.getY() + (target.getHeight())/2, target.getZ(),
                     10, 0.5, 0.5, 0.5, 0.1);
@@ -41,7 +41,7 @@ public class SunshadeItem extends Item {
         if (!world.isClient()) {
             ItemStack itemStack = user.getStackInHand(hand);
             ServerWorld serverWorld = (ServerWorld) world;
-            List<LivingEntity> list = serverWorld.getNonSpectatingEntities(LivingEntity.class, Box.from(user.getPos()).expand(4, 2, 4));
+            List<LivingEntity> list = serverWorld.getNonSpectatingEntities(LivingEntity.class, Box.from(user.getEntityPos()).expand(4, 2, 4));
             if (!list.isEmpty()) {
                 for(LivingEntity livingEntity : list) {
                     if (livingEntity.getUuid() == user.getUuid()) {

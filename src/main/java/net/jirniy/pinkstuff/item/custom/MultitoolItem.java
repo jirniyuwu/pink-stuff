@@ -74,11 +74,11 @@ public class MultitoolItem extends Item {
             }
 
             if (blockState3 != null) {
-                if (!world.isClient) {
+                if (!world.isClient()) {
                     world.setBlockState(blockPos, blockState3, 11);
                     world.emitGameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Emitter.of(playerEntity, blockState3));
                     if (playerEntity != null) {
-                        context.getStack().damage(1, playerEntity, LivingEntity.getSlotForHand(context.getHand()));
+                        context.getStack().damage(1, playerEntity, context.getHand().getEquipmentSlot());
                     }
                 }
 
@@ -101,10 +101,10 @@ public class MultitoolItem extends Item {
             if (predicate.test(context)) {
                 PlayerEntity playerEntity = context.getPlayer();
                 world.playSound(playerEntity, blockPos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                if (!world.isClient) {
+                if (!world.isClient()) {
                     consumer.accept(context);
                     if (playerEntity != null) {
-                        context.getStack().damage(1, playerEntity, LivingEntity.getSlotForHand(context.getHand()));
+                        context.getStack().damage(1, playerEntity, context.getHand().getEquipmentSlot());
                     }
                 }
 
@@ -134,7 +134,7 @@ public class MultitoolItem extends Item {
                 world.setBlockState(blockPos, (BlockState)optional.get(), 11);
                 world.emitGameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Emitter.of(playerEntity, (BlockState)optional.get()));
                 if (playerEntity != null) {
-                    itemStack.damage(1, playerEntity, LivingEntity.getSlotForHand(context.getHand()));
+                    itemStack.damage(1, playerEntity, context.getHand().getEquipmentSlot());
                 }
 
                 return ActionResult.SUCCESS;

@@ -20,7 +20,7 @@ public class CorruptCauldronScreenHandler extends ScreenHandler {
     public final CorruptCauldronBlockEntity blockEntity;
 
     public CorruptCauldronScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
-        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
+        this(syncId, inventory, inventory.player.getEntityWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
     }
 
     public CorruptCauldronScreenHandler(int syncId, PlayerInventory inventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {

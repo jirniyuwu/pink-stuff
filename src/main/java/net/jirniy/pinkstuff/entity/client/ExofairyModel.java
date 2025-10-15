@@ -5,9 +5,11 @@ import net.fabricmc.api.Environment;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.entity.model.AllayEntityModel;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.ModelWithArms;
+import net.minecraft.client.render.entity.state.AllayEntityRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Arm;
 import net.minecraft.util.Identifier;
@@ -15,7 +17,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 
 @Environment(EnvType.CLIENT)
-public class ExofairyModel extends EntityModel<ExofairyRenderState> implements ModelWithArms {
+public class ExofairyModel extends EntityModel<ExofairyRenderState> implements ModelWithArms<ExofairyRenderState> {
     public static final EntityModelLayer EXOFAIRY = new EntityModelLayer(Identifier.of(JirniysPinkStuff.MOD_ID, "exofairy"), "main");
     private final ModelPart head;
     private final ModelPart body;
@@ -93,14 +95,14 @@ public class ExofairyModel extends EntityModel<ExofairyRenderState> implements M
         this.leftArm.yaw = -0.27925268F * m;
     }
 
-    public void setArmAngle(Arm arm, MatrixStack matrices) {
+    public void setArmAngle(ExofairyRenderState renderState, Arm arm, MatrixStack matrixStack) {
         float f = 1.0F;
         float g = 3.0F;
-        this.root.applyTransform(matrices);
-        this.body.applyTransform(matrices);
-        matrices.translate(0.0F, 0.0625F, 0.1875F);
-        matrices.multiply(RotationAxis.POSITIVE_X.rotation(this.rightArm.pitch));
-        matrices.scale(0.7F, 0.7F, 0.7F);
-        matrices.translate(0.0625F, 0.0F, 0.0F);
+        this.root.applyTransform(matrixStack);
+        this.body.applyTransform(matrixStack);
+        matrixStack.translate(0.0F, 0.0625F, 0.1875F);
+        matrixStack.multiply(RotationAxis.POSITIVE_X.rotation(this.rightArm.pitch));
+        matrixStack.scale(0.7F, 0.7F, 0.7F);
+        matrixStack.translate(0.0625F, 0.0F, 0.0F);
     }
 }

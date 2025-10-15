@@ -5,8 +5,10 @@ import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
 import net.jirniy.pinkstuff.entity.custom.CrawlerVariant;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
+import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
@@ -45,15 +47,13 @@ public class CrawlerRenderer extends MobEntityRenderer<CrawlerEntity, CrawlerRen
     }
 
     @Override
-    public void render(CrawlerRenderState state, MatrixStack matrixStack,
-                       VertexConsumerProvider vertexConsumerProvider, int i) {
+    public void render(CrawlerRenderState state, MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, CameraRenderState cameraRenderState) {
         if(state.baby) {
             matrixStack.scale(0.7f, 0.7f, 0.7f);
         } else {
             matrixStack.scale(1f, 1f, 1f);
         }
-
-        super.render(state, matrixStack, vertexConsumerProvider, i);
+        super.render(state, matrixStack, orderedRenderCommandQueue, cameraRenderState);
     }
 
     @Override

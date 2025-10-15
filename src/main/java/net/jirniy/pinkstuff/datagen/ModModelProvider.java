@@ -337,7 +337,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerRod(ModBlocks.PINLINE_ROD);
         blockStateModelGenerator.registerRod(ModBlocks.RAW_PINLINE_ROD);
 
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THERMIUM_BLASTER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.THERMIUM_BLASTER);
         blockStateModelGenerator.registerMushroomBlock(ModBlocks.BLUE_MUSHROOM_BLOCK);
         blockStateModelGenerator.registerLantern(ModBlocks.MOONSTEEL_LANTERN);
         blockStateModelGenerator.registerLantern(ModBlocks.CERILLE_LANTERN);

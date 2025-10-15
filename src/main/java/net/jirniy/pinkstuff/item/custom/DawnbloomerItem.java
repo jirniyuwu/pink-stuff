@@ -17,8 +17,8 @@ public class DawnbloomerItem extends Item {
             attacker.addStatusEffect(new StatusEffectInstance(
                     ModEffects.DAWNBREAKER, 80, 1));
         }
-        if (!attacker.getWorld().isClient()) {
-            ServerWorld serverWorld = (ServerWorld) attacker.getWorld();
+        if (!attacker.getEntityWorld().isClient()) {
+            ServerWorld serverWorld = (ServerWorld) attacker.getEntityWorld();
             serverWorld.spawnParticles(ModParticles.RIFT_PARTICLE,
                     target.getX(), target.getY() + (target.getEyeHeight(target.getPose()) / 1.5),
                     target.getZ(), 1, 0, 0, 0, 0);

@@ -35,7 +35,7 @@ public class CorruptedSkeletonEntity extends SkeletonEntity {
     protected PersistentProjectileEntity createArrowProjectile(ItemStack arrow, float damageModifier, @Nullable ItemStack shotFrom) {
         PersistentProjectileEntity persistentProjectileEntity = super.createArrowProjectile(arrow, damageModifier, shotFrom);
         if (persistentProjectileEntity instanceof ArrowEntity) {
-            float f = this.getWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
+            float f = this.getEntityWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
             ((ArrowEntity)persistentProjectileEntity).addEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 80 * (int)f, 1));
         }
 
