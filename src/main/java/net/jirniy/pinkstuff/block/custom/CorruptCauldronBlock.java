@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.block.entity.custom.CorruptCauldronBlockEntity;
+import net.jirniy.pinkstuff.particle.ModParticles;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -40,8 +41,13 @@ public class CorruptCauldronBlock extends BlockWithEntity implements BlockEntity
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (state.get(LIT) && random.nextBetween(1, 40) == 1) {
-            world.playSoundClient(SoundEvents.BLOCK_HONEY_BLOCK_SLIDE, SoundCategory.BLOCKS, 1, 1);
+        if (state.get(LIT)) {
+            world.addParticleClient(ModParticles.CORRUPTION_POP_PARTICLE,
+                    pos.getX() + random.nextFloat(), pos.getY() + 1.2, pos.getZ() + random.nextFloat(),
+                    0, random.nextFloat() * 0.02, 0);
+            if (random.nextBetween(1, 40) == 1) {
+                world.playSoundClient(SoundEvents.ENTITY_VILLAGER_WORK_LEATHERWORKER, SoundCategory.BLOCKS, 1, 1);
+            }
         }
         super.randomDisplayTick(state, world, pos, random);
     }

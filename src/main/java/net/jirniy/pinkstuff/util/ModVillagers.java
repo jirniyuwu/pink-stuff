@@ -23,7 +23,7 @@ public class ModVillagers {
     public static final RegistryKey<VillagerProfession> CORRUPT_FORGER_KEY =
             RegistryKey.of(RegistryKeys.VILLAGER_PROFESSION, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_forger"));
     public static final VillagerProfession CORRUPT_FORGER = registerProfession("corrupt_forger", CORRUPT_POI_KEY,
-            "entity.minecraft.villager.pinkstuff.corrupt_forger", SoundEvents.ENTITY_VILLAGER_WORK_WEAPONSMITH);
+            "entity.minecraft.villager.pinkstuff.corrupt_forger", SoundEvents.ENTITY_VILLAGER_WORK_LEATHERWORKER);
 
     private static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type, String translateableKey, SoundEvent sound) {
         return Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(JirniysPinkStuff.MOD_ID, name),
