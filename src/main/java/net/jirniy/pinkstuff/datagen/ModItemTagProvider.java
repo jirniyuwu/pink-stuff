@@ -470,5 +470,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.FERMENTED_SPIDER_EYE)
                 .add(Items.ENDER_PEARL)
                 .add(ModItems.ELYSIUM_INGOT);
+        valueLookupBuilder(ItemTags.WOODEN_SHELVES)
+                .add(ModBlocks.CRYSTAL_CHERRY_SHELF.asItem())
+                .add(ModBlocks.CHORUS_SHELF.asItem())
+                .add(ModBlocks.ASHEN_SHELF.asItem())
+                .add(ModBlocks.WASTEWOOD_SHELF.asItem())
+                .add(ModBlocks.KEAPHE_SHELF.asItem())
+                .add(ModBlocks.CORRERIE_SHELF.asItem());
     }
 }

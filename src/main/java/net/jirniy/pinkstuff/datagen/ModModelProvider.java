@@ -362,6 +362,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(ModBlocks.CORRUPT_ROOTS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.BLUE_MUSHROOM, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
+        blockStateModelGenerator.registerShelf(ModBlocks.CRYSTAL_CHERRY_SHELF, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
+        blockStateModelGenerator.registerShelf(ModBlocks.ASHEN_SHELF, ModBlocks.STRIPPED_ASHEN_LOG);
+        blockStateModelGenerator.registerShelf(ModBlocks.CHORUS_SHELF, ModBlocks.STRIPPED_CHORUS_LOG);
+        blockStateModelGenerator.registerShelf(ModBlocks.WASTEWOOD_SHELF, ModBlocks.STRIPPED_WASTEWOOD_LOG);
+        blockStateModelGenerator.registerShelf(ModBlocks.KEAPHE_SHELF, ModBlocks.STRIPPED_KEAPHE_LOG);
+        blockStateModelGenerator.registerShelf(ModBlocks.CORRERIE_SHELF, ModBlocks.STRIPPED_CORRERIE_LOG);
+
         blockStateModelGenerator.createLogTexturePool(ModBlocks.CRYSTAL_CHERRY_LOG).log(ModBlocks.CRYSTAL_CHERRY_LOG).wood(ModBlocks.CRYSTAL_CHERRY_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).log(ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG).wood(ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
         blockStateModelGenerator.createLogTexturePool(ModBlocks.CHORUS_LOG).log(ModBlocks.CHORUS_LOG).wood(ModBlocks.CHORUS_WOOD);

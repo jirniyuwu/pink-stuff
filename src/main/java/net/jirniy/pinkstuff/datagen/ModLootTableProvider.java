@@ -286,6 +286,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
         addDrop(ModBlocks.CRYSTAL_CHERRY_BUTTON);
         addDrop(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
+        addDrop(ModBlocks.CRYSTAL_CHERRY_SHELF);
 
         addDrop(ModBlocks.CRYSTAL_CHERRY_LEAVES, multipleOreDrops(ModBlocks.CRYSTAL_CHERRY_LEAVES, ModItems.PINK_BITS, 1, 2));
         addDrop(ModBlocks.GLOWING_CHERRY_LEAVES, leavesDrops(ModBlocks.GLOWING_CHERRY_LEAVES, Blocks.CHERRY_SAPLING, 0.05f));
@@ -305,6 +306,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHORUS_TRAPDOOR);
         addDrop(ModBlocks.CHORUS_BUTTON);
         addDrop(ModBlocks.CHORUS_PRESSURE_PLATE);
+        addDrop(ModBlocks.CHORUS_SHELF);
 
         addDrop(ModBlocks.CHORUS_LEAVES, leavesWithItemDrops(ModBlocks.CHORUS_LEAVES, ModBlocks.CHORUS_SAPLING, 0.01f, Items.CHORUS_FRUIT, 0.2f));
 
@@ -325,6 +327,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ASHEN_TRAPDOOR);
         addDrop(ModBlocks.ASHEN_BUTTON);
         addDrop(ModBlocks.ASHEN_PRESSURE_PLATE);
+        addDrop(ModBlocks.ASHEN_SHELF);
 
         addDrop(ModBlocks.KEAPHE_LOG);
         addDrop(ModBlocks.KEAPHE_WOOD);
@@ -340,6 +343,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.KEAPHE_TRAPDOOR);
         addDrop(ModBlocks.KEAPHE_BUTTON);
         addDrop(ModBlocks.KEAPHE_PRESSURE_PLATE);
+        addDrop(ModBlocks.KEAPHE_SHELF);
 
         addDrop(ModBlocks.KEAPHE_SAPLING);
         addDrop(ModBlocks.KEAPHE_LEAVES, leavesDrops(ModBlocks.KEAPHE_LEAVES, ModBlocks.KEAPHE_SAPLING, 0.05f));
@@ -359,6 +363,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WASTEWOOD_TRAPDOOR);
         addDrop(ModBlocks.WASTEWOOD_BUTTON);
         addDrop(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
+        addDrop(ModBlocks.WASTEWOOD_SHELF);
 
         addDrop(ModBlocks.CORRERIE_LOG);
         addDrop(ModBlocks.CORRERIE_WOOD);
@@ -374,6 +379,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CORRERIE_TRAPDOOR);
         addDrop(ModBlocks.CORRERIE_BUTTON);
         addDrop(ModBlocks.CORRERIE_PRESSURE_PLATE);
+        addDrop(ModBlocks.CORRERIE_SHELF);
 
         addPottedPlantDrops(ModBlocks.POTTED_MEMORIA_BOURPEER);
         addPottedPlantDrops(ModBlocks.POTTED_THERMIUM_WILTBORN);

@@ -2572,6 +2572,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mushroom_stew_blue_and_brown")));
 
+                offerShelfRecipe(ModBlocks.CRYSTAL_CHERRY_SHELF, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
+                offerShelfRecipe(ModBlocks.CHORUS_SHELF, ModBlocks.STRIPPED_CHORUS_LOG);
+                offerShelfRecipe(ModBlocks.ASHEN_SHELF, ModBlocks.STRIPPED_ASHEN_LOG);
+                offerShelfRecipe(ModBlocks.CORRERIE_SHELF, ModBlocks.STRIPPED_CORRERIE_LOG);
+                offerShelfRecipe(ModBlocks.WASTEWOOD_SHELF, ModBlocks.STRIPPED_WASTEWOOD_LOG);
+                offerShelfRecipe(ModBlocks.KEAPHE_SHELF, ModBlocks.STRIPPED_KEAPHE_LOG);
+
                 offerSmithingTrimRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModTrimPatterns.CHERRY,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry")));
                 offerSmithingTemplateCopyingRecipe(ModItems.CHERRY_SMITHING_TEMPLATE, ModBlocks.CRYSTAL_CHERRY_LOG);

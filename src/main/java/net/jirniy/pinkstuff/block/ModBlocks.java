@@ -866,6 +866,8 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
     public static final Block CRYSTAL_CHERRY_TRAPDOOR = registerBlock("crystal_cherry_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).luminance(state -> 3).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+    public static final Block CRYSTAL_CHERRY_SHELF = registerBlock("crystal_cherry_shelf",
+            properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
     public static final Block CHORUS_STAIRS = registerBlock("chorus_stairs",
             properties -> new StairsBlock(ModBlocks.CHORUS_PLANKS.getDefaultState(),
@@ -884,6 +886,8 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
     public static final Block CHORUS_TRAPDOOR = registerBlock("chorus_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+    public static final Block CHORUS_SHELF = registerBlock("chorus_shelf",
+            properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
     public static final Block ASHEN_STAIRS = registerBlock("ashen_stairs",
             properties -> new StairsBlock(ModBlocks.ASHEN_PLANKS.getDefaultState(),
@@ -902,6 +906,8 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CRIMSON, properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).nonOpaque()));
     public static final Block ASHEN_TRAPDOOR = registerBlock("ashen_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CRIMSON, properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).nonOpaque()));
+    public static final Block ASHEN_SHELF = registerBlock("ashen_shelf",
+            properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
     public static final Block KEAPHE_STAIRS = registerBlock("keaphe_stairs",
             properties -> new StairsBlock(ModBlocks.KEAPHE_PLANKS.getDefaultState(),
@@ -920,6 +926,8 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
     public static final Block KEAPHE_TRAPDOOR = registerBlock("keaphe_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+    public static final Block KEAPHE_SHELF = registerBlock("keaphe_shelf",
+            properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
     public static final Block WASTEWOOD_STAIRS = registerBlock("wastewood_stairs",
             properties -> new StairsBlock(ModBlocks.WASTEWOOD_PLANKS.getDefaultState(),
@@ -938,6 +946,8 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
     public static final Block WASTEWOOD_TRAPDOOR = registerBlock("wastewood_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
+    public static final Block WASTEWOOD_SHELF = registerBlock("wastewood_shelf",
+            properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
     public static final Block CORRERIE_STAIRS = registerBlock("correrie_stairs",
             properties -> new StairsBlock(ModBlocks.CORRERIE_PLANKS.getDefaultState(),
@@ -956,6 +966,8 @@ public class ModBlocks {
             properties -> new DoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
     public static final Block CORRERIE_TRAPDOOR = registerBlock("correrie_trapdoor",
             properties -> new TrapdoorBlock(BlockSetType.CRIMSON, properties.strength(3f).sounds(BlockSoundGroup.NETHER_WOOD).nonOpaque()));
+    public static final Block CORRERIE_SHELF = registerBlock("correrie_shelf",
+            properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
     public static final Block DISPLAY = registerBlock("display",
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque().mapColor(MapColor.STONE_GRAY)));

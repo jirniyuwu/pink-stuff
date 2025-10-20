@@ -766,5 +766,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLUE_MUSHROOM);
         valueLookupBuilder(BlockTags.REPLACEABLE_BY_MUSHROOMS)
                 .add(ModBlocks.BLUE_MUSHROOM);
+        valueLookupBuilder(BlockTags.WOODEN_SHELVES)
+                .add(ModBlocks.CRYSTAL_CHERRY_SHELF)
+                .add(ModBlocks.CHORUS_SHELF)
+                .add(ModBlocks.ASHEN_SHELF)
+                .add(ModBlocks.WASTEWOOD_SHELF)
+                .add(ModBlocks.KEAPHE_SHELF)
+                .add(ModBlocks.CORRERIE_SHELF);
     }
 }

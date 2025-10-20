@@ -365,6 +365,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_PRESSURE_PLATE);
                         entries.add(ModBlocks.CRYSTAL_CHERRY_BUTTON);
+                        entries.add(ModBlocks.CRYSTAL_CHERRY_SHELF);
 
                         entries.add(ModBlocks.CHORUS_LOG);
                         entries.add(ModBlocks.CHORUS_WOOD);
@@ -382,6 +383,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHORUS_TRAPDOOR);
                         entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
                         entries.add(ModBlocks.CHORUS_BUTTON);
+                        entries.add(ModBlocks.CHORUS_SHELF);
 
                         entries.add(ModBlocks.ASHEN_LOG);
                         entries.add(ModBlocks.ASHEN_WOOD);
@@ -397,6 +399,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ASHEN_TRAPDOOR);
                         entries.add(ModBlocks.ASHEN_PRESSURE_PLATE);
                         entries.add(ModBlocks.ASHEN_BUTTON);
+                        entries.add(ModBlocks.ASHEN_SHELF);
 
                         entries.add(ModBlocks.KEAPHE_LOG);
                         entries.add(ModBlocks.KEAPHE_WOOD);
@@ -415,6 +418,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.KEAPHE_TRAPDOOR);
                         entries.add(ModBlocks.KEAPHE_PRESSURE_PLATE);
                         entries.add(ModBlocks.KEAPHE_BUTTON);
+                        entries.add(ModBlocks.KEAPHE_SHELF);
 
                         entries.add(ModBlocks.WASTEWOOD_LOG);
                         entries.add(ModBlocks.WASTEWOOD_WOOD);
@@ -430,6 +434,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WASTEWOOD_TRAPDOOR);
                         entries.add(ModBlocks.WASTEWOOD_PRESSURE_PLATE);
                         entries.add(ModBlocks.WASTEWOOD_BUTTON);
+                        entries.add(ModBlocks.WASTEWOOD_SHELF);
 
                         entries.add(ModBlocks.CORRERIE_LOG);
                         entries.add(ModBlocks.CORRERIE_WOOD);
@@ -445,6 +450,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CORRERIE_TRAPDOOR);
                         entries.add(ModBlocks.CORRERIE_PRESSURE_PLATE);
                         entries.add(ModBlocks.CORRERIE_BUTTON);
+                        entries.add(ModBlocks.CORRERIE_SHELF);
 
                         entries.add(ModBlocks.SNOWY_SPRUCE_LEAVES);
                         entries.add(ModBlocks.SNOWY_SPRUCE_SAPLING);

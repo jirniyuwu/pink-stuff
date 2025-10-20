@@ -10,6 +10,7 @@ import net.fabricmc.fabric.impl.client.rendering.hud.HudElementRegistryImpl;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.block.entity.renderer.DisplayBlockEntityRenderer;
+import net.jirniy.pinkstuff.block.entity.renderer.ShelfBlockEntity2Renderer;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.client.*;
 import net.jirniy.pinkstuff.particle.*;
@@ -22,6 +23,7 @@ import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.particle.SculkChargePopParticle;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.client.render.block.entity.ShelfBlockEntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactories;
 
 public class JirniysPinkStuffClient implements ClientModInitializer {
@@ -97,6 +99,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         EntityRendererFactories.register(ModEntities.CORRUPTION_FIREBALL, CorruptionFireballRenderer::new);
 
         BlockEntityRendererFactories.register(ModBlockEntities.DISPLAY_BE, DisplayBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.SHELF_BE, ShelfBlockEntity2Renderer::new);
 
         HandledScreens.register(ModScreenHandlers.DISPLAY_SCREEN_HANDLER, DisplayScreen::new);
         HandledScreens.register(ModScreenHandlers.THERMIUM_BLASTER_SCREEN_HANDLER, ThermiumBlasterScreen::new);
