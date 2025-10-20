@@ -160,6 +160,22 @@
               "count": {
                 "type": "minecraft:uniform",
                 "max": 8,
+                "min": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:obsidian_shard",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 8,
                 "min": 3
               },
               "function": "minecraft:set_count"

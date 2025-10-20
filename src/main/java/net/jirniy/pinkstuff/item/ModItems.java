@@ -24,6 +24,7 @@ public class ModItems {
     public static final Item EMERALD_NUGGET = registerItem("emerald_nugget", Item::new);
     public static final Item QUARTZ_NUGGET = registerItem("quartz_nugget", Item::new);
     public static final Item NETHERITE_NUGGET = registerItem("netherite_nugget", Item::new);
+    public static final Item OBSIDIAN_SHARD = registerItem("obsidian_shard", Item::new);
 
     public static final Item AMETHYST_BLAZE_ROD = registerItem("amethyst_blaze_rod", Item::new);
 

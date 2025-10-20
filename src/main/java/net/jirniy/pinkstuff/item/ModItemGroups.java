@@ -39,6 +39,7 @@ public class ModItemGroups {
                         entries.add(ModItems.EMERALD_NUGGET);
                         entries.add(ModBlocks.EMERALD_CLUMP);
                         entries.add(ModItems.NETHERITE_NUGGET);
+                        entries.add(ModItems.OBSIDIAN_SHARD);
 
                         entries.add(ModItems.AMETHYST_BLAZE_ROD);
 
@@ -846,6 +847,7 @@ public class ModItemGroups {
             entries.add(ModItems.DIAMOND_NUGGET);
             entries.add(ModItems.EMERALD_NUGGET);
             entries.add(ModItems.NETHERITE_NUGGET);
+            entries.add(ModItems.OBSIDIAN_SHARD);
             entries.add(ModItems.AMETHYST_NUGGET);
             entries.add(ModItems.STYXCOAL);
             entries.add(ModItems.SULFUR);

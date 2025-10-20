@@ -2349,6 +2349,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "bedrock_breaker")));
 
+                createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.CRYING_OBSIDIAN, 1)
+                        .pattern("ACA")
+                        .pattern("CAC")
+                        .pattern("ACA")
+                        .input('C', ModItems.OBSIDIAN_SHARD)
+                        .input('A', Items.AMETHYST_SHARD)
+                        .criterion(hasItem(ModItems.OBSIDIAN_SHARD), conditionsFromItem(ModItems.OBSIDIAN_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "crying_obsidian")));
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.OBSIDIAN, 1)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModItems.OBSIDIAN_SHARD)
+                        .criterion(hasItem(ModItems.OBSIDIAN_SHARD), conditionsFromItem(ModItems.OBSIDIAN_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "obsidian_from_shard")));
+                createShapeless(RecipeCategory.MISC, ModItems.OBSIDIAN_SHARD, 4)
+                        .input(Blocks.OBSIDIAN)
+                        .criterion(hasItem(Blocks.OBSIDIAN), conditionsFromItem(Blocks.OBSIDIAN))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "shard_from_obsidian")));
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.TINTED_GLASS, 4)
+                        .pattern(" G ")
+                        .pattern("GCG")
+                        .pattern(" G ")
+                        .input('C', ModItems.OBSIDIAN_SHARD)
+                        .input('G', Blocks.GLASS)
+                        .criterion(hasItem(ModItems.OBSIDIAN_SHARD), conditionsFromItem(ModItems.OBSIDIAN_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "tinted_glass_from_obsidian")));
+
                 createShaped(RecipeCategory.REDSTONE, ModBlocks.AMETHYST_LAMP, 1)
                         .pattern("ECE")
                         .pattern("CLC")
