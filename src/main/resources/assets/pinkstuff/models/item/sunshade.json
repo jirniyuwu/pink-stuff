@@ -3822,6 +3822,9 @@
 		"fixed": {
 			"rotation": [0, -180, 0],
 			"scale": [2, 2, 2]
+		},
+		"on_shelf": {
+			"scale": [2, 2, 2]
 		}
 	},
 	"groups": [

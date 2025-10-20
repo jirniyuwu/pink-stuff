@@ -610,6 +610,10 @@
 		},
 		"fixed": {
 			"scale": [2, 2, 2]
+		},
+		"on_shelf": {
+			"rotation": [0, -180, 0],
+			"scale": [2, 2, 2]
 		}
 	},
 	"groups": [
