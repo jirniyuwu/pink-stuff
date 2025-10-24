@@ -338,6 +338,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerRod(ModBlocks.RAW_PINLINE_ROD);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.THERMIUM_BLASTER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.LAVA_GEYSER);
         blockStateModelGenerator.registerMushroomBlock(ModBlocks.BLUE_MUSHROOM_BLOCK);
         blockStateModelGenerator.registerLantern(ModBlocks.MOONSTEEL_LANTERN);
         blockStateModelGenerator.registerLantern(ModBlocks.CERILLE_LANTERN);
@@ -414,6 +415,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FORBIDDEN_MECHANISM, Models.GENERATED);
         itemModelGenerator.register(ModItems.SUNGAZE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.SUNGAZE, Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.LAVA_GEYSER.asItem(), Models.GENERATED);
 
         itemModelGenerator.register(ModItems.CORRUPT_DROPLET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPT_MASS, Models.GENERATED);

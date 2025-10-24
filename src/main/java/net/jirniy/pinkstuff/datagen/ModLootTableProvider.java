@@ -222,6 +222,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE, multipleOreDrops(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE, Items.LAPIS_LAZULI, 4, 8));
         addDrop(ModBlocks.STYXIAN_SUNGAZE_ORE, oreDrops(ModBlocks.STYXIAN_SUNGAZE_ORE, ModItems.SUNGAZE));
         addDrop(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE, oreDrops(ModBlocks.COMPRESSED_STYXIAN_SUNGAZE_ORE, ModItems.SUNGAZE));
+        addDrop(ModBlocks.LAVA_GEYSER, multipleOreDrops(ModBlocks.LAVA_GEYSER, ModBlocks.ASH_BLOCK.asItem(), 2, 5));
 
         addDrop(ModBlocks.CORRUPT_ROOTS, multipleOreDrops(ModBlocks.CORRUPT_ROOTS, ModItems.CORRUPT_DROPLET, 1, 2)
                 .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F))

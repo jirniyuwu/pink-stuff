@@ -975,6 +975,8 @@ public class ModBlocks {
             properties -> new ThermiumBlasterBlock(properties.strength(4f).requiresTool().sounds(BlockSoundGroup.IRON).luminance(state -> 6).mapColor(MapColor.PURPLE)));
     public static final Block CORRUPT_CAULDRON = registerBlock("corrupt_cauldron",
             properties -> new CorruptCauldronBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block LAVA_GEYSER = registerBlock("lava_geyser",
+            properties -> new LavaGeyserBlock(properties.strength(2f).sounds(BlockSoundGroup.SOUL_SAND).mapColor(MapColor.TERRACOTTA_ORANGE).nonOpaque().luminance(state -> 4)));
 
     public static final Block AMETHYST_PARTERS = registerBlock("amethyst_parters",
             properties -> new FlowerBlock(StatusEffects.STRENGTH, 5, properties.strength(0f)

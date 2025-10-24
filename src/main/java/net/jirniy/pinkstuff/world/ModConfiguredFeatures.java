@@ -3,10 +3,7 @@ package net.jirniy.pinkstuff.world;
 import com.google.common.collect.ImmutableList;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
-import net.jirniy.pinkstuff.block.custom.CharmberryBushBlock;
-import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
-import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
-import net.jirniy.pinkstuff.block.custom.HangingStyxgrassBlock;
+import net.jirniy.pinkstuff.block.custom.*;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.jirniy.pinkstuff.world.features.HangingStyxgrassDecorator;
 import net.jirniy.pinkstuff.world.features.ModFeatures;
@@ -30,6 +27,7 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.math.intprovider.WeightedListIntProvider;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
@@ -277,8 +275,12 @@ public class ModConfiguredFeatures {
                                 .add(ModBlocks.PACKED_ASH.getDefaultState(), 1)),
                         PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
-                                .add(DEAD_BUSH.getDefaultState(), 1)
-                                .add(Blocks.AIR.getDefaultState(), 49)))),
+                                .add(ModBlocks.LAVA_GEYSER.getDefaultState().with(LavaGeyserBlock.FACING, Direction.EAST), 1)
+                                .add(ModBlocks.LAVA_GEYSER.getDefaultState().with(LavaGeyserBlock.FACING, Direction.WEST), 1)
+                                .add(ModBlocks.LAVA_GEYSER.getDefaultState().with(LavaGeyserBlock.FACING, Direction.NORTH), 1)
+                                .add(ModBlocks.LAVA_GEYSER.getDefaultState().with(LavaGeyserBlock.FACING, Direction.SOUTH), 1)
+                                .add(DEAD_BUSH.getDefaultState(), 146)
+                                .add(Blocks.AIR.getDefaultState(), 2850)))),
                         VerticalSurfaceType.FLOOR,
                         ConstantIntProvider.create(1), 0.2f, 5, 0.5f,
                         UniformIntProvider.create(4, 6), 0.5f));

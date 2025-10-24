@@ -3,10 +3,7 @@ package net.jirniy.pinkstuff.block.entity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
-import net.jirniy.pinkstuff.block.entity.custom.CorruptCauldronBlockEntity;
-import net.jirniy.pinkstuff.block.entity.custom.DisplayBlockEntity;
-import net.jirniy.pinkstuff.block.entity.custom.ShelfBlockEntity2;
-import net.jirniy.pinkstuff.block.entity.custom.ThermiumBlasterBlockEntity;
+import net.jirniy.pinkstuff.block.entity.custom.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.ShelfBlockEntity;
 import net.minecraft.registry.Registries;
@@ -31,6 +28,10 @@ public class ModBlockEntities {
                     FabricBlockEntityTypeBuilder.create(ShelfBlockEntity2::new,
                             ModBlocks.CRYSTAL_CHERRY_SHELF, ModBlocks.ASHEN_SHELF, ModBlocks.CHORUS_SHELF,
                             ModBlocks.KEAPHE_SHELF, ModBlocks.WASTEWOOD_SHELF, ModBlocks.CORRERIE_SHELF).build(null));
+
+    public static final BlockEntityType<LavaGeyserBlockEntity> LAVA_GEYSER_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "lava_geyser_be"),
+                    FabricBlockEntityTypeBuilder.create(LavaGeyserBlockEntity::new, ModBlocks.LAVA_GEYSER).build(null));
 
     public static void registerBlockEntities() {
         JirniysPinkStuff.LOGGER.info("Registering Block Entities for " + JirniysPinkStuff.MOD_ID);

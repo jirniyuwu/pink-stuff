@@ -140,6 +140,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ASH_BRICKS_SLAB);
                         entries.add(ModBlocks.ASH_BRICKS_STAIRS);
                         entries.add(ModBlocks.ASH_BRICKS_WALL);
+                        entries.add(ModBlocks.LAVA_GEYSER);
 
                         entries.add(ModItems.STYXCOAL);
                         entries.add(ModBlocks.STYXCOAL_BLOCK);
@@ -1052,10 +1053,13 @@ public class ModItemGroups {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(ModBlocks.MOONSTEEL_CHAIN);
             entries.add(ModBlocks.MOONSTEEL_LANTERN);
+            entries.add(ModBlocks.CERILLE_CHAIN);
+            entries.add(ModBlocks.CERILLE_LANTERN);
             entries.add(ModBlocks.STYXIA_PORTAL_FRAME);
             entries.add(ModBlocks.THERMIUM_BLASTER);
             entries.add(ModBlocks.CORRUPT_CAULDRON);
             entries.add(ModBlocks.DISPLAY);
+            entries.add(ModBlocks.LAVA_GEYSER);
 
             entries.add(ModBlocks.CRAWLER_STONE);
             entries.add(ModBlocks.CRAWLER_DEEPSLATE);

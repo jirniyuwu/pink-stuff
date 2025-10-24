@@ -2393,6 +2393,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_lamp")));
 
+                createShaped(RecipeCategory.MISC, ModBlocks.LAVA_GEYSER, 1)
+                        .pattern("CLC")
+                        .pattern("AAA")
+                        .input('A', ModBlocks.PACKED_ASH)
+                        .input('L', Items.LAVA_BUCKET)
+                        .input('C', Blocks.CALCITE)
+                        .criterion(hasItem(ModBlocks.ASH_BLOCK), conditionsFromItem(ModBlocks.ASH_BLOCK))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "lava_geyser")));
+
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STYXIA_PORTAL_FRAME, 1)
                         .pattern("N N")
                         .pattern("CCC")
