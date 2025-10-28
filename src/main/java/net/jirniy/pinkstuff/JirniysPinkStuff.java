@@ -132,6 +132,10 @@ public class JirniysPinkStuff implements ModInitializer {
 			builder.add(ModItems.STYXCOAL, 1600);
 			builder.add(ModBlocks.STYXCOAL_BLOCK, 16000);
 			builder.add(ModItems.COTTON, 40);
+			builder.add(ModItems.WOODEN_HELMET, 200);
+			builder.add(ModItems.WOODEN_CHESTPLATE, 200);
+			builder.add(ModItems.WOODEN_LEGGINGS, 200);
+			builder.add(ModItems.WOODEN_BOOTS, 200);
 		});
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());

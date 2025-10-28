@@ -272,6 +272,15 @@ public class ModItems {
     public static final Item SUNBLAZE_BOOTS = registerItem("sunblaze_boots",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
+    public static final Item WOODEN_HELMET = registerItem("wooden_helmet",
+            setting -> new Item(setting.armor(ModArmorMaterials.WOODEN_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item WOODEN_CHESTPLATE = registerItem("wooden_chestplate",
+            setting -> new Item(setting.armor(ModArmorMaterials.WOODEN_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item WOODEN_LEGGINGS = registerItem("wooden_leggings",
+            setting -> new Item(setting.armor(ModArmorMaterials.WOODEN_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item WOODEN_BOOTS = registerItem("wooden_boots",
+            setting -> new Item(setting.armor(ModArmorMaterials.WOODEN_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
     public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.RARE)));
     public static final Item BLOOM_SMITHING_TEMPLATE = registerItem("bloom_armor_trim_smithing_template",

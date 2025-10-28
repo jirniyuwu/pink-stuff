@@ -88,6 +88,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SUNBLAZE_MULTITOOL)
                 .add(ModItems.NETHERITE_MULTITOOL);
         valueLookupBuilder(ItemTags.ARMOR_ENCHANTABLE)
+                .add(ModItems.WOODEN_HELMET)
+                .add(ModItems.WOODEN_CHESTPLATE)
+                .add(ModItems.WOODEN_LEGGINGS)
+                .add(ModItems.WOODEN_BOOTS)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.KUNZITE_CHESTPLATE)
                 .add(ModItems.KUNZITE_LEGGINGS)
@@ -113,6 +117,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SUNBLAZE_LEGGINGS)
                 .add(ModItems.SUNBLAZE_BOOTS);
         valueLookupBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.WOODEN_HELMET)
+                .add(ModItems.WOODEN_CHESTPLATE)
+                .add(ModItems.WOODEN_LEGGINGS)
+                .add(ModItems.WOODEN_BOOTS)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.KUNZITE_CHESTPLATE)
                 .add(ModItems.KUNZITE_LEGGINGS)
@@ -196,6 +204,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CORRERIE_PLANKS.asItem())
                 .add(ModBlocks.WASTEWOOD_PLANKS.asItem());
         valueLookupBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
+                .add(ModItems.WOODEN_HELMET)
                 .add(ModItems.KUNZITE_HELMET)
                 .add(ModItems.ELYSIUM_HELMET)
                 .add(ModItems.PINLINE_HELMET)
@@ -203,6 +212,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CERILLE_HELMET)
                 .add(ModItems.SUNBLAZE_HELMET);
         valueLookupBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+                .add(ModItems.WOODEN_CHESTPLATE)
                 .add(ModItems.KUNZITE_CHESTPLATE)
                 .add(ModItems.ELYSIUM_CHESTPLATE)
                 .add(ModItems.PINLINE_CHESTPLATE)
@@ -210,6 +220,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CERILLE_CHESTPLATE)
                 .add(ModItems.SUNBLAZE_CHESTPLATE);
         valueLookupBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE)
+                .add(ModItems.WOODEN_LEGGINGS)
                 .add(ModItems.KUNZITE_LEGGINGS)
                 .add(ModItems.ELYSIUM_LEGGINGS)
                 .add(ModItems.PINLINE_LEGGINGS)
@@ -217,6 +228,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CERILLE_LEGGINGS)
                 .add(ModItems.SUNBLAZE_LEGGINGS);
         valueLookupBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
+                .add(ModItems.WOODEN_BOOTS)
                 .add(ModItems.KUNZITE_BOOTS)
                 .add(ModItems.ELYSIUM_BOOTS)
                 .add(ModItems.PINLINE_BOOTS)

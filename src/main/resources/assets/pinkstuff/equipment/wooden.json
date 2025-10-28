@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "pinkstuff:wooden"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "pinkstuff:wooden"
+      }
+    ]
+  }
+}

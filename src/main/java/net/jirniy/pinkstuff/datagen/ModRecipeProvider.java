@@ -715,6 +715,41 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "kunzite_boots")));
 
+                createShaped(RecipeCategory.COMBAT, ModItems.WOODEN_HELMET)
+                        .pattern("KKK")
+                        .pattern("A A")
+                        .input('K', ItemTags.PLANKS)
+                        .input('A', Items.STRING)
+                        .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wooden_helmet")));
+                createShaped(RecipeCategory.COMBAT, ModItems.WOODEN_CHESTPLATE)
+                        .pattern("A A")
+                        .pattern("KKK")
+                        .pattern("KKK")
+                        .input('K', ItemTags.PLANKS)
+                        .input('A', Items.STRING)
+                        .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wooden_chestplate")));
+                createShaped(RecipeCategory.COMBAT, ModItems.WOODEN_LEGGINGS)
+                        .pattern("KKK")
+                        .pattern("A A")
+                        .pattern("K K")
+                        .input('K', ItemTags.PLANKS)
+                        .input('A', Items.STRING)
+                        .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wooden_leggings")));
+                createShaped(RecipeCategory.COMBAT, ModItems.WOODEN_BOOTS)
+                        .pattern("A A")
+                        .pattern("K K")
+                        .input('K', ItemTags.PLANKS)
+                        .input('A', Items.STRING)
+                        .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "wooden_boots")));
+
                 createShaped(RecipeCategory.COMBAT, ModItems.PINLINE_HELMET)
                         .pattern("KKK")
                         .pattern("K K")

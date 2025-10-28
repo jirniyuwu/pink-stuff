@@ -489,6 +489,11 @@ public class ModItemGroups {
 
                         entries.add(ModItems.NETHERITE_MULTITOOL);
 
+                        entries.add(ModItems.WOODEN_HELMET);
+                        entries.add(ModItems.WOODEN_CHESTPLATE);
+                        entries.add(ModItems.WOODEN_LEGGINGS);
+                        entries.add(ModItems.WOODEN_BOOTS);
+
                         entries.add(ModItems.KUNZITE_SWORD);
                         entries.add(ModItems.KUNZITE_PICKAXE);
                         entries.add(ModItems.KUNZITE_AXE);
@@ -901,6 +906,11 @@ public class ModItemGroups {
             entries.add(ModItems.FAIRYTALE_SMITHING_TEMPLATE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(ModItems.WOODEN_HELMET);
+            entries.add(ModItems.WOODEN_CHESTPLATE);
+            entries.add(ModItems.WOODEN_LEGGINGS);
+            entries.add(ModItems.WOODEN_BOOTS);
+
             entries.add(ModItems.KUNZITE_SWORD);
             entries.add(ModItems.KUNZITE_AXE);
             entries.add(ModItems.KUNZITE_HELMET);

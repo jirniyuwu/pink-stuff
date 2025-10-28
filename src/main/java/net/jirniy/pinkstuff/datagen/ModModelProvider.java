@@ -574,5 +574,14 @@ public class ModModelProvider extends FabricModelProvider {
                 ModArmorMaterials.SUNBLAZE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.SUNBLAZE_BOOTS,
                 ModArmorMaterials.SUNBLAZE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.registerArmor(ModItems.WOODEN_HELMET,
+                ModArmorMaterials.WOODEN_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.WOODEN_CHESTPLATE,
+                ModArmorMaterials.WOODEN_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.WOODEN_LEGGINGS,
+                ModArmorMaterials.WOODEN_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.WOODEN_BOOTS,
+                ModArmorMaterials.WOODEN_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
     }
 }

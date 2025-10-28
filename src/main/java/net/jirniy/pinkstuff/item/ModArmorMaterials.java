@@ -8,6 +8,7 @@ import net.minecraft.item.equipment.EquipmentAsset;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
@@ -75,4 +76,15 @@ public class ModArmorMaterials {
         map.put(EquipmentType.HELMET, 3);
         map.put(EquipmentType.BODY, 3);
     }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.5f,0.15f, ModTags.Items.SUNBLAZE_REPAIR, SUNBLAZE_KEY);
+
+
+    public static final RegistryKey<EquipmentAsset> WOODEN_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "wooden"));
+
+    public static final ArmorMaterial WOODEN_ARMOR_MATERIAL = new ArmorMaterial(2, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 1);
+        map.put(EquipmentType.LEGGINGS, 1);
+        map.put(EquipmentType.CHESTPLATE, 2);
+        map.put(EquipmentType.HELMET, 1);
+        map.put(EquipmentType.BODY, 1);
+    }), 14, SoundEvents.ITEM_ARMOR_EQUIP_COPPER, 0f,0f, ItemTags.PLANKS, WOODEN_KEY);
 }
