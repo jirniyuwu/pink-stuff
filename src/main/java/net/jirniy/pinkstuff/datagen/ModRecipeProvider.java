@@ -2639,6 +2639,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_mass_from_dead_sprout")));
 
+                createShaped(RecipeCategory.MISC, Items.ELYTRA, 1)
+                        .pattern("PSP")
+                        .pattern("CTC")
+                        .pattern("C C")
+                        .input('C', Items.PHANTOM_MEMBRANE)
+                        .input('P', ModItems.PINLINE_INGOT)
+                        .input('S', ModItems.MEMORY_SHARD)
+                        .input('T', ModItems.ENERGIZED_THERMIUM)
+                        .criterion(hasItem(ModItems.MEMORY_SHARD), conditionsFromItem(ModItems.MEMORY_SHARD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elytra_from_memory_shard")));
+
                 createShapeless(RecipeCategory.MISC, Items.MUSHROOM_STEW, 1)
                         .input(ModBlocks.BLUE_MUSHROOM).input(Items.RED_MUSHROOM).input(Items.BOWL)
                         .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL)).group("mushroom_stew")
