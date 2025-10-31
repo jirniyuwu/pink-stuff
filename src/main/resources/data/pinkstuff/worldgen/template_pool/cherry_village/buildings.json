@@ -90,7 +90,7 @@
       }
     },
     {
-      "weight": 9,
+      "weight": 3,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
