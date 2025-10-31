@@ -79,6 +79,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_STYXSTONE_KEY = registryKey("compressed_styxstone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MABRIZE_KEY = registryKey("mabrize");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETANE_KEY = registryKey("ametane");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AMETANE_CHERRY_KEY = registryKey("ametane_cherry");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WASTEROCK_KEY = registryKey("wasterock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORESTONE_KEY = registryKey("corestone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> KUNZITE_GEODE_KEY = registryKey("kunzite_geode");
@@ -304,6 +305,8 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.MABRIZE.getDefaultState())), 30, 0.0f));
         register(context, AMETANE_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.AMETANE.getDefaultState())), 19, 0.1f));
+        register(context, AMETANE_CHERRY_KEY, Feature.ORE, new OreFeatureConfig(
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.AMETANE.getDefaultState())), 26, 0.2f));
         register(context, WASTEROCK_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.WASTEROCK.getDefaultState())), 24, 0f));
         register(context, CORESTONE_KEY, Feature.ORE, new OreFeatureConfig(

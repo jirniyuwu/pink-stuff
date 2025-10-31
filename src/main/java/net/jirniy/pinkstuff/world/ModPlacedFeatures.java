@@ -58,6 +58,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> COMPRESSED_STYXSTONE_PLACED_KEY = registerKey("compressed_styxstone_placed");
     public static final RegistryKey<PlacedFeature> MABRIZE_PLACED_KEY = registerKey("mabrize_placed");
     public static final RegistryKey<PlacedFeature> AMETANE_PLACED_KEY = registerKey("ametane_placed");
+    public static final RegistryKey<PlacedFeature> AMETANE_CHERRY_PLACED_KEY = registerKey("ametane_cherry_placed");
     public static final RegistryKey<PlacedFeature> WASTEROCK_PLACED_KEY = registerKey("wasterock_placed");
     public static final RegistryKey<PlacedFeature> CORESTONE_PLACED_KEY = registerKey("corestone_placed");
     public static final RegistryKey<PlacedFeature> KUNZITE_GEODE_LUSH_PLACED_KEY = registerKey("kunzite_geode_lush_placed");
@@ -174,6 +175,11 @@ public class ModPlacedFeatures {
         register(context, AMETANE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETANE_KEY),
                 ModOrePlacement.modifiersWithCount(14,
                         HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(120))));
+        register(context, AMETANE_CHERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETANE_CHERRY_KEY),
+                ModOrePlacement.modifiersWithCount(13,
+                        HeightRangePlacementModifier.of(
+                                BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(20), 2)))
+        );
         register(context, CORESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORESTONE_KEY),
                 ModOrePlacement.modifiersWithCount(30,
                         HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(20), YOffset.fixed(140))));
