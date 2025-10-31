@@ -32,6 +32,8 @@ public class ModArmorItem extends Item {
                     .put(ModArmorMaterials.CERILLE_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(StatusEffects.STRENGTH, 5, 0, true, true),
                                     new StatusEffectInstance(StatusEffects.SPEED, 5, 1, true, true)))
+                    .put(ModArmorMaterials.WOODEN_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.LUCK, 5, 1, true, true)))
                     .put(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 5, 0, true, true))).build();
 
@@ -58,7 +60,11 @@ public class ModArmorItem extends Item {
             List<StatusEffectInstance> mapStatusEffects = entry.getValue();
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addParticle(player, world);
+                if (mapArmorMaterial == ModArmorMaterials.CERILLE_ARMOR_MATERIAL
+                || mapArmorMaterial == ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL
+                || mapArmorMaterial == ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL) {
+                    addParticle(player, world);
+                }
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffects);
             }
         }
