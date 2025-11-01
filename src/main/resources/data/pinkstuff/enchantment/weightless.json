@@ -36,10 +36,17 @@
     "base": 18,
     "per_level_above_first": 25
   },
-  "primary_items": "minecraft:elytra",
+  "primary_items": [
+    "minecraft:elytra",
+    "pinkstuff:netherite_elytra"
+  ],
   "slots": [
     "chest"
   ],
-  "supported_items": "minecraft:elytra",
+
+  "supported_items": [
+    "minecraft:elytra",
+    "pinkstuff:netherite_elytra"
+  ],
   "weight": 7
 }

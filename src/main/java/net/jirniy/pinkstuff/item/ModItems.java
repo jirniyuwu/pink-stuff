@@ -6,14 +6,23 @@ import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.custom.*;
 import net.jirniy.pinkstuff.trim.ModTrimMaterials;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.AttributeModifierSlot;
+import net.minecraft.component.type.AttributeModifiersComponent;
+import net.minecraft.component.type.EquippableComponent;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.minecraft.util.Unit;
 
 import java.util.function.Function;
 
@@ -212,11 +221,23 @@ public class ModItems {
     public static final Item SUNSHADE = registerItem("sunshade",
             setting -> new SunshadeItem(setting.sword(ModToolMaterials.SUNSHADE, 5.5f, -2.4f).useCooldown(5).rarity(Rarity.RARE)));
     public static final Item NETHERITE_MULTITOOL = registerItem("netherite_multitool",
-            setting -> new MultitoolItem(ToolMaterial.NETHERITE, 3, -1f, setting.rarity(Rarity.UNCOMMON)));
+            setting -> new MultitoolItem(ToolMaterial.NETHERITE, 3, -1f, setting.rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item SUNBLAZE_MULTITOOL = registerItem("sunblaze_multitool",
             setting -> new MultitoolItem(ModToolMaterials.SUNBLAZE, 1.5f, -1f, setting.rarity(Rarity.UNCOMMON)));
     public static final Item BEDROCK_BREAKER = registerItem("bedrock_breaker",
             setting -> new BreakerItem(setting.maxCount(16)));
+
+    public static final Item NETHERITE_ELYTRA = registerItem("netherite_elytra",
+            setting -> new NetheriteElytraItem(setting.maxDamage(512).rarity(Rarity.EPIC).fireproof()
+                    .component(DataComponentTypes.GLIDER, Unit.INSTANCE)
+                    .attributeModifiers(AttributeModifiersComponent.builder().add(
+                            EntityAttributes.BURNING_TIME, new EntityAttributeModifier(
+                                    Identifier.of(JirniysPinkStuff.MOD_ID, "netherite_elytra.burning_time"),
+                                    -0.2f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                            AttributeModifierSlot.CHEST).build())
+                    .component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(EquipmentSlot.CHEST)
+                            .equipSound(SoundEvents.ITEM_ARMOR_EQUIP_ELYTRA).model(ModArmorMaterials.NETHERITE_ELYTRA_KEY)
+                            .damageOnHurt(false).build()).repairable(Items.NETHERITE_INGOT)));
 
     public static final Item KUNZITE_HELMET = registerItem("kunzite_helmet",
             setting -> new Item(setting.armor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL, EquipmentType.HELMET)));

@@ -51,6 +51,11 @@
         },
         {
           "type": "minecraft:item",
+          "name": "pinkstuff:obsidian_shard",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:emerald",
           "weight": 12
         },

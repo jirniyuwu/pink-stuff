@@ -165,7 +165,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:obsidian_shard",
+          "name": "pinkstuff:obsidian_shard",
           "weight": 3
         },
         {

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "wings": [
+      {
+        "texture": "pinkstuff:netherite_elytra",
+        "use_player_texture": true
+      },
+      {
+        "texture": "pinkstuff:netherite_elytra_overlay",
+        "use_player_texture": false
+      }
+    ]
+  }
+}

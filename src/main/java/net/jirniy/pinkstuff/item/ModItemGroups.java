@@ -488,6 +488,7 @@ public class ModItemGroups {
                         entries.add(ModItems.FAIRYTALE_SMITHING_TEMPLATE);
 
                         entries.add(ModItems.NETHERITE_MULTITOOL);
+                        entries.add(ModItems.NETHERITE_ELYTRA);
 
                         entries.add(ModItems.WOODEN_HELMET);
                         entries.add(ModItems.WOODEN_CHESTPLATE);
@@ -1078,6 +1079,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.CRAWLER_COMPRESSED_STYXSTONE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.add(ModItems.NETHERITE_ELYTRA);
+
             entries.add(ModItems.NETHERITE_MULTITOOL);
             entries.add(ModItems.KUNZITE_PICKAXE);
             entries.add(ModItems.KUNZITE_AXE);

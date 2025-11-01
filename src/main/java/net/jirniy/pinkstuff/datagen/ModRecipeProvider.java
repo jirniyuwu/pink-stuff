@@ -2708,6 +2708,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTrimRecipe(ModItems.FAIRYTALE_SMITHING_TEMPLATE, ModTrimPatterns.FAIRYTALE,
                         RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(JirniysPinkStuff.MOD_ID, "fairytale")));
                 offerSmithingTemplateCopyingRecipe(ModItems.FAIRYTALE_SMITHING_TEMPLATE, ModBlocks.POLISHED_AMETHYST_BLOCK);
+
+                offerNetheriteUpgradeRecipe(Items.ELYTRA, RecipeCategory.TRANSPORTATION, ModItems.NETHERITE_ELYTRA);
             }
         };
     }

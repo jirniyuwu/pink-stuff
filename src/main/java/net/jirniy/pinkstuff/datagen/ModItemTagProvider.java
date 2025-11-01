@@ -117,6 +117,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SUNBLAZE_LEGGINGS)
                 .add(ModItems.SUNBLAZE_BOOTS);
         valueLookupBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.NETHERITE_ELYTRA)
                 .add(ModItems.WOODEN_HELMET)
                 .add(ModItems.WOODEN_CHESTPLATE)
                 .add(ModItems.WOODEN_LEGGINGS)

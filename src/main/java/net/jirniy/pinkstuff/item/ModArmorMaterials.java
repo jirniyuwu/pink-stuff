@@ -87,4 +87,6 @@ public class ModArmorMaterials {
         map.put(EquipmentType.HELMET, 1);
         map.put(EquipmentType.BODY, 1);
     }), 14, SoundEvents.ITEM_ARMOR_EQUIP_COPPER, 0f,0f, ItemTags.PLANKS, WOODEN_KEY);
+
+    public static final RegistryKey<EquipmentAsset> NETHERITE_ELYTRA_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(JirniysPinkStuff.MOD_ID, "netherite_elytra"));
 }
