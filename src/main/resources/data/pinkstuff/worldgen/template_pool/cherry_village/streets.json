@@ -117,6 +117,24 @@
       }
     },
     {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/streets/market1",
+        "processors": "pinkstuff:cherry_village_paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/streets/market2",
+        "processors": "pinkstuff:cherry_village_paths"
+      }
+    },
+    {
       "weight": 5,
       "element": {
         "element_type": "minecraft:single_pool_element",
