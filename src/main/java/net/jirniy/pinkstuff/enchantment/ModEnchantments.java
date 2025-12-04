@@ -2,6 +2,7 @@ package net.jirniy.pinkstuff.enchantment;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.enchantment.custom.CleanseEnchantmentEffect;
+import net.jirniy.pinkstuff.enchantment.custom.ExperienceSyphonEnchantmentEffect;
 import net.jirniy.pinkstuff.enchantment.custom.LightningEnchantmentEffect;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
@@ -24,6 +25,7 @@ public class ModEnchantments {
 
     public static final RegistryKey<Enchantment> LIGHTNING = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(JirniysPinkStuff.MOD_ID, "lightning"));
     public static final RegistryKey<Enchantment> CLEANSE = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(JirniysPinkStuff.MOD_ID, "cleanse"));
+    public static final RegistryKey<Enchantment> XP_SYPHON = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(JirniysPinkStuff.MOD_ID, "xp_syphon"));
 
     public static void bootstrap(Registerable<Enchantment> registerable) {
         var enchantments = registerable.getRegistryLookup(RegistryKeys.ENCHANTMENT);
@@ -43,6 +45,20 @@ public class ModEnchantments {
                 .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
                         EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.VICTIM,
                         new LightningEnchantmentEffect()));
+
+        register(registerable, XP_SYPHON, new Enchantment.Builder(Enchantment.definition(
+                items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                6,
+                5,
+                Enchantment.leveledCost(13, 19),
+                Enchantment.leveledCost(29, 25),
+                3,
+                AttributeModifierSlot.MAINHAND
+        ))
+                .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
+                        EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.VICTIM,
+                        new ExperienceSyphonEnchantmentEffect()));
 
         register(registerable, CLEANSE, new Enchantment.Builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),

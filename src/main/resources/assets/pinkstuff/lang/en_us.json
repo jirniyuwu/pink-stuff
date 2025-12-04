@@ -568,11 +568,13 @@
 
   "enchantment.pinkstuff.lightning": "Curse of Lightning",
   "enchantment.pinkstuff.fragility": "Curse of Fragility",
+  "enchantment.pinkstuff.immobility": "Curse of Immobility",
   "enchantment.pinkstuff.length": "Length",
   "enchantment.pinkstuff.reach": "Reach",
   "enchantment.pinkstuff.sliding_shoes": "Sliding Shoes",
   "enchantment.pinkstuff.weightless": "Weightless",
   "enchantment.pinkstuff.cleanse": "Cleanse",
+  "enchantment.pinkstuff.xp_syphon": "Experience Syphon",
 
   "effect.pinkstuff.dawnbreaker": "Dawnbreaker",
   "effect.pinkstuff.grounded": "Grounded",

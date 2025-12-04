@@ -3,6 +3,8 @@
   "values": [
     "pinkstuff:lightning",
     "pinkstuff:fragility",
-    "pinkstuff:cleanse"
+    "pinkstuff:cleanse",
+    "pinkstuff:xp_syphon",
+    "pinkstuff:immobility"
   ]
 }
