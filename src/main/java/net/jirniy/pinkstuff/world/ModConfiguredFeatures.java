@@ -108,6 +108,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_PATCH_KEY = registryKey("styxgrass_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_CEILING_KEY = registryKey("styxgrass_ceiling");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_CEILING_KEY = registryKey("corruption_ceiling");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> END_MOSS_CEILING_KEY = registryKey("end_moss_ceiling");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> END_MOSS_BONE_MEAL_KEY = registryKey("end_moss_bone_meal");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_DISK_KEY = registryKey("styxmoss_disk_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRAWLER_STONE_KEY = registryKey("crawler_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> COTTON_PATCH_KEY = registryKey("cotton_patch");
@@ -269,6 +271,36 @@ public class ModConfiguredFeatures {
                                 Direction.DOWN, BlockPredicate.IS_AIR, true)),
                         VerticalSurfaceType.CEILING, UniformIntProvider.create(1, 2), 0.5F, 5,
                         0.15F, UniformIntProvider.create(3, 6), 0.3F));
+        register(context, END_MOSS_CEILING_KEY, Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
+                        BlockStateProvider.of(ModBlocks.END_MOSS), PlacedFeatures.createEntry(Feature.BLOCK_COLUMN,
+                        new BlockColumnFeatureConfig(List.of(BlockColumnFeatureConfig.createLayer(
+                                        UniformIntProvider.create(1, 4),
+                                        new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                                                .add(ModBlocks.END_VINES_PLANT.getDefaultState().with(EndVines.BERRIES, true), 1)
+                                                .add(ModBlocks.END_VINES_PLANT.getDefaultState().with(EndVines.BERRIES, false), 5))),
+                                BlockColumnFeatureConfig.createLayer(ConstantIntProvider.create(1),
+                                        new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                                                .add(ModBlocks.END_VINES.getDefaultState().with(EndVines.BERRIES, true), 1)
+                                                .add(ModBlocks.END_VINES.getDefaultState().with(EndVines.BERRIES, false), 3)))),
+                                Direction.DOWN, BlockPredicate.IS_AIR, true)),
+                        VerticalSurfaceType.CEILING, UniformIntProvider.create(1, 2), 0.5F, 4,
+                        0.3F, UniformIntProvider.create(3, 6), 0.3F));
+        register(context, END_MOSS_BONE_MEAL_KEY, Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
+                        BlockStateProvider.of(ModBlocks.END_MOSS), PlacedFeatures.createEntry(Feature.BLOCK_COLUMN,
+                        new BlockColumnFeatureConfig(List.of(BlockColumnFeatureConfig.createLayer(
+                                        UniformIntProvider.create(0, 1),
+                                        new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                                                .add(ModBlocks.END_VINES_PLANT.getDefaultState().with(EndVines.BERRIES, true), 1)
+                                                .add(ModBlocks.END_VINES_PLANT.getDefaultState().with(EndVines.BERRIES, false), 9))),
+                                BlockColumnFeatureConfig.createLayer(ConstantIntProvider.create(1),
+                                        new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                                                .add(ModBlocks.END_VINES.getDefaultState().with(EndVines.BERRIES, true), 1)
+                                                .add(ModBlocks.END_VINES.getDefaultState().with(EndVines.BERRIES, false), 11)))),
+                                Direction.DOWN, BlockPredicate.IS_AIR, true)),
+                        VerticalSurfaceType.CEILING, ConstantIntProvider.create(1), 0.2f, 3, 0.2f,
+                        UniformIntProvider.create(1, 2), 0.3f));
         register(context, ASH_PATCH_KEY, Feature.VEGETATION_PATCH,
                 new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
                         new WeightedBlockStateProvider(Pool.<BlockState>builder()

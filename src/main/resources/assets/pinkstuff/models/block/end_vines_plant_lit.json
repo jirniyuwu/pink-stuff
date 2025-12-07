@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "pinkstuff:block/end_vines_plant_lit"
+  }
+}

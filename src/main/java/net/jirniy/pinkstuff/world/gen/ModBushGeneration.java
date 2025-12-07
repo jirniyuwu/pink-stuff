@@ -22,6 +22,8 @@ public class ModBushGeneration {
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LARGE_END_GRASS_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CHORUS_LILY_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS, BiomeKeys.END_BARRENS),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.END_MOSS_CEILING_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_SAVANNA),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.COTTON_PATCH_PLACED_KEY);

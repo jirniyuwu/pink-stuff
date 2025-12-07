@@ -7,6 +7,7 @@ import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -86,6 +87,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CORRUPTION_PATCH_PLACED_KEY = registerKey("corruption_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXGRASS_CEILING_PLACED_KEY = registerKey("styxgrass_ceiling_placed");
     public static final RegistryKey<PlacedFeature> CORRUPTION_CEILING_PLACED_KEY = registerKey("corruption_ceiling_placed");
+    public static final RegistryKey<PlacedFeature> END_MOSS_CEILING_PLACED_KEY = registerKey("end_moss_ceiling_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_DISC_PLACED_KEY = registerKey("styxmoss_disc_placed");
     public static final RegistryKey<PlacedFeature> CRAWLER_STONE_PLACED_KEY = registerKey("crawler_stone_placed");
     public static final RegistryKey<PlacedFeature> COTTON_PATCH_PLACED_KEY = registerKey("cotton_patch_placed");
@@ -255,6 +257,10 @@ public class ModPlacedFeatures {
         register(context, CORRUPTION_CEILING_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTION_CEILING_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(125), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
                         EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)), BiomePlacementModifier.of()});
+        register(context, END_MOSS_CEILING_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_MOSS_CEILING_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(4), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.matchingBlockTag(BlockTags.MOSS_REPLACEABLE), BlockPredicate.IS_AIR, 12),
                         RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)), BiomePlacementModifier.of()});
 
         register(context, ASH_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ASH_PATCH_KEY),

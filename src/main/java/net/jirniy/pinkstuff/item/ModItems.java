@@ -100,6 +100,9 @@ public class ModItems {
     public static final Item CHARMBERRY = registerItem("charmberry",
             setting -> new BlockItem(ModBlocks.CHARMBERRY_BUSH, setting
                     .food(ModFoodComponents.CHARMBERRY, ModFoodComponents.CHARMBERRY_EFFECT)));
+    public static final Item PEARLISCINE = registerItem("pearliscine",
+            setting -> new BlockItem(ModBlocks.END_VINES, setting
+                    .food(ModFoodComponents.PEARLISCINE, ModFoodComponents.PEARLISCINE_EFFECT)));
     public static final Item BERRY_SALAD = registerItem("berry_salad",
             setting -> new Item( setting.food(ModFoodComponents.BERRY_SALAD, ModFoodComponents.BERRY_SALAD_EFFECT)
                     .useRemainder(Items.BOWL).maxCount(1)));

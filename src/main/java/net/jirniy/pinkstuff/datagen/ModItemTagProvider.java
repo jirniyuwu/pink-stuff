@@ -465,6 +465,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.COTTON_SEEDS)
                 .add(ModItems.CORRUPT_SPROUTS);
         valueLookupBuilder(ModTags.Items.BERRIES)
+                .add(ModItems.PEARLISCINE)
                 .add(ModItems.GEM_BERRY)
                 .add(ModItems.CHARMBERRY)
                 .add(Items.GLOW_BERRIES)

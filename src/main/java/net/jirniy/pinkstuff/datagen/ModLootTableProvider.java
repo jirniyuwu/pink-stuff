@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.custom.CorruptSproutsCropBlock;
 import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
+import net.jirniy.pinkstuff.block.custom.EndVines;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.minecraft.block.Block;
@@ -237,6 +238,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.STYXIAN_SOIL);
         addDrop(ModBlocks.ROOTED_STYXIAN_SOIL);
+        addDrop(ModBlocks.END_MOSS);
         addDrop(ModBlocks.STYXMOSS);
         addDrop(ModBlocks.STYXMOSS_CARPET);
         addDrop(ModBlocks.MABRIZE);
@@ -451,6 +453,25 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 ).with(ItemEntry.builder(ModItems.CHARMBERRY))
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+        this.addDrop(ModBlocks.END_VINES,
+                block -> this.applyExplosionDecay(
+                        block,LootTable.builder().pool(LootPool.builder().conditionally(
+                                                BlockStatePropertyLootCondition.builder(ModBlocks.END_VINES).properties(StatePredicate.Builder.create().exactMatch(EndVines.BERRIES, true))
+                                        )
+                                        .with(ItemEntry.builder(ModItems.PEARLISCINE))
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 3.0F)))
+                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                        )));
+        this.addDrop(ModBlocks.END_VINES_PLANT,
+                block -> this.applyExplosionDecay(
+                        block,LootTable.builder().pool(LootPool.builder().conditionally(
+                                                BlockStatePropertyLootCondition.builder(ModBlocks.END_VINES_PLANT).properties(StatePredicate.Builder.create().exactMatch(EndVines.BERRIES, true))
+                                        )
+                                        .with(ItemEntry.builder(ModItems.PEARLISCINE))
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 3.0F)))
+                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                        )));
+
 
         BlockStatePropertyLootCondition.Builder cottonBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.COTTON)
                 .properties(StatePredicate.Builder.create().exactMatch(CottonCropBlock.AGE, CottonCropBlock.MAX_AGE));

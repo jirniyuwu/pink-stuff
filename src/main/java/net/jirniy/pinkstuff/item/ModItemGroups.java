@@ -43,6 +43,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.AMETHYST_BLAZE_ROD);
 
+                        entries.add(ModBlocks.END_MOSS);
                         entries.add(ModBlocks.STYXIAN_SOIL);
                         entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);
                         entries.add(ModBlocks.STYXMOSS);
@@ -463,6 +464,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ELYSIUM_APPLE);
                         entries.add(ModItems.GODFRUIT);
                         entries.add(ModItems.CRYSTAL_CARROT);
+                        entries.add(ModItems.PEARLISCINE);
                         entries.add(ModItems.GEM_BERRY);
                         entries.add(ModItems.CHARMBERRY);
                         entries.add(ModItems.BERRY_SALAD);
@@ -836,6 +838,7 @@ public class ModItemGroups {
             entries.add(ModItems.ELYSIUM_APPLE);
             entries.add(ModItems.GODFRUIT);
             entries.add(ModItems.CRYSTAL_CARROT);
+            entries.add(ModItems.PEARLISCINE);
             entries.add(ModItems.GEM_BERRY);
             entries.add(ModItems.CHARMBERRY);
             entries.add(ModItems.BERRY_SALAD);
@@ -993,6 +996,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.MABRIZE);
             entries.add(ModBlocks.AMETANE);
             entries.add(ModBlocks.WASTEROCK);
+            entries.add(ModBlocks.END_MOSS);
             entries.add(ModBlocks.STYXIAN_SOIL);
             entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);
             entries.add(ModBlocks.STYXMOSS);

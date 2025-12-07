@@ -316,6 +316,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_ASH);
 
         blockStateModelGenerator.registerFlowerbed(ModBlocks.DEATH_FLOWERS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_MOSS);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.STYXMOSS, ModBlocks.STYXMOSS_CARPET);
         blockStateModelGenerator.registerHangingMoss(ModBlocks.HANGING_STYXGRASS);
         blockStateModelGenerator.registerHangingMoss(ModBlocks.HANGING_STYXMOSS);
@@ -437,6 +438,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PREPARED_PINLINE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.GLAZED_CHORUS_FRUIT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PEARLISCINE, Models.GENERATED);
         itemModelGenerator.register(ModItems.COAL_MEAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.GELATINOUS_BUD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ELYSIUM_APPLE, Models.GENERATED);

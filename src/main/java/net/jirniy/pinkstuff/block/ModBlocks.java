@@ -69,6 +69,9 @@ public class ModBlocks {
     public static final Block STYXMOSS = registerBlock("styxmoss",
             properties -> new StyxmossBlock(ModConfiguredFeatures.STYXMOSS_PATCH_BONEMEAL_KEY, properties.strength(0.7f)
                     .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.DARK_AQUA)));
+    public static final Block END_MOSS = registerBlock("end_moss",
+            properties -> new EndmossBlock(ModConfiguredFeatures.END_MOSS_BONE_MEAL_KEY, properties.strength(0.5f)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.LIGHT_BLUE_GRAY)));
     public static final Block STYXMOSS_CARPET = registerBlock("styxmoss_carpet",
             properties -> new CarpetBlock(properties.strength(0.3f)
                     .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.DARK_AQUA)));
@@ -1056,6 +1059,15 @@ public class ModBlocks {
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_HAZEWEAVER_PLANT = registerBlockWithoutBlockItem("potted_hazeweaver_plant",
             properties -> new FlowerPotBlock(ModBlocks.HAZEWEAVER_PLANT, properties.strength(0f).nonOpaque().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block END_VINES_PLANT = registerBlockWithoutBlockItem("end_vines_plant",
+            properties -> new EndVinesBodyBlock(properties.mapColor(MapColor.LIGHT_BLUE_GRAY).ticksRandomly()
+                    .noCollision().luminance(EndVines.getLuminanceSupplier(14)).breakInstantly()
+                    .sounds(BlockSoundGroup.CAVE_VINES).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block END_VINES = registerBlockWithoutBlockItem("end_vines",
+            properties -> new EndVinesHeadBlock(properties.mapColor(MapColor.LIGHT_BLUE_GRAY).ticksRandomly()
+                    .noCollision().luminance(EndVines.getLuminanceSupplier(14)).breakInstantly()
+                    .sounds(BlockSoundGroup.CAVE_VINES).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block COTTON = registerBlockWithoutBlockItem("cotton",
             properties -> new CottonCropBlock(properties.mapColor(MapColor.TERRACOTTA_BROWN).ticksRandomly().breakInstantly()

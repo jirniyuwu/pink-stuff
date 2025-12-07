@@ -266,6 +266,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_SAND)
                 .add(ModBlocks.ASH_BLOCK);
         valueLookupBuilder(BlockTags.HOE_MINEABLE)
+                .add(ModBlocks.END_MOSS)
                 .add(ModBlocks.STYXMOSS)
                 .add(ModBlocks.STYXMOSS_CARPET)
                 .add(ModBlocks.STYXMOSS_VINE)
@@ -691,6 +692,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MEMORIA_BOURPEER)
                 .add(ModBlocks.THERMIUM_WILTBORN);
         valueLookupBuilder(BlockTags.DIRT)
+                .add(ModBlocks.END_MOSS)
                 .add(ModBlocks.STYXIAN_SOIL)
                 .add(ModBlocks.STYXMOSS);
         valueLookupBuilder(BlockTags.OVERWORLD_CARVER_REPLACEABLES)
@@ -710,6 +712,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXIAN_SULFUR_ORE)
                 .add(ModBlocks.STYXIAN_SULFUR_ORE);
         valueLookupBuilder(BlockTags.MOSS_REPLACEABLE)
+                .add(Blocks.END_STONE)
+                .add(ModBlocks.COMPRESSED_END_STONE)
                 .add(ModBlocks.STYXSTONE)
                 .add(ModBlocks.ROOTED_STYXIAN_SOIL)
                 .add(ModBlocks.STYXIAN_SOIL)
@@ -756,6 +760,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COTTON)
                 .add(ModBlocks.CORRUPT_SPROUTS);
         valueLookupBuilder(BlockTags.CLIMBABLE)
+                .add(ModBlocks.END_VINES)
+                .add(ModBlocks.END_VINES_PLANT)
                 .add(ModBlocks.HANGING_STYXMOSS)
                 .add(ModBlocks.HANGING_CORRUPT_ROOTS)
                 .add(ModBlocks.STYXMOSS_VINE);

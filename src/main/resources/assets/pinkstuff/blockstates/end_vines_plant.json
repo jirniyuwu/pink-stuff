@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "berries=false": {
+      "model": "pinkstuff:block/end_vines_plant"
+    },
+    "berries=true": {
+      "model": "pinkstuff:block/end_vines_plant_lit"
+    }
+  }
+}

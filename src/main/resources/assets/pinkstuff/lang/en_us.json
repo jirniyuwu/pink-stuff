@@ -69,6 +69,7 @@
   "item.pinkstuff.crystal_carrot": "Crystal Carrot",
   "item.pinkstuff.gem_berry": "Gem Berries",
   "item.pinkstuff.charmberry": "Charmberries",
+  "item.pinkstuff.pearliscine": "Pearliscine",
   "item.pinkstuff.berry_salad": "Berry Salad",
   "item.pinkstuff.fleshy_stew": "Fleshy Stew",
   "item.pinkstuff.fairy_meat": "Fairy Meat",
@@ -244,6 +245,7 @@
   "item.pinkstuff.compressed_end_stone_bricks_wall": "Compressed End Stone Brick Wall",
 
   "item.pinkstuff.styxmoss": "Styxmoss",
+  "item.pinkstuff.end_moss": "End Moss",
   "item.pinkstuff.styxmoss_carpet": "Styxmoss Carpet",
   "item.pinkstuff.styxmoss_vine": "Styxmoss Vine",
   "item.pinkstuff.styxgrass": "Styxgrass",
@@ -532,6 +534,8 @@
 
   "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
   "block.pinkstuff.charmberry_bush": "Charmberries Bush",
+  "block.pinkstuff.end_vines": "End Vines",
+  "block.pinkstuff.end_vines_plant": "End Vines",
   "block.pinkstuff.hazeweaver_plant": "Hazeweaver",
   "block.pinkstuff.cotton": "Cotton",
   "block.pinkstuff.corrupt_sprouts": "Corrupt Sprouts",

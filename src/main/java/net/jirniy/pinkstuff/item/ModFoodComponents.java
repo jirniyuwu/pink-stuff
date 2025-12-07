@@ -6,6 +6,7 @@ import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
+import net.minecraft.item.consume.UseAction;
 
 import static net.minecraft.component.type.ConsumableComponents.food;
 
@@ -25,6 +26,9 @@ public class ModFoodComponents {
 
     public static final FoodComponent GEM_BERRY = new FoodComponent.Builder().nutrition(2).saturationModifier(0.2f).build();
     public static final ConsumableComponent GEM_BERRY_EFFECT = food().consumeSeconds(0.8F).build();
+
+    public static final FoodComponent PEARLISCINE = new FoodComponent.Builder().nutrition(2).saturationModifier(0.4f).build();
+    public static final ConsumableComponent PEARLISCINE_EFFECT = food().build();
 
     public static final FoodComponent CHARMBERRY = new FoodComponent.Builder().nutrition(2).saturationModifier(0.5f).build();
     public static final ConsumableComponent CHARMBERRY_EFFECT = food().consumeSeconds(1F)
