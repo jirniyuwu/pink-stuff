@@ -23,6 +23,11 @@ public class ModEffects {
                     .addAttributeModifier(EntityAttributes.ATTACK_DAMAGE,
                             Identifier.of(JirniysPinkStuff.MOD_ID, "effect.fairy_support"),
                             (double)0.5F, EntityAttributeModifier.Operation.ADD_VALUE));
+    public static final RegistryEntry<StatusEffect> CLOUD_PIERCER = registerStatusEffect("cloud_piercer",
+            new CloudPiercerStatusEffect(StatusEffectCategory.BENEFICIAL, 0x709EB7)
+                    .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED,
+                            Identifier.of(JirniysPinkStuff.MOD_ID, "effect.cloud_piercer"),
+                            (double)0.05F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
     public static final RegistryEntry<StatusEffect> GROUNDED = registerStatusEffect("grounded",
             new GroundedEffect(StatusEffectCategory.HARMFUL, 0xA39CB2)
                     .addAttributeModifier(EntityAttributes.GRAVITY,

@@ -2,6 +2,7 @@ package net.jirniy.pinkstuff.enchantment;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.enchantment.custom.CleanseEnchantmentEffect;
+import net.jirniy.pinkstuff.enchantment.custom.CloudPiercerEnchantmentEffect;
 import net.jirniy.pinkstuff.enchantment.custom.ExperienceSyphonEnchantmentEffect;
 import net.jirniy.pinkstuff.enchantment.custom.LightningEnchantmentEffect;
 import net.jirniy.pinkstuff.util.ModTags;
@@ -9,6 +10,7 @@ import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentLevelBasedValue;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.effect.EnchantmentEffectTarget;
 import net.minecraft.enchantment.effect.value.AddEnchantmentEffect;
 import net.minecraft.loot.condition.EntityPropertiesLootCondition;
@@ -19,6 +21,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 public class ModEnchantments {
@@ -26,6 +29,7 @@ public class ModEnchantments {
     public static final RegistryKey<Enchantment> LIGHTNING = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(JirniysPinkStuff.MOD_ID, "lightning"));
     public static final RegistryKey<Enchantment> CLEANSE = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(JirniysPinkStuff.MOD_ID, "cleanse"));
     public static final RegistryKey<Enchantment> XP_SYPHON = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(JirniysPinkStuff.MOD_ID, "xp_syphon"));
+    public static final RegistryKey<Enchantment> CLOUD_PIERCER = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(JirniysPinkStuff.MOD_ID, "cloud_piercer"));
 
     public static void bootstrap(Registerable<Enchantment> registerable) {
         var enchantments = registerable.getRegistryLookup(RegistryKeys.ENCHANTMENT);
@@ -45,6 +49,21 @@ public class ModEnchantments {
                 .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
                         EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.VICTIM,
                         new LightningEnchantmentEffect()));
+
+        register(registerable, CLOUD_PIERCER, new Enchantment.Builder(Enchantment.definition(
+                items.getOrThrow(ItemTags.LUNGE_ENCHANTABLE),
+                items.getOrThrow(ItemTags.LUNGE_ENCHANTABLE),
+                4,
+                1,
+                Enchantment.leveledCost(10, 10),
+                Enchantment.leveledCost(27, 15),
+                2,
+                AttributeModifierSlot.MAINHAND
+        ))
+                .exclusiveSet(enchantments.getOrThrow(TagKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(JirniysPinkStuff.MOD_ID, "exclusive_set/spear"))))
+                .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,
+                        EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.VICTIM,
+                        new CloudPiercerEnchantmentEffect()));
 
         register(registerable, XP_SYPHON, new Enchantment.Builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),

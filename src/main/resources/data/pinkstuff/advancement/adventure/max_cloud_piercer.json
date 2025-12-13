@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "pinkstuff:elysium_spear",
+      "count": 1
+    },
+    "title": {
+      "translate": "advancements.adventure.max_cloud_piercer.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.max_cloud_piercer.description"
+    },
+    "frame": "goal"
+  },
+  "parent": "minecraft:adventure/spear_many_mobs",
+  "criteria": {
+    "max_cloud_piercer": {
+      "trigger": "minecraft:spear_mobs",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player",
+          "effects": {
+            "pinkstuff:cloud_piercer": {
+              "amplifier": 9
+            }
+          }
+        },
+        "count": 1
+      }
+    }
+  },
+  "requirements": [
+    [
+      "max_cloud_piercer"
+    ]
+  ]
+}

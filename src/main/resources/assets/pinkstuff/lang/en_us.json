@@ -585,6 +585,7 @@
   "enchantment.pinkstuff.weightless": "Weightless",
   "enchantment.pinkstuff.cleanse": "Cleanse",
   "enchantment.pinkstuff.xp_syphon": "Experience Syphon",
+  "enchantment.pinkstuff.cloud_piercer": "Cloud Piercer",
 
   "effect.pinkstuff.dawnbreaker": "Dawnbreaker",
   "effect.pinkstuff.grounded": "Grounded",
@@ -593,6 +594,7 @@
   "effect.pinkstuff.fairy_support": "Fairy Support",
   "effect.pinkstuff.vulnerability": "Vulnerability",
   "effect.pinkstuff.heartbreak": "Heartbreak",
+  "effect.pinkstuff.cloud_piercer": "Cloud Piercer",
 
   "item.pinkstuff.cherry_armor_trim_smithing_template": "Cherry Armor Trim",
   "trim_pattern.pinkstuff.cherry": "Cherry Trim Pattern",
@@ -762,6 +764,8 @@
   "advancements.main.corrupt_tower.title": "Corruption-stained civilization",
   "advancements.main.styxian_temple.description": "Find an unknown Temple in Styxia",
   "advancements.main.styxian_temple.title": "Uncovered Remains",
+  "advancements.adventure.max_cloud_piercer.description": "Reach the max Cloud Piercer amplifier by quickly hitting 10 mobs using a Spear enchanted with Cloud Piercer",
+  "advancements.adventure.max_cloud_piercer.title": "Clouds Pierced",
 
   "itemgroup.pinkstuff.kunzite_items": "Pink :3"
 }
