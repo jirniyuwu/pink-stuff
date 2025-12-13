@@ -1,34 +1,26 @@
 {
+  "attributes": {
+    "minecraft:visual/fog_color": 2952207,
+    "minecraft:audio/background_music": {
+      "default": {
+        "sound": "minecraft:music.overworld.badlands",
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "replace_current_music": false
+      }
+    },
+    "minecraft:audio/music_volume": 1,
+    "minecraft:visual/sky_color": 3613481
+  },
   "carvers": [
     "minecraft:cave",
     "minecraft:canyon"
   ],
   "downfall": 0.5,
   "effects": {
-    "fog_color": 3675223,
     "foliage_color": 6831997,
     "grass_color": 8344467,
-    "mood_sound": {
-      "block_search_extent": 8,
-      "offset": 2,
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000
-    },
-    "music": [
-      {
-        "data": {
-          "max_delay": 24000,
-          "min_delay": 12000,
-          "replace_current_music": false,
-          "sound": "minecraft:music.overworld.cherry_grove"
-        },
-        "weight": 1
-      }
-    ],
-    "music_volume": 1,
-    "sky_color": 3414365,
-    "water_color": 5652365,
-    "water_fog_color": 5784972
+    "water_color": 5652365
   },
   "features": [
     [],

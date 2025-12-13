@@ -5,6 +5,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.mob.BoggedEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
@@ -35,8 +36,7 @@ public class CorruptedSkeletonEntity extends SkeletonEntity {
     protected PersistentProjectileEntity createArrowProjectile(ItemStack arrow, float damageModifier, @Nullable ItemStack shotFrom) {
         PersistentProjectileEntity persistentProjectileEntity = super.createArrowProjectile(arrow, damageModifier, shotFrom);
         if (persistentProjectileEntity instanceof ArrowEntity) {
-            float f = this.getEntityWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
-            ((ArrowEntity)persistentProjectileEntity).addEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 80 * (int)f, 1));
+            ((ArrowEntity)persistentProjectileEntity).addEffect(new StatusEffectInstance(ModEffects.DEATH_GRIP, 80, 1));
         }
 
         return persistentProjectileEntity;

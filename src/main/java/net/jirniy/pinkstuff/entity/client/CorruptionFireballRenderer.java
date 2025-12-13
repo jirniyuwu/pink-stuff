@@ -4,10 +4,9 @@ import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.entity.custom.CorruptionFireballEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.command.OrderedRenderCommandQueue;
-import net.minecraft.client.render.entity.DragonFireballEntityRenderer;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.state.EntityRenderState;
@@ -51,6 +50,6 @@ public class CorruptionFireballRenderer extends EntityRenderer<CorruptionFirebal
     }
 
     static {
-        LAYER = RenderLayer.getEntityCutoutNoCull(TEXTURE);
+        LAYER = RenderLayers.entityCutoutNoCull(TEXTURE);
     }
 }

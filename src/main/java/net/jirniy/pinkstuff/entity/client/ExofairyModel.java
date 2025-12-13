@@ -5,6 +5,7 @@ import net.fabricmc.api.Environment;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.entity.model.AllayEntityModel;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
@@ -30,7 +31,7 @@ public class ExofairyModel extends EntityModel<ExofairyRenderState> implements M
     private static final float field_39001 = (-(float)Math.PI / 3F);
 
     public ExofairyModel(ModelPart modelPart) {
-        super(modelPart.getChild("root"), RenderLayer::getEntityTranslucent);
+        super(modelPart.getChild("root"), RenderLayers::entityTranslucent);
         this.head = this.root.getChild("head");
         this.body = this.root.getChild("body");
         this.rightArm = this.body.getChild("right_arm");

@@ -498,6 +498,7 @@ public class ModItemGroups {
                         entries.add(ModItems.WOODEN_BOOTS);
 
                         entries.add(ModItems.KUNZITE_SWORD);
+                        entries.add(ModItems.KUNZITE_SPEAR);
                         entries.add(ModItems.KUNZITE_PICKAXE);
                         entries.add(ModItems.KUNZITE_AXE);
                         entries.add(ModItems.KUNZITE_SHOVEL);
@@ -508,6 +509,7 @@ public class ModItemGroups {
                         entries.add(ModItems.KUNZITE_BOOTS);
 
                         entries.add(ModItems.ELYSIUM_SWORD);
+                        entries.add(ModItems.ELYSIUM_SPEAR);
                         entries.add(ModItems.ELYSIUM_PICKAXE);
                         entries.add(ModItems.ELYSIUM_AXE);
                         entries.add(ModItems.ELYSIUM_SHOVEL);
@@ -519,6 +521,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ELYSIUM_LEGGINGS);
                         entries.add(ModItems.ELYSIUM_BOOTS);
 
+                        entries.add(ModItems.MOONSTEEL_SPEAR);
                         entries.add(ModItems.MOONSTEEL_SWORD);
                         entries.add(ModItems.MOONSTEEL_PICKAXE);
                         entries.add(ModItems.MOONSTEEL_AXE);
@@ -529,6 +532,7 @@ public class ModItemGroups {
                         entries.add(ModItems.MOONSTEEL_LEGGINGS);
                         entries.add(ModItems.MOONSTEEL_BOOTS);
 
+                        entries.add(ModItems.CERILLE_SPEAR);
                         entries.add(ModItems.CERILLE_SWORD);
                         entries.add(ModItems.CERILLE_PICKAXE);
                         entries.add(ModItems.CERILLE_AXE);
@@ -539,6 +543,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CERILLE_LEGGINGS);
                         entries.add(ModItems.CERILLE_BOOTS);
 
+                        entries.add(ModItems.SUNBLAZE_SPEAR);
                         entries.add(ModItems.SUNBLAZE_SWORD);
                         entries.add(ModItems.SUNBLAZE_PICKAXE);
                         entries.add(ModItems.SUNBLAZE_AXE);
@@ -550,6 +555,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SUNBLAZE_LEGGINGS);
                         entries.add(ModItems.SUNBLAZE_BOOTS);
 
+                        entries.add(ModItems.PINLINE_SPEAR);
                         entries.add(ModItems.PINLINE_SWORD);
                         entries.add(ModItems.PINLINE_PICKAXE);
                         entries.add(ModItems.PINLINE_AXE);
@@ -916,6 +922,7 @@ public class ModItemGroups {
             entries.add(ModItems.WOODEN_BOOTS);
 
             entries.add(ModItems.KUNZITE_SWORD);
+            entries.add(ModItems.KUNZITE_SPEAR);
             entries.add(ModItems.KUNZITE_AXE);
             entries.add(ModItems.KUNZITE_HELMET);
             entries.add(ModItems.KUNZITE_CHESTPLATE);
@@ -923,6 +930,7 @@ public class ModItemGroups {
             entries.add(ModItems.KUNZITE_BOOTS);
 
             entries.add(ModItems.ELYSIUM_SWORD);
+            entries.add(ModItems.ELYSIUM_SPEAR);
             entries.add(ModItems.ELYSIUM_AXE);
             entries.add(ModItems.ELYSIUM_HELMET);
             entries.add(ModItems.ELYSIUM_CHESTPLATE);
@@ -930,6 +938,7 @@ public class ModItemGroups {
             entries.add(ModItems.ELYSIUM_BOOTS);
 
             entries.add(ModItems.MOONSTEEL_SWORD);
+            entries.add(ModItems.MOONSTEEL_SPEAR);
             entries.add(ModItems.MOONSTEEL_AXE);
             entries.add(ModItems.MOONSTEEL_HELMET);
             entries.add(ModItems.MOONSTEEL_CHESTPLATE);
@@ -937,6 +946,7 @@ public class ModItemGroups {
             entries.add(ModItems.MOONSTEEL_BOOTS);
 
             entries.add(ModItems.CERILLE_SWORD);
+            entries.add(ModItems.CERILLE_SPEAR);
             entries.add(ModItems.CERILLE_AXE);
             entries.add(ModItems.CERILLE_HELMET);
             entries.add(ModItems.CERILLE_CHESTPLATE);
@@ -944,6 +954,7 @@ public class ModItemGroups {
             entries.add(ModItems.CERILLE_BOOTS);
 
             entries.add(ModItems.SUNBLAZE_SWORD);
+            entries.add(ModItems.SUNBLAZE_SPEAR);
             entries.add(ModItems.SUNBLAZE_AXE);
             entries.add(ModItems.SUNBLAZE_HELMET);
             entries.add(ModItems.SUNBLAZE_CHESTPLATE);
@@ -951,6 +962,7 @@ public class ModItemGroups {
             entries.add(ModItems.SUNBLAZE_BOOTS);
 
             entries.add(ModItems.PINLINE_SWORD);
+            entries.add(ModItems.PINLINE_SPEAR);
             entries.add(ModItems.PINLINE_AXE);
             entries.add(ModItems.PINLINE_HELMET);
             entries.add(ModItems.PINLINE_CHESTPLATE);

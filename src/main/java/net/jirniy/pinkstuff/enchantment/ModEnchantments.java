@@ -33,7 +33,7 @@ public class ModEnchantments {
 
         register(registerable, LIGHTNING, new Enchantment.Builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                items.getOrThrow(ItemTags.MELEE_WEAPON_ENCHANTABLE),
                 2,
                 2,
                 Enchantment.leveledCost(10, 10),
@@ -48,7 +48,7 @@ public class ModEnchantments {
 
         register(registerable, XP_SYPHON, new Enchantment.Builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                items.getOrThrow(ItemTags.MELEE_WEAPON_ENCHANTABLE),
                 6,
                 5,
                 Enchantment.leveledCost(13, 19),
@@ -62,7 +62,7 @@ public class ModEnchantments {
 
         register(registerable, CLEANSE, new Enchantment.Builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                items.getOrThrow(ItemTags.MELEE_WEAPON_ENCHANTABLE),
                 5,
                 4,
                 Enchantment.leveledCost(4, 12),

@@ -1,5 +1,6 @@
 package net.jirniy.pinkstuff.datagen;
 
+import com.google.common.util.concurrent.ClosingFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.jirniy.pinkstuff.block.ModBlocks;
@@ -491,5 +492,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.WASTEWOOD_SHELF.asItem())
                 .add(ModBlocks.KEAPHE_SHELF.asItem())
                 .add(ModBlocks.CORRERIE_SHELF.asItem());
+        valueLookupBuilder(ItemTags.SPEARS)
+                .add(ModItems.KUNZITE_SPEAR)
+                .add(ModItems.ELYSIUM_SPEAR)
+                .add(ModItems.PINLINE_SPEAR)
+                .add(ModItems.MOONSTEEL_SPEAR)
+                .add(ModItems.CERILLE_SPEAR)
+                .add(ModItems.SUNBLAZE_SPEAR);
     }
 }

@@ -149,6 +149,10 @@ public class ModItems {
     public static final Item DEAD_SPROUT = registerItem("dead_sprout",
             setting -> new Item(setting.food(ModFoodComponents.DEAD_SPROUT, ModFoodComponents.DEAD_SPROUT_EFFECT)));
 
+    public static final Item KUNZITE_SPEAR = registerItem("kunzite_spear", setting -> new Item(
+            setting.spear(ModToolMaterials.KUNZITE, 0.6F, 0.6F, 0.6F,
+                    6.0F, 16.0F, 12.0F,
+                    5.0F, 20.0F, 3.6F)));
     public static final Item KUNZITE_SWORD = registerItem("kunzite_sword",
             setting -> new Item(setting.sword(ModToolMaterials.KUNZITE, 2, -2.4f)));
     public static final Item KUNZITE_PICKAXE = registerItem("kunzite_pickaxe",
@@ -160,6 +164,10 @@ public class ModItems {
     public static final Item KUNZITE_HOE = registerItem("kunzite_hoe",
             setting -> new HoeItem(ModToolMaterials.KUNZITE, 0, -3f, setting));
 
+    public static final Item ELYSIUM_SPEAR = registerItem("elysium_spear", setting -> new Item(
+            setting.spear(ModToolMaterials.ELYSIUM, 0.5F, 0.9F, 0.5F,
+                    7.0F, 15.0F, 14.0F,
+                    4.0F, 26.0F, 4.0F)));
     public static final Item ELYSIUM_SWORD = registerItem("elysium_sword",
             setting -> new Item(setting.sword(ModToolMaterials.ELYSIUM, 4, -1.8f).rarity(Rarity.UNCOMMON)));
     public static final Item ELYSIUM_PICKAXE = registerItem("elysium_pickaxe",
@@ -171,6 +179,10 @@ public class ModItems {
     public static final Item ELYSIUM_HOE = registerItem("elysium_hoe",
             setting -> new HoeItem(ModToolMaterials.ELYSIUM, 0, -3f, setting.rarity(Rarity.UNCOMMON)));
 
+    public static final Item PINLINE_SPEAR = registerItem("pinline_spear", setting -> new Item(
+            setting.spear(ModToolMaterials.PINLINE, 1.4F, 1.05F, 0.8F,
+                    3.0F, 12.0F, 9.0F,
+                    4.0F, 10.0F, 4.0F)));
     public static final Item PINLINE_SWORD = registerItem("pinline_sword",
             setting -> new Item(setting.sword(ModToolMaterials.PINLINE, 2.2f, -1.8f)));
     public static final Item PINLINE_PICKAXE = registerItem("pinline_pickaxe",
@@ -182,6 +194,10 @@ public class ModItems {
     public static final Item PINLINE_HOE = registerItem("pinline_hoe",
             setting -> new HoeItem(ModToolMaterials.PINLINE, 0, -3f, setting));
 
+    public static final Item MOONSTEEL_SPEAR = registerItem("moonsteel_spear", setting -> new Item(
+            setting.spear(ModToolMaterials.MOONSTEEL, 0.95F, 0.95F, 0.6F,
+                    2.5F, 8.0F, 6.75F,
+                    5.1F, 11.25F, 4.6F)));
     public static final Item MOONSTEEL_SWORD = registerItem("moonsteel_sword",
             setting -> new Item(setting.sword(ModToolMaterials.MOONSTEEL, 2.5f, -2.4f)));
     public static final Item MOONSTEEL_PICKAXE = registerItem("moonsteel_pickaxe",
@@ -193,6 +209,10 @@ public class ModItems {
     public static final Item MOONSTEEL_HOE = registerItem("moonsteel_hoe",
             setting -> new HoeItem(ModToolMaterials.MOONSTEEL, 0, -3f, setting));
 
+    public static final Item CERILLE_SPEAR = registerItem("cerille_spear", setting -> new Item(
+            setting.spear(ModToolMaterials.CERILLE, 1.1F, 1.3F, 0.7F,
+                    1.5F, 6.0F, 5.4F,
+                    3.2F, 9.25F, 4.0F)));
     public static final Item CERILLE_SWORD = registerItem("cerille_sword",
             setting -> new Item(setting.sword(ModToolMaterials.CERILLE, 4f, -2.2f)));
     public static final Item CERILLE_PICKAXE = registerItem("cerille_pickaxe",
@@ -204,6 +224,10 @@ public class ModItems {
     public static final Item CERILLE_HOE = registerItem("cerille_hoe",
             setting -> new HoeItem(ModToolMaterials.CERILLE, 0, -3f, setting));
 
+    public static final Item SUNBLAZE_SPEAR = registerItem("sunblaze_spear", setting -> new SunblazeSwordItem(
+            setting.spear(ModToolMaterials.SUNBLAZE, 0.4F, 0.4F, 0.3F,
+                    8.0F, 14.0F, 18.0F,
+                    6.0F, 26.0F, 4.6F)));
     public static final Item SUNBLAZE_SWORD = registerItem("sunblaze_sword",
             setting -> new SunblazeSwordItem(setting.sword(ModToolMaterials.SUNBLAZE, 3f, -2.0f)));
     public static final Item SUNBLAZE_PICKAXE = registerItem("sunblaze_pickaxe",

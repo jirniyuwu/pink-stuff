@@ -459,18 +459,21 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ENERGIZED_THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.MEMORY_SHARD, Models.GENERATED);
 
+        itemModelGenerator.registerSpear(ModItems.KUNZITE_SPEAR);
         itemModelGenerator.register(ModItems.KUNZITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KUNZITE_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KUNZITE_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KUNZITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KUNZITE_HOE, Models.HANDHELD);
 
+        itemModelGenerator.registerSpear(ModItems.PINLINE_SPEAR);
         itemModelGenerator.register(ModItems.PINLINE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINLINE_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINLINE_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINLINE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINLINE_HOE, Models.HANDHELD);
 
+        itemModelGenerator.registerSpear(ModItems.ELYSIUM_SPEAR);
         itemModelGenerator.register(ModItems.ELYSIUM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ELYSIUM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ELYSIUM_AXE, Models.HANDHELD);
@@ -478,18 +481,21 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ELYSIUM_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ELYSIUM_HAMMER, Models.HANDHELD);
 
+        itemModelGenerator.registerSpear(ModItems.MOONSTEEL_SPEAR);
         itemModelGenerator.register(ModItems.MOONSTEEL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MOONSTEEL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MOONSTEEL_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MOONSTEEL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MOONSTEEL_HOE, Models.HANDHELD);
 
+        itemModelGenerator.registerSpear(ModItems.CERILLE_SPEAR);
         itemModelGenerator.register(ModItems.CERILLE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CERILLE_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CERILLE_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CERILLE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CERILLE_HOE, Models.HANDHELD);
 
+        itemModelGenerator.registerSpear(ModItems.SUNBLAZE_SPEAR);
         itemModelGenerator.register(ModItems.SUNBLAZE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.SUNBLAZE_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.SUNBLAZE_AXE, Models.HANDHELD);

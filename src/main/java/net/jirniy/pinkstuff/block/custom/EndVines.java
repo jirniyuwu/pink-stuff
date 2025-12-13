@@ -8,7 +8,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.loot.LootTables;
 import net.minecraft.loot.context.LootContextParameters;
 import net.minecraft.loot.context.LootWorldContext;
 import net.minecraft.server.world.ServerWorld;
@@ -22,10 +21,10 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.event.GameEvent;
+import net.minecraft.world.rule.GameRules;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -121,7 +120,7 @@ public interface EndVines {
 
     private static void dropStack(World world, Supplier<ItemEntity> itemEntitySupplier, ItemStack stack) {
         if (world instanceof ServerWorld serverWorld) {
-            if (!stack.isEmpty() && serverWorld.getGameRules().getBoolean(GameRules.DO_TILE_DROPS)) {
+            if (!stack.isEmpty() && serverWorld.getGameRules().getValue(GameRules.DO_TILE_DROPS)) {
                 ItemEntity itemEntity = (ItemEntity)itemEntitySupplier.get();
                 itemEntity.setToDefaultPickupDelay();
                 world.spawnEntity(itemEntity);

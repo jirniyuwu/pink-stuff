@@ -1,13 +1,28 @@
 {
+  "attributes": {
+    "minecraft:gameplay/bed_rule": {
+      "can_sleep": "never",
+      "can_set_spawn": "never"
+    },
+    "minecraft:visual/cloud_fog_end_distance": 2048,
+    "minecraft:gameplay/can_start_raid": false,
+    "minecraft:gameplay/piglins_zombify": true,
+    "minecraft:gameplay/respawn_anchor_works": false,
+    "minecraft:visual/sun_angle": 180,
+    "minecraft:visual/moon_angle": 0,
+    "minecraft:visual/star_brightness": 0.5,
+    "minecraft:visual/cloud_color": "#aa999999",
+    "minecraft:visual/cloud_height": 512,
+    "minecraft:visual/moon_phase": "full_moon",
+    "minecraft:gameplay/sky_light_level": 0,
+    "minecraft:visual/sky_light_color": 6905969
+  },
   "ambient_light": 0,
-  "bed_works": false,
-  "cloud_height": 1024,
-  "fixed_time": 18000,
   "coordinate_scale": 8,
-  "effects": "minecraft:overworld",
   "has_ceiling": false,
-  "has_raids": false,
   "has_skylight": true,
+  "has_fixed_time": true,
+  "skybox": "overworld",
   "height": 320,
   "infiniburn": "#minecraft:infiniburn_overworld",
   "logical_height": 320,
@@ -17,9 +32,5 @@
     "type": "minecraft:uniform",
     "max_inclusive": 15,
     "min_inclusive": 0
-  },
-  "natural": true,
-  "piglin_safe": false,
-  "respawn_anchor_works": true,
-  "ultrawarm": false
+  }
 }

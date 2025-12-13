@@ -74,7 +74,7 @@ public class BlackGoopBlock extends TranslucentBlock {
 
     @Override
     protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!world.getGameRules().getBoolean(ModGamerules.DISABLE_CORRUPTION_SPREAD) && state.get(SPREADABLE)) {
+        if (world.getGameRules().getValue(ModGamerules.ENABLE_CORRUPTION_SPREAD) && state.get(SPREADABLE)) {
             spread(world, pos, random);
         }
         super.randomTick(state, world, pos, random);
@@ -114,7 +114,7 @@ public class BlackGoopBlock extends TranslucentBlock {
     }
 
     protected void spread(ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+        if (random.nextBetween(1, world.getGameRules().getValue(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
             if (!world.isAir(pos.down())) {
                 if (world.getBlockState(pos.down()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
                     world.setBlockState(pos.down(), ModBlocks.BLACK_GOOP.getDefaultState());
@@ -127,7 +127,7 @@ public class BlackGoopBlock extends TranslucentBlock {
                 }
             }
         }
-        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+        if (random.nextBetween(1, world.getGameRules().getValue(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
             if (!world.isAir(pos.up())) {
                 if (world.getBlockState(pos.up()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
                     world.setBlockState(pos.up(), ModBlocks.BLACK_GOOP.getDefaultState());
@@ -144,7 +144,7 @@ public class BlackGoopBlock extends TranslucentBlock {
                         SoundCategory.BLOCKS, 1f, 1, true);
             }
         }
-        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+        if (random.nextBetween(1, world.getGameRules().getValue(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
             if (!world.isAir(pos.east())) {
                 if (world.getBlockState(pos.east()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
                     world.setBlockState(pos.east(), ModBlocks.BLACK_GOOP.getDefaultState());
@@ -157,7 +157,7 @@ public class BlackGoopBlock extends TranslucentBlock {
                 }
             }
         }
-        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+        if (random.nextBetween(1, world.getGameRules().getValue(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
             if (!world.isAir(pos.west())) {
                 if (world.getBlockState(pos.west()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
                     world.setBlockState(pos.west(), ModBlocks.BLACK_GOOP.getDefaultState());
@@ -170,7 +170,7 @@ public class BlackGoopBlock extends TranslucentBlock {
                 }
             }
         }
-        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+        if (random.nextBetween(1, world.getGameRules().getValue(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
             if (!world.isAir(pos.north())) {
                 if (world.getBlockState(pos.north()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
                     world.setBlockState(pos.north(), ModBlocks.BLACK_GOOP.getDefaultState());
@@ -183,7 +183,7 @@ public class BlackGoopBlock extends TranslucentBlock {
                 }
             }
         }
-        if (random.nextBetween(1, world.getGameRules().getInt(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
+        if (random.nextBetween(1, world.getGameRules().getValue(ModGamerules.CORRUPTION_SPREAD_CHANCE)) == 1) {
             if (!world.isAir(pos.south())) {
                 if (world.getBlockState(pos.south()).isIn(ModTags.Blocks.CORRUPTABLE_BLOCKS)) {
                     world.setBlockState(pos.south(), ModBlocks.BLACK_GOOP.getDefaultState());

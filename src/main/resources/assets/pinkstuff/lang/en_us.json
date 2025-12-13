@@ -454,6 +454,7 @@
   "item.pinkstuff.wooden_boots": "Wooden Boots",
 
   "item.pinkstuff.kunzite_sword": "Kunzite Sword",
+  "item.pinkstuff.kunzite_spear": "Kunzite Spear",
   "item.pinkstuff.kunzite_pickaxe": "Kunzite Pickaxe",
   "item.pinkstuff.kunzite_axe": "Kunzite Axe",
   "item.pinkstuff.kunzite_shovel": "Kunzite Shovel",
@@ -465,6 +466,7 @@
   "item.pinkstuff.kunzite_boots": "Kunzite Boots",
 
   "item.pinkstuff.pinline_sword": "Pinline Sword",
+  "item.pinkstuff.pinline_spear": "Pinline Spear",
   "item.pinkstuff.pinline_pickaxe": "Pinline Pickaxe",
   "item.pinkstuff.pinline_axe": "Pinline Axe",
   "item.pinkstuff.pinline_shovel": "Pinline Shovel",
@@ -476,6 +478,7 @@
   "item.pinkstuff.pinline_boots": "Pinline Boots",
 
   "item.pinkstuff.elysium_sword": "Elysian Greatsword",
+  "item.pinkstuff.elysium_spear": "Elysian Spear",
   "item.pinkstuff.elysium_pickaxe": "Elysian Pickaxe",
   "item.pinkstuff.elysium_axe": "Elysian Axe",
   "item.pinkstuff.elysium_shovel": "Elysian Shovel",
@@ -489,6 +492,7 @@
   "item.pinkstuff.elysium_boots": "Elysian Groundwalkers",
 
   "item.pinkstuff.moonsteel_sword": "Moonsteel Sword",
+  "item.pinkstuff.moonsteel_spear": "Moonsteel Spear",
   "item.pinkstuff.moonsteel_pickaxe": "Moonsteel Pickaxe",
   "item.pinkstuff.moonsteel_axe": "Moonsteel Axe",
   "item.pinkstuff.moonsteel_shovel": "Moonsteel Shovel",
@@ -500,6 +504,7 @@
   "item.pinkstuff.moonsteel_boots": "Moonsteel Boots",
 
   "item.pinkstuff.cerille_sword": "Cerille Sword",
+  "item.pinkstuff.cerille_spear": "Cerille Spear",
   "item.pinkstuff.cerille_pickaxe": "Cerille Pickaxe",
   "item.pinkstuff.cerille_axe": "Cerille Axe",
   "item.pinkstuff.cerille_shovel": "Cerille Shovel",
@@ -511,6 +516,7 @@
   "item.pinkstuff.cerille_boots": "Cerille Groundwalkers",
 
   "item.pinkstuff.sunblaze_sword": "Sunblaze Sword",
+  "item.pinkstuff.sunblaze_spear": "Sunblaze Spear",
   "item.pinkstuff.sunblaze_pickaxe": "Sunblaze Pickaxe",
   "item.pinkstuff.sunblaze_axe": "Sunblaze Axe",
   "item.pinkstuff.sunblaze_shovel": "Sunblaze Shovel",
@@ -674,7 +680,7 @@
   "painting.pinkstuff.tree.title": "Tree",
   "painting.pinkstuff.tree.author": "JirniyUwU",
 
-  "gamerule.disableCorruptionSpread": "Disable corruption spread",
+  "gamerule.spreadableCorruption": "Allow corruption to spread",
   "gamerule.corruptionSpreadChance": "Corruption spread chance",
   "gamerule.corruptionSpreadChance.description": "Chance in 1/value per direction for Corruption to spread per Random tick",
 

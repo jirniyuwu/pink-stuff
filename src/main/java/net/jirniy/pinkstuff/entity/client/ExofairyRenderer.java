@@ -4,6 +4,7 @@ import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.entity.custom.ExofairyEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.command.OrderedRenderCommandQueue;
+import net.minecraft.client.render.entity.AllayEntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.feature.HeldItemFeatureRenderer;
@@ -41,7 +42,7 @@ public class ExofairyRenderer extends MobEntityRenderer<ExofairyEntity, Exofairy
 
     public void updateRenderState(ExofairyEntity exofairyEntity, ExofairyRenderState exofairyEntityRenderState, float f) {
         super.updateRenderState(exofairyEntity, exofairyEntityRenderState, f);
-        ArmedEntityRenderState.updateRenderState(exofairyEntity, exofairyEntityRenderState, this.itemModelResolver);
+        ArmedEntityRenderState.updateRenderState(exofairyEntity, exofairyEntityRenderState, this.itemModelResolver, f);
     }
 
     protected int getBlockLight(ExofairyEntity exofairyEntity, BlockPos blockPos) {

@@ -44,6 +44,7 @@ import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOffers;
 import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
+import net.minecraft.world.dimension.DimensionType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -211,153 +212,153 @@ public class JirniysPinkStuff implements ModInitializer {
 		});
 
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 3, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(40, 60)),
 					new ItemStack(ModItems.SWORDMASTER_SMITHING_TEMPLATE, 1), 2, 7, 0.04f));
 		});
 		TradeOfferHelper.registerWanderingTraderOffers(factories -> {
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(3, 5)),
 					new ItemStack(ModItems.KUNZITE, random.nextBetween(3, 10)), 5, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 1),
 					new ItemStack(ModBlocks.CRYSTAL_CHERRY_LOG, 8), 2, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 1),
 					new ItemStack(ModItems.SULFUR, 2), 3, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2),
 					new ItemStack(ModItems.PINK_BITS, random.nextBetween(2, 18)), 17, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2),
 					new ItemStack(ModItems.GEM_BERRY, random.nextBetween(1, 4)), 5, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(30, 50)),
 					new ItemStack(ModItems.CHESS_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(50, 64)),
 					new ItemStack(ModItems.WANDERER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(40, 64)),
 					new ItemStack(ModItems.SWORDMASTER_SMITHING_TEMPLATE, 1), 1, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(20, 30)),
 					new ItemStack(ModItems.ELYSIUM_APPLE, 1), 5, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.GELATINOUS_BUD, 3),
 					new ItemStack(Items.EMERALD, 1), 7, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.ENERGIZED_THERMIUM, 1),
 					new ItemStack(Items.EMERALD, random.nextBetween(20, 50)), 2, 7, 0.04f));
-			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (entity, random) -> new TradeOffer(
+			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.BUY_ITEMS_POOL, (serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.HAZEWEAVER, 1),
 					new ItemStack(Items.EMERALD, 1), 10, 7, 0.04f));
 			factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL,
-					(entity, random) -> new TradeOffers.SellMapFactory(
+					(serverWorld, entity, random) -> new TradeOffers.SellMapFactory(
 							5, ModTags.Structures.STYXIAN_PORTAL, "filled_map.pinkstuff.styxian_portal", ModMapDecorations.STYXIAN_PORTAL, 3, 12
-			).create(entity, random));
+			).create(serverWorld, entity, random));
 		});
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 2, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.GEM_BERRY, random.nextBetween(10, 30)),
 					new ItemStack(Items.EMERALD, 1), 16, 7, 0.04f));
 		});
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.SHEPHERD, 3, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.COTTON, random.nextBetween(3, 6)),
 					new ItemStack(Items.EMERALD, 1), 16, 7, 0.06f));
 		});
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 3, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(20, 30)),
 					new ItemStack(ModItems.ELYSIUM_APPLE, 1), 4, 7, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, random.nextBetween(20, 30)),
 					new ItemStack(ModItems.CRYSTAL_CARROT, 4), 4, 7, 0.08f));
 		});
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.CARTOGRAPHER, 2, factories -> {
-			factories.add((entity, random) -> new TradeOffers.SellMapFactory(
+			factories.add((serverWorld, entity, random) -> new TradeOffers.SellMapFactory(
 					15, ModTags.Structures.STYXIAN_PORTAL, "filled_map.pinkstuff.styxian_portal", ModMapDecorations.STYXIAN_PORTAL, 3, 12
-			).create(entity, random));
+			).create(serverWorld, entity, random));
 		});
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.CARTOGRAPHER, 3, factories -> {
-			factories.add((entity, random) -> new TradeOffers.SellMapFactory(
+			factories.add((serverWorld, entity, random) -> new TradeOffers.SellMapFactory(
 					30, ModTags.Structures.CHAMBERS, "filled_map.pinkstuff.chambers", ModMapDecorations.CHAMBERS, 3, 12
-			).create(entity, random));
+			).create(serverWorld, entity, random));
 		});
 
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 0, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.EMERALD_NUGGET, 11),
 					new ItemStack(ModItems.CORRUPT_SPROUTS, 8), 8, 3, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.EMERALD_NUGGET, 4),
 					new ItemStack(ModItems.CORRUPT_DROPLET, 2), 8, 3, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.DEAD_SPROUT, 1),
 					new ItemStack(ModItems.EMERALD_NUGGET, 3), 4, 7, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModBlocks.CORRERIE_LOG, 5),
 					new ItemStack(ModItems.EMERALD_NUGGET, 2), 6, 4, 0.08f));
 		});
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 1, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 3),
 					new ItemStack(ModItems.MATURE_SPROUT, 1), 4, 3, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 4),
 					new ItemStack(ModItems.CORRUPT_MASS, 1), 2, 11, 0.12f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.AMETHYST_BLAZE_ROD, 1),
 					new ItemStack(Items.EMERALD, 1), 4, 7, 0.08f));
 		});
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 2, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.EMERALD_NUGGET, 3),
 					new ItemStack(ModBlocks.CORESTONE, 3), 8, 2, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModBlocks.BLACK_GOOP, 12),
 					new ItemStack(ModItems.EMERALD_NUGGET, 3), 5, 2, 0.12f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.SUNGAZE, 1),
 					new ItemStack(Items.EMERALD, 3), 3, 8, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.MAGIC_GLITTER, 3),
 					new ItemStack(Items.EMERALD, 1), 4, 7, 0.08f));
 		});
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 3, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 3),
 					new ItemStack(ModItems.MOONSTEEL_INGOT, 2), 3, 14, 0.12f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 1),
 					new ItemStack(ModBlocks.CORRUPT_ROOTS, 1), 7, 3, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 1),
 					new ItemStack(ModBlocks.HANGING_CORRUPT_ROOTS, 1), 7, 3, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 1),
 					new ItemStack(ModItems.RAW_FAIRY_MEAT, 3), 5, 6, 0.08f));
 		});
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 4, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.FORBIDDEN_MECHANISM, 1),
 					new ItemStack(Items.EMERALD, 5), 3, 15, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 4),
 					new ItemStack(Items.OBSIDIAN, 1), 5, 8, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2), Optional.of(new TradedItem(Items.BOWL, 1)),
 					new ItemStack(ModItems.FLESHY_STEW, 1), 9, 3, 0.08f));
 		});
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 5, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 24),
 					new ItemStack(ModItems.FORBIDDEN_SMITHING_TEMPLATE, 1), 3, 12, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModBlocks.CORRUPT_ORE, 1), Optional.of(new TradedItem(Items.EMERALD, 4)),
 					new ItemStack(ModItems.CORRUPT_MASS, 4), 3, 8, 0.08f));
-			factories.add((entity, random) -> new TradeOffer(
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 23),
 					new ItemStack(ModItems.CORRUPTION_SMITHING_TEMPLATE, 1), 3, 12, 0.08f));
 		});
