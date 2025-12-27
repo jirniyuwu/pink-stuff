@@ -1,0 +1,36 @@
+[
+  {
+    "processor_type": "minecraft:rule",
+    "rules": [
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:lily_pad",
+          "probability": 0.8
+        },
+        "output_state": {
+          "Name": "minecraft:air"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:lily_pad",
+          "probability": 0.06
+        },
+        "output_state": {
+          "Name": "pinkstuff:lotus",
+          "Properties": {
+            "pad": "true"
+          }
+        }
+      }
+    ]
+  }
+]

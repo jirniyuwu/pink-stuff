@@ -167,7 +167,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "pinkstuff:cherry_village/buildings/profession/fishing_pond",
-        "processors": "minecraft:empty"
+        "processors": "pinkstuff:lily_pad"
       }
     },
     {

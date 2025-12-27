@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "pad=false": [
+      {
+        "model": "pinkstuff:block/lotus"
+      },
+      {
+        "model": "pinkstuff:block/lotus",
+        "y": 90
+      },
+      {
+        "model": "pinkstuff:block/lotus",
+        "y": 180
+      },
+      {
+        "model": "pinkstuff:block/lotus",
+        "y": 270
+      }
+    ],
+    "pad=true": [
+      {
+        "model": "pinkstuff:block/lotus_pad"
+      },
+      {
+        "model": "pinkstuff:block/lotus_pad",
+        "y": 90
+      },
+      {
+        "model": "pinkstuff:block/lotus_pad",
+        "y": 180
+      },
+      {
+        "model": "pinkstuff:block/lotus_pad",
+        "y": 270
+      }
+    ]
+  }
+}

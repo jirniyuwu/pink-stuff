@@ -2672,6 +2672,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.DEATH_FLOWERS), conditionsFromItem(ModBlocks.DEATH_FLOWERS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "dye_from_death_flowers")));
+                createShapeless(RecipeCategory.MISC, Items.PINK_DYE, 1)
+                        .input(ModBlocks.LOTUS)
+                        .criterion(hasItem(ModBlocks.LOTUS), conditionsFromItem(ModBlocks.LOTUS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "dye_from_lotus")));
 
                 createShaped(RecipeCategory.MISC, Items.LEATHER, 1)
                         .pattern("CD")

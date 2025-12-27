@@ -3,6 +3,7 @@ package net.jirniy.pinkstuff.world;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.minecraft.block.Blocks;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -98,6 +99,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> FALLEN_KEAPHE_PLACED = registerKey("fallen_keaphe_placed");
     public static final RegistryKey<PlacedFeature> MOSSY_FALLEN_KEAPHE_PLACED = registerKey("mossy_fallen_keaphe_placed");
     public static final RegistryKey<PlacedFeature> BLUE_MUSHROOM_PATCH_PLACED = registerKey("blue_mushroom_patch_placed");
+    public static final RegistryKey<PlacedFeature> LOTUS_FLOWER_PLACED = registerKey("lotus_flower_placed");
     public static final RegistryKey<PlacedFeature> SIMPLE_CRYSTAL_CHERRY_PLACED = registerKey("simple_crystal_cherry_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
@@ -369,6 +371,11 @@ public class ModPlacedFeatures {
         register(context, BLUE_MUSHROOM_PATCH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUE_MUSHROOM_PATCH_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
                         EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
+
+        register(context, LOTUS_FLOWER_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.LOTUS_FLOWER_KEY),
+                new PlacementModifier[]{CountPlacementModifier.of(40), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.matchingFluids(Fluids.WATER), BlockPredicate.IS_AIR, 12),
                         RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
 
         register(context, KUNZITE_GEODE_LUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_GEODE_KEY),

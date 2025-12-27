@@ -121,6 +121,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_BLUE_MUSHROOM_KEY = registryKey("huge_blue_mushroom");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_KEAPHE_KEY = registryKey("fallen_keaphe");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_KEAPHE_MOSSY_KEY = registryKey("fallen_keaphe_mossy");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LOTUS_FLOWER_KEY = registryKey("lotus_flower");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -202,6 +203,8 @@ public class ModConfiguredFeatures {
         register(context, MOSSY_STYXIAN_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE.getDefaultState(), 3)
                 .add(ModBlocks.COBBLED_STYXSTONE.getDefaultState(), 1))));
+        register(context, LOTUS_FLOWER_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(
+                BlockStateProvider.of(ModBlocks.LOTUS.getDefaultState().with(LotusBlock.PAD, true))));
         register(context, STYXIAN_CLAY_PATCH_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXIAN_SOIL), CLAY.getDefaultState()),
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), CLAY.getDefaultState())),

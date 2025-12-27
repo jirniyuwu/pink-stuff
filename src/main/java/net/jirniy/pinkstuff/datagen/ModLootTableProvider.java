@@ -398,6 +398,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ELYSIAN_SKYBERRY);
         addDrop(ModBlocks.THERMIUM_WILTBORN);
         addDrop(ModBlocks.MEMORIA_BOURPEER);
+        addDrop(ModBlocks.LOTUS);
         addDrop(ModBlocks.HAZEWEAVER_PLANT, ModItems.HAZEWEAVER);
         addDrop(ModBlocks.BLUE_MUSHROOM);
 

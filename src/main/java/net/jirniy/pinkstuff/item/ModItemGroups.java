@@ -333,6 +333,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ELYSIAN_SKYBERRY);
                         entries.add(ModBlocks.THERMIUM_WILTBORN);
                         entries.add(ModBlocks.MEMORIA_BOURPEER);
+                        entries.add(ModBlocks.LOTUS);
 
                         entries.add(ModBlocks.SMALL_END_GRASS);
                         entries.add(ModBlocks.MEDIUM_END_GRASS);
@@ -1049,6 +1050,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.ELYSIAN_SKYBERRY);
             entries.add(ModBlocks.THERMIUM_WILTBORN);
             entries.add(ModBlocks.MEMORIA_BOURPEER);
+            entries.add(ModBlocks.LOTUS);
             entries.add(ModBlocks.STYXGRASS);
             entries.add(ModBlocks.HANGING_STYXGRASS);
             entries.add(ModBlocks.HANGING_STYXMOSS);

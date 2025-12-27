@@ -999,6 +999,9 @@ public class ModBlocks {
     public static final Block DEATH_FLOWERS = registerBlock("death_flowers",
             properties -> new FlowerbedBlock(properties.strength(0f)
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block LOTUS = registerBlock("lotus",
+            properties -> new LotusBlock(StatusEffects.DOLPHINS_GRACE, 60, properties
+                    .strength(0f).noCollision().nonOpaque().sounds(BlockSoundGroup.CACTUS_FLOWER).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block POTTED_AMETHYST_PARTERS = registerBlockWithoutBlockItem("potted_amethyst_parters",
             properties -> new FlowerPotBlock(ModBlocks.AMETHYST_PARTERS, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));

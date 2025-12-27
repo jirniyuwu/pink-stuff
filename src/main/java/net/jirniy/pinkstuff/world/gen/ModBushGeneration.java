@@ -13,6 +13,8 @@ public class ModBushGeneration {
             GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.GEM_BERRY_BUSH_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.HAZEWEAVER_PLANT_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CHERRY_GROVE, BiomeKeys.LUSH_CAVES, BiomeKeys.SWAMP, BiomeKeys.MANGROVE_SWAMP),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LOTUS_FLOWER_PLACED);
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SMALL_END_GRASS_PLACED_KEY);

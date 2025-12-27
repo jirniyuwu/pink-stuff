@@ -25,6 +25,7 @@ import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.block.entity.ShelfBlockEntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactories;
+import net.minecraft.client.render.item.tint.TintSource;
 
 public class JirniysPinkStuffClient implements ClientModInitializer {
     @Override
@@ -47,6 +48,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.ELYSIAN_SKYBERRY, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.THERMIUM_WILTBORN, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.MEMORIA_BOURPEER, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.LOTUS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.DEATH_FLOWERS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.STYXGRASS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.HANGING_STYXGRASS, BlockRenderLayer.CUTOUT);
