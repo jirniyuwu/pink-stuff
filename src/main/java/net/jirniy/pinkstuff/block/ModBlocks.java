@@ -1021,6 +1021,8 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(ModBlocks.KEAPHE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_SNOWY_SPRUCE_SAPLING = registerBlockWithoutBlockItem("potted_snowy_spruce_sapling",
             properties -> new FlowerPotBlock(ModBlocks.SNOWY_SPRUCE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_LOTUS = registerBlockWithoutBlockItem("potted_lotus",
+            properties -> new FlowerPotBlock(ModBlocks.LOTUS, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SMALL_END_GRASS = registerBlock("small_end_grass",
             properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()

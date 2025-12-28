@@ -392,6 +392,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPottedPlantDrops(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_CHORUS_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_KEAPHE_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_LOTUS);
 
         addDrop(ModBlocks.AMETHYST_PARTERS);
         addDrop(ModBlocks.KUNZITE_LOVELILY);
