@@ -370,5 +370,6 @@ public class JirniysPinkStuff implements ModInitializer {
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.COTTON, 0.5F);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.COTTON_SEEDS, 0.25F);
+		CompostingChanceRegistry.INSTANCE.add(ModBlocks.LOTUS.asItem(), 0.8F);
 	}
 }

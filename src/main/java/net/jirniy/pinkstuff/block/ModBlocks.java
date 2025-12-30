@@ -1000,7 +1000,7 @@ public class ModBlocks {
             properties -> new FlowerbedBlock(properties.strength(0f)
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block LOTUS = registerBlock("lotus",
-            properties -> new LotusBlock(StatusEffects.DOLPHINS_GRACE, 60, properties
+            properties -> new LotusBlock(StatusEffects.DOLPHINS_GRACE, 60, properties.luminance(state -> 3)
                     .strength(0f).noCollision().nonOpaque().sounds(BlockSoundGroup.CACTUS_FLOWER).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block POTTED_AMETHYST_PARTERS = registerBlockWithoutBlockItem("potted_amethyst_parters",
@@ -1022,7 +1022,7 @@ public class ModBlocks {
     public static final Block POTTED_SNOWY_SPRUCE_SAPLING = registerBlockWithoutBlockItem("potted_snowy_spruce_sapling",
             properties -> new FlowerPotBlock(ModBlocks.SNOWY_SPRUCE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_LOTUS = registerBlockWithoutBlockItem("potted_lotus",
-            properties -> new FlowerPotBlock(ModBlocks.LOTUS, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+            properties -> new FlowerPotBlock(ModBlocks.LOTUS, properties.strength(0f).luminance(state -> 3).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SMALL_END_GRASS = registerBlock("small_end_grass",
             properties -> new ModGrassBlock(ModTags.Blocks.END_STONE, properties.strength(0f).replaceable()

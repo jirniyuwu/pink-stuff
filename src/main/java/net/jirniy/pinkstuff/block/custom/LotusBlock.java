@@ -18,6 +18,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -25,11 +26,12 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 import net.minecraft.world.block.WireOrientation;
 import net.minecraft.world.event.GameEvent;
 import org.jspecify.annotations.Nullable;
 
-public class LotusBlock extends FlowerBlock {
+public class LotusBlock extends FlowerBlock implements Fertilizable {
     public static final BooleanProperty PAD = BooleanProperty.of("pad");
     private static final VoxelShape SHAPE = Block.createColumnShape((double)12.0F, (double)0.0F, (double)3F);
 
@@ -83,5 +85,20 @@ public class LotusBlock extends FlowerBlock {
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(PAD);
         super.appendProperties(builder);
+    }
+
+    @Override
+    public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state) {
+        return true;
+    }
+
+    @Override
+    public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
+        return true;
+    }
+
+    @Override
+    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
+        ItemScatterer.spawn(world, pos.getX() + 0.5, pos.getY() + 0.2, pos.getZ() + 0.5, new ItemStack(this.asItem()));
     }
 }
