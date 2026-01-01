@@ -1,0 +1,46 @@
+{
+  "name": "pinkstuff:fossil",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:fossils/fossil1",
+        "processors": "pinkstuff:fossil",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:fossils/fossil2",
+        "processors": "pinkstuff:fossil",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:fossils/fossil3",
+        "processors": "pinkstuff:fossil",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:fossils/fossil4",
+        "processors": "pinkstuff:fossil",
+        "override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

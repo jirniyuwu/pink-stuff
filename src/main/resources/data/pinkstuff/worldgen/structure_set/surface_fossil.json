@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "pinkstuff:surface_fossil",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 13,
+    "separation": 4,
+    "spread_type": "linear",
+    "salt": 19481872
+  }
+}
