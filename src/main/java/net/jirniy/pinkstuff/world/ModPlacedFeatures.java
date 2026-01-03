@@ -56,7 +56,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MEDIUM_END_GRASS_PLACED_KEY = registerKey("medium_end_grass_placed");
     public static final RegistryKey<PlacedFeature> LARGE_END_GRASS_PLACED_KEY = registerKey("large_end_grass_placed");
     public static final RegistryKey<PlacedFeature> CHORUS_LILY_PLACED_KEY = registerKey("chorus_lily_placed");
-    public static final RegistryKey<PlacedFeature> COMPRESSEND_END_STONE_PLACED_KEY = registerKey("compressed_end_stone_placed");
+    public static final RegistryKey<PlacedFeature> COMPRESSED_END_STONE_PLACED_KEY = registerKey("compressed_end_stone_placed");
     public static final RegistryKey<PlacedFeature> COMPRESSED_STYXSTONE_PLACED_KEY = registerKey("compressed_styxstone_placed");
     public static final RegistryKey<PlacedFeature> MABRIZE_PLACED_KEY = registerKey("mabrize_placed");
     public static final RegistryKey<PlacedFeature> AMETANE_PLACED_KEY = registerKey("ametane_placed");
@@ -163,7 +163,7 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(30,
                         HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(200)))
         );
-        register(context, COMPRESSEND_END_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COMPRESSED_END_STONE_KEY),
+        register(context, COMPRESSED_END_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COMPRESSED_END_STONE_KEY),
                 ModOrePlacement.modifiersWithCount(13,
                         HeightRangePlacementModifier.of(
                                 BiasedToBottomHeightProvider.create(YOffset.BOTTOM, YOffset.fixed(50), 2)))

@@ -29,6 +29,8 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS,
                         BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.PINLINE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.COMPRESSED_END_STONE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.AMETHYST_CLUMP_PLACED_KEY);
