@@ -46,6 +46,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.END_MOSS);
                         entries.add(ModBlocks.STYXIAN_SOIL);
                         entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);
+                        entries.add(ModBlocks.STYXIAN_PATH);
+                        entries.add(ModBlocks.TILED_STYXIAN_PATH);
                         entries.add(ModBlocks.STYXMOSS);
                         entries.add(ModBlocks.STYXMOSS_CARPET);
                         entries.add(ModBlocks.COBBLED_STYXSTONE);
@@ -1012,6 +1014,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.END_MOSS);
             entries.add(ModBlocks.STYXIAN_SOIL);
             entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);
+            entries.add(ModBlocks.STYXIAN_PATH);
+            entries.add(ModBlocks.TILED_STYXIAN_PATH);
             entries.add(ModBlocks.STYXMOSS);
             entries.add(ModBlocks.STYXMOSS_CARPET);
 

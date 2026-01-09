@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "pinkstuff:block/tiled_styxian_path"
+      },
+      {
+        "model": "pinkstuff:block/tiled_styxian_path"
+      },
+      {
+        "model": "pinkstuff:block/tiled_styxian_path"
+      },
+      {
+        "model": "pinkstuff:block/tiled_styxian_path"
+      },
+      {
+        "model": "pinkstuff:block/tiled_styxian_path1"
+      },
+      {
+        "model": "pinkstuff:block/tiled_styxian_path2"
+      },
+      {
+        "model": "pinkstuff:block/tiled_styxian_path3"
+      },
+      {
+        "model": "pinkstuff:block/tiled_styxian_path4"
+      }
+    ]
+  }
+}

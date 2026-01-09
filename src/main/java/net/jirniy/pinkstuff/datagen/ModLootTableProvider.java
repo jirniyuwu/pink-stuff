@@ -238,6 +238,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.STYXIAN_SOIL);
         addDrop(ModBlocks.ROOTED_STYXIAN_SOIL);
+        addDrop(ModBlocks.STYXIAN_PATH, ModBlocks.STYXIAN_SOIL);
+        addDrop(ModBlocks.TILED_STYXIAN_PATH, ModBlocks.STYXIAN_SOIL);
         addDrop(ModBlocks.END_MOSS);
         addDrop(ModBlocks.STYXMOSS);
         addDrop(ModBlocks.STYXMOSS_CARPET);

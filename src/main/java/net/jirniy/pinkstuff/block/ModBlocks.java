@@ -66,6 +66,12 @@ public class ModBlocks {
     public static final Block ROOTED_STYXIAN_SOIL = registerBlock("rooted_styxian_soil",
             properties -> new Block(properties.strength(1f)
                     .sounds(BlockSoundGroup.ROOTED_DIRT).mapColor(MapColor.DARK_AQUA)));
+    public static final Block STYXIAN_PATH = registerBlock("styxian_path",
+            properties -> new StyxianPathBlock(properties.mapColor(MapColor.DARK_AQUA)
+                    .strength(0.8F).sounds(BlockSoundGroup.SOUL_SOIL).blockVision(Blocks::always).suffocates(Blocks::always)));
+    public static final Block TILED_STYXIAN_PATH = registerBlock("tiled_styxian_path",
+            properties -> new StyxianPathBlock(properties.mapColor(MapColor.TERRACOTTA_BLACK)
+                    .strength(0.95F).sounds(BlockSoundGroup.SOUL_SOIL).blockVision(Blocks::always).suffocates(Blocks::always)));
     public static final Block STYXMOSS = registerBlock("styxmoss",
             properties -> new StyxmossBlock(ModConfiguredFeatures.STYXMOSS_PATCH_BONEMEAL_KEY, properties.strength(0.7f)
                     .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.DARK_AQUA)));

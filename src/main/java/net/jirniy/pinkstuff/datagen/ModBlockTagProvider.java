@@ -262,6 +262,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CUT_PINK_SANDSTONE_SLAB);
         valueLookupBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.STYXIAN_SOIL)
+                .add(ModBlocks.STYXIAN_PATH)
+                .add(ModBlocks.TILED_STYXIAN_PATH)
                 .add(ModBlocks.ROOTED_STYXIAN_SOIL)
                 .add(ModBlocks.PINK_SAND)
                 .add(ModBlocks.ASH_BLOCK);
