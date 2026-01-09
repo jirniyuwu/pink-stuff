@@ -1,0 +1,42 @@
+{
+  "name": "pinkstuff:styxian_ruins/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/start1",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/start2",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/start3",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/structure/start",
+        "processors": "pinkstuff:styxian_ruins/structure"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "pinkstuff:styxian_ruins/structure",
+  "fallback": "pinkstuff:styxian_ruins/ends",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/structure/wall",
+        "processors": "pinkstuff:styxian_ruins/structure"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/structure/outpost",
+        "processors": "pinkstuff:styxian_ruins/structure"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/structure/stairs",
+        "processors": "pinkstuff:styxian_ruins/structure"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/structure/random",
+        "processors": "pinkstuff:styxian_ruins/structure"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/structure/end",
+        "processors": "pinkstuff:styxian_ruins/structure"
+      }
+    }
+  ]
+}

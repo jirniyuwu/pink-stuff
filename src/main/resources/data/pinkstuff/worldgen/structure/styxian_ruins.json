@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": [
+    "pinkstuff:styxmoss_overgrowth",
+    "pinkstuff:keaphe_forest",
+    "pinkstuff:magic_crystals"
+  ],
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
+  "spawn_overrides": {
+    "ambient": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "minecraft:bat",
+          "weight": 1,
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  },
+  "start_pool": "pinkstuff:styxian_ruins/start",
+  "size": 9,
+  "start_height": {
+    "absolute": 0
+  },
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "max_distance_from_center": 116,
+  "use_expansion_hack": false
+}

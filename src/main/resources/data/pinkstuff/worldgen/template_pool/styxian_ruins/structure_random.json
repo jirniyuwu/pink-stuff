@@ -1,0 +1,75 @@
+{
+  "name": "pinkstuff:styxian_ruins/random",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/random/lantern1",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/random/lantern2",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/random/wood1",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/random/wood2",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/random/tower",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/random/farm1",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/random/farm2",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    }
+  ]
+}

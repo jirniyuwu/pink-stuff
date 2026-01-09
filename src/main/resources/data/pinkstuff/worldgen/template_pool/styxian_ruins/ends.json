@@ -1,0 +1,24 @@
+{
+  "name": "pinkstuff:styxian_ruins/ends",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/end1",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/structure/end",
+        "processors": "pinkstuff:styxian_ruins/structure"
+      }
+    }
+  ]
+}

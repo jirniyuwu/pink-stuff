@@ -1,0 +1,105 @@
+{
+  "name": "pinkstuff:styxian_ruins/paths",
+  "fallback": "pinkstuff:styxian_ruins/ends",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/straight1",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/straight2",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/straight3",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/straight4",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/corner1",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/corner2",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/intersection1",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/intersection2",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/end1",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/end2",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/paths/end3",
+        "processors": "pinkstuff:styxian_ruins/paths"
+      }
+    }
+  ]
+}

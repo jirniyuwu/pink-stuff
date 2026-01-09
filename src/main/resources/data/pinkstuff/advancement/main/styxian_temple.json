@@ -30,6 +30,16 @@
           }
         }
       }
+    },
+    "ruins": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": "pinkstuff:styxian_ruins"
+          }
+        }
+      }
     }
   },
   "display": {
@@ -49,7 +59,8 @@
     [
       "forest",
       "desert",
-      "cherry"
+      "cherry",
+      "ruins"
     ]
   ],
   "sends_telemetry_event": false

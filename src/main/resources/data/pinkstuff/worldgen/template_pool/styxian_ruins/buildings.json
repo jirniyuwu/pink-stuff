@@ -1,0 +1,129 @@
+{
+  "name": "pinkstuff:styxian_ruins/buildings",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 21,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/ruins1",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/ruins2",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/ruins3",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/ruins4",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/ruins5",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/ruins6",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/ruins7",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/small_ruin1",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/small_ruin2",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/small_ruin3",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/small_ruin4",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/small_ruin5",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/buildings/small_ruin6",
+        "processors": "pinkstuff:styxian_ruins/buildings"
+      }
+    }
+  ]
+}
