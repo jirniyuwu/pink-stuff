@@ -1,0 +1,24 @@
+{
+  "name": "pinkstuff:styxian_ruins/desert_ends",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/end1",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_structure/end",
+        "processors": "pinkstuff:styxian_ruins/desert_structure"
+      }
+    }
+  ]
+}

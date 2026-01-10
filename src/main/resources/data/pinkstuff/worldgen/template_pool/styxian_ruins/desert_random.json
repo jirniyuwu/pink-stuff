@@ -1,0 +1,75 @@
+{
+  "name": "pinkstuff:styxian_ruins/desert_random",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_random/wall1",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_random/wall2",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_random/campfire",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_random/tower",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_random/pillar",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_random/hay1",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_random/hay2",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    }
+  ]
+}

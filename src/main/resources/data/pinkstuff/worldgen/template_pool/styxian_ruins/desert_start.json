@@ -1,0 +1,15 @@
+{
+  "name": "pinkstuff:styxian_ruins/desert_start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_structure/start",
+        "processors": "pinkstuff:styxian_ruins/desert_structure"
+      }
+    }
+  ]
+}

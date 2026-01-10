@@ -32,7 +32,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:cerille_horse_armor",
+          "name": "pinkstuff:cerille_horse_armor",
           "weight": 1
         },
         {

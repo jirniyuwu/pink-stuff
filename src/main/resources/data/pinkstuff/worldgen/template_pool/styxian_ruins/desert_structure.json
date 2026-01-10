@@ -1,0 +1,42 @@
+{
+  "name": "pinkstuff:styxian_ruins/desert_structure",
+  "fallback": "pinkstuff:styxian_ruins/desert_ends",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_structure/wall",
+        "processors": "pinkstuff:styxian_ruins/desert_structure"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_structure/stairs",
+        "processors": "pinkstuff:styxian_ruins/desert_structure"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_structure/outpost",
+        "processors": "pinkstuff:styxian_ruins/desert_structure"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_structure/end",
+        "processors": "pinkstuff:styxian_ruins/desert_structure"
+      }
+    }
+  ]
+}

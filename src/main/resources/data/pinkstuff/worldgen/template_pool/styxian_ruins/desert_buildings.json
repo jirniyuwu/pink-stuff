@@ -1,0 +1,111 @@
+{
+  "name": "pinkstuff:styxian_ruins/desert_buildings",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/ruins1",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/ruins2",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/ruins3",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/ruins4",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/ruins5",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/ruins6",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/ruins7",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/small_ruin1",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/small_ruin2",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/small_ruin3",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:styxian_ruins/desert_buildings/small_ruin4",
+        "processors": "pinkstuff:styxian_ruins/desert_buildings"
+      }
+    }
+  ]
+}

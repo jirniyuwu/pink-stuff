@@ -3,6 +3,10 @@
     {
       "structure": "pinkstuff:styxian_ruins",
       "weight": 1
+    },
+    {
+      "structure": "pinkstuff:desert_styxian_ruins",
+      "weight": 1
     }
   ],
   "placement": {

@@ -1,0 +1,105 @@
+{
+  "name": "pinkstuff:styxian_ruins/desert_paths",
+  "fallback": "pinkstuff:styxian_ruins/desert_ends",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/straight1",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/straight2",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/straight3",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/straight4",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/corner1",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/corner2",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/intersection1",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/intersection2",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/end1",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/end2",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "terrain_matching",
+        "location": "pinkstuff:styxian_ruins/desert_paths/end3",
+        "processors": "pinkstuff:styxian_ruins/desert_paths"
+      }
+    }
+  ]
+}
