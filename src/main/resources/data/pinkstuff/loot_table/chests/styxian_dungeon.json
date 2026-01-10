@@ -11,6 +11,12 @@
         },
         {
           "type": "minecraft:item",
+          "name": "pinkstuff:moonsteel_horse_armor",
+          "functions": [],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
           "name": "pinkstuff:overgrowth_armor_trim_smithing_template",
           "functions": [
             {

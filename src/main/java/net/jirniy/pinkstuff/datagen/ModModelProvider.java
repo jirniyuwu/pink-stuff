@@ -595,5 +595,11 @@ public class ModModelProvider extends FabricModelProvider {
                 ModArmorMaterials.WOODEN_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.WOODEN_BOOTS,
                 ModArmorMaterials.WOODEN_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.register(ModItems.KUNZITE_HORSE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ELYSIUM_HORSE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MOONSTEEL_HORSE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CERILLE_HORSE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SUNGAZE_HORSE_ARMOR, Models.GENERATED);
     }
 }

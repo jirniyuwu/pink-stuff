@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "pinkstuff:kunzite"
+      }
+    ],
     "humanoid": [
       {
         "texture": "pinkstuff:kunzite"

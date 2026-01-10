@@ -143,6 +143,18 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "functions": [],
+          "name": "pinkstuff:moonsteel_horse_armor",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [],
+          "name": "pinkstuff:sungaze_horse_armor",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",

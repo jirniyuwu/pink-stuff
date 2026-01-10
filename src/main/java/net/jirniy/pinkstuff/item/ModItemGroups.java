@@ -496,6 +496,12 @@ public class ModItemGroups {
                         entries.add(ModItems.NETHERITE_MULTITOOL);
                         entries.add(ModItems.NETHERITE_ELYTRA);
 
+                        entries.add(ModItems.KUNZITE_HORSE_ARMOR);
+                        entries.add(ModItems.ELYSIUM_HORSE_ARMOR);
+                        entries.add(ModItems.MOONSTEEL_HORSE_ARMOR);
+                        entries.add(ModItems.CERILLE_HORSE_ARMOR);
+                        entries.add(ModItems.SUNGAZE_HORSE_ARMOR);
+
                         entries.add(ModItems.WOODEN_HELMET);
                         entries.add(ModItems.WOODEN_CHESTPLATE);
                         entries.add(ModItems.WOODEN_LEGGINGS);
@@ -972,6 +978,12 @@ public class ModItemGroups {
             entries.add(ModItems.PINLINE_CHESTPLATE);
             entries.add(ModItems.PINLINE_LEGGINGS);
             entries.add(ModItems.PINLINE_BOOTS);
+
+            entries.add(ModItems.KUNZITE_HORSE_ARMOR);
+            entries.add(ModItems.ELYSIUM_HORSE_ARMOR);
+            entries.add(ModItems.MOONSTEEL_HORSE_ARMOR);
+            entries.add(ModItems.CERILLE_HORSE_ARMOR);
+            entries.add(ModItems.SUNGAZE_HORSE_ARMOR);
 
             entries.add(ModItems.DAWNBLOOMER);
             entries.add(ModItems.SUNSHADE);

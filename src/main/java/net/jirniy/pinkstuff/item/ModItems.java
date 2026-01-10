@@ -329,6 +329,18 @@ public class ModItems {
     public static final Item WOODEN_BOOTS = registerItem("wooden_boots",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.WOODEN_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
+    public static final Item KUNZITE_HORSE_ARMOR = registerItem("kunzite_horse_armor",
+            setting -> new Item(setting.horseArmor(ModArmorMaterials.KUNZITE_ARMOR_MATERIAL).maxCount(1)));
+    public static final Item ELYSIUM_HORSE_ARMOR = registerItem("elysium_horse_armor",
+            setting -> new Item(setting.horseArmor(ModArmorMaterials.ELYSIUM_ARMOR_MATERIAL).maxCount(1)));
+    public static final Item MOONSTEEL_HORSE_ARMOR = registerItem("moonsteel_horse_armor",
+            setting -> new Item(setting.horseArmor(ModArmorMaterials.MOONSTEEL_ARMOR_MATERIAL).maxCount(1)));
+    public static final Item CERILLE_HORSE_ARMOR = registerItem("cerille_horse_armor",
+            setting -> new Item(setting.horseArmor(ModArmorMaterials.CERILLE_ARMOR_MATERIAL).maxCount(1)));
+    public static final Item SUNGAZE_HORSE_ARMOR = registerItem("sungaze_horse_armor",
+            setting -> new Item(setting.horseArmor(ModArmorMaterials.SUNBLAZE_ARMOR_MATERIAL).maxCount(1)));
+
+
     public static final Item CHERRY_SMITHING_TEMPLATE = registerItem("cherry_armor_trim_smithing_template",
             setting -> SmithingTemplateItem.of(setting.rarity(Rarity.RARE)));
     public static final Item BLOOM_SMITHING_TEMPLATE = registerItem("bloom_armor_trim_smithing_template",

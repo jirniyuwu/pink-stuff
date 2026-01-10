@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "pinkstuff:moonsteel"
+      }
+    ],
     "humanoid": [
       {
         "texture": "pinkstuff:moonsteel"

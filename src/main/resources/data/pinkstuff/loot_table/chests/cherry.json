@@ -181,7 +181,13 @@
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 14
+          "weight": 13
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pinkstuff:kunzite_horse_armor",
+          "functions": [],
+          "weight": 1
         },
         {
           "type": "minecraft:item",

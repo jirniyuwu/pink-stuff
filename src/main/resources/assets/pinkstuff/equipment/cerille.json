@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "pinkstuff:cerille"
+      }
+    ],
     "humanoid": [
       {
         "texture": "pinkstuff:cerille"

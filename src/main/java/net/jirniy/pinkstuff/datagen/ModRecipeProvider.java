@@ -839,6 +839,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "pinline_boots")));
 
+                createShaped(RecipeCategory.COMBAT, ModItems.ELYSIUM_HORSE_ARMOR)
+                        .pattern("  E")
+                        .pattern("EKC")
+                        .pattern("E E")
+                        .input('K', ModItems.KUNZITE_HORSE_ARMOR)
+                        .input('C', ModItems.ELYSIAN_REDSTONE_CORE)
+                        .input('E', ModItems.ELYSIUM_INGOT)
+                        .criterion(hasItem(ModItems.ELYSIUM_INGOT), conditionsFromItem(ModItems.ELYSIUM_INGOT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "elysium_horse_armor")));
                 createShaped(RecipeCategory.COMBAT, ModItems.ELYSIUM_HELMET)
                         .pattern("CKC")
                         .pattern("E E")

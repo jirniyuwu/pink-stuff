@@ -159,6 +159,11 @@
         },
         {
           "type": "minecraft:item",
+          "name": "pinkstuff:cerille_horse_armor",
+          "functions": []
+        },
+        {
+          "type": "minecraft:item",
           "name": "pinkstuff:corruption_armor_trim_smithing_template",
           "functions": [
             {
