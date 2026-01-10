@@ -48,6 +48,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.ELYSIAN_SKYBERRY, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.THERMIUM_WILTBORN, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.MEMORIA_BOURPEER, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.BROWN_EVERBUD, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.LOTUS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.DEATH_FLOWERS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.STYXGRASS, BlockRenderLayer.CUTOUT);
@@ -91,6 +92,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_HAZEWEAVER_PLANT, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_KEAPHE_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_LOTUS, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.POTTED_BROWN_EVERBUD, BlockRenderLayer.CUTOUT);
 
         EntityModelLayerRegistry.registerModelLayer(CrawlerModel.CRAWLER, CrawlerModel::getTexturedModelData);
         EntityRendererFactories.register(ModEntities.CRAWLER, CrawlerRenderer::new);

@@ -4,12 +4,93 @@
     "rules": [
       {
         "location_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:styxstone"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:tiled_styxian_path",
+          "probability": 0.6
+        },
+        "output_state": {
+          "Name": "pinkstuff:polished_styxstone"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:ash_block"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:tiled_styxian_path",
+          "probability": 0.7
+        },
+        "output_state": {
+          "Name": "pinkstuff:packed_ash"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:styxstone"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:tiled_styxian_path"
+        },
+        "output_state": {
+          "Name": "pinkstuff:cobbled_styxstone"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:ash_block"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:tiled_styxian_path"
+        },
+        "output_state": {
+          "Name": "pinkstuff:ash_block"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:pink_sand"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:tiled_styxian_path",
+          "probability": 0.3
+        },
+        "output_state": {
+          "Name": "pinkstuff:pink_sandstone"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:pink_sand"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:block_match",
+          "block": "pinkstuff:tiled_styxian_path"
+        },
+        "output_state": {
+          "Name": "pinkstuff:smooth_pink_sandstone"
+        }
+      },
+      {
+        "location_predicate": {
           "predicate_type": "minecraft:always_true"
         },
         "input_predicate": {
           "predicate_type": "minecraft:random_block_match",
           "block": "pinkstuff:styxstone_bricks",
-          "probability": 0.4
+          "probability": 0.3
         },
         "output_state": {
           "Name": "pinkstuff:cobbled_styxstone"

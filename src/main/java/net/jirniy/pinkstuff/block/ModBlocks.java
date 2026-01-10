@@ -1002,6 +1002,9 @@ public class ModBlocks {
     public static final Block MEMORIA_BOURPEER = registerBlock("memoria_bourpeer",
             properties -> new FlowerBlock(StatusEffects.CONDUIT_POWER, 60, properties
                     .strength(0f).offset(AbstractBlock.OffsetType.XZ).luminance(state -> 7).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block BROWN_EVERBUD = registerBlock("brown_everbud",
+            properties -> new FlowerBlock(StatusEffects.BLINDNESS, 20, properties.strength(0f)
+                    .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block DEATH_FLOWERS = registerBlock("death_flowers",
             properties -> new FlowerbedBlock(properties.strength(0f)
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
@@ -1019,6 +1022,8 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(ModBlocks.THERMIUM_WILTBORN, properties.strength(0f).nonOpaque().luminance(state -> 3).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_MEMORIA_BOURPEER = registerBlockWithoutBlockItem("potted_memoria_bourpeer",
             properties -> new FlowerPotBlock(ModBlocks.MEMORIA_BOURPEER, properties.strength(0f).nonOpaque().luminance(state -> 7).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_BROWN_EVERBUD = registerBlockWithoutBlockItem("potted_brown_everbud",
+            properties -> new FlowerPotBlock(ModBlocks.BROWN_EVERBUD, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_CRYSTAL_CHERRY_SAPLING = registerBlockWithoutBlockItem("potted_crystal_cherry_sapling",
             properties -> new FlowerPotBlock(ModBlocks.CRYSTAL_CHERRY_SAPLING, properties.strength(0f).nonOpaque().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_CHORUS_SAPLING = registerBlockWithoutBlockItem("potted_chorus_sapling",

@@ -105,6 +105,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_VEGETATION_KEY = registryKey("styxmoss_vegetation");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_BONEMEAL_KEY = registryKey("styxmoss_patch_bonemeal");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_PATCH_KEY = registryKey("corruption_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BROWN_EVERBUD_PATCH_KEY = registryKey("brown_everbud_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_PATCH_KEY = registryKey("styxgrass_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_CEILING_KEY = registryKey("styxgrass_ceiling");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_CEILING_KEY = registryKey("corruption_ceiling");
@@ -592,6 +593,10 @@ public class ModConfiguredFeatures {
         register(context, STYXGRASS_PATCH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.STYXGRASS)),
+                        List.of(ModBlocks.STYXMOSS, ModBlocks.STYXIAN_SOIL)));
+        register(context, BROWN_EVERBUD_PATCH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BROWN_EVERBUD)),
                         List.of(ModBlocks.STYXMOSS, ModBlocks.STYXIAN_SOIL)));
         register(context, CORRUPT_ROOTS_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,

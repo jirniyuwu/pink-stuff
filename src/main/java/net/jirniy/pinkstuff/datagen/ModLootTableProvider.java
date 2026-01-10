@@ -391,6 +391,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPottedPlantDrops(ModBlocks.POTTED_ELYSIAN_SKYBERRY);
         addPottedPlantDrops(ModBlocks.POTTED_KUNZITE_LOVELILY);
         addPottedPlantDrops(ModBlocks.POTTED_AMETHYST_PARTERS);
+        addPottedPlantDrops(ModBlocks.POTTED_BROWN_EVERBUD);
         addPottedPlantDrops(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_CHORUS_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_KEAPHE_SAPLING);
@@ -401,6 +402,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ELYSIAN_SKYBERRY);
         addDrop(ModBlocks.THERMIUM_WILTBORN);
         addDrop(ModBlocks.MEMORIA_BOURPEER);
+        addDrop(ModBlocks.BROWN_EVERBUD);
         addDrop(ModBlocks.LOTUS);
         addDrop(ModBlocks.HAZEWEAVER_PLANT, ModItems.HAZEWEAVER);
         addDrop(ModBlocks.BLUE_MUSHROOM);

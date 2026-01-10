@@ -88,6 +88,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ELYSIAN_SKYBERRY, ModBlocks.POTTED_ELYSIAN_SKYBERRY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.THERMIUM_WILTBORN, ModBlocks.POTTED_THERMIUM_WILTBORN, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MEMORIA_BOURPEER, ModBlocks.POTTED_MEMORIA_BOURPEER, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.BROWN_EVERBUD, ModBlocks.POTTED_BROWN_EVERBUD, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.CRYSTAL_CHERRY_SAPLING, ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.CHORUS_SAPLING, ModBlocks.POTTED_CHORUS_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HAZEWEAVER_PLANT, ModBlocks.POTTED_HAZEWEAVER_PLANT, BlockStateModelGenerator.CrossType.TINTED);
@@ -511,6 +512,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModBlocks.CHORUS_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.SNOWY_SPRUCE_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.AMETHYST_PARTERS.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.BROWN_EVERBUD.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.KUNZITE_LOVELILY.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.ELYSIAN_SKYBERRY.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.THERMIUM_WILTBORN.asItem(), Models.GENERATED);

@@ -1,0 +1,28 @@
+{
+  "name": "pinkstuff:styxian_ruins/everbuds",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:feature_pool_element",
+        "projection": "rigid",
+        "feature": {
+          "feature": "pinkstuff:brown_everbud_patch",
+          "placement": [
+            {
+              "type": "minecraft:count",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -473,6 +473,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.KUNZITE_LOVELILY)
                 .add(ModBlocks.ELYSIAN_SKYBERRY)
                 .add(ModBlocks.MEMORIA_BOURPEER)
+                .add(ModBlocks.BROWN_EVERBUD)
                 .add(ModBlocks.LOTUS)
                 .add(ModBlocks.THERMIUM_WILTBORN);
         valueLookupBuilder(BlockTags.FLOWER_POTS)
@@ -482,6 +483,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POTTED_ELYSIAN_SKYBERRY)
                 .add(ModBlocks.POTTED_MEMORIA_BOURPEER)
                 .add(ModBlocks.POTTED_THERMIUM_WILTBORN)
+                .add(ModBlocks.POTTED_BROWN_EVERBUD)
                 .add(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING)
                 .add(ModBlocks.POTTED_CHORUS_SAPLING)
                 .add(ModBlocks.POTTED_HAZEWEAVER_PLANT)
