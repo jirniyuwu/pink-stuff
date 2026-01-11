@@ -324,6 +324,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MEMORY_BRICKS_SLAB);
                         entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
                         entries.add(ModBlocks.MEMORY_BRICKS_WALL);
+                        entries.add(ModItems.RAINBOW_MINERAL);
 
                         entries.add(ModBlocks.STYXIAN_LAPIS_ORE);
                         entries.add(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE);
@@ -896,6 +897,7 @@ public class ModItemGroups {
             entries.add(ModItems.PINLINE_NUGGET);
             entries.add(ModItems.PINLINE_INGOT);
             entries.add(ModItems.MEMORY_SHARD);
+            entries.add(ModItems.RAINBOW_MINERAL);
             entries.add(ModItems.CORRUPT_DROPLET);
             entries.add(ModItems.CORRUPT_MASS);
             entries.add(ModItems.RAW_MOONSTEEL);

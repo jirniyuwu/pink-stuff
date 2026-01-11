@@ -461,6 +461,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENERGIZED_THERMIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.MEMORY_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAINBOW_MINERAL, Models.GENERATED);
 
         itemModelGenerator.registerSpear(ModItems.KUNZITE_SPEAR);
         itemModelGenerator.register(ModItems.KUNZITE_SWORD, Models.HANDHELD);

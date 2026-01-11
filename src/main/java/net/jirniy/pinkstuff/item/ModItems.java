@@ -82,6 +82,8 @@ public class ModItems {
     public static final Item RAW_PINLINE = registerItem("raw_pinline",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.RAW_PINLINE)));
 
+    public static final Item RAINBOW_MINERAL = registerItem("rainbow_mineral", Item::new);
+
     public static final Item GLAZED_CHORUS_FRUIT = registerItem("glazed_chorus_fruit", setting -> new Item(setting
             .food(ModFoodComponents.GLAZED_CHORUS_FRUIT, ModFoodComponents.GLAZED_CHORUS_FRUIT_EFFECT)));
     public static final Item COAL_MEAL = registerItem("coal_meal", setting -> new Item(setting

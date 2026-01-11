@@ -300,6 +300,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.CERILLE_INGOT), conditionsFromItem(ModItems.CERILLE_INGOT))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "forbidden_mechanism")));
+                createShapeless(RecipeCategory.MISC, ModItems.RAINBOW_MINERAL, 2)
+                        .input(ModItems.AMETHYST_BLAZE_ROD).input(ModItems.MAGIC_GLITTER).input(Items.AMETHYST_SHARD)
+                        .input(ModItems.SUNGAZE)
+                        .criterion(hasItem(ModItems.AMETHYST_BLAZE_ROD), conditionsFromItem(ModItems.AMETHYST_BLAZE_ROD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "rainbow_mineral")));
                 createShaped(RecipeCategory.MISC, ModItems.ENERGIZED_THERMIUM)
                         .pattern("TNT")
                         .pattern("TBT")
@@ -2740,6 +2746,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mushroom_stew_blue_and_brown")));
 
+                offerRainbowMineralRecipe(Items.IRON_INGOT, ModItems.MOONSTEEL_INGOT, "iron_to_moonsteel", "moonsteel_to_iron");
+                offerRainbowMineralRecipe(Items.COAL, ModItems.STYXCOAL, "coal_to_styxcoal", "styxcoal_to_coal");
+                offerRainbowMineralRecipe(Items.EMERALD, ModItems.SUNGAZE, "emerald_to_sungaze", "sungaze_to_emerald");
+                offerRainbowMineralRecipe(Items.AMETHYST_SHARD, ModItems.KUNZITE, "amethyst_to_kunzite", "kunzite_to_amethyst");
+                offerRainbowMineralRecipe(Items.STONE, ModBlocks.STYXSTONE, "stone_to_styxstone", "styxstone_to_stone");
+                offerRainbowMineralRecipe(Items.COBBLESTONE, ModBlocks.COBBLED_STYXSTONE, "cobblestone_to_styxstone", "cobbled_styxstone_to_stone");
+                offerRainbowMineralRecipe(Items.DIRT, ModBlocks.STYXIAN_SOIL, "dirt_to_styxian_soil", "styxian_soil_to_dirt");
+                offerRainbowMineralRecipe(Items.MOSS_BLOCK, ModBlocks.STYXMOSS, "moss_to_styxmoss", "styxmoss_to_moss");
+
                 offerShelfRecipe(ModBlocks.CRYSTAL_CHERRY_SHELF, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
                 offerShelfRecipe(ModBlocks.CHORUS_SHELF, ModBlocks.STRIPPED_CHORUS_LOG);
                 offerShelfRecipe(ModBlocks.ASHEN_SHELF, ModBlocks.STRIPPED_ASHEN_LOG);
@@ -2788,6 +2803,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmithingTemplateCopyingRecipe(ModItems.FAIRYTALE_SMITHING_TEMPLATE, ModBlocks.POLISHED_AMETHYST_BLOCK);
 
                 offerNetheriteUpgradeRecipe(Items.ELYTRA, RecipeCategory.TRANSPORTATION, ModItems.NETHERITE_ELYTRA);
+            }
+
+            public void offerRainbowMineralRecipe(ItemConvertible item1, ItemConvertible item2, String path1, String path2) {
+                createShapeless(RecipeCategory.MISC, item1, 1)
+                        .input(ModItems.RAINBOW_MINERAL).input(item2)
+                        .criterion(hasItem(ModItems.RAINBOW_MINERAL), conditionsFromItem(ModItems.RAINBOW_MINERAL))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, path1)));
+                createShapeless(RecipeCategory.MISC, item2, 1)
+                        .input(ModItems.RAINBOW_MINERAL).input(item1)
+                        .criterion(hasItem(ModItems.RAINBOW_MINERAL), conditionsFromItem(ModItems.RAINBOW_MINERAL))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, path2)));
             }
         };
     }
