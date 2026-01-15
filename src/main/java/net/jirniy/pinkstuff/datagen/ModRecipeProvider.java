@@ -2193,6 +2193,51 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.POLISHED_AMETHYST_BLOCK), conditionsFromItem(ModBlocks.POLISHED_AMETHYST_BLOCK))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_tiles")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLOUDSTONE, 2)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.SOFT_CLOUD)
+                        .criterion(hasItem(ModBlocks.SOFT_CLOUD), conditionsFromItem(ModBlocks.SOFT_CLOUD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cloudstone")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CLOUDSTONE, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.CLOUDSTONE)
+                        .criterion(hasItem(ModBlocks.CLOUDSTONE), conditionsFromItem(ModBlocks.CLOUDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_cloudstone")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLOUDSTONE_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.POLISHED_CLOUDSTONE)
+                        .criterion(hasItem(ModBlocks.POLISHED_CLOUDSTONE), conditionsFromItem(ModBlocks.POLISHED_CLOUDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cloudstone_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLOUDSTONE_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.CLOUDSTONE_BRICKS))
+                        .criterion(hasItem(ModBlocks.CLOUDSTONE_BRICKS), conditionsFromItem(ModBlocks.CLOUDSTONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cloudstone_bricks_slab")));
+                createStairsRecipe(ModBlocks.CLOUDSTONE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CLOUDSTONE_BRICKS))
+                        .criterion(hasItem(ModBlocks.CLOUDSTONE_BRICKS), conditionsFromItem(ModBlocks.CLOUDSTONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cloudstone_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLOUDSTONE_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.CLOUDSTONE_BRICKS)
+                        .criterion(hasItem(ModBlocks.CLOUDSTONE_BRICKS), conditionsFromItem(ModBlocks.CLOUDSTONE_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cloudstone_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CLOUDSTONE_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_CLOUDSTONE))
+                        .criterion(hasItem(ModBlocks.POLISHED_CLOUDSTONE), conditionsFromItem(ModBlocks.POLISHED_CLOUDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_cloudstone_slab")));
+                createStairsRecipe(ModBlocks.POLISHED_CLOUDSTONE_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_CLOUDSTONE))
+                        .criterion(hasItem(ModBlocks.POLISHED_CLOUDSTONE), conditionsFromItem(ModBlocks.POLISHED_CLOUDSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_cloudstone_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CLOUDSTONE_WALL, ModBlocks.POLISHED_CLOUDSTONE   );
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ASH, 1)
                         .input(ModBlocks.ASH_BLOCK).input(ModBlocks.ASH_BLOCK).input(Blocks.BASALT).input(Blocks.BASALT)
@@ -2735,16 +2780,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "elytra_from_memory_shard")));
 
-                createShapeless(RecipeCategory.MISC, Items.MUSHROOM_STEW, 1)
+                createShapeless(RecipeCategory.FOOD, Items.MUSHROOM_STEW, 1)
                         .input(ModBlocks.BLUE_MUSHROOM).input(Items.RED_MUSHROOM).input(Items.BOWL)
                         .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL)).group("mushroom_stew")
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mushroom_stew_blue_and_red")));
-                createShapeless(RecipeCategory.MISC, Items.MUSHROOM_STEW, 1)
+                createShapeless(RecipeCategory.FOOD, Items.MUSHROOM_STEW, 1)
                         .input(ModBlocks.BLUE_MUSHROOM).input(Items.BROWN_MUSHROOM).input(Items.BOWL)
                         .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL)).group("mushroom_stew")
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mushroom_stew_blue_and_brown")));
+
+                createShapeless(RecipeCategory.FOOD, ModItems.COTTON_CANDY, 1)
+                        .input(Ingredient.ofItems(ModBlocks.SOFT_CLOUD, ModBlocks.CLOUDSTONE))
+                        .input(Items.STICK).input(Items.PINK_DYE).input(Items.SUGAR)
+                        .criterion(hasItem(ModBlocks.CLOUDSTONE), conditionsFromItem(ModBlocks.CLOUDSTONE))
+                        .criterion(hasItem(ModBlocks.SOFT_CLOUD), conditionsFromItem(ModBlocks.SOFT_CLOUD))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "cotton_candy")));
 
                 offerRainbowMineralRecipe(Items.IRON_INGOT, ModItems.MOONSTEEL_INGOT, "iron_to_moonsteel", "moonsteel_to_iron");
                 offerRainbowMineralRecipe(Items.COAL, ModItems.STYXCOAL, "coal_to_styxcoal", "styxcoal_to_coal");

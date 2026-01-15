@@ -100,7 +100,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MOSSY_FALLEN_KEAPHE_PLACED = registerKey("mossy_fallen_keaphe_placed");
     public static final RegistryKey<PlacedFeature> BLUE_MUSHROOM_PATCH_PLACED = registerKey("blue_mushroom_patch_placed");
     public static final RegistryKey<PlacedFeature> LOTUS_FLOWER_PLACED = registerKey("lotus_flower_placed");
-    public static final RegistryKey<PlacedFeature> SIMPLE_CRYSTAL_CHERRY_PLACED = registerKey("simple_crystal_cherry_placed");
+    public static final RegistryKey<PlacedFeature> CLOUD_PLACED_KEY = registerKey("cloud_placed");
+    public static final RegistryKey<PlacedFeature> STYXIA_CLOUD_PLACED_KEY = registerKey("styxia_cloud_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -384,6 +385,13 @@ public class ModPlacedFeatures {
         register(context, KUNZITE_GEODE_CHERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KUNZITE_GEODE_KEY),
                 HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(100)), RarityFilterPlacementModifier.of(12),
                 SquarePlacementModifier.of());
+
+        register(context, CLOUD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CLOUD_KEY),
+                HeightRangePlacementModifier.trapezoid(YOffset.fixed(220), YOffset.TOP), RarityFilterPlacementModifier.of(64),
+                BiomePlacementModifier.of(), SquarePlacementModifier.of());
+        register(context, STYXIA_CLOUD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIA_CLOUD_KEY),
+                HeightRangePlacementModifier.trapezoid(YOffset.fixed(190), YOffset.TOP), RarityFilterPlacementModifier.of(32),
+                BiomePlacementModifier.of(), SquarePlacementModifier.of());
 
         register(context, GEM_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_BERRY_BUSH_KEY),
                 RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());

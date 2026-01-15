@@ -120,6 +120,17 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CORESTONE_BRICKS_STAIRS);
                         entries.add(ModBlocks.CORESTONE_BRICKS_WALL);
 
+                        entries.add(ModBlocks.SOFT_CLOUD);
+                        entries.add(ModBlocks.CLOUDSTONE);
+                        entries.add(ModBlocks.POLISHED_CLOUDSTONE);
+                        entries.add(ModBlocks.POLISHED_CLOUDSTONE_SLAB);
+                        entries.add(ModBlocks.POLISHED_CLOUDSTONE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_CLOUDSTONE_WALL);
+                        entries.add(ModBlocks.CLOUDSTONE_BRICKS);
+                        entries.add(ModBlocks.CLOUDSTONE_BRICKS_SLAB);
+                        entries.add(ModBlocks.CLOUDSTONE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.CLOUDSTONE_BRICKS_WALL);
+
                         entries.add(ModBlocks.COMPRESSED_END_STONE);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -474,6 +485,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CHARMBERRY);
                         entries.add(ModItems.BERRY_SALAD);
                         entries.add(ModItems.FLESHY_STEW);
+                        entries.add(ModItems.COTTON_CANDY);
                         entries.add(ModItems.HAZEWEAVER);
                         entries.add(ModItems.RAW_FAIRY_MEAT);
                         entries.add(ModItems.COOKED_FAIRY_MEAT);
@@ -674,6 +686,14 @@ public class ModItemGroups {
             entries.add(ModBlocks.CORESTONE_BRICKS_SLAB);
             entries.add(ModBlocks.CORESTONE_BRICKS_STAIRS);
             entries.add(ModBlocks.CORESTONE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_CLOUDSTONE);
+            entries.add(ModBlocks.POLISHED_CLOUDSTONE_SLAB);
+            entries.add(ModBlocks.POLISHED_CLOUDSTONE_STAIRS);
+            entries.add(ModBlocks.POLISHED_CLOUDSTONE_WALL);
+            entries.add(ModBlocks.CLOUDSTONE_BRICKS);
+            entries.add(ModBlocks.CLOUDSTONE_BRICKS_SLAB);
+            entries.add(ModBlocks.CLOUDSTONE_BRICKS_STAIRS);
+            entries.add(ModBlocks.CLOUDSTONE_BRICKS_WALL);
             entries.add(ModBlocks.COMPRESSED_END_STONE);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -860,6 +880,7 @@ public class ModItemGroups {
             entries.add(ModItems.CHARMBERRY);
             entries.add(ModItems.BERRY_SALAD);
             entries.add(ModItems.FLESHY_STEW);
+            entries.add(ModItems.COTTON_CANDY);
             entries.add(ModItems.HAZEWEAVER);
             entries.add(ModItems.RAW_FAIRY_MEAT);
             entries.add(ModItems.COOKED_FAIRY_MEAT);
@@ -1026,6 +1047,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.MABRIZE);
             entries.add(ModBlocks.AMETANE);
             entries.add(ModBlocks.WASTEROCK);
+            entries.add(ModBlocks.CLOUDSTONE);
+            entries.add(ModBlocks.SOFT_CLOUD);
             entries.add(ModBlocks.END_MOSS);
             entries.add(ModBlocks.STYXIAN_SOIL);
             entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);

@@ -123,6 +123,16 @@ public class ModBlocks {
     public static final Block POLISHED_COMPRESSED_STYXSTONE = registerBlock("polished_compressed_styxstone",
             properties -> new Block(properties.strength(4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block SOFT_CLOUD = registerBlock("soft_cloud",
+            properties -> new SoftCloudBlock(properties.strength(0.2f).jumpVelocityMultiplier(1.05f).nonOpaque()
+                    .allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)
+                    .sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE)));
+    public static final Block CLOUDSTONE = registerBlock("cloudstone",
+            properties -> new CloudstoneBlock(properties.strength(0.5f).requiresTool().jumpVelocityMultiplier(1.1f).nonOpaque()
+                    .solidBlock(Blocks::never).sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE)));
+    public static final Block POLISHED_CLOUDSTONE = registerBlock("polished_cloudstone",
+            properties -> new Block(properties.strength(0.5f).requiresTool().jumpVelocityMultiplier(1.1f)
+                    .sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE)));
 
     public static final Block ASH_BLOCK = registerBlock("ash_block",
             properties -> new SandBlock(new ColorCode(0x494E52), properties.strength(0.6f)
@@ -641,6 +651,9 @@ public class ModBlocks {
     public static final Block CHISELED_SUNGAZE_BRICKS = registerBlock("chiseled_sungaze_bricks",
             properties -> new Block(properties.strength(6f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block CLOUDSTONE_BRICKS = registerBlock("cloudstone_bricks",
+            properties -> new Block(properties.strength(0.5f).requiresTool().jumpVelocityMultiplier(1.1f)
+                    .sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE)));
 
     public static final Block COBBLED_STYXSTONE_STAIRS = registerBlock("cobbled_styxstone_stairs",
             properties -> new StairsBlock(ModBlocks.COBBLED_STYXSTONE.getDefaultState(),
@@ -721,6 +734,22 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(2.5f).requiresTool().sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
     public static final Block POLISHED_CORESTONE_WALL = registerBlock("polished_corestone_wall",
             properties -> new WallBlock(properties.strength(2.5f).requiresTool().sounds(BlockSoundGroup.RESIN_BRICKS).mapColor(MapColor.BLACK)));
+
+    public static final Block CLOUDSTONE_BRICKS_STAIRS = registerBlock("cloudstone_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.CLOUDSTONE_BRICKS.getDefaultState(),
+                    properties.strength(0.5f).requiresTool().sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE).jumpVelocityMultiplier(1.1f)));
+    public static final Block CLOUDSTONE_BRICKS_SLAB = registerBlock("cloudstone_bricks_slab",
+            properties -> new SlabBlock(properties.strength(0.5f).requiresTool().sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE).jumpVelocityMultiplier(1.1f)));
+    public static final Block CLOUDSTONE_BRICKS_WALL = registerBlock("cloudstone_bricks_wall",
+            properties -> new WallBlock(properties.strength(0.5f).requiresTool().sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE).jumpVelocityMultiplier(1.1f)));
+
+    public static final Block POLISHED_CLOUDSTONE_STAIRS = registerBlock("polished_cloudstone_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_CLOUDSTONE.getDefaultState(),
+                    properties.strength(0.5f).requiresTool().sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE).jumpVelocityMultiplier(1.1f)));
+    public static final Block POLISHED_CLOUDSTONE_SLAB = registerBlock("polished_cloudstone_slab",
+            properties -> new SlabBlock(properties.strength(0.5f).requiresTool().sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE).jumpVelocityMultiplier(1.1f)));
+    public static final Block POLISHED_CLOUDSTONE_WALL = registerBlock("polished_cloudstone_wall",
+            properties -> new WallBlock(properties.strength(0.5f).requiresTool().sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE).jumpVelocityMultiplier(1.1f)));
 
     public static final Block AMETANE_BRICKS_STAIRS = registerBlock("ametane_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.AMETANE_BRICKS.getDefaultState(),

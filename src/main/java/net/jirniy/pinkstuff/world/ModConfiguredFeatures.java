@@ -123,6 +123,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_KEAPHE_KEY = registryKey("fallen_keaphe");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_KEAPHE_MOSSY_KEY = registryKey("fallen_keaphe_mossy");
     public static final RegistryKey<ConfiguredFeature<?, ?>> LOTUS_FLOWER_KEY = registryKey("lotus_flower");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CLOUD_KEY = registryKey("cloud");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIA_CLOUD_KEY = registryKey("styxia_cloud");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -396,6 +398,26 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(AIR),
                 new BlobFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), 1),
                 new TwoLayersFeatureSize(3, 1, 4)).build());
+
+        register(context, CLOUD_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(45, 15, 1,
+                PlacedFeatures.createEntry(Feature.SIMPLE_RANDOM_SELECTOR, new SimpleRandomFeatureConfig(RegistryEntryList.of(
+                        PlacedFeatures.createEntry(Feature.DISK, new DiskFeatureConfig(
+                                PredicatedStateProvider.of(ModBlocks.SOFT_CLOUD), BlockPredicate.IS_AIR,
+                                UniformIntProvider.create(2, 5), 0)),
+                        PlacedFeatures.createEntry(Feature.DISK, new DiskFeatureConfig(
+                                PredicatedStateProvider.of(ModBlocks.SOFT_CLOUD), BlockPredicate.IS_AIR,
+                                UniformIntProvider.create(2, 4), 1)))))));
+        register(context, STYXIA_CLOUD_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(40, 17, 1,
+                PlacedFeatures.createEntry(Feature.SIMPLE_RANDOM_SELECTOR, new SimpleRandomFeatureConfig(RegistryEntryList.of(
+                        PlacedFeatures.createEntry(Feature.DISK, new DiskFeatureConfig(
+                                PredicatedStateProvider.of(ModBlocks.SOFT_CLOUD), BlockPredicate.IS_AIR,
+                                UniformIntProvider.create(2, 5), 0)),
+                        PlacedFeatures.createEntry(Feature.DISK, new DiskFeatureConfig(
+                                PredicatedStateProvider.of(ModBlocks.SOFT_CLOUD), BlockPredicate.IS_AIR,
+                                UniformIntProvider.create(2, 4), 1)),
+                        PlacedFeatures.createEntry(Feature.DISK, new DiskFeatureConfig(
+                                PredicatedStateProvider.of(ModBlocks.CLOUDSTONE), BlockPredicate.IS_AIR,
+                                UniformIntProvider.create(1, 3), 1)))))));
 
         register(context, CRYSTAL_CHERRY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 new WeightedBlockStateProvider(

@@ -118,6 +118,9 @@ public class ModItems {
             setting -> new Item(setting.food(ModFoodComponents.RAW_FAIRY_MEAT, ModFoodComponents.RAW_FAIRY_MEAT_EFFECT)));
     public static final Item COOKED_FAIRY_MEAT = registerItem("cooked_fairy_meat",
             setting -> new Item(setting.food(ModFoodComponents.COOKED_FAIRY_MEAT, ModFoodComponents.COOKED_FAIRY_MEAT_EFFECT)));
+    public static final Item COTTON_CANDY = registerItem("cotton_candy",
+            setting -> new Item( setting.food(ModFoodComponents.COTTON_CANDY, ModFoodComponents.COTTON_CANDY_EFFECT)
+                    .useRemainder(Items.STICK).maxCount(1)));
 
     public static final Item CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
             setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.CRAWLER)));

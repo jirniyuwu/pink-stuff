@@ -34,7 +34,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
-public class BlackGoopBlock extends TranslucentBlock {
+public class BlackGoopBlock extends Block {
     public static final MapCodec<BlackGoopBlock> CODEC = createCodec(BlackGoopBlock::new);
     public static final BooleanProperty SPREADABLE = BooleanProperty.of("spreadable");
 
