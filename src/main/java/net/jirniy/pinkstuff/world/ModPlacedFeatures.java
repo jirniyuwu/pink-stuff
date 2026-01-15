@@ -387,10 +387,10 @@ public class ModPlacedFeatures {
                 SquarePlacementModifier.of());
 
         register(context, CLOUD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CLOUD_KEY),
-                HeightRangePlacementModifier.trapezoid(YOffset.fixed(220), YOffset.TOP), RarityFilterPlacementModifier.of(64),
+                HeightRangePlacementModifier.trapezoid(YOffset.fixed(220), YOffset.TOP), RarityFilterPlacementModifier.of(128),
                 BiomePlacementModifier.of(), SquarePlacementModifier.of());
         register(context, STYXIA_CLOUD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIA_CLOUD_KEY),
-                HeightRangePlacementModifier.trapezoid(YOffset.fixed(190), YOffset.TOP), RarityFilterPlacementModifier.of(32),
+                HeightRangePlacementModifier.trapezoid(YOffset.fixed(190), YOffset.TOP), RarityFilterPlacementModifier.of(64),
                 BiomePlacementModifier.of(), SquarePlacementModifier.of());
 
         register(context, GEM_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEM_BERRY_BUSH_KEY),

@@ -417,7 +417,7 @@ public class ModConfiguredFeatures {
                                 UniformIntProvider.create(2, 4), 1)),
                         PlacedFeatures.createEntry(Feature.DISK, new DiskFeatureConfig(
                                 PredicatedStateProvider.of(ModBlocks.CLOUDSTONE), BlockPredicate.IS_AIR,
-                                UniformIntProvider.create(1, 3), 1)))))));
+                                UniformIntProvider.create(1, 3), 0)))))));
 
         register(context, CRYSTAL_CHERRY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 new WeightedBlockStateProvider(
