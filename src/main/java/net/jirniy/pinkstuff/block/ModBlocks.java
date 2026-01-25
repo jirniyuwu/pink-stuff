@@ -1142,7 +1142,7 @@ public class ModBlocks {
 
     private static void registerBlockItem(String name, Block block) {
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(JirniysPinkStuff.MOD_ID, name));
-        BlockItem item = new BlockItem(block, new Item.Settings().registryKey(key));
+        BlockItem item = new BlockItem(block, new Item.Settings().registryKey(key).useBlockPrefixedTranslationKey());
         Registry.register(Registries.ITEM, key, item);
     }
 
