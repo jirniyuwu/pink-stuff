@@ -14,11 +14,15 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.VillagerProfession;
+import net.minecraft.village.VillagerType;
 import net.minecraft.world.poi.PointOfInterestType;
 
 public class ModVillagers {
     public static final RegistryKey<PointOfInterestType> CORRUPT_POI_KEY = registerPoiKey("corrupt_poi");
     public static final PointOfInterestType CORRUPT_POI = registerPOI("corrupt_poi", ModBlocks.CORRUPT_CAULDRON);
+
+    public static final RegistryKey<VillagerType> CHERRY_KEY = RegistryKey.of(RegistryKeys.VILLAGER_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry"));
+    public static final VillagerType CHERRY = registerType(CHERRY_KEY);
 
     public static final RegistryKey<VillagerProfession> CORRUPT_FORGER_KEY =
             RegistryKey.of(RegistryKeys.VILLAGER_PROFESSION, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_forger"));
@@ -29,6 +33,10 @@ public class ModVillagers {
         return Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(JirniysPinkStuff.MOD_ID, name),
                 new VillagerProfession(Text.translatable(translateableKey), entry -> entry.matchesKey(type), entry -> entry.matchesKey(type),
                         ImmutableSet.of(), ImmutableSet.of(), sound));
+    }
+
+    private static VillagerType registerType(RegistryKey<VillagerType> key) {
+        return (VillagerType)Registry.register(Registries.VILLAGER_TYPE, key, new VillagerType());
     }
 
     private static PointOfInterestType registerPOI(String name, Block block) {

@@ -1,5 +1,6 @@
 package net.jirniy.pinkstuff;
 
+import com.llamalad7.mixinextras.MixinExtrasBootstrap;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
@@ -44,6 +45,7 @@ import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.spongepowered.asm.launch.MixinBootstrap;
 
 import java.util.Optional;
 
@@ -53,6 +55,9 @@ public class JirniysPinkStuff implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		MixinExtrasBootstrap.init();
+		MixinBootstrap.init();
+
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
