@@ -23,6 +23,13 @@ public class ModParticles {
     public static final SimpleParticleType CERILLE_SLASH_PARTICLE =
             registerParticle("cerille_slash_particle", FabricParticleTypes.simple(false));
 
+    public static final SimpleParticleType RED_MAPLE_LEAF_PARTICLE =
+            registerParticle("red_maple_leaf", FabricParticleTypes.simple(false));
+    public static final SimpleParticleType ORANGE_MAPLE_LEAF_PARTICLE =
+            registerParticle("orange_maple_leaf", FabricParticleTypes.simple(false));
+    public static final SimpleParticleType YELLOW_MAPLE_LEAF_PARTICLE =
+            registerParticle("yellow_maple_leaf", FabricParticleTypes.simple(false));
+
     private static SimpleParticleType registerParticle(String name, SimpleParticleType particleType) {
         return Registry.register(Registries.PARTICLE_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, name), particleType);
     }

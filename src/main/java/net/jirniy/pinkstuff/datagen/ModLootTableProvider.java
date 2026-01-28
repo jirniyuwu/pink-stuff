@@ -265,6 +265,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.HANGING_STYXMOSS, dropsWithShears(ModBlocks.HANGING_STYXMOSS));
         addDrop(ModBlocks.STYXMOSS_VINE, dropsWithShears(ModBlocks.STYXMOSS_VINE));
         addDrop(ModBlocks.DEATH_FLOWERS, segmentedDrops(ModBlocks.DEATH_FLOWERS));
+        addDrop(ModBlocks.MAPLE_LEAF_LITTER, segmentedDrops(ModBlocks.MAPLE_LEAF_LITTER));
         addDrop(ModBlocks.STYXCOAL_BLOCK);
         addDrop(ModBlocks.MOONSTEEL_BLOCK);
         addDrop(ModBlocks.RAW_MOONSTEEL_BLOCK);
@@ -323,6 +324,27 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHORUS_SHELF);
 
         addDrop(ModBlocks.CHORUS_LEAVES, leavesWithItemDrops(ModBlocks.CHORUS_LEAVES, ModBlocks.CHORUS_SAPLING, 0.01f, Items.CHORUS_FRUIT, 0.2f));
+
+        addDrop(ModBlocks.MAPLE_LOG);
+        addDrop(ModBlocks.MAPLE_WOOD);
+        addDrop(ModBlocks.STRIPPED_MAPLE_LOG);
+        addDrop(ModBlocks.STRIPPED_MAPLE_WOOD);
+        addDrop(ModBlocks.MAPLE_PLANKS);
+        addDrop(ModBlocks.MAPLE_SAPLING);
+
+        addDrop(ModBlocks.MAPLE_SLAB, slabDrops(ModBlocks.MAPLE_SLAB));
+        addDrop(ModBlocks.MAPLE_STAIRS);
+        addDrop(ModBlocks.MAPLE_FENCE);
+        addDrop(ModBlocks.MAPLE_FENCE_GATE);
+        addDrop(ModBlocks.MAPLE_DOOR, doorDrops(ModBlocks.MAPLE_DOOR));
+        addDrop(ModBlocks.MAPLE_TRAPDOOR);
+        addDrop(ModBlocks.MAPLE_BUTTON);
+        addDrop(ModBlocks.MAPLE_PRESSURE_PLATE);
+        addDrop(ModBlocks.MAPLE_SHELF);
+
+        addDrop(ModBlocks.RED_MAPLE_LEAVES, leavesDrops(ModBlocks.RED_MAPLE_LEAVES, ModBlocks.MAPLE_SAPLING, 0.05f));
+        addDrop(ModBlocks.ORANGE_MAPLE_LEAVES, leavesDrops(ModBlocks.ORANGE_MAPLE_LEAVES, ModBlocks.MAPLE_SAPLING, 0.05f));
+        addDrop(ModBlocks.YELLOW_MAPLE_LEAVES, leavesDrops(ModBlocks.YELLOW_MAPLE_LEAVES, ModBlocks.MAPLE_SAPLING, 0.05f));
 
         addDrop(ModBlocks.SNOWY_SPRUCE_SAPLING);
         addDrop(ModBlocks.SNOWY_SPRUCE_LEAVES, leavesWithItemDrops(ModBlocks.SNOWY_SPRUCE_LEAVES, ModBlocks.SNOWY_SPRUCE_SAPLING, 0.05f, Items.SNOWBALL, 0.02f));
@@ -403,6 +425,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPottedPlantDrops(ModBlocks.POTTED_BROWN_EVERBUD);
         addPottedPlantDrops(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_CHORUS_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_MAPLE_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_KEAPHE_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_LOTUS);
 

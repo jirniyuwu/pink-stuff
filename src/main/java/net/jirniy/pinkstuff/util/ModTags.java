@@ -30,6 +30,7 @@ public class ModTags {
         public static final TagKey<Block> CRAWLER_SPAWNABLE_ON = createTag("crawler_spawnable_on");
         public static final TagKey<Block> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Block> CHORUS_LOGS = createTag("chorus_logs");
+        public static final TagKey<Block> MAPLE_LOGS = createTag("maple_logs");
         public static final TagKey<Block> ASHEN_LOGS = createTag("ashen_logs");
         public static final TagKey<Block> KEAPHE_LOGS = createTag("keaphe_logs");
         public static final TagKey<Block> WASTEWOOD_LOGS = createTag("wastewood_logs");
@@ -43,6 +44,7 @@ public class ModTags {
         public static final TagKey<Block> BASE_STONE_STYXIA = createTag("base_stone_styxia");
         public static final TagKey<Block> CORRUPT_BLOCKS = createTag("corrupt_blocks");
         public static final TagKey<Block> CORRUPTABLE_BLOCKS = createTag("corruptable_blocks");
+        public static final TagKey<Block> MAPLE_ROOTS_GROW_THROUGH = createTag("maple_roots_grow_through");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));
@@ -60,6 +62,7 @@ public class ModTags {
         public static final TagKey<Item> AMETHYST_REPAIR = createTag("amethyst_repair");
         public static final TagKey<Item> CRYSTAL_CHERRY_LOGS = createTag("crystal_cherry_logs");
         public static final TagKey<Item> CHORUS_LOGS = createTag("chorus_logs");
+        public static final TagKey<Item> MAPLE_LOGS = createTag("maple_logs");
         public static final TagKey<Item> ASHEN_LOGS = createTag("ashen_logs");
         public static final TagKey<Item> KEAPHE_LOGS = createTag("keaphe_logs");
         public static final TagKey<Item> WASTEWOOD_LOGS = createTag("wastewood_logs");

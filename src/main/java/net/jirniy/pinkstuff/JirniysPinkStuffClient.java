@@ -34,11 +34,15 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.CRYSTAL_CHERRY_DOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CRYSTAL_CHERRY_TRAPDOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CHORUS_SAPLING, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.MAPLE_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.GEM_BERRY_BUSH, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CHARMBERRY_BUSH, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.HAZEWEAVER_PLANT, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.ASHEN_DOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.ASHEN_TRAPDOOR, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.MAPLE_DOOR, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.MAPLE_TRAPDOOR, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.MAPLE_LEAF_LITTER, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CORRERIE_TRAPDOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.SNOWY_SPRUCE_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.KEAPHE_SAPLING, BlockRenderLayer.CUTOUT);
@@ -83,6 +87,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
 
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_CHORUS_SAPLING, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.POTTED_MAPLE_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_SNOWY_SPRUCE_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_AMETHYST_PARTERS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_KUNZITE_LOVELILY, BlockRenderLayer.CUTOUT);
@@ -121,5 +126,8 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.STYXIAN_FLAME_PARTICLE, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.CORRUPTION_POP_PARTICLE, SculkChargePopParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.CERILLE_SLASH_PARTICLE, CerilleSlashParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.RED_MAPLE_LEAF_PARTICLE, ChorusPetalParticle.ChorusPetalFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.ORANGE_MAPLE_LEAF_PARTICLE, ChorusPetalParticle.ChorusPetalFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.YELLOW_MAPLE_LEAF_PARTICLE, ChorusPetalParticle.ChorusPetalFactory::new);
     }
 }

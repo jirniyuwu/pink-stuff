@@ -26,7 +26,7 @@ public class ModBlockEntities {
     public static final BlockEntityType<ShelfBlockEntity2> SHELF_BE =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "shelf_be"),
                     FabricBlockEntityTypeBuilder.create(ShelfBlockEntity2::new,
-                            ModBlocks.CRYSTAL_CHERRY_SHELF, ModBlocks.ASHEN_SHELF, ModBlocks.CHORUS_SHELF,
+                            ModBlocks.CRYSTAL_CHERRY_SHELF, ModBlocks.ASHEN_SHELF, ModBlocks.CHORUS_SHELF, ModBlocks.MAPLE_SHELF,
                             ModBlocks.KEAPHE_SHELF, ModBlocks.WASTEWOOD_SHELF, ModBlocks.CORRERIE_SHELF).build(null));
 
     public static final BlockEntityType<LavaGeyserBlockEntity> LAVA_GEYSER_BE =

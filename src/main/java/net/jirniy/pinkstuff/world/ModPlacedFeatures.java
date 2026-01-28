@@ -102,6 +102,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> LOTUS_FLOWER_PLACED = registerKey("lotus_flower_placed");
     public static final RegistryKey<PlacedFeature> CLOUD_PLACED_KEY = registerKey("cloud_placed");
     public static final RegistryKey<PlacedFeature> STYXIA_CLOUD_PLACED_KEY = registerKey("styxia_cloud_placed");
+    public static final RegistryKey<PlacedFeature> MAPLE_LITTER_PLACED_KEY = registerKey("maple_litter_placed");
+    public static final RegistryKey<PlacedFeature> MAPLE_TREE_PLACED_KEY = registerKey("maple_tree_placed");
+    public static final RegistryKey<PlacedFeature> LITTERED_MAPLE_TREE_PLACED_KEY = registerKey("littered_maple_tree_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -198,7 +201,7 @@ public class ModPlacedFeatures {
 
         register(context, DEATHFLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEATHFLOWER_KEY),
                 NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(),
-                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
 
         register(context, CORRUPTION_SPIKE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTION_SPIKE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
@@ -323,6 +326,18 @@ public class ModPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.25f, 1), ModBlocks.CORRUPT_ROOTS
                 ));
+
+        register(context, MAPLE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.MAPLE_SAPLING
+                ));
+        register(context, LITTERED_MAPLE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LITTERED_MAPLE_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.25f, 1), ModBlocks.MAPLE_SAPLING
+                ));
+        register(context, MAPLE_LITTER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_LEAF_LITTER_KEY),
+                NoiseThresholdCountPlacementModifier.of(-0.8, 4, 1), SquarePlacementModifier.of(),
+                PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
 
         register(context, KEAPHE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KEAPHE_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(

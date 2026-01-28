@@ -83,6 +83,8 @@ public class JirniysPinkStuff implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);
 		StrippableBlockRegistry.register(ModBlocks.CHORUS_LOG, ModBlocks.STRIPPED_CHORUS_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CHORUS_WOOD, ModBlocks.STRIPPED_CHORUS_WOOD);
+		StrippableBlockRegistry.register(ModBlocks.MAPLE_LOG, ModBlocks.STRIPPED_MAPLE_LOG);
+		StrippableBlockRegistry.register(ModBlocks.MAPLE_WOOD, ModBlocks.STRIPPED_MAPLE_WOOD);
 		StrippableBlockRegistry.register(ModBlocks.ASHEN_LOG, ModBlocks.STRIPPED_ASHEN_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ASHEN_WOOD, ModBlocks.STRIPPED_ASHEN_WOOD);
 		StrippableBlockRegistry.register(ModBlocks.KEAPHE_LOG, ModBlocks.STRIPPED_KEAPHE_LOG);
@@ -109,6 +111,14 @@ public class JirniysPinkStuff implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_CHORUS_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHORUS_LEAVES, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHORUS_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_MAPLE_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_MAPLE_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.RED_MAPLE_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ORANGE_MAPLE_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.YELLOW_MAPLE_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KEAPHE_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.KEAPHE_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_KEAPHE_LOG, 5, 5);
@@ -140,6 +150,7 @@ public class JirniysPinkStuff implements ModInitializer {
 			builder.add(ModItems.WOODEN_CHESTPLATE, 200);
 			builder.add(ModItems.WOODEN_LEGGINGS, 200);
 			builder.add(ModItems.WOODEN_BOOTS, 200);
+			builder.add(ModBlocks.MAPLE_LEAF_LITTER, 40);
 		});
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
@@ -374,5 +385,9 @@ public class JirniysPinkStuff implements ModInitializer {
 		CompostingChanceRegistry.INSTANCE.add(ModItems.COTTON, 0.5F);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.COTTON_SEEDS, 0.25F);
 		CompostingChanceRegistry.INSTANCE.add(ModBlocks.LOTUS.asItem(), 0.8F);
+		CompostingChanceRegistry.INSTANCE.add(ModBlocks.RED_MAPLE_LEAVES, 0.3F);
+		CompostingChanceRegistry.INSTANCE.add(ModBlocks.ORANGE_MAPLE_LEAVES, 0.3F);
+		CompostingChanceRegistry.INSTANCE.add(ModBlocks.YELLOW_MAPLE_LEAVES, 0.3F);
+		CompostingChanceRegistry.INSTANCE.add(ModBlocks.MAPLE_LEAF_LITTER, 0.2F);
 	}
 }

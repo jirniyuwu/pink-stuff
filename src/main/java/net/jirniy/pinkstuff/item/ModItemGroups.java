@@ -358,6 +358,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.HANGING_STYXGRASS);
                         entries.add(ModBlocks.HANGING_STYXMOSS);
                         entries.add(ModBlocks.STYXMOSS_VINE);
+                        entries.add(ModBlocks.MAPLE_LEAF_LITTER);
                         entries.add(ModBlocks.DEATH_FLOWERS);
                         entries.add(ModItems.CORRUPT_SPROUTS);
                         entries.add(ModItems.COTTON_SEEDS);
@@ -403,6 +404,26 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
                         entries.add(ModBlocks.CHORUS_BUTTON);
                         entries.add(ModBlocks.CHORUS_SHELF);
+
+                        entries.add(ModBlocks.MAPLE_LOG);
+                        entries.add(ModBlocks.MAPLE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
+                        entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
+                        entries.add(ModBlocks.MAPLE_PLANKS);
+                        entries.add(ModBlocks.RED_MAPLE_LEAVES);
+                        entries.add(ModBlocks.ORANGE_MAPLE_LEAVES);
+                        entries.add(ModBlocks.YELLOW_MAPLE_LEAVES);
+                        entries.add(ModBlocks.MAPLE_SAPLING);
+
+                        entries.add(ModBlocks.MAPLE_SLAB);
+                        entries.add(ModBlocks.MAPLE_STAIRS);
+                        entries.add(ModBlocks.MAPLE_FENCE);
+                        entries.add(ModBlocks.MAPLE_FENCE_GATE);
+                        entries.add(ModBlocks.MAPLE_DOOR);
+                        entries.add(ModBlocks.MAPLE_TRAPDOOR);
+                        entries.add(ModBlocks.MAPLE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.MAPLE_BUTTON);
+                        entries.add(ModBlocks.MAPLE_SHELF);
 
                         entries.add(ModBlocks.ASHEN_LOG);
                         entries.add(ModBlocks.ASHEN_WOOD);
@@ -815,6 +836,23 @@ public class ModItemGroups {
             entries.add(ModBlocks.CHORUS_TRAPDOOR);
             entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
             entries.add(ModBlocks.CHORUS_BUTTON);
+            entries.add(ModBlocks.MAPLE_LOG);
+            entries.add(ModBlocks.MAPLE_WOOD);
+            entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
+            entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
+            entries.add(ModBlocks.MAPLE_PLANKS);
+            entries.add(ModBlocks.RED_MAPLE_LEAVES);
+            entries.add(ModBlocks.ORANGE_MAPLE_LEAVES);
+            entries.add(ModBlocks.YELLOW_MAPLE_LEAVES);
+            entries.add(ModBlocks.MAPLE_SAPLING);
+            entries.add(ModBlocks.MAPLE_SLAB);
+            entries.add(ModBlocks.MAPLE_STAIRS);
+            entries.add(ModBlocks.MAPLE_FENCE);
+            entries.add(ModBlocks.MAPLE_FENCE_GATE);
+            entries.add(ModBlocks.MAPLE_DOOR);
+            entries.add(ModBlocks.MAPLE_TRAPDOOR);
+            entries.add(ModBlocks.MAPLE_PRESSURE_PLATE);
+            entries.add(ModBlocks.MAPLE_BUTTON);
             entries.add(ModBlocks.ASHEN_LOG);
             entries.add(ModBlocks.ASHEN_WOOD);
             entries.add(ModBlocks.STRIPPED_ASHEN_LOG);
@@ -1073,6 +1111,12 @@ public class ModItemGroups {
             entries.add(ModBlocks.CHORUS_LEAVES);
             entries.add(ModBlocks.CHORUS_SAPLING);
 
+            entries.add(ModBlocks.MAPLE_LOG);
+            entries.add(ModBlocks.RED_MAPLE_LEAVES);
+            entries.add(ModBlocks.ORANGE_MAPLE_LEAVES);
+            entries.add(ModBlocks.YELLOW_MAPLE_LEAVES);
+            entries.add(ModBlocks.MAPLE_SAPLING);
+
             entries.add(ModBlocks.KEAPHE_LOG);
             entries.add(ModBlocks.FLOWERING_KEAPHE_LEAVES);
             entries.add(ModBlocks.KEAPHE_LEAVES);
@@ -1098,6 +1142,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.HANGING_STYXGRASS);
             entries.add(ModBlocks.HANGING_STYXMOSS);
             entries.add(ModBlocks.STYXMOSS_VINE);
+            entries.add(ModBlocks.MAPLE_LEAF_LITTER);
             entries.add(ModBlocks.DEATH_FLOWERS);
             entries.add(ModBlocks.CORRUPT_ROOTS);
             entries.add(ModBlocks.HANGING_CORRUPT_ROOTS);

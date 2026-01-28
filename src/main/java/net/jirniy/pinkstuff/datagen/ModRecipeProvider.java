@@ -213,6 +213,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         0f, 100, "cobbled_styxstone_to_styxstone_blasting");
                 offerSmelting(List.of(ModItems.CORRUPT_SPROUTS), RecipeCategory.MISC, ModItems.CORRUPT_DROPLET,
                         0.1f, 200, "corrupt_sprouts_smelting");
+                offerSmelting(List.of(ModBlocks.YELLOW_MAPLE_LEAVES.asItem(), ModBlocks.ORANGE_MAPLE_LEAVES.asItem(), ModBlocks.RED_MAPLE_LEAVES.asItem()),
+                        RecipeCategory.MISC, ModBlocks.MAPLE_LEAF_LITTER.asItem(),
+                        0f, 80, "mature_sprout_smelting");
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.KUNZITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KUNZITE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
@@ -1025,6 +1028,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_flower_from_chorus_leaves")));
 
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAPLE_PLANKS, 4).group("planks")
+                        .input(ModTags.Items.MAPLE_LOGS).criterion(hasItem(ModBlocks.MAPLE_LOG),
+                                conditionsFromItem(ModBlocks.MAPLE_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_planks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAPLE_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.MAPLE_LOG)
+                        .criterion(hasItem(ModBlocks.MAPLE_LOG), conditionsFromItem(ModBlocks.MAPLE_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_wood")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_MAPLE_WOOD, 3)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .input('C', ModBlocks.STRIPPED_MAPLE_LOG)
+                        .criterion(hasItem(ModBlocks.STRIPPED_MAPLE_LOG), conditionsFromItem(ModBlocks.STRIPPED_MAPLE_LOG))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "stripped_maple_wood")));
+
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KEAPHE_PLANKS, 4).group("planks")
                         .input(ModTags.Items.KEAPHE_LOGS).criterion(hasItem(ModBlocks.KEAPHE_LOG),
                                 conditionsFromItem(ModBlocks.KEAPHE_LOG)).offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
@@ -1218,6 +1240,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "chorus_stairs")));
+
+                createDoorRecipe(ModBlocks.MAPLE_DOOR, Ingredient.ofItem(ModBlocks.MAPLE_PLANKS)).group("wooden_door")
+                        .criterion(hasItem(ModBlocks.MAPLE_PLANKS), conditionsFromItem(ModBlocks.MAPLE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_door")));
+                createTrapdoorRecipe(ModBlocks.MAPLE_TRAPDOOR, Ingredient.ofItem(ModBlocks.MAPLE_PLANKS)).group("wooden_trapdoor")
+                        .criterion(hasItem(ModBlocks.MAPLE_PLANKS), conditionsFromItem(ModBlocks.MAPLE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_trapdoor")));
+                createButtonRecipe(ModBlocks.MAPLE_BUTTON, Ingredient.ofItem(ModBlocks.MAPLE_PLANKS)).group("wooden_button")
+                        .criterion(hasItem(ModBlocks.MAPLE_PLANKS), conditionsFromItem(ModBlocks.MAPLE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_button")));
+                createPressurePlateRecipe(RecipeCategory.REDSTONE, ModBlocks.MAPLE_PRESSURE_PLATE, Ingredient.ofItem(ModBlocks.MAPLE_PLANKS)).group("wooden_pressure_plate")
+                        .criterion(hasItem(ModBlocks.MAPLE_PLANKS), conditionsFromItem(ModBlocks.MAPLE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_pressure_plate")));
+                createFenceGateRecipe(ModBlocks.MAPLE_FENCE_GATE, Ingredient.ofItem(ModBlocks.MAPLE_PLANKS)).group("wooden_fence_gate")
+                        .criterion(hasItem(ModBlocks.MAPLE_PLANKS), conditionsFromItem(ModBlocks.MAPLE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_fence_gate")));
+                createFenceRecipe(ModBlocks.MAPLE_FENCE, Ingredient.ofItem(ModBlocks.MAPLE_PLANKS)).group("wooden_fence")
+                        .criterion(hasItem(ModBlocks.MAPLE_PLANKS), conditionsFromItem(ModBlocks.MAPLE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_fence")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAPLE_SLAB, Ingredient.ofItem(ModBlocks.MAPLE_PLANKS)).group("wooden_slab")
+                        .criterion(hasItem(ModBlocks.MAPLE_PLANKS), conditionsFromItem(ModBlocks.MAPLE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_slab")));
+                createStairsRecipe(ModBlocks.MAPLE_STAIRS, Ingredient.ofItem(ModBlocks.MAPLE_PLANKS)).group("wooden_stairs")
+                        .criterion(hasItem(ModBlocks.MAPLE_PLANKS), conditionsFromItem(ModBlocks.MAPLE_PLANKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "maple_stairs")));
 
                 createDoorRecipe(ModBlocks.ASHEN_DOOR, Ingredient.ofItem(ModBlocks.ASHEN_PLANKS)).group("wooden_door")
                         .criterion(hasItem(ModBlocks.ASHEN_PLANKS), conditionsFromItem(ModBlocks.ASHEN_PLANKS))
@@ -2810,6 +2865,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 offerShelfRecipe(ModBlocks.CRYSTAL_CHERRY_SHELF, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
                 offerShelfRecipe(ModBlocks.CHORUS_SHELF, ModBlocks.STRIPPED_CHORUS_LOG);
+                offerShelfRecipe(ModBlocks.MAPLE_SHELF, ModBlocks.STRIPPED_MAPLE_LOG);
                 offerShelfRecipe(ModBlocks.ASHEN_SHELF, ModBlocks.STRIPPED_ASHEN_LOG);
                 offerShelfRecipe(ModBlocks.CORRERIE_SHELF, ModBlocks.STRIPPED_CORRERIE_LOG);
                 offerShelfRecipe(ModBlocks.WASTEWOOD_SHELF, ModBlocks.STRIPPED_WASTEWOOD_LOG);

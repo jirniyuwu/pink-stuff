@@ -423,6 +423,52 @@ public class ModBlocks {
                     .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CHERRY_LEAVES)
                     .pistonBehavior(PistonBehavior.DESTROY), ModTags.Blocks.END_STONE));
 
+    public static final Block MAPLE_LOG = registerBlock("maple_log",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DULL_RED)));
+    public static final Block MAPLE_WOOD = registerBlock("maple_wood",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DULL_RED)));
+    public static final Block STRIPPED_MAPLE_LOG = registerBlock("stripped_maple_log",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DULL_RED)));
+    public static final Block STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood",
+            properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DULL_RED)));
+    public static final Block MAPLE_PLANKS = registerBlock("maple_planks",
+            properties -> new Block(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.DULL_RED)));
+
+    public static final Block RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.08f, ModParticles.RED_MAPLE_LEAF_PARTICLE, properties
+                    .mapColor(MapColor.RED).strength(0.4F).ticksRandomly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+    public static final Block ORANGE_MAPLE_LEAVES = registerBlock("orange_maple_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.08f, ModParticles.ORANGE_MAPLE_LEAF_PARTICLE, properties
+                    .mapColor(MapColor.RED).strength(0.4F).ticksRandomly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+    public static final Block YELLOW_MAPLE_LEAVES = registerBlock("yellow_maple_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.08f, ModParticles.YELLOW_MAPLE_LEAF_PARTICLE, properties
+                    .mapColor(MapColor.RED).strength(0.4F).ticksRandomly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+    public static final Block MAPLE_LEAF_LITTER = registerBlock("maple_leaf_litter",
+            properties -> new LeafLitterBlock(properties.mapColor(MapColor.DULL_RED)
+                    .noCollision().breakInstantly().sounds(BlockSoundGroup.LEAF_LITTER)
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block MAPLE_SAPLING = registerBlock("maple_sapling",
+            properties -> new ModSaplingBlock(ModSaplingGenerator.MAPLE, properties.mapColor(MapColor.DULL_RED)
+                    .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CHERRY_LEAVES)
+                    .pistonBehavior(PistonBehavior.DESTROY), BlockTags.DIRT));
+
     public static final Block SNOWY_SPRUCE_LEAVES = registerBlock("snowy_spruce_leaves",
             properties -> new UntintedParticleLeavesBlock(0.1f, ParticleTypes.SNOWFLAKE, properties
                     .mapColor(MapColor.WHITE).strength(0.2F).ticksRandomly()
@@ -927,6 +973,26 @@ public class ModBlocks {
     public static final Block CHORUS_SHELF = registerBlock("chorus_shelf",
             properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
+    public static final Block MAPLE_STAIRS = registerBlock("maple_stairs",
+            properties -> new StairsBlock(ModBlocks.MAPLE_PLANKS.getDefaultState(),
+                    properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block MAPLE_SLAB = registerBlock("maple_slab",
+            properties -> new SlabBlock(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block MAPLE_BUTTON = registerBlock("maple_button",
+            properties -> new ButtonBlock(BlockSetType.CHERRY, 6, properties.strength(2f).noCollision().sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block MAPLE_PRESSURE_PLATE = registerBlock("maple_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block MAPLE_FENCE = registerBlock("maple_fence",
+            properties -> new FenceBlock(properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD)));
+    public static final Block MAPLE_FENCE_GATE = registerBlock("maple_fence_gate",
+            properties -> new FenceGateBlock(WoodType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block MAPLE_DOOR = registerBlock("maple_door",
+            properties -> new DoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+    public static final Block MAPLE_TRAPDOOR = registerBlock("maple_trapdoor",
+            properties -> new TrapdoorBlock(BlockSetType.CHERRY, properties.strength(2f).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque()));
+    public static final Block MAPLE_SHELF = registerBlock("maple_shelf",
+            properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
+
     public static final Block ASHEN_STAIRS = registerBlock("ashen_stairs",
             properties -> new StairsBlock(ModBlocks.ASHEN_PLANKS.getDefaultState(),
                     properties.strength(1.2f).sounds(BlockSoundGroup.BASALT).mapColor(MapColor.BLACK)));
@@ -1059,6 +1125,8 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(ModBlocks.CHORUS_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_KEAPHE_SAPLING = registerBlockWithoutBlockItem("potted_keaphe_sapling",
             properties -> new FlowerPotBlock(ModBlocks.KEAPHE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block POTTED_MAPLE_SAPLING = registerBlockWithoutBlockItem("potted_maple_sapling",
+            properties -> new FlowerPotBlock(ModBlocks.MAPLE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_SNOWY_SPRUCE_SAPLING = registerBlockWithoutBlockItem("potted_snowy_spruce_sapling",
             properties -> new FlowerPotBlock(ModBlocks.SNOWY_SPRUCE_SAPLING, properties.strength(0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block POTTED_LOTUS = registerBlockWithoutBlockItem("potted_lotus",

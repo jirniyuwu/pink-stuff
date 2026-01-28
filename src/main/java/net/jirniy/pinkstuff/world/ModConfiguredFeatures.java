@@ -10,8 +10,10 @@ import net.jirniy.pinkstuff.world.features.ModFeatures;
 import net.jirniy.pinkstuff.world.features.StyxmossVineDecorator;
 import net.minecraft.block.*;
 import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.state.property.EnumProperty;
@@ -33,13 +35,21 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
+import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;
+import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.root.AboveRootPlacement;
+import net.minecraft.world.gen.root.MangroveRootPlacement;
+import net.minecraft.world.gen.root.MangroveRootPlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
+import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.AttachedToLogsTreeDecorator;
+import net.minecraft.world.gen.treedecorator.PlaceOnGroundTreeDecorator;
 import net.minecraft.world.gen.trunk.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.OptionalInt;
 
 import static net.minecraft.block.Blocks.*;
@@ -70,6 +80,14 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> WASTEWOOD_TREE_KEY = registryKey("wastewood_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_CHERRY_TREE_KEY = registryKey("giant_cherry_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SNOWY_SPRUCE_TREE_KEY = registryKey("snowy_spruce_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE_TREE_KEY = registryKey("maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RED_MAPLE_TREE_KEY = registryKey("red_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_MAPLE_TREE_KEY = registryKey("orange_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_MAPLE_TREE_KEY = registryKey("yellow_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LITTERED_MAPLE_TREE_KEY = registryKey("littered_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LITTERED_RED_MAPLE_TREE_KEY = registryKey("littered_red_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LITTERED_ORANGE_MAPLE_TREE_KEY = registryKey("littered_orange_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LITTERED_YELLOW_MAPLE_TREE_KEY = registryKey("littered_yellow_maple_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HAZEWEAVER_PLANT_KEY = registryKey("hazeweaver_plant");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SMALL_END_GRASS_KEY = registryKey("small_end_grass");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MEDIUM_END_GRASS_KEY = registryKey("medium_end_grass");
@@ -96,6 +114,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPT_ORE_KEY = registryKey("corrupt_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETHYST_SPIKE_KEY = registryKey("amethyst_spike");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEATHFLOWER_KEY = registryKey("deathflower");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE_LEAF_LITTER_KEY = registryKey("maple_leaf_litter");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_ROCK_KEY = registryKey("styxian_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WASTEROCK_ROCK_KEY = registryKey("wasterock_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOSSY_STYXIAN_ROCK_KEY = registryKey("mossy_styxian_rock");
@@ -127,6 +146,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIA_CLOUD_KEY = registryKey("styxia_cloud");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        RegistryEntryLookup<ConfiguredFeature<?, ?>> configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+        RegistryEntryLookup<Block> blockLookup = context.getRegistryLookup(RegistryKeys.BLOCK);
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
@@ -200,7 +221,12 @@ public class ModConfiguredFeatures {
                         OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.COMPRESSED_STYXSTONE), ModBlocks.CRAWLER_COMPRESSED_STYXSTONE.getDefaultState()));
 
         register(context, DEATHFLOWER_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(96, 6, 2,
-                PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(flowerbed(ModBlocks.DEATH_FLOWERS))))));
+                PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(
+                        new WeightedBlockStateProvider(flowerbed(ModBlocks.DEATH_FLOWERS))))));
+        register(context, MAPLE_LEAF_LITTER_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(96, 6, 2,
+                PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(
+                        new WeightedBlockStateProvider(segmentedBlock(ModBlocks.MAPLE_LEAF_LITTER, 1, 4,
+                                LeafLitterBlock.SEGMENT_AMOUNT, LeafLitterBlock.HORIZONTAL_FACING))))));
         register(context, STYXIAN_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.COBBLED_STYXSTONE)));
         register(context, WASTEROCK_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.WASTEROCK)));
         register(context, MOSSY_STYXIAN_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
@@ -418,6 +444,26 @@ public class ModConfiguredFeatures {
                         PlacedFeatures.createEntry(Feature.DISK, new DiskFeatureConfig(
                                 PredicatedStateProvider.of(ModBlocks.CLOUDSTONE), BlockPredicate.IS_AIR,
                                 UniformIntProvider.create(1, 3), 0)))))));
+
+        register(context, MAPLE_TREE_KEY, Feature.SIMPLE_RANDOM_SELECTOR, new SimpleRandomFeatureConfig(RegistryEntryList.of(
+                PlacedFeatures.createEntry(configuredFeatures.getOrThrow(RED_MAPLE_TREE_KEY)),
+                PlacedFeatures.createEntry(configuredFeatures.getOrThrow(ORANGE_MAPLE_TREE_KEY)),
+                PlacedFeatures.createEntry(configuredFeatures.getOrThrow(YELLOW_MAPLE_TREE_KEY))
+        )));
+
+        registerMapleTree(context, RED_MAPLE_TREE_KEY, ModBlocks.RED_MAPLE_LEAVES);
+        registerMapleTree(context, ORANGE_MAPLE_TREE_KEY, ModBlocks.ORANGE_MAPLE_LEAVES);
+        registerMapleTree(context, YELLOW_MAPLE_TREE_KEY, ModBlocks.YELLOW_MAPLE_LEAVES);
+
+        register(context, LITTERED_MAPLE_TREE_KEY, Feature.SIMPLE_RANDOM_SELECTOR, new SimpleRandomFeatureConfig(RegistryEntryList.of(
+                PlacedFeatures.createEntry(configuredFeatures.getOrThrow(LITTERED_RED_MAPLE_TREE_KEY)),
+                PlacedFeatures.createEntry(configuredFeatures.getOrThrow(LITTERED_ORANGE_MAPLE_TREE_KEY)),
+                PlacedFeatures.createEntry(configuredFeatures.getOrThrow(LITTERED_YELLOW_MAPLE_TREE_KEY))
+        )));
+
+        registerMapleTreeWithLitter(context, LITTERED_RED_MAPLE_TREE_KEY, ModBlocks.RED_MAPLE_LEAVES);
+        registerMapleTreeWithLitter(context, LITTERED_ORANGE_MAPLE_TREE_KEY, ModBlocks.ORANGE_MAPLE_LEAVES);
+        registerMapleTreeWithLitter(context, LITTERED_YELLOW_MAPLE_TREE_KEY, ModBlocks.YELLOW_MAPLE_LEAVES);
 
         register(context, CRYSTAL_CHERRY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 new WeightedBlockStateProvider(
@@ -685,6 +731,46 @@ public class ModConfiguredFeatures {
                                                                                    RegistryKey<ConfiguredFeature<?, ?>> key,
                                                                                    F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
+    }
+
+    private static void registerMapleTreeWithLitter(Registerable<ConfiguredFeature<?, ?>> context,
+                                          RegistryKey<ConfiguredFeature<?, ?>> key,
+                                          Block leaves) {
+        PlaceOnGroundTreeDecorator leafLitterDecorator = new PlaceOnGroundTreeDecorator(600, 3, 2,
+                new WeightedBlockStateProvider(segmentedBlock(ModBlocks.MAPLE_LEAF_LITTER, 1, 4,
+                LeafLitterBlock.SEGMENT_AMOUNT, LeafLitterBlock.HORIZONTAL_FACING)));
+        register(context, key, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                new LargeOakTrunkPlacer(14, 5, 3),
+                BlockStateProvider.of(leaves),
+                new CherryFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(5),
+                        0.25F, 0.5F, 0.16666667F, 0.33333334F),
+                Optional.of(new MangroveRootPlacer(UniformIntProvider.create(-1, 3),
+                        BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                        Optional.empty(),
+                        new MangroveRootPlacement(context.getRegistryLookup(RegistryKeys.BLOCK).getOrThrow(ModTags.Blocks.MAPLE_ROOTS_GROW_THROUGH),
+                                RegistryEntryList.empty(),
+                                BlockStateProvider.of(ModBlocks.MAPLE_LOG), 6, 18, 0.2F))),
+                new TwoLayersFeatureSize(3, 0, 3)).dirtProvider(BlockStateProvider.of(ModBlocks.MAPLE_LOG))
+                .decorators(List.of(leafLitterDecorator)).build());
+    }
+
+    private static void registerMapleTree(Registerable<ConfiguredFeature<?, ?>> context,
+                                          RegistryKey<ConfiguredFeature<?, ?>> key,
+                                          Block leaves) {
+        register(context, key, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                new LargeOakTrunkPlacer(13, 5, 3),
+                BlockStateProvider.of(leaves),
+                new CherryFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(5),
+                        0.25F, 0.5F, 0.16666667F, 0.33333334F),
+                Optional.of(new MangroveRootPlacer(UniformIntProvider.create(-1, 2),
+                        BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                        Optional.empty(),
+                        new MangroveRootPlacement(context.getRegistryLookup(RegistryKeys.BLOCK).getOrThrow(ModTags.Blocks.MAPLE_ROOTS_GROW_THROUGH),
+                                RegistryEntryList.empty(),
+                                BlockStateProvider.of(ModBlocks.MAPLE_LOG), 5, 15, 0.2F))),
+                new TwoLayersFeatureSize(3, 0, 3)).dirtProvider(BlockStateProvider.of(ModBlocks.MAPLE_LOG)).build());
     }
 
     private static Pool.Builder<BlockState> flowerbed(Block flowerbed) {
