@@ -20,6 +20,8 @@ import net.minecraft.world.poi.PointOfInterestType;
 public class ModVillagers {
     public static final RegistryKey<PointOfInterestType> CORRUPT_POI_KEY = registerPoiKey("corrupt_poi");
     public static final PointOfInterestType CORRUPT_POI = registerPOI("corrupt_poi", ModBlocks.CORRUPT_CAULDRON);
+    public static final RegistryKey<PointOfInterestType> FLOWER_POI_KEY = registerPoiKey("flower_poi");
+    public static final PointOfInterestType FLOWER_POI = registerPOI("flower_poi", ModBlocks.GROWING_CHAMBER);
 
     public static final RegistryKey<VillagerType> CHERRY_KEY = RegistryKey.of(RegistryKeys.VILLAGER_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "cherry"));
     public static final VillagerType CHERRY = registerType(CHERRY_KEY);
@@ -28,6 +30,10 @@ public class ModVillagers {
             RegistryKey.of(RegistryKeys.VILLAGER_PROFESSION, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_forger"));
     public static final VillagerProfession CORRUPT_FORGER = registerProfession("corrupt_forger", CORRUPT_POI_KEY,
             "entity.minecraft.villager.pinkstuff.corrupt_forger", SoundEvents.ENTITY_VILLAGER_WORK_LEATHERWORKER);
+    public static final RegistryKey<VillagerProfession> BOTANIST_KEY =
+            RegistryKey.of(RegistryKeys.VILLAGER_PROFESSION, Identifier.of(JirniysPinkStuff.MOD_ID, "botanist"));
+    public static final VillagerProfession BOTANIST = registerProfession("botanist", FLOWER_POI_KEY,
+            "entity.minecraft.villager.pinkstuff.botanist", SoundEvents.ENTITY_VILLAGER_WORK_CARTOGRAPHER);
 
     private static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type, String translateableKey, SoundEvent sound) {
         return Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(JirniysPinkStuff.MOD_ID, name),

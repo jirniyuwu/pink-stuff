@@ -12,12 +12,14 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.item.BoneMealItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
@@ -169,6 +171,12 @@ public class GrowingChamberBlockEntity extends BlockEntity implements ExtendedSc
         }
         this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
+        if (!this.getWorld().isClient()) {
+            ServerWorld server = (ServerWorld) this.getWorld();
+            BlockPos pos = this.getPos();
+            server.spawnParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                    10, 0.25, 0.25, 0.25, 1);
+        }
     }
 
     private boolean hasCraftingFinished() {

@@ -30,6 +30,7 @@ import net.jirniy.pinkstuff.world.features.ModTreeDecorators;
 import net.jirniy.pinkstuff.world.gen.ModWorldGeneration;
 import net.kyrptonaught.customportalapi.CustomPortalBlock;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
@@ -301,7 +302,16 @@ public class JirniysPinkStuff implements ModInitializer {
 			).create(serverWorld, entity, random));
 		});
 
-		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 0, factories -> {
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 1, factories -> {
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.MATURE_SPROUT, 1), 4, 3, 0.08f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 4),
+					new ItemStack(ModItems.CORRUPT_MASS, 1), 2, 11, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.AMETHYST_BLAZE_ROD, 1),
+					new ItemStack(Items.EMERALD, 1), 4, 7, 0.08f));
 			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModItems.EMERALD_NUGGET, 11),
 					new ItemStack(ModItems.CORRUPT_SPROUTS, 8), 8, 3, 0.08f));
@@ -314,17 +324,6 @@ public class JirniysPinkStuff implements ModInitializer {
 			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(ModBlocks.CORRERIE_LOG, 5),
 					new ItemStack(ModItems.EMERALD_NUGGET, 2), 6, 4, 0.08f));
-		});
-		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 1, factories -> {
-			factories.add((serverWorld, entity, random) -> new TradeOffer(
-					new TradedItem(Items.EMERALD, 3),
-					new ItemStack(ModItems.MATURE_SPROUT, 1), 4, 3, 0.08f));
-			factories.add((serverWorld, entity, random) -> new TradeOffer(
-					new TradedItem(Items.EMERALD, 4),
-					new ItemStack(ModItems.CORRUPT_MASS, 1), 2, 11, 0.12f));
-			factories.add((serverWorld, entity, random) -> new TradeOffer(
-					new TradedItem(ModItems.AMETHYST_BLAZE_ROD, 1),
-					new ItemStack(Items.EMERALD, 1), 4, 7, 0.08f));
 		});
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.CORRUPT_FORGER_KEY, 2, factories -> {
 			factories.add((serverWorld, entity, random) -> new TradeOffer(
@@ -376,6 +375,123 @@ public class JirniysPinkStuff implements ModInitializer {
 					new TradedItem(Items.EMERALD, 23),
 					new ItemStack(ModItems.CORRUPTION_SMITHING_TEMPLATE, 1), 3, 12, 0.08f));
 		});
+
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.BOTANIST_KEY, 1, factories -> {
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.DANDELION, 3), 8, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.POPPY, 3), 8, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.CORNFLOWER, 3), 8, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Items.CACTUS_FLOWER, 1), 4, 3, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.ALLIUM, 1), 6, 2, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.AZURE_BLUET, 2), 8, 6, 0.12f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.BOTANIST_KEY, 2, factories -> {
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.SHORT_GRASS, 3), 8, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.SHORT_DRY_GRASS, 3), 8, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.TALL_DRY_GRASS, 3), 8, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(ModBlocks.LARGE_END_GRASS, 3),
+					new ItemStack(Items.EMERALD, 1), 4, 4, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(ModBlocks.MEDIUM_END_GRASS, 9),
+					new ItemStack(Items.EMERALD, 1), 4, 4, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(ModBlocks.SMALL_END_GRASS, random.nextBetween(25, 29)),
+					new ItemStack(Items.EMERALD, 1), 4, 4, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.FERN, 3), 6, 9, 0.12f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.BOTANIST_KEY, 3, factories -> {
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModBlocks.BROWN_EVERBUD.asItem(), 1), 12, 3, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.FLOWER_POT, 3),
+					new ItemStack(Items.EMERALD, 3), 8, 4, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Items.DARK_OAK_SAPLING, 4), 8, 3, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.OAK_SAPLING, 3), 8, 2, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.SPRUCE_SAPLING, 3), 8, 2, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.BIRCH_SAPLING, 3), 8, 2, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(Items.CACTUS, 2), 8, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(Items.LILY_OF_THE_VALLEY, 1), 4, 2, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 5),
+					new ItemStack(Items.TALL_GRASS, 1), 4, 3, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 6),
+					new ItemStack(Items.LARGE_FERN, 1), 4, 4, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 4),
+					new ItemStack(ModBlocks.LOTUS, 1), 6, 2, 0.12f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.BOTANIST_KEY, 4, factories -> {
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Items.CHERRY_SAPLING, 1), 6, 5, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Items.MANGROVE_PROPAGULE, 1), 6, 5, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Items.JUNGLE_SAPLING, 1), 6, 4, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Items.PALE_OAK_SAPLING, 1), 6, 4, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Items.ACACIA_SAPLING, 1), 6, 3, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModBlocks.SNOWY_SPRUCE_SAPLING.asItem(), 1), 6, 5, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModBlocks.MAPLE_SAPLING.asItem(), 1), 6, 5, 0.12f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.BOTANIST_KEY, 5, factories -> {
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModBlocks.CRYSTAL_CHERRY_SAPLING, 1), 6, 7, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModBlocks.CHORUS_SAPLING, 1), 6, 6, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Blocks.MOSS_BLOCK, 1), 16, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(Blocks.PALE_MOSS_BLOCK, 1), 16, 1, 0.12f));
+		});
+
 
 		 CustomPortalBuilder.beginPortal().flatPortal().forcedSize(3, 3).tintColor(0x341411)
 			  	  .frameBlock(ModBlocks.STYXIA_PORTAL_FRAME).lightWithItem(ModItems.MEMORY_SHARD).onlyLightInOverworld()

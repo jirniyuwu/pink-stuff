@@ -126,6 +126,15 @@
       }
     },
     {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:cherry_village/buildings/profession/garden",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",

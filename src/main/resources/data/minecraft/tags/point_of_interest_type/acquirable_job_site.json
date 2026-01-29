@@ -4,6 +4,10 @@
     {
       "id": "pinkstuff:corrupt_poi",
       "required": false
+    },
+    {
+      "id": "pinkstuff:flower_poi",
+      "required": false
     }
   ]
 }
