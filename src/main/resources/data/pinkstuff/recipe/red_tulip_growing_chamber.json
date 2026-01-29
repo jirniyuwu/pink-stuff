@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:growing_chamber",
+  "ingredient": "minecraft:red_tulip",
+  "bone_meal_consumption_chance": 0.8,
+  "cooking_time": 240,
+  "result": {
+    "count": 1,
+    "id": "minecraft:red_tulip"
+  }
+}

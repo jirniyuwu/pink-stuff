@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:growing_chamber",
+  "ingredient": "pinkstuff:maple_sapling",
+  "bone_meal_consumption_chance": 0,
+  "cooking_time": 400,
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:maple_sapling"
+  }
+}

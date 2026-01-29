@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:growing_chamber",
+  "ingredient": "minecraft:large_fern",
+  "bone_meal_consumption_chance": 0.5,
+  "cooking_time": 400,
+  "result": {
+    "count": 1,
+    "id": "minecraft:large_fern"
+  }
+}

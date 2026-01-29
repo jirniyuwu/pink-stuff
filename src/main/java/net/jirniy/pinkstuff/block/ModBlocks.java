@@ -447,21 +447,21 @@ public class ModBlocks {
                     .solidBlock(Blocks::never)));
     public static final Block ORANGE_MAPLE_LEAVES = registerBlock("orange_maple_leaves",
             properties -> new UntintedParticleLeavesBlock(0.08f, ModParticles.ORANGE_MAPLE_LEAF_PARTICLE, properties
-                    .mapColor(MapColor.RED).strength(0.4F).ticksRandomly()
+                    .mapColor(MapColor.ORANGE).strength(0.4F).ticksRandomly()
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
                     .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
                     .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
                     .solidBlock(Blocks::never)));
     public static final Block YELLOW_MAPLE_LEAVES = registerBlock("yellow_maple_leaves",
             properties -> new UntintedParticleLeavesBlock(0.08f, ModParticles.YELLOW_MAPLE_LEAF_PARTICLE, properties
-                    .mapColor(MapColor.RED).strength(0.4F).ticksRandomly()
+                    .mapColor(MapColor.YELLOW).strength(0.4F).ticksRandomly()
                     .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
                     .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
                     .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
                     .solidBlock(Blocks::never)));
     public static final Block MAPLE_LEAF_LITTER = registerBlock("maple_leaf_litter",
             properties -> new LeafLitterBlock(properties.mapColor(MapColor.DULL_RED)
-                    .noCollision().breakInstantly().sounds(BlockSoundGroup.LEAF_LITTER)
+                    .noCollision().breakInstantly().sounds(BlockSoundGroup.LEAF_LITTER).replaceable()
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block MAPLE_SAPLING = registerBlock("maple_sapling",
@@ -1081,6 +1081,9 @@ public class ModBlocks {
             properties -> new CorruptCauldronBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.NETHER_WOOD).mapColor(MapColor.DARK_CRIMSON)));
     public static final Block LAVA_GEYSER = registerBlock("lava_geyser",
             properties -> new LavaGeyserBlock(properties.strength(2f).sounds(BlockSoundGroup.SOUL_SAND).mapColor(MapColor.TERRACOTTA_ORANGE).nonOpaque().luminance(state -> 4)));
+    public static final Block GROWING_CHAMBER = registerBlock("growing_chamber",
+            properties -> new GrowingChamberBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.GLASS).nonOpaque()
+                    .allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
 
     public static final Block AMETHYST_PARTERS = registerBlock("amethyst_parters",
             properties -> new FlowerBlock(StatusEffects.STRENGTH, 5, properties.strength(0f)

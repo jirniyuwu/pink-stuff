@@ -15,6 +15,10 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_blaster_be"),
                     FabricBlockEntityTypeBuilder.create(ThermiumBlasterBlockEntity::new, ModBlocks.THERMIUM_BLASTER).build(null));
 
+    public static final BlockEntityType<GrowingChamberBlockEntity> GROWING_CHAMBER_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "growing_chamber_be"),
+                    FabricBlockEntityTypeBuilder.create(GrowingChamberBlockEntity::new, ModBlocks.GROWING_CHAMBER).build(null));
+
     public static final BlockEntityType<CorruptCauldronBlockEntity> CORRUPT_CAULDRON_BE =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "corrupt_cauldron_be"),
                     FabricBlockEntityTypeBuilder.create(CorruptCauldronBlockEntity::new, ModBlocks.CORRUPT_CAULDRON).build(null));

@@ -10,6 +10,7 @@ import net.fabricmc.fabric.impl.client.rendering.hud.HudElementRegistryImpl;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.block.entity.renderer.DisplayBlockEntityRenderer;
+import net.jirniy.pinkstuff.block.entity.renderer.GrowingChamberEntityRenderer;
 import net.jirniy.pinkstuff.block.entity.renderer.ShelfBlockEntity2Renderer;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.entity.client.*;
@@ -17,6 +18,7 @@ import net.jirniy.pinkstuff.particle.*;
 import net.jirniy.pinkstuff.screen.ModScreenHandlers;
 import net.jirniy.pinkstuff.screen.custom.CorruptCauldronScreen;
 import net.jirniy.pinkstuff.screen.custom.DisplayScreen;
+import net.jirniy.pinkstuff.screen.custom.GrowingChamberScreen;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.particle.FlameParticle;
@@ -100,6 +102,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_BROWN_EVERBUD, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.SOFT_CLOUD, BlockRenderLayer.TRANSLUCENT);
+        BlockRenderLayerMap.putBlock(ModBlocks.GROWING_CHAMBER, BlockRenderLayer.CUTOUT);
 
         EntityModelLayerRegistry.registerModelLayer(CrawlerModel.CRAWLER, CrawlerModel::getTexturedModelData);
         EntityRendererFactories.register(ModEntities.CRAWLER, CrawlerRenderer::new);
@@ -113,11 +116,13 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         EntityRendererFactories.register(ModEntities.CORRUPTION_FIREBALL, CorruptionFireballRenderer::new);
 
         BlockEntityRendererFactories.register(ModBlockEntities.DISPLAY_BE, DisplayBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.GROWING_CHAMBER_BE, GrowingChamberEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.SHELF_BE, ShelfBlockEntity2Renderer::new);
 
         HandledScreens.register(ModScreenHandlers.DISPLAY_SCREEN_HANDLER, DisplayScreen::new);
         HandledScreens.register(ModScreenHandlers.THERMIUM_BLASTER_SCREEN_HANDLER, ThermiumBlasterScreen::new);
-        HandledScreens.register(ModScreenHandlers.CORRUPT_CAULDRON_SCREEN_HANDLER, CorruptCauldronScreen::new);
+        HandledScreens.register(ModScreenHandlers.CORRUPT_CAULDRON_SCREEN_HANDLER, CorruptCauldronScreen::new);;
+        HandledScreens.register(ModScreenHandlers.GROWING_CHAMBER_SCREEN_HANDLER, GrowingChamberScreen::new);
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.RIFT_PARTICLE, RiftParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.DAWNBREAK_PARTICLE, DawnbreakParticle.Factory::new);

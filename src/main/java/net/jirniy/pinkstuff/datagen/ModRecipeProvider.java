@@ -1629,6 +1629,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.THERMIUM), conditionsFromItem(ModItems.THERMIUM))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "thermium_blaster")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GROWING_CHAMBER, 1)
+                        .pattern("AAA")
+                        .pattern("TBT")
+                        .pattern("DDD")
+                        .input('T', Blocks.GLASS_PANE)
+                        .input('B', Blocks.DIRT)
+                        .input('A', Items.STICK)
+                        .input('D', Blocks.TERRACOTTA)
+                        .criterion(hasItem(Blocks.DIRT), conditionsFromItem(Blocks.DIRT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "growing_chamber")));
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUPT_CAULDRON, 1)
                         .pattern("DTD")

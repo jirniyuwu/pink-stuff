@@ -43,6 +43,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.DISPLAY);
         addDrop(ModBlocks.THERMIUM_BLASTER);
+        addDrop(ModBlocks.GROWING_CHAMBER);
         addDrop(ModBlocks.CORRUPT_CAULDRON);
         addDropWithSilkTouch(ModBlocks.PINK_ICE);
         addDrop(ModBlocks.COMPRESSED_END_STONE);

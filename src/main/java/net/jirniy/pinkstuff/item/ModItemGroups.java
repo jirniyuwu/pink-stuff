@@ -249,6 +249,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THERMIUM_ROD);
                         entries.add(ModBlocks.DISPLAY);
                         entries.add(ModBlocks.THERMIUM_BLASTER);
+                        entries.add(ModBlocks.GROWING_CHAMBER);
 
                         entries.add(ModItems.RAW_PINLINE);
                         entries.add(ModItems.PREPARED_PINLINE);
@@ -1174,6 +1175,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.CERILLE_LANTERN);
             entries.add(ModBlocks.STYXIA_PORTAL_FRAME);
             entries.add(ModBlocks.THERMIUM_BLASTER);
+            entries.add(ModBlocks.GROWING_CHAMBER);
             entries.add(ModBlocks.CORRUPT_CAULDRON);
             entries.add(ModBlocks.DISPLAY);
             entries.add(ModBlocks.LAVA_GEYSER);

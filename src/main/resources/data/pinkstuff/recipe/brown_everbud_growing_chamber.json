@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:growing_chamber",
+  "ingredient": "pinkstuff:brown_everbud",
+  "bone_meal_consumption_chance": 0.8,
+  "cooking_time": 240,
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:brown_everbud"
+  }
+}

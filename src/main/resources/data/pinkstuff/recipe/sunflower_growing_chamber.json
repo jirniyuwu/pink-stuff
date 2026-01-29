@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:growing_chamber",
+  "ingredient": "minecraft:sunflower",
+  "bone_meal_consumption_chance": 0.8,
+  "cooking_time": 680,
+  "result": {
+    "count": 1,
+    "id": "minecraft:sunflower"
+  }
+}

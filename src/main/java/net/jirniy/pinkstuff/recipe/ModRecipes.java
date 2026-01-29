@@ -19,6 +19,17 @@ public class ModRecipes {
                 }
             });
 
+    public static final RecipeSerializer<GrowingChamberRecipe> GROWING_CHAMBER_SERIALIZER = Registry.register(
+            Registries.RECIPE_SERIALIZER, Identifier.of(JirniysPinkStuff.MOD_ID, "growing_chamber"),
+            new GrowingChamberRecipe.Serializer());
+    public static final RecipeType<GrowingChamberRecipe> GROWING_CHAMBER_TYPE = Registry.register(
+            Registries.RECIPE_TYPE, Identifier.of(JirniysPinkStuff.MOD_ID, "growing_chamber"), new RecipeType<GrowingChamberRecipe>() {
+                @Override
+                public String toString() {
+                    return "growing_chamber";
+                }
+            });
+
     public static void registerRecipes() {
         JirniysPinkStuff.LOGGER.info("Registering Custom Recipes for " + JirniysPinkStuff.MOD_ID);
     }

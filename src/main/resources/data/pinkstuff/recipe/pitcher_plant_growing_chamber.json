@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:growing_chamber",
+  "ingredient": "minecraft:pitcher_pod",
+  "bone_meal_consumption_chance": 1,
+  "cooking_time": 1600,
+  "result": {
+    "count": 1,
+    "id": "minecraft:pitcher_plant"
+  }
+}
