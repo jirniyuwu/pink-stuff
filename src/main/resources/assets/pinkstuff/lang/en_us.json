@@ -250,10 +250,13 @@
   "block.pinkstuff.compressed_end_stone_bricks_wall": "Compressed End Stone Brick Wall",
 
   "block.pinkstuff.styxmoss": "Styxmoss",
+  "block.pinkstuff.auric_moss": "Auric Moss",
   "block.pinkstuff.end_moss": "End Moss",
+  "block.pinkstuff.auric_moss_carpet": "Auric Moss Carpet",
   "block.pinkstuff.styxmoss_carpet": "Styxmoss Carpet",
   "block.pinkstuff.styxmoss_vine": "Styxmoss Vine",
   "block.pinkstuff.styxgrass": "Styxgrass",
+  "block.pinkstuff.auric_grass": "Auric Grass",
   "block.pinkstuff.hanging_styxgrass": "Hanging Styxgrass",
   "block.pinkstuff.hanging_styxmoss": "Hanging Styxmoss",
   "block.pinkstuff.corrupt_roots": "Corrupted Roots",
@@ -270,6 +273,8 @@
   "block.pinkstuff.mossy_cobbled_styxstone_slab": "Mossy Cobbled Styxstone Slab",
   "block.pinkstuff.mossy_cobbled_styxstone_stairs": "Mossy Cobbled Styxstone Stairs",
   "block.pinkstuff.mossy_cobbled_styxstone_wall": "Mossy Cobbled Styxstone Wall",
+  "block.pinkstuff.auric_mossy_cobbled_styxstone": "Auric Mossy Cobbled Styxstone",
+  "block.pinkstuff.auric_mossy_cobblestone": "Auric Mossy Cobblestone",
 
   "block.pinkstuff.styxstone": "Styxstone",
   "block.pinkstuff.polished_styxstone": "Polished Styxstone",

@@ -107,6 +107,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPRESSED_STYXSTONE_BRICKS_STAIRS)
                 .add(ModBlocks.COBBLED_STYXSTONE)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE)
+                .add(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE)
+                .add(ModBlocks.AURIC_MOSSY_COBBLESTONE)
                 .add(ModBlocks.MABRIZE)
                 .add(ModBlocks.MABRIZE_BRICKS)
                 .add(ModBlocks.MABRIZE_BRICKS_WALL)
@@ -284,6 +286,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ASH_BLOCK);
         valueLookupBuilder(BlockTags.HOE_MINEABLE)
                 .add(ModBlocks.END_MOSS)
+                .add(ModBlocks.AURIC_MOSS)
+                .add(ModBlocks.AURIC_MOSS_CARPET)
                 .add(ModBlocks.STYXMOSS)
                 .add(ModBlocks.STYXMOSS_CARPET)
                 .add(ModBlocks.STYXMOSS_VINE)
@@ -743,6 +747,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THERMIUM_WILTBORN);
         valueLookupBuilder(BlockTags.DIRT)
                 .add(ModBlocks.END_MOSS)
+                .add(ModBlocks.AURIC_MOSS)
                 .add(ModBlocks.STYXIAN_SOIL)
                 .add(ModBlocks.STYXMOSS);
         valueLookupBuilder(BlockTags.OVERWORLD_CARVER_REPLACEABLES)
@@ -784,7 +789,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_SAND)
                 .add(ModBlocks.PINK_SANDSTONE)
                 .add(ModBlocks.STYXIAN_SOIL)
-                .add(ModBlocks.STYXMOSS);
+                .add(ModBlocks.STYXMOSS)
+                .add(ModBlocks.AURIC_MOSS);
         valueLookupBuilder(ModTags.Blocks.CORRUPT_BLOCKS)
                 .add(ModBlocks.BLACK_GOOP)
                 .add(ModBlocks.CORRERIE_LOG)
@@ -806,6 +812,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(ModTags.Blocks.END_STONE)
                 .addOptionalTag(ModTags.Blocks.BASE_STONE_STYXIA)
                 .add(ModBlocks.COBBLED_STYXSTONE)
+                .add(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE);
         valueLookupBuilder(BlockTags.CROPS)
                 .add(ModBlocks.COTTON)
@@ -820,6 +827,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CORESTONE)
                 .add(ModBlocks.COBBLED_STYXSTONE)
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE)
+                .add(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE)
                 .add(ModBlocks.BLUE_MUSHROOM);
         valueLookupBuilder(BlockTags.REPLACEABLE_BY_MUSHROOMS)
                 .add(ModBlocks.BLUE_MUSHROOM);
@@ -834,6 +842,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(ModTags.Blocks.MAPLE_ROOTS_GROW_THROUGH)
                 .addOptionalTag(BlockTags.DIRT)
                 .addOptionalTag(BlockTags.AIR)
+                .add(ModBlocks.AURIC_GRASS)
                 .add(ModBlocks.MAPLE_LEAF_LITTER);
+        valueLookupBuilder(ModTags.Blocks.AURIC_GRASS_PLACEABLE_ON)
+                .addOptionalTag(BlockTags.DIRT)
+                .addOptionalTag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.AURIC_MOSSY_COBBLESTONE)
+                .add(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE);
     }
 }

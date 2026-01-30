@@ -489,6 +489,12 @@ public class JirniysPinkStuff implements ModInitializer {
 					new ItemStack(Blocks.MOSS_BLOCK, 1), 16, 1, 0.12f));
 			factories.add((serverWorld, entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModBlocks.END_MOSS, 1), 16, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModBlocks.AURIC_MOSS, 1), 16, 1, 0.12f));
+			factories.add((serverWorld, entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
 					new ItemStack(Blocks.PALE_MOSS_BLOCK, 1), 16, 1, 0.12f));
 		});
 

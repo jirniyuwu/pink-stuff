@@ -84,6 +84,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STYXIAN_GRAVEL_PATCH_PLACED_KEY = registerKey("styxian_gravel_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_VEGETATION_PLACED_KEY = registerKey("styxmoss_vegetation_placed");
     public static final RegistryKey<PlacedFeature> STYXMOSS_PATCH_PLACED_KEY = registerKey("styxmoss_patch_placed");
+    public static final RegistryKey<PlacedFeature> AURIC_PATCH_PLACED_KEY = registerKey("auric_patch_placed");
+    public static final RegistryKey<PlacedFeature> AURIC_GRASS_PATCH_PLACED_KEY = registerKey("auric_grass_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXGRASS_PATCH_PLACED_KEY = registerKey("styxgrass_patch_placed");
     public static final RegistryKey<PlacedFeature> CORRUPTION_PATCH_PLACED_KEY = registerKey("corruption_patch_placed");
     public static final RegistryKey<PlacedFeature> STYXGRASS_CEILING_PLACED_KEY = registerKey("styxgrass_ceiling_placed");
@@ -249,6 +251,11 @@ public class ModPlacedFeatures {
                 ));
         register(context, STYXMOSS_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXMOSS_PATCH_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(125), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
+        register(context, AURIC_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AURIC_MOSS_PATCH_KEY),
+                new PlacementModifier[]{NoiseThresholdCountPlacementModifier.of(0d, 2, 6),
+                        SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE, CountPlacementModifier.of(1),
                         EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
                         RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)), BiomePlacementModifier.of()});
         register(context, CORRUPTION_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTION_PATCH_KEY),
@@ -422,6 +429,8 @@ public class ModPlacedFeatures {
                 RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, STYXGRASS_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXGRASS_PATCH_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, AURIC_GRASS_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXGRASS_PATCH_KEY),
+                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, CORRUPT_ROOTS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPT_ROOTS_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, COTTON_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COTTON_PATCH_KEY),

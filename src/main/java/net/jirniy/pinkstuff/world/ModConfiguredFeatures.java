@@ -118,15 +118,21 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_ROCK_KEY = registryKey("styxian_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WASTEROCK_ROCK_KEY = registryKey("wasterock_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOSSY_STYXIAN_ROCK_KEY = registryKey("mossy_styxian_rock");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AURIC_MOSSY_STYXIAN_ROCK_KEY = registryKey("auric_mossy_styxian_rock");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AURIC_MOSSY_ROCK_KEY = registryKey("auric_mossy_rock");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_CLAY_PATCH_KEY = registryKey("styxian_clay_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIAN_GRAVEL_PATCH_KEY = registryKey("styxian_gravel_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_KEY = registryKey("styxmoss_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_VEGETATION_KEY = registryKey("styxmoss_vegetation");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXMOSS_PATCH_BONEMEAL_KEY = registryKey("styxmoss_patch_bonemeal");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AURIC_MOSS_PATCH_KEY = registryKey("auric_moss_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AURIC_MOSS_VEGETATION_KEY = registryKey("auric_moss_vegetation");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AURIC_MOSS_PATCH_BONEMEAL_KEY = registryKey("auric_moss_patch_bonemeal");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_PATCH_KEY = registryKey("corruption_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BROWN_EVERBUD_PATCH_KEY = registryKey("brown_everbud_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_PATCH_KEY = registryKey("styxgrass_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXGRASS_CEILING_KEY = registryKey("styxgrass_ceiling");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AURIC_GRASS_PATCH_KEY = registryKey("auric_grass_patch");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CORRUPTION_CEILING_KEY = registryKey("corruption_ceiling");
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_MOSS_CEILING_KEY = registryKey("end_moss_ceiling");
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_MOSS_BONE_MEAL_KEY = registryKey("end_moss_bone_meal");
@@ -232,6 +238,12 @@ public class ModConfiguredFeatures {
         register(context, MOSSY_STYXIAN_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE.getDefaultState(), 3)
                 .add(ModBlocks.COBBLED_STYXSTONE.getDefaultState(), 1))));
+        register(context, AURIC_MOSSY_STYXIAN_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                .add(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE.getDefaultState(), 3)
+                .add(ModBlocks.COBBLED_STYXSTONE.getDefaultState(), 1))));
+        register(context, AURIC_MOSSY_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                .add(ModBlocks.AURIC_MOSSY_COBBLESTONE.getDefaultState(), 3)
+                .add(Blocks.COBBLESTONE.getDefaultState(), 1))));
         register(context, LOTUS_FLOWER_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(
                 BlockStateProvider.of(ModBlocks.LOTUS.getDefaultState().with(LotusBlock.PAD, true))));
         register(context, STYXIAN_CLAY_PATCH_KEY, Feature.ORE, new OreFeatureConfig(
@@ -271,6 +283,31 @@ public class ModConfiguredFeatures {
                                         .getDefaultState().with(GemBerryBushBlock.AGE, 2), 2)
                                 .add(ModBlocks.CHARMBERRY_BUSH
                                         .getDefaultState().with(GemBerryBushBlock.AGE, 3), 1)))),
+                        VerticalSurfaceType.FLOOR,
+                        ConstantIntProvider.create(1), 0.2f, 5, 0.8f,
+                        UniformIntProvider.create(4, 6), 0.5f));
+        register(context, AURIC_MOSS_VEGETATION_KEY, Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                        .add(ModBlocks.AURIC_MOSS_CARPET.getDefaultState(), 10)
+                        .add(ModBlocks.AURIC_GRASS.getDefaultState(), 20)
+                        .add(Blocks.AIR.getDefaultState(), 39))));
+        register(context, AURIC_MOSS_PATCH_BONEMEAL_KEY, Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
+                        BlockStateProvider.of(ModBlocks.AURIC_MOSS), PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                                .add(ModBlocks.AURIC_MOSS_CARPET.getDefaultState(), 1)
+                                .add(ModBlocks.AURIC_GRASS.getDefaultState(), 2)
+                                .add(Blocks.AIR.getDefaultState(), 4)))),
+                        VerticalSurfaceType.FLOOR,
+                        ConstantIntProvider.create(1), 0.2f, 5, 0.6f,
+                        UniformIntProvider.create(1, 2), 0.3f));
+        register(context, AURIC_MOSS_PATCH_KEY, Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(BlockTags.MOSS_REPLACEABLE,
+                        BlockStateProvider.of(ModBlocks.AURIC_MOSS), PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                                .add(ModBlocks.AURIC_MOSS_CARPET.getDefaultState(), 30)
+                                .add(ModBlocks.AURIC_GRASS.getDefaultState(), 50)
+                                .add(Blocks.AIR.getDefaultState(), 150)))),
                         VerticalSurfaceType.FLOOR,
                         ConstantIntProvider.create(1), 0.2f, 5, 0.8f,
                         UniformIntProvider.create(4, 6), 0.5f));
@@ -662,6 +699,11 @@ public class ModConfiguredFeatures {
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.STYXGRASS)),
                         List.of(ModBlocks.STYXMOSS, ModBlocks.STYXIAN_SOIL)));
+        register(context, AURIC_GRASS_PATCH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.AURIC_GRASS)),
+                        List.of(ModBlocks.AURIC_MOSS, ModBlocks.AURIC_MOSSY_COBBLESTONE, ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE,
+                                Blocks.DIRT, Blocks.GRASS_BLOCK, ModBlocks.MAPLE_LOG, ModBlocks.MAPLE_WOOD)));
         register(context, BROWN_EVERBUD_PATCH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BROWN_EVERBUD)),
@@ -747,7 +789,7 @@ public class ModConfiguredFeatures {
                         0.25F, 0.5F, 0.16666667F, 0.33333334F),
                 Optional.of(new MangroveRootPlacer(UniformIntProvider.create(-1, 3),
                         BlockStateProvider.of(ModBlocks.MAPLE_LOG),
-                        Optional.empty(),
+                        Optional.of(new AboveRootPlacement(BlockStateProvider.of(ModBlocks.AURIC_GRASS), 0.6F)),
                         new MangroveRootPlacement(context.getRegistryLookup(RegistryKeys.BLOCK).getOrThrow(ModTags.Blocks.MAPLE_ROOTS_GROW_THROUGH),
                                 RegistryEntryList.empty(),
                                 BlockStateProvider.of(ModBlocks.MAPLE_LOG), 6, 18, 0.2F))),
@@ -766,7 +808,7 @@ public class ModConfiguredFeatures {
                         0.25F, 0.5F, 0.16666667F, 0.33333334F),
                 Optional.of(new MangroveRootPlacer(UniformIntProvider.create(-1, 2),
                         BlockStateProvider.of(ModBlocks.MAPLE_LOG),
-                        Optional.empty(),
+                        Optional.of(new AboveRootPlacement(BlockStateProvider.of(ModBlocks.AURIC_GRASS), 0.3F)),
                         new MangroveRootPlacement(context.getRegistryLookup(RegistryKeys.BLOCK).getOrThrow(ModTags.Blocks.MAPLE_ROOTS_GROW_THROUGH),
                                 RegistryEntryList.empty(),
                                 BlockStateProvider.of(ModBlocks.MAPLE_LOG), 5, 15, 0.2F))),

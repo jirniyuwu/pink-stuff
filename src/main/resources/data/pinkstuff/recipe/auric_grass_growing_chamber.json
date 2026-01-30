@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:growing_chamber",
+  "ingredient": "pinkstuff:auric_grass",
+  "bone_meal_consumption_chance": 0,
+  "cooking_time": 200,
+  "result": {
+    "count": 1,
+    "id": "pinkstuff:auric_grass"
+  }
+}

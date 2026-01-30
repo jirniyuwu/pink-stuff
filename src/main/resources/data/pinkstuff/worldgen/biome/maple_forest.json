@@ -76,6 +76,8 @@
       "pinkstuff:maple_tree_placed",
       "pinkstuff:littered_maple_tree_placed",
       "minecraft:flower_default",
+      "pinkstuff:auric_patch_placed",
+      "pinkstuff:auric_grass_patch_placed",
       "minecraft:patch_grass_forest",
       "pinkstuff:maple_litter_placed",
       "minecraft:patch_pumpkin",

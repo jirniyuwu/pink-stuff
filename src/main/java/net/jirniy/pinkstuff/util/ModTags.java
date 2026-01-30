@@ -45,6 +45,7 @@ public class ModTags {
         public static final TagKey<Block> CORRUPT_BLOCKS = createTag("corrupt_blocks");
         public static final TagKey<Block> CORRUPTABLE_BLOCKS = createTag("corruptable_blocks");
         public static final TagKey<Block> MAPLE_ROOTS_GROW_THROUGH = createTag("maple_roots_grow_through");
+        public static final TagKey<Block> AURIC_GRASS_PLACEABLE_ON = createTag("auric_grass_placeable_on");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JirniysPinkStuff.MOD_ID, name));

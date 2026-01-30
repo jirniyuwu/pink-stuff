@@ -50,6 +50,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TILED_STYXIAN_PATH);
                         entries.add(ModBlocks.STYXMOSS);
                         entries.add(ModBlocks.STYXMOSS_CARPET);
+                        entries.add(ModBlocks.AURIC_MOSS);
+                        entries.add(ModBlocks.AURIC_MOSS_CARPET);
+                        entries.add(ModBlocks.AURIC_MOSSY_COBBLESTONE);
                         entries.add(ModBlocks.COBBLED_STYXSTONE);
                         entries.add(ModBlocks.COBBLED_STYXSTONE_SLAB);
                         entries.add(ModBlocks.COBBLED_STYXSTONE_STAIRS);
@@ -58,6 +61,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB);
                         entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS);
                         entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL);
+                        entries.add(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE);
 
                         entries.add(ModBlocks.STYXSTONE);
                         entries.add(ModBlocks.POLISHED_STYXSTONE);
@@ -359,6 +363,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.HANGING_STYXGRASS);
                         entries.add(ModBlocks.HANGING_STYXMOSS);
                         entries.add(ModBlocks.STYXMOSS_VINE);
+                        entries.add(ModBlocks.AURIC_GRASS);
                         entries.add(ModBlocks.MAPLE_LEAF_LITTER);
                         entries.add(ModBlocks.DEATH_FLOWERS);
                         entries.add(ModItems.CORRUPT_SPROUTS);
@@ -636,6 +641,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.CERILLE_BLOCK);
             entries.add(ModBlocks.SUNGAZE_BLOCK);
 
+            entries.add(ModBlocks.AURIC_MOSSY_COBBLESTONE);
             entries.add(ModBlocks.PINK_SANDSTONE);
             entries.add(ModBlocks.PINK_SANDSTONE_SLAB);
             entries.add(ModBlocks.PINK_SANDSTONE_STAIRS);
@@ -668,6 +674,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB);
             entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS);
             entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL);
+            entries.add(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE);
             entries.add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE);
             entries.add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_SLAB);
             entries.add(ModBlocks.POLISHED_COMPRESSED_STYXSTONE_STAIRS);
@@ -1095,6 +1102,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.TILED_STYXIAN_PATH);
             entries.add(ModBlocks.STYXMOSS);
             entries.add(ModBlocks.STYXMOSS_CARPET);
+            entries.add(ModBlocks.AURIC_MOSS);
+            entries.add(ModBlocks.AURIC_MOSS_CARPET);
 
             entries.add(ModBlocks.GLOWING_AMETHYST);
             entries.add(ModBlocks.FRAGILE_AMETHYST);
@@ -1143,6 +1152,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.HANGING_STYXGRASS);
             entries.add(ModBlocks.HANGING_STYXMOSS);
             entries.add(ModBlocks.STYXMOSS_VINE);
+            entries.add(ModBlocks.AURIC_GRASS);
             entries.add(ModBlocks.MAPLE_LEAF_LITTER);
             entries.add(ModBlocks.DEATH_FLOWERS);
             entries.add(ModBlocks.CORRUPT_ROOTS);

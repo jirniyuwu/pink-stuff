@@ -2703,6 +2703,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.COBBLED_STYXSTONE), conditionsFromItem(ModBlocks.COBBLED_STYXSTONE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "mossy_cobbled_styxstone")));
+                createShapeless(RecipeCategory.MISC, ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE, 1)
+                        .input(ModBlocks.AURIC_MOSS).input(ModBlocks.COBBLED_STYXSTONE)
+                        .criterion(hasItem(ModBlocks.COBBLED_STYXSTONE), conditionsFromItem(ModBlocks.COBBLED_STYXSTONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "auric_mossy_cobbled_styxstone")));
+                createShapeless(RecipeCategory.MISC, ModBlocks.AURIC_MOSSY_COBBLESTONE, 1)
+                        .input(ModBlocks.AURIC_MOSS).input(Blocks.COBBLESTONE)
+                        .criterion(hasItem(ModBlocks.AURIC_MOSS), conditionsFromItem(ModBlocks.AURIC_MOSS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "auric_mossy_cobblestone")));
 
                 createShapeless(RecipeCategory.MISC, ModItems.BERRY_SALAD, 1)
                         .input(ModTags.Items.BERRIES).input(ModTags.Items.BERRIES).input(ModTags.Items.BERRIES).input(Items.BOWL)

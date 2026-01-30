@@ -252,6 +252,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.END_MOSS);
         addDrop(ModBlocks.STYXMOSS);
         addDrop(ModBlocks.STYXMOSS_CARPET);
+        addDrop(ModBlocks.AURIC_MOSS);
+        addDrop(ModBlocks.AURIC_MOSS_CARPET);
         addDrop(ModBlocks.MABRIZE);
         addDrop(ModBlocks.CORESTONE);
         addDrop(ModBlocks.CLOUDSTONE);
@@ -260,8 +262,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STYXSTONE, ModBlocks.COBBLED_STYXSTONE);
         addDrop(ModBlocks.COBBLED_STYXSTONE);
         addDrop(ModBlocks.MOSSY_COBBLED_STYXSTONE);
+        addDrop(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE);
+        addDrop(ModBlocks.AURIC_MOSSY_COBBLESTONE);
         addDrop(ModBlocks.COMPRESSED_STYXSTONE);
         addDrop(ModBlocks.STYXGRASS, dropsWithShears(ModBlocks.STYXGRASS));
+        addDrop(ModBlocks.AURIC_GRASS, dropsWithShears(ModBlocks.AURIC_GRASS));
         addDrop(ModBlocks.HANGING_STYXGRASS, dropsWithShears(ModBlocks.HANGING_STYXGRASS));
         addDrop(ModBlocks.HANGING_STYXMOSS, dropsWithShears(ModBlocks.HANGING_STYXMOSS));
         addDrop(ModBlocks.STYXMOSS_VINE, dropsWithShears(ModBlocks.STYXMOSS_VINE));

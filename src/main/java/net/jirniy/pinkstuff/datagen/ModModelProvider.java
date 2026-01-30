@@ -219,6 +219,8 @@ public class ModModelProvider extends FabricModelProvider {
         mossyCobbledStyxstonePool.stairs(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS);
         mossyCobbledStyxstonePool.slab(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB);
         mossyCobbledStyxstonePool.wall(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AURIC_MOSSY_COBBLESTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE);
 
         mabrizeBricksPool.stairs(ModBlocks.MABRIZE_BRICKS_STAIRS);
         mabrizeBricksPool.slab(ModBlocks.MABRIZE_BRICKS_SLAB);
@@ -343,6 +345,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerbed(ModBlocks.DEATH_FLOWERS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_MOSS);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.STYXMOSS, ModBlocks.STYXMOSS_CARPET);
+        blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.AURIC_MOSS, ModBlocks.AURIC_MOSS_CARPET);
         blockStateModelGenerator.registerHangingMoss(ModBlocks.HANGING_STYXGRASS);
         blockStateModelGenerator.registerHangingMoss(ModBlocks.HANGING_STYXMOSS);
         blockStateModelGenerator.registerHangingMoss(ModBlocks.HANGING_CORRUPT_ROOTS);
@@ -390,6 +393,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(ModBlocks.LARGE_END_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.CHORUS_LILY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.STYXGRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.AURIC_GRASS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.CORRUPT_ROOTS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.BLUE_MUSHROOM, BlockStateModelGenerator.CrossType.NOT_TINTED);
 

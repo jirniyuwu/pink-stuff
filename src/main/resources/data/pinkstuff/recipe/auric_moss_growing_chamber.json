@@ -1,0 +1,10 @@
+{
+  "type": "pinkstuff:growing_chamber",
+  "ingredient": "pinkstuff:auric_moss",
+  "bone_meal_consumption_chance": 0.5,
+  "cooking_time": 100,
+  "result": {
+    "count": 3,
+    "id": "pinkstuff:auric_moss"
+  }
+}

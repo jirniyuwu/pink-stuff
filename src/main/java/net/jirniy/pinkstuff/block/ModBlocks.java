@@ -81,6 +81,12 @@ public class ModBlocks {
     public static final Block STYXMOSS_CARPET = registerBlock("styxmoss_carpet",
             properties -> new CarpetBlock(properties.strength(0.3f)
                     .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.DARK_AQUA)));
+    public static final Block AURIC_MOSS = registerBlock("auric_moss",
+            properties -> new StyxmossBlock(ModConfiguredFeatures.AURIC_MOSS_PATCH_BONEMEAL_KEY, properties.strength(1.1f)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.GOLD)));
+    public static final Block AURIC_MOSS_CARPET = registerBlock("auric_moss_carpet",
+            properties -> new CarpetBlock(properties.strength(0.6f)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.GOLD)));
     public static final Block STYXSTONE = registerBlock("styxstone",
             properties -> new Block(properties.strength(1.7f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
@@ -117,6 +123,12 @@ public class ModBlocks {
     public static final Block MOSSY_COBBLED_STYXSTONE = registerBlock("mossy_cobbled_styxstone",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block AURIC_MOSSY_COBBLED_STYXSTONE = registerBlock("auric_mossy_cobbled_styxstone",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final Block AURIC_MOSSY_COBBLESTONE = registerBlock("auric_mossy_cobblestone",
+            properties -> new Block(properties.mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool().strength(2.0F, 6.0F)));
     public static final Block COMPRESSED_STYXSTONE = registerBlock("compressed_styxstone",
             properties -> new Block(properties.strength(4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
@@ -201,6 +213,10 @@ public class ModBlocks {
     public static final Block HANGING_CORRUPT_ROOTS = registerBlock("hanging_corrupt_roots",
             properties -> new HangingCorruptRootsBlock(properties.strength(0f).replaceable()
                     .noCollision().nonOpaque().sounds(BlockSoundGroup.HONEY).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block AURIC_GRASS = registerBlock("auric_grass",
+            properties -> new ModGrassBlock(ModTags.Blocks.AURIC_GRASS_PLACEABLE_ON, properties.strength(0f).replaceable()
+                    .offset(AbstractBlock.OffsetType.XZ).noCollision().nonOpaque().sounds(BlockSoundGroup.MOSS_CARPET).pistonBehavior(PistonBehavior.DESTROY),
+                    2, 2, 13, 5, 13));
 
     public static final Block STYXIAN_AMETHYST_ORE = registerBlock("styxian_amethyst_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(1, 3),
