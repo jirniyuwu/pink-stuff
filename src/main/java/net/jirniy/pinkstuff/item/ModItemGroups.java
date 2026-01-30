@@ -412,6 +412,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHORUS_SHELF);
 
                         entries.add(ModBlocks.MAPLE_LOG);
+                        entries.add(ModBlocks.SAPPY_MAPLE_LOG);
                         entries.add(ModBlocks.MAPLE_WOOD);
                         entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
                         entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
@@ -419,6 +420,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RED_MAPLE_LEAVES);
                         entries.add(ModBlocks.ORANGE_MAPLE_LEAVES);
                         entries.add(ModBlocks.YELLOW_MAPLE_LEAVES);
+                        entries.add(ModBlocks.MAPLE_SAP);
                         entries.add(ModBlocks.MAPLE_SAPLING);
 
                         entries.add(ModBlocks.MAPLE_SLAB);
@@ -512,6 +514,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CHARMBERRY);
                         entries.add(ModItems.BERRY_SALAD);
                         entries.add(ModItems.FLESHY_STEW);
+                        entries.add(ModItems.MAPLE_SYRUP_BOTTLE);
                         entries.add(ModItems.COTTON_CANDY);
                         entries.add(ModItems.HAZEWEAVER);
                         entries.add(ModItems.RAW_FAIRY_MEAT);
@@ -848,6 +851,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.MAPLE_WOOD);
             entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
             entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
+            entries.add(ModBlocks.SAPPY_MAPLE_LOG);
             entries.add(ModBlocks.MAPLE_PLANKS);
             entries.add(ModBlocks.RED_MAPLE_LEAVES);
             entries.add(ModBlocks.ORANGE_MAPLE_LEAVES);
@@ -926,6 +930,7 @@ public class ModItemGroups {
             entries.add(ModItems.CHARMBERRY);
             entries.add(ModItems.BERRY_SALAD);
             entries.add(ModItems.FLESHY_STEW);
+            entries.add(ModItems.MAPLE_SYRUP_BOTTLE);
             entries.add(ModItems.COTTON_CANDY);
             entries.add(ModItems.HAZEWEAVER);
             entries.add(ModItems.RAW_FAIRY_MEAT);
@@ -1169,6 +1174,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.QUARTZ_CLUMP);
             entries.add(ModBlocks.KUNZITE_CLUMP);
             entries.add(ModBlocks.THERMIUM_CLUMP);
+            entries.add(ModBlocks.MAPLE_SAP);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
             entries.add(ModItems.CRAWLER_SPAWN_EGG);

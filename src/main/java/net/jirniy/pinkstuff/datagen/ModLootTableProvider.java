@@ -11,18 +11,23 @@ import net.jirniy.pinkstuff.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MultifaceBlock;
+import net.minecraft.data.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.condition.TableBonusLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
+import net.minecraft.loot.function.LimitCountLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.operator.BoundedIntUnaryOperator;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
@@ -332,6 +337,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHORUS_LEAVES, leavesWithItemDrops(ModBlocks.CHORUS_LEAVES, ModBlocks.CHORUS_SAPLING, 0.01f, Items.CHORUS_FRUIT, 0.2f));
 
         addDrop(ModBlocks.MAPLE_LOG);
+        addDrop(ModBlocks.SAPPY_MAPLE_LOG, dropsWithSilkTouch(ModBlocks.SAPPY_MAPLE_LOG,
+                this.applyExplosionDecay(ModBlocks.SAPPY_MAPLE_LOG, ItemEntry.builder(ModBlocks.MAPLE_LOG))));
         addDrop(ModBlocks.MAPLE_WOOD);
         addDrop(ModBlocks.STRIPPED_MAPLE_LOG);
         addDrop(ModBlocks.STRIPPED_MAPLE_WOOD);

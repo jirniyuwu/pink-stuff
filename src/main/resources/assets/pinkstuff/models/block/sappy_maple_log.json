@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "pinkstuff:block/maple_log_top",
+    "side": "pinkstuff:block/sappy_maple_log"
+  }
+}

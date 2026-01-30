@@ -336,11 +336,11 @@ public class ModPlacedFeatures {
 
         register(context, MAPLE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(2, 0.5f, 2), ModBlocks.MAPLE_SAPLING
+                        PlacedFeatures.createCountExtraModifier(4, 0.5f, 1), ModBlocks.MAPLE_SAPLING
                 ));
         register(context, LITTERED_MAPLE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LITTERED_MAPLE_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(1, 0.25f, 1), ModBlocks.MAPLE_SAPLING
+                        PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), ModBlocks.MAPLE_SAPLING
                 ));
         register(context, MAPLE_LITTER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_LEAF_LITTER_KEY),
                 NoiseThresholdCountPlacementModifier.of(-0.8, 4, 1), SquarePlacementModifier.of(),

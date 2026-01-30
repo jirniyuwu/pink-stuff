@@ -6,7 +6,8 @@ import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
-import net.minecraft.item.consume.UseAction;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.sound.SoundEvents;
 
 import static net.minecraft.component.type.ConsumableComponents.food;
 
@@ -73,4 +74,8 @@ public class ModFoodComponents {
 
     public static final FoodComponent GLAZED_CHORUS_FRUIT = new FoodComponent.Builder().nutrition(7).saturationModifier(0.6f).build();
     public static final ConsumableComponent GLAZED_CHORUS_FRUIT_EFFECT = food().consumeSeconds(2).build();
+
+    public static final FoodComponent MAPLE_SYRUP = new FoodComponent.Builder().nutrition(4).saturationModifier(1.8f).build();
+    public static final ConsumableComponent MAPLE_SYRUP_EFFECT = food().consumeSeconds(2.5f).consumeParticles(false)
+            .sound(SoundEvents.ITEM_HONEY_BOTTLE_DRINK).finishSound(RegistryEntry.of(SoundEvents.ITEM_BOTTLE_EMPTY)).build();
 }

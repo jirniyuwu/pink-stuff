@@ -76,6 +76,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.DIAMOND_CLUMP, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.EMERALD_CLUMP, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CORRUPTION_CLUMP, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.MAPLE_SAP, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.MOONSTEEL_CHAIN, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.MOONSTEEL_LANTERN, BlockRenderLayer.CUTOUT);

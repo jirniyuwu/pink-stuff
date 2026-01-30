@@ -8,13 +8,7 @@ import net.jirniy.pinkstuff.block.custom.CottonCropBlock;
 import net.jirniy.pinkstuff.block.custom.GemBerryBushBlock;
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
 import net.jirniy.pinkstuff.item.ModItems;
-import net.jirniy.pinkstuff.trim.ModTrimMaterials;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
-import net.minecraft.client.data.TexturedModel;
-import net.minecraft.item.equipment.trim.ArmorTrimMaterial;
-import net.minecraft.item.equipment.trim.ArmorTrimMaterials;
+import net.minecraft.client.data.*;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -356,6 +350,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.KUNZITE_CLUMP);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.THERMIUM_CLUMP);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.QUARTZ_CLUMP);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.MAPLE_SAP);
         blockStateModelGenerator.registerMultifaceBlockModel(ModBlocks.CORRUPTION_CLUMP);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.STYXMOSS_VINE);
 
@@ -488,6 +483,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MATURE_SPROUT, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEAD_SPROUT, Models.GENERATED);
         itemModelGenerator.register(ModItems.COTTON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAPLE_SYRUP_BOTTLE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.THERMIUM_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.THERMIUM_WASTE, Models.GENERATED);

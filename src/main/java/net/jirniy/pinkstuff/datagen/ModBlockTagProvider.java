@@ -421,6 +421,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHORUS_WOOD)
                 .add(ModBlocks.STRIPPED_CHORUS_LOG)
                 .add(ModBlocks.STRIPPED_CHORUS_WOOD)
+                .add(ModBlocks.SAPPY_MAPLE_LOG)
                 .add(ModBlocks.MAPLE_LOG)
                 .add(ModBlocks.MAPLE_WOOD)
                 .add(ModBlocks.STRIPPED_MAPLE_LOG)
@@ -649,6 +650,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_CHORUS_LOG)
                 .add(ModBlocks.STRIPPED_CHORUS_WOOD);
         valueLookupBuilder(ModTags.Blocks.MAPLE_LOGS)
+                .add(ModBlocks.SAPPY_MAPLE_LOG)
                 .add(ModBlocks.MAPLE_LOG)
                 .add(ModBlocks.MAPLE_WOOD)
                 .add(ModBlocks.STRIPPED_MAPLE_LOG)

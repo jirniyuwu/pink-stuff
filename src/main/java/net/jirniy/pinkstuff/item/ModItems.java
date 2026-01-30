@@ -121,6 +121,9 @@ public class ModItems {
     public static final Item COTTON_CANDY = registerItem("cotton_candy",
             setting -> new Item( setting.food(ModFoodComponents.COTTON_CANDY, ModFoodComponents.COTTON_CANDY_EFFECT)
                     .useRemainder(Items.STICK).maxCount(1)));
+    public static final Item MAPLE_SYRUP_BOTTLE = registerItem("maple_syrup_bottle",
+            setting -> new Item(setting.food(ModFoodComponents.MAPLE_SYRUP, ModFoodComponents.MAPLE_SYRUP_EFFECT)
+                    .useRemainder(Items.GLASS_BOTTLE).maxCount(16)));
 
     public static final Item CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
             setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.CRAWLER)));

@@ -48,6 +48,7 @@ import net.minecraft.world.gen.treedecorator.AttachedToLogsTreeDecorator;
 import net.minecraft.world.gen.treedecorator.PlaceOnGroundTreeDecorator;
 import net.minecraft.world.gen.trunk.*;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -782,7 +783,10 @@ public class ModConfiguredFeatures {
                 new WeightedBlockStateProvider(segmentedBlock(ModBlocks.MAPLE_LEAF_LITTER, 1, 4,
                 LeafLitterBlock.SEGMENT_AMOUNT, LeafLitterBlock.HORIZONTAL_FACING)));
         register(context, key, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                new WeightedBlockStateProvider(
+                        Pool.<BlockState>builder()
+                                .add(ModBlocks.SAPPY_MAPLE_LOG.getDefaultState(), 1)
+                                .add(ModBlocks.MAPLE_LOG.getDefaultState(), 6)),
                 new LargeOakTrunkPlacer(14, 5, 3),
                 BlockStateProvider.of(leaves),
                 new CherryFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(5),

@@ -2,6 +2,7 @@ package net.jirniy.pinkstuff.block;
 
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.block.custom.*;
+import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.particle.ModParticles;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.jirniy.pinkstuff.world.ModConfiguredFeatures;
@@ -23,7 +24,6 @@ import net.minecraft.util.ColorCode;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.world.gen.feature.TreeConfiguredFeatures;
 
 import java.util.function.Function;
 
@@ -270,6 +270,10 @@ public class ModBlocks {
     public static final Block CORRUPTION_CLUMP = registerBlockWithoutBlockItem("corruption_clump",
             properties -> new ModMultifaceBlock(properties.breakInstantly().nonOpaque().noCollision()
                     .sounds(BlockSoundGroup.HONEY).mapColor(MapColor.DARK_RED)));
+    public static final Block MAPLE_SAP = registerBlock("maple_sap",
+            properties -> new SapBlock(ModItems.MAPLE_SYRUP_BOTTLE,
+                    properties.breakInstantly().nonOpaque().noCollision().dropsNothing()
+                    .sounds(BlockSoundGroup.HONEY).mapColor(MapColor.DULL_RED)));
 
     public static final Block COMPRESSED_END_STONE = registerBlock("compressed_end_stone",
             properties -> new Block(properties.strength(10f)
@@ -441,6 +445,9 @@ public class ModBlocks {
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",
             properties -> new PillarBlock(properties
+                    .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DULL_RED)));
+    public static final Block SAPPY_MAPLE_LOG = registerBlock("sappy_maple_log",
+            properties -> new SappyLogBlock(0.02f, (MultifaceBlock) ModBlocks.MAPLE_SAP, properties.ticksRandomly()
                     .strength(2.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable().mapColor(MapColor.DULL_RED)));
     public static final Block MAPLE_WOOD = registerBlock("maple_wood",
             properties -> new PillarBlock(properties
