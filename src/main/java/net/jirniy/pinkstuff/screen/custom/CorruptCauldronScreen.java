@@ -25,7 +25,7 @@ public class CorruptCauldronScreen extends HandledScreen<CorruptCauldronScreenHa
 
     private void renderProgressArrow(DrawContext context, int x, int y) {
         if(handler.isCrafting()) {
-            context.drawTexture(RenderPipelines.GUI_TEXTURED, ARROW_TEXTURE, x + 73, y + 35, 0, 0,
+            context.drawTexture(RenderPipelines.GUI_TEXTURED, ARROW_TEXTURE, x + 73, y + 34, 0, 0,
                     handler.getScaledArrowProgress(), 16, 24, 16);
         }
     }

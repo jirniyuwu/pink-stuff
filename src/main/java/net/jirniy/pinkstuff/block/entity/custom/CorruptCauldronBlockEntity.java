@@ -77,7 +77,7 @@ public class CorruptCauldronBlockEntity extends BlockEntity implements ExtendedS
 
     @Override
     public Text getDisplayName() {
-        return Text.translatable("item.pinkstuff.corrupt_cauldron");
+        return Text.translatable("block.pinkstuff.corrupt_cauldron");
     }
 
     @Override
