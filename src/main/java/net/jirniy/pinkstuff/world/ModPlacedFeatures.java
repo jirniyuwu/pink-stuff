@@ -78,6 +78,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> AMETHYST_SPIKE_PLACED_KEY = registerKey("amethyst_spike_placed");
     public static final RegistryKey<PlacedFeature> DEATHFLOWER_PLACED_KEY = registerKey("deathflower_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_ROCK_PLACED_KEY = registerKey("styxian_rock_placed");
+    public static final RegistryKey<PlacedFeature> AURIC_STYXIAN_ROCK_PLACED_KEY = registerKey("auric_styxian_rock_placed");
     public static final RegistryKey<PlacedFeature> WASTEROCK_ROCK_PLACED_KEY = registerKey("wasterock_rock_placed");
     public static final RegistryKey<PlacedFeature> MOSSY_STYXIAN_ROCK_PLACED_KEY = registerKey("mossy_styxian_rock_placed");
     public static final RegistryKey<PlacedFeature> STYXIAN_CLAY_PATCH_PLACED_KEY = registerKey("styxian_clay_placed");
@@ -233,6 +234,8 @@ public class ModPlacedFeatures {
                         )));
         register(context, STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_ROCK_KEY),
                 CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, AURIC_STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AURIC_MOSSY_STYXIAN_ROCK_KEY),
+                CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, WASTEROCK_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WASTEROCK_ROCK_KEY),
                 CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, MOSSY_STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOSSY_STYXIAN_ROCK_KEY),

@@ -3,7 +3,8 @@
   "biomes": [
     "pinkstuff:styxmoss_overgrowth",
     "pinkstuff:keaphe_forest",
-    "pinkstuff:magic_crystals"
+    "pinkstuff:magic_crystals",
+    "pinkstuff:auric_maple_forest"
   ],
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",

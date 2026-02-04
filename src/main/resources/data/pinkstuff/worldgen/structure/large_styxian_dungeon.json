@@ -8,7 +8,8 @@
     "pinkstuff:styxian_stony_hills",
     "pinkstuff:ashen_farlands",
     "pinkstuff:magic_crystals",
-    "pinkstuff:eroded_wastelands"
+    "pinkstuff:eroded_wastelands",
+    "pinkstuff:auric_maple_forest"
   ],
   "step": "surface_structures",
   "terrain_adaptation": "encapsulate",

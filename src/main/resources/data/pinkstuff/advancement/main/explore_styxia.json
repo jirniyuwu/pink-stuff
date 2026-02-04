@@ -21,6 +21,16 @@
         }
       }
     },
+    "auric_maple_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "pinkstuff:auric_maple_forest"
+          }
+        }
+      }
+    },
     "eroded_wastelands": {
       "trigger": "minecraft:location",
       "conditions": {
@@ -146,6 +156,9 @@
     ],
     [
       "corrupt_cavegarden"
+    ],
+    [
+      "auric_maple_forest"
     ]
   ],
   "sends_telemetry_event": false

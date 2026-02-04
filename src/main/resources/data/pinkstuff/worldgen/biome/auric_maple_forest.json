@@ -1,0 +1,57 @@
+{
+  "attributes": {
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.overworld.forest"
+      }
+    },
+    "minecraft:visual/sky_color": "#5a3516"
+  },
+  "carvers": [
+    "minecraft:canyon",
+    "pinkstuff:styxia_canyon"
+  ],
+  "downfall": 0.7,
+  "effects": {
+    "grass_color": "#db9656",
+    "dry_foliage_color": "#905731",
+    "water_color": 7765467
+  },
+  "features": [
+    [],
+    [],
+    [
+      "minecraft:amethyst_geode",
+      "pinkstuff:auric_styxian_rock_placed"
+    ],
+    [],
+    [],
+    [],
+    [
+      "pinkstuff:compressed_styxstone_placed",
+      "pinkstuff:mabrize_placed",
+      "pinkstuff:styxian_amethyst_ore_placed",
+      "pinkstuff:styxcoal_ore_placed",
+      "pinkstuff:moonsteel_ore_placed",
+      "pinkstuff:sungaze_ore_placed"
+    ],
+    [],
+    [],
+    [
+      "pinkstuff:maple_tree_placed",
+      "pinkstuff:littered_maple_tree_placed",
+      "pinkstuff:auric_patch_placed",
+      "pinkstuff:auric_grass_patch_placed",
+      "pinkstuff:maple_litter_placed",
+      "minecraft:patch_pumpkin",
+      "pinkstuff:styxgrass_patch_placed"
+    ],
+    []
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {},
+  "temperature": 0.5
+}

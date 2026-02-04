@@ -206,9 +206,44 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
+                "pinkstuff:keaphe_forest"
+              ]
+            },
+            "then_run": {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:noise_threshold",
+                "noise": "minecraft:ice",
+                "min_threshold": 0.4,
+                "max_threshold": 0
+              },
+              "then_run": {
+                "type": "minecraft:condition",
+                "if_true": {
+                  "type": "minecraft:stone_depth",
+                  "offset": 1,
+                  "surface_type": "floor",
+                  "add_surface_depth": false,
+                  "secondary_depth_range": 1
+                },
+                "then_run": {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "pinkstuff:auric_moss"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "minecraft:condition",
+            "if_true": {
+              "type": "minecraft:biome",
+              "biome_is": [
                 "pinkstuff:corrupted_spikes",
                 "pinkstuff:corrupt_cavegarden",
                 "pinkstuff:styxian_plains",
+                "pinkstuff:auric_maple_forest",
                 "pinkstuff:styxmoss_overgrowth",
                 "pinkstuff:keaphe_forest",
                 "pinkstuff:magic_crystals"
