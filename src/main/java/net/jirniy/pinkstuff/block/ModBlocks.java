@@ -103,8 +103,14 @@ public class ModBlocks {
             properties -> new Block(properties.strength(1.4f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block POLISHED_AMETANE = registerBlock("polished_ametane",
-            properties -> new Block(properties.strength(1.4f).requiresTool()
+            properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block RAINBOW_STONE = registerBlock("rainbow_stone",
+            properties -> new Block(properties.strength(1.4f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.OFF_WHITE)));
+    public static final Block POLISHED_RAINBOW_STONE = registerBlock("polished_rainbow_stone",
+            properties -> new Block(properties.strength(2f).requiresTool()
+                    .sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.OFF_WHITE)));
     public static final Block WASTEROCK = registerBlock("wasterock",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.TUFF).mapColor(MapColor.TERRACOTTA_LIME)));
@@ -708,6 +714,9 @@ public class ModBlocks {
     public static final Block AMETANE_BRICKS = registerBlock("ametane_bricks",
             properties -> new Block(properties.strength(2f).requiresTool()
                     .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block RAINBOW_STONE_BRICKS = registerBlock("rainbow_stone_bricks",
+            properties -> new Block(properties.strength(1.4f).requiresTool()
+                    .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.OFF_WHITE)));
     public static final Block WASTEROCK_BRICKS = registerBlock("wasterock_bricks",
             properties -> new Block(properties.strength(2.4f).requiresTool()
                     .sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.TERRACOTTA_LIME)));
@@ -835,6 +844,22 @@ public class ModBlocks {
             properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block POLISHED_AMETANE_WALL = registerBlock("polished_ametane_wall",
             properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
+    public static final Block RAINBOW_STONE_BRICKS_STAIRS = registerBlock("rainbow_stone_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.RAINBOW_STONE_BRICKS.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.OFF_WHITE)));
+    public static final Block RAINBOW_STONE_BRICKS_SLAB = registerBlock("rainbow_stone_bricks_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.OFF_WHITE)));
+    public static final Block RAINBOW_STONE_BRICKS_WALL = registerBlock("rainbow_stone_bricks_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.TUFF_BRICKS).mapColor(MapColor.OFF_WHITE)));
+
+    public static final Block POLISHED_RAINBOW_STONE_STAIRS = registerBlock("polished_rainbow_stone_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_RAINBOW_STONE.getDefaultState(),
+                    properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.OFF_WHITE)));
+    public static final Block POLISHED_RAINBOW_STONE_SLAB = registerBlock("polished_rainbow_stone_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.OFF_WHITE)));
+    public static final Block POLISHED_RAINBOW_STONE_WALL = registerBlock("polished_rainbow_stone_wall",
+            properties -> new WallBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.POLISHED_TUFF).mapColor(MapColor.OFF_WHITE)));
 
     public static final Block WASTEROCK_BRICKS_STAIRS = registerBlock("wasterock_bricks_stairs",
             properties -> new StairsBlock(ModBlocks.WASTEROCK_BRICKS.getDefaultState(),

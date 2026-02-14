@@ -341,6 +341,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MEMORY_BRICKS_STAIRS);
                         entries.add(ModBlocks.MEMORY_BRICKS_WALL);
                         entries.add(ModItems.RAINBOW_MINERAL);
+                        entries.add(ModBlocks.RAINBOW_STONE);
+                        entries.add(ModBlocks.POLISHED_RAINBOW_STONE);
+                        entries.add(ModBlocks.POLISHED_RAINBOW_STONE_SLAB);
+                        entries.add(ModBlocks.POLISHED_RAINBOW_STONE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_RAINBOW_STONE_WALL);
+                        entries.add(ModBlocks.RAINBOW_STONE_BRICKS);
+                        entries.add(ModBlocks.RAINBOW_STONE_BRICKS_SLAB);
+                        entries.add(ModBlocks.RAINBOW_STONE_BRICKS_STAIRS);
+                        entries.add(ModBlocks.RAINBOW_STONE_BRICKS_WALL);
 
                         entries.add(ModBlocks.STYXIAN_LAPIS_ORE);
                         entries.add(ModBlocks.COMPRESSED_STYXIAN_LAPIS_ORE);
@@ -726,6 +735,14 @@ public class ModItemGroups {
             entries.add(ModBlocks.CLOUDSTONE_BRICKS_SLAB);
             entries.add(ModBlocks.CLOUDSTONE_BRICKS_STAIRS);
             entries.add(ModBlocks.CLOUDSTONE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_RAINBOW_STONE);
+            entries.add(ModBlocks.POLISHED_RAINBOW_STONE_SLAB);
+            entries.add(ModBlocks.POLISHED_RAINBOW_STONE_STAIRS);
+            entries.add(ModBlocks.POLISHED_RAINBOW_STONE_WALL);
+            entries.add(ModBlocks.RAINBOW_STONE_BRICKS);
+            entries.add(ModBlocks.RAINBOW_STONE_BRICKS_SLAB);
+            entries.add(ModBlocks.RAINBOW_STONE_BRICKS_STAIRS);
+            entries.add(ModBlocks.RAINBOW_STONE_BRICKS_WALL);
             entries.add(ModBlocks.COMPRESSED_END_STONE);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS);
             entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
@@ -1097,6 +1114,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.COMPRESSED_STYXSTONE);
             entries.add(ModBlocks.MABRIZE);
             entries.add(ModBlocks.AMETANE);
+            entries.add(ModBlocks.RAINBOW_STONE);
             entries.add(ModBlocks.WASTEROCK);
             entries.add(ModBlocks.CLOUDSTONE);
             entries.add(ModBlocks.SOFT_CLOUD);
