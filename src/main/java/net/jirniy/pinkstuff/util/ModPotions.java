@@ -1,9 +1,14 @@
 package net.jirniy.pinkstuff.util;
 
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.jirniy.pinkstuff.JirniysPinkStuff;
 import net.jirniy.pinkstuff.effect.ModEffects;
+import net.jirniy.pinkstuff.item.ModItems;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -29,7 +34,6 @@ public class ModPotions {
     public static final RegistryEntry<Potion> STRONG_VULNERABILITY = registerPotion("strong_vulnerability",
             new Potion("vulnerability", new StatusEffectInstance(ModEffects.VULNERABILITY, 1800, 1)));
 
-
     public static final RegistryEntry<Potion> HEARTBREAK = registerPotion("heartbreak",
             new Potion("heartbreak", new StatusEffectInstance(ModEffects.HEARTBREAK, 3600, 0)));
     public static final RegistryEntry<Potion> LONG_HEARTBREAK = registerPotion("long_heartbreak",
@@ -44,6 +48,16 @@ public class ModPotions {
     public static final RegistryEntry<Potion> STRONG_FAIRY_SUPPORT = registerPotion("strong_fairy_support",
             new Potion("fairy_support", new StatusEffectInstance(ModEffects.FAIRY_SUPPORT, 400, 1)));
 
+    public static final RegistryEntry<Potion> ADRENALINE = registerPotion("adrenaline",
+            new Potion("adrenaline", new StatusEffectInstance(ModEffects.VULNERABILITY, 900, 0),
+                    new StatusEffectInstance(StatusEffects.SPEED, 900, 1)));
+    public static final RegistryEntry<Potion> STRONG_ADRENALINE = registerPotion("strong_adrenaline",
+            new Potion("adrenaline", new StatusEffectInstance(ModEffects.VULNERABILITY, 400, 1),
+                    new StatusEffectInstance(StatusEffects.SPEED, 400, 3)));
+    public static final RegistryEntry<Potion> STRONG_ADRENALINE_2 = registerPotion("strong_adrenaline_2",
+            new Potion("adrenaline", new StatusEffectInstance(ModEffects.VULNERABILITY, 160, 2),
+                    new StatusEffectInstance(StatusEffects.SPEED, 160, 5)));
+
     public static final RegistryEntry<Potion> CORRUPT = registerPotion("corrupt",
             new Potion("corrupt", new StatusEffectInstance(ModEffects.DEATH_GRIP, 800, 0)));
     public static final RegistryEntry<Potion> STRONG_CORRUPT = registerPotion("strong_corrupt",
@@ -55,5 +69,34 @@ public class ModPotions {
 
     public static void registerPotions() {
         JirniysPinkStuff.LOGGER.info("Registering Mod Potions for " + JirniysPinkStuff.MOD_ID);
+
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.PREPARED_PINLINE, ModPotions.GROUNDED);
+            builder.registerPotionRecipe(ModPotions.GROUNDED, Items.GLOWSTONE_DUST, ModPotions.STRONG_GROUNDED);
+            builder.registerPotionRecipe(Potions.SLOW_FALLING, Items.FERMENTED_SPIDER_EYE, ModPotions.GROUNDED);
+
+            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.RAINBOW_MINERAL, ModPotions.ADRENALINE);
+            builder.registerPotionRecipe(ModPotions.ADRENALINE, Items.GLOWSTONE_DUST, ModPotions.STRONG_ADRENALINE);
+            builder.registerPotionRecipe(ModPotions.STRONG_ADRENALINE, Items.GLOWSTONE_DUST, ModPotions.STRONG_ADRENALINE_2);
+
+            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.ELYSIUM_INGOT, ModPotions.LIFE_TRADE);
+            builder.registerPotionRecipe(ModPotions.LIFE_TRADE, Items.GLOWSTONE_DUST, ModPotions.STRONG_LIFE_TRADE);
+            builder.registerPotionRecipe(ModPotions.LIFE_TRADE, Items.REDSTONE, ModPotions.LONG_LIFE_TRADE);
+
+            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.MAGIC_GLITTER, ModPotions.FAIRY_SUPPORT);
+            builder.registerPotionRecipe(ModPotions.FAIRY_SUPPORT, Items.GLOWSTONE_DUST, ModPotions.STRONG_FAIRY_SUPPORT);
+            builder.registerPotionRecipe(ModPotions.FAIRY_SUPPORT, Items.REDSTONE, ModPotions.LONG_FAIRY_SUPPORT);
+
+            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.CERILLE_NUGGET, ModPotions.HEARTBREAK);
+            builder.registerPotionRecipe(ModPotions.HEARTBREAK, Items.GLOWSTONE_DUST, ModPotions.STRONG_HEARTBREAK);
+            builder.registerPotionRecipe(ModPotions.HEARTBREAK, Items.REDSTONE, ModPotions.LONG_HEARTBREAK);
+
+            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.RAW_MOONSTEEL, ModPotions.VULNERABILITY);
+            builder.registerPotionRecipe(ModPotions.VULNERABILITY, Items.GLOWSTONE_DUST, ModPotions.STRONG_VULNERABILITY);
+            builder.registerPotionRecipe(ModPotions.VULNERABILITY, Items.REDSTONE, ModPotions.LONG_VULNERABILITY);
+
+            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.CORRUPT_MASS, ModPotions.CORRUPT);
+            builder.registerPotionRecipe(ModPotions.CORRUPT, Items.GLOWSTONE_DUST, ModPotions.STRONG_CORRUPT);
+        });
     }
 }

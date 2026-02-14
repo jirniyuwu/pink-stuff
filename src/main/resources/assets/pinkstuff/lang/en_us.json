@@ -624,6 +624,11 @@
   "item.minecraft.lingering_potion.effect.vulnerability": "Lingering Potion of Vulnerability",
   "item.minecraft.tipped_arrow.effect.vulnerability": "Arrow of Vulnerability",
 
+  "item.minecraft.potion.effect.adrenaline": "Potion of Adrenaline",
+  "item.minecraft.splash_potion.effect.adrenaline": "Splash Potion of Adrenaline",
+  "item.minecraft.lingering_potion.effect.adrenaline": "Lingering Potion of Adrenaline",
+  "item.minecraft.tipped_arrow.effect.adrenaline": "Arrow of Adrenaline",
+
   "item.minecraft.potion.effect.heartbreak": "Potion of Lifeless",
   "item.minecraft.splash_potion.effect.heartbreak": "Splash Potion of Lifeless",
   "item.minecraft.lingering_potion.effect.heartbreak": "Lingering Potion of Lifeless",
