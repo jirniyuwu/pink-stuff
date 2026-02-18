@@ -1,11 +1,12 @@
 {
-	"required": true,
-	"package": "net.jirniy.pinkstuff.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"VillagerTypeMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "net.jirniy.pinkstuff.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ShearsMixin",
+    "VillagerTypeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

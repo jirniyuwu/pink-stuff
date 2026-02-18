@@ -98,7 +98,10 @@ public class JirniysPinkStuff implements ModInitializer {
 
 		TillableBlockRegistry.register(ModBlocks.ROOTED_STYXIAN_SOIL,
 				itemUsageContext -> !itemUsageContext.shouldCancelInteraction(), ModBlocks.STYXIAN_SOIL.getDefaultState());
+		TillableBlockRegistry.register(ModBlocks.TURF_BLOCK,
+				itemUsageContext -> !itemUsageContext.shouldCancelInteraction(), Blocks.FARMLAND.getDefaultState());
 		FlattenableBlockRegistry.register(ModBlocks.STYXIAN_SOIL, ModBlocks.STYXIAN_PATH.getDefaultState());
+		FlattenableBlockRegistry.register(ModBlocks.TURF_BLOCK, Blocks.DIRT_PATH.getDefaultState());
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRYSTAL_CHERRY_WOOD, 5, 5);

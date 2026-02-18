@@ -259,6 +259,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.025f)))));
 
         addDrop(ModBlocks.STYXIAN_SOIL);
+        addDrop(ModBlocks.TURF_BLOCK, dropsWithSilkTouch(ModBlocks.TURF_BLOCK,
+                this.applyExplosionDecay(ModBlocks.TURF_BLOCK, ItemEntry.builder(Blocks.DIRT))));
         addDrop(ModBlocks.ROOTED_STYXIAN_SOIL);
         addDrop(ModBlocks.STYXIAN_PATH, ModBlocks.STYXIAN_SOIL);
         addDrop(ModBlocks.TILED_STYXIAN_PATH, ModBlocks.STYXIAN_SOIL);

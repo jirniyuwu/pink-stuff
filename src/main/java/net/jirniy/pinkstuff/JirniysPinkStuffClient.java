@@ -3,10 +3,8 @@ package net.jirniy.pinkstuff;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
-import net.fabricmc.fabric.impl.client.rendering.hud.HudElementRegistryImpl;
 import net.jirniy.pinkstuff.block.ModBlocks;
 import net.jirniy.pinkstuff.block.entity.ModBlockEntities;
 import net.jirniy.pinkstuff.block.entity.renderer.DisplayBlockEntityRenderer;
@@ -20,14 +18,13 @@ import net.jirniy.pinkstuff.screen.custom.CorruptCauldronScreen;
 import net.jirniy.pinkstuff.screen.custom.DisplayScreen;
 import net.jirniy.pinkstuff.screen.custom.GrowingChamberScreen;
 import net.jirniy.pinkstuff.screen.custom.ThermiumBlasterScreen;
+import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.particle.SculkChargePopParticle;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
-import net.minecraft.client.render.block.entity.ShelfBlockEntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactories;
-import net.minecraft.client.render.item.tint.TintSource;
 
 public class JirniysPinkStuffClient implements ClientModInitializer {
     @Override
@@ -88,6 +85,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_END_GRASS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.AURIC_GRASS, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CHORUS_LILY, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.TURF_BLOCK, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_CRYSTAL_CHERRY_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POTTED_CHORUS_SAPLING, BlockRenderLayer.CUTOUT);
@@ -116,6 +114,11 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         EntityRendererFactories.register(ModEntities.CORRUPTION_BLAZE, CorruptionBlazeRenderer::new);
         EntityRendererFactories.register(ModEntities.AMETHYST_FIREBALL, AmethystFireballRenderer::new);
         EntityRendererFactories.register(ModEntities.CORRUPTION_FIREBALL, CorruptionFireballRenderer::new);
+
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
+            if (view == null || pos == null) return -1;
+            return BiomeColors.getGrassColor(view, pos);
+        }, ModBlocks.TURF_BLOCK);
 
         BlockEntityRendererFactories.register(ModBlockEntities.DISPLAY_BE, DisplayBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.GROWING_CHAMBER_BE, GrowingChamberEntityRenderer::new);

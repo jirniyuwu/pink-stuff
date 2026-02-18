@@ -44,6 +44,7 @@ public class ModItemGroups {
                         entries.add(ModItems.AMETHYST_BLAZE_ROD);
 
                         entries.add(ModBlocks.END_MOSS);
+                        entries.add(ModBlocks.TURF_BLOCK);
                         entries.add(ModBlocks.STYXIAN_SOIL);
                         entries.add(ModBlocks.ROOTED_STYXIAN_SOIL);
                         entries.add(ModBlocks.STYXIAN_PATH);
@@ -638,6 +639,7 @@ public class ModItemGroups {
         JirniysPinkStuff.LOGGER.info("Registering Item Groups for " + JirniysPinkStuff.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(ModBlocks.TURF_BLOCK);
             entries.add(ModBlocks.SULFUR_BLOCK);
             entries.add(ModBlocks.STYXCOAL_BLOCK);
             entries.add(ModBlocks.RAW_KUNZITE_BLOCK);

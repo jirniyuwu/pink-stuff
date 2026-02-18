@@ -1121,6 +1121,10 @@ public class ModBlocks {
     public static final Block CORRERIE_SHELF = registerBlock("correrie_shelf",
             properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
+    public static final Block TURF_BLOCK = registerBlock("turf_block",
+            properties -> new GrassBlock(properties.mapColor(MapColor.PALE_GREEN).velocityMultiplier(1.01f)
+                    .ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
+
     public static final Block DISPLAY = registerBlock("display",
             properties -> new DisplayBlock(properties.strength(2f).luminance(state -> 4).nonOpaque().mapColor(MapColor.STONE_GRAY)));
     public static final Block THERMIUM_BLASTER = registerBlock("thermium_blaster",
