@@ -216,6 +216,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmelting(List.of(ModBlocks.YELLOW_MAPLE_LEAVES.asItem(), ModBlocks.ORANGE_MAPLE_LEAVES.asItem(), ModBlocks.RED_MAPLE_LEAVES.asItem()),
                         RecipeCategory.MISC, ModBlocks.MAPLE_LEAF_LITTER.asItem(),
                         0f, 80, "mature_sprout_smelting");
+                offerSmelting(List.of(ModBlocks.FROST_STONE), RecipeCategory.BUILDING_BLOCKS, Blocks.STONE,
+                        0f, 800, "frost_stone_to_stone_smelting");
+                offerBlasting(List.of(ModBlocks.FROST_STONE), RecipeCategory.BUILDING_BLOCKS, Blocks.STONE,
+                        0f, 400, "frost_stone_to_stone_blasting");
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.KUNZITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KUNZITE_BLOCK);
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
@@ -2349,7 +2353,63 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.POLISHED_CLOUDSTONE), conditionsFromItem(ModBlocks.POLISHED_CLOUDSTONE))
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "polished_cloudstone_stairs")));
-                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CLOUDSTONE_WALL, ModBlocks.POLISHED_CLOUDSTONE   );
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CLOUDSTONE_WALL, ModBlocks.POLISHED_CLOUDSTONE);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FROST_STONE, 4)
+                        .pattern("SI")
+                        .pattern("IS")
+                        .input('S', Blocks.STONE)
+                        .input('I', Blocks.PACKED_ICE)
+                        .criterion(hasItem(Blocks.PACKED_ICE), conditionsFromItem(Blocks.PACKED_ICE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "frost_stone")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FROST_STONE_SLAB, Ingredient.ofItem(ModBlocks.FROST_STONE))
+                        .criterion(hasItem(ModBlocks.FROST_STONE), conditionsFromItem(ModBlocks.FROST_STONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "frost_stone_slab")));
+                createStairsRecipe(ModBlocks.FROST_STONE_STAIRS, Ingredient.ofItem(ModBlocks.FROST_STONE))
+                        .criterion(hasItem(ModBlocks.FROST_STONE), conditionsFromItem(ModBlocks.FROST_STONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "frost_stone_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FROST_STONE_WALL, ModBlocks.FROST_STONE);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_FROST, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.FROST_STONE)
+                        .criterion(hasItem(ModBlocks.FROST_STONE), conditionsFromItem(ModBlocks.FROST_STONE))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_frost")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FROST_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.POLISHED_FROST)
+                        .criterion(hasItem(ModBlocks.POLISHED_FROST), conditionsFromItem(ModBlocks.POLISHED_FROST))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "frost_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FROST_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.FROST_BRICKS))
+                        .criterion(hasItem(ModBlocks.FROST_BRICKS), conditionsFromItem(ModBlocks.FROST_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "frost_bricks_slab")));
+                createStairsRecipe(ModBlocks.FROST_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.FROST_BRICKS))
+                        .criterion(hasItem(ModBlocks.FROST_BRICKS), conditionsFromItem(ModBlocks.FROST_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "frost_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FROST_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.FROST_BRICKS)
+                        .criterion(hasItem(ModBlocks.FROST_BRICKS), conditionsFromItem(ModBlocks.FROST_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "frost_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_FROST_SLAB, Ingredient.ofItem(ModBlocks.POLISHED_FROST))
+                        .criterion(hasItem(ModBlocks.POLISHED_FROST), conditionsFromItem(ModBlocks.POLISHED_FROST))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_frost_slab")));
+                createStairsRecipe(ModBlocks.POLISHED_FROST_STAIRS, Ingredient.ofItem(ModBlocks.POLISHED_FROST))
+                        .criterion(hasItem(ModBlocks.POLISHED_FROST), conditionsFromItem(ModBlocks.POLISHED_FROST))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "polished_frost_stairs")));
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_FROST_WALL, ModBlocks.POLISHED_FROST);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ASH, 1)
                         .input(ModBlocks.ASH_BLOCK).input(ModBlocks.ASH_BLOCK).input(Blocks.BASALT).input(Blocks.BASALT)

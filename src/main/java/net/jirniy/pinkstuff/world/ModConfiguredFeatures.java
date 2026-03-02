@@ -96,6 +96,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHORUS_LILY_KEY = registryKey("chorus_lily");
     public static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_END_STONE_KEY = registryKey("compressed_end_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_STYXSTONE_KEY = registryKey("compressed_styxstone");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> FROST_STONE_KEY = registryKey("frost_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MABRIZE_KEY = registryKey("mabrize");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETANE_KEY = registryKey("ametane");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETANE_CHERRY_KEY = registryKey("ametane_cherry");
@@ -401,6 +402,8 @@ public class ModConfiguredFeatures {
         register(context, SUNGAZE_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianSungazeOres, 7, 0.4f));
         register(context, STYXIAN_LAPIS_ORE_KEY, Feature.ORE, new OreFeatureConfig(styxianLapisOres, 8));
         register(context, COMPRESSED_END_STONE_KEY, Feature.ORE, new OreFeatureConfig(compressedEndStone, 64, 0.3f));
+        register(context, FROST_STONE_KEY, Feature.ORE, new OreFeatureConfig(
+                List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.STONE), ModBlocks.FROST_STONE.getDefaultState())), 64, 0.3f));
         register(context, COMPRESSED_STYXSTONE_KEY, Feature.ORE, new OreFeatureConfig(
                 List.of(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.STYXSTONE), ModBlocks.COMPRESSED_STYXSTONE.getDefaultState())), 64, 0.3f));
         register(context, MABRIZE_KEY, Feature.ORE, new OreFeatureConfig(

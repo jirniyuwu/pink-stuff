@@ -64,6 +64,19 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL);
                         entries.add(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE);
 
+                        entries.add(ModBlocks.FROST_STONE);
+                        entries.add(ModBlocks.FROST_STONE_SLAB);
+                        entries.add(ModBlocks.FROST_STONE_STAIRS);
+                        entries.add(ModBlocks.FROST_STONE_WALL);
+                        entries.add(ModBlocks.POLISHED_FROST);
+                        entries.add(ModBlocks.POLISHED_FROST_SLAB);
+                        entries.add(ModBlocks.POLISHED_FROST_STAIRS);
+                        entries.add(ModBlocks.POLISHED_FROST_WALL);
+                        entries.add(ModBlocks.FROST_BRICKS);
+                        entries.add(ModBlocks.FROST_BRICKS_SLAB);
+                        entries.add(ModBlocks.FROST_BRICKS_STAIRS);
+                        entries.add(ModBlocks.FROST_BRICKS_WALL);
+
                         entries.add(ModBlocks.STYXSTONE);
                         entries.add(ModBlocks.POLISHED_STYXSTONE);
                         entries.add(ModBlocks.POLISHED_STYXSTONE_SLAB);
@@ -671,6 +684,19 @@ public class ModItemGroups {
             entries.add(ModBlocks.ASH_BRICKS_SLAB);
             entries.add(ModBlocks.ASH_BRICKS_STAIRS);
             entries.add(ModBlocks.ASH_BRICKS_WALL);
+
+            entries.add(ModBlocks.FROST_STONE);
+            entries.add(ModBlocks.FROST_STONE_SLAB);
+            entries.add(ModBlocks.FROST_STONE_STAIRS);
+            entries.add(ModBlocks.FROST_STONE_WALL);
+            entries.add(ModBlocks.POLISHED_FROST);
+            entries.add(ModBlocks.POLISHED_FROST_SLAB);
+            entries.add(ModBlocks.POLISHED_FROST_STAIRS);
+            entries.add(ModBlocks.POLISHED_FROST_WALL);
+            entries.add(ModBlocks.FROST_BRICKS);
+            entries.add(ModBlocks.FROST_BRICKS_SLAB);
+            entries.add(ModBlocks.FROST_BRICKS_STAIRS);
+            entries.add(ModBlocks.FROST_BRICKS_WALL);
 
             entries.add(ModBlocks.POLISHED_STYXSTONE);
             entries.add(ModBlocks.POLISHED_STYXSTONE_SLAB);

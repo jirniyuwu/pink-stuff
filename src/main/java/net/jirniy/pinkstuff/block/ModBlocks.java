@@ -87,6 +87,15 @@ public class ModBlocks {
     public static final Block AURIC_MOSS_CARPET = registerBlock("auric_moss_carpet",
             properties -> new CarpetBlock(properties.strength(0.6f)
                     .sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.GOLD)));
+    public static final Block FROST_STONE = registerBlock("frost_stone",
+            properties -> new Block(properties.strength(1.2f).requiresTool()
+                    .sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block POLISHED_FROST = registerBlock("polished_frost",
+            properties -> new Block(properties.strength(1.2f).requiresTool()
+                    .sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block FROST_BRICKS = registerBlock("frost_bricks",
+            properties -> new Block(properties.strength(1.2f).requiresTool()
+                    .sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
     public static final Block STYXSTONE = registerBlock("styxstone",
             properties -> new Block(properties.strength(1.7f).requiresTool()
                     .sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_BLACK)));
@@ -732,6 +741,28 @@ public class ModBlocks {
     public static final Block CLOUDSTONE_BRICKS = registerBlock("cloudstone_bricks",
             properties -> new Block(properties.strength(0.5f).requiresTool().jumpVelocityMultiplier(1.1f)
                     .sounds(BlockSoundGroup.POWDER_SNOW).mapColor(MapColor.WHITE)));
+
+    public static final Block FROST_STONE_STAIRS = registerBlock("frost_stone_stairs",
+            properties -> new StairsBlock(ModBlocks.FROST_STONE.getDefaultState(),
+                    properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block FROST_STONE_SLAB = registerBlock("frost_stone_slab",
+            properties -> new SlabBlock(properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block FROST_STONE_WALL = registerBlock("frost_stone_wall",
+            properties -> new WallBlock(properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block POLISHED_FROST_STAIRS = registerBlock("polished_frost_stairs",
+            properties -> new StairsBlock(ModBlocks.POLISHED_FROST.getDefaultState(),
+                    properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block POLISHED_FROST_SLAB = registerBlock("polished_frost_slab",
+            properties -> new SlabBlock(properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block POLISHED_FROST_WALL = registerBlock("polished_frost_wall",
+            properties -> new WallBlock(properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block FROST_BRICKS_STAIRS = registerBlock("frost_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.FROST_BRICKS.getDefaultState(),
+                    properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block FROST_BRICKS_SLAB = registerBlock("frost_bricks_slab",
+            properties -> new SlabBlock(properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
+    public static final Block FROST_BRICKS_WALL = registerBlock("frost_bricks_wall",
+            properties -> new WallBlock(properties.strength(1.4f).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.LIGHT_BLUE_GRAY).slipperiness(0.7f)));
 
     public static final Block COBBLED_STYXSTONE_STAIRS = registerBlock("cobbled_styxstone_stairs",
             properties -> new StairsBlock(ModBlocks.COBBLED_STYXSTONE.getDefaultState(),

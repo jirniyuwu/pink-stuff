@@ -59,6 +59,9 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool polishedAmetanePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_AMETANE);
         BlockStateModelGenerator.BlockTexturePool polishedRainbowStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_RAINBOW_STONE);
         BlockStateModelGenerator.BlockTexturePool polishedWasterockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_WASTEROCK);
+        BlockStateModelGenerator.BlockTexturePool frostStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FROST_STONE);
+        BlockStateModelGenerator.BlockTexturePool polishedFrostPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_FROST);
+        BlockStateModelGenerator.BlockTexturePool frostBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FROST_BRICKS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_AMETHYST_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -217,6 +220,16 @@ public class ModModelProvider extends FabricModelProvider {
         mossyCobbledStyxstonePool.wall(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AURIC_MOSSY_COBBLESTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AURIC_MOSSY_COBBLED_STYXSTONE);
+
+        frostStonePool.stairs(ModBlocks.FROST_STONE_STAIRS);
+        frostStonePool.slab(ModBlocks.FROST_STONE_SLAB);
+        frostStonePool.wall(ModBlocks.FROST_STONE_WALL);
+        frostBricksPool.stairs(ModBlocks.FROST_BRICKS_STAIRS);
+        frostBricksPool.slab(ModBlocks.FROST_BRICKS_SLAB);
+        frostBricksPool.wall(ModBlocks.FROST_BRICKS_WALL);
+        polishedFrostPool.stairs(ModBlocks.POLISHED_FROST_STAIRS);
+        polishedFrostPool.slab(ModBlocks.POLISHED_FROST_SLAB);
+        polishedFrostPool.wall(ModBlocks.POLISHED_FROST_WALL);
 
         mabrizeBricksPool.stairs(ModBlocks.MABRIZE_BRICKS_STAIRS);
         mabrizeBricksPool.slab(ModBlocks.MABRIZE_BRICKS_SLAB);

@@ -32,6 +32,10 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.COMPRESSED_END_STONE_PLACED_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FROZEN_PEAKS, BiomeKeys.FROZEN_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN,
+                        BiomeKeys.SNOWY_SLOPES), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROST_STONE_PLACED_KEY);
+
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.AMETHYST_CLUMP_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DEEP_DARK), GenerationStep.Feature.UNDERGROUND_DECORATION,
