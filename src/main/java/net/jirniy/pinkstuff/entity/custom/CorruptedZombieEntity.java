@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff.entity.custom;
 
 import net.jirniy.pinkstuff.effect.ModEffects;
+import net.jirniy.pinkstuff.util.ModDamageTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -24,7 +25,7 @@ public class CorruptedZombieEntity extends ZombieEntity {
 
     @Override
     public boolean isInvulnerableTo(ServerWorld world, DamageSource source) {
-        if (source == world.getDamageSources().wither()) {
+        if (source.isOf(ModDamageTypes.DEATH_GRIP)) {
             return true;
         }
         return super.isInvulnerableTo(world, source);

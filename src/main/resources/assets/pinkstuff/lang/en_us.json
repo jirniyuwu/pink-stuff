@@ -769,6 +769,9 @@
   "gamerule.corruptionSpreadChance": "Corruption spread chance",
   "gamerule.corruptionSpreadChance.description": "Chance in 1/value per direction for Corruption to spread per Random tick",
 
+  "death.attack.death_grip": "%s was corrupted",
+  "death.attack.death_grip.player": "%s was corrupted whilst trying to escape %s",
+
   "advancements.main.root.description": "Enter the Pink forest~",
   "advancements.main.root.title": "The Enchanted Realm",
   "advancements.main.obtain_kunzite.description": "Obtain Kunzite in the caves of Cherry groves",

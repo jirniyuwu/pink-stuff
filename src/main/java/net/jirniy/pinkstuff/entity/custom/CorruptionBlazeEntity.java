@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff.entity.custom;
 
 import net.jirniy.pinkstuff.entity.ModEntities;
+import net.jirniy.pinkstuff.util.ModDamageTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -47,7 +48,7 @@ public class CorruptionBlazeEntity extends BlazeEntity {
     @Override
     public boolean isInvulnerableTo(ServerWorld world, DamageSource source) {
         if (source.getAttacker() != null && source.getAttacker().getType() == ModEntities.CORRUPTION_BLAZE
-        || source.isOf(DamageTypes.WITHER) || source.isOf(DamageTypes.INDIRECT_MAGIC) || source.isOf(DamageTypes.MAGIC)) {
+        || source.isOf(ModDamageTypes.DEATH_GRIP) || source.isOf(DamageTypes.INDIRECT_MAGIC) || source.isOf(DamageTypes.MAGIC)) {
             return true;
         }
         return super.isInvulnerableTo(world, source);

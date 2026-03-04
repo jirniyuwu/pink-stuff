@@ -79,6 +79,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		ModTreeDecorators.registerTreeDecorators();
 		ModGamerules.registerGamerules();
 		ModVillagers.registerVillagers();
+		ModDamageTypes.registerDamageTypes();
 
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_LOG, ModBlocks.STRIPPED_CRYSTAL_CHERRY_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CRYSTAL_CHERRY_WOOD, ModBlocks.STRIPPED_CRYSTAL_CHERRY_WOOD);

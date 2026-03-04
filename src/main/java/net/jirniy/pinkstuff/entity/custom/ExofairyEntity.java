@@ -4,6 +4,7 @@ import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.particle.ModParticles;
+import net.jirniy.pinkstuff.util.ModDamageTypes;
 import net.jirniy.pinkstuff.util.ModTags;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
@@ -121,7 +122,7 @@ public class ExofairyEntity extends AnimalEntity {
             }
             this.heal(1.0F);
             if (this.hasStatusEffect(ModEffects.DEATH_GRIP)) {
-                this.damage((ServerWorld) this.getEntityWorld(), this.getEntityWorld().getDamageSources().wither(), this.getMaxHealth());
+                this.damage((ServerWorld) this.getEntityWorld(), ModDamageTypes.of(this.getEntityWorld(), ModDamageTypes.DEATH_GRIP), this.getMaxHealth());
             }
         }
     }

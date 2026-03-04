@@ -1,6 +1,7 @@
 package net.jirniy.pinkstuff.effect;
 
 import net.jirniy.pinkstuff.item.ModArmorMaterials;
+import net.jirniy.pinkstuff.util.ModDamageTypes;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.EquipmentSlot;
@@ -29,7 +30,7 @@ public class DeathGripEffect extends StatusEffect {
                 return true;
             }
         }
-        entity.damage(world, entity.getDamageSources().wither(), 1.0f);
+        entity.damage(world, ModDamageTypes.of(world, ModDamageTypes.DEATH_GRIP), 1.0f);
         return true;
     }
 
