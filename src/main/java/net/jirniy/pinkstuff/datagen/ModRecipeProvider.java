@@ -2439,6 +2439,79 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
                                 Identifier.of(JirniysPinkStuff.MOD_ID, "ash_bricks_wall")));
 
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_SLAB, 1)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModItems.ANCIENT_FRAGMENT)
+                        .criterion(hasItem(ModItems.ANCIENT_FRAGMENT), conditionsFromItem(ModItems.ANCIENT_FRAGMENT))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_slab")));
+                offerChiseledBlockRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ANCIENT_SLAB, ModBlocks.ANCIENT_SLAB_SLAB);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_ANCIENT_SLAB, 1)
+                        .input(ModBlocks.ANCIENT_SLAB).input(Blocks.MOSS_BLOCK)
+                        .criterion(hasItem(ModBlocks.ANCIENT_SLAB), conditionsFromItem(ModBlocks.ANCIENT_SLAB))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "mossy_ancient_slab")));
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_ANCIENT_BRICKS, 1)
+                        .input(ModBlocks.ANCIENT_BRICKS).input(Blocks.MOSS_BLOCK)
+                        .criterion(hasItem(ModBlocks.ANCIENT_BRICKS), conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "mossy_ancient_bricks")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_BRICKS, 4)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .input('S', ModBlocks.ANCIENT_SLAB)
+                        .criterion(hasItem(ModBlocks.ANCIENT_SLAB), conditionsFromItem(ModBlocks.ANCIENT_SLAB))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_bricks")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_BRICKS_SLAB, Ingredient.ofItem(ModBlocks.ANCIENT_BRICKS))
+                        .criterion(hasItem(ModBlocks.ANCIENT_BRICKS), conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_bricks_slab")));
+                createStairsRecipe(ModBlocks.ANCIENT_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.ANCIENT_BRICKS))
+                        .criterion(hasItem(ModBlocks.ANCIENT_BRICKS), conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_bricks_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_BRICKS_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.ANCIENT_BRICKS)
+                        .criterion(hasItem(ModBlocks.ANCIENT_BRICKS), conditionsFromItem(ModBlocks.ANCIENT_BRICKS))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_bricks_wall")));
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_SLAB_SLAB, Ingredient.ofItem(ModBlocks.ANCIENT_SLAB))
+                        .criterion(hasItem(ModBlocks.ANCIENT_SLAB), conditionsFromItem(ModBlocks.ANCIENT_SLAB))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_slab_slab")));
+                createStairsRecipe(ModBlocks.ANCIENT_SLAB_STAIRS, Ingredient.ofItem(ModBlocks.ANCIENT_SLAB))
+                        .criterion(hasItem(ModBlocks.ANCIENT_SLAB), conditionsFromItem(ModBlocks.ANCIENT_SLAB))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_slab_stairs")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_SLAB_WALL, 6)
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .input('B', ModBlocks.ANCIENT_SLAB)
+                        .criterion(hasItem(ModBlocks.ANCIENT_SLAB), conditionsFromItem(ModBlocks.ANCIENT_SLAB))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_slab_wall")));
+                offerPressurePlateRecipe(ModBlocks.ANCIENT_SLAB_PRESSURE_PLATE, ModBlocks.ANCIENT_SLAB);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.ANCIENT_SPIKE_TRAP, 1)
+                        .pattern("III")
+                        .pattern("BRB")
+                        .input('B', ModBlocks.ANCIENT_SLAB)
+                        .input('R', Items.REDSTONE)
+                        .input('I', ModItems.MOONSTEEL_INGOT)
+                        .criterion(hasItem(ModBlocks.ANCIENT_SLAB), conditionsFromItem(ModBlocks.ANCIENT_SLAB))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE,
+                                Identifier.of(JirniysPinkStuff.MOD_ID, "ancient_spike_trap")));
+                offerSmelting(List.of(ModBlocks.ANCIENT_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ANCIENT_BRICKS,
+                        0f, 200, "cracked_ancient_bricks_smelting");
+                offerBlasting(List.of(ModBlocks.ANCIENT_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ANCIENT_BRICKS,
+                        0f, 100, "cracked_ancient_bricks_blasting");
+                offerSingleOutputShapelessRecipe(ModBlocks.FRAGILE_ANCIENT_BRICKS, ModBlocks.CRACKED_ANCIENT_BRICKS, null);
+                offerSingleOutputShapelessRecipe(ModBlocks.CRACKED_ANCIENT_BRICKS, ModBlocks.FRAGILE_ANCIENT_BRICKS, null);
+
+
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,
                         ModItems.AMETHYST_NUGGET, RecipeCategory.MISC, Items.AMETHYST_SHARD);
                 offerReversibleCompactingRecipes(RecipeCategory.MISC,

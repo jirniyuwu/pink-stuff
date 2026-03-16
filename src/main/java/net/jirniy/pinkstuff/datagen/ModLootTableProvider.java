@@ -50,7 +50,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.THERMIUM_BLASTER);
         addDrop(ModBlocks.GROWING_CHAMBER);
         addDrop(ModBlocks.CORRUPT_CAULDRON);
+        addDrop(ModBlocks.ANCIENT_SPIKE_TRAP);
         addDropWithSilkTouch(ModBlocks.PINK_ICE);
+        addDropWithSilkTouch(ModBlocks.FRAGILE_ANCIENT_BRICKS);
         addDrop(ModBlocks.COMPRESSED_END_STONE);
         addDrop(ModBlocks.MOONSTEEL_LANTERN);
         addDrop(ModBlocks.MOONSTEEL_CHAIN);
@@ -101,6 +103,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ASH_BRICKS);
         addDrop(ModBlocks.POLISHED_FROST);
         addDrop(ModBlocks.FROST_BRICKS);
+        addDrop(ModBlocks.ANCIENT_BRICKS);
+        addDrop(ModBlocks.ANCIENT_SLAB);
+        addDrop(ModBlocks.CRACKED_ANCIENT_BRICKS);
+        addDrop(ModBlocks.MOSSY_ANCIENT_BRICKS);
+        addDrop(ModBlocks.MOSSY_ANCIENT_SLAB);
 
         addDrop(ModBlocks.CHISELED_AMETHYST_BRICKS);
         addDrop(ModBlocks.CHISELED_KUNZITE_BRICKS);
@@ -112,6 +119,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHISELED_MOONSTEEL_BRICKS);
         addDrop(ModBlocks.CHISELED_CERILLE_BRICKS);
         addDrop(ModBlocks.CHISELED_SUNGAZE_BRICKS);
+        addDrop(ModBlocks.CHISELED_ANCIENT_SLAB);
 
         addDrop(ModBlocks.AMETHYST_BULB);
         addDrop(ModBlocks.KUNZITE_BULB);
@@ -159,6 +167,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FROST_STONE_STAIRS);
         addDrop(ModBlocks.POLISHED_FROST_STAIRS);
         addDrop(ModBlocks.FROST_BRICKS_STAIRS);
+        addDrop(ModBlocks.ANCIENT_BRICKS_STAIRS);
+        addDrop(ModBlocks.ANCIENT_SLAB_STAIRS);
 
         addDrop(ModBlocks.POLISHED_AMETHYST_SLAB, slabDrops(ModBlocks.POLISHED_AMETHYST_SLAB));
         addDrop(ModBlocks.AMETHYST_TILES_SLAB, slabDrops(ModBlocks.AMETHYST_TILES_SLAB));
@@ -195,6 +205,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FROST_STONE_SLAB, slabDrops(ModBlocks.FROST_STONE_SLAB));
         addDrop(ModBlocks.POLISHED_FROST_SLAB, slabDrops(ModBlocks.POLISHED_FROST_SLAB));
         addDrop(ModBlocks.FROST_BRICKS_SLAB, slabDrops(ModBlocks.FROST_BRICKS_SLAB));
+        addDrop(ModBlocks.ANCIENT_BRICKS_SLAB, slabDrops(ModBlocks.ANCIENT_BRICKS_SLAB));
+        addDrop(ModBlocks.ANCIENT_SLAB_SLAB, slabDrops(ModBlocks.ANCIENT_SLAB_SLAB));
 
         addDrop(ModBlocks.POLISHED_AMETHYST_WALL);
         addDrop(ModBlocks.AMETHYST_TILES_WALL);
@@ -231,6 +243,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FROST_STONE_WALL);
         addDrop(ModBlocks.POLISHED_FROST_WALL);
         addDrop(ModBlocks.FROST_BRICKS_WALL);
+        addDrop(ModBlocks.ANCIENT_BRICKS_WALL);
+        addDrop(ModBlocks.ANCIENT_SLAB_WALL);
 
         addDrop(ModBlocks.KUNZITE_ORE, oreDrops(ModBlocks.KUNZITE_ORE, ModItems.RAW_KUNZITE));
         addDrop(ModBlocks.DEEPSLATE_KUNZITE_ORE, oreDrops(ModBlocks.DEEPSLATE_KUNZITE_ORE, ModItems.RAW_KUNZITE));
@@ -308,6 +322,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SUNGAZE_BLOCK);
         addDrop(ModBlocks.ASH_BLOCK);
         addDrop(ModBlocks.PACKED_ASH);
+        addDropWithSilkTouch(ModBlocks.FRAGILE_ANCIENT_BRICKS);
+        addDrop(ModBlocks.CRACKED_ANCIENT_BRICKS);
+        addDrop(ModBlocks.ANCIENT_SLAB_PRESSURE_PLATE);
 
         addDrop(ModBlocks.PINK_SAND);
         addDrop(ModBlocks.PINK_SANDSTONE);

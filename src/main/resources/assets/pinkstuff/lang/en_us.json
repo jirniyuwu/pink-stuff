@@ -61,6 +61,7 @@
   "item.pinkstuff.sungaze": "Sungaze",
   "item.pinkstuff.sungaze_nugget": "Sungaze Nugget",
   "item.pinkstuff.amethyst_blaze_rod": "Amethyst Blaze Rod",
+  "item.pinkstuff.ancient_fragment": "Ancient Fragment",
   "item.pinkstuff.rainbow_mineral": "Rainbow Mineral",
 
   "item.pinkstuff.glazed_chorus_fruit": "Glazed Chorus Fruit",
@@ -366,6 +367,20 @@
   "block.pinkstuff.cloudstone_bricks_slab": "Cloudstone Brick Slab",
   "block.pinkstuff.cloudstone_bricks_stairs": "Cloudstone Brick Stairs",
   "block.pinkstuff.cloudstone_bricks_wall": "Cloudstone Brick Wall",
+  "block.pinkstuff.ancient_bricks": "Ancient Bricks",
+  "block.pinkstuff.ancient_bricks_slab": "Ancient Brick Slab",
+  "block.pinkstuff.ancient_bricks_stairs": "Ancient Brick Stairs",
+  "block.pinkstuff.ancient_bricks_wall": "Ancient Brick Wall",
+  "block.pinkstuff.cracked_ancient_bricks": "Cracked Ancient Bricks",
+  "block.pinkstuff.fragile_ancient_bricks": "Fragile Ancient Bricks",
+  "block.pinkstuff.mossy_ancient_bricks": "Mossy Ancient Bricks",
+  "block.pinkstuff.mossy_ancient_slab": "Mossy Ancient Slab",
+  "block.pinkstuff.chiseled_ancient_slab": "Chiseled Ancient Slab",
+  "block.pinkstuff.ancient_slab": "Ancient Slab",
+  "block.pinkstuff.ancient_slab_slab": "Ancient Slab Slab",
+  "block.pinkstuff.ancient_slab_stairs": "Ancient Slab Stairs",
+  "block.pinkstuff.ancient_slab_wall": "Ancient Slab Wall",
+  "block.pinkstuff.ancient_slab_pressure_plate": "Ancient Pressure Plate",
 
   "block.pinkstuff.crystal_cherry_log": "Crystal Cherry Log",
   "block.pinkstuff.crystal_cherry_wood": "Crystal Cherry Wood",
@@ -614,6 +629,7 @@
   "block.pinkstuff.thermium_blaster": "Thermium Blaster",
   "block.pinkstuff.growing_chamber": "Growing Chamber",
   "block.pinkstuff.corrupt_cauldron": "Corrupt Cauldron",
+  "block.pinkstuff.ancient_spike_trap": "Ancient Spike Trap",
 
   "block.pinkstuff.gem_berry_bush": "Gem Berries Bush",
   "block.pinkstuff.charmberry_bush": "Charmberries Bush",
@@ -771,6 +787,8 @@
 
   "death.attack.death_grip": "%s was corrupted",
   "death.attack.death_grip.player": "%s was corrupted whilst trying to escape %s",
+  "death.attack.spike_trap": "%s fell for a trap",
+  "death.attack.spike_trap.player": "%s was pierced whilst trying to escape %s",
 
   "advancements.main.root.description": "Enter the Pink forest~",
   "advancements.main.root.title": "The Enchanted Realm",

@@ -1152,6 +1152,45 @@ public class ModBlocks {
     public static final Block CORRERIE_SHELF = registerBlock("correrie_shelf",
             properties -> new ModShelfBlock(properties.mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.SHELF).burnable().strength(2.0F, 3.0F)));
 
+    public static final Block ANCIENT_BRICKS = registerBlock("ancient_bricks",
+            properties -> new Block(properties.mapColor(MapColor.TERRACOTTA_ORANGE).requiresTool()
+                    .strength(20F, -1f).sounds(BlockSoundGroup.NETHER_BRICKS)));
+    public static final Block MOSSY_ANCIENT_BRICKS = registerBlock("mossy_ancient_bricks",
+            properties -> new Block(properties.mapColor(MapColor.LIME).strength(20F, -1f)
+                    .sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+    public static final Block ANCIENT_SLAB = registerBlock("ancient_slab",
+            properties -> new Block(properties.mapColor(MapColor.TERRACOTTA_ORANGE).requiresTool()
+                    .strength(20F, -1f).sounds(BlockSoundGroup.NETHER_BRICKS)));
+    public static final Block MOSSY_ANCIENT_SLAB = registerBlock("mossy_ancient_slab",
+            properties -> new Block(properties.mapColor(MapColor.LIME).strength(20F, -1f)
+                    .sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+    public static final Block CRACKED_ANCIENT_BRICKS = registerBlock("cracked_ancient_bricks",
+            properties -> new Block(properties.mapColor(MapColor.TERRACOTTA_ORANGE).requiresTool()
+                    .strength(20F, -1f).sounds(BlockSoundGroup.NETHER_BRICKS)));
+    public static final Block FRAGILE_ANCIENT_BRICKS = registerBlock("fragile_ancient_bricks",
+            properties -> new FragileBlock(2, properties.mapColor(MapColor.TERRACOTTA_ORANGE).requiresTool()
+                    .strength(6F).sounds(BlockSoundGroup.NETHER_BRICKS)));
+    public static final Block CHISELED_ANCIENT_SLAB = registerBlock("chiseled_ancient_slab",
+            properties -> new Block(properties.mapColor(MapColor.TERRACOTTA_ORANGE).requiresTool()
+                    .strength(20F, -1f).sounds(BlockSoundGroup.NETHER_BRICKS)));
+
+    public static final Block ANCIENT_BRICKS_STAIRS = registerBlock("ancient_bricks_stairs",
+            properties -> new StairsBlock(ModBlocks.ANCIENT_BRICKS.getDefaultState(),
+                    properties.strength(20F, -1f).requiresTool().sounds(BlockSoundGroup.NETHER_BRICKS).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ANCIENT_BRICKS_SLAB = registerBlock("ancient_bricks_slab",
+            properties -> new SlabBlock(properties.strength(20F, -1f).requiresTool().sounds(BlockSoundGroup.NETHER_BRICKS).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ANCIENT_BRICKS_WALL = registerBlock("ancient_bricks_wall",
+            properties -> new WallBlock(properties.strength(20F, -1f).requiresTool().sounds(BlockSoundGroup.NETHER_BRICKS).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ANCIENT_SLAB_STAIRS = registerBlock("ancient_slab_stairs",
+            properties -> new StairsBlock(ModBlocks.ANCIENT_SLAB.getDefaultState(),
+                    properties.strength(20F, -1f).requiresTool().sounds(BlockSoundGroup.NETHER_BRICKS).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ANCIENT_SLAB_SLAB = registerBlock("ancient_slab_slab",
+            properties -> new SlabBlock(properties.strength(20F, -1f).requiresTool().sounds(BlockSoundGroup.NETHER_BRICKS).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ANCIENT_SLAB_WALL = registerBlock("ancient_slab_wall",
+            properties -> new WallBlock(properties.strength(20F, -1f).requiresTool().sounds(BlockSoundGroup.NETHER_BRICKS).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ANCIENT_SLAB_PRESSURE_PLATE = registerBlock("ancient_slab_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.POLISHED_BLACKSTONE, properties.strength(9f).sounds(BlockSoundGroup.NETHER_BRICKS).mapColor(MapColor.TERRACOTTA_ORANGE)));
+
     public static final Block TURF_BLOCK = registerBlock("turf_block",
             properties -> new GrassBlock(properties.mapColor(MapColor.PALE_GREEN).velocityMultiplier(1.01f)
                     .ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
@@ -1167,6 +1206,9 @@ public class ModBlocks {
     public static final Block GROWING_CHAMBER = registerBlock("growing_chamber",
             properties -> new GrowingChamberBlock(properties.strength(2f).requiresTool().sounds(BlockSoundGroup.GLASS).nonOpaque()
                     .allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block ANCIENT_SPIKE_TRAP = registerBlock("ancient_spike_trap",
+            properties -> new SpikeTrapBlock(properties.strength(20f, -1f).requiresTool().allowsSpawning(Blocks::never)
+                    .sounds(BlockSoundGroup.NETHER_BRICKS).mapColor(MapColor.TERRACOTTA_ORANGE)));
 
     public static final Block AMETHYST_PARTERS = registerBlock("amethyst_parters",
             properties -> new FlowerBlock(StatusEffects.STRENGTH, 5, properties.strength(0f)

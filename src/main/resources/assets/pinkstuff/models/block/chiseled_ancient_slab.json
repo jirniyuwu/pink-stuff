@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"down": "pinkstuff:block/chiseled_ancient_slab_top",
+		"east": "pinkstuff:block/chiseled_ancient_slab",
+		"north": "pinkstuff:block/chiseled_ancient_slab",
+		"particle": "pinkstuff:block/chiseled_ancient_slab_top",
+		"south": "pinkstuff:block/chiseled_ancient_slab",
+		"up": "pinkstuff:block/chiseled_ancient_slab_top",
+		"west": "pinkstuff:block/chiseled_ancient_slab"
+	}
+}

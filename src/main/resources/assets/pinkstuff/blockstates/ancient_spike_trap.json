@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "pinkstuff:block/ancient_spike_trap_off"
+    },
+    "active=true": {
+      "model": "pinkstuff:block/ancient_spike_trap_on"
+    }
+  }
+}

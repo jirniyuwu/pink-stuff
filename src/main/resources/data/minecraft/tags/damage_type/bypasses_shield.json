@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "pinkstuff:death_grip"
+    "pinkstuff:death_grip",
+    "pinkstuff:spike_trap"
   ]
 }

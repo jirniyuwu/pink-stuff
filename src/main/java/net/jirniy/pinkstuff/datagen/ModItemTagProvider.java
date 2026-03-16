@@ -307,7 +307,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_SLAB.asItem())
                 .add(ModBlocks.FROST_STONE_SLAB.asItem())
                 .add(ModBlocks.POLISHED_FROST_SLAB.asItem())
-                .add(ModBlocks.FROST_BRICKS_SLAB.asItem());
+                .add(ModBlocks.FROST_BRICKS_SLAB.asItem())
+                .add(ModBlocks.ANCIENT_BRICKS_SLAB.asItem())
+                .add(ModBlocks.ANCIENT_SLAB_SLAB.asItem());
         valueLookupBuilder(ItemTags.STAIRS)
                 .add(ModBlocks.AMETHYST_BRICKS_STAIRS.asItem())
                 .add(ModBlocks.ELYSIUM_BRICKS_STAIRS.asItem())
@@ -344,7 +346,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_STAIRS.asItem())
                 .add(ModBlocks.FROST_STONE_STAIRS.asItem())
                 .add(ModBlocks.POLISHED_FROST_STAIRS.asItem())
-                .add(ModBlocks.FROST_BRICKS_STAIRS.asItem());
+                .add(ModBlocks.FROST_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.ANCIENT_BRICKS_STAIRS.asItem())
+                .add(ModBlocks.ANCIENT_SLAB_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ModBlocks.FROST_STONE_WALL.asItem())
                 .add(ModBlocks.POLISHED_FROST_WALL.asItem())
@@ -380,7 +384,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.POLISHED_WASTEROCK_WALL.asItem())
                 .add(ModBlocks.AMETHYST_TILES_WALL.asItem())
                 .add(ModBlocks.COBBLED_STYXSTONE_WALL.asItem())
-                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL.asItem());
+                .add(ModBlocks.MOSSY_COBBLED_STYXSTONE_WALL.asItem())
+                .add(ModBlocks.ANCIENT_BRICKS_WALL.asItem())
+                .add(ModBlocks.ANCIENT_SLAB_WALL.asItem());
         valueLookupBuilder(ItemTags.WOODEN_SLABS)
                 .add(ModBlocks.CRYSTAL_CHERRY_SLAB.asItem())
                 .add(ModBlocks.CHORUS_SLAB.asItem())

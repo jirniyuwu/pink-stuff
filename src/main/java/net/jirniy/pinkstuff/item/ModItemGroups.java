@@ -41,6 +41,7 @@ public class ModItemGroups {
                         entries.add(ModItems.NETHERITE_NUGGET);
                         entries.add(ModItems.OBSIDIAN_SHARD);
 
+                        entries.add(ModItems.ANCIENT_FRAGMENT);
                         entries.add(ModItems.AMETHYST_BLAZE_ROD);
 
                         entries.add(ModBlocks.END_MOSS);
@@ -154,6 +155,22 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_SLAB);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_STAIRS);
                         entries.add(ModBlocks.COMPRESSED_END_STONE_BRICKS_WALL);
+
+                        entries.add(ModBlocks.ANCIENT_SLAB);
+                        entries.add(ModBlocks.ANCIENT_SLAB_SLAB);
+                        entries.add(ModBlocks.ANCIENT_SLAB_STAIRS);
+                        entries.add(ModBlocks.ANCIENT_SLAB_WALL);
+                        entries.add(ModBlocks.ANCIENT_SLAB_PRESSURE_PLATE);
+                        entries.add(ModBlocks.MOSSY_ANCIENT_SLAB);
+                        entries.add(ModBlocks.ANCIENT_BRICKS);
+                        entries.add(ModBlocks.ANCIENT_BRICKS_SLAB);
+                        entries.add(ModBlocks.ANCIENT_BRICKS_STAIRS);
+                        entries.add(ModBlocks.ANCIENT_BRICKS_WALL);
+                        entries.add(ModBlocks.MOSSY_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.CRACKED_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.FRAGILE_ANCIENT_BRICKS);
+                        entries.add(ModBlocks.CHISELED_ANCIENT_SLAB);
+                        entries.add(ModBlocks.ANCIENT_SPIKE_TRAP);
 
                         entries.add(ModBlocks.PINK_SAND);
                         entries.add(ModBlocks.PINK_SANDSTONE);
@@ -698,6 +715,21 @@ public class ModItemGroups {
             entries.add(ModBlocks.FROST_BRICKS_STAIRS);
             entries.add(ModBlocks.FROST_BRICKS_WALL);
 
+            entries.add(ModBlocks.ANCIENT_SLAB);
+            entries.add(ModBlocks.ANCIENT_SLAB_SLAB);
+            entries.add(ModBlocks.ANCIENT_SLAB_STAIRS);
+            entries.add(ModBlocks.ANCIENT_SLAB_WALL);
+            entries.add(ModBlocks.ANCIENT_SLAB_PRESSURE_PLATE);
+            entries.add(ModBlocks.MOSSY_ANCIENT_SLAB);
+            entries.add(ModBlocks.ANCIENT_BRICKS);
+            entries.add(ModBlocks.ANCIENT_BRICKS_SLAB);
+            entries.add(ModBlocks.ANCIENT_BRICKS_STAIRS);
+            entries.add(ModBlocks.ANCIENT_BRICKS_WALL);
+            entries.add(ModBlocks.MOSSY_ANCIENT_BRICKS);
+            entries.add(ModBlocks.CRACKED_ANCIENT_BRICKS);
+            entries.add(ModBlocks.FRAGILE_ANCIENT_BRICKS);
+            entries.add(ModBlocks.CHISELED_ANCIENT_SLAB);
+
             entries.add(ModBlocks.POLISHED_STYXSTONE);
             entries.add(ModBlocks.POLISHED_STYXSTONE_SLAB);
             entries.add(ModBlocks.POLISHED_STYXSTONE_STAIRS);
@@ -993,6 +1025,7 @@ public class ModItemGroups {
             entries.add(ModItems.NETHERITE_NUGGET);
             entries.add(ModItems.OBSIDIAN_SHARD);
             entries.add(ModItems.AMETHYST_NUGGET);
+            entries.add(ModItems.ANCIENT_FRAGMENT);
             entries.add(ModItems.STYXCOAL);
             entries.add(ModItems.SULFUR);
             entries.add(ModItems.RAW_KUNZITE);
@@ -1241,6 +1274,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.CORRUPT_CAULDRON);
             entries.add(ModBlocks.DISPLAY);
             entries.add(ModBlocks.LAVA_GEYSER);
+            entries.add(ModBlocks.ANCIENT_SPIKE_TRAP);
 
             entries.add(ModBlocks.CRAWLER_STONE);
             entries.add(ModBlocks.CRAWLER_DEEPSLATE);

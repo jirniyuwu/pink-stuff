@@ -36,6 +36,7 @@ public class ModItems {
     public static final Item OBSIDIAN_SHARD = registerItem("obsidian_shard", Item::new);
 
     public static final Item AMETHYST_BLAZE_ROD = registerItem("amethyst_blaze_rod", Item::new);
+    public static final Item ANCIENT_FRAGMENT = registerItem("ancient_fragment", Item::new);
 
     public static final Item SULFUR = registerItem("sulfur",
             setting -> new Item(setting.trimMaterial(ModTrimMaterials.SULFUR)));

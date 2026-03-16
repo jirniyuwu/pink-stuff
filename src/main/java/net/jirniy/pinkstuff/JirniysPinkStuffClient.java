@@ -103,6 +103,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
 
         BlockRenderLayerMap.putBlock(ModBlocks.SOFT_CLOUD, BlockRenderLayer.TRANSLUCENT);
         BlockRenderLayerMap.putBlock(ModBlocks.GROWING_CHAMBER, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.ANCIENT_SPIKE_TRAP, BlockRenderLayer.CUTOUT);
 
         EntityModelLayerRegistry.registerModelLayer(CrawlerModel.CRAWLER, CrawlerModel::getTexturedModelData);
         EntityRendererFactories.register(ModEntities.CRAWLER, CrawlerRenderer::new);

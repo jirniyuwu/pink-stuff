@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 
 public class ModDamageTypes {
     public static final RegistryKey<DamageType> DEATH_GRIP = create("death_grip");
+    public static final RegistryKey<DamageType> SPIKE_TRAP = create("spike_trap");
 
     public static DamageSource of(World world, RegistryKey<DamageType> key) {
         return world.getDamageSources().create(key);
