@@ -458,6 +458,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CRAWLER_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRAGGY_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.EXOFAIRY_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORRUPTED_SKELETON_SPAWN_EGG, Models.GENERATED);

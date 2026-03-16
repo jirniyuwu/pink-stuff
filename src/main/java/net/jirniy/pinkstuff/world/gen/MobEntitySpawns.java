@@ -20,6 +20,7 @@ public class MobEntitySpawns {
 
         SpawnRestriction.register(ModEntities.CORRUPTED_SKELETON, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CorruptedSkeletonEntity::canSpawn);
         SpawnRestriction.register(ModEntities.CORRUPTED_ZOMBIE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CorruptedZombieEntity::canSpawn);
+        SpawnRestriction.register(ModEntities.CRAGGY, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CraggyEntity::canSpawn);
         SpawnRestriction.register(ModEntities.AMETHYST_BLAZE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);
         SpawnRestriction.register(ModEntities.CORRUPTION_BLAZE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CorruptionBlazeEntity::canSpawn);
     }

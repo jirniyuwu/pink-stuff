@@ -13,10 +13,7 @@ import net.jirniy.pinkstuff.component.ModDataComponentTypes;
 import net.jirniy.pinkstuff.effect.ModEffects;
 import net.jirniy.pinkstuff.enchantment.ModEnchantmentEffects;
 import net.jirniy.pinkstuff.entity.ModEntities;
-import net.jirniy.pinkstuff.entity.custom.AmethystBlazeEntity;
-import net.jirniy.pinkstuff.entity.custom.CorruptionBlazeEntity;
-import net.jirniy.pinkstuff.entity.custom.CrawlerEntity;
-import net.jirniy.pinkstuff.entity.custom.ExofairyEntity;
+import net.jirniy.pinkstuff.entity.custom.*;
 import net.jirniy.pinkstuff.item.ModItemGroups;
 import net.jirniy.pinkstuff.item.ModItems;
 import net.jirniy.pinkstuff.particle.ModParticles;
@@ -36,7 +33,6 @@ import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.potion.Potions;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
@@ -205,6 +201,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTED_SKELETON, SkeletonEntity.createAbstractSkeletonAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeEntity.createAmethystBlazeAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CORRUPTION_BLAZE, CorruptionBlazeEntity.createCorruptionBlazeAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.CRAGGY, CraggyEntity.createAttributes());
 
 
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 3, factories -> {

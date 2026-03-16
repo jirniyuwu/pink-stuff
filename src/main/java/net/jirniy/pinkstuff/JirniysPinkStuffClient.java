@@ -110,6 +110,7 @@ public class JirniysPinkStuffClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ExofairyModel.EXOFAIRY, ExofairyModel::getTexturedModelData);
         EntityRendererFactories.register(ModEntities.EXOFAIRY, ExofairyRenderer::new);
         EntityRendererFactories.register(ModEntities.CORRUPTED_ZOMBIE, CorruptedZombieRenderer::new);
+        EntityRendererFactories.register(ModEntities.CRAGGY, CraggyRenderer::new);
         EntityRendererFactories.register(ModEntities.CORRUPTED_SKELETON, CorruptedSkeletonRenderer::new);
         EntityRendererFactories.register(ModEntities.AMETHYST_BLAZE, AmethystBlazeRenderer::new);
         EntityRendererFactories.register(ModEntities.CORRUPTION_BLAZE, CorruptionBlazeRenderer::new);

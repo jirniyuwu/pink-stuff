@@ -21,6 +21,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CRAWLER_SPAWN_EGG);
                         entries.add(ModItems.EXOFAIRY_SPAWN_EGG);
+                        entries.add(ModItems.CRAGGY_SPAWN_EGG);
                         entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
                         entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
                         entries.add(ModItems.AMETHYST_BLAZE_SPAWN_EGG);
@@ -1258,6 +1259,7 @@ public class ModItemGroups {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
             entries.add(ModItems.CRAWLER_SPAWN_EGG);
             entries.add(ModItems.EXOFAIRY_SPAWN_EGG);
+            entries.add(ModItems.CRAGGY_SPAWN_EGG);
             entries.add(ModItems.CORRUPTED_ZOMBIE_SPAWN_EGG);
             entries.add(ModItems.CORRUPTED_SKELETON_SPAWN_EGG);
             entries.add(ModItems.AMETHYST_BLAZE_SPAWN_EGG);

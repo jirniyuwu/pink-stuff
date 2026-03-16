@@ -138,6 +138,8 @@ public class ModItems {
             setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.AMETHYST_BLAZE)));
     public static final Item CORRUPTION_BLAZE_SPAWN_EGG = registerItem("corruption_blaze_spawn_egg",
             setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.CORRUPTION_BLAZE)));
+    public static final Item CRAGGY_SPAWN_EGG = registerItem("craggy_spawn_egg",
+            setting -> new SpawnEggItem(setting.spawnEgg(ModEntities.CRAGGY)));
 
     public static final Item THERMIUM_NUGGET = registerItem("thermium_nugget", Item::new);
     public static final Item THERMIUM = registerItem("thermium", setting -> new Item(setting.trimMaterial(ModTrimMaterials.THERMIUM)));
