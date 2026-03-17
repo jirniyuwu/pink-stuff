@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:fossil",
+  "config": {
+    "max_empty_corners_allowed": 5,
+    "fossil_structures": [
+      "pinkstuff:desert_boulders/medium1",
+      "pinkstuff:desert_boulders/medium2",
+      "pinkstuff:desert_boulders/medium3",
+      "pinkstuff:desert_boulders/large1",
+      "pinkstuff:desert_boulders/large2"
+    ],
+    "overlay_structures": [
+      "minecraft:empty",
+      "minecraft:empty",
+      "minecraft:empty",
+      "minecraft:empty",
+      "minecraft:empty"
+    ],
+    "fossil_processors": [
+      {
+        "processor_type": "minecraft:gravity",
+        "heightmap": "WORLD_SURFACE_WG",
+        "offset": -4
+      }
+    ],
+    "overlay_processors": []
+  }
+}

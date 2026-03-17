@@ -110,6 +110,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MAPLE_LITTER_PLACED_KEY = registerKey("maple_litter_placed");
     public static final RegistryKey<PlacedFeature> MAPLE_TREE_PLACED_KEY = registerKey("maple_tree_placed");
     public static final RegistryKey<PlacedFeature> LITTERED_MAPLE_TREE_PLACED_KEY = registerKey("littered_maple_tree_placed");
+    public static final RegistryKey<PlacedFeature> LARGE_DESERT_BOULDER_PLACED_KEY = registerKey("desert_boulder_placed");
+    public static final RegistryKey<PlacedFeature> SMALL_DESERT_BOULDER_PLACED_KEY = registerKey("small_desert_boulder_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -247,6 +249,9 @@ public class ModPlacedFeatures {
                 CountPlacementModifier.of(2), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, MOSSY_STYXIAN_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOSSY_STYXIAN_ROCK_KEY),
                 CountPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, SMALL_DESERT_BOULDER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_DESERT_BOULDER_KEY),
+                NoiseThresholdCountPlacementModifier.of(0.3f, 0, 1),
+                SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP, BiomePlacementModifier.of());
         register(context, STYXIAN_CLAY_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STYXIAN_CLAY_PATCH_KEY),
                 new PlacementModifier[]{CountPlacementModifier.of(8), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_120_RANGE,
                         EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),

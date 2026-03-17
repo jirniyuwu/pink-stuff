@@ -9,15 +9,13 @@ import net.jirniy.pinkstuff.world.features.HangingStyxgrassDecorator;
 import net.jirniy.pinkstuff.world.features.ModFeatures;
 import net.jirniy.pinkstuff.world.features.StyxmossVineDecorator;
 import net.minecraft.block.*;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryEntryLookup;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.IntProperty;
+import net.minecraft.structure.processor.StructureProcessorLists;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
@@ -29,26 +27,21 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.math.intprovider.WeightedListIntProvider;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
-import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.minecraft.world.gen.root.AboveRootPlacement;
 import net.minecraft.world.gen.root.MangroveRootPlacement;
 import net.minecraft.world.gen.root.MangroveRootPlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.AttachedToLogsTreeDecorator;
 import net.minecraft.world.gen.treedecorator.PlaceOnGroundTreeDecorator;
 import net.minecraft.world.gen.trunk.*;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -152,6 +145,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> LOTUS_FLOWER_KEY = registryKey("lotus_flower");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CLOUD_KEY = registryKey("cloud");
     public static final RegistryKey<ConfiguredFeature<?, ?>> STYXIA_CLOUD_KEY = registryKey("styxia_cloud");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LARGE_DESERT_BOULDER_KEY = registryKey("desert_boulder");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SMALL_DESERT_BOULDER_KEY = registryKey("small_desert_boulder");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -246,6 +241,9 @@ public class ModConfiguredFeatures {
         register(context, AURIC_MOSSY_ROCK_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
                 .add(ModBlocks.AURIC_MOSSY_COBBLESTONE.getDefaultState(), 3)
                 .add(Blocks.COBBLESTONE.getDefaultState(), 1))));
+        register(context, SMALL_DESERT_BOULDER_KEY, ModFeatures.ROCK, new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(Pool.<BlockState>builder()
+                .add(Blocks.GRANITE.getDefaultState(), 5)
+                .add(ModBlocks.STRIPPED_WASTEWOOD_WOOD.getDefaultState(), 1))));
         register(context, LOTUS_FLOWER_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(
                 BlockStateProvider.of(ModBlocks.LOTUS.getDefaultState().with(LotusBlock.PAD, true))));
         register(context, STYXIAN_CLAY_PATCH_KEY, Feature.ORE, new OreFeatureConfig(

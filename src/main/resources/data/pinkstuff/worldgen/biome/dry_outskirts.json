@@ -26,7 +26,9 @@
     [],
     [],
     [
-      "minecraft:amethyst_geode"
+      "minecraft:amethyst_geode",
+      "pinkstuff:desert_boulder_placed",
+      "pinkstuff:small_desert_boulder_placed"
     ],
     [],
     [],
