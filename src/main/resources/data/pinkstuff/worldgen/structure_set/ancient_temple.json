@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "pinkstuff:ancient_temple",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 60,
+    "separation": 19,
+    "spread_type": "linear",
+    "salt": 0
+  }
+}

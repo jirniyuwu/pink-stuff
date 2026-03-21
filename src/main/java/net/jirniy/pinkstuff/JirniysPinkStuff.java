@@ -477,7 +477,7 @@ public class JirniysPinkStuff implements ModInitializer {
 		});
 
 
-		 CustomPortalBuilder.beginPortal().flatPortal().forcedSize(3, 3).tintColor(0x341411)
+		 CustomPortalBuilder.beginPortal().flatPortal().tintColor(0x341411)
 			  	  .frameBlock(ModBlocks.STYXIA_PORTAL_FRAME).lightWithItem(ModItems.MEMORY_SHARD).onlyLightInOverworld()
 			  	  .destDimID(Identifier.of(JirniysPinkStuff.MOD_ID, "styxia")).customPortalBlock((CustomPortalBlock) ModBlocks.STYXIA_PORTAL)
 		        .registerPortal();

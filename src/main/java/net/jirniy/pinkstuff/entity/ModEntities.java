@@ -62,7 +62,7 @@ public class ModEntities {
     public static final EntityType<CraggyEntity> CRAGGY = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "craggy"),
             EntityType.Builder.create(CraggyEntity::new, SpawnGroup.MONSTER)
-                    .dimensions(0.6f, 2.1f).build(CRAGGY_KEY));
+                    .dimensions(0.5f, 1.6f).build(CRAGGY_KEY));
 
     public static final EntityType<AmethystFireballEntity> AMETHYST_FIREBALL = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(JirniysPinkStuff.MOD_ID, "amethyst_fireball"),

@@ -1,0 +1,59 @@
+[
+  {
+    "processor_type": "minecraft:rule",
+    "rules": [
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:fragile_ancient_bricks",
+          "probability": 0.1
+        },
+        "output_state": {
+          "Name": "minecraft:air"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:ancient_bricks",
+          "probability": 0.4
+        },
+        "output_state": {
+          "Name": "pinkstuff:mossy_ancient_bricks"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:ancient_bricks",
+          "probability": 0.3
+        },
+        "output_state": {
+          "Name": "pinkstuff:cracked_ancient_bricks"
+        }
+      },
+      {
+        "location_predicate": {
+          "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "pinkstuff:ancient_slab",
+          "probability": 0.3
+        },
+        "output_state": {
+          "Name": "pinkstuff:mossy_ancient_slab"
+        }
+      }
+    ]
+  }
+]
