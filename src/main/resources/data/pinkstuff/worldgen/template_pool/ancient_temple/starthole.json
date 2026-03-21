@@ -1,0 +1,26 @@
+{
+  "name": "pinkstuff:ancient_temple/starthole",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/start/hole1",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/start/hole2",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

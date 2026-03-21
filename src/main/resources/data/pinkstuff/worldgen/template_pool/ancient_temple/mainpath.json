@@ -1,0 +1,156 @@
+{
+  "name": "pinkstuff:ancient_temple/mainpath",
+  "fallback": "pinkstuff:ancient_temple/ends",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/staircase1",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/staircase2",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/staircase3",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/long1",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/long2",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/long3",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/long4",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/short1",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/short2",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/short3",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/short4",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/end1",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/end2",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/end3",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/end4",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

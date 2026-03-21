@@ -1,0 +1,96 @@
+{
+  "name": "pinkstuff:ancient_temple/ends",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/rooms/room1",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/rooms/room2",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/rooms/room3",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/rooms/room4",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/rooms/end1",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/rooms/end2",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/rooms/end3",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/end3",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "pinkstuff:ancient_temple/mainpath/end4",
+        "processors": "pinkstuff:ancient_temple",
+"override_liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}
